@@ -1,0 +1,454 @@
+:root {
+  /* Theme WEB */
+  --navbar-size : max(4em, 10vw, 10vh);
+  --font-family: Helvetica, Ubuntu, Verdana, Geneva, Tahoma, sans-serif; /*'Times New Roman', Times, serif, Verdana, Helvetica, sans-serif;*/
+  --font-family-titles: Impact;
+  --font-size: 16pt; /*10pt*/
+  --line-height: 1.6;
+  --color-bg: #ccc;
+  --color-bg-hover: #eee;
+  --color-bg-title: #503010;
+  --color-section: #d70;
+  --color-subsection: #309030;
+  --color-subsubsection: #3333ff;
+  --color-exo: #103050;
+  --color-defi: #503010;
+  --color-theo: #503010;
+  --color-meth: darkgreen;
+  --color-bg-title: #fbb332;
+  --color-bg-defi: #fbb332;
+  --color-bg-theo: #fbb332;
+  --color-bg-exo: #3ae;
+  --color-bg-surl: #00ff0055;
+  --color-bg-table-1: #bbb8;
+  --color-bg-table-2: #ccc8;
+  --color-bg-table-3: #ddd8;
+  --border: 1px solid;
+  --border-opacity: 0.1;
+  --border-radius: 0.2em;
+  --shadow: 0.2em;
+  --margin: 0.4em;
+  --padding: 0.5em;
+  --transition-speed: 700ms;
+  --width: auto;
+  --height: auto;
+}
+
+body, main, section{
+  box-sizing: border-box;
+  padding: 0 0;
+  margin: 0 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-x: auto;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  background-color: var(--color-bg);
+  counter-reset: h2c exo defi prop theo rema exem;
+}
+
+main {
+    margin : 0;
+}
+
+
+.none:hover, .defi:hover, .theo:hover, .prop:hover, .meth:hover, .exem:hover, .exo:hover {
+    transition: background-image var(--transition-speed);
+    background-image: linear-gradient(-90deg, rgba(255,255,255,0.5) 90%, rgba(255,255,255,0.9) 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {font-family: var(--font-family-titles); padding: 0 var(--padding)}
+
+pre {
+    margin:0;
+    padding:0;
+}
+
+ul, ol {margin: 0;}
+li {padding: calc(var(--padding)/2);}
+a {color: inherit; text-decoration: underline;}
+
+
+
+figure {
+    text-align: center;
+}
+
+img {
+    height: var(--height);
+    width: var(--width);
+    max-width: 100%;
+    max-height: 100%;
+    transition-duration: var(--transition-speed);
+}
+
+
+figcaption {
+    font-style: italic;
+    font-size: smaller;
+}
+
+/*
+img:active {
+    max-height: 40vh;
+    max-width: 40vw;
+    background-color: var(--color-bg);
+    transform: scale(2, 2) translate(-25%, 0);
+    -ms-transform: scale(2, 2) translate(-25%, 0);
+    -webkit-transform: scale(2, 2) translate(-25%, 0);
+    transition-duration: var(--transition-speed);
+}
+*/
+
+
+h1 {
+    margin-top: var(--navbar-size);
+    background-image: linear-gradient(46deg, var(--color-bg-title) 25%, var(--color-bg-surl) 100%);
+    box-shadow: var(--shadow) var(--shadow) var(--shadow) grey;
+    border-color: rgba(0,0,0,var(--border-opacity));
+    border: var(--border);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+h1:not(.nococounter) {
+    counter-reset: h2c exo defi prop theo rema exem;
+}
+
+h2 {
+    color: var(--color-section); 
+    margin: var(--margin);
+}
+
+h2:not(.nocounter) {counter-reset: h3c h4c ;}
+h2:not(.nocounter)::before {counter-increment: h2c;content: counter(h2c) ". ";}
+
+h3 {
+    color: var(--color-subsection);
+    margin: var(--margin);
+}
+h3:not(.nococounter) {counter-reset: h4c ;}
+h3:not(.nococounter)::before {counter-increment: h3c;content: counter(h2c) "." counter(h3c) ". ";}
+
+h4{
+    color: var(--color-subsubsection);
+    margin: var(--margin);
+}
+h4:not(.nocounter)::before {counter-increment: h4c; content: counter(h2c) "." counter(h3c) "." counter(h4c) ". ";}
+
+.exo {
+    color: var(--color-exo);
+    background-color: var(--color-bg-exo);
+    border: var(--border);
+    border-color: rgba(0, 0, 0, var(--border-opacity));
+    border-radius: var(--border-radius);
+}
+.exo:not(.nocounter)         {counter-increment: exo;}
+.exo:not(.nocounter)::before {font-weight: bold; content: "Exercice " counter(exo) " : "; }
+
+code:not(pre code) {
+    font-family: monospace;
+    font-size: var(--font-size);
+    background-color: lightgrey;
+    border-radius: 0.3em;
+}
+
+.defi {
+    color: var(--color-defi);
+    font-style: italic;
+    background-color: var(--color-bg-defi);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    border-color: rgba(0, 0, 0, var(--border-opacity));
+    counter-increment: defi;
+}
+.defi::before   {font-weight: bold; content: "Définition " counter(defi) " : ";}
+
+.prop           {counter-increment: prop; margin: var(--margin); padding: var(--padding);}
+.prop::before   {font-weight: bold; content: "Propriété " counter(prop) " : ";}
+
+.theo {
+    color: var(--color-theo);
+    background-color: var(--color-bg-theo);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow) var(--shadow) var(--shadow) gray;
+    border-color: rgba(0, 0, 0, var(--border-opacity));
+    counter-increment: theo;
+}
+.theo::before   {font-weight: bold; content: "Théorème " counter(theo) " : ";}
+
+.rema           {counter-increment: rema; margin: var(--margin); padding: var(--padding);}
+.rema::before   {font-weight: bold; content: "Remarque " counter(rema) " : ";}
+
+.exem           {counter-increment: exem; margin: var(--margin); padding: var(--padding);}
+.exem::before   {font-weight: bold; content: "Exemple " counter(exem) " : ";}
+
+.meth           {color : var(--color-meth); counter-increment: meth; margin: var(--margin); padding: var(--padding);}
+.meth::before   {font-weight: bold; content: "Méthode " counter(meth) " : ";}
+
+
+.titre, .prop, .rema, .exem, .meth, .theo, .defi, .exo, .none {margin: var(--margin); padding: var(--padding);}
+
+.surl {background-color: var(--color-bg-surl); height: max-content; padding: var(--padding)0.1em;}
+
+.mytable{
+    --mytable-float: none;
+    --mytable-border-radius: 1em;
+    --mytable-padding: 0.5em;
+    --cell-height: auto;
+    --cell-width: auto;
+    border-spacing: 0;
+    border: var(--border);
+    border-color: rgba(0, 0, 0, min(calc(5*var(--border-opacity)),1));
+    border-radius: var(--mytable-border-radius);
+    float: var(--mytable-float);
+}
+
+.mytable th, .mytable td {
+    height: var(--cell-height);
+    width: var(--cell-width);
+    text-align: center;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, min(calc(3*var(--border-opacity)),1));
+    padding: var(--mytable-padding);
+    overflow-x: hidden;
+}
+
+.mytable tr:first-child>th:first-child, .mytable tr:first-child>td:first-child 
+                                {border-top-left-radius: var(--mytable-border-radius);}
+.mytable tr:first-child>th:last-child, .mytable tr:first-child>td:last-child  
+                                {border-top-right-radius: var(--mytable-border-radius);}
+.mytable tr:last-child>th:first-child, .mytable tr:last-child>td:first-child 
+                                {border-bottom-left-radius: var(--mytable-border-radius);}
+.mytable tr:last-child>th:last-child, .mytable tr:last-child>td:last-child 
+                                {border-bottom-right-radius: var(--mytable-border-radius);}
+.mytable th                     {background-color: var(--color-bg-table-1);}
+.mytable tr:nth-child(even)>td  {background: var(--color-bg-table-2);}
+.mytable tr:nth-child(odd)>td   {background: var(--color-bg-table-3);}
+.mytable td>ol, .mytable td>ul  {text-align: left;}
+
+.row {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display:flex;
+    overflow-x: scroll;
+    flex-flow: row;
+}
+
+.col {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display:flex;
+    flex-flow: column;
+    overflow-x: scroll;
+}
+
+.barm {
+    font-family: Monospace;
+    color: violet;
+}
+
+.hidden-web {
+    display: none;
+}
+
+#fullpage {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: black;
+}
+
+@media (max-width: 800px) {
+    div, table {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .mytable, img, img:active {
+        max-width: 100%;
+        max-height: 100%;
+        transform: none;
+        -ms-transform: none;
+        -webkit-transform: none;
+        transition: none;
+        background: none;
+        overflow-x: scroll;
+        font-size: smaller;
+    }
+    .row {
+        flex-flow: column;
+    }
+    .column {
+        width:80vw;
+        max-width: 90vw;
+
+    }
+}
+
+@page {
+    size: A4;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+@media print {
+    :root {
+      /* Theme PRINT */
+      --font-family: 'Times New Roman', Times, serif, Verdana, Helvetica, sans-serif;
+      --font-family-titles:  'Times New Roman', Times, serif, Verdana, Helvetica, sans-serif;
+      --font-size: 10pt;
+      --line-height: auto;
+      --color-section : darkred;
+      --color-subsection : darkgreen;
+      --color-subsubsection : darkblue;
+      --color-title: #503010;
+      --color-exo: #103050;
+      --color-defi: #503010;
+      --color-theo: #503010;
+      --color-meth: darkgreen;
+      --color-bg-title: #fbb332;
+      --color-bg-defi : #fbb332;
+      --color-bg-theo : #fbb332;
+      --color-bg-exo : #3ae;
+      --color-bg-surl : #00ff0055;
+      --color-bg-table-1 : #bbb8;
+      --color-bg-table-2 : #ccc8;
+      --color-bg-table-3 : #ddd8;
+      --border: 0.1em solid;
+      --border-opacity: 0.1;
+      --border-radius: 0.2em;
+      --shadow: 0.2em;
+      --margin : 0.2em;
+      --padding : 0.5em;
+      --width-print: auto;
+      --height-print: auto;
+    }
+    
+    nav {display: none;}
+
+    body, section, main {
+        display: block;
+        font-family : var(--font-family); 
+        font-size: var(--font-size);
+    }
+
+    .pagebreak                       {page-break-after: always;}
+    section+section                {page-break-after: always;}
+    /*.titre, .section, .section-nocounter, .subsection, .subsection-nocounter, .subsubsection            {page-break-inside: avoid;}*/
+    .mytable, table, figure, img     {page-break-inside: avoid;}
+
+
+    .mytable td>ol, .mytable td>ul, .mytable td>img, .mytable td>figure 
+                                     {text-align: left;float: none;}
+
+    .mytable, figure, canvas, img, img:active {
+        --width-print: auto;
+        --height-print: auto;
+        --cell-width-print: auto;
+        --cell-height-print: auto;
+        width: var(--width-print);
+        height: var(--height-print);
+        transform: none;
+        -ms-transform: none;
+        -webkit-transform: none;
+        transition: none;
+        background: none;
+        font-size: smaller;
+    }
+
+    .mytable th, .mytable td {
+        height: var(--cell-height-print);
+        width: var(--cell-width-print);
+        }
+
+    .surl {
+        background-color: transparent;
+        border: solid 0.2em;
+        border-color: var(--color-bg-surl);
+        border-radius: rgba(var(--border-radius),0.2);
+        padding: var(--padding) 0.1em;
+    }
+
+    code:not(pre code) {
+        font-family: monospace;
+        font-size: smaller;
+        border: 1px solid lightgrey;
+        border-radius: 0.3em;
+    }
+
+
+    h2 {color: var(--color-section); margin: var(--margin);}
+
+    h3 {color: var(--color-subsection); margin: var(--margin);}
+
+    h4 {color: var(--color-subsubsection); margin: var(--margin);}
+    
+    .exo, .defi, .theo {border: var(--border); border-radius: var(--border-radius);}
+
+    .exo {
+        color: var(--color-exo);
+        border-color: var(--color-bg-exo);
+    }
+
+    .defi {
+        color: var(--color-defi);
+        font-style: italic;
+        border-color: var(--color-bg-defi);
+    }
+
+    .theo {
+        color: var(--color-theo);
+        box-shadow: var(--shadow) var(--shadow) var(--shadow) gray;
+        border-color: var(--color-bg-theo);
+    }
+
+    .meth {
+        color: var(--color-meth);
+    }
+    
+    h1 {
+        margin-top: 0;
+        margin-bottom: 1em; 
+        color: var(--color-bg-title); 
+        border-color: var(--color-bg-title);
+    }
+
+    h1, .prop, .rema, .exem, .meth, .theo, .defi, .exo {margin: var(--margin); padding: var(--padding);
+    }
+
+    .row {
+        max-width: 100%;
+        flex-direction: row;
+    }
+
+    .col {
+        flex-direction: column;
+    }
+
+    .hidden-web {
+        display: inherit;
+    }
+    
+    footer {
+        display: none;
+    }
+
+
+    .href-print::after{
+        content: " (url : " attr(href) ")";
+        text-decoration: none;
+    }
+}
+    /* ... the rest of the rules ... */

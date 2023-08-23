@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Variation instantanée et globale</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../../../../s.js" data-import=""> </script>
+</head>
+
+<body onload="body()">
+	<main>
+		<h1>Variation instantanée et globale</h1>
+		<h2>Variation instantanée</h2>
+
+
+		<div class="row">
+			<div class="col">
+				<div class="none">
+					La notion de dérivée permet de généraliser la notion de coefficient directeur d'une fonction affine.
+				</div>
+				<div class="exem">
+					Trois droites représentant trois fonctions affines (ci-contre) :
+				</div>
+				<div>
+					<strong>Rappels :</strong>
+					<ul>
+						</li>
+						<li> le fait qu'une fonction affine soit croissante ou décroissante est indiqué par le signe
+							de
+							son
+							coefficient
+							directeur ;
+						</li>
+						<li> que plus la valeur absolue (= valeur sans signe ±) de ce coefficient directeur est grande,
+							plus la droite
+							représentant
+							la
+							fonction
+							affine penche, vers le haut (coefficient directeur positif), ou vers le bas (coefficient
+							directeur
+							négatif)
+							.
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<figure>
+					<img style="--width-print:6cm;" src="assets/intro1.png" />
+				</figure>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<p>
+					<strong>Problème : </strong> Une fonction quelconque est représentée par une courbe et non une
+					droite,
+					et ses
+					variations
+					peuvent changer lorsque sa variable \(x\) évolue : elles peuvent, comme sur cette parabole
+					représentant
+					la
+					fonction carré, être faibles près de \(0\) et s'accentuer alors qu'on s'éloigne de \(0\).
+				</p>
+				<p>
+					Pour une fonction quelconque \(f\), une «mesure de la variation», comme celle que nous fournit le
+					coefficient
+					directeur pour les fonctions affines, devra donc dépendre de sa variable \(x\).<br />
+					Pour «se ramener» au cas d'une droite, on trace, lorsque c'est possible, la tangente \(T_a\) à la
+					courbe
+					représentant la fonction \(f\) au point d'abscisse \(x=a\) ; c'est la droite qui approxime au mieux,
+					lorsqu'on
+					est proche de \(a\), la courbe représentant la fonction \(f\).
+				</p>
+			</div>
+			<div class="col">
+				<figure>
+					<img src="assets/intro3.png" />
+				</figure>
+			</div>
+		</div>
+
+
+		<div class="defi">
+			On note alors \(f'(a)\) ou \(\dfrac{\textrm{d}f}{\textrm{d}x}(a)\) le <b>coefficient directeur de la
+				tangente</b>
+			\(T_a\) à la courbe \(\mathcal{C}_f\) au point d'abscisse \(x=a\), et on appelle ce nombre le
+			<b>nombre
+				dérivé</b> de \(f\) en \(a\).
+		</div>
+
+
+		<div class="exo">
+			On pose \(f(x)=x^2\).<br>
+			Compléter : Graphiquement, on lit \(f'(1)=\ldots\) et \(f'(-1)=\ldots\).
+		</div>
+		<div class="exo">
+			On a \(g(x)=(x-3)^2(x-1)^3+1\) :<br>
+			<img src="assets/intro4.png" />
+			<ol>
+				<li> Graphiquement, donner les nombres dérivés suivants :
+					\(\displaystyleg'(1)=\ldots~~~~~g'(2)=\dots~~~~~g'(3)=\ldots\)
+				</li>
+				<li> Graphiquement, donner l'ensemble des \(x\) pour lesquels \(g'(x)<0\). </li>
+			</ol>
+		</div>
+
+
+
+
+
+
+		<h3>Nombre dérivé</h3>
+		<div class="row">
+			<div class="col none">
+				<p>
+					On se donne une fonction \(f\) et on se place en un \(x\) fixé. Soit \(dx\) un petit
+					accroissement
+					de la
+					variable \(x\) (positif ou négatif), correspondant à un accroissement
+					\(\textrm{d}f=f(x+\textrm{d}x)-f(x)\) des
+					images.
+				</p>
+				<p>
+					Si l'on fait tendre \(\textrm{d}x\) vers \(0\), la droite \(D\) prend une position de tangente à
+					la
+					courbe de
+					\(f\) en \(x\).</p>
+			</div>
+			<div class="col none">
+				<img src="assets/tang.png" /><br>
+			</div>
+		</div>
+		<div class="defi">Si \(\displaystyle\lim_{dx\to0} \frac{\textrm{d}f}{\textrm{d}x}\) existe, on dit que \(f\)
+			est
+			dérivable en \(x\) ; on note alors \(f'(x)\) ou bien \(\displaystyle\frac{\textrm{d}f}{\textrm{d}x}
+			(x)\)
+			cette
+			limite, que l'on appelle <strong>nombre dérivé de \(f\) en \(x\), et qui indique le coefficient
+				directeur de
+				la
+				tangente à la courbe de \(f\) en \(x\).</strong>
+		</div>
+
+
+		<div class="prop">
+			!!!!!!</div>
+		L'équation de la tangente à la courbe de \(f\) en \(x=a\) est :
+		<span class="surl">\(y=f'(a)(x-a)+f(a)\)</span>
+
+		<h2 class="section">Dérivées de fonctions usuelles</h2>
+		\footnotesize
+		\(\displaystyle\begin{array}{|c|c|} \hline
+		f(x) & f'(x) <br> \hline \hline
+		\textrm{cte} & 0 <br> \hline
+		x^\alpha~~ (\alpha\in\R) & \alpha x^{\alpha-1} <br> \hline
+		\frac{1}{x}=x^{-1} & \frac{-1}{x^2}=-x^{-2} <br> \hline
+		\sqrt{x}=x^\frac{1}{2} & \frac{1}{2\sqrt{x}}=\frac{1}{2}x^{-\frac{1}{2}} <br> \hline
+		\ln x & \frac{1}{x} <br> \hline
+		\textrm{e}^x & \textrm{e}^x <br> \hline
+		\sin x & \cos x <br> \hline
+		\cos x & -\sin x <br> \hline
+		\tan x & \frac{1}{(\cos x)^2}=1+(\tan x)^2 <br> \hline
+		\end{array}\)
+		\normalsize
+
+		<b>Fonctions composées : </b><br>
+		\(u\) désigne une fonction dérivable ; \(\omega\), \(\phi\) sont des constantes réelles ;
+		\(n\) est un entier naturel différent de \(0\).
+		\footnotesize
+		\(\displaystyle\begin{array}{|c|c|} \hline
+		f & f' <br> \hline \hline
+		\frac{1}{u}~~~~(u\neq0)& \frac{-u'}{u^2} <br> \hline
+		\ln(u)~~~(u>0) & \frac{u'}{u} <br> \hline
+		\textrm{e}^{u} & u'\textrm{e}^{u} <br> \hline
+		u^n & nu'u^{n-1} <br> \hline
+		\sin(\omega t+\phi) & \omega\cos(\omega t+\phi) <br> \hline
+		\cos(\omega t+\phi) & -\omega\sin(\omega t+\phi) <br> \hline
+		\arctan u & \frac{u'}{1+u^2} <br> \hline
+		\end{array}\)
+		\normalsize
+
+
+		<h2 class="section">Dérivées et opérations</h2>
+		\(u\) et \(v\) sont deux fonctions dérivables sur un intervalle \(I\) et \(k\) est une constante réelle
+		:<br>
+
+
+		<div class="prop">
+			!!!!!!</div>
+		<br> <b>Somme :</b>
+		\hspace{2cm}<span class="surl">\((u+v)'=u'+v'\)</span><br>
+
+		<div class="exem">
+			!!!!!!</div>
+		\(\left(x^2+x^3\right)'=2x+3x^2\)<br>
+
+
+		<div class="prop">
+			!!!!!!</div>
+		<br> <b>Produit par une constante :</b>
+		~~~~~~~~~~<span class="surl">\((ku)'=ku'\)</span><br>
+
+		<div class="exem">
+			!!!!!!</div>
+		\(\left(5x^2\right)'=5\left(x^2\right)'=5\times2x=10x\)<br>
+
+
+		<div class="prop">
+			!!!!!!</div>
+		<br> <b>Produit de deux fonctions : </b>
+		~~~~~~~~~~<span class="surl">\((uv)'=u'v+v'u\)</span><br>
+
+		<div class="exem">
+			!!!!!!</div>
+		<br>
+		\(\left(x\sin x\right)'=x'\sin x+x(\sin x)'=1\sin x+x\cos x\) <br>
+
+
+		<div class="prop">
+			!!!!!!</div>
+		<br> <b>Quotient : </b> <span
+			class="surl">\(\left(\displaystyle\frac{u</span>{v}\right)'=\frac{u'v-v'u}{v^2}\)}<br>
+		<b>Attention : </b> \(v\) ne doit pas s'annuler sur \(I\).<br>
+
+		<div class="exem">
+			!!!!!!</div>
+		\<br>(\left(\displaystyle\frac{\textrm{e}^x}{x}\right)'=\frac{\left(\textrm{e}^x\right)'x-x'\textrm{e}^x}{x^2}=\frac{\textrm{e}^xi
+		x-1\textrm{e}^x}{x^2}=\frac{(x-1)\textrm{e}^x}{x^2}\)
+
+		<h2 class="section">Principe de Lagrange</h2>
+		Soit \(f\) une fonction dérivable sur un intervalle \(I\).<br>
+
+		<div class="meth">Une fois que l'on a calculé la dérivée d'une fonction, il faut la factoriser au mieux pour
+			déterminer son signe. En effet connaître le signe de la dérivée \(f'\) nous permet de connaître les
+			variations
+			de
+			\(f\) :</div>
+
+
+		<div class="prop">
+			!!!!!!</div>
+		\begin{itemize}
+		</li>
+		<li> \(f'>0\) sur \(I\) (\(f'\) peut même s'annuler en des points isolés)
+			\(\Rightarrow\) \(f\) est strictement croissante sur \(I\) ;
+		</li>
+		<li> \(f'=0\) sur tout l'intervalle \(I\) <br>
+			\(\Rightarrow\) \(f\) est constante sur \(I\) ; </li>
+		<li> \(f'<0\) sur \(I\) (\(f'\) peut même s'annuler en des points isolés) \(\Rightarrow\) \(f\) est strictement
+				décroissante sur \(I\). \end{itemize} ~<br>
+
+				<div class="prop">
+					!!!!!!</div>
+				Si \(f'\) s'annule et change de signe pour en \(a\) dans \(I\), alors
+				\begin{itemize}
+		</li>
+		<li> \(f'\) passe de \(-\) à \(+\)<br>
+			\(\Rightarrow\) \(f\) admet un minimum local pour \(x=a\) ;
+		</li>
+		<li> \(f'\) passe de \(+\) à \(-\)<br>
+			\(\Rightarrow\) \(f\) admet un maximum local pour \(x=a\) .
+			\end{itemize}
+
+
+			<div class="rema">
+				!!!!!!</div>
+			La condition de changement de signe est importante : en effet \(x\mapsto x^3\) a pour dérivée \(3x^2\)
+			qui
+			s'annule
+			en \(0\) mais ne change pas de signe (elle reste positive) ; la fonction cube n'admet pas de max/min en
+			\(x=0\)
+			(elle est strictement croissante).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</main>
+
+
+</body>
