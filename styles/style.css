@@ -242,6 +242,7 @@ code:not(pre code) {
 .col {
     margin: 0;
     padding: 0;
+    width: 50%;
     max-width: 100%;
     display:flex;
     flex-flow: column;
