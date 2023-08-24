@@ -70,24 +70,10 @@
         </ul>
     </div>
     <div class="exo">
-        Donner les coefficients \(a\) et \(b\) des fonctions affines \(f(x)=2x+5=0\) et \(g(x)=18-3x=0\)
+        Donner les coefficients \(a\) et \(b\) ainsi que le le sens de variation des fonctions affines \(f(x)=2x+5=0\)
+        et \(g(x)=18-3x=0\)
     </div>
 
-    <h3 class="subsection">Équation \(ax+b=0\) et \(ax+b=\textrm{cte}\)</h3>
-    <div class="prop">
-        Une fonction affine s'annule en \(x=\frac{-b}{a}\).
-    </div>
-
-    <div class="exo">
-        <ul>
-            <li>
-                Résoudre : \(2x+5=0\) ; \(18-3x=0\)
-            </li>
-            <li>
-                Résoudre : \(2x+5=29\) ; \(-3x+18=-9\)
-            </li>
-        </ul>
-    </div>
 
     <h3>Méthodes</h3>
 
@@ -118,6 +104,24 @@
         Calculer les équations des droites \((AB)\), \((AC)\) et \((BC)\) et dire lesquelles
         correspondent à des fonctions affines.
     </div>
+
+    <h3 class="subsection">Équation \(ax+b=0\) et \(ax+b=\textrm{cte}\)</h3>
+    <div class="prop">
+        Une fonction affine s'annule en \(x=\frac{-b}{a}\).
+    </div>
+
+    <div class="exo">
+        <ul>
+            <li>
+                Résoudre : \(2x+5=0\) ; \(18-3x=0\)
+            </li>
+            <li>
+                Résoudre : \(2x+5=29\) ; \(-3x+18=-9\)
+            </li>
+        </ul>
+    </div>
+
+
     <div class="exo"><strong>Degrés Celsius et Fahrenheit</strong>
         Beaucoup de pays anglos-saxons utilisent le degré Fahrenheit (°F).<br />
         Pour eux, l'eau bout à 212°F et gèle à 32°F.<br />
@@ -133,10 +137,125 @@
             <li>Existe-t-il une température qui s'écrit avec le même nombre en °C et en °F ?</li>
         </ol>
     </div>
-    <div class="exo">
+
+    <div class="exo"><strong>Élévation du niveau de la mer</strong><br />
+        Des observations par satellite ont permis d'établir qu'entre 1993 et 2023, le niveau moyen global des mers a
+        augmenté de 0,10m.
+        <ol>
+            <li>En considérant que l'augmentation est linéaire, calculer l'élévation du niveau de la mer entre 2023 et
+                2050.</li>
+            <li>En considérant que l'augmentation est linéaire, combien de temps faudrait-il pour qu'une élévation de 1m
+                se produise ?</li>
+            <li>Des relevés historiques notent une élévation de 0,20m entre 1901 et 2018.<br />
+                Peut-on réellement faire confiance au modèle linéaire ?
+            </li>
+        </ol>
     </div>
 
+    <div class="exo"><strong>Offre et demande</strong><br />
+    </div>
 
+    <h2>Suites et suites arithmétiques</h2>
+    <h3>Suites : cas général</h3>
+    <div class="rema">
+        Intuitivement, une suite numérique est une liste infinie de nombres (réels), que l'on «numérote» par des
+        <strong>indices entiers</strong> (en commençant par par un indice de 0 ou de 1).
+    </div>
+
+    <div class="exem">
+        Une suite \(u\) (comment est-elle construite ?) :<br />
+        \(u_0=5\)&nbsp;;&nbsp;\(u_1=10\)&nbsp;;&nbsp;\(u_2=7{,}5\)&nbsp;;&nbsp;\(u_3=8{,}75\)&nbsp;;&nbsp;\(u_4=8{,}125\)
+    </div>
+
+    <div class="defi">
+        <ul>
+            <li>
+                Une <strong>suite est une fonction de \(\mathbb{N}\) (ensemble des entiers naturels) vers \(\mathbb{R}\)
+                    (ensemble des
+                    nombres réels)</strong> : elle fait correspondre, à des indices entiers, des nombres réels.
+            </li>
+            <li>
+                <strong>Notation : </strong>On note \((u_n)\) (avec des parenthèses) la suite \(u_1~;~u_2~;~u_3~;~...\),
+                ou plus simplement \(u\).
+            </li>
+            <li>
+                Le nombre \(u_n\) est appelé le <strong>\(n\)-ième terme</strong> de la suite \((u_n)\). On peut aussi
+                dire «<strong>terme de rang</strong> (ou indice) \(n\)».
+            </li>
+        </ul>
+    </div>
+    <div class="exo">
+        On note \((u_n)\) la suite des nombres pairs et \((v_n)\) la suite des nombres impairs.
+        <ol>
+            <li>
+                Trouver une formule donnant les termes généraux \(u_n\) et \(v_n\) en fonction de \(n\).
+            </li>
+            <li>
+                Dans les deux cas, quelle est la «règle» qui permet de passer d'un terme au suivant ?
+            </li>
+    </div>
+
+    <h3> Suites arithmétiques</h3>
+    <div class="defi">
+        Une suite \((u_n)\) est <strong>arithmétique</strong>
+        s'il existe un réel \(r\) (indépendant de \(n\)) tel que pour tout rang \(n\), on a\(u_{n+1}=u_n+r\)<br />
+        Le réel \(r\) s'appelle la <strong>raison</strong> de la suite.
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="rema">
+                On passe d'un terme de la suite au suivant en <strong>ajoutant</strong> un même nombre \(r\) appelé la
+                raison de
+                la suite ; attention : \(r\) peut être négatif.
+            </div>
+        </div>
+        <div class="row">
+            <figure>
+                <img src="assets/1_0506suitesc.png" alt="suite croissante" style="--width-print:3.5cm;">
+                <figcaption>suite croissante (\(r&gt;0\))</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/1_0506suitesd.png" alt="suite croissante" style="--width-print:3.5cm;">
+                <figcaption>suite décroissante (\(r&lt;0\))</figcaption>
+            </figure>
+
+        </div>
+    </div>
+    <div class="prop">
+        <ul>
+            <li>
+                Si \(r&gt;0\), la suite est strictement croissante et croît vers \(+\infty\) ;
+            </li>
+            <li>
+                Si \(r=0\), la suite est constante (toujours égale à \(u_0\)) ;
+            </li>
+            <li>
+                Si \(r&lt;0\), la suite est strictement décroissante et décroît vers \(-\infty\). </li>
+        </ul>
+    </div>
+    <div class="prop">
+        Une suite arithmétique \((u_n)\) correspond aux valeurs prises par une fonction affine \(f(x)=ax+b\) pour
+        \(x=n\), c'est à dire pour des valeurs entières de \(x\) ; en outre, on a \(a=r\) et \(b=u_0\) (cf les
+        graphiques précédents).<br />
+        On en déduit que pour tout entier \(n\), on a <span class="surl">\(u_n = u_0 + rn\)</span>, ou (en partant de
+        \(n=1\)), \(u_n = u_1 + r(n-1)\).
+    </div>
+    <div class="exo">
+        <ol>
+            <li>
+                \(u\) est la suite arithmétique : 2;7;12;17;... Écrire \(u_n\) en fonction de \(n\).
+            </li>
+            <li>
+                Calculer \(u_{100}\).
+            </li>
+            <li>
+                \(v\) est une suite arithmétique dont la raison est 8 et \(v_{50}=100\). Que vaut \(v_0\) ?
+            </li>
+    </div>
+    <div class="exo"><strong>Intérêts simples</strong><br />
+        En partant de 100€ d'économies et en ajoutant 15€ par mois, quelle somme est mise de côté en deux ans ?
+        Identifier le terme initial et la raison de cette suite. En combien de temps atteint-on 300€ ?
+    </div>
 
 </body>
 

@@ -276,13 +276,12 @@ code:not(pre code) {
         overflow-y: hidden;
     }
     .mytable, img, img:active {
+        margin: 0;
+        padding: 0;
+        font-size:small;
+        float:none;
         max-width: 100%;
         max-height: 100%;
-        transform: none;
-        -ms-transform: none;
-        -webkit-transform: none;
-        transition: none;
-        background: none;
         overflow-x: scroll;
         font-size: smaller;
     }
