@@ -5,7 +5,7 @@
     <title>Phénomènes linéaires</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src=../../../../s.js></script>
+    <script src=../../../../s.js data-import=""></script>
 </head>
 
 <body onload="body()">
@@ -13,6 +13,128 @@
     <h1>Phénomènes linéaires</h1>
 
     <h2>Fonctions affines</h2>
+
+    <h3>Vocabulaire</h3>
+
+    <div class="defi">
+        <div class="row">
+            <div class="col">
+                <p>
+                    Une fonction \(f\) est dite <strong>affine</strong> lorsqu'elle s'écrit <span
+                        class="surl">\(f(x)=ax+b\)</span> (\(x\) est la variable et \(a\) et \(b\) deux constantes
+                    fixées).<br />
+                    En outre :
+                </p>
+                <ul>
+                    <li> \(a\) s'appelle le <strong>coefficient directeur</strong> ou la <strong>pente</strong> de
+                        \(f\).
+                    </li>
+                    <li> \(b\) s'appelle l' <strong>ordonnée à l'origine</strong> de \(f\).
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/foncaff.png" />
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <div class="prop">
+        \(b\) est la valeur de \(f\) pour \(x=0\). On lit donc \(b\) sur l'axe \((Oy)\) à l'intersection de cet axe
+        et
+        de la droite représentant \(f\).
+    </div>
+
+    <div class="defi">Lorsque \(b=0\), on dit que \(f\) est une fonction <strong>linéaire</strong> : on a alors
+        \(f(x)=ax\) ; on passe de \(x\) à \(f(x)\) en multipliant par un nombre \(a\) fixé : \(f(x)\) et \(x\) sont
+        donc <strong>proportionnelles</strong>.
+    </div>
+
+    <div class="rema">
+        Les droites verticales, d'équation \(x=\)un nombre fixé, ne sont pas des fonctions. Toutes les autres droites du
+        plan sont des fonctions affines.
+    </div>
+
+    <h3>Variations</h3>
+
+    <div class="prop">
+        Les variations d'une fonction affine sont données directement par le signe de son coefficient directeur :
+        <ul>
+            <li> \(a>0\) lorsque \(f\) est strictement croissante ;
+            </li>
+            <li> \(a=0\) lorsque \(f\) est constante (droite horizontale \(y=\,\)constante) ;
+            </li>
+            <li> \(a<0\) lorsque \(f\) est strictement décroissante. </ul>
+        </ul>
+    </div>
+    <div class="exo">
+        Donner les coefficients \(a\) et \(b\) des fonctions affines \(f(x)=2x+5=0\) et \(g(x)=18-3x=0\)
+    </div>
+
+    <h3 class="subsection">Équation \(ax+b=0\) et \(ax+b=\textrm{cte}\)</h3>
+    <div class="prop">
+        Une fonction affine s'annule en \(x=\frac{-b}{a}\).
+    </div>
+
+    <div class="exo">
+        <ul>
+            <li>
+                Résoudre : \(2x+5=0\) ; \(18-3x=0\)
+            </li>
+            <li>
+                Résoudre : \(2x+5=29\) ; \(-3x+18=-9\)
+            </li>
+        </ul>
+    </div>
+
+    <h3>Méthodes</h3>
+
+    <div class="meth"> <strong>Calcul de \(a\) : </strong><br />
+        On repère deux points \(E\) et \(F\) <strong>sur la droite</strong>, et on calcule la pente :
+        \(a=\frac{\Delta y}{\Delta x}=\frac{y_F-y_E}{x_F-x_E}\)
+    </div>
+    <div class="rema">
+        \(\Delta x\) représente l'accroissement en \(x\) et \(\Delta y\) représente l'accroissement en \(y\)
+        correspondant lorsque l'on va de \(E\) vers \(F\).
+    </div>
+
+    <div class="meth"> <strong>Calcul de \(b\) : </strong><br />
+        On repère un point \(E\) <strong>sur la droite</strong>, on remplace \(x\) et \(f(x)\) par les
+        coordonnées \(x_E\) et \(y_E\) de \(E\), et :
+        <ul>
+            <li><strong>ou bien</strong> on résout rapidement pour trouver \(b\) :
+                \(y_E=ax_E+b~~\Leftrightarrow~~y_E-ax_E=b\) ; </li>
+            <li><strong>ou bien</strong> on écrit \(y=a(x-x_E)+y_E\) et on développe et on simplifie.
+            </li>
+        </ul>
+
+        Bien sûr, on contrôle que la valeur de \(b\) obtenue par le calcul est bien celle lue graphiquement sur
+        l'axe \((Oy)\).
+    </div>
+
+    <div class="exo">On donne \(A(-2;-1)\), \(B(-2;2)\) et \(B(3;1)\).<br>
+        Calculer les équations des droites \((AB)\), \((AC)\) et \((BC)\) et dire lesquelles
+        correspondent à des fonctions affines.
+    </div>
+    <div class="exo"><strong>Degrés Celsius et Fahrenheit</strong>
+        Beaucoup de pays anglos-saxons utilisent le degré Fahrenheit (°F).<br />
+        Pour eux, l'eau bout à 212°F et gèle à 32°F.<br />
+        On note \(x\) une mesure de température en degrés Celsius (°C) et \(f(x)\) la mesure de température
+        correspondante en degrés Fahrenheit.<br />
+        On sait que \(f\) est une fonction affine.
+        <ol>
+            <li>Écrire les données de l'énoncé sous la forme \(f(\ldots)=\ldots\)</li>
+            <li>En déduire l'expression de la fonction \(f\).</li>
+            <li>Quelle est la température du corps humain en °F ?</li>
+            <li>Exprimer le zéro absolu (-273,15°C) en °F.</li>
+            <li>100°F est-elle une température supportable ?</li>
+            <li>Existe-t-il une température qui s'écrit avec le même nombre en °C et en °F ?</li>
+        </ol>
+    </div>
+    <div class="exo">
+    </div>
 
 
 
