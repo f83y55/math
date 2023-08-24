@@ -234,9 +234,8 @@ code:not(pre code) {
     margin: 0;
     padding: 0;
     max-width: 100%;
-    display:flex;
+    display:inline-flex;
     overflow-x: scroll;
-    flex-flow: row;
 }
 
 .col {
@@ -244,8 +243,7 @@ code:not(pre code) {
     padding: 0;
     width: 50%;
     max-width: 100%;
-    display:flex;
-    flex-flow: column;
+    display: inline;
     overflow-x: scroll;
 }
 
@@ -272,7 +270,7 @@ code:not(pre code) {
   background-color: black;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
     div, table {
         overflow-x: scroll;
         overflow-y: hidden;
@@ -288,13 +286,18 @@ code:not(pre code) {
         overflow-x: scroll;
         font-size: smaller;
     }
+
+    figure {
+        width: 85%;
+        max-width: 100%;
+    }
+
     .row {
-        flex-flow: column;
+        display:block;
     }
     .column {
-        width:80vw;
-        max-width: 90vw;
-
+        width:100%;
+        max-width: 100%;
     }
 }
 
