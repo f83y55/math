@@ -193,7 +193,7 @@
         </div>
         <div class="pagebreak">
         </div>
-        <h3>Représentations sous la forme d'un nuage de points</h3>
+        <h3>Représentations sous la forme d'un nuage de points et courbe de tendance</h3>
         <div class="exo">
             Toujours le 2<sup>e</sup> onglet (en bas) <code>onglet_irl_2</code>.<br />
             On va tracer le <strong>nuage de point</strong> figurant en X : le pourcentage d'évolutionet en Y :
@@ -259,7 +259,6 @@
 
             </ol>
         </div>
-        <h3>Courbe de tendance</h3>
         <div class="exo">
             <div class="row">
                 <div class="col">
@@ -299,15 +298,15 @@
                 </div>
                 <div class="col">
                     <figure>
-                        <img src="assets/insee_irl_1_c5.png" alt="capture 5" style="--width-print:4cm" />
+                        <img src="assets/insee_irl_1_c5.png" alt="capture 5" style="--width-print:3.5cm" />
                         <figcaption>capture 5</figcaption>
                     </figure>
                     <figure>
-                        <img src="assets/insee_irl_1_c6.png" alt="capture 6" style="--width-print:4cm" />
+                        <img src="assets/insee_irl_1_c6.png" alt="capture 6" style="--width-print:3.5cm" />
                         <figcaption>capture 6</figcaption>
                     </figure>
                     <figure>
-                        <img src="assets/insee_irl_1_c7.png" alt="capture 7" style="--width-print:4cm" />
+                        <img src="assets/insee_irl_1_c7.png" alt="capture 7" style="--width-print:3.5cm" />
                         <figcaption>capture 7</figcaption>
                     </figure>
 
@@ -315,12 +314,11 @@
                 </div>
             </div>
         </div>
-        <div class="pagebreak"></div>
         <div class="exo">
             Le tableau ci-contre donne le prix moyen en euros, en France, du paquet de 20 cigarettes, et le nombre de
             paquets
             vendus par an en milliards.
-            <table class="mytable" style="float: right;">
+            <table class="mytable" style="float: right;font-size: smaller;">
                 <tr>
                     <th>Année</th>
                     <td>2004</td>
@@ -348,6 +346,97 @@
             </table>
             La hausse du prix fait-elle significativement diminuer le tabagisme ? Pour argumenter, construire le nuage
             de points associé à ce tableau.
+        </div>
+        <div class="pagebreak"></div>
+        <h2>Analyse croisée d'un couple de caractères</h2>
+
+        <div class="defi">
+            Une fréquence portant sur l'ensemble de la population s'appelle une <strong>fréquence marginale</strong>.
+        </div>
+        <div class="exo"><strong>deux caractères : 3 manières de calculer des fréquences</strong><br />
+            On coupe un paquet de 52 cartes en deux parts égales P1 et P2. On s'intéresse à deux caractères :
+            <ul>
+                <li>Caractère X : être dans le demi-paquet P1 ou P2 ;</li>
+                <li>Caractère Y : être de couleur noire (pique ou trèfle) ou rouge (cœur ou carreau).</li>
+            </ul>
+            <table class="mytable" style="float:right;">
+                <tr>
+                    <th>↓X \ Y→</th>
+                    <th>rouges</th>
+                    <th>noires</th>
+                    <th>total</th>
+                </tr>
+                <tr>
+                    <th>P1</th>
+                    <td>10</td>
+                    <td>...</td>
+                    <th>26</th>
+                </tr>
+                <tr>
+                    <th>P2</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <th>26</th>
+                </tr>
+                <tr>
+                    <th>total</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <th>52</th>
+                </tr>
+            </table>
+            <ol>
+                <li>Compléter le tableau par les effectifs (nombres de cartes).</li>
+                <li>Construire un autre tableau contenant les fréquences marginales.</li>
+                <li>Construire un autre tableau contenant les fréquences par rapport aux valeurs de X : la somme sur
+                    chaque ligne doit faire 100%.</li>
+                <li>Construire un autre tableau contenant les fréquences par rapport aux valeurs de Y : la somme sur
+                    chaque colonne doit faire 100%.</li>
+                <li><strong>Bonus :</strong> remplacer 10 dans le tableau original par un nombre quelconque, et montrer
+                    qu'il y a autant de cartes rouges dans P1 que de cartes noires dans P2.</li>
+            </ol>
+        </div>
+        <div class="exo">
+            On analyse les données des attaquants du club de football «Brutal Sporting Club». Voici les <strong>données
+                brutes</strong> des derniers matchs ; F désigne le nombre de fautes et G le nombre de buts.
+            <div>
+                <code>Mathieu F=2 G=3</code>&nbsp;;&nbsp;
+                <code>Issa F=0 G=3</code>&nbsp;;&nbsp;
+                <code>Malone F=2 G=0</code>&nbsp;;&nbsp;
+                <code>Ilyès F=2 G=1</code>&nbsp;;&nbsp;
+                <code>Tom F=2 G=1</code>&nbsp;;&nbsp;
+                <code>Milo F=2 G=1</code>&nbsp;;&nbsp;
+                <code>Haroun F=1 G=2</code>&nbsp;;&nbsp;
+                <code>Jibril F=1 G=3</code>&nbsp;;&nbsp;
+                <code>Sam F=2 G=3</code>&nbsp;;&nbsp;
+                <code>Damien F=1 G=1</code>&nbsp;;&nbsp;
+            </div>
+            dans I10 : <code>=B3/$F$6</code>
+        </div>
+        <div class="exo"><strong>Automatiser la création du tableau</strong><br />
+            <div class="row">
+                <div class="col">
+                    <ol>
+                        <li>Sélectionner l'ensemble des données brutes.</li>
+                        <li>Dans le menu <code>Données</code>, séctionner <code>table
+                                dynamique</code>/<code>insérer</code>
+                            ou <code>pilote de données</code> (selon les versions de LibreOffice).</li>
+                        <li>Choisir dans la boîte <code>Sélection active</code>, valider «ok».</li>
+                        <li>Glisser-déposer les champs disponibles (à droite), vers les champs de ligne, colonne et
+                            données
+                            (en double-cliquant sur les champs, on peut les configurer plus en profondeur, mais ce n'est
+                            pas
+                            nécessaire ici), de manière à créer la structure du tableau.</li>
+                        <li>Après validation, un nouvel onglet contenant la table dynamique sera créé.</li>
+                    </ol>
+
+                </div>
+                <div class="col">
+                    <figure>
+                        <img src="assets/teb_dyn_1_c1.png" alt="tab dyn">
+                    </figure>
+                </div>
+            </div>
         </div>
     </main>
 
