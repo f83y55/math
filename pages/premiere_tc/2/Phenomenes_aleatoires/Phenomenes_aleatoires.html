@@ -250,6 +250,8 @@
 			possibles}}\)</span>
 	</div>
 
+	<div class="pagebreak"></div>
+
 
 	<h3>Opérations sur les événements</h3>
 	<div class="defi">Si \(A\) et \(B\) sont deux événements,
@@ -406,6 +408,8 @@
 		\(\overline{B}\) et \(\overline{C}\).
 	</div>
 
+	<div class="pagebreak"></div>
+
 
 	<h2>Variables aléatoires (réelles)</h2>
 	<h3>Définition</h3>
@@ -508,7 +512,7 @@
 		Calculer \(E(G)\), la moyenne des gains.
 	</div>
 
-
+	<div class="pagebreak"></div>
 
 
 
@@ -553,9 +557,19 @@
 			<li> \(A\) : «la pièce tirée est acceptée au contrôle». </li>
 		</ul>
 		<ol>
-			<li>Construire l'arbre des possibilités.</li>
+			<li>Construire l'arbre des possibilités (conseil : mettre les probabilités marginales au premier niveau de
+				l'arbre).</li>
 			<li>En déduire les probabilités des 4 issues possibles.</li>
+			<li>Identifier les faux positifs (pièce refusée bien que conforme) et les faux négatifs (acceptée mais
+				défectueuse) sur l'arbre</li>
 			<li>En déduire la probabilité que la pièce prélevée ait subi une erreur de contrôle.</li>
+			<li><strong>Inverser l'arbre :</strong> Construire un arbre dans lequel les événements \(A\) et son
+				complémentaire sont au 1<sup>er</sup> niveau, indiquer les probabilités sur chaque branche.<br />
+				Ce changement de point de vue peut être utile pour mieux analyser une situation.
+			</li>
+			<li> <strong>Approfondissement :</strong> En cas de pièce contrôlée et refusée, on fait un deuxième
+				contrôle, indépendant du premier, qui sera déterminant mais coûte trois fois plus cher. <br />
+				La situation est-elle améliorée ?
 		</ol>
 	</div>
 
@@ -605,8 +619,9 @@
 				peut y avoir de gros écarts.<br>
 				Présenter les données sous la forme d'un tableau à double entrée.</li>
 		</ol>
-
 	</div>
+
+	<div class="pagebreak"></div>
 
 	<div class="defi">
 		\(A\) et \(B\) sont deux événements de probabilité non nulle.<br>
@@ -669,11 +684,13 @@
 
 	<div class="exo"><strong>Erreur de d'Alembert</strong>
 		<p>
-			D’Alembert avait fait un raisonnement faux dans le calcul de la probabilité d’obtenir au moins une fois pile
-			en deux lancers successifs, dans l’article « croix ou pile » de l’Encyclopédie .<br />
+			Quelle est la probabilité d'obtenir <strong>au moins</strong> une fois pile en deux lancés successifs ?
+		</p>
+		<p>
+			<strong>Remarque :</strong> D’Alembert avait fait un raisonnement faux dans le calcul de la probabilité,
+			dans l’article « croix ou pile » de l’Encyclopédie .<br />
 			De l’existence de 3 cas (pile au premier lancer, pile au second lancer, aucun lancer ne donnant pile), il
 			avait déduit que la probabilité était 2/3.<br />
-			Le corriger.
 		</p>
 	</div>
 
@@ -697,6 +714,8 @@
 		</ol>
 	</div>
 
+	<div class="pagebreak"></div>
+
 	<div class="exo"><strong>Paradoxe du Duc de Toscane</strong>
 		<p>
 			On lance trois dés à 6 faces bien équilibrés et on note la somme S des deux nombres obtenus. Le Duc de
@@ -708,6 +727,7 @@
 		Pourtant, en pratique, S=10 est obtenue plus souvent ! Y a-t-il une explication ?
 		</p>
 	</div>
+
 
 	<div class="exo"><strong>Paradoxe de Monty Hall</strong> (présentateur du jeu TV «let's make a deal»).
 		<p>

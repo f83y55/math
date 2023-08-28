@@ -411,7 +411,17 @@
                 <code>Sam F=2 G=3</code>&nbsp;;&nbsp;
                 <code>Damien F=1 G=1</code>&nbsp;;&nbsp;
             </div>
-            dans I10 : <code>=B3/$F$6</code>
+            <ol>
+                <li>Télécharger le fichier <a href="assets/exercice_2caract_BSC.ods"
+                        download><code>exercice_2caract_BSC.ods</code></a>.
+                </li>
+                <li>Compléter le tableau des effectifs à partir des données brutes.</li>
+                <li>Compléter le tableau des fréquences marginales.<br />
+                    On pourra écrire dans la cellule <code>I10</code> la formule : <code>=B3/$F$6</code> (on rappelle
+                    que <code>$</code> fixe la lettre/chiffre qui suit), l'étendre à tous les nombres du tableau, et
+                    formater en les nombres en pourcentage.</li>
+                <li>Adapter cette méthodes pour remplir de même les deux tableaux de fréquences lignes/colonnes.</li>
+            </ol>
         </div>
         <div class="exo"><strong>Automatiser la création du tableau</strong><br />
             <div class="row">
@@ -437,6 +447,24 @@
                     </figure>
                 </div>
             </div>
+        </div>
+        <div class="exo"><strong>Rugby</strong>
+            <p>
+                Les stades toulousains qui hébergent le plus d'équipes accueillent-ils plus les scolaires ? Est-ce plus
+                ou
+                moins le cas pour Toulouse Ouest ?<br />
+                En utilisant le fichier <a href="assets/stades.ods" download><code>stades.ods</code></a>, donner des
+                éléments de réponses.
+            </p>
+            <p>On pourra réaliser un tableau croisé dynamique, filtrer les données, ... et aussi utiliser si besoin la
+                fonction <code>=SI(<i>condition</i>, <i>alors</i>, <i>sinon</i>)</code>. Par exemple, en écrivant dans
+                la
+                cellule <code>B2</code> la formule <code>=SI(A1<10, 50, 9) </code>, celle-ci affichera 50 si la valeur
+                        de
+                        <code>A1</code> est inférieure à 10 et 9 sinon.<br />
+                        (données extraites de <a
+                            href="https://data.toulouse-metropole.fr/explore/dataset/stades/export/"
+                            target="_blank">data.toulouse.metropole.fr</a>).</p>
         </div>
     </main>
 

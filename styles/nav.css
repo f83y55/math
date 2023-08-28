@@ -4,15 +4,15 @@
     --navbar-font: Helvetica, Ubuntu, Verdana, Geneva, Tahoma, sans-serif;
     --navbar-text: #fff;
     --navbar-padding:0.5em;
-    --navbar-bg-1: #c0c0c050;
-    --navbar-bg-2: #90909050;
+    --navbar-bg-1: #e0e0c0b5;
+    --navbar-bg-2: #b0b090b5;
     --navbar-direction: row;    /* row, column */
     --item-direction: column;    /* row, column */
     --item-align: center;    /* start, end, center */
     --navbar-size-min: calc(1em+2*var(--navbar-font-size));
     --navbar-size-max-x: 100vw;
     --navbar-size-max-y: auto;
-    --transition-speed: 700ms;
+    --transition-speed: 300ms;
 }
 
 .navbar{
@@ -33,7 +33,6 @@
     overflow-y: hidden;
     background-image: linear-gradient(46deg, var(--navbar-bg-1) 25%, var(--navbar-bg-2) 100%);
     background-color: var(--navbar-bg-1);
-    filter: opacity(90%);
 }
 
 .navbar-logo {
