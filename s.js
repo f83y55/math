@@ -128,7 +128,7 @@ header.innerHTML += `
 				<img class=\"navbar-icon\" src=\"${root_path}layouts/nav/assets/links.svg\"/>
 				<div class=\"navbar-text\">links</div>
 				</a>
-				<a class=\"navbar-item\" href=\"https://github.com/f83y55/maths/archive/refs/heads/master.zip\">
+				<a class=\"navbar-item\" href=\"https://github.com/f83y55/math/archive/refs/heads/master.zip\">
 				<img class=\"navbar-icon\" src=\"${root_path}layouts/nav/assets/download.svg\"/>
 				<div class=\"navbar-text\">download</div>
 				</a>
