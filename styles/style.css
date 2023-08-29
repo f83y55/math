@@ -72,16 +72,12 @@ a {color: inherit; text-decoration: underline;}
 
 
 
-figure {
-    text-align: center;
-}
 
-img {
+img, figure {
     height: var(--height);
     width: var(--width);
     max-width: 100%;
     max-height: 100%;
-    transition-duration: var(--transition-speed);
 }
 
 
@@ -194,6 +190,7 @@ code:not(pre code) {
 .surl {background-color: var(--color-bg-surl); height: max-content; padding: var(--padding)0.1em;}
 
 .mytable{
+    width: var(--width);
     --mytable-float: none;
     --mytable-border-radius: 1em;
     --mytable-padding: 0.5em;
