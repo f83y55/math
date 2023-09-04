@@ -366,131 +366,133 @@
 
 
 		<h2>Suites arithmétiques et géométriques : rappels 1<sup>ère</sup></h2>
-		<table class="mytable" style="width: 100%;">
-			<tr>
-				<th></th>
-				<th>
-					Suites arithmétiques
-				</th>
-				<th>
-					Suites géométriques
-				</th>
-			</tr>
-			<tr>
-				<th>
-					Relation de récurrence
-				</th>
-				<td>
-					Une suite \((u_n)\) est <strong>arithmétique</strong> s'il existe un réel \(r\) (indépendant de
-					\(n\)) tel
-					que pour
-					tout
-					\(n\),
-					\(u_{n+1}=u_n+r\).<br />
-					Le réel \(r\) s'appelle la <strong>raison</strong> de la suite.
-				</td>
-				<td>
-					Une suite \((u_n)\) est <strong>géométrique</strong> s'il existe un réel \(q\) (indépendant de
-					\(n\))
-					tel que
-					pour tout
-					\(n\),
-					\(u_{n+1}=q\times u_n\).<br />
-					Le réel \(q\) s'appelle la <strong>raison</strong> de la suite.
-				</td>
-			</tr>
-			<tr>
-				<th>
-					Interprétation
-				</th>
-				<td>
-					On passe d'un terme de la suite au suivant en <strong>ajoutant</strong> un même nombre \(r\).
-				</td>
-				<td>
-					On passe d'un terme de la suite au suivant en <strong>multipliant</strong> par un même nombre
-					\(q\).
-				</td>
-			</tr>
-			<tr>
-				<th>
-					Caractérisation
-				</th>
-				<td>
-					\(u_{n+1}-u_n\) est constante, égale à \(r\).
-				</td>
-				<td>
+		<div class="none">
+			<table class="mytable" style="width: 100%;">
+				<tr>
+					<th></th>
+					<th>
+						Suites arithmétiques
+					</th>
+					<th>
+						Suites géométriques
+					</th>
+				</tr>
+				<tr>
+					<th>
+						Relation de récurrence
+					</th>
+					<td>
+						Une suite \((u_n)\) est <strong>arithmétique</strong> s'il existe un réel \(r\) (indépendant de
+						\(n\)) tel
+						que pour
+						tout
+						\(n\),
+						\(u_{n+1}=u_n+r\).<br />
+						Le réel \(r\) s'appelle la <strong>raison</strong> de la suite.
+					</td>
+					<td>
+						Une suite \((u_n)\) est <strong>géométrique</strong> s'il existe un réel \(q\) (indépendant de
+						\(n\))
+						tel que
+						pour tout
+						\(n\),
+						\(u_{n+1}=q\times u_n\).<br />
+						Le réel \(q\) s'appelle la <strong>raison</strong> de la suite.
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Interprétation
+					</th>
+					<td>
+						On passe d'un terme de la suite au suivant en <strong>ajoutant</strong> un même nombre \(r\).
+					</td>
+					<td>
+						On passe d'un terme de la suite au suivant en <strong>multipliant</strong> par un même nombre
+						\(q\).
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Caractérisation
+					</th>
+					<td>
+						\(u_{n+1}-u_n\) est constante, égale à \(r\).
+					</td>
+					<td>
 
-					\(\frac{u_{n+1}}{u_n}\) est constante, égale à \(q\).
-				</td>
-			</tr>
-			<tr>
-				<th>
-					Fonction associée (récurrence)
-				</th>
-				<td>
+						\(\frac{u_{n+1}}{u_n}\) est constante, égale à \(q\).
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Fonction associée (récurrence)
+					</th>
+					<td>
 
-					\(u_{n+1}=f\left(u_n\right)\) avec \(f(x)=x+r\)
-				</td>
-				<td>
-					\(u_{n+1}=f\left(u_n\right)\) avec \(f(x)=qx\)
-				</td>
-			</tr>
-			<tr>
-				<th>
-					Exemples
-				</th>
-				<td>
-					<img style="--width:20vw;--width-print:2.7cm;" src="assets/1_0506suitesc.png" />
-					<img style="--width:20vw;--width-print:2.7cm;" src="assets/1_0506suitesd.png" />
-				</td>
-				<td>
-					<img style="--width:20vw;--width-print:2.7cm;" src="assets/1_0506suitesg.png" />
-					<img style="--width:20vw;--width-print:2.7cm;" src="assets/1_0506suitesh.png" />
-					<img style="--width:20vw;--width-print:2.7cm;" src="assets/1_0506suitese.png" />
-					<img style="--width:20vw;--width-print:2.7cm;" src="assets/1_0506suitesf.png" />
-				</td>
-			</tr>
-			<tr>
-				<th>
-					Formules
-				</th>
-				<td>
-					<ul>
-						<li>terme général (rang 0) :
-							\(u_n=u_0+n r\)</li>
-						<li>terme général (rang 1) :
-							\(u_n=u_1+(n-1)r\)</li>
-					</ul>
-				</td>
-				<td>
-					<ul>
-						<li>terme général (rang 0) :
-							\(u_n=u_0 q^n\)</li>
-						<li>terme général (rang 0) :
-							\(u_n=u_1 q^{n-1}\)</li>
-					</ul>
-				</td>
-			</tr>
-			<tr>
-				<th>
-					Limites
-				</th>
-				<td>
-					<ul>
-						<li>\(r&gt;0\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=+\infty\)</li>
-						<li>\(r=0\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=u_0\) (suite constante)</li>
-						<li>\(r&lt;0\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=-\infty\)</li>
-					</ul>
-				</td>
-				<td>
-					<ul>
-						<li>\(q&gt;1\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=\pm\infty\)</li>
-						<li>\(-1&lt;q&lt;1\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=0\)</li>
-						<li>\(r\leqslant-1\Rightarrow\) pas de limite.</li>
-					</ul>
-				</td>
-			</tr>
-		</table>
+						\(u_{n+1}=f\left(u_n\right)\) avec \(f(x)=x+r\)
+					</td>
+					<td>
+						\(u_{n+1}=f\left(u_n\right)\) avec \(f(x)=qx\)
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Exemples
+					</th>
+					<td>
+						<img style="--width:20vw;--width-print:2.7cm;" src="assets/1_0506suitesc.png" />
+						<img style="--width:20vw;--width-print:2.7cm;" src="assets/1_0506suitesd.png" />
+					</td>
+					<td>
+						<img style="--width:20vw;--width-print:2.7cm;" src="assets/1_0506suitesg.png" />
+						<img style="--width:20vw;--width-print:2.7cm;" src="assets/1_0506suitesh.png" />
+						<img style="--width:20vw;--width-print:2.7cm;" src="assets/1_0506suitese.png" />
+						<img style="--width:20vw;--width-print:2.7cm;" src="assets/1_0506suitesf.png" />
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Formules
+					</th>
+					<td>
+						<ul>
+							<li>terme général (rang 0) :
+								\(u_n=u_0+n r\)</li>
+							<li>terme général (rang 1) :
+								\(u_n=u_1+(n-1)r\)</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li>terme général (rang 0) :
+								\(u_n=u_0 q^n\)</li>
+							<li>terme général (rang 0) :
+								\(u_n=u_1 q^{n-1}\)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Limites
+					</th>
+					<td>
+						<ul>
+							<li>\(r&gt;0\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=+\infty\)</li>
+							<li>\(r=0\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=u_0\) (suite constante)</li>
+							<li>\(r&lt;0\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=-\infty\)</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li>\(q&gt;1\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=\pm\infty\)</li>
+							<li>\(-1&lt;q&lt;1\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=0\)</li>
+							<li>\(r\leqslant-1\Rightarrow\) pas de limite.</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
 
 
 		<h2>Principe de récurrence</h2>
@@ -687,48 +689,50 @@
 
 
 		<h3>Sommes des termes d'une suite</h3>
-		<table class="mytable" style="width: 100%;">
-			</style>>
-			<tr>
-				<th>
+		<div class="none">
+			<table class="mytable" style="width: 100%;">
+				</style>>
+				<tr>
+					<th>
 
-				</th>
-				<th>
-					Sommes arithmétiques
-				</th>
-				<th>
-					sommes géométriques
-				</th>
-			</tr>
-			<tr>
-				<th>
-					Formules de base
-				</th>
-				<td>
-					\(\displaystyle\sum_{k=0}^{k=n}k=0+1+2+...+n=\frac{n(n+1)}{2}\)
-				</td>
-				<td>
-					\(\displaystyle\sum_{k=0}^{k=n}q^k=1+q+q^2+...+q^n=\frac{q^{n+1}-1}{q-1}\)
-				</td>
-			</tr>
-			<tr>
-				<th>
-					Applications
-				</th>
-				<td>
-					\begin{eqnarray*}
-					&&\displaystyle\sum_{k=0}^{k=n}u_k=(n+1)u_0+\frac{n(n+1)}{2}r \\
-					&&\displaystyle\sum_{k=1}^{k=n}u_k=nu_1+\frac{(n-1)n}{2}r \\
-					\end{eqnarray*}
-				</td>
-				<td>
-					\begin{eqnarray*}
-					&&\displaystyle\sum_{k=0}^{k=n}u_k=u_0\frac{q^{n+1}-1}{q-1} \\
-					&&\displaystyle\sum_{k=1}^{k=n}u_k=u_1\frac{q^{n}-1}{q-1} \\
-					\end{eqnarray*}
-				</td>
-			</tr>
-		</table>
+					</th>
+					<th>
+						Sommes arithmétiques
+					</th>
+					<th>
+						sommes géométriques
+					</th>
+				</tr>
+				<tr>
+					<th>
+						Formules de base
+					</th>
+					<td>
+						\(\displaystyle\sum_{k=0}^{k=n}k=0+1+2+...+n=\frac{n(n+1)}{2}\)
+					</td>
+					<td>
+						\(\displaystyle\sum_{k=0}^{k=n}q^k=1+q+q^2+...+q^n=\frac{q^{n+1}-1}{q-1}\)
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Applications
+					</th>
+					<td>
+						\begin{eqnarray*}
+						&&\displaystyle\sum_{k=0}^{k=n}u_k=(n+1)u_0+\frac{n(n+1)}{2}r \\
+						&&\displaystyle\sum_{k=1}^{k=n}u_k=nu_1+\frac{(n-1)n}{2}r \\
+						\end{eqnarray*}
+					</td>
+					<td>
+						\begin{eqnarray*}
+						&&\displaystyle\sum_{k=0}^{k=n}u_k=u_0\frac{q^{n+1}-1}{q-1} \\
+						&&\displaystyle\sum_{k=1}^{k=n}u_k=u_1\frac{q^{n}-1}{q-1} \\
+						\end{eqnarray*}
+					</td>
+				</tr>
+			</table>
+		</div>
 		<div class="exo">
 			Démontrer, par récurrence, les deux formules de base du tableau précédent.<br />
 			Y a-t-il d'autres démonstrations ?

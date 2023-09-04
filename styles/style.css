@@ -282,7 +282,7 @@ code:not(pre code) {
         font-size: smaller;
     }
 
-    figure {
+    figure, img {
         width: 85%;
         max-width: 100%;
     }
