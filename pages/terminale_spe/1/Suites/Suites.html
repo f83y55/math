@@ -151,17 +151,45 @@
 			strictement
 			décroissante (donc a fortiori décroissante).
 		</div>
+		<div class="meth">
+			Pour déterminer le sens de variation d'une suite \((u_n)\), <strong>on peut</strong>
+			examiner le
+			signe de
+			la
+			différence \(u_{n+1}-u_n\).
+		</div>
 
 		<div class="row">
 			<div class="col">
-				<div class="meth">
-					Pour déterminer le sens de variation d'une suite \((u_n)\), <strong>on peut</strong>
-					examiner le
-					signe de
-					la
-					différence \(u_{n+1}-u_n\).
+
+				<div class="exem">
+					On considère la suite \((u_n)\) définie par \(u_n=1-5n\) :
+					On a \(u_0=1\) ; \(u_1=-4\) ; \(u_2=-9\) ; ...<br />
+					Montrons que cette suite est strictement décroissante :<br />
+					<table>
+						<tr>
+							<td>
+								\(u_{n+1}-u_{n}\)
+
+							</td>
+							<td>\(=\)</td>
+							<td>
+								\(1-5(n+1)-(1-5n)\)
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>\(=\)</td>
+							<td>
+								\(-5\)
+							</td>
+						</tr>
+					</table>
+					\(-5 &lt; 0\), donc \((u_n)\) décroît strictement.
 				</div>
-				<p>
+
+			</div>
+			<div class="col">
 				<table class="mytable" style="margin-left:1cm;font-size: smaller;">
 					<tr>
 						<th>
@@ -205,40 +233,7 @@
 					</tr>
 				</table>
 				</p>
-			</div>
-			<div class="col">
-				<div class="exem">
-					On considère la suite \((u_n)\) définie par \(u_n=1-5n\) :
-					On a \(u_0=1\) ; \(u_1=-4\) ; \(u_2=-9\) ; ...<br />
-					Montrons que cette suite est strictement décroissante :<br />
-					<table>
-						<tr>
-							<td>
-								\(u_{n+1}-u_{n}\)
 
-							</td>
-							<td>\(=\)</td>
-							<td>
-								\(1-5(n+1)-(1-5n)\)
-							</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>\(=\)</td>
-							<td>
-								\(1-5n-5-1+5n\)
-							</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>\(=\)</td>
-							<td>
-								\(-5\)
-							</td>
-						</tr>
-					</table>
-					\(-5 &lt; 0\), donc \((u_n)\) décroît strictement.
-				</div>
 			</div>
 		</div>
 
@@ -305,41 +300,47 @@
 		</div>
 
 		<h3>Générer une suite</h3>
-		<div class="row">
-			<div class="col none">
-				<p>
-					<strong>Si \(u_n\) est donné directement en fonction de \(n\) :</strong>
-				<p>
-					On peut alors calculer tous les termes de la suite directement : c’est l’idéal. <br />
-					Mais ce n'est pas toujours le cas.
-				</p>
-			</div>
-			<div class="col">
-				<div class="exem"><strong>Formule explicite : </strong>
-					\(u_n=\cos(\pi n)-2n\)
+		<div class="none">
+			<div class="row">
+				<div class="col">
+					<p>
+						<strong>Si \(u_n\) est donné directement en fonction de \(n\) :</strong>
+					</p>
+					<p>
+						On peut alors calculer tous les termes de la suite directement : c’est l’idéal. <br />
+						Mais ce n'est pas toujours le cas.
+					</p>
+				</div>
+				<div class="col">
+					<div class="exem"><strong>Formule explicite : </strong>
+						\(u_n=\cos(\pi n)-2n\)
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col none">
-				<p>
-					<strong>Si \((u_n)\) est définie par récurrence :</strong>
-					On dispose d’un moyen (formule, algorithme) permettant de passer d’un terme au suivant :
-					\(u_{n+1}\)
-					est donné
-					en
-					fonction de \(u_n\) (ou bien \(u_n\) est donné en fonction de \(u_{n-1}\)) ;<br />
-					on dispose donc d'<strong>une relation de récurrence</strong> ; certains termes doivent être
-					connus
-					car des suites distinctes peuvent admettre la même relation de récurrence !
-				</p>
-			</div>
-			<div class="col">
-				<div class="exem"><strong>Formule de récurrence : </strong>
-					\(\left\{\begin{array}{l} u_{n+1} = u_n + \frac{1}{n} \\ u_1 =1 \\ \end{array} \right.\)
+		<div class="none">
+			<div class="row">
+				<div class="col">
+					<p>
+						<strong>Si \((u_n)\) est définie par récurrence :</strong>
+						On dispose d’un moyen (formule, algorithme) permettant de passer d’un terme au suivant :
+						\(u_{n+1}\)
+						est donné
+						en
+						fonction de \(u_n\) (ou bien \(u_n\) est donné en fonction de \(u_{n-1}\)) ;<br />
+						on dispose donc d'<strong>une relation de récurrence</strong> ; certains termes doivent être
+						connus
+						car des suites distinctes peuvent admettre la même relation de récurrence !
+					</p>
+				</div>
+				<div class="col">
+					<div class="exem"><strong>Formule de récurrence : </strong>
+						\(\left\{\begin{array}{l} u_{n+1} = u_n + \frac{1}{n} \\ u_1 =1 \\ \end{array} \right.\)
+					</div>
 				</div>
 			</div>
 		</div>
+
 
 		<div class="defi">Lorsque \(u_{n+1}\) est défini à partir de \(u_n\) à l’aide d’une relation de récurrence
 			ne
@@ -360,6 +361,7 @@
 				<strong>Attention : </strong>ne pas confondre cette fonction avec la fonction qui donne directement
 				\(u_n\) en fonction de \(n\), si celle-ci existe (ou que l'on cherche à la découvrir).
 			</p>
+		</div>
 		</div>
 
 
@@ -654,7 +656,7 @@
 		<div class="exem">
 			On définit la suite \((u_n)\) par la relation \(u_{n+1}=2+u_n\), valable pour tout
 			\(n\in\mathbb{N}\).
-			On note \(H_n\) l'énoncé «\(u_n\) est pair».<br>
+			On note \(H_n\) l'énoncé «\(u_n\) est pair».
 			On peut alors voir que \(H_n\) est héréditaire, mais si \(H_0\) est fausse (quand \(u_0\) est
 			impair), \(H_n\)
 			sera
@@ -800,11 +802,10 @@
 		<div class="exo">
 			En utilisant la définition, démontrer que \((\sqrt{n})\) tend vers \(+\infty\).
 		</div>
-		<div class="exo"> Donner un exemple de suite bornée divergente.
-		</div>
-		<div class="exo"><strong>Dur : </strong> Montrer que toute suite bornée possède une sous-suite convergente (on
-			pourra
-			utiliser la dichotomie).
+		<div class="exo">
+			On définit la suite \((u_n)\) par \(\left\{\begin{array}{l}u_{n+1}=\frac{\sqrt{3}u_n-1}{u_n+\sqrt{3}} \\ u_0
+			= 2 \\ \end{array}\right.\). En utilisant le tableur ou la calculatrice, calculer les 6 premiers termes de
+			cette suite. Une suite bornée peut-elle être divergente ?
 		</div>
 
 		<div class="exo"><strong>Unicité de la limite</strong><br>
@@ -1330,13 +1331,12 @@
 		<div class="prop">
 			On a alors \(a_n\leqslant b_n\), et ces deux suites convergent vers une même limite.
 		</div>
-		<div class="exo">
-			Le démontrer.
+		<div class="exo"><strong>Dur : </strong> Démontrer la propriété précédente.<br /> Montrer que toute suite bornée
+			possède une sous-suite convergente (on
+			pourra
+			utiliser la dichotomie pour construire des suites adjacentes).
 		</div>
-		<div class="rema">
-			Ces suites sont utilisées dans beaucoup de domaines (irrationalité de e, dichotomie, quadrature, fractions
-			continues, etc...)
-		</div>
+
 	</main>
 </body>
 
