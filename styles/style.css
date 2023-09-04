@@ -439,6 +439,11 @@ code:not(pre code) {
     .hidden-web {
         display: inherit;
     }
+
+    .hidden-print {
+        display: none;
+    }
+
     
     footer {
         display: none;
