@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Fonctions : limites, continuité et valeurs intermédiaires</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../../../../s.js" data-import=""></script>
+</head>
+
+<body onload="body()">
+	<main>
+		<h1>Fonctions : limites, continuité et valeurs intermédiaires</h1>
+		<h2>Limites</h2>
+		<h3>Définition de la limite d'une fonction</h3>
+		<div class="none">
+			<strong>Cadre : </strong>
+			<ul>
+				<li> Soit \(f\) une fonction définie sur \(\mathcal{D}_f\) et soit
+					\(a\in\mathbb{R}\cup\left\{-\infty;+\infty\right\}\).<br />
+					Selon le cas, \(a\) peut être dans \(\mathcal{D}_f\) ou bien au bord de \(\mathcal{D}_f\) ; par
+					exemple
+					si
+					\(\mathcal{D}_f=\mathbb{R}\) et que \(a=+\infty\) ou bien si
+					\(\mathcal{D}_f=\left]0;+\infty\right[\) et
+					\(a=0\).
+				</li>
+				<li> On note \(l\in\mathbb{R}\cup\left\{-\infty;+\infty\right\}\) la limite envisagée.</li>
+			</ul>
+		</div>
+		<div class="defi">On dit que \(f(x)\) admet \(l\) pour <strong>limite</strong> quand \(x\) tend vers \(a\)
+			et
+			on
+			note :
+			\(\displaystyle\lim_{x\to a}{f(x)} = l\) ou \(\displaystyle \lim_a f = l\)
+			lorsque les images \(f(x)\) sont aussi proches que l'on veut de \(l\), à condition de prendre
+			n'importe
+			quel
+			\(x\) suffisamment proche de \(a\).
+		</div>
+
+		<div class="defi">
+			<ul>
+				<li> Si l'on ne considère que les valeurs de \(x&lt;a\) on obtient la <strong>limite</strong> de
+					\(f\) <strong>à
+						gauche</strong> de
+					\(a\), notée :
+					\(\displaystyle\lim_{\begin{array}{l} x\to a \\ x&lt;a \end{array}}f(x)\) ou
+					\(\displaystyle\lim_{x\to a^-}{f(x)}\)
+					ou \(\displaystyle\lim_{a^-} f\). </li>
+				<li> Si l'on ne considère que les valeurs de \(x&gt;a\) on obtient la <strong>limite</strong> de
+					\(f\) <strong>à
+						droite</strong> de
+					\(a\), notée :
+					\(\displaystyle\lim_{\begin{array}{l} x\to a \\ x&gt;a \end{array}}f(x)\) ou
+					\(\displaystyle\lim_{x\to a^+}{f(x)}\)
+					ou \(\displaystyle\lim_{a^+} f\). </li>
+			</ul>
+		</div>
+
+
+
+
+		<div class="defi"><strong>asymptote verticale :</strong><br />
+			Lorsque \(\displaystyle\lim_a f = l\) avec \(a\in\mathbb{R}\) et \(l=\pm\infty\), on dit que la
+			courbe
+			représentative de \(f\) admet une <strong>asymptote verticale</strong> d'équation \(x=a\).
+		</div>
+		<div class="defi"><strong>asymptote horizontale :</strong><br />
+			Lorsque \(\displaystyle\lim_a f = l\) avec \(a=\pm\infty\) et \(l\in\mathbb{R}\), on dit que la
+			courbe
+			représentative de \(f\) admet une <strong>asymptote horizontale</strong> d'équation \(y=l\).
+		</div>
+
+
+		<h3>Exemples graphiques</h3>
+
+
+		<div class="exem">
+			Limite en un point :
+			<div class="row">
+				<div class="col" style="margin: 3%;"> <img src="assets/lim1.png" /><br />
+					\(\displaystyle\lim_{x\to-2^+}f(x)=3\) :
+					Il n'y a pas d'asymptote.
+				</div>
+				<div class="col" style="margin: 3%;"> <img src="assets/lim2.png" /><br />
+					\(\displaystyle\lim_{x\to1}f(x)=-\infty\) :
+					La courbe de \(f\) admet une asymptote verticale d'équation \(x=1\).
+				</div>
+				<div class="col" style="margin: 3%;"> <img src="assets/lim3.png" /><br />
+					\(\displaystyle\lim_{x\to-1^+}f(x)=-\infty\)<br /> et \(\displaystyle\lim_{x\to-1^-}f(x)=~2\) :
+					La courbe de \(f\) admet une asymptote verticale d'équation \(x=-1\).
+				</div>
+			</div>
+		</div>
+		<div class="exem">
+			Limite en \(+\infty\) et \(-\infty\) :<br />
+			<div class="row">
+				<div class="col" style="margin: 3%;">
+					<img src="assets/lim4.png" /><br />
+					\(\displaystyle\lim_{x\to-\infty}f(x)=+\infty\) et
+					\(\displaystyle\lim_{x\to+\infty}f(x)=+\infty\).
+					<br />
+					Il n'y a pas d'asymptote.
+				</div>
+				<div class="col" style="margin: 3%;"> <img src="assets/lim5.png" /><br />
+					\(\displaystyle\lim_{x\to-\infty}f(x)=-1\) et \(\displaystyle\lim_{x\to+\infty}f(x)=1\).
+					La courbe de \(f\) admet deux asymptotes horizontales d'équation \(y=-1\) en \(-\infty\) et
+					d'équation
+					\(y=1\)
+					en \(+\infty\).
+				</div>
+				<div class="col" style="margin: 3%;">
+					<img src="assets/lim6.png" /><br />
+					\(f\) n'admet aucune limite en \(+\infty\) et en \(-\infty\).<br />
+					sa courbe n'admet pas d'asymptote.
+				</div>
+			</div>
+		</div>
+		<h3>Limites des fonctions usuelles</h3>
+
+
+
+
+		<div class="prop">
+			<strong>Fonctions puissances :</strong><br />
+			\(n\) est un entier \(&gt;0\) ; on a :
+			\(\displaystyle\lim_{x\to+\infty}x^n=+\infty\) et
+			\(\displaystyle\lim_{x\to-\infty}x^n=\begin{array}{|l}+\infty\textrm{ si }n\textrm{ est pair} \\
+			-\infty\textrm{ si }n\textrm{ est impair}\\
+			\end{array}\)<br />
+			Pour leurs inverses :
+			\(\displaystyle\lim_{x\to-\infty}\frac{1}{x^n}=\lim_{x\to+\infty}\frac{1}{x^n}=0\)<br />
+			En \(0\) ces inverses ne sont pas définis (\(0\) est valeur interdite). On a donc les limites
+			suivantes
+			au
+			voisinage de \(0\) :<br />
+			<ul>
+				<li> si \(n\) est pair :
+					\(\displaystyle\lim_{x\to0^-}\frac{1}{x^n}=\lim_{x\to0^+}\frac{1}{x^n}=+\infty\)
+				</li>
+				<li> si \(n\) est impair :
+					\(\displaystyle\lim_{x\to0^-}\frac{1}{x^n}=-\infty\) et
+					\(\displaystyle\lim_{x\to0^+}\frac{1}{x^n}=+\infty\).
+				</li>
+			</ul>
+		</div>
+		<div class="exo">Donner les limites en \(-\infty\) et \(0^-\) des expressions suivantes :
+			\(x^3\) ; \(\frac{1}{x^4}\) et \(\frac{1}{x^3}~\).
+		</div>
+
+
+		<div class="prop">
+			<strong>Polynômes :</strong><br />
+			Les limites en \(+\infty\) ou \(-\infty\) d'un polynôme
+			\(P(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0\)
+			sont les
+			mêmes que celles du terme de plus haut degré \(a_nx^n\) (terme dominant).
+		</div>
+
+		<div class="exo">Donner les limites en \(-\infty\) et \(+\infty\) des expressions suivantes :
+			\(A(x)=x^2-x\) ; \(B(x)=x-x^3\) et \(C(x)=2x^5+x^3\).
+		</div>
+
+		<h3>Limites et opérations :</h3>
+
+		<div class="row">
+			<div class="col" style="size: 50%;">
+				<div class="prop"><strong>Limites d'une somme</strong> :
+					\(l,l'\) sont des réels et désignent des limites finies.<br />
+					<table class="mytable">
+						<tr>
+							<th>
+								\(\displaystyle\lim_a f\)
+							</th>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(+\infty\)
+							</td>
+							<td>
+								\(-\infty\)
+							</td>
+							<td>
+								\(-\infty\)
+							</td>
+						</tr>
+						<tr>
+							<th>
+								\(\displaystyle\lim_a g\)
+							</th>
+							<td>
+								\(l'\)
+							</td>
+							<td>
+								\(+\infty\)
+							</td>
+							<td>
+								\(-\infty\)
+							</td>
+							<td>
+								\(+\infty\)
+							</td>
+							<td>
+								\(-\infty\)
+							</td>
+							<td>
+								\(+\infty\)
+							</td>
+						</tr>
+						<tr>
+							<th>
+								\(\displaystyle\lim_a f+g\)
+							</th>
+							<td>
+								&nbsp;+&nbsp;
+							</td>
+							<td>
+
+							</td>
+							<td>
+
+							</td>
+							<td>
+
+							</td>
+							<td>
+
+							</td>
+							<td>
+								FI
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="col">
+				<div class="exo">
+					Compléter le tableau.
+				</div>
+				<div class="exo">Calculer les limites suivantes :
+					<ol>
+						<li>
+							\(\displaystyle\lim_{x\to-\infty}\left(\frac{1}{x}+2\right)\) ;
+						</li>
+						<li>
+							\(\displaystyle\lim_{x\to-\infty}\left(\frac{1}{x^2}+x^2\right)\) ;
+						</li>
+						<li>
+							\(\displaystyle\lim_{x\to0^+}(\dfrac{1}{x}+x^2)\).
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="prop"><strong>Limites d'un produit :</strong><br />
+					<table class="mytable">
+						<tr>
+							<th>
+								\(\displaystyle\lim_a f\)
+							</th>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(l\neq0\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+							<td>
+								\(0\)
+							</td>
+						</tr>
+						<tr>
+							<th>
+								\(\displaystyle\lim_a g\)
+							</th>
+							<td>
+								\(l'\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+						</tr>
+						<tr>
+							<th>
+								\(\displaystyle\lim_a f\times g\)
+							</th>
+							<td>
+								\(l\times l'\)
+							</td>
+							<td>
+								\(*\infty\)
+							</td>
+							<td>
+								\(*\infty\)
+							</td>
+							<td>
+								FI
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="rema">
+					\(*\infty\) : pour trouver si \(*\) est \(+\) ou \(-\), on applique la règle des signes.
+				</div>
+			</div>
+			<div class="col">
+				<div class="exo">Calculer les limites suivantes : <br />
+					<ol>
+						<li>
+							\(\displaystyle\lim_{x\to-\infty}(x-2)(x+7)\) ;
+						</li>
+						<li>
+							\(\displaystyle\lim_{x\to0^+}(x-3)\frac{1}{x}\)
+							;
+						</li>
+						<li>
+							\(\displaystyle\lim_{x\to-\infty}(x-1)x^3\).
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="prop"><strong>Limites d'un quotient :</strong> attention à tenir compte du signe
+					(0<sup>+</sup> ou 0<sup>-</sup>)<br />
+					<table class="mytable">
+						<tr>
+							<th>
+								\(\displaystyle\lim_a f\)
+							</th>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+
+							<td>
+								\(0\)
+							</td>
+						</tr>
+						<tr>
+							<th>
+								\(\displaystyle\lim_a g\)
+							</th>
+							<td>
+								\(l'\neq0\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+							<td>
+								\(0\)
+							</td>
+							<td>
+								\(l'\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+							<td>
+								0
+							</td>
+						</tr>
+						<tr>
+							<th>
+								\(\displaystyle\lim_a \frac{f}{g}\)
+							</th>
+							<td>
+								\(\frac{l}{l'}\)
+							</td>
+							<td>
+								\(0\)
+							</td>
+							<td>
+								\(*\infty\)
+							</td>
+							<td>
+								\(*\infty\)
+							</td>
+							<td>
+								FI
+							</td>
+							<td>
+								FI
+							</td>
+
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="exo">Calculer les limites suivantes :
+					<ol>
+						<li>
+							\(\displaystyle\lim_{x\to-\infty}\frac{\frac{1}{x}-3}{x^2}\) ;
+						</li>
+						<li>
+							\(\displaystyle\lim_{x\to0^+}\frac{1}{x-1}\) ;
+						</li>
+						<li>
+							\(\displaystyle\lim_{x\to-\infty}\frac{3-\dfrac{1}{x^2}}{x}\).
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col">
+				<div class="prop">
+					<strong>Limite d'une fonction composée :</strong>
+					Soit deux fonctions \(f\) et \(g\).<br />
+					Si \(\left\{\begin{array}{l}\displaystyle\lim_a f=b \\
+					\displaystyle\lim_b g=c \\ \end{array}\right.\) alors \(\displaystyle\lim_a g(f(x))=c\).
+				</div>
+			</div>
+			<div class="col">
+				<div class="exo">Calculer les limites suivantes :
+					<ol>
+						<li>
+							\(\displaystyle\lim_{x\to-\infty}\dfrac{1}{x^2+3}\) ;
+						</li>
+						<li>
+							\(\displaystyle\lim_{x\to+\infty}\sqrt{2x+1}\) ;
+						</li>
+						<li>
+							\(\displaystyle\lim_{x\to+\infty}\sqrt{25+\dfrac{1}{x}}\).
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="prop"><strong>Traitement des formes indéterminées :</strong><br />
+					Il y a quatre FI : \(+\infty-\infty\) ; \(0\times\pm\infty\) ; \(\frac{\pm\infty}{\pm\infty}\) ;
+					\(\frac{0}{0}\).
+				</div>
+
+				<div class="meth">Il faut essayer de mettre le terme le plus « fort » en facteur et simplifier,
+					ou
+					bien
+					factoriser et simplifier, ou bien développer, ou bien se servir de la quantité conjuguée (en
+					présence de
+					racines carrées), ou bien utiliser les propriétés de croissances comparées (en présence de
+					\(\ln\)
+					et \(\exp\)
+					: cf chapitre correspondant).
+				</div>
+			</div>
+			<div class="col">
+				<div class="exo">Calculer les limites suivantes :
+					<ol>
+						<li>
+							\(\displaystyle\lim_{x\to+\infty}\frac{1}{x}(x^2+1)\) ;
+						</li>
+						<li>
+							\(\displaystyle\lim_{x\to+\infty}\sqrt{x^2+1}-x\) ;
+						</li>
+						<li>
+							\(\displaystyle\lim_{x\to0^+}\dfrac{1}{\sqrt{x}}-\dfrac{1}{x}\)
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<h2>Continuité</h2>
+
+		<div class="defi">Soit \(a\) un réel.
+			Une fonction \(f\) est dite <strong>continue</strong> lorsqu'on a :
+			<span class="surl">\(\displaystyle\lim_{x\to a^-}f(x)=f(a)=\displaystyle\lim_{x\to a^+} {f(x)}\)</span>.
+			<ul>
+				<li> Si on a juste l'égalité de gauche, on dit que \(f\) est continue à gauche de \(a\).
+				</li>
+				<li> Si on a juste l'égalité de droite, on dit que \(f\) est continue à droite de \(a\).
+				</li>
+			</ul>
+		</div>
+
+		<div class="rema">
+			Lorsque \(a\) est sur le bord gauche (resp. droit) d'un intervalle de l'ensemble de définition de \(f\), on
+			ne
+			considère pas la limite en \(a^-\) (resp. en \(a^+\)).
+		</div>
+
+		<div class="exem">
+			La fonction racine carrée est continue en \(0\) car \(\displaystyle\lim_{x\to 0^+}{\sqrt{x}}=0\) et
+			\(\sqrt{0}=0\).
+		</div>
+
+
+		<div class="rema">
+			Graphiquement, une fonction est continue lorsque sa courbe peut être tracée sans lever le crayon
+			de la feuille :
+			sa courbe ne présente pas de «sauts» de valeurs.
+		</div>
+
+		<div class="prop">
+			Les fonctions affines, carré, inverse, racine carrée, valeur absolue, polynômes, \(\cos\),
+			\(\sin\)
+			et
+			\(\tan\)
+			sont continues <strong>sur tout intervalle</strong> inclus dans leurs ensemble de définition.
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="exo">Une fonction définie sur \(\mathbb{R}\) mais non continue en chaque entier relatif : la
+					fonction partie
+					entière :<br />
+					À tout réel \(x\) on associe l'entier (relatif) \(E(x)\) immédiatement inférieur à \(x\).
+					<ol>
+						<li>
+							Tracer la courbe représentant la fonction \(E\) dans le repère ci-contre.
+						</li>
+						<li>
+							Discuter de la continuité à gauche et à droite de \(E\) en chaque entier.
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="col">
+				<img src="assets/CoursLimiteContinuiteFig21.png" />
+			</div>
+		</div>
+
+		<div class="prop">
+			(admise) <strong>Dérivable \(\Rightarrow\) continue</strong><br />
+			Si une fonction \(f\) est dérivable sur un intervalle \(I\), alors elle est continue sur \(I\).
+		</div>
+
+		<div class="rema">
+			La réciproque est fausse : la fonction racine carrée est continue en \(0\) mais pas dérivable en
+			\(0\).
+		</div>
+
+		<h2>Dérivation (rappels)</h2>
+		<h3>Nombre dérivé et tangente</h3>
+		<div class="none">
+			On se donne une fonction \(f\) et on se place en un \(x\) fixé. Soit \(dx\) un petit
+			accroissement
+			de la
+			variable \(x\) (positif ou négatif), correspondant à un accroissement
+			\(df=f(x+\textrm{d}x)-f(x)\) des
+			images.<br />
+			Si l'on fait tendre \(dx\) vers \(0\), la droite \(D\) prend une position de tangente à la courbe de \(f\)
+			en \(x\).
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="defi">Si \(\displaystyle\lim_{dx\to0} \frac{df}{dx}\) existe,
+					on dit que \(f\) est dérivable en \(x\) ; on note alors \(f'(x)\) ou bien
+					\(\displaystyle\frac{\textrm{d}f}{\textrm{d}x}(x)\) cette limite, que l'on appelle <strong>nombre
+						dérivé</strong>
+					de \(f\) en \(x\), et qui indique le coefficient directeur de la tangente à la courbe de \(f\) en
+					\(x\).
+				</div>
+				<div class="prop">
+					L'équation de la tangente à la courbe de \(f\) en \(x=a\) est :
+					<span class="surl">\(y=f'(a)(x-a)+f(a)\)</span>.
+				</div>
+			</div>
+			<div class="col">
+				<figure>
+					<img src="assets/tang.png" />
+				</figure>
+			</div>
+		</div>
+		<div class="exo">
+			Calculer l'équation de la tangente à la courbe de \(f(x)=x^3-2x\) en \(x=0{,}5\).
+		</div>
+
+		<h3 class="subsection">Dérivées de fonctions usuelles</h3>
+		\(\displaystyle\begin{array}{|c|c|} \hline
+		f(x) & f'(x) <br /> \hline \hline
+		\textrm{cte} & 0 <br /> \hline
+		x^\alpha~~ (\alpha\in\R) & \alpha x^{\alpha-1} <br /> \hline
+		\frac{1}{x}=x^{-1} & \frac{-1}{x^2}=-x^{-2} <br /> \hline
+		\sqrt{x}=x^\frac{1}{2} & \frac{1}{2\sqrt{x}}=\frac{1}{2}x^{-\frac{1}{2}} <br /> \hline
+		\cos x & -\sin x <br /> \hline
+		\tan x & \frac{1}{(\cos x)^2}=1+(\tan x)^2 <br /> \hline
+		\end{array}\)
+
+		<strong>Fonctions composées : </strong><br />
+		\(u\) désigne une fonction dérivable ; \(\omega\), \(\phi\) sont des constantes réelles ;
+		\(n\) est un entier naturel différent de \(0\).
+
+		\(\displaystyle\begin{array}{|c|c|} \hline
+		f & f' <br /> \hline \hline
+		\frac{1}{u}~~~~(u\neq0)& \frac{-u'}{u^2} <br /> \hline
+		u^n & nu'u^{n-1} <br /> \hline
+		\sqrt{u} & \frac{u'}{2\sqrt{u}} <br /> \hline
+		\sin(\omega t+\phi) & \omega\cos(\omega t+\phi) <br /> \hline
+		\cos(\omega t+\phi) & -\omega\sin(\omega t+\phi) <br /> \hline
+		\arctan u & \frac{u'}{1+u^2} <br /> \hline
+		\end{array}\)
+
+
+
+		<h3 class="subsection">Dérivées et opérations</h3>
+		\(u\) et \(v\) sont deux fonctions dérivables sur un intervalle \(I\) et \(k\) est une constante
+		réelle
+		:<br />
+
+
+		<div class="prop">
+			!!!!!!</div>
+		<strong>Somme :</strong><br />
+		\hspace{2cm}<span class="surl">\((u+v)'=u'+v'\)</span><br />
+
+		<div class="exem">
+			!!!!!!</div>
+		\(\left(x^2+x^3\right)'=2x+3x^2\)<br />
+
+
+		<div class="prop">
+			!!!!!!</div>
+		<strong>Produit par une constante :</strong><br />
+		~~~~~~~~~~<span class="surl">\((ku)'=u'\)</span><br />
+
+		<div class="exem">
+			!!!!!!</div>
+		\(\left(5x^2\right)'=5\left(x^2\right)'=5\times2x=10x\)<br />
+
+
+		<div class="prop">
+			!!!!!!</div>
+		<strong>Produit de deux fonctions : </strong><br />
+		~~~~~~~~~~<span class="surl">\((uv)'=u'v+v'u\)</span><br />
+
+		<div class="exem">
+			!!!!!!</div>
+		<br />
+		\(\left(x\sin x\right)'=x'\sin x+x(\sin x)'=1\sin x+x\cos x\) <br />
+
+
+		<div class="prop">
+			!!!!!!</div>
+		<strong>Quotient : </strong> (\(v\) ne s'annule pas sur \(I\)).<br />
+		~~~~~~~~~~<span class="surl">\(\left(\displaystyle\frac{u</span>{v}\right)'=\frac{u'v-v'u}{v^2}\)}<br />
+
+		<div class="exem">
+			!!!!!!</div>
+		\<br />(\left(\displaystyle\frac{\textrm{e}^x}{x}\right)'=\frac{\left(\textrm{e}^x\right)'x-x'\textrm{e}^x}{x^2}=\frac{\textrm{e}^xi
+		x-1\textrm{e}^x}{x^2}=\frac{(x-1)\textrm{e}^x}{x^2}\)
+
+		<h3 class="subsection">Principe de Lagrange</h3>
+		Soit \(f\) une fonction dérivable sur un intervalle \(I\).<br />
+
+		<div class="meth">Une fois que l'on a calculé la dérivée d'une fonction, il faut la factoriser
+			au
+			mieux
+			pour
+			déterminer son signe. En effet connaître le signe de la dérivée \(f'\) nous permet de
+			connaître
+			les
+			variations
+			de \(f\) :</div>
+
+
+		<div class="prop">
+			!!!!!!</div>
+
+		\begin{itemize}
+		</li>
+		<li> \(f'>0\) sur \(I\) (\(f'\) peut même s'annuler en des points isolés)
+			\(\Rightarrow\) \(f\) est strictement croissante sur \(I\) ;
+		</li>
+		<li> \(f'=0\) sur tout l'intervalle \(I\) <br />
+			\(\Rightarrow\) \(f\) est constante sur \(I\) ; </li>
+		<li> \(f'
+			<0\) sur \(I\) (\(f'\) peut même s'annuler en des points isolés) \(\Rightarrow\) \(f\) est strictement
+				décroissante sur \(I\). \end{itemize} ~<br />
+
+			<div class="prop">
+				!!!!!!</div>
+			Si \(f'\) s'annule et change de signe pour en \(a\) dans \(I\), alors
+			\begin{itemize}
+		</li>
+		<li> \(f'\) passe de \(-\) à \(+\)<br />
+			\(\Rightarrow\) \(f\) admet un minimum local pour \(x=a\) ;
+		</li>
+		<li> \(f'\) passe de \(+\) à \(-\)<br />
+			\(\Rightarrow\) \(f\) admet un maximum local pour \(x=a\) .
+			\end{itemize}
+
+
+			<div class="rema">
+				!!!!!!</div>
+			La condition de changement de signe est importante : en effet \(x\mapsto x^3\) a pour dérivée
+			\(3x^2\)
+			qui
+			s'annule en \(0\) mais ne change pas de signe (elle reste positive) ; la fonction cube n'admet
+			pas
+			de
+			max/min en
+			\(x=0\) (elle est strictement croissante).
+
+			<h3 class="subsection">Non-dérivabilité : aspect graphique</h3>
+			Une fonction continue sur un intervalle \(I\) n'est pas forcément dérivable en tout \(x\) dans
+			\(I\)
+			;
+			on peut
+			visualiser ce caractère non-dérivable lorsqu'on observe :
+			\begin{itemize}
+		</li>
+		<li> une rupture de pente, ou point anguleux (deux demi-tangentes qui forment un angle non plat),
+			comme
+			pour
+			la
+			fonction valeur absolue en \(0\) ;
+		</li>
+		<li> une tangente verticale (la dérivée tend alors vers \(\pm\infty\)), comme pour la racine carrée
+			en
+			\(0\).
+			\end{itemize}
+
+			<h2 class="section">Théorème des valeurs intermédiaires</h2>
+			<h3 class="subsection">Conventions dans un tableau de variation</h3>
+			<strong>Convention : </strong> Une flèche dans un tableau de variation d'une fonction indique à la fois
+			:
+			\begin{itemize}
+		</li>
+		<li> la stricte croissance ou stricte décroissance de \(f\) sur l'intervalle correspondant ;
+		</li>
+		<li> la continuité de la fonction \(f\) sur l'intervalle correspondant.
+			\end{itemize}
+
+			<h3 class="subsection">Théorème des valeurs intermédiaires</h3>
+			<strong>But : </strong> Soit \(k\) un réel et \(f\) une fonction. On cherche à résoudre l'équation
+			\(f(x)=k\).<br />
+			\textsc{Théorème : }(admis) <strong>théorème des valeurs intermédiaires</strong><br />
+			Soit \(f\) une fonction <strong>continue</strong> sur un intervalle \(I\) et \(a
+			<b\) deux réels de \(I\).<br />
+			Si \(k\) est compris entre \(f(a)\) et \(f(b)\), il existe <strong>au moins</strong> un réel
+			\(c\in[a;b]\)
+			tel
+			que
+			\(f(c)=k\).<br />
+
+			<div class="rema">
+				!!!!!!</div>
+			Il est aussi possible d'utiliser des valeurs limites de \(f\).<br />
+			<div class="exo">Tracer une fonction \(f\) continue sur \([-3;6]\) telle que \(f(x)=2\) ait
+				\(3\)
+				solutions :
+			</div>
+			<img src="assets/CoursLimiteContinuiteFig21.png" /><br />
+			<div class="exo">Soit \(f\) la fonction définie sur \(\R\) par \(f(x)=\frac{1</div>{3}x^{3}
+			+
+			\frac{1}{2}x^{2}
+			- 6x - 1\)
+			<ol>
+				<li> Étudier les variations de \(f\).
+				</li>
+				<li> Démontrer que l'équation \(f(x)=3\) a au moins une solution.<br />
+
+				</li>
+			</ol>
+			}
+
+			<div class="prop">
+				!!!!!!</div>
+			<strong>unicité de la solution</strong>
+			Soit \(f\) une fonction <strong>continue</strong> et <strong>strictement monotone</strong> sur un
+			intervalle
+			\(I\)
+			et
+			\(a
+			<b\) deux réels de \(I\).<br />
+			Si \(k\) est compris entre \(f(a)\) et \(f(b)\), il existe un <strong>unique</strong> réel
+			\(c\in[a;b]\)
+			tel que
+			\(f(c)=k\).<br />
+
+			<div class="rema">
+				!!!!!!</div>
+			Il est toujours possible d'utiliser des valeurs limites de \(f\).<br />
+			<div class="exo">Soit \(f\) la fonction définie sur \(\R\) par \(f(x)=\frac{1</div>
+			{3}x^{3}
+			+
+			\frac{1}{2}x^{2} - 6x - 1\)<br />
+			Démontrer que l'équation \(f(x)=3\) a une unique solution dans
+			\(\left[3;+\infty\right[\).<br />
+			}
+
+			<h3 class="subsection">Obtenir une approximation d'une solution de l'équation
+				\(f(x)=k\),
+				avec
+				\(k\) réel
+				fixé</h3>
+			Il existe deux méthodes :
+			\begin{itemize}
+		</li>
+		<li> <strong>Par balayage :</strong><br />
+			On utilise la table de calculatrice, en affinant le pas jusqu'à la précision désirée, pour
+			localiser
+			la
+			solution.
+		</li>
+		<li> <strong>Par dichotomie :</strong><br />
+			Lorsque l'on a localisé la solution dans un intervalle \([a;b]\), on calcule
+			\(f\left(\frac{a+b}{2}\right)\) ;
+			en s'aidant du tableau de variations, on voit si la solution est localisée dans la première
+			moitié
+			ou
+			seconde
+			moitié de l'intervalle \([a;b]\) ; on répète alors la même méthode plusieurs fois sur des
+			intervalles
+			imbriqués
+			dont les longueurs diminuent à chaque étape de moitié, jusqu'à arriver à la précision désirée.
+			\end{itemize}
+
+
+
+	</main>
+</body>
+
+</html>

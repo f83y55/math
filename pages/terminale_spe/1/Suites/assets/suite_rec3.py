@@ -2,11 +2,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def f(x):
-    return np.sqrt(x)
+    return np.sqrt(x+5)
 
-u = [3.2]  # u_0
-N = 100     # iterations
-x = np.arange(0,4,0.01)   # def (Ox)
+u = [10]  # u_0
+N = 0     # iterations
+x = np.arange(0,12,0.001)   # def (Ox)
 
 
 # ---------------------------------------------------------------------- #
@@ -30,15 +30,15 @@ for k in range(N-1) :
     plt.plot([u[k], u[k]], [0, u[k+1]], 'g--')
 plt.plot([u[N-1], u[N-1]], [0, u[N]], 'g--')    # last one !
 
-plt.annotate('$u_0$', xy=(u[0], 0), xytext=(u[0]+.1, .1),
+plt.annotate('$q_0$', xy=(u[0], 0), xytext=(u[0]+.1, .1),
             arrowprops=dict(arrowstyle="->",
                             connectionstyle="arc3")
             )
 
-plt.annotate('$u_1$', xy=(u[1], 0), xytext=(u[1]+.1, .1),
+plt.annotate('$q_1$', xy=(u[1], 0), xytext=(u[1]+.1, .1),
             arrowprops=dict(arrowstyle="->",
                             connectionstyle="arc3")
             )
 
-plt.title('$u_{n+1}=f(u_n)$')
+plt.title('$q_{n+1}=f(q_n)$')
 plt.show()
