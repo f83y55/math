@@ -1,7 +1,7 @@
 // site root / import_modules / title
 const root_path = document.head.getElementsByTagName("script")[0].getAttribute("src").replace('s.js', '');
 console.log("root_path : "+root_path);
-const import_module = document.head.getElementsByTagName("script")[0].getAttribute("data-import").split(" ");
+const import_module = document.head.getElementsByTagName("script")[0].hasAttribute("data-import") ? document.head.getElementsByTagName("script")[0].getAttribute("data-import").split(" ") : [];
 console.log("import_module : " + import_module);
 const page_title = document.head.getElementsByTagName("title")[0].text;
 console.log("page_title : " + page_title);

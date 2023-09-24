@@ -16,17 +16,20 @@
 		<div class="none">
 			<strong>Cadre : </strong>
 			<ul>
-				<li> Soit \(f\) une fonction définie sur \(\mathcal{D}_f\) et soit
-					\(a\in\mathbb{R}\cup\left\{-\infty;+\infty\right\}\).<br />
-					Selon le cas, \(a\) peut être dans \(\mathcal{D}_f\) ou bien au bord de \(\mathcal{D}_f\) ; par
-					exemple
-					si
-					\(\mathcal{D}_f=\mathbb{R}\) et que \(a=+\infty\) ou bien si
-					\(\mathcal{D}_f=\left]0;+\infty\right[\) et
-					\(a=0\).
+				<li> Soit \(f\) une fonction définie sur \(\mathcal{D}_f\) (ensemble de définition de \(f\) et soit
+					\(a\in\mathbb{R}\cup\left\{-\infty;+\infty\right\}\) <strong>adhérent</strong> à \(\mathcal{D}_f\),
+					c'est à dire :
+					\(a\) peut être dans \(\mathcal{D}_f\) ou bien au bord de \(\mathcal{D}_f\) ; par exemple, on peut
+					avoir \(a=+\infty\)
+					pour \(\mathcal{D}_f=\mathbb{R}\) ; autre exemple : \(a=0\) avec
+					\(\mathcal{D}_f=\left]0;+\infty\right[\).
 				</li>
 				<li> On note \(l\in\mathbb{R}\cup\left\{-\infty;+\infty\right\}\) la limite envisagée.</li>
 			</ul>
+		</div>
+		<div class="exo">
+			Donner l'ensemble de définition \(\mathcal{D}_f\) de la fonction \(f\) définie par \(f(x)=\dfrac{1}{x^2}\).
+			En quelle(s) valeurs de \(a\) doit-on pouvoir déterminer \(\displaystyle\lim_{x\to a} f(x)\) ?
 		</div>
 		<div class="defi">On dit que \(f(x)\) admet \(l\) pour <strong>limite</strong> quand \(x\) tend vers \(a\)
 			et
@@ -39,16 +42,16 @@
 			\(x\) suffisamment proche de \(a\).
 		</div>
 
-		<div class="defi">
+		<div class="defi"> <strong>Limites à gauche / à droite : </strong>Si l'on ne considère que les valeurs
 			<ul>
-				<li> Si l'on ne considère que les valeurs de \(x&lt;a\) on obtient la <strong>limite</strong> de
+				<li> de \(x&lt;a\) on obtient la <strong>limite</strong> de
 					\(f\) <strong>à
 						gauche</strong> de
 					\(a\), notée :
 					\(\displaystyle\lim_{\begin{array}{l} x\to a \\ x&lt;a \end{array}}f(x)\) ou
 					\(\displaystyle\lim_{x\to a^-}{f(x)}\)
 					ou \(\displaystyle\lim_{a^-} f\). </li>
-				<li> Si l'on ne considère que les valeurs de \(x&gt;a\) on obtient la <strong>limite</strong> de
+				<li> de \(x&gt;a\) on obtient la <strong>limite</strong> de
 					\(f\) <strong>à
 						droite</strong> de
 					\(a\), notée :
@@ -61,33 +64,36 @@
 
 
 
-		<div class="defi"><strong>asymptote verticale :</strong><br />
-			Lorsque \(\displaystyle\lim_a f = l\) avec \(a\in\mathbb{R}\) et \(l=\pm\infty\), on dit que la
-			courbe
-			représentative de \(f\) admet une <strong>asymptote verticale</strong> d'équation \(x=a\).
-		</div>
-		<div class="defi"><strong>asymptote horizontale :</strong><br />
-			Lorsque \(\displaystyle\lim_a f = l\) avec \(a=\pm\infty\) et \(l\in\mathbb{R}\), on dit que la
-			courbe
-			représentative de \(f\) admet une <strong>asymptote horizontale</strong> d'équation \(y=l\).
+		<div class="defi">
+			<ul>
+				<li><strong>asymptote verticale :</strong><br />
+					Lorsque \(\displaystyle\lim_a f = l\) avec \(a\in\mathbb{R}\) et \(l=\pm\infty\), on dit que la
+					courbe
+					représentative de \(f\) admet une <strong>asymptote verticale</strong> d'équation \(x=a\).
+				</li>
+				<li>
+					<strong>asymptote horizontale :</strong><br />
+					Lorsque \(\displaystyle\lim_a f = l\) avec \(a=\pm\infty\) et \(l\in\mathbb{R}\), on dit que la
+					courbe
+					représentative de \(f\) admet une <strong>asymptote horizontale</strong> d'équation \(y=l\).
+				</li>
+			</ul>
 		</div>
 
 
 		<h3>Exemples graphiques</h3>
-
-
 		<div class="exem">
 			Limite en un point :
-			<div class="row">
-				<div class="col" style="margin: 3%;"> <img src="assets/lim1.png" /><br />
+			<div class="row" style="font-size: smaller;">
+				<div class="col" style="margin: 2%;"> <img src="assets/lim1.png" /><br />
 					\(\displaystyle\lim_{x\to-2^+}f(x)=3\) :
 					Il n'y a pas d'asymptote.
 				</div>
-				<div class="col" style="margin: 3%;"> <img src="assets/lim2.png" /><br />
+				<div class="col" style="margin: 2%;"> <img src="assets/lim2.png" /><br />
 					\(\displaystyle\lim_{x\to1}f(x)=-\infty\) :
 					La courbe de \(f\) admet une asymptote verticale d'équation \(x=1\).
 				</div>
-				<div class="col" style="margin: 3%;"> <img src="assets/lim3.png" /><br />
+				<div class="col" style="margin: 2%;"> <img src="assets/lim3.png" /><br />
 					\(\displaystyle\lim_{x\to-1^+}f(x)=-\infty\)<br /> et \(\displaystyle\lim_{x\to-1^-}f(x)=~2\) :
 					La courbe de \(f\) admet une asymptote verticale d'équation \(x=-1\).
 				</div>
@@ -95,7 +101,7 @@
 		</div>
 		<div class="exem">
 			Limite en \(+\infty\) et \(-\infty\) :<br />
-			<div class="row">
+			<div class="row" style="font-size: smaller;">
 				<div class="col" style="margin: 3%;">
 					<img src="assets/lim4.png" /><br />
 					\(\displaystyle\lim_{x\to-\infty}f(x)=+\infty\) et
@@ -500,6 +506,35 @@
 			</div>
 		</div>
 
+		<h3>Limites et encadrements</h3>
+		<div class="theo"><strong>Théorème des gendarmes / d'encadrement :</strong> (admis)<br />
+			\(a, l\in\mathbb{R}\cup\left\{-\infty; +\infty\right\}\) et
+			\(f\), \(g\) et \(h\) sont trois fonctions telles que \(\displaystyle\lim_a f = l\) et \(\displaystyle\lim_a
+			h = l\), et pour tout \(x\) assez proche de \(a\), \(f(x)\leqslant g(x)\leqslant h(x)\) ;<br />
+			alors on a : \(\displaystyle\lim_a g = l\).
+		</div>
+		<div class="rema">
+			Lorsque \(l=+\infty\), l'inégalité de gauche (minoration) suffit ; lorsque \(l=-\infty\), l'inégalité de
+			droite (majoration) suffit.
+		</div>
+		<div class="exo">
+			À l'aide d'encadrements bien choisis, déterminer les limites en \(+\infty\) des fonctions suivantes :
+			<table style="width: 100%;">
+				<tr>
+					<td>\(a(x)=\frac{\cos(x)}{x}+2\)</td>
+					<td>\(b(x)=\sin(x)+\sqrt{x}\)</td>
+					<td>\(c(x)=-x^2+\sin(3x)+x \cos(2x)\)</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="exo">
+			\(g(x)\) est une fonction telle que pour tout \(x\geqslant 1\), on a :
+			\(\frac{1}{x}\leqslant g(x)\leqslant \frac{x+1}{x+2}\). Cet encadrement permet-il de conclure sur une
+			limite éventuelle de \(g\) en \(+\infty\) ?
+		</div>
+
+		<div class="pagebreak"></div>
 		<h2>Continuité</h2>
 
 		<div class="defi">Soit \(a\) un réel.
@@ -514,7 +549,8 @@
 		</div>
 
 		<div class="rema">
-			Lorsque \(a\) est sur le bord gauche (resp. droit) d'un intervalle de l'ensemble de définition de \(f\), on
+			Lorsque \(a\) est sur le bord gauche (resp. droit) d'un intervalle de l'ensemble de définition de \(f\),
+			on
 			ne
 			considère pas la limite en \(a^-\) (resp. en \(a^+\)).
 		</div>
@@ -540,22 +576,92 @@
 		</div>
 		<div class="row">
 			<div class="col">
-				<div class="exo">Une fonction définie sur \(\mathbb{R}\) mais non continue en chaque entier relatif : la
+				<div class="exo"><strong>fonction partie entière : </strong><br />
+
+					Une fonction définie sur \(\mathbb{R}\) mais non continue en chaque entier relatif : la
 					fonction partie
 					entière :<br />
 					À tout réel \(x\) on associe l'entier (relatif) \(E(x)\) immédiatement inférieur à \(x\).
 					<ol>
+						<li>
+							Remplir le tableau de valeurs :
+							<table class="mytable">
+								<tr>
+									<th>\(x\)</th>
+									<td>0</td>
+									<td>2</td>
+									<td>2,1</td>
+									<td>2,6</td>
+									<td>-3</td>
+									<td>-3,9</td>
+									<td>-3,1</td>
+								</tr>
+								<tr>
+									<th>\(E(x)\)</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+						</li>
 						<li>
 							Tracer la courbe représentant la fonction \(E\) dans le repère ci-contre.
 						</li>
 						<li>
 							Discuter de la continuité à gauche et à droite de \(E\) en chaque entier.
 						</li>
+						<li>Sur quel ensembles \(E\) est-elle :
+							<ul>
+								<li>Continue ?</li>
+								<li>Continue à gauche ?</li>
+								<li>Continue à droite ?</li>
+								<li>Dérivable ?</li>
+							</ul>
+						</li>
 					</ol>
 				</div>
 			</div>
 			<div class="col">
 				<img src="assets/CoursLimiteContinuiteFig21.png" />
+			</div>
+		</div>
+
+		<div class="exo">
+			<div class="row">
+				<div class="col">
+					<ol>
+						<li>
+							Quel est l'ensemble de définition \(\mathcal{D}_f\) de cette fonction \(f\) ?
+						</li>
+						<li>
+							Donner les limites aux bords de \(\mathcal{D}_f\) ainsi que les asymptotes éventuelles à
+							sa courbe \(\mathcal{C}_f\).
+						</li>
+						<li>
+							Pour quelle(s) valeurs de \(x\) la fonction \(f\) n'est-elle pas continue ? Préciser les
+							limites à gauche et à droite en ces valeurs, ainsi que la valeur de \(f(x)\), si elle
+							existe.
+						</li>
+						<li>
+							Préciser les intervalles sur lesquels \(f\) est continue.
+						</li>
+						<li>
+							Déterminer les solutions de \(f(x)=0\).
+						</li>
+						<li>
+							Déterminer les solutions de \(f(x)=2\) sur \(\left]-2;4\right]\).
+						</li>
+					</ol>
+				</div>
+				<div class="col">
+					<figure>
+						<img src="assets/cont_1.png" alt="fig">
+					</figure>
+				</div>
 			</div>
 		</div>
 
@@ -569,26 +675,82 @@
 			\(0\).
 		</div>
 
+		<div class="prop"><strong>Continuité et suites</strong> (admise)<br />
+			Les deux affirmations suivantes sont
+			équivalentes :
+			<ul>
+				<li>
+					\(f\) est une fonction continue en \(x=a\in\mathcal{D}_f\) ;
+				</li>
+				<li>
+					pour toute suite \((x_n)\) convergent
+					vers \(a\), la suite \((f(x_n))\) converge vers \(a\).
+				</li>
+			</ul>
+		</div>
+
+		<div class="defi">
+			Tout nombre \(x\) tel que \(f(x)=x\) est appelé <strong>point fixe</strong> de \(f\)
+		</div>
+
+
+		<div class="prop"><strong>Suites récurrentes et points fixes</strong> <br />
+			\((u_n)\) est une suite définie par \(u_{n+1}=f(u_n)\).
+			On suppose que \((u_n)\) converge vers \(l\) et que \(f\) est continue en \(l\) ; alors \(f(l)=l\) (la
+			limite est un point fixe de \(f\)).
+		</div>
+
+		<div class="exo">
+			On note \(f(x)=x^2\) et on définit la suite \(\left\{\begin{array}{l}u_{n+1}=f(u_n)\\u_0=0{,}5\\
+			\end{array}\right.\).
+			<ol>
+				<li>Résoudre \(f(x)=x\) pour déterminer les points fixes de \(f\)</li>
+				<li>Démontrer que \((u_n)\) est décroissante.</li>
+				<li>En déduire que \((u_n)\) converge.</li>
+				<li>Déterminer la limite de \((u_n)\) (justifier).</li>
+			</ol>
+		</div>
+
+		<div class="rema">
+			<ul>
+				<li>
+					Attention, une fonction peut avoir plusieurs point fixes.
+				</li>
+				<li>
+					Il faut bien s'assurer de la convergence de la suite ; le fait que \(f\) ait un point fixe ne suffit
+					pas : ainsi, pour \(f(x)=2x\) et \(u_0=1\), \((u_n)\) diverge vers \(+\infty\), bien que \(f\)
+					admette 0 pour point fixe.
+				</li>
+			</ul>
+		</div>
+
 		<h2>Dérivation (rappels)</h2>
 		<h3>Nombre dérivé et tangente</h3>
-		<div class="none">
+		<div class="none"><strong>Cadre : </strong>
 			On se donne une fonction \(f\) et on se place en un \(x\) fixé. Soit \(dx\) un petit
 			accroissement
 			de la
 			variable \(x\) (positif ou négatif), correspondant à un accroissement
-			\(df=f(x+\textrm{d}x)-f(x)\) des
+			\(df=f(x+dx)-f(x)\) des
 			images.<br />
-			Si l'on fait tendre \(dx\) vers \(0\), la droite \(D\) prend une position de tangente à la courbe de \(f\)
+			Si l'on fait tendre \(dx\) vers \(0\), la droite \(D\) prend une position de tangente à la courbe de
+			\(f\)
 			en \(x\).
+		</div>
+		<div class="defi">
+			On appelle la quantité \(\frac{df}{dx}\) <strong>taux d'accroissement</strong> ou <strong>taux de
+				variation</strong> de \(f\) entre \(x\) et \(x+dx\).
 		</div>
 
 		<div class="row">
 			<div class="col">
 				<div class="defi">Si \(\displaystyle\lim_{dx\to0} \frac{df}{dx}\) existe,
 					on dit que \(f\) est dérivable en \(x\) ; on note alors \(f'(x)\) ou bien
-					\(\displaystyle\frac{\textrm{d}f}{\textrm{d}x}(x)\) cette limite, que l'on appelle <strong>nombre
+					\(\displaystyle\frac{\textrm{d}f}{\textrm{d}x}(x)\) cette limite, que l'on appelle
+					<strong>nombre
 						dérivé</strong>
-					de \(f\) en \(x\), et qui indique le coefficient directeur de la tangente à la courbe de \(f\) en
+					de \(f\) en \(x\), et qui indique le coefficient directeur de la tangente à la courbe de \(f\)
+					en
 					\(x\).
 				</div>
 				<div class="prop">
@@ -606,82 +768,222 @@
 			Calculer l'équation de la tangente à la courbe de \(f(x)=x^3-2x\) en \(x=0{,}5\).
 		</div>
 
-		<h3 class="subsection">Dérivées de fonctions usuelles</h3>
-		\(\displaystyle\begin{array}{|c|c|} \hline
-		f(x) & f'(x) <br /> \hline \hline
-		\textrm{cte} & 0 <br /> \hline
-		x^\alpha~~ (\alpha\in\R) & \alpha x^{\alpha-1} <br /> \hline
-		\frac{1}{x}=x^{-1} & \frac{-1}{x^2}=-x^{-2} <br /> \hline
-		\sqrt{x}=x^\frac{1}{2} & \frac{1}{2\sqrt{x}}=\frac{1}{2}x^{-\frac{1}{2}} <br /> \hline
-		\cos x & -\sin x <br /> \hline
-		\tan x & \frac{1}{(\cos x)^2}=1+(\tan x)^2 <br /> \hline
-		\end{array}\)
+		<div class="exo">
+			<div class="row">
+				<div class="col">
+					On a tracé sur la figure ci-contre la courbe de \(f\) ainsi que des tangentes à \(f\) en quatre
+					points d'abscisse entière.
 
-		<strong>Fonctions composées : </strong><br />
-		\(u\) désigne une fonction dérivable ; \(\omega\), \(\phi\) sont des constantes réelles ;
-		\(n\) est un entier naturel différent de \(0\).
+					<ol>
+						<li>
+							Donner l'ensemble de définition de \(f\) ainsi que les limites de \(f\) aux bornes de
+							\(f\), et les asympotes éventuelles
+						</li>
+						<li>
+							Donner les valeurs de \(f(x)\) pour \(x\in\left\{-2;0;2;4;8\right\}\).
+						</li>
+						<li>
+							Donner le tableau de variation de \(f\), ainsi que le tableau de signe de sa dérivée
+							\(f'\).
+						</li>
+						<li>
+							Donner les valeurs de \(f'(x)\) pour \( x\in\left\{-2;0;2;4;8 \right\} \) et écrire les
+							équations des tangentes correspondantes.
+						</li>
+					</ol>
+				</div>
+				<div class="col">
+					<figure>
+						<img src="assets/cont_2.png" alt="fig">
+					</figure>
+				</div>
+			</div>
+		</div>
 
-		\(\displaystyle\begin{array}{|c|c|} \hline
-		f & f' <br /> \hline \hline
-		\frac{1}{u}~~~~(u\neq0)& \frac{-u'}{u^2} <br /> \hline
-		u^n & nu'u^{n-1} <br /> \hline
-		\sqrt{u} & \frac{u'}{2\sqrt{u}} <br /> \hline
-		\sin(\omega t+\phi) & \omega\cos(\omega t+\phi) <br /> \hline
-		\cos(\omega t+\phi) & -\omega\sin(\omega t+\phi) <br /> \hline
-		\arctan u & \frac{u'}{1+u^2} <br /> \hline
-		\end{array}\)
-
-
-
-		<h3 class="subsection">Dérivées et opérations</h3>
-		\(u\) et \(v\) sont deux fonctions dérivables sur un intervalle \(I\) et \(k\) est une constante
-		réelle
-		:<br />
-
-
+		<h3>Dérivées de fonctions usuelles</h3>
 		<div class="prop">
-			!!!!!!</div>
-		<strong>Somme :</strong><br />
-		\hspace{2cm}<span class="surl">\((u+v)'=u'+v'\)</span><br />
+			<table class="mytable" style="float: none; width: 100%;">
+				<tr>
+					<th>\(f(x)\)</th>
+					<td>constante</td>
+					<td>\(x^\alpha\)</td>
+					<td>\(\frac{1}{x}\) </td>
+					<td>\(\sqrt{x}\)</td>
+					<td>\(\textrm{e}^x\)</td>
+					<td> \(\sin x\) </td>
+					<td> \(\cos x\) </td>
+					<td>\(\tan x\)</td>
+				</tr>
+				<tr>
+					<th>\(f'(x)\)</th>
+					<td>0</td>
+					<td>\(\alpha x^{\alpha-1}\)</td>
+					<td>\(\frac{-1}{x^2}\)</td>
+					<td>\(\frac{1}{2\sqrt{x}}\)</td>
+					<td>\(\textrm{e}^x\)</td>
+					<td> \(\cos x\) </td>
+					<td> \(-\sin x\) </td>
+					<td>\(1+\tan^2(x)\)</td>
+				</tr>
+			</table>
+		</div>
+		<div class="rema">
+			<ul>
+				<li>Lorsque \(\alpha\in\mathbb{N}\), la fonction \(x\mapsto x^\alpha\) est définie sur
+					\(\mathbb{R}\) entier.</li>
+				<li>Lorsque \(\alpha\) est un entier strictement négatif, elle n'est pas définie en 0 mais l'est
+					partout ailleurs.</li>
+				<li>Lorsque \(\alpha\) est un réel non entier positif, elle est définie sur
+					\(\left[0;+\infty\right[\)
+				</li>
+				<li>Lorsque \(\alpha\) est un réel non entier négatif, elle est définie sur
+					\(\left]0;+\infty\right[\)
+				</li>
+			</ul>
+		</div>
 
-		<div class="exem">
-			!!!!!!</div>
-		\(\left(x^2+x^3\right)'=2x+3x^2\)<br />
+		<div class="exo">
+			<ol>
+				<li>En utilisant le fait que \(\frac{1}{x}=x^{-1}\), retrouver la formule de la dérivée de
+					\(x\mapsto\frac{1}{x}\).</li>
+				<li>En utilisant le fait que \(\sqrt{x}=x^{\frac{1}{2}}\), retrouver la formule de la dérivée de
+					\(x\mapsto\sqrt{x}\).</li>
+			</ol>
+		</div>
 
+		<div class="exo"><strong>Limites utilisant les taux de variations</strong><br />
+			Calculer les limites suivantes en utilisant des taux de variation \(\displaystyle\lim_{x\to
+			x_0}\dfrac{f(x)-f(x_0)}{x-x_0}=f'(x_0)\) :
+			<table style="width: 100%;">
+				<tr>
+					<td>\(\displaystyle\lim_{x\to 0} \dfrac{\cos(x)-1}{x}\)</td>
+					<td>\(\displaystyle\lim_{x\to 1} \dfrac{x^{15}-1}{x-1}\)</td>
+					<td>\(\displaystyle\lim_{x\to 1} \dfrac{\sqrt{x}-1}{x-1}\)</td>
+				</tr>
+			</table>
+		</div>
 
+		<h3>Dérivation et opération</h3>
 		<div class="prop">
-			!!!!!!</div>
-		<strong>Produit par une constante :</strong><br />
-		~~~~~~~~~~<span class="surl">\((ku)'=u'\)</span><br />
+			<p>
+				\(u\) et \(v\) sont deux fonctions dérivables et \(k\) est une constante
+				réelle
+			</p>
+			<table class="mytable" style="float: none; width: 100%;">
+				<tr>
+					<th>\(f\)</th>
+					<td>\(ku\)</td>
+					<td>\(u+v\)</td>
+					<td>\(u\times v\)</td>
+					<td>\(\frac{1}{u}\) avec \(u\neq0\)</td>
+					<td>\(\dfrac{u}{v}\) avec \(v\neq0\)</td>
+				</tr>
+				<tr>
+					<th>\(f'\)</th>
+					<td>\(ku'\)</td>
+					<td>\(u'+v'\)</td>
+					<td>\(u'v + uv'\)</td>
+					<td>\(\frac{-u'}{u^2}\)</td>
+					<td>\(\dfrac{u'v-uv'}{v^2}\)</td>
+				</tr>
+			</table>
+		</div>
+		<div class="exo"><strong>Démontrer la formule donnant les dérivées d'un inverse et d'un quotient à parir de
+				la formule du produit.</strong><br>
+			<ol type="A">
+				<li>
+					<ol>
+						<li>
+							On considère que \(u\) ne s'annule pas. Exprimer \(v'\) en fonction de \((uv)'\),
+							\(u'v\) et \(u\).</li>
+						<li>En posant \(v=\frac{1}{u}\), retrouver la formule de la dérivée de l'inverse.</li>
+					</ol>
+				</li>
+				<li>
+					<ol>
+						<li> Dériver \(u\times\frac{1}{v}\) en utilisant la formule du produit.</li>
+						<li> En déduire la dérivée de \(\frac{u}{v}\).</li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+		<div class="exo"> Calculer les dérivées des fonctions suivantes
+			<table style="width: 100%;">
+				<tr>
+					<td>\(a(x)=3x^2-2x+1\)</td>
+					<td>\(b(x)=x\cos(x)\)</td>
+					<td>\(c(x)=\dfrac{1}{x+\textrm{e}^x}\)</td>
+					<td>\(d(x)=\dfrac{\sin(x)}{\cos(x)}\)</td>
+				</tr>
+			</table><br />
+			Par définition, \(d(x)=\tan(x)\). En déduire deux écritures possibles de \((\tan(x))'\).
 
+		</div>
+
+
+		<h3>Fonctions composées</h3>
+		<div class="defi">
+			Lorsque l'ensemble des images d'une fonction \(f\) définie sur \(\mathcal{D}_f\) est inclus dans
+			l'ensemble de définition \(\mathcal{D}_g\) d'une fonction \(g\),
+			On peut définir (sur \(\mathcal{D}_f\)) la <strong>fonction composée</strong> de \(f\) par \(g\), notée
+			\(g\circ f\) et définie par \(g\circ
+			f(x) =
+			g(f(x))\).<br />
+		</div>
+		<div class="rema">
+			En résumé, appliquer \(g\circ f\) à un nombre \(x\) revient à appliquer \(f\) pour calculer \(f(x)\)
+			et à appliquer \(g\) au \(f(x)\) obtenu :
+			\(x \stackrel{f}{\mapsto} f(x) \stackrel{g}{\mapsto} g(f(x))\) revient à \(x \stackrel{g\circ
+			f}{\mapsto} g(f(x))\).
+		</div>
 		<div class="exem">
-			!!!!!!</div>
-		\(\left(5x^2\right)'=5\left(x^2\right)'=5\times2x=10x\)<br />
-
-
+			Si \(f(x)=3x-2\) et \(g(x)=\sqrt{x}\), alors \(g\circ f(x)=\sqrt{3x-2}\).<br />
+			Mais attention à l'ordre : \(f\circ g(x)=3\sqrt{x}-2\).
+		</div>
 		<div class="prop">
-			!!!!!!</div>
-		<strong>Produit de deux fonctions : </strong><br />
-		~~~~~~~~~~<span class="surl">\((uv)'=u'v+v'u\)</span><br />
+			<p>
+				\(f\), \(g\) et \(u\) désignent des fonctions dérivables ; \(a\), \(b\) et \(\alpha\) sont des
+				constantes réelles ;.
+			</p>
+			<table class="mytable" style="width: 100%;">
+				<tr>
+					<th>\(f\)</th>
+					<td>\(g\circ f(x)\)</td>
+					<td>\(u(ax+b)\)</td>
+					<td>\(u^\alpha\)</td>
+					<td>\(\textrm{e}^u\)</td>
+				</tr>
+				<tr>
+					<th>\(f'\)</th>
+					<td>\(g'\circ f(x)f'(x)\)</td>
+					<td>\(au'(ax+b)\)</td>
+					<td>\(\alpha u^{\alpha-1}u'\)</td>
+					<td>\(u'\textrm{e}^u\)</td>
+				</tr>
+			</table>
+		</div>
+		<div class="exo">
+			En admettant la formule dans la première colonne, en déduire toutes les autres.
+		</div>
+		<div class="exo"><strong>Dérivée de la fonction réciproque (dur)</strong><br />
+			\(f\) et \(g\) sont deux fonctions telles que \(f\circ g (x)=x\) pour tout \(x\) dans un intervalle I.
+			<ol>
+				<li>
+					Exprimer \(g'(x)\) en fonction de \(f\), \(f'\) et \(g\).
+				</li>
+				<li>
+					En déduire la dérivée des fonctions \(\arccos\), \(\arcsin\) et \(\arctan\) ; en déduire la dérivée
+					de la fonction réciproque de \(\exp\) (appelée \(\ln\)).
+				</li>
+			</ol>
+		</div>
 
-		<div class="exem">
-			!!!!!!</div>
-		<br />
-		\(\left(x\sin x\right)'=x'\sin x+x(\sin x)'=1\sin x+x\cos x\) <br />
 
 
-		<div class="prop">
-			!!!!!!</div>
-		<strong>Quotient : </strong> (\(v\) ne s'annule pas sur \(I\)).<br />
-		~~~~~~~~~~<span class="surl">\(\left(\displaystyle\frac{u</span>{v}\right)'=\frac{u'v-v'u}{v^2}\)}<br />
 
-		<div class="exem">
-			!!!!!!</div>
-		\<br />(\left(\displaystyle\frac{\textrm{e}^x}{x}\right)'=\frac{\left(\textrm{e}^x\right)'x-x'\textrm{e}^x}{x^2}=\frac{\textrm{e}^xi
-		x-1\textrm{e}^x}{x^2}=\frac{(x-1)\textrm{e}^x}{x^2}\)
 
-		<h3 class="subsection">Principe de Lagrange</h3>
-		Soit \(f\) une fonction dérivable sur un intervalle \(I\).<br />
+
+		<h3>Principe de Lagrange</h3>
 
 		<div class="meth">Une fois que l'on a calculé la dérivée d'une fonction, il faut la factoriser
 			au
@@ -695,34 +997,34 @@
 
 
 		<div class="prop">
-			!!!!!!</div>
+			<ul>
+				<li> \(f'&gt;0\) sur \(I\) (\(f'\) peut même s'annuler en des points isolés)
+					\(\Rightarrow\) \(f\) est strictement croissante sur \(I\) ;
+				</li>
+				<li> \(f'=0\) sur tout l'intervalle \(I\)
+					\(\Rightarrow\) \(f\) est constante sur \(I\) ; </li>
+				<li> \(f'&lt;0\) sur \(I\) (\(f'\) peut même s'annuler en des points isolés) \(\Rightarrow\) \(f\)
+					est
+					strictement
+					décroissante sur \(I\).
+				</li>
+			</ul>
+		</div>
 
-		\begin{itemize}
-		</li>
-		<li> \(f'>0\) sur \(I\) (\(f'\) peut même s'annuler en des points isolés)
-			\(\Rightarrow\) \(f\) est strictement croissante sur \(I\) ;
-		</li>
-		<li> \(f'=0\) sur tout l'intervalle \(I\) <br />
-			\(\Rightarrow\) \(f\) est constante sur \(I\) ; </li>
-		<li> \(f'
-			<0\) sur \(I\) (\(f'\) peut même s'annuler en des points isolés) \(\Rightarrow\) \(f\) est strictement
-				décroissante sur \(I\). \end{itemize} ~<br />
-
-			<div class="prop">
-				!!!!!!</div>
+		<div class="prop">
 			Si \(f'\) s'annule et change de signe pour en \(a\) dans \(I\), alors
-			\begin{itemize}
-		</li>
-		<li> \(f'\) passe de \(-\) à \(+\)<br />
-			\(\Rightarrow\) \(f\) admet un minimum local pour \(x=a\) ;
-		</li>
-		<li> \(f'\) passe de \(+\) à \(-\)<br />
-			\(\Rightarrow\) \(f\) admet un maximum local pour \(x=a\) .
-			\end{itemize}
+			<ul>
+				<li> \(f'\) passe de \(-\) à \(+\)
+					\(\Rightarrow\) \(f\) admet un minimum local pour \(x=a\) ;
+				</li>
+				<li> \(f'\) passe de \(+\) à \(-\)
+					\(\Rightarrow\) \(f\) admet un maximum local pour \(x=a\) .
+				</li>
+			</ul>
+		</div>
 
 
-			<div class="rema">
-				!!!!!!</div>
+		<div class="rema">
 			La condition de changement de signe est importante : en effet \(x\mapsto x^3\) a pour dérivée
 			\(3x^2\)
 			qui
@@ -731,124 +1033,181 @@
 			de
 			max/min en
 			\(x=0\) (elle est strictement croissante).
+		</div>
 
-			<h3 class="subsection">Non-dérivabilité : aspect graphique</h3>
+		<div class="exo">
+			Étudier les fonctions suivantes : ensemble de définition, dérivée, variations, limites.
+			<table style="float: none; width: 100%;">
+				<tr>
+					<td>f(x)=\dfrac{x^2+2x+3}{x^2+2}</td>
+					<td>g(x)=10x\sqrt{x^2-5}</td>
+					<td>h(x)=\textrm{e}^(2x+1)+3x</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<h3>Non-dérivabilité : aspect graphique</h3>
+		<div class="rema">
 			Une fonction continue sur un intervalle \(I\) n'est pas forcément dérivable en tout \(x\) dans
 			\(I\)
 			;
 			on peut
 			visualiser ce caractère non-dérivable lorsqu'on observe :
-			\begin{itemize}
-		</li>
-		<li> une rupture de pente, ou point anguleux (deux demi-tangentes qui forment un angle non plat),
-			comme
-			pour
-			la
-			fonction valeur absolue en \(0\) ;
-		</li>
-		<li> une tangente verticale (la dérivée tend alors vers \(\pm\infty\)), comme pour la racine carrée
-			en
-			\(0\).
-			\end{itemize}
+			<ul>
+				<li> une rupture de pente, ou point anguleux (deux demi-tangentes qui forment un angle non plat),
+					comme
+					pour
+					la
+					fonction valeur absolue en \(0\) ;
+				</li>
+				<li> une tangente verticale (la dérivée tend alors vers \(\pm\infty\)), comme pour la racine carrée
+					en
+					\(0\).
+				</li>
+			</ul>
+		</div>
 
-			<h2 class="section">Théorème des valeurs intermédiaires</h2>
-			<h3 class="subsection">Conventions dans un tableau de variation</h3>
-			<strong>Convention : </strong> Une flèche dans un tableau de variation d'une fonction indique à la fois
+		<div class="exo">
+			On note \(f\) la fonction définie sur \(\mathbb{R}\) par \(f(x)=\left|\begin{array}{l}x^2-4\textrm{ si
+			}x\leqslant 1 \\ \frac{-2}{x}-1\textrm{ si }x&gt;1\end{array}\right.\).<br />
+			<ol>
+				<li>
+					Cette fonction est-elle dérivable ?
+				</li>
+				<li>
+					Étudier cette fonction.
+				</li>
+			</ol>
+		</div>
+
+		<h2>Théorème des valeurs intermédiaires</h2>
+		<h3>Conventions dans un tableau de variation</h3>
+		<div class="none">
+			<strong>Convention : </strong> Une flèche dans un tableau de variation d'une fonction indique à la
+			fois
 			:
-			\begin{itemize}
-		</li>
-		<li> la stricte croissance ou stricte décroissance de \(f\) sur l'intervalle correspondant ;
-		</li>
-		<li> la continuité de la fonction \(f\) sur l'intervalle correspondant.
-			\end{itemize}
+			<ul>
+				<li> la stricte croissance ou stricte décroissance de \(f\) sur l'intervalle correspondant ;
+				</li>
+				<li> la continuité de la fonction \(f\) sur l'intervalle correspondant.
+				</li>
+			</ul>
+		</div>
 
-			<h3 class="subsection">Théorème des valeurs intermédiaires</h3>
+		<h3>Théorème des valeurs intermédiaires</h3>
+		<div class="none">
 			<strong>But : </strong> Soit \(k\) un réel et \(f\) une fonction. On cherche à résoudre l'équation
-			\(f(x)=k\).<br />
-			\textsc{Théorème : }(admis) <strong>théorème des valeurs intermédiaires</strong><br />
+			\(f(x)=k\).
+		</div>
+		<div class="theo">(admis) <strong>théorème des valeurs intermédiaires</strong><br />
 			Soit \(f\) une fonction <strong>continue</strong> sur un intervalle \(I\) et \(a
-			<b\) deux réels de \(I\).<br />
+			&lt;b\) deux réels de \(I\).<br />
 			Si \(k\) est compris entre \(f(a)\) et \(f(b)\), il existe <strong>au moins</strong> un réel
 			\(c\in[a;b]\)
-			tel
-			que
-			\(f(c)=k\).<br />
+			tel que \(f(c)=k\).
+		</div>
 
-			<div class="rema">
-				!!!!!!</div>
-			Il est aussi possible d'utiliser des valeurs limites de \(f\).<br />
-			<div class="exo">Tracer une fonction \(f\) continue sur \([-3;6]\) telle que \(f(x)=2\) ait
-				\(3\)
-				solutions :
+		<div class="rema">
+			Il est aussi possible d'utiliser des valeurs limites de \(f\).
+		</div>
+
+		<div class="exo">
+			<div class="row">
+				<div class="col">
+					Tracer une fonction \(f\) continue sur \([-3;6]\) telle que \(f(x)=2\) ait
+					\(3\)
+					solutions :
+				</div>
+				<div class="col">
+					<figure>
+						<img src="assets/CoursLimiteContinuiteFig21.png" style="--width-print:6cm;" />
+					</figure>
+				</div>
 			</div>
-			<img src="assets/CoursLimiteContinuiteFig21.png" /><br />
-			<div class="exo">Soit \(f\) la fonction définie sur \(\R\) par \(f(x)=\frac{1</div>{3}x^{3}
-			+
-			\frac{1}{2}x^{2}
-			- 6x - 1\)
+		</div>
+
+		<div class="exo">Soit \(f\) la fonction définie sur \(\mathbb{R}\) par \(f(x)=\frac{1}{3}x^{3} +
+			\frac{1}{2}x^{2} - 6x - 1\)
 			<ol>
 				<li> Étudier les variations de \(f\).
 				</li>
-				<li> Démontrer que l'équation \(f(x)=3\) a au moins une solution.<br />
-
+				<li> Démontrer que l'équation \(f(x)=3\) a au moins une solution.
 				</li>
 			</ol>
-			}
+		</div>
 
-			<div class="prop">
-				!!!!!!</div>
+
+		<div class="prop">
 			<strong>unicité de la solution</strong>
 			Soit \(f\) une fonction <strong>continue</strong> et <strong>strictement monotone</strong> sur un
 			intervalle
 			\(I\)
 			et
-			\(a
-			<b\) deux réels de \(I\).<br />
+			\(a&lt;b\) deux réels de \(I\).<br />
 			Si \(k\) est compris entre \(f(a)\) et \(f(b)\), il existe un <strong>unique</strong> réel
 			\(c\in[a;b]\)
 			tel que
-			\(f(c)=k\).<br />
+			\(f(c)=k\).
+		</div>
 
-			<div class="rema">
-				!!!!!!</div>
-			Il est toujours possible d'utiliser des valeurs limites de \(f\).<br />
-			<div class="exo">Soit \(f\) la fonction définie sur \(\R\) par \(f(x)=\frac{1</div>
-			{3}x^{3}
-			+
-			\frac{1}{2}x^{2} - 6x - 1\)<br />
-			Démontrer que l'équation \(f(x)=3\) a une unique solution dans
-			\(\left[3;+\infty\right[\).<br />
-			}
+		<div class="rema">
+			Il est toujours possible d'utiliser des valeurs limites de \(f\).
+		</div>
 
-			<h3 class="subsection">Obtenir une approximation d'une solution de l'équation
-				\(f(x)=k\),
-				avec
-				\(k\) réel
-				fixé</h3>
+
+		<h3>Obtenir une approximation d'une solution de l'équation
+			\(f(x)=k\),
+			avec
+			\(k\) réel
+			fixé</h3>
+		<div class="meth">
 			Il existe deux méthodes :
-			\begin{itemize}
-		</li>
-		<li> <strong>Par balayage :</strong><br />
-			On utilise la table de calculatrice, en affinant le pas jusqu'à la précision désirée, pour
-			localiser
-			la
-			solution.
-		</li>
-		<li> <strong>Par dichotomie :</strong><br />
-			Lorsque l'on a localisé la solution dans un intervalle \([a;b]\), on calcule
-			\(f\left(\frac{a+b}{2}\right)\) ;
-			en s'aidant du tableau de variations, on voit si la solution est localisée dans la première
-			moitié
-			ou
-			seconde
-			moitié de l'intervalle \([a;b]\) ; on répète alors la même méthode plusieurs fois sur des
-			intervalles
-			imbriqués
-			dont les longueurs diminuent à chaque étape de moitié, jusqu'à arriver à la précision désirée.
-			\end{itemize}
-
-
-
+			<ol>
+				<li> <strong>Par balayage :</strong><br />
+					On utilise la table de calculatrice, en affinant le pas jusqu'à la précision désirée, pour
+					localiser
+					la
+					solution.
+				</li>
+				<li> <strong>Par dichotomie :</strong><br />
+					Lorsque l'on a localisé la solution dans un intervalle \([a;b]\), on calcule
+					\(f\left(\frac{a+b}{2}\right)\) ;
+					en s'aidant du tableau de variations, on voit si la solution est localisée dans la première
+					moitié
+					ou
+					seconde
+					moitié de l'intervalle \([a;b]\) ; on répète alors la même méthode plusieurs fois sur des
+					intervalles
+					imbriqués
+					dont les longueurs diminuent à chaque étape de moitié, jusqu'à arriver à la précision désirée.
+				</li>
+			</ol>
+		</div>
+		<div class="exo"> (suite) Soit \(f\) la fonction définie sur \(\mathbb{R}\) par
+			\(f(x)=\frac{1}{3}x^{3}+\frac{1}{2}x^{2}
+			- 6x -
+			1\)<br />
+			<ol>
+				<li>
+					Démontrer que l'équation \(f(x)=3\) a une unique solution dans
+					\(\left[3;+\infty\right[\).
+				</li>
+				<li>
+					Donner une valeur approchée de cette solution à \(10^{-2}\) près en utilisant une dichotomie.
+				</li>
+			</ol>
+		</div>
+		<div class="exo"><strong>Méthode de Newton (dur) : </strong><br />
+			Newton propose une méthode qu'il pense plus rapide que la dichotomie pour trouver la solution d'une équation
+			\(f(x)=0\).<br />
+			Partant d'un point \(x_0\) proche de la solution, il construit la suite \((x_n)\) comme ceci : \(x_{n+1}\)
+			est l'abscisse du point d'intersection de la tangente à la courbe de \(f\) en \(x_n\) avec l'axe
+			\((Ox)\).<br />
+			Appliquer cette méthode à l'équation \(x^2-3=0\). Y a-t-il convergence vers la solution partant de \(x_0=2\)
+			? Est-elle rapide ?<br />
+			Donner un exemple d'équation pour laquelle la méthode de Newton échoue.
+		</div>
 	</main>
 </body>
 

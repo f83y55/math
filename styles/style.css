@@ -234,6 +234,7 @@ code:not(pre code) {
     overflow-x: scroll;
 }
 
+ul.row li, ol.row li {display: inline;}
 .col {
     margin: 0;
     padding: 0;
@@ -241,6 +242,16 @@ code:not(pre code) {
     max-width: 100%;
     display: inline;
     overflow-x: scroll;
+}
+
+.corr {
+    color:#0f0;
+    background: #323;
+    border-radius: 2em;
+}
+.corr:before {
+    content: "corrigé : ";
+    font-weight: bold;
 }
 
 .barm {
@@ -344,7 +355,7 @@ code:not(pre code) {
     }
 
     .pagebreak                       {page-break-after: always;}
-    section+section                {page-break-after: always;}
+    section+section                {page-break-before: always;}
     /*.titre, .section, .section-nocounter, .subsection, .subsection-nocounter, .subsubsection            {page-break-inside: avoid;}*/
     .mytable, table, figure, img     {page-break-inside: avoid;}
 
