@@ -2,13 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def f(t):
-    return (t-1)/(t+1)
+    return 2*t/3+3
 
 
 u = [2]  # u_0
 N = 0     # iterations
-x = np.arange(-4,4, 0.01)   # def (Ox)
-y = np.arange(-4,4, 0.01)   # def (Ox)
+x = np.arange(-1, 13, 0.01)   # def (Ox)
+#y = np.arange(-1, 9, 0.01)   # def (Oy)
   
 # ---------------------------------------------------------------------- #
 
@@ -18,7 +18,7 @@ for k in range(N):
 
 plt.plot(x, f(x), 'r-', x, x, 'k-')
 ax = plt.gca()
-ax.set_ylim(-4, 4)
+#ax.set_ylim(-4, 4)
 ax.spines['right'].set_color('none')
 ax.spines['top'].set_color('none')
 ax.xaxis.set_ticks_position('bottom')
