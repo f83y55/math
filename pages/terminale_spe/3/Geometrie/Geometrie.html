@@ -67,7 +67,7 @@
 
     <div class="prop">
       Si \(A\) et \(B\) sont deux points de l'espace, le milieu de \([AB]\) a pour coordonnées
-      \(\left(\begin{array}{ccc}\frac{x_A+x_B}{2} & \frac{y_A+y_B}{2} & \frac{y_A+y_B}{2} \end{array} \right)\).</div>
+      \(\left(\begin{array}{ccc}\frac{x_A+x_B}{2} & \frac{y_A+y_B}{2} & \frac{z_A+z_B}{2} \end{array} \right)\).</div>
 
     <div class="defi">
       <ul>
@@ -139,149 +139,200 @@
 
 
     <div class="prop">
-      !!!</div>
-    Si \(\overrightarrow{u}\), \(\overrightarrow{v}\) et \(\overrightarrow{w}\) sont trois vecteurs et \(k\) et \(l\)
-    deux réels :
-    <ul>
-      <li> \(\overrightarrow{u}\cdot\overrightarrow{v}=\overrightarrow{v}\cdot\overrightarrow{u}\)
-      </li>
-      <li>
-        \(\left(k\overrightarrow{u}\right)\cdot\left(l\overrightarrow{v}\right)=kl\,\overrightarrow{u}\cdot\overrightarrow{v}\)
-      </li>
-      <li>
-        \(\overrightarrow{u}\cdot\left(\overrightarrow{v}+\overrightarrow{w}\right)=\overrightarrow{u}\cdot\overrightarrow{v}+\overrightarrow{u}\cdot\overrightarrow{w}\)
-      </li>
-      <li>
-        \(\left(\overrightarrow{u}+\overrightarrow{v}\right)\cdot\overrightarrow{w}=\overrightarrow{u}\cdot\overrightarrow{w}+\overrightarrow{v}\cdot\overrightarrow{w}\)<br />
+      Si \(\overrightarrow{u}\), \(\overrightarrow{v}\) et \(\overrightarrow{w}\) sont trois vecteurs et \(k\) et \(l\)
+      deux réels :
+      <ul>
+        <li> \(\overrightarrow{u}\cdot\overrightarrow{v}=\overrightarrow{v}\cdot\overrightarrow{u}\)
+        </li>
+        <li>
+          \(\left(k\overrightarrow{u}\right)\cdot\left(l\overrightarrow{v}\right)=kl\,\overrightarrow{u}\cdot\overrightarrow{v}\)
+        </li>
+        <li>
+          \(\overrightarrow{u}\cdot\left(\overrightarrow{v}+\overrightarrow{w}\right)=\overrightarrow{u}\cdot\overrightarrow{v}+\overrightarrow{u}\cdot\overrightarrow{w}\)
+        </li>
+        <li>
+          \(\left(\overrightarrow{u}+\overrightarrow{v}\right)\cdot\overrightarrow{w}=\overrightarrow{u}\cdot\overrightarrow{w}+\overrightarrow{v}\cdot\overrightarrow{w}\)<br />
 
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
 
     <div class="defi"><strong>Carré scalaire : </strong><br />
-      On note \(\overrightarrow{u</div>^2\) le nombre \(\overrightarrow{u}\cdot\overrightarrow{u}=\norm{u}^2\).}
+      On note \({\overrightarrow{u}}^2\) le nombre
+      \(\overrightarrow{u}\cdot\overrightarrow{u}=\left\lVert\overrightarrow{u}\right\rVert^2\).
+    </div>
 
     <div class="exo">Développer :
       <ul>
-        <li> \(\left(\overrightarrow{u
-    </div>\pm\overrightarrow{v}\right)^2\)
-    </li>
-    <li> \(\left(\overrightarrow{u}+\overrightarrow{v}\right)\cdot\left(\overrightarrow{u}-\overrightarrow{v}\right)\)
+        <li>
+          \(\left(\overrightarrow{u}\pm\overrightarrow{v}\right)^2\)
+        </li>
+        <li>
+          \(\left(\overrightarrow{u}+\overrightarrow{v}\right)\cdot\left(\overrightarrow{u}-\overrightarrow{v}\right)\)
+        </li>
+      </ul>
+    </div>
 
-    </li>
-    </ul>
-    }<br />
-    <div class="exo">On a \(\overrightarrow{u</div>\left\(\begin{array}{c} 1}{-1}{4}\) et \(\left\(\begin{array}{c}
-    2}{1}{-1}\).<br />
-    Déterminer, si cela est possible, \(k\in\mathbb{R}\) tel que \(\overrightarrow{u}\) soit orthogonal à
-    \(\overrightarrow{u}+k\overrightarrow{v}\).}<br />
 
-    <div class="defi">Deux vecteurs \(\overrightarrow{u</div>\) et \(\overrightarrow{v}\) sont dits
-    <strong>orthogonaux</strong> lorsque \(\overrightarrow{u}\cdot\overrightarrow{v}=0\). On note alors
-    \(\overrightarrow{u}\perp\overrightarrow{v}\).}<br />
+    <div class="defi">Deux vecteurs \(\overrightarrow{u}\) et \(\overrightarrow{v}\) sont dits
+      <strong>orthogonaux</strong> lorsque \(\overrightarrow{u}\cdot\overrightarrow{v}=0\). On note alors
+      \(\overrightarrow{u}\perp\overrightarrow{v}\).
+    </div>
 
     <div class="rema">
-      !!!</div>
-    \(\overrightarrow{0}\) est le seul vecteur orthogonal à tout vecteur.
+      \(\overrightarrow{0}\) est le seul vecteur orthogonal à tout vecteur.
+    </div>
+
+    <div class="exo">On a \(\overrightarrow{u}\left(\begin{array}{c} 1 \\ -1 \\ 4 \end{array}\right)\) et
+      \(\left(\begin{array}{c} 2 \\ 1 \\ -1 \end{array}\right)\).<br />
+      Déterminer, si cela est possible, \(k\in\mathbb{R}\) tel que \(\overrightarrow{u}\) soit orthogonal à
+      \(\overrightarrow{u}+k\overrightarrow{v}\).
+    </div>
+
 
     <h2>Les Droites</h2>
     <h3>Définition, représentation paramétrique</h3>
-    <strong>Attention : </strong> Une droite, dans l'espace, n'admet pas d'équation mais un paramétrage.<br />
-    <div class="defi">Une <strong>droite</strong> \((d)\) passant par \(A\left(\begin{array</div>{ccc}x_A}{y_A}{z_A}\)
-    et de vecteur directeur \(\overrightarrow{u}\left\(\begin{array}{c}
-    x_{\overrightarrow{u}}}{y_{\overrightarrow{u}}}{z_{\overrightarrow{u}}}\) est l'ensemble des points
-    \(M\left(\begin{array}{ccc}x}{y}{z}\) tels que \(\overrightarrow{AM}//\overrightarrow{u}\), c'est à dire :
-    \(\displaystyleM\in(d)~\Leftrightarrow~\textrm{Il existe~}k\in\mathbb{R},~\left\{\begin{array}{l}
-    x=x_A+kx_{\overrightarrow{u}} <br /> y=y_A+ky_{\overrightarrow{u}} <br /> z=z_A+kz_{\overrightarrow{u}} <br />
-    \end{array} \right.\)
-    }
+    <div class="rema">
+      <strong>Attention : </strong> Une droite, dans l'espace, n'admet pas d'équation mais un paramétrage.
+    </div>
+    <div class="defi">Une <strong>droite</strong> \((d)\) passant par \(A\left(\begin{array}{ccc}x_A & y_A & z_A
+      \end{array}\right)\)
+      et de vecteur directeur \(\overrightarrow{u}\left(\begin{array}{c}
+      x_{\overrightarrow{u}} \\ y_{\overrightarrow{u}} \\ z_{\overrightarrow{u}} \end{array}\right)\) est l'ensemble
+      des points
+      \(M\left(\begin{array}{ccc}x & y & z \end{array}\right)\) tels que \(\overrightarrow{AM}//\overrightarrow{u}\),
+      c'est à dire :
+      \(M\in (d) \Leftrightarrow \) Il existe \(k\in\mathbb{R}\), tel que \(\left\{\begin{array}{l}
+      x=x_A+kx_{\overrightarrow{u}} \\ y=y_A+ky_{\overrightarrow{u}} \\ z=z_A+kz_{\overrightarrow{u}} \\
+      \end{array} \right.\)
+    </div>
 
     <div class="rema">
-      !!!</div>
-    Attention, une même droite a une infinité de représentations paramétriques.<br />
-    <div class="exo">Déterminer une représentation paramétrique de la droite \((AB)\), avec \(A\left(\begin{array</div>
-    {ccc}0}{1}{2}\)et \(B\left(\begin{array}{ccc}1}{-2}{0}\).}<br />
-    <div class="exo">Déterminer un vecteur directeur et un point par lequel passe la droite \((d)\) paramétrée par :
-      \(\displaystyle\left\{\begin{array</div>{l} x=1+2k <br /> y=-4k <br /> z=-5 <br /> \end{array} \right.
-    k\in\mathbb{R}\)
-    \(\overrightarrow{v}\left\(\begin{array}{c} -\sqrt{2}}{2\sqrt{2}}{0}\) est-il aussi un vecteur directeur de \((d)\)
-    ?
-    Le point \(A\left(\begin{array}{ccc}5}{-8}{5}\) est-il sur \((d)\) ? Et le point
-    \(B\left(\begin{array}{ccc}3}{-2}{5}\) ?}<br />
+      Attention, une même droite a une infinité de représentations paramétriques.<br />
+    </div>
+    <div class="exo">Déterminer une représentation paramétrique de la droite \((AB)\), avec \(A\left(\begin{array}{ccc}0
+      &1&2\end{array}\right)\)et \(B\left(\begin{array}{ccc}1 & -2 & 0 \end{array}\right)\).
+    </div>
+
+    <div class="exo">
+      <ul>
+        <li>Déterminer un vecteur directeur et un point par lequel passe la droite \((d)\) paramétrée par :
+          \(\displaystyle\left\{\begin{array}{l} x=1+2k \\ y=-4k \\ z=-5 \end{array} \right.
+          k\in\mathbb{R}\)
+        </li>
+        <li>
+          \(\overrightarrow{v}\left(\begin{array}{c} -\sqrt{2} \\ 2\sqrt{2} \\ 0 \end{array}\right)\) est-il aussi un
+          vecteur directeur de \((d)\) ?
+        </li>
+        <li>
+          Le point \(A\left(\begin{array}{ccc}5 & -8 & 5\end{array}\right)\) est-il sur \((d)\) ? Et le point
+          \(B\left(\begin{array}{ccc}3 & -2 & 5 \end{array}\right)\) ?
+        </li>
+      </ul>
+    </div>
 
 
     <div class="prop">
-      !!!</div>
-    Tout vecteur non nul colinéaire au vecteur directeur d'une droite est aussi vecteur directeur de cette même
-    droite.<br />
+      Tout vecteur non nul colinéaire au vecteur directeur d'une droite est aussi vecteur directeur de cette même
+      droite.
+    </div>
 
     <div class="exo">Démontrer que les paramétrages suivants définissent la même droite :
 
-      \(\displaystyle\left\{\begin{array</div>{l} x=1+2k <br /> y=-4k <br /> z=-5+8k <br /> \end{array} \right.
-    k\in\mathbb{R} ~~\textrm{~et~}
-    \left\{\begin{array}{l} x=5-l <br /> y=-8+2l <br /> z=11-4l <br /> \end{array} \right. l\in\mathbb{R}\)
-    Y a-t-il alors un lien entre \(k\) et \(l\) ?
-    }
+      \(\displaystyle\left\{\begin{array}{l} x=1+2k \\ y=-4k \\ z=-5+8k \end{array} \right. k\in\mathbb{R}\) et \(
+      \left\{\begin{array}{l} x=5-l \\ y=-8+2l \\ z=11-4l \\ \end{array} \right. l\in\mathbb{R}\).
+      Y a-t-il alors un lien entre \(k\) et \(l\) ?
+    </div>
 
 
     <h3>Positions relatives de droites</h3>
 
     <div class="prop">
-      !!!</div>
-    Deux droites sont parallèles si leurs vecteurs directeurs sont colinéaires.<br />
-
+      Deux droites sont parallèles si leurs vecteurs directeurs sont colinéaires.
+    </div>
     <div class="rema">
-      !!!</div>
-    Si elles ont de plus un point commun, elles sont confondues.<br />
+      Si elles ont de plus un point commun, elles sont confondues.
+    </div>
 
     <div class="prop">
-      !!!</div>
-    Deux droites sont orthogonales si leurs vecteurs directeurs sont orthogonaux.<br />
+      Deux droites sont orthogonales si leurs vecteurs directeurs sont orthogonaux.
+    </div>
 
     <div class="rema">
-      !!!</div>
-    Si elles ont de plus un point commun, elles sont dites perpendiculaires.<br />
+      Si elles ont de plus un point commun, elles sont dites perpendiculaires.
+    </div>
 
     <div class="prop">
-      !!!</div>
-    Deux droites sont sécantes lorsqu'elles ont un point commun et que leurs vecteurs directeurs sont non
-    colinéaires.<br />
+      Deux droites sont sécantes lorsqu'elles ont un point commun et que leurs vecteurs directeurs sont non
+      colinéaires.
+    </div>
 
+    <div class="rema"><strong>Attention : </strong> Dans l'espace, deux droites sont :
+      <ul>
+        <li> soit coplanaires, et dans ce cas elles sont ou bien sécantes ou bien parallèles ;
+        </li>
+        <li> soit non coplanaires (elles pourront alors, cas particulier, être orthogonales mais pas perpendiculaires).
+        </li>
+      </ul>
+    </div>
 
-    <div class="rema">
-      !!!</div>
-    <strong>Attention : </strong> Dans l'espace, deux droites sont :
-    <ul>
-      <li> soit coplanaires, et dans ce cas elles sont ou bien sécantes ou bien parallèles ;
-      </li>
-      <li> soit non coplanaires (elles pourront alors, cas particulier, être orthogonales mais pas perpendiculaires).
-
-      </li>
-    </ul>
-    <div class="exo">Illustrer la situation avec ses bras.</div><br />
+    <div class="exo">Illustrer la situation avec ses bras.</div>
 
     <div class="exo">Déterminer géométriquement les ensembles suivants :
-      \footnotesize
-
       <ol>
-        <li> \(\left\{\begin{array
-    </div>{l} x=2-2k <br /> y=-1+2k <br /> z=1-4k <br /> \end{array} \right. k\in\mathbb{R}\)
-    </li>
-    <li> \(\left\{\begin{array}{l} x=2-2k <br /> y=-1+2k <br /> z=1-4k <br /> \end{array} \right. k\in\mathbb{R}_+\)
-    </li>
-    <li> \(\left\{\begin{array}{l} x=2-2k <br /> y=-1+2k <br /> z=1-4k <br /> \end{array} \right. k\in[-2;3]\)
-    </li>
-    <li> \(\left\{\begin{array}{l} x=2-2k <br /> y=-1+2k <br /> z=1-4k <br /> \end{array} \right. k\in[0;1]\)
+        <li>
+          \(\left\{\begin{array}{l}
+          x=2-2k \\
+          y=-1+2k \\
+          z=1-4k \\
+          \end{array} \right.
+          k\in\mathbb{R}\)
+        </li>
+        <li>
+          \(\left\{\begin{array}{l}
+          x=2-2k \\
+          y=-1+2k \\
+          z=1-4k \\
+          \end{array} \right.
+          k\in\mathbb{R}_+\)
+        </li>
+        <li>
+          \(\left\{\begin{array}{l}
+          x=2-2k \\
+          y=-1+2k \\
+          z=1-4k \\
+          \end{array} \right.
+          k\in[-2;3]\)
+        </li>
+        <li>
+          \(\left\{\begin{array}{l}
+          x=2-2k \\
+          y=-1+2k \\
+          z=1-4k \\
+          \end{array} \right.
+          k\in[0;1]\)
+        </li>
+      </ol>
+    </div>
 
-    </li>
-    </ol>
-
-    \normalsize
-    }<br />
     <div class="exo">Déterminer l'intersection de :
-      \(\displaystyle(d)\left\{\begin{array</div>{l} x=2-2k <br /> y=-1+2k <br /> z=1-4k <br /> \end{array} \right.
-    k\in\mathbb{R}\textrm{~et~}(d')\left\{\begin{array}{l} x=3+l <br /> y=4+5l <br /> z=-1-2l <br /> \end{array} \right.
-    l\in\mathbb{R}\)
-    }
+      \((d)
+      \left\{\begin{array}{l}
+      x=2-2k \\
+      y=-1+2k \\
+      z=1-4k \\
+      \end{array} \right.
+      k\in\mathbb{R}\)
+      et
+      \((d')
+      \left\{\begin{array}{l}
+      x=3+l \\
+      y=4+5l \\
+      z=-1-2l \\
+      \end{array}
+      \right.
+      l\in\mathbb{R}\)
+    </div>
 
 
 
@@ -299,8 +350,10 @@
     <div class="meth">En posant \(M\left(\begin{array</div>{ccc}x}{y}{z}\) et en développant l'équation
     \(\overrightarrow{AM}\cdot\overrightarrow{n}=0\), on obtient une équation de ce plan, de la forme :
     \(\displaystyleax+by+cz+d=0\)
-    où \(\overrightarrow{n}\left\(\begin{array}{c} a}{b}{c}\) et \(d\) dépend de \(\overrightarrow{n}\) et \(A\).}<br />
-    <div class="exo">Donner une équation du plan \(\mathcal{P</div>\) passant par \(A\left(\begin{array -1 \& 4}\) et de
+    où \(\overrightarrow{n}\left\(\begin{array}{c} a}{b}{c}\) et \(d\) dépend de \(\overrightarrow{n}\) et
+    \(A\).}<br />
+    <div class="exo">Donner une équation du plan \(\mathcal{P</div>\) passant par \(A\left(\begin{array -1 \& 4}\) et
+    de
     vecteur normal \(\overrightarrow{n}\left\(\begin{array \& c} 2 \& 5 \& -1}\).} <br />
 
     <div class="rema">
@@ -314,7 +367,8 @@
 
     <div class="prop">
       !!!</div>
-    Toute équation de la forme \(ax+by+cz+d=0\) (avec \(a\), \(b\), \(c\), \(d\) réels fixés) définit un plan de vecteur
+    Toute équation de la forme \(ax+by+cz+d=0\) (avec \(a\), \(b\), \(c\), \(d\) réels fixés) définit un plan de
+    vecteur
     normal \(\overrightarrow{n}\left\(\begin{array \& c} a \& b \& c}\).<br />
     <div class="exo">Déterminer un vecteur normal et un point contenu dans le plan \(\mathcal{P</div>
     ~:~~2x-3y-5z+2=0\).}<br />
@@ -341,13 +395,15 @@
     </ol>
     }
 
-    <div class="exo">Calculer une équation du plan \(\mathcal{P</div>\) passant par \(A\left(\begin{array \& ccc}0 \& 1
+    <div class="exo">Calculer une équation du plan \(\mathcal{P</div>\) passant par \(A\left(\begin{array \& ccc}0 \&
+    1
     \& 2}\), \(B\left(\begin{array \& ccc}1 \& -2 \& 0}\) et \(C\left(\begin{array \& ccc}3 \& 0 \& 1}\).}
 
 
     <div class="rema">
       !!!</div>
-    Les inéquations \(ax+by+cz+d<0\) et \(ax+by+cz+d>0\) découpent l'espace en deux demi-espaces de même frontière : le
+    Les inéquations \(ax+by+cz+d<0\) et \(ax+by+cz+d>0\) découpent l'espace en deux demi-espaces de même frontière :
+      le
       plan d'équation \(ax+by+cz+d=0\).
 
       <h3>Paramétrage d'un plan</h3>
@@ -356,12 +412,15 @@
         !!!</div>
       Soit un plan \((ABC)\) :<br />
       <figure><img src="assets/Fig2.png" /></figure><br />
-      \(\mathcal{R}_{(ABC)}=\left(A;\overrightarrow{AB},\overrightarrow{AC}\right)\) étant un repère de \((ABC)\), tout
-      point \(M\in(ABC)\) est repéré par un couple de coordonnées (attention, dans \(\mathcal{R}_{(ABC)}\) !) \((k,l)\)
+      \(\mathcal{R}_{(ABC)}=\left(A;\overrightarrow{AB},\overrightarrow{AC}\right)\) étant un repère de \((ABC)\),
+      tout
+      point \(M\in(ABC)\) est repéré par un couple de coordonnées (attention, dans \(\mathcal{R}_{(ABC)}\) !)
+      \((k,l)\)
       tel que \(\overrightarrow{AM}=k\overrightarrow{AB}+l\overrightarrow{AC}\).<br />
       <div class="exo">Sur la figure, lire les coordonnées de \(M\) dans \(\mathcal{R</div>_{(ABC)}\).}<br />
       <div class="defi">On dit que \(\overrightarrow{u</div>=\overrightarrow{AB}\) et
-      \(\overrightarrow{v}=\overrightarrow{AC}\) sont des <strong>vecteurs directeurs</strong> du plan \((ABC)\).}<br />
+      \(\overrightarrow{v}=\overrightarrow{AC}\) sont des <strong>vecteurs directeurs</strong> du plan
+      \((ABC)\).}<br />
 
       <div class="rema">
         !!!</div>
@@ -373,12 +432,14 @@
       Le plan \(\mathcal{P}\) passant par \(A\) et dirigé par \(\overrightarrow{u}\) et par \(\overrightarrow{v}\) est
       donc l'ensemble des points \(M\left(\begin{array \& ccc}x \& y \& z}\) tels que :
       \(\displaystyle\left\{\begin{array \& l} x=x_A+kx_{\overrightarrow{u}}+lx_{\overrightarrow{v}} <br />
-      y=y_A+ky_{\overrightarrow{u}}+ly_{\overrightarrow{v}} <br /> z=z_A+kz_{\overrightarrow{u}}+lz_{\overrightarrow{v}}
+      y=y_A+ky_{\overrightarrow{u}}+ly_{\overrightarrow{v}} <br />
+      z=z_A+kz_{\overrightarrow{u}}+lz_{\overrightarrow{v}}
       <br /> \end{array}\right.~k,l\in\mathbb{R} \)
       <div class="defi">On appelle cette expression <strong>représentation paramétrique</strong> du plan \(\mathcal{P
       </div>\).}<br />
       <div class="exo">Écrire une représentation paramétrique du plan \(\mathcal{P</div>\) passant par
-      \(A\left(\begin{array \& ccc}0 \& 1 \& 2}\), \(B\left(\begin{array \& ccc}1 \& -2 \& 0}\) et \(C\left(\begin{array
+      \(A\left(\begin{array \& ccc}0 \& 1 \& 2}\), \(B\left(\begin{array \& ccc}1 \& -2 \& 0}\) et
+      \(C\left(\begin{array
       \& ccc}3 \& 0 \& 1}\).}
 
 
@@ -470,14 +531,16 @@
         </li>
       </ul><br />
 
-      <div class="exo">Soit le plan \(\mathcal{P</div>\) passant par \(A\Vhxyz{0 \\ 1 \\ 2}\), \(B\Vhxyz{1 \\ -2 \\ 0}\)
+      <div class="exo">Soit le plan \(\mathcal{P</div>\) passant par \(A\Vhxyz{0 \\ 1 \\ 2}\), \(B\Vhxyz{1 \\ -2 \\
+      0}\)
       et \(C\Vhxyz{3 \\ 0 \\ 1}\), et la droite \((DE)\) avec \(D\Vhxyz{1 \\ 1 \\ 2}\) et \(E\Vhxyz{3 \\ -2 \\
       1}\).<br />
       Déterminer \(\mathcal{P}\cap(d)\).}
 
 
 
-      <div class="exo">\(ABCDEFGH\) est un cube d'arête \(1\). \(I\) et \(J\) sont les milieux respectifs de \([DB]\) et
+      <div class="exo">\(ABCDEFGH\) est un cube d'arête \(1\). \(I\) et \(J\) sont les milieux respectifs de \([DB]\)
+        et
         \([AE]\). On se place dans le repère orthonormé \(\left(E;\overrightarrow{EF</div>
       ,\overrightarrow{EH},\overrightarrow{EA}\right)\).
       <ol>
@@ -509,7 +572,8 @@
         </li>
         <li> Si on a deux droites parallèles \((d_1)\) et \((d_2)\), un plan \(\mathcal{P}_1\) contenant \((d_1)\), un
           plan \(\mathcal{P}_2\) contenant \((d_2)\) et \(\mathcal{P}_1\) et \(\mathcal{P}_2\) sécants suivant une
-          droite \((d)\), alors l'intersection \((d)\) des deux plans est parallèle aux droites \((d_1)\) et \((d_2)\).
+          droite \((d)\), alors l'intersection \((d)\) des deux plans est parallèle aux droites \((d_1)\) et
+          \((d_2)\).
 
         </li>
       </ul><br />
@@ -522,7 +586,8 @@
       <h3>Projeté orthogonal</h3>
       <div class="defi">Soit \(R\) un point n'appartenant pas à une droite ou un plan noté(e) \(\mathcal{T</div>
       \).<br />
-      On appelle <strong>projeté orthogonal</strong> de \(R\) sur \(\mathcal{T}\) le point \(S\in\mathcal{T}\) vérifiant
+      On appelle <strong>projeté orthogonal</strong> de \(R\) sur \(\mathcal{T}\) le point \(S\in\mathcal{T}\)
+      vérifiant
       :
       \(\displaystyle\textrm{Pour tout}~M\in\mathcal{T},~\overrightarrow{SR}\cdot\overrightarrow{SM}=0
       \)
@@ -543,7 +608,8 @@
 
       <div class="prop">
         !!!</div>
-      Soit \(\mathcal{P}~:~~ax+by+cz+d=0\) et \(A\Vhxyz{x_A \\ y_A \\ z_A}\). La distance de \(A\) à \(\mathcal{P}\) est
+      Soit \(\mathcal{P}~:~~ax+by+cz+d=0\) et \(A\Vhxyz{x_A \\ y_A \\ z_A}\). La distance de \(A\) à \(\mathcal{P}\)
+      est
       :
       \(\displaystyled\left(A,\mathcal{P}\right)=\dfrac{\left|ax_A+by_A+cz_A+d\right| \\ \sqrt{a^2+b^2+c^2}}\)
 
@@ -559,7 +625,8 @@
       \(D\Vhxyz{1 \\ 1 \\ 2}\). Calculer la distance (minimale) entre \((AB)\) et \((CD)\).}
 
       <h3>Sphère</h3>
-      <div class="defi">La <strong>sphère</strong> de centre \(C\) et de rayon \(R\) est l'ensemble des points \(M\) de
+      <div class="defi">La <strong>sphère</strong> de centre \(C\) et de rayon \(R\) est l'ensemble des points \(M\)
+        de
         l'espace vérifiant \(CM=R\).</div><br />
       <div class="defi">La <strong>boule</strong> de centre \(C\) et de rayon \(R\) est l'ensemble des points \(M\) de
         l'espace vérifiant \(CM\leqslant R\).</div><br />
