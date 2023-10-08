@@ -141,7 +141,7 @@ h4:not(.nocounter)::before {counter-increment: h4c; content: counter(h2c) "." co
     border-radius: var(--border-radius);
 }
 .exo:not(.nocounter)         {counter-increment: exo;}
-.exo:not(.nocounter)::before {font-weight: bold; content: "Exercice " counter(exo) " : "; }
+.exo:not(.nocounter)::before {font-weight: bold; content: "✏️ Exercice " counter(exo) " : "; }
 
 code:not(pre code) {
     font-family: monospace;
@@ -159,7 +159,7 @@ code:not(pre code) {
     border-color: rgba(0, 0, 0, var(--border-opacity));
     counter-increment: defi;
 }
-.defi::before   {font-weight: bold; content: "Définition " counter(defi) " : ";}
+.defi::before   {font-weight: bold; content: "📒Définition " counter(defi) " : ";}
 
 .prop           {counter-increment: prop; margin: var(--margin); padding: var(--padding);}
 .prop::before   {font-weight: bold; content: "Propriété " counter(prop) " : ";}
@@ -226,6 +226,11 @@ code:not(pre code) {
 .mytable tr:nth-child(odd)>td   {background: var(--color-bg-table-3);}
 .mytable td>ol, .mytable td>ul  {text-align: left;}
 
+.vartable {border: 1px solid;}
+.vartable tr:first-child() {border-bottom: 1px solid;}
+.vartable tr td:first-child(),.vartable tr th:first-child() {border-right: 1px solid;}
+.vartable th, .vartable td {text-align: center;}
+
 .row {
     margin: 0;
     padding: 0;
@@ -245,12 +250,13 @@ ul.row li, ol.row li {display: inline;}
 }
 
 .corr {
-    color:#0f0;
-    background: #323;
-    border-radius: 2em;
+    padding: 0.3em;
+    color:#040;
+    border : solid 1px #040;
+    border-radius: 0.3em;
 }
 .corr:before {
-    content: "corrigé : ";
+    content: "🖊 ";
     font-weight: bold;
 }
 
