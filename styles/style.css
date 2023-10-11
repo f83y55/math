@@ -159,10 +159,10 @@ code:not(pre code) {
     border-color: rgba(0, 0, 0, var(--border-opacity));
     counter-increment: defi;
 }
-.defi::before   {font-weight: bold; content: "📒Définition " counter(defi) " : ";}
+.defi::before   {font-weight: bold; content: "📕 Définition " counter(defi) " : ";}
 
 .prop           {counter-increment: prop; margin: var(--margin); padding: var(--padding);}
-.prop::before   {font-weight: bold; content: "Propriété " counter(prop) " : ";}
+.prop::before   {font-weight: bold; content: "📙 Propriété " counter(prop) " : ";}
 
 .theo {
     color: var(--color-theo);
@@ -173,16 +173,16 @@ code:not(pre code) {
     border-color: rgba(0, 0, 0, var(--border-opacity));
     counter-increment: theo;
 }
-.theo::before   {font-weight: bold; content: "Théorème " counter(theo) " : ";}
+.theo::before   {font-weight: bold; content: "📔 Théorème " counter(theo) " : ";}
 
 .rema           {counter-increment: rema; margin: var(--margin); padding: var(--padding);}
-.rema::before   {font-weight: bold; content: "Remarque " counter(rema) " : ";}
+.rema::before   {font-weight: bold; content: "📋 Remarque " counter(rema) " : ";}
 
 .exem           {counter-increment: exem; margin: var(--margin); padding: var(--padding);}
-.exem::before   {font-weight: bold; content: "Exemple " counter(exem) " : ";}
+.exem::before   {font-weight: bold; content: "🌄 Exemple " counter(exem) " : ";}
 
 .meth           {color : var(--color-meth); counter-increment: meth; margin: var(--margin); padding: var(--padding);}
-.meth::before   {font-weight: bold; content: "Méthode " counter(meth) " : ";}
+.meth::before   {font-weight: bold; content: "📗 Méthode " counter(meth) " : ";}
 
 
 .titre, .prop, .rema, .exem, .meth, .theo, .defi, .exo, .none {margin: var(--margin); padding: var(--padding);}

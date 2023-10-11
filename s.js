@@ -24,10 +24,10 @@ const modules_head = {
 "ul-collapsible" : [{"path":"scripts/ul-collapsible/ul-collapsible.css",
                      "default":false
                    }],
-/*"quadrillage" :    [{"path":"scripts/quadrillage/quadrillage.js",
-				      "default:false, 
-		              "attr":{"async":"true"}}],
-					  */
+"quadrillage" :    [{"path":"scripts/quadrillage/quadrillage.js",
+				      "default":false, 
+		              "attr":{"defer":"true"}}],
+					  
 }
 
 
