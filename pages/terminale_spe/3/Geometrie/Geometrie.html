@@ -61,7 +61,9 @@
       \(\left\|k\overrightarrow{u}\right\|=|k|\left\lVert\overrightarrow{u}\right\rVert\)
     </div>
     <div class="defi">La <strong>distance</strong> entre deux points \(A\) et \(B\) de l'espace est :<br />
-      \(AB = \left\lVert \overrightarrow{AB} \right\rVert=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2+(z_B-z_A)^2}\).
+      <span class="surl">
+        \(AB = \left\lVert \overrightarrow{AB} \right\rVert=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2+(z_B-z_A)^2}\)
+      </span>.
     </div>
 
 
@@ -115,6 +117,12 @@
         </li>
         <li> Calculer les coordonnées du milieu \(D\) de \([BC]\).
         </li>
+        <li>Calculer les coordonnées du centre de gravité du triangle \(ABC\).
+        </li>
+        <li>
+          On attache des masses (ponctuelles) en chaque sommet du triangle \(ABC\) : 4kg pour \(A\), 5kg pour \(B\) et
+          1kg pour \(C\). Quel est le point d'équilibre du triangle ? (indication : calculer le brarycentre).
+        </li>
         <li> Calculer les coordonnées de \(\overrightarrow{u}\), colinéaire à \(\overrightarrow{AC}\) et de norme \(2\).
           Y
           a-t-il une seule solution ?
@@ -132,9 +140,11 @@
     </div>
 
     <div class="prop"> (admise). Le produit scalaire peut être calculé de deux manières :<br />
-      \(\overrightarrow{u}\cdot\overrightarrow{v} = xx'+yy'+zz' =
-      \left\lVert\overrightarrow{u}\right\rVert\left\lVert\overrightarrow{v}\right\rVert\cos\left(\widehat{\overrightarrow{u};\overrightarrow{v}}\right)
-      \)
+      <span class="surl">
+        \(\overrightarrow{u}\cdot\overrightarrow{v} = xx'+yy'+zz' =
+        \left\lVert\overrightarrow{u}\right\rVert\left\lVert\overrightarrow{v}\right\rVert\cos\left(\widehat{\overrightarrow{u};\overrightarrow{v}}\right)
+        \)
+      </span>
     </div>
 
 
@@ -655,38 +665,37 @@
       Pour tout \(M\in\mathcal{T}\), \(\overrightarrow{SR}\cdot\overrightarrow{SM}=0\)
     </div>
 
-    <div class="exo">On donne \(A\Vhxyz{x_A \\ y_A \\ z_A</div>\), \(R\Vhxyz{x_R \\ y_R \\ z_R}\),
-    \(\overrightarrow{n}\left\(\begin{array \\ c} a \\ b \\ c}\). <br />
-    Donner les coordonnées du projeté orthogonal \(S\) de \(R\) sur le plan \(\mathcal{P}\) passant par \(A\) et
-    de
-    vecteur normal \(\overrightarrow{n}\) ; puis celles du projeté orthogonal \(S'\) de \(R\) sur la droite
-    \((d)\),
-    passant par \(A\) et dirigée par \(\overrightarrow{n}\).
-    }<br />
-
-    <div class="exo prop">
-
+    <div class="exo">On donne \(A\left(\begin{array}{ccc} x_A & y_A & z_A \end{array}\right)\),
+      \(R\left(\begin{array}{ccc} x_R & y_R & z_R\end{array}\right)\),
+      \(\overrightarrow{n}\left(\begin{array}{c} a \\ b \\ c\end{array}\right)\). <br />
+      Donner les coordonnées du projeté orthogonal \(S\) de \(R\) sur le plan \(\mathcal{P}\) passant par \(A\) et
+      de
+      vecteur normal \(\overrightarrow{n}\) ; puis celles du projeté orthogonal \(S'\) de \(R\) sur la droite
+      \((d)\),
+      passant par \(A\) et dirigée par \(\overrightarrow{n}\).
     </div>
 
-
     <div class="prop">
-      !!!</div>
-    Soit \(\mathcal{P}~:~~ax+by+cz+d=0\) et \(A\Vhxyz{x_A \\ y_A \\ z_A}\). La distance de \(A\) à \(\mathcal{P}\)
-    est
-    :
-    \(\displaystyled\left(A,\mathcal{P}\right)=\dfrac{\left|ax_A+by_A+cz_A+d\right| \\ \sqrt{a^2+b^2+c^2}}\)
+      Soit \(\mathcal{P}~:~~ax+by+cz+d=0\) et \(A\left(\begin{array}{ccc}x_A & y_A & z_A\end{array}\right)\). La
+      distance de \(A\) à \(\mathcal{P}\)
+      est
+      :
+      <span class="surl">\(\displaystyle d\left(A,\mathcal{P}\right)=\dfrac{\left|ax_A+by_A+cz_A+d\right| }{
+        \sqrt{a^2+b^2+c^2}}\)</span>
+    </div>
 
-    <div class="exo">Le démontrer.</div><br />
-    <div class="exo">Trouver une formule permettant de calculer la distance d'un point à une droite.</div><br />
+    <div class="exo">Le démontrer.</div>
 
-    <div class="prop">
-      !!!</div>
+    <div class="exo">Trouver une formule permettant de calculer la distance d'un point à une droite.</div>
 
-    \vspace{6cm}
 
-    <div class="exo">On donne \(A\Vhxyz{0 \\ 1 \\ 2</div>\), \(B\Vhxyz{1 \\ -2 \\ 0}\), \(C\Vhxyz{3 \\ 0 \\ 1}\)
-    et
-    \(D\Vhxyz{1 \\ 1 \\ 2}\). Calculer la distance (minimale) entre \((AB)\) et \((CD)\).}
+    <div class="exo">On donne
+      \(A\left(\begin{array}{ccc}0 & 1 & 2 \end{array}\right)\),
+      \(B\left(\begin{array}{ccc}1 & -2 & 0 \end{array}\right)\),
+      \(C\left(\begin{array}{ccc}3 & 0 & 1 \end{array}\right)\) et
+      \(D\left(\begin{array}{ccc}1 & 1 & 2 \end{array}\right)\).
+      Calculer la distance (minimale) entre \((AB)\) et \((CD)\).
+    </div>
 
     <h3>Sphère</h3>
     <div class="defi">

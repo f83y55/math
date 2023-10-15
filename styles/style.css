@@ -189,7 +189,7 @@ code:not(pre code) {
 
 .surl {background-color: var(--color-bg-surl); height: max-content; padding: var(--padding)0.1em;}
 
-.mytable{
+table.mytable{
     width: var(--width);
     --mytable-float: none;
     --mytable-border-radius: 1em;
@@ -203,7 +203,7 @@ code:not(pre code) {
     float: var(--mytable-float);
 }
 
-.mytable th, .mytable td {
+table.mytable th, .mytable td {
     height: var(--cell-height);
     width: var(--cell-width);
     text-align: center;
@@ -213,23 +213,27 @@ code:not(pre code) {
     overflow-x: hidden;
 }
 
-.mytable tr:first-child>th:first-child, .mytable tr:first-child>td:first-child 
+table.mytable tr:first-child>th:first-child, .mytable tr:first-child>td:first-child 
                                 {border-top-left-radius: var(--mytable-border-radius);}
-.mytable tr:first-child>th:last-child, .mytable tr:first-child>td:last-child  
+table.mytable tr:first-child>th:last-child, .mytable tr:first-child>td:last-child  
                                 {border-top-right-radius: var(--mytable-border-radius);}
-.mytable tr:last-child>th:first-child, .mytable tr:last-child>td:first-child 
+table.mytable tr:last-child>th:first-child, .mytable tr:last-child>td:first-child 
                                 {border-bottom-left-radius: var(--mytable-border-radius);}
-.mytable tr:last-child>th:last-child, .mytable tr:last-child>td:last-child 
+table.mytable tr:last-child>th:last-child, .mytable tr:last-child>td:last-child 
                                 {border-bottom-right-radius: var(--mytable-border-radius);}
-.mytable th                     {background-color: var(--color-bg-table-1);}
-.mytable tr:nth-child(even)>td  {background: var(--color-bg-table-2);}
-.mytable tr:nth-child(odd)>td   {background: var(--color-bg-table-3);}
-.mytable td>ol, .mytable td>ul  {text-align: left;}
+table.mytable th                     {background-color: var(--color-bg-table-1);}
+table.mytable tr:nth-child(even)>td  {background: var(--color-bg-table-2);}
+table.mytable tr:nth-child(odd)>td   {background: var(--color-bg-table-3);}
+table.mytable td>ol, .mytable td>ul  {text-align: left;}
 
-.vartable {border: 1px solid;}
-.vartable tr:first-child() {border-bottom: 1px solid;}
-.vartable tr td:first-child(),.vartable tr th:first-child() {border-right: 1px solid;}
-.vartable th, .vartable td {text-align: center;}
+table.vartable {padding:0; margin:0; border: 1px solid; border-collapse: collapse;}
+table.vartable tr:first-child {border-bottom: 1px solid;}
+table.vartable tr.bb {border-bottom: 1px solid;}
+table.vartable tr th {border-right: 1px solid;}
+table.vartable tr td {text-align: center; padding-left: 0.5em; padding-right: 0.5em;}
+table.vartable tr th {text-align: center;}
+table.vartable tr td.bar {background-image: linear-gradient(#444, #444); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;}
+table.vartable tr td.bbar {background-image: linear-gradient(#444, #444) linear-gradient(#444, #444); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;}
 
 .row {
     margin: 0;
@@ -288,7 +292,7 @@ ul.row li, ol.row li {display: inline;}
         overflow-x: scroll;
         overflow-y: hidden;
     }
-    .mytable, img, img:active {
+    table.mytable, img, img:active {
         margin: 0;
         padding: 0;
         font-size:small;
@@ -363,13 +367,13 @@ ul.row li, ol.row li {display: inline;}
     .pagebreak                       {page-break-after: always;}
     section+section                {page-break-before: always;}
     /*.titre, .section, .section-nocounter, .subsection, .subsection-nocounter, .subsubsection            {page-break-inside: avoid;}*/
-    .mytable, table, figure, img     {page-break-inside: avoid;}
+    table.mytable, table, figure, img     {page-break-inside: avoid;}
 
 
-    .mytable td>ol, .mytable td>ul, .mytable td>img, .mytable td>figure 
+    table.mytable td>ol, .mytable td>ul, .mytable td>img, .mytable td>figure 
                                      {text-align: left;float: none;}
 
-    .mytable, figure, canvas, img, img:active {
+    table.mytable, figure, canvas, img, img:active {
         --width-print: auto;
         --height-print: auto;
         --cell-width-print: auto;
@@ -395,6 +399,10 @@ ul.row li, ol.row li {display: inline;}
         border-color: var(--color-bg-surl);
         border-radius: rgba(var(--border-radius),0.2);
         padding: var(--padding) 0.1em;
+    }
+
+    .corr {
+        display: none;
     }
 
     code:not(pre code) {
