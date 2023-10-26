@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Fonctions - DS3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+    <script src="../../../../scripts/quadrillage/quadrillage.js"></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Fonctions : dérivées - DS3 (court)</h1>
+        <table class="mytable hidden-web" style="width: 100%;">
+            <tr>
+                <th style="width: 20%;">Nom</th>
+                <td style="width: 80%;"></td>
+            </tr>
+            <tr>
+                <th>Prénom</th>
+                <td></td>
+            </tr>
+        </table>
+
+        <div class="exo"><strong>Dérivée et tableau de variation (4 points)</strong><br />
+            <ol>
+                <li>
+                    Calculer la dérivée de la fonction suivante et factoriser au maximum :
+                    <div>
+                        \(h(x) = (3x-5)\textrm{e}^{-2x}\)
+                    </div>
+                    <div class="corr">
+                        \(\begin{array}{rcl}
+                        h'(x) & = & 3\textrm{e}^{-2x}+(3x-5)\textrm{e}^{-2x}(-2)\\
+                        & = & \textrm{e}^{-2x}\left(3-2(3x-5)\right)\\
+                        & = & (13-6x)\textrm{e}^{-2x}
+                        \end{array}\)
+                    </div>
+                    <div style="clear: both;">
+                        <table id="rep3"></table>
+                        <script> quadrillage("rep3", 9, 16.5, "none"); </script>
+                    </div>
+                </li>
+                <li>
+                    Donner son tableau de signe et en déduire les variations de \(h\),avec limites et valeurs de max/min
+                    (pas de justification demandée) :
+                    <div class="corr">
+                        <table class="vartable">
+                            <tr>
+                                <th>\(x\)</th>
+                                <td>\(-\infty\)</td>
+                                <td></td>
+                                <td>\(\frac{13}{6}\)</td>
+                                <td></td>
+                                <td>\(+\infty\)</td>
+                            </tr>
+                            <tr class="bb">
+                                <th>\(h'(x)\)</th>
+                                <td colspan="2">+</td>
+
+                                <td class="bar">0</td>
+                                <td colspan="2">-</td>
+
+                            </tr>
+                            <tr>
+                                <th rowspan="3">\(h\)</th>
+                                <td></td>
+                                <td></td>
+                                <td>\(1{,}5\textrm{e}^{\frac{-13}{3}}\)</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td></td>
+                                <td>↗</td>
+                                <td></td>
+                                <td>↘</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td>\(-\infty\)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="clear: both;">
+                        <table id="rep4"></table>
+                        <script> quadrillage("rep4", 9, 16.5, "none"); </script>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="pagebreak" style="text-align: right;">
+            Tournez SVP
+        </div>
+
+        <div class="exo"><strong>Dérivée 1 (3 points)</strong><br />
+            Calculer la dérivée de la fonction suivante et factoriser au maximum.
+            <div>
+                \(f(x) = x^{10}(8x+2)^5\)
+            </div>
+
+            <div class="corr">
+                \(\begin{array}{rcl}
+                f'(x) & = & 10x^9(8x+2)^5+x^{10}\times 5(8x+2)^4\times 8 \\
+                & = & x^9\left(10(8x+2)^5+40x(8x+2)^4\right)\\
+                & = & x^9(8x+2)^4\left(10(8x+2)+40x\right)\\
+                & = & x^9(8x+2)^4\left(120x+20\right)\\
+                & = & 20x^9(8x+2)^4\left(6x+1\right)\\
+                \end{array}\)
+            </div>
+            <div style="clear: both;">
+                <table id="rep1"></table>
+                <script> quadrillage("rep1", 10, 16.5, "none"); </script>
+            </div>
+        </div>
+        <div class="exo"><strong>Dérivée 2 (3 points)</strong><br />
+            Calculer la dérivée de la fonction suivante et factoriser au maximum.
+            <div>
+                \(g(x) = \dfrac{x-4}{\sqrt{3x}}\)
+            </div>
+
+            <div class="corr">
+                \(\begin{array}{rcl}
+                g'(x) & = & \dfrac{\sqrt{3x}-(x-4)\frac{3}{2\sqrt{3x}}}{3x} \\
+                & = & \dfrac{\sqrt{3x}-(x-4)\frac{3}{2\sqrt{3x}}}{3x}\times\dfrac{2\sqrt{3x}}{2\sqrt{3x}} \\
+                & = & \dfrac{2\sqrt{3x}^2-(x-4)\times 3}{6x\sqrt{3x}} \\
+                & = & \dfrac{6x-3x+12}{6x\sqrt{3x}} \\
+                & = & \dfrac{\cancel{3}(x+4)}{\cancel{3}\times2\sqrt{3x}} \\
+
+                \end{array}\)
+            </div>
+            <div style="clear: both;">
+                <table id="rep2"></table>
+                <script> quadrillage("rep2", 10, 16.5, "none"); </script>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
