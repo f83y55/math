@@ -13,6 +13,310 @@
         <h1>
             Convexité, Exp, Ln - Cours
         </h1>
+        <h2>Fonctions convexes</h2>
+        <h3>Définition</h3>
+        <div class="row">
+            <div class="col">
+                <div class="defi">
+                    <ul>
+                        <li>Un segment joignant deux points d'une courbe est une <strong>corde</strong> de cette courbe.
+                        </li>
+                        <li>
+                            \(f\) est une fonction définie sur un intervalle.<br />
+                            On dit que \(f\) est <strong>convexe</strong> lorsque pour toute corde de la courbe de
+                            \(f\), cette courbe est en dessous de chaque corde.
+                        </li>
+                        <li>
+                            On dit que \(f\) est <strong>concave</strong> lorsque pour toute corde de la courbe de
+                            \(f\), cette courbe est au dessus de chaque corde.
+                        </li>
+                    </ul>
+                </div>
+                <div class="prop">
+                    \(f\) est convexe sur un intervalle \(I\) équivaut à \(-f\) est concave sur \(I\).
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="exem">
+                    Sur le graphique ci-contre, \(f\) est convexe et \(g\) est concave.
+                </div>
+                <figure>
+                    <img src="assets/fig_cvx_1.svg" alt="figure convexité">
+                </figure>
+            </div>
+        </div>
+
+        <div class="exo">Compléter :
+            <ol>
+                <li>La fonction carré est ...</li>
+                <li>La fonction valeur absolue est ...</li>
+                <li>La fonction cube ...</li>
+            </ol>
+        </div>
+
+        <h3>Dérivée seconde et convexité</h3>
+        <div class="prop">
+            <div class="row">
+                <div class="col" style="border-right: 1px solid grey;">
+                    \(f\) est une fonction deux fois dérivable sur un intervalle \(I\) (on peut calculer la dérivée
+                    \(f''\) de
+                    la dérivée \(f'\) de la fonction \(f\)) ; alors, les affirmations suivantes sont équivalentes :
+
+                    <ol type="A">
+                        <li>
+                            \(f''\) est positive sur \(I\).
+                        </li>
+                        <li>
+                            \(f'\) est croissante sur \(I\).
+                        </li>
+                        <li>
+                            la courbe de \(f\) est au dessus de ses tangentes sur \(I\).
+                        </li>
+                        <li>
+                            \(f\) est convexe sur \(I\).
+                        </li>
+                    </ol>
+                </div>
+                <div class="col">
+                    De même, les affirmations suivantes sont équivalentes :
+                    <ol type="a">
+                        <li>
+                            \(f''\) est négative sur \(I\).
+                        </li>
+                        <li>
+                            \(f'\) est décroissante sur \(I\).
+                        </li>
+                        <li>
+                            la courbe de \(f\) est en dessous de ses tangentes sur \(I\).
+                        </li>
+                        <li>
+                            \(f\) est concave sur \(I\).
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="exo"><strong>Démonstration partielle</strong>
+            <div class="row">
+                <div class="col">
+                    \(f\) est une fonction deux fois dérivable sur un intervalle \(I\). On prend \(a&lt;c&lt;b\)
+                    tous dans \(I\) et on définit pour tout \(x\in I\) :
+                    <ul>
+                        <li>
+                            \(g(x) = f(x)-\left(\dfrac{f(b)-f(a)}{b-a}(x-a)+f(a)\right)\)
+                        </li>
+                        <li>
+                            \(h(x) = f(x)-\left(f'(c)(x-c)+f(c)\right)\)
+                        </li>
+                    </ul>
+                    <ol>
+                        <li>
+                            Que «mesurent» ces deux fonctions ?
+                        </li>
+                        <li>
+                            Calculer \(g(a)\), \(g(b)\) et \(h(c)\).
+                        </li>
+                        <li>
+                            Calculer \(g'\) et \(h'\) ; en déduire que \(f''=g''=h''\)
+                        </li>
+                        <li>
+                            Dans la propriété précédente :
+                            <ul>
+                                <li>
+                                    A⇒B est vraie.
+                                </li>
+                                <li>
+                                    Démontrer que B⇒C et que B⇒D en utilisant les fonctions \(h\) et \(g\).
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col">
+                    <figure>
+                        <img src="assets/fig_cvx_2.svg" alt="fig_cvx_2">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="exo"><strong>Obtenir des inégalités</strong><br />
+            Montrer que la fonction exponentielle est convexe. En déduire que :
+            <ol>
+                <li>Pour tout réel \(x\), on a \(\textbf{e}^x\geqslant 1+x\).</li>
+                <li>Pour tout réel \(0\leqslant x \leqslant 10\), on a \(\textbf{e}^x\leqslant
+                    \frac{\textrm{e}^{10}-1}{10}x+1\)</li>
+                <li>(dur) Démontrer que pour tout entier \(n\), on a \(0\leqslant \textrm{e}^\frac{1}{n^2}-1\leqslant
+                    \dfrac{\textrm{e}^\frac{1}{n}-1}{n}\) (utiliser la corde de la courbe de l'exponentielle sur
+                    \(\left[0,\frac{1}{n}\right]\)).</li>
+            </ol>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="defi"><strong>Point d'inflexion</strong><br />
+                    Lorsque la tangente en un point A à une courbe traverse cette courbe en A, on dit que la courbe
+                    présente un <strong>point d'inflexion</strong> en A.
+                </div>
+                <div class="exo">
+                    Repérer les autres points d'inflexion sur la figure.
+                </div>
+                <div class="prop">
+                    Lorsque la dérivée seconde s'annule et change de signe, on est en présence d'un point d'inflexion.
+                </div>
+                <div class="exo">
+                    Déterminer le(s) point(s) d'inflexion de la courbe de la fonction donnée par \(f(x)=x^3-3x+2\).
+                </div>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/fig_cvx_3.svg" alt="fig_cvx_3">
+                </figure>
+            </div>
+        </div>
+
+
+
+
+        <h2>Fonction exponentielle : rappels</h2>
+        <h3>Généralités</h3>
+
+
+        <div class="row">
+            <div class="col">
+                <div class="defi">La <strong>fonction exponentielle</strong>, notée \(\exp\), est la seule fonction
+                    \(f\),
+                    définie et dérivable sur \(\mathbb{R}\), vérifiant \(f'=f\) et \(f(0)=1\).
+                </div>
+                <div class="prop">
+                    <ul>
+                        \(\exp(1)=\textrm{e}^1=\textrm{e}\approx2{,}718\,281\,828\,46\) ;
+                        </li>
+                        <li> \(\exp\) est strictement croissante, tend vers \(0\) en \(-\infty\) (\((Ox)\) est donc
+                            asymptote en
+                            \(-\infty\)) et tend très rapidement vers \(+\infty\) en \(+\infty\).
+                        </li>
+                        <li> \(\exp\) est dérivable sur \(\mathbb{R}\) : sa courbe admet des tangentes en tout point.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <figure><img src="assets/exp.svg" /></figure>
+            </div>
+        </div>
+
+
+        <div class="exo">Résoudre les (in)équations suivantes :<br />
+            <ol class="row">
+                <li>
+                    \(\textrm{e}^{x-1}=2\)
+                </li>
+                <li>
+                    \(\textrm{e}^{x^2}=\textrm{e}^{-4x}\textrm{e}^{3}\)
+                </li>
+                <li>
+                    \(\ln(2x)=5\)
+                </li>
+                <li>
+                    \(\ln(2x)=-1\)
+                </li>
+            </ol>
+        </div>
+
+        <h3>Opérations et \(\exp\)</h3>
+
+        <div class="prop">
+            La fonction \(\exp\) transforme les sommes et produits et
+            les
+            différences en quotients.
+            Pour \(a,b\) réels et \(n\) entier :
+
+            <ul>
+                <li> \(\textrm{e}^a\times\textrm{e}^b=\textrm{e}^{a+b}\)
+                </li>
+                <li> \(\displaystyle\frac{1}{\textrm{e}^a}=\textrm{e}^{-a}\)
+                </li>
+                <li> \(\displaystyle\frac{\textrm{e}^a}{\textrm{e}^b}=\textrm{e}^{a-b}\)
+                </li>
+                <li> \(\left(\textrm{e}^a\right)^n=\textrm{e}^{an}\)<br />
+                </li>
+            </ul>
+        </div>
+
+        <div class="exo">Simplifier :<br />
+            \(A=\frac{\textrm{e</div>
+        ^7}{\textrm{e}^5}\)~~;~~\(B=\textrm{e}^{x-2}\textrm{e}^{2-x}\)~~;~~\(C=\textrm{e}^x\textrm{e}^{-x}\)}
+        <h3>Dérivation et \(\exp\)</h3>
+
+        <div class="prop">
+            !!!</div>
+        Pour tout \(x\in\mathbb{R}\) :
+        \(\displaystyle\left(\textrm{e}^x\right)'=\textrm{e}^x\)
+        <div class="exo">Le démontrer en dérivant (in)directement \(\ln\left(\textrm{e</div>
+        ^x\right)\).}<br />
+
+        <div class="prop">
+            !!!</div>
+        (admise) si \(u\) est une fonction dérivable :
+        \(\displaystyle\left(\textrm{e}^u\right)'=u'\textrm{e}^u\)
+
+        <div class="exo">Calculer les dérivées des fonctions suivantes :
+            \(f(x)=\textrm{e</div>^{1-x^2}\) et \(g(x)=(1-x)\textrm{e}^{-5x}\)}<br />
+        <div class="exo">Trouver une primitive des fonctions suivantes :
+            \(f(x)=x\textrm{e</div>^{-x^2}\) et \(g(x)=(x+1)\textrm{e}^x\) (sous la forme
+        \((ax+b)\textrm{e}^x\)).}<br />
+        <div class="exo">\(f\) et \(g\) sont deux fonctions définies sur \(\mathbb{R</div>\) qui
+        vérifient
+        :<br />
+        \(f'=f\) et \(g'=g\) et \(f(0)=g(0)=1\).
+        <ol>
+            <li> En dérivant \(g(x)g(-x)\), établir que \(g\) ne s'annule pas sur \(\mathbb{R}\). En
+                déduire
+                que
+                \(g>0\) sur \(\mathbb{R}\).
+            </li>
+            <li> En dérivant \(\dfrac{f}{g}\), établir que \(f=g\).
+            </li>
+            <li> Que dire d'une fonction égale à sa dérivée et qui vaut \(1\) quand \(x=0\) ? Et si l'on
+                ommet
+                la
+                dernière condition ?
+
+            </li>
+        </ol>
+        }
+
+        <h3>Limites usuelles</h3>
+
+        <div class="prop">
+            !!!</div>
+        <ul>
+            <li> \(\displaystyle\lim_{x\to+\infty} \dfrac{\textrm{e}^x}{x}=+\infty\)<br />
+            </li>
+            <li> \(\displaystyle\lim_{x\to-\infty} x\textrm{e}^x=0^-\)<br />
+            </li>
+            <li> \(\displaystyle\lim_{x\to0} \dfrac{\textrm{e}^x-1}{x}=1\)<br />
+
+            </li>
+        </ul>
+
+        <div class="exo">Démontrer ces limites ; on pourra poser \(x=\ln t\).</div><br />
+        <div class="exo">Calculer :
+
+            <ol>
+                <li> \(\displaystyle\lim_{x\to+\infty
+        </div> \dfrac{\textrm{e}^x+1}{x^2+1}\)
+        </li>
+        <li> \(\displaystyle\lim_{x\to-\infty} (x+1)e^x\)
+        </li>
+        <li> \(\displaystyle\lim_{x\to0^+} \sqrt{x}\textrm{e}^x\)
+        </li>
+        <li> \(\displaystyle\lim_{x\to+\infty} x^2-\textrm{e}^x\)
+
+        </li>
+        </ol>
+        }
+
 
 
         <h2>Fonction logarithme</h2>
@@ -36,7 +340,9 @@
                 <li> \(\ln\) est strictement croissante et croît lentement vers \(+\infty\) ;
                 </li>
                 <li>
-                    0 est valeur interdite et \((Oy)\) est asymptote (verticale) à la courbe de \(\ln\) : les
+                    0 est valeur interdite et \((Oy)\) est asymptote (verticale) à la courbe de \(\ln\)
+                    :
+                    les
                     valeurs
                     de \(\ln\) tendent vers \(-\infty\) pour \(x\) proche de 0 ;
                 </li>
@@ -51,7 +357,8 @@
         </div>
 
         <div class="rema">
-            \(\textrm{e}\approx2,718\,281\,828\,46\) est une constante mathématique (du même type que \(\pi\)).
+            \(\textrm{e}\approx2,718\,281\,828\,46\) est une constante mathématique (du même type que
+            \(\pi\)).
         </div>
 
         <h3>Dérivation et \(\ln\)</h3>
@@ -61,27 +368,31 @@
         </div>
 
         <div class="prop">
-            (admise) Si \(u\) est une fonction dérivable à valeurs <strong>strictement positives</strong>, on a :
+            (admise) Si \(u\) est une fonction dérivable à valeurs <strong>strictement
+                positives</strong>,
+            on a
+            :
             \(\displaystyle\left(\ln u\right)'=\dfrac{u'}{u}\)
         </div>
 
         <div class="exo">
             Calculer les dérivées des fonctions suivantes : \(f(x)=\ln(1+x^2)\) et
-            \(g(x)=\ln\left(1+\dfrac{1}{x}\right)\)}
+            \(g(x)=\ln\left(1+\dfrac{1}{x}\right)\)
         </div>
         <div class="exo">
-            Trouver les valeurs adéquates des réel \(a\) et \(b\) pour que \(F(x)=ax+bx\ln x\) soit une
-            primitive de \(\ln\).
+            Trouver les valeurs adéquates des réel \(a\) et \(b\) pour que la fonction\(F\)définie pour
+            \(x&gt;0\) par \(F(x)=ax+bx\ln x\) vérifie \(F'(x)=\ln(x)\).
         </div>
 
-        <div class="exo">Trouver une primitive de la fonction inverse sur \(\mathbb{R}_-\). Peut-on construire une
-            primitive de la fonction inverse sur \(\mathbb{R}^*\) ?
+        <div class="exo">
+            Démontrer que pour tout réel \(x\neq 0\), \(\left(\ln|x|\right)'=\dfrac{1}{x}\).
         </div>
 
         <h3>Opérations et \(\ln\)</h3>
 
         <div class="prop">
-            La fonction \(\ln\) transforme les produits en somme et les quotients en différences : si \(a,b&gt;0\) et
+            La fonction \(\ln\) transforme les produits en somme et les quotients en différences : si
+            \(a,b&gt;0\) et
             \(n\)
             est
             un entier :
@@ -107,7 +418,8 @@
             \(\ln\left(\frac{32}{9}\right)\)~~;~~\(\ln\left(\sqrt{6}\right)\)~~;~~\(\ln\left(\frac{1}{6}\right)\)
         </div>
 
-        <div class="exo">Démontrer la propriété précédente ; pour le premier item, on pourra dériver \(\ln(ax)\).
+        <div class="exo">Démontrer la propriété précédente ; pour le premier item, on pourra dériver
+            \(\ln(ax)\).
         </div>
 
         <div class="exo">Démontrer que \(\displaystyle\lim_{x\to+\infty}\ln x = +\infty\) et que
@@ -144,7 +456,9 @@
         </div>
 
         <div class="exo">Démontrer ces limites ; pour le premier item, on pourra étudier la fonction
-            \(f(x)=\dfrac{\ln x}{x}\) et poser \(x=\textrm{e}^n\) pour \(n\in\mathbb{N}^*\) ; pour le second, poser
+            \(f(x)=\dfrac{\ln x}{x}\) et poser \(x=\textrm{e}^n\) pour \(n\in\mathbb{N}^*\) ; pour le
+            second,
+            poser
             \(x=\dfrac{1}{t}\)
             ;
             pour le troisième, penser que \(\ln\) est dérivable en 1.
@@ -174,28 +488,41 @@
 
         <div class="prop">
             !!!</div>
-        \(\log\) possède les mêmes propriétés que \(\ln\) en terme de variation, signe, limites et calcul, sauf pour
+        \(\log\) possède les mêmes propriétés que \(\ln\) en terme de variation, signe, limites et
+        calcul,
+        sauf
+        pour
         la
-        propriété \(\ln\left(\textrm{e}^n\right)=n\) qui se traduit en \(\log \left(10^n\right)=n\) : on dit que le
+        propriété \(\ln\left(\textrm{e}^n\right)=n\) qui se traduit en \(\log \left(10^n\right)=n\) : on
+        dit
+        que
+        le
         \(\log\) (décimal) a \(10\) pour base, alors que \(\ln\) a \(\e\) pour base.<br />
 
         <div class="rema">
             !!!</div>
-        Ainsi, un nombre dont \(\log\) vaut environ \(2,223\) est compris entre \(10^2=100\) et \(10^3=1000\).<br />
+        Ainsi, un nombre dont \(\log\) vaut environ \(2,223\) est compris entre \(10^2=100\) et
+        \(10^3=1000\).<br />
 
         <div class="rema">
             !!!</div>
-        En informatique, on utilise le log binaire \(\log_2 x =\frac{\ln x}{\ln 2}\) ; un nombre dont le \(\log_2\)
+        En informatique, on utilise le log binaire \(\log_2 x =\frac{\ln x}{\ln 2}\) ; un nombre dont le
+        \(\log_2\)
         vaut
         environ \(7,5\) doit être codé sur \(8\) bits (\(8\) caractères zéro ou un).<br />
         <figure><img src="assets/log2.png" /></figure><br />
-        Plus généralement, on peut construire le \(\log_a\) (logarithme de base \(a\)) en posant \(\log_a x =
+        Plus généralement, on peut construire le \(\log_a\) (logarithme de base \(a\)) en posant
+        \(\log_a x
+        =
         \frac{\ln
-        x}{\ln a}\). De même, si \(n\) est l'entier immédiatement inférieur à \(\log_a x\), alors \(a^n<x<a^{n+1}\).
-            <div class="exo"><strong>En chimie :</strong><br />
+        x}{\ln a}\). De même, si \(n\) est l'entier immédiatement inférieur à \(\log_a x\), alors \(a^n
+        <x<a^{n+1}\). <div class="exo"><strong>En chimie :</strong><br />
             Le pH d’une solution aqueuse est défini par la relation
             \(\displaystylepH = - \log[H_3O^+]\)
-            où \([H_3O^+]\) désigne la concentration en ions \(H_3O^+\) (en mol/L). On a toujours \(0 \leq pH \leq
+            où \([H_3O^+]\) désigne la concentration en ions \(H_3O^+\) (en mol/L). On a toujours \(0
+            \leq
+            pH
+            \leq
             14\).
             <ol>
                 <li> Calculer le pH d’une solution dont \([H_3O^+] = 4,0 \times 10^{-5
@@ -208,132 +535,16 @@
                 </li>
             </ol>}
 
-            <div class="exo">Expliquer comment utiliser \(\log\) pour trouver le nombre de chiffres d’un nombre entier ;
+            <div class="exo">Expliquer comment utiliser \(\log\) pour trouver le nombre de chiffres d’un nombre
+                entier ;
                 avec combien de chiffres s’écrit le nombre \(1515^{1789</div>\) ?}<br />
 
 
 
-            <h2>Fonction exponentielle</h2>
-            <h3>Définition, courbe et premières propriétés</h3>
-
-            <div class="defi">Pour \(x\) nombre réel quelconque, en notant \(\textrm{e</div>^x\) le nombre dont le
-            \(\ln\) vaut \(x\), on construit la <strong>fonction exponentielle</strong> \(\exp\), qui est la fonction
-            réciproque de \(\ln\).}<br />
-            <figure><img src="assets/exp.png" /></figure><br />
-
-            <div class="prop">
-                !!!</div>
-            Les conséquence directes sont :
-            <ul>
-                <li> \(\exp(x)=\textrm{e}^x\) est définie pour tout \(x\) réel ;
-                </li>
-                <li> \(\exp(0)=\textrm{e}^0=1\) et \(\exp(1)=\textrm{e}^1=\e\approx2,7\) ;
-                </li>
-                <li> Pour \(y>0\) et \(x\) quelconque, \(y=e^x~\Leftrightarrow~x=\ln y\)
-                </li>
-                <li> \(\exp\) est strictement croissante, tend vers \(0\) en \(-\infty\) (\((Ox)\) est donc asymptote en
-                    \(-\infty\)) et tend très rapidement vers \(+\infty\) en \(+\infty\).
-                </li>
-                <li> \(\exp\) est dérivable sur \(\mathbb{R}\) : sa courbe admet des tangentes en tout point puisqu'il
-                    en est de même pour celle de \(\ln\) et qu'aucune des tangentes à la courbe de \(\ln\) n'est
-                    horizontale.<br />
-
-                </li>
-            </ul>
-            <div class="exo">Résoudre les (in)équations suivantes :<br />
-                \(e^{x-1</div>=2\)~~;~~\(e^x
-            <e^{3x+2}\)~~;~~\(\ln (2x)=3\)}<br />
-
-            <h3>Opérations et \(\exp\)</h3>
-
-            <div class="prop">
-                !!!</div>
-            \(\exp\) agit à l'inverse de \(\ln\) : la fonction \(\exp\) transforme les sommes et produits et les
-            différences en quotients.
-            Pour \(a,b\) réels et \(n\) entier :
-
-            <ul>
-                <li> \(\textrm{e}^a\times\textrm{e}^b=\textrm{e}^{a+b}\)
-                </li>
-                <li> \(\displaystyle\frac{1}{\textrm{e}^a}=\textrm{e}^{-a}\)
-                </li>
-                <li> \(\displaystyle\frac{\textrm{e}^a}{\textrm{e}^b}=\textrm{e}^{a-b}\)
-                </li>
-                <li> \(\left(\textrm{e}^a\right)^n=\textrm{e}^{an}\)<br />
-
-                </li>
-            </ul>
-
-            <div class="exo">Simplifier :<br />
-                \(A=\frac{\textrm{e</div>
-            ^7}{\textrm{e}^5}\)~~;~~\(B=\textrm{e}^{x-2}\textrm{e}^{2-x}\)~~;~~\(C=\textrm{e}^x\textrm{e}^{-x}\)}
-            <h3>Dérivation et \(\exp\)</h3>
-
-            <div class="prop">
-                !!!</div>
-            Pour tout \(x\in\mathbb{R}\) :
-            \(\displaystyle\left(\textrm{e}^x\right)'=\textrm{e}^x\)
-            <div class="exo">Le démontrer en dérivant (in)directement \(\ln\left(\textrm{e</div>^x\right)\).}<br />
-
-            <div class="prop">
-                !!!</div>
-            (admise) si \(u\) est une fonction dérivable :
-            \(\displaystyle\left(\textrm{e}^u\right)'=u'\textrm{e}^u\)
-
-            <div class="exo">Calculer les dérivées des fonctions suivantes :
-                \(f(x)=\textrm{e</div>^{1-x^2}\) et \(g(x)=(1-x)\textrm{e}^{-5x}\)}<br />
-            <div class="exo">Trouver une primitive des fonctions suivantes :
-                \(f(x)=x\textrm{e</div>^{-x^2}\) et \(g(x)=(x+1)\textrm{e}^x\) (sous la forme
-            \((ax+b)\textrm{e}^x\)).}<br />
-            <div class="exo">\(f\) et \(g\) sont deux fonctions définies sur \(\mathbb{R</div>\) qui vérifient :<br />
-            \(f'=f\) et \(g'=g\) et \(f(0)=g(0)=1\).
-            <ol>
-                <li> En dérivant \(g(x)g(-x)\), établir que \(g\) ne s'annule pas sur \(\mathbb{R}\). En déduire que
-                    \(g>0\) sur \(\mathbb{R}\).
-                </li>
-                <li> En dérivant \(\dfrac{f}{g}\), établir que \(f=g\).
-                </li>
-                <li> Que dire d'une fonction égale à sa dérivée et qui vaut \(1\) quand \(x=0\) ? Et si l'on ommet la
-                    dernière condition ?
-
-                </li>
-            </ol>
-            }
-
-            <h3>Limites usuelles</h3>
-
-            <div class="prop">
-                !!!</div>
-            <ul>
-                <li> \(\displaystyle\lim_{x\to+\infty} \dfrac{\textrm{e}^x}{x}=+\infty\)<br />
-                </li>
-                <li> \(\displaystyle\lim_{x\to-\infty} x\textrm{e}^x=0^-\)<br />
-                </li>
-                <li> \(\displaystyle\lim_{x\to0} \dfrac{\textrm{e}^x-1}{x}=1\)<br />
-
-                </li>
-            </ul>
-
-            <div class="exo">Démontrer ces limites ; on pourra poser \(x=\ln t\).</div><br />
-            <div class="exo">Calculer :
-
-                <ol>
-                    <li> \(\displaystyle\lim_{x\to+\infty
-            </div> \dfrac{\textrm{e}^x+1}{x^2+1}\)
-            </li>
-            <li> \(\displaystyle\lim_{x\to-\infty} (x+1)e^x\)
-            </li>
-            <li> \(\displaystyle\lim_{x\to0^+} \sqrt{x}\textrm{e}^x\)
-            </li>
-            <li> \(\displaystyle\lim_{x\to+\infty} x^2-\textrm{e}^x\)
-
-            </li>
-            </ol>
-            }
-
 
             <h2>Notation puissance réelle</h2>
-            <div class="defi">On étend la notation puissance (jusqu'alors utilisée pour des exposants entiers relatifs)
+            <div class="defi">On étend la notation puissance (jusqu'alors utilisée pour des exposants entiers
+                relatifs)
                 en posant, pour \(a>0\) et \(b\) réel : \(a^b=\textrm{e</div>^{b\ln a}\).}<br />
             <div class="exo">Étudier \(f(x)=x^x\) et <br /> \(g(x)=\left(1+\dfrac{1</div>{x}\right)^x\).}
 
@@ -342,12 +553,15 @@
 
             <div class="defi">
                 !!!</div>
-            Soit \(a>1\) fixé et \(x\) réel (variable). En posant \(a^x=\textrm{e^{x\ln a}\) on définit les fonctions
+            Soit \(a>1\) fixé et \(x\) réel (variable). En posant \(a^x=\textrm{e^{x\ln a}\) on définit les
+            fonctions
             exponentielles de base \(a\) pour un exposant réel quelconque.}<br />
 
             <div class="prop">
                 !!!</div>
-            Elles sont les réciproques des fonctions logarithmes de base \(a\). En particulier, \(x\mapsto 10^x\) est la
+            Elles sont les réciproques des fonctions logarithmes de base \(a\). En particulier, \(x\mapsto
+            10^x\)
+            est la
             réciproque de \(\log\).<br />
 
             <div class="exem">
@@ -367,7 +581,8 @@
                     et à 2 m d’un joueur de vuvuzela (110 dB). Ai-je mal (seuil
                     de la douleur : 120 dB) ?
                 </li>
-                <li> Deux élèves qui chuchotent émettent 32 dB. Calculer combien de dB émettent 34 élèves qui chuchotent
+                <li> Deux élèves qui chuchotent émettent 32 dB. Calculer combien de dB émettent 34 élèves qui
+                    chuchotent
                     ; comparer à
                     la voix du professeur (58 dB).
 
@@ -380,7 +595,8 @@
 
             <div class="defi">
                 !!!</div>
-            Soit \(p\) réel fixé et \(x>0\) (variable). En posant \(x^p=\textrm{e^{p\ln x}\) on définit les fonctions
+            Soit \(p\) réel fixé et \(x>0\) (variable). En posant \(x^p=\textrm{e^{p\ln x}\) on définit les
+            fonctions
             puissance \(p\) (\(p\) réel quelconque).}<br />
 
             <div class="exem">
@@ -391,7 +607,8 @@
 
             <div class="prop">
                 !!!</div>
-            La fonction réciproque de la fonction \(x\mapsto x^p\) est \(x\mapsto x^{\frac{1</h1>\) est en fait la
+            La fonction réciproque de la fonction \(x\mapsto x^p\) est \(x\mapsto x^{\frac{1</h1>\) est en fait
+            la
             fonction puissance un tiers, réciproque de la fonction cube.
 
 
