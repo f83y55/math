@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Géométrie et Fonctions - DS5</h1>
+        <div class="exo"><strong style="font-size: larger;">Géométrie (10 points)</strong>
+            <ul>
+                <li>ABCDEFGH est un cube.</li>
+                <li>I est le milieu de [AB].</li>
+                <li>J est le milieu de [DH].</li>
+                <li>On se place dans le repère \(\left(A;\overrightarrow{AB}, \overrightarrow{AD},
+                    \overrightarrow{AE}\right)\).</li>
+            </ul>
+            <figure>
+                <img src="assets/fig1.png" alt="cube" style="width:100%;">
+            </figure>
+
+            <ol>
+                <li>
+                    Écrire les coordonnées des points I, J et G. <div class="corr"> On lit :
+                        \(I\left(\begin{array}{ccc} 0{,}5 & 0 & 0 \end{array}\right)\) ;
+                        \(J\left(\begin{array}{ccc} 0 & 1 & 0{,}5 \end{array}\right)\) et
+                        \(G\left(\begin{array}{ccc} 1 & 1 & 1 \end{array}\right)\)
+                    </div>
+                </li>
+                <li>
+                    Démontrer que \(\overrightarrow{n}\left(\begin{array}{c}2\\3\\-4\end{array}\right)\) est un
+                    vecteur
+                    normal au plan (IJG).
+                    <div class="corr">
+                        On calcule :
+                        \(\overrightarrow{IG}\left(\begin{array}{c}0{,}5 \\ 1 \\ 1\end{array}\right)\) ;
+                        \(\overrightarrow{JG}\left(\begin{array}{c}1 \\ 0 \\ 0{,}5\end{array}\right)\). <br />
+                        Comme \(\overrightarrow{IG}\) et \(\overrightarrow{IG}\) sont non colinéaires (
+                        \(y_\overrightarrow{JG}=0\neq y_\overrightarrow{IG}\)), <strong>ces deux vecteurs forment une
+                            base du plan (IJG)</strong>.<br />
+                        On vérifie ensuite que
+                        \(\overrightarrow{n}\cdot\overrightarrow{IG}
+                        =2\times0{,}5+3\times1-4\times1=0\) et
+                        \(\overrightarrow{n}\cdot\overrightarrow{JG}
+                        =2\times1+3\times0-4\times0{,}5=0\).<br />
+                        \(\overrightarrow{n}\) étant un vecteur non nul orthogonal à une base de (IJG), c'est un vecteur
+                        normal à (IJG).
+                    </div>
+                </li>
+                <li>
+                    En déduire une équation du plan (IJG).
+                    <div class="corr">
+                        (IJG) : \(2x+3y-4z+d=0\), et comme \(I\in(IJG)\), ses coordonnées vérifient l'équation de (IJG),
+                        ce qui nous permet de calculer \(d\) : on a \(2\times0{,}5+3\times0-4\times0+d=0\), soit
+                        \(d=-1\), d'où : (IJG) : \(2x+3y-4z-1=0\).
+                    </div>
+                </li>
+                <li>
+                    Écrire une représentation paramétrique de la droite passant par C et perpendiculaire au
+                    plan (IJG). On note cette droite (d).
+                    <div class="corr">
+                        Comme \(C\left(\begin{array}{ccc}1&1&0\end{array}\right)\),
+                        on a :
+                        \((d)\left\{
+                        \begin{array}{ccl}
+                        x & = & 1 + 2k \\
+                        y & = & 1 + 3k \\
+                        z & = & -4k \\
+                        \end{array}
+                        \right.\) (pour \(k\in\mathbb{R})\))
+                    </div>
+                </li>
+                <li>
+                    Choisir et recopier la bonne réponse :
+                    Le plan contenant E, F, G et H a pour équation :<br />
+                    \(z=1\) ; \(z=0\) ; \(y=1\) ; \(x=0\).
+                    <div class="corr">
+                        \(z=1\)
+                    </div>
+                </li>
+                <li>
+                    En déduire l'intersection du plan (EFG) avec la droite (d).
+                    <div class="corr">
+                        On utilise le paramétrage de (d) : \(z=1=-4k\) donc \(k=-0{,}25\) ; on en déduit
+                        \(x=1+2k=0{,}5\) et \(y=1+3k=0{,}25\).
+                    </div>
+                </li>
+                <li>
+                    <strong>Bonus : </strong>
+                    Tracer les intersections de (IJG) avec les faces du cube.
+                </li>
+            </ol>
+        </div>
+        <div class="hidden-web pagebreak" style="text-align: right;">
+            <strong>Tourner S.V.P.</strong>
+        </div>
+
+        </div>
+        <div class="exo"><strong style="font-size: larger;">Étude de fonction (7 points)</strong><br />
+            On définit sur \(\mathcal{D}_f=\mathbb{R}\) la fonction \(f\) par : <br />
+            \(f(x) = x^4 + 3x^2 - 5x + 1\)
+            <ol>
+                <li>
+                    Calculer pour tout réel \(x\), \(f'(x)\) puis \(f''(x)\).
+                    <div class="corr">
+                        \(f'(x) = 4x^3+6x-5\), donc \(f''(x) = 12x^2+6\)
+                    </div>
+                </li>
+                <li>
+                    Justifier que \(f''(x)&gt;0\) et en déduire le tableau de variation de \(f'\).
+                    <div class="corr">
+                        Comme \(x^2\geqslant 0\), \(12x^2+6&gt;0\). On dresse le tableau de signe de \(f''(x)\) et
+                        de variation de \(f'\) :
+                        <table class="vartable">
+                            <tr>
+                                <th>\(x\)</th>
+                                <td>-∞</td>
+                                <td></td>
+                                <td>α</td>
+                                <td></td>
+                                <td>+∞</td>
+                            </tr>
+                            <tr class="bb">
+                                <th>\(f''(x)\)</th>
+                                <td colspan="2">+</td>
+                                <td class="bar"></td>
+                                <td colspan="2">+</td>
+                            </tr>
+                            <tr>
+                                <th rowspan=5>\(f'\)</th>
+                                <td colspan="2"></td>
+
+                                <td class="bar"></td>
+                                <td></td>
+                                <td>+∞</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="bar"></td>
+                                <td>⭧</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="bar">0</td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>⭧</td>
+                                <td class="bar"></td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr class="bb">
+                                <td>-∞</td>
+                                <td></td>
+                                <td class="bar"></td>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr class="bb">
+                                <th>\(f'(x)\)</th>
+                                <td colspan="2">-</td>
+                                <td class="bar">0</td>
+                                <td colspan="2">+</td>
+                            </tr>
+                            <tr>
+                                <th rowspan=3>\(f\)</th>
+                                <td>+∞</td>
+                                <td></td>
+                                <td class="bar"></td>
+                                <td></td>
+                                <td>+∞</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>↘</td>
+                                <td class="bar"></td>
+                                <td>↗</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="bar">\(f(\alpha)\)</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    Montrer que l'équation \(f'(x)=0\) possède une unique solution α sur \(\mathbb{R}\). Donner une
+                    valeur approchée au centième de cette solution.
+                    <div class="corr">
+                        \(f'\) est une fonction polynôme, donc est continue ; son terme dominant étant \(4x^3\), ses
+                        limites sont -∞ en -∞ et +∞ en +∞. <br />
+                        Par le théorème des valeurs intermédiaires, 0 admet au moins un antécédent par \(f'\). <br />
+                        Comme, de plus, \(f'\) est strictement croissante sur \(\mathbb{R}\), il n'y a qu'un seul
+                        antécédent α de ce 0. Par balayage, on trouve qu'α vaut environ 0,65.
+                    </div>
+                </li>
+                <li>
+                    En déduire le signe de \(f'(x)\) sur \(\mathbb{R}\).
+                    <div class="corr">
+                        On complète le tableau ci-dessus (en utilisant la croissance).
+                    </div>
+                </li>
+                <li>
+                    Dresser le tableau de variation de \(f\) sur \(\mathbb{R}\). (Il est inutile de calculer
+                    \(f(\alpha)\).)
+                    <div class="corr">
+                        On complète le tableau ci-dessus.
+                    </div>
+                </li>
+                <li>
+                    <strong>Bonus : </strong> Montrer que \(f(\alpha)=\alpha(a\alpha+b)\) avec \(a, b\) rationnels
+                    (fractions d'entiers).
+                </li>
+            </ol>
+        </div>
+        <div class="exo"><strong style="font-size: larger;">Intersection (3 points)</strong><br />
+            <ol>
+                <li>
+                    Déterminer l'intersection des plans :
+                    \(\mathcal{P}_1 : 2x+4y-3z+10 = 0\) et
+                    \(\mathcal{P}_2 : x+y-2{,}5z+5 = 0\)
+                    <div class="corr">
+                        \(\mathcal{P}_1-2\mathcal{P}_2 : 2y+2z=0\) donc \(y=-z\) et en remplaçant dans \(\mathcal{P}_1\)
+                        on a : \(2x=-10+3z-4y=-10+3z-4(-z)=7z-10\) d'où \(x=3{,}5z-5\). L'intersection de ces deux plans
+                        est donc la droite (d) :
+                        \((d)\left\{
+                        \begin{array}{ccl}
+                        x & = & 3{,}5k-5 \\
+                        y & = & -k \\
+                        z & = & k \\
+                        \end{array}
+                        \right.\) (pour \(k\in\mathbb{R})\))
+                    </div>
+                </li>
+                <li><strong>Bonus : </strong>
+                    Calculer l'angle entre ces deux plans.
+                    <div class="corr">
+                        En appliquant la formule «cos» du produit scalaire aux vecteurs normaux :
+                        \(\alpha = \arccos\left(\dfrac{13{,}5}{\sqrt{29}\sqrt{32,5}}\right)\).
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </main>
+</body>
+
+</html>
