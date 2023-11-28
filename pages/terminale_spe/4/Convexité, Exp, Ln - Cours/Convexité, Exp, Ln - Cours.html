@@ -143,14 +143,17 @@
         <div class="exo"><strong>Obtenir des inégalités</strong><br />
             Montrer que la fonction exponentielle est convexe. En déduire que :
             <ol>
-                <li>Pour tout réel \(x\), on a \(\textbf{e}^x\geqslant 1+x\).</li>
-                <li>Pour tout réel \(0\leqslant x \leqslant 10\), on a \(\textbf{e}^x\leqslant
+                <li>Pour tout réel \(x\), on a \(\textrm{e}^x\geqslant 1+x\).</li>
+                <li>Pour tout réel \(0\leqslant x \leqslant 10\), on a \(\textrm{e}^x\leqslant
                     \frac{\textrm{e}^{10}-1}{10}x+1\)</li>
-                <li>(dur) Démontrer que pour tout entier \(n\), on a \(0\leqslant \textrm{e}^\frac{1}{n^2}-1\leqslant
-                    \dfrac{\textrm{e}^\frac{1}{n}-1}{n}\) (utiliser la corde de la courbe de l'exponentielle sur
-                    \(\left[0,\frac{1}{n}\right]\)).</li>
             </ol>
         </div>
+        <div class="exo">
+            (dur) Démontrer que pour tout entier \(n\), on a \(0\leqslant \textrm{e}^\frac{1}{n^2}-1\leqslant
+            \dfrac{\textrm{e}^\frac{1}{n}-1}{n}\) (utiliser la corde de la courbe de l'exponentielle sur
+            \(\left[0,\frac{1}{n}\right]\)).
+        </div>
+        <h3>Point d'inflexion</h3>
         <div class="row">
             <div class="col">
                 <div class="defi"><strong>Point d'inflexion</strong><br />
@@ -197,6 +200,10 @@
                         </li>
                         <li> \(\exp\) est dérivable sur \(\mathbb{R}\) : sa courbe admet des tangentes en tout point.
                         </li>
+                        <li>
+                            si \(u\) est une fonction dérivable :
+                            \(\displaystyle\left(\textrm{e}^u\right)'=u'\textrm{e}^u\)
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -205,117 +212,97 @@
             </div>
         </div>
 
-
-        <div class="exo">Résoudre les (in)équations suivantes :<br />
-            <ol class="row">
-                <li>
-                    \(\textrm{e}^{x-1}=2\)
+        <div class="exo"><strong>Unicité de la fonction exponentielle (rappel)</strong><br />
+            \(f\) et \(g\) sont deux fonctions définies sur \(\mathbb{R}\) qui
+            vérifient
+            :
+            \(f'=f\) et \(g'=g\) et \(g(0)=1\).
+            <ol>
+                <li> En dérivant \(h(x)=g(x)g(-x)\), établir que \(h=1\) et en déduire que \(g\) ne s'annule pas sur
+                    \(\mathbb{R}\). En déduire que \(g&gt;0\) sur \(\mathbb{R}\).
                 </li>
-                <li>
-                    \(\textrm{e}^{x^2}=\textrm{e}^{-4x}\textrm{e}^{3}\)
+                <li> En dérivant \(\dfrac{f}{g}\), établir que \(f=kg\) pour un certain \(k\in\mathbb{R}\).
                 </li>
-                <li>
-                    \(\ln(2x)=5\)
-                </li>
-                <li>
-                    \(\ln(2x)=-1\)
-                </li>
+                <li>En déduire que \(g=\exp\) et que \(f\) est un multiple de \(\exp\).</li>
             </ol>
+        </div>
+        <div class="exo">Calculer les dérivées premières et secondes des fonctions suivantes, donner leur tableau de
+            variation et rechercher leurs éventuels points d'inflexion :
+            \(f(x)=\textrm{e}^{1-x^2}\) et \(g(x)=(1-x)\textrm{e}^{-5x}\)
+        </div>
+        <div class="exo"> On définit pour tout \(x\) réel :<br />
+            \(f(x)=(x+3)\textrm{e}^{-x}\) et \(g(x)=(x+1)\textrm{e}^x\) ; le but de cet exercice est de rechercher deux
+            fonctions \(F\) et \(G\) telles que \(F'=f\) et \(G'=g\) (appelées «primitives»).<br />
+            <strong>Méthode : </strong> poser \(F(x)=(ax+b)\textrm{e}^{-x}\) et \(G(x)=(cx+d)\textrm{e}^{x}\), calculer
+            leurs dérivées et en déduire les valeurs de \(a, b, c, d\) correspondantes.
+        </div>
+        <div class="defi">
+            Une fonction \(F\) dérivable telle que \(F'=f\) est appelé une <strong>primitive</strong> de \(f\).
         </div>
 
         <h3>Opérations et \(\exp\)</h3>
+        <div class="row">
+            <div class="col">
+                <div class="prop">
+                    La fonction \(\exp\) respecte les règles connues sur les puissances (elle permet d'étendre la notion
+                    de
+                    puissance à une puissance réelle, non rationelle).<br />
+                    Pour \(a,b\) réels et \(n\) entier :
 
-        <div class="prop">
-            La fonction \(\exp\) transforme les sommes et produits et
-            les
-            différences en quotients.
-            Pour \(a,b\) réels et \(n\) entier :
+                    <ul>
+                        <li> \(\textrm{e}^a\times\textrm{e}^b=\textrm{e}^{a+b}\)
+                        </li>
+                        <li> \(\displaystyle\frac{1}{\textrm{e}^a}=\textrm{e}^{-a}\)
+                        </li>
+                        <li> \(\displaystyle\frac{\textrm{e}^a}{\textrm{e}^b}=\textrm{e}^{a-b}\)
+                        </li>
+                        <li> \(\left(\textrm{e}^a\right)^n=\textrm{e}^{an}\)<br />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
 
-            <ul>
-                <li> \(\textrm{e}^a\times\textrm{e}^b=\textrm{e}^{a+b}\)
-                </li>
-                <li> \(\displaystyle\frac{1}{\textrm{e}^a}=\textrm{e}^{-a}\)
-                </li>
-                <li> \(\displaystyle\frac{\textrm{e}^a}{\textrm{e}^b}=\textrm{e}^{a-b}\)
-                </li>
-                <li> \(\left(\textrm{e}^a\right)^n=\textrm{e}^{an}\)<br />
-                </li>
-            </ul>
+                <div class="exo">Simplifier :<br />
+                    <ul>
+                        <li>\(A=\dfrac{\textrm{e}^7}{\textrm{e}^5}\)</li>
+                        <li>\(B=\textrm{e}^{x-2}\textrm{e}^{2-x}\)</li>
+                        <li>\(C=\left(\textrm{e}^x\right)^2\textrm{e}^{-x}\)</li>
+                        <li>\(D=\textrm{e}^{(x^2)}\textrm{e}^{-x}\)</li>
+                        <li>\(E=\dfrac{\textrm{e}^{5x+4}}{\textrm{e}^{-6x}}\)</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="exo">Simplifier :<br />
-            \(A=\frac{\textrm{e</div>
-        ^7}{\textrm{e}^5}\)~~;~~\(B=\textrm{e}^{x-2}\textrm{e}^{2-x}\)~~;~~\(C=\textrm{e}^x\textrm{e}^{-x}\)}
-        <h3>Dérivation et \(\exp\)</h3>
-
-        <div class="prop">
-            !!!</div>
-        Pour tout \(x\in\mathbb{R}\) :
-        \(\displaystyle\left(\textrm{e}^x\right)'=\textrm{e}^x\)
-        <div class="exo">Le démontrer en dérivant (in)directement \(\ln\left(\textrm{e</div>
-        ^x\right)\).}<br />
-
-        <div class="prop">
-            !!!</div>
-        (admise) si \(u\) est une fonction dérivable :
-        \(\displaystyle\left(\textrm{e}^u\right)'=u'\textrm{e}^u\)
-
-        <div class="exo">Calculer les dérivées des fonctions suivantes :
-            \(f(x)=\textrm{e</div>^{1-x^2}\) et \(g(x)=(1-x)\textrm{e}^{-5x}\)}<br />
-        <div class="exo">Trouver une primitive des fonctions suivantes :
-            \(f(x)=x\textrm{e</div>^{-x^2}\) et \(g(x)=(x+1)\textrm{e}^x\) (sous la forme
-        \((ax+b)\textrm{e}^x\)).}<br />
-        <div class="exo">\(f\) et \(g\) sont deux fonctions définies sur \(\mathbb{R</div>\) qui
-        vérifient
-        :<br />
-        \(f'=f\) et \(g'=g\) et \(f(0)=g(0)=1\).
-        <ol>
-            <li> En dérivant \(g(x)g(-x)\), établir que \(g\) ne s'annule pas sur \(\mathbb{R}\). En
-                déduire
-                que
-                \(g>0\) sur \(\mathbb{R}\).
-            </li>
-            <li> En dérivant \(\dfrac{f}{g}\), établir que \(f=g\).
-            </li>
-            <li> Que dire d'une fonction égale à sa dérivée et qui vaut \(1\) quand \(x=0\) ? Et si l'on
-                ommet
-                la
-                dernière condition ?
-
-            </li>
-        </ol>
-        }
 
         <h3>Limites usuelles</h3>
 
         <div class="prop">
-            !!!</div>
-        <ul>
-            <li> \(\displaystyle\lim_{x\to+\infty} \dfrac{\textrm{e}^x}{x}=+\infty\)<br />
-            </li>
-            <li> \(\displaystyle\lim_{x\to-\infty} x\textrm{e}^x=0^-\)<br />
-            </li>
-            <li> \(\displaystyle\lim_{x\to0} \dfrac{\textrm{e}^x-1}{x}=1\)<br />
-
-            </li>
-        </ul>
+            <ul>
+                <li> \(\displaystyle\lim_{x\to+\infty} \dfrac{\textrm{e}^x}{x}=+\infty\)
+                </li>
+                <li> \(\displaystyle\lim_{x\to-\infty} x\textrm{e}^x=0^-\)
+                </li>
+                <li> \(\displaystyle\lim_{x\to0} \dfrac{\textrm{e}^x-1}{x}=1\)
+                </li>
+            </ul>
+        </div>
 
         <div class="exo">Démontrer ces limites ; on pourra poser \(x=\ln t\).</div><br />
+
         <div class="exo">Calculer :
-
             <ol>
-                <li> \(\displaystyle\lim_{x\to+\infty
-        </div> \dfrac{\textrm{e}^x+1}{x^2+1}\)
-        </li>
-        <li> \(\displaystyle\lim_{x\to-\infty} (x+1)e^x\)
-        </li>
-        <li> \(\displaystyle\lim_{x\to0^+} \sqrt{x}\textrm{e}^x\)
-        </li>
-        <li> \(\displaystyle\lim_{x\to+\infty} x^2-\textrm{e}^x\)
-
-        </li>
-        </ol>
-        }
+                <li> \(\displaystyle\lim_{x\to+\infty}\dfrac{\textrm{e}^x+1}{x^2+1}\)
+                </li>
+                <li> \(\displaystyle\lim_{x\to-\infty} (x+1)e^x\)
+                </li>
+                <li> \(\displaystyle\lim_{x\to0^+} \sqrt{x}\textrm{e}^x\)
+                </li>
+                <li> \(\displaystyle\lim_{x\to+\infty} x^2-\textrm{e}^x\)
+                </li>
+            </ol>
+        </div>
 
 
 
@@ -408,6 +395,23 @@
                 <li> \(\ln\left(\sqrt{a}\right)=\frac{1}{2}\ln a\)
                 </li>
             </ul>
+        </div>
+
+        <div class="exo">Résoudre les (in)équations suivantes :<br />
+            <ol class="row">
+                <li>
+                    \(\textrm{e}^{x-1}=2\)
+                </li>
+                <li>
+                    \(\textrm{e}^{x^2}=\textrm{e}^{-4x}\textrm{e}^{3}\)
+                </li>
+                <li>
+                    \(\ln(2x)=5\)
+                </li>
+                <li>
+                    \(\ln(2x)=-1\)
+                </li>
+            </ol>
         </div>
 
         <div class="exem">
