@@ -1,0 +1,10 @@
+{
+  "DELIMITER": ",",
+  "MAINROOT": ".",
+  "DONE": "done",
+  "start_row": 1,
+  "start_column": 1,
+  "indent": 2,
+  "footer": true,
+  "css": "\n      @media screen, print {\n        .mytable {\n          margin: 1.5em;\n          border-collapse: collapse;\n          font-family: monospace;\n          break-inside: avoid;\n          -webkit-print-color-adjust:exact !important;\n          print-color-adjust:exact !important;\n        }\n        .mytable caption {\n          font-weight: bold;\n        }\n        .mytable tr:nth-child(even) {background-color: #ccc}\n        .mytable tr:nth-child(odd) {background-color: #ddd}\n        .mytable th {\n          text-align: left;\n          background-color: #bbb;\n          border: 2px solid black;\n          padding: 0.5em;\n        }\n        .mytable td {\n          text-align: left;\n          border: 1px solid black;\n          padding: 0.5em;\n        }\n      }\n"
+}
