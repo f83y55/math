@@ -46,7 +46,7 @@ body, main, section{
   font-size: var(--font-size);
   line-height: var(--line-height);
   background-color: var(--color-bg);
-  counter-reset: h2c exo defi prop theo rema exem;
+  counter-reset: h2c exo defi prop theo rema exem pg;
 }
 
 main {
@@ -325,9 +325,9 @@ ul.row li, ol.row li {display: inline;}
     .row {
         display:block;
     }
-    .column {
-        width:100%;
-        max-width: 100%;
+
+    .col {
+        min-width: 100%;
     }
 }
 
@@ -378,12 +378,11 @@ ul.row li, ol.row li {display: inline;}
         font-size: var(--font-size);
     }
 
-    .pagebreak                       {page-break-after: always;}
-    section+section                {page-break-before: always;}
-    /*.titre, .section, .section-nocounter, .subsection, .subsection-nocounter, .subsubsection            {page-break-inside: avoid;}*/
-    table.mytable, table, figure, img     {page-break-inside: avoid;}
-
-
+    .pagebreak {page-break-after: always;}
+    section+section {page-break-before: always;}
+    h1, h2, h3, h4 {page-break-after:avoid;}
+    table.mytable, table, figure, img {page-break-inside: avoid;}
+    
     table.mytable td>ol, .mytable td>ul, .mytable td>img, .mytable td>figure 
                                      {text-align: left;float: none;}
 
@@ -394,11 +393,6 @@ ul.row li, ol.row li {display: inline;}
         --cell-height-print: auto;
         min-width: var(--width-print);
         min-height: var(--height-print);
-        transform: none;
-        -ms-transform: none;
-        -webkit-transform: none;
-        transition: none;
-        background: none;
         font-size: smaller;
     }
 
@@ -468,13 +462,9 @@ ul.row li, ol.row li {display: inline;}
 
     .row {
         max-width: 100%;
-        flex-direction: row;
     }
 
-    .col {
-        flex-direction: column;
-    }
-
+ 
     .hidden-web {
         display: inherit;
     }
@@ -482,13 +472,21 @@ ul.row li, ol.row li {display: inline;}
     .hidden-print {
         display: none;
     }
-
-    
+/*
     footer {
-        display: none;
+        position:fixed;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        color: rgba(0,0,0,0.5);
+        border: 1px solid rgba(80,80,80,0.5);
+        border-radius: var(--border-radius);
     }
 
-
+    footer::after {
+        content: "page " counter(pg);
+    }
+*/
     .href-print::after{
         content: " (url : " attr(href) ")";
         text-decoration: none;
