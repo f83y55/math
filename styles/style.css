@@ -30,8 +30,6 @@
   --margin: 0.4em;
   --padding: 0.5em;
   --transition-speed: 700ms;
-  --width: auto;
-  --height: auto;
 }
 
 body, main, section{
@@ -40,17 +38,12 @@ body, main, section{
   margin: 0 0;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   overflow-x: auto;
   font-family: var(--font-family);
   font-size: var(--font-size);
   line-height: var(--line-height);
   background-color: var(--color-bg);
   counter-reset: h2c exo defi prop theo rema exem pg;
-}
-
-main {
-    margin : 0;
 }
 
 
@@ -74,8 +67,6 @@ a {color: inherit; text-decoration: underline;}
 
 
 img, figure {
-    height: var(--height);
-    width: var(--width);
     max-width: 100%;
     max-height: 100%;
 }
@@ -190,7 +181,6 @@ code:not(pre code) {
 .surl {background-color: var(--color-bg-surl); height: max-content; padding: var(--padding)0.1em;}
 
 table.mytable{
-    width: var(--width);
     --mytable-float: none;
     --mytable-border-radius: 1em;
     --mytable-padding: 0.5em;
@@ -235,23 +225,24 @@ table.vartable tr th {text-align: center;}
 table.vartable tr td.bar {background-image: linear-gradient(#444, #444); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;}
 table.vartable tr td.bbar {background-image: linear-gradient(#444, #444) linear-gradient(#444, #444); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;}
 
-.row {
+.row, ul.row li, ol.row li {
     margin: 0;
     padding: 0;
     max-width: 100%;
     display:inline-flex;
-    overflow-x: scroll;
-    text-align: justify;
 }
 
-ul.row li, ol.row li {display: inline;}
-.col {
+.col, ul.col li, ol.col li {
     margin: 0;
     padding: 0;
     width: auto;
     max-width: 50%;
     display: block;
-    overflow-x: scroll;
+}
+
+div, ul, ol {
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .corr {

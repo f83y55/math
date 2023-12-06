@@ -57,7 +57,7 @@
     align-items: var(--item-align);
     justify-content: space-between;
     transition-duration: var(--transition-speed);
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
 }
 
@@ -77,7 +77,6 @@
     flex-direction: var(--navbar-direction);
     align-items: var(--item-align);
     justify-content: center;
-    overflow: auto;
 }
 
 .navbar-icon{
