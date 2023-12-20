@@ -250,10 +250,19 @@ div, ul, ol {
     color:#040;
     border : solid 1px #040;
     border-radius: 0.3em;
+    width: 0;
+    height: 0;
 }
 .corr:before {
-    content: "🖊 ";
+    content: "🖊Corrigé : ";
     font-weight: bold;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.corr:hover {
+    width:initial;
+    height: initial;
 }
 
 .barm {
@@ -382,8 +391,8 @@ div, ul, ol {
         --height-print: auto;
         --cell-width-print: auto;
         --cell-height-print: auto;
-        min-width: var(--width-print);
-        min-height: var(--height-print);
+        width: var(--width-print);
+        height: var(--height-print);
         font-size: smaller;
     }
 

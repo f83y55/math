@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="../../../../s.js"></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Équations différentielles - Cours</h1>
+        <h2>Notion d'équation différentielle</h2>
+        <h3>Vocabulaire, notion de solution</h3>
+        <div class="defi">
+            Une <strong>équation différentielle</strong> est une équation dont l'inconnue est une fonction ; l'équation
+            est
+            dite différentielle car elle fait apparaître un lien entre la ou les dérivée(s) de la fonction et la
+            fonction
+            elle-même.<br /.>
+            Dans ce chapitre, on étudie les équations différentielles, dites du <strong>premier ordre</strong> (c'est
+            l'ordre maximal de dérivation apparaissant dans l'équation) de la forme :
+            <span class="surl">\((E) : y'(t)=ay(t)+h(t)\)</span> où
+            <ul>
+                <li>
+                    \(y(t)\) est une fonction dérivable que l'on cherche à trouver.
+                </li>
+                <li>
+                    \(a\in\mathbb{R^*}\) est une constante (non nulle).
+                </li>
+                <li>
+                    \(h(t)\) est une fonction donnée.
+                </li>
+            </ul>
+            On note <span class="surl">\((E_0) : y'(t)=ay(t)\)</span> l'équation <strong>homogène</strong>
+            associée à \((E)\). Elle est obtenue en «oubliant» le terme \(h(t)\), seul terme qui ne contient pas \(y\)
+            ou
+            \(y'\).
+            <ul>
+                <li>
+                    Une fonction donnée vérifiant \((E)\) est appelée <strong>solution particulière</strong> de
+                    \((E)\).<br />
+                    Pour les équations étudiés ici, on recherche des solutions qui sont des fonctions définies sur
+                    \(\mathbb{R}\) entier (bien que la partie \(t\geqslant 0\) soit suffisante pour les problèmes
+                    étudiés en
+                    spécialité sciences physiques).
+                </li>
+                <li>
+                    Il y a une infinité de solutions en général.<br />
+                    Une formule donnant un paramétrage de toutes les fonctions solutions de \(E\) est appelée
+                    <strong>solution générale</strong> de \((E)\).
+                </li>
+            </ul>
+
+        </div>
+        <div class="rema">
+            <ul>
+                <li>
+                    On prend \(a\neq 0\) car sinon le problème revient à rechercher les primitives de \(h(t)\).
+                </li>
+                <li>
+                    La variable est en général notée \(t\) car les équations différentielles apparaîssent naturellement
+                    en
+                    modélisant des phénomènes évoluant au cours du temps.
+                </li>
+                <li>
+                    Lorsqu'il n'y a absolument aucune ambiguïté, on peut omettre la variable notée entre parenthèses
+                    pour
+                    les fonctions : \(y'=ay+h\)
+                </li>
+            </ul>
+        </div>
+        <div class="exo"> \((E) : 3y'(t)+15y(t)=30t+12\)
+            <ol>
+                <li>
+                    Isoler le terme \(y'\) dans le membre de gauche.
+                    <div class="corr">
+                        \(3y'=-15y+30t+12\) donc \(y'=-5y+10t+4\).
+                    </div>
+                </li>
+                <li>
+                    Déterminer \(a\), \(h(t)\) et l'équation homogène \((E_0)\) associée à \((E)\).
+                    <div class="corr">
+                        On lit : \(a=-5\) et \(h(t)=10t+4\) pour \((E)\).<br />
+                        L'équation homogène associée à \((E)\) est donc
+                        \((E_0) : y'=-5y\).
+                    </div>
+                </li>
+                <li>
+                    Démontrer que \(f(t)=2t+0{,}4\) est une solution (particulière) de \((E)\).
+                    <div class="corr">
+                        On remplace \(y\) par \(f\) et on vérifie que l'égalitée est vraie :
+                        <ul>
+                            <li>
+                                Dans le membre de gauche :
+                                \(f'(t)=2\)
+                            </li>
+                            <li>
+                                Dans le membre de droite :
+                                \(-5f+10t+4=-5\times (2t+0{,}4)+10t+4=\cancel{-10t}-2+\cancel{10t}+4=2\)
+                            </li>
+                        </ul>
+                        Donc \(f\) est bien une solution particulière de \((E)\)
+                    </div>
+                </li>
+            </ol>
+            <strong>Remarque : </strong>
+            On pourrait démontrer de la même manière que pour toute valeur de \(k\in\mathbb{R}\), la fonction
+            \(f_k(t)=2t+0{,}4+k\textrm{e}^{-5t}\) est aussi une solution de \(E\). Cette formule est une solution
+            générale de \((E)\).
+        </div>
+        <h3>Recherche de solutions particulières</h3>
+        <div class="rema">
+            C'est un problème <strong>difficile</strong>. Quelques pistes :
+            <ul>
+                <li>
+                    Le plus souvent, une solution particulière est donnée et il est demandé de la vérifer.
+                </li>
+                <li>
+                    Les solutions particulières sont de la «même forme» que la fonction \(h(t)\), on peut utiliser des
+                    méthodes d'identifications des coefficients. <br />
+                    Par exemple, dans l'exercice précédent, il aurait été possible de chercher la solution sous la forme
+                    \(f(t)=At+B\).
+                </li>
+                <li>
+                    On peut utiliser un logiciel de calcul formel.
+                </li>
+                <li>
+                    Dans le supérieur, on peut utiliser la transformation de Laplace (qui peut être un sujet de grand
+                    oral).
+                </li>
+            </ul>
+        </div>
+        <h2>Solutions particulières de \(y'(t)=ay(t)+c\) (cas \(h(t)=c\) constante)</h2>
+        <div class="prop">
+            Lorsque la fonction \(h(t)\) est une constante (notée \(c\)), l'équation différentielle \((E)\) admet
+            toujours
+            une solution particulière constante.
+        </div>
+        <div class="meth">
+            Pour la trouver, comme \(y(t)\) est constante, il suffit de remplacer, dans \((E)\), \(y'\) par 0 :<br />
+            \(0=y'=ay+c\) donc <span class="surl">\(y=\dfrac{-c}{a}\)</span>.
+        </div>
+        <div class="exo">
+            Trouver une solution particulière de chacune des équations différentielles suivantes : \((E1) : y'=2y+10\)
+            et
+            \((E_2) : 4y'+3y=15\).
+            <div class="corr">
+                <ol>
+                    <li>On recherche une solution \(y\) constante, d'où \(y'=0\), donc : <br />
+                        \(0=y'=2y+10\) donc \(y=\dfrac{-10}{2}=-5\) est solution particulière (constante) de \((E1)\).
+                    </li>
+                    <li>On recherche une solution \(y\) constante, d'où \(y'=0\), donc : <br />
+                        \(\cancel{4\times 0}+3y=15\) donc \(y=\dfrac{15}{3}=5\) est solution particulière (constante) de
+                        \((E2)\).
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="rema">
+            Cette solution particulière constante forme une asymptote de n'importe quelle autre solution de l'équation
+            différentielle. Physiquement, elle correspond à une situation d'équilibre (cf la suite du cours).
+        </div>
+        <h2>Solutions de l'équation homogène \(y'(t)=ay(t)\)</h2>
+        <div class="prop">
+            L'écart entre deux solutions particulières d'une équation différentielle \((E) : y'(t)=ay(t)+h(t)\)
+            est une solution de l'équation homogène associée \((E_0) : y'(t)=ay(t)\).
+        </div>
+        <div class="exo"><strong>Démonstration</strong><br />
+            On note \(f\) et \(g\) deux solutions de l'équation différentielle
+            \((E) : y'(t)=ay(t)+h(t)\) et on note \(d(t)=f(t)-g(t)\) leur écart en fonction de \(t\). Démontrer que
+            \(d\)
+            est solution de \((E_0)\).
+            <div class="corr">
+                \(d'=(f-g)'=f'-g'=(af+h)-(ag+h)=af+\cancel{h}-ag-\cancel{h}=a(f-g)=ad\) donc on a bien \(d'=ad\) et
+                \(d\)
+                est solution de \((E_0)\).
+            </div>
+        </div>
+        <div class="rema">
+            Cette propriété permet d'«étendre» une solution particulière aux solutions générales dès lors que l'on
+            connaît
+            les solutions de l'équations homogène associée.
+        </div>
+        <div class="prop">
+            Les solutions d'une <strong>équations différentielle homogène</strong> \((E_0) : y'=ay\) sont les fonctions
+            <span class="surl">\(t\mapsto
+                k\mathrm{e}^{at}\)</span> avec \(k\in\mathbb{R}\) (\(k\) est une constante).
+            On peut appeler ces solutions «solutions homogènes».
+        </div>
+        <div class="exo"><strong>Démonstration :</strong>
+            <ol>
+                <li>Vérifier que ces fonctions sont des solutions de \((E_0)\)
+                    <div class="corr">
+                        On note \(g(t)=k\textrm{e}^{at}\) ; on a :
+                        \(g'(t)=\left(k\textrm{e}^{at}\right)'=ka\textrm{e}^{at}=a\left(k\textrm{e}^{at}\right)=ag(t)\)
+                        donc
+                        ces fonctions sont bien solutions, pour tout \(k\in\mathbb{R}\).
+                    </div>
+                </li>
+                <li>Vérifions que ce sont les seules solutions : on note \(f(t)\) une solution de \((E_0)\) (sur
+                    \(\mathbb{R}\)), et on pose \(u(t)=f(t)\textrm{e}^{-at}\).<br />
+                    Dériver \(u(t)\) et en déduire que \(u\) est constante sur \(\mathbb{R}\), et vaut \(f(0)\).
+                    <div class="corr">
+                        Avec la règle de dérivation du produit, et en utilisant \(f'=af\) (car \(f\) est une solution de
+                        \((E_0)\)) :
+                        \(
+                        u'(t)
+                        =f'(t)\textrm{e}^{-at}-af(t)\textrm{e}^{-at}
+                        =af(t)\textrm{e}^{-at}-af(t)\textrm{e}^{-at}
+                        =0
+                        \) donc \(u\) est constante et vaut \(u(0)=f(0)\textrm{e}^{-a\times 0}=f(0)\times 1=f(0)\).
+                    </div>
+                </li>
+                <li> On note \(k\) le réel \(f(0)\). En déduire que pour tout \(t\) réel, \(f(t)=k\textrm{e}^{at}\) et
+                    conclure.
+                    <div class="corr">
+                        \(u(t)=f(t)\textrm{e}^{-at}\) ; en multipliant par \(\textrm{e}^{at}&gt;0\), on a :
+                        \(f(t)=u(t)\textrm{e}^{at}=f(0)\textrm{e}^{at}=k\textrm{e}^{at}\). On a démontré qu'il n'y a pas
+                        d'autres solutions que les \(k\textrm{e}^{at}\) avec (\(k\in\mathbb{R}\)).
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <h2>Solutions générales</h2>
+        <div class="meth">Résoudre \((E1) : y'=2y+10\). L'obtention des solutions générales se mène en trois étapes :
+            <ol>
+                <li>
+                    <strong>Trouver les solutions homogènes :</strong><br />
+                    L'équation homogène associée est \((E1_0) : y'=2y\) donc \(a=2\) ; les solutions homogènes sont donc
+                    les
+                    \(k\textrm{e}^{at}=k\textrm{e}^{2t}\).
+                </li>
+                <li>
+                    <strong>Trouver une solution particulière :</strong><br />
+                    Le terme non homogène de \((E1) : 2y+\textbf{10}\), qui est 10 est constant donc on peut rechercher
+                    une
+                    solution constante (\(y'=0\))
+                    :
+                    \(0 = 2y + 10\) donc \(y=\frac{-10}{2}=-5\).
+                </li>
+                <li>
+                    <strong>Superposer (ajouter) les solutions homogènes et les solutions particulières pour obtenir les
+                        solutions générales</strong> (paramétrées par \(k\in\mathbb{R}\)) :<br />
+                    Les solutions générales sont : \(-5+k\textrm{e}^{2t}\)
+                </li>
+            </ol>
+        </div>
+        <div class="exo">Déterminer les solutions générales des équations différentielles suivantes :
+            <ol>
+                <li>
+                    \((EB) : v'(t)=1{,}5-0{,}5v(t)\) désigne la vitesse de chute d'un ballon de baudruche (soumis à des
+                    frottements avec l'air) en fonction du temps.
+                    <div class="corr">
+                        <strong>Hom : </strong> \((EB_0) : v'=-0{,}5v\) ⇒ solutions hom :
+                        \(k\textrm{e}^{-0{,}5t}\).<br />
+                        <strong>Part : </strong> terme non hom. constant ⇒ solution \(v\) constante,
+                        \(v'=0=1{,}5-0{,}5v\)
+                        donc \(v=\frac{-1{,}5}{-0{,}5}=3\)<br />
+                        <strong>Sup :</strong> solutions générales : \(3+k\textrm{e}^{-0{,}5t}\) avec \(k\) réel.
+
+                    </div>
+
+                </li>
+                <li>
+                    \((ERC) : Rq'(t)+\dfrac{q(t)}{C}=12\) désigne la charge q d'un condensateur de capacité C, en
+                    fonction
+                    du temps à travers une
+                    résistance R par une source de tension de 12 volts. On pourra prendre R=4 ohm et C = 0,5 farad (=
+                    énorme
+                    accumulateur de charge) pour les calculs.
+                    <div class="corr">\((ERC) : q'(t)=\dfrac{12}{R}-\dfrac{q(t)}{RC}\)<br />
+                        <strong>Hom : </strong> \((ERC_0) : q'(t)=-\dfrac{q(t)}{RC}\) ⇒ solutions hom :
+                        \(k\textrm{e}^{\frac{-t}{RC}}\).<br />
+                        <strong>Part : </strong> terme non hom. constant ⇒ solution \(q\) constante,
+                        \(q'=0=\dfrac{12}{R}-\dfrac{q(t)}{RC}\)
+                        donc \(\dfrac{q(t)}{\cancel{R}C}=\dfrac{12}{\cancel{R}}\) donc \(q(t)=12C\)<br />
+                        <strong>Sup :</strong> solutions générales :
+                        \(12C+k\textrm{e}^{\frac{-t}{RC}}=6+k\textrm{e}^{-0{,}5t}\) avec \(k\) réel.
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <h2> Conditions initiales ou particulières </h2>
+        <div class="defi"> Vocabulaire de sciences physiques :
+            La donnée, en \(t=0\), d'une valeur de la fonction recherchée s'appelle une <strong>condition
+                initiale</strong> (en un \(t\neq 0\) on parle de <strong>condition
+                particulière</strong>).
+        </div>
+
+        <div class="meth">
+            La donnée d'une condition initiale ou particulière permet de sélectionner <strong>la</strong> solution au
+            problème posé parmi les solutions générales en fixant (une valeur pour) la constante \(k\). <br />
+            Ainsi, on remplace, dans la formule donnant les solutions générales, \(t\) et \(y(t)\) par leurs valeurs
+            données
+            et on
+            calcule \(k\). Il suffit ensuite de réécrire la solution voulue avec la valeur de \(k\) calculée.
+        </div>
+
+        <div class="exo">
+            <ol>
+                <li>\((EB) : v'(t)=1{,}5-0{,}5v(t)\) pour \(v(0)=0\) et \(v(0)=5\)
+                    <div class="corr">Pour \(v(0)=0\) :<br />
+                        On a \(0=v(0)=3+k\textrm{e}^{-0{,}5\times 0}=3+k\) donc
+                        \(k=-3\) et \(v(t)=3-3\textrm{e}^{-0{,}5t}=3\left(1-\textrm{e}^{-0{,}5t}\right)\) est la
+                        solution correspondant à cette condition initiale.
+                        <br />Pour \(v(0)=5\) :<br />
+                        On a \(5=v(0)=3+k\textrm{e}^{-0{,}5\times 0}=3+k\) donc
+                        \(k=5-3=2\) et \(v(t)=3+2\textrm{e}^{-0{,}5t}\) est la solution correspondant à cette
+                        condition initiale.<br />
+                        <a href="assets/fig1.html" target="_blank">Page Géogebra</a>.
+                    </div>
+                </li>
+                <li>\((ERC) : Rq'(t)+\dfrac{q(t)}{C}=12\) pour \(q(0)=0\) et \(q(0)=3\)
+                    <div class="corr">Pour \(q(0)=0\) :<br />
+                        On a \(0=q(0)=6+k\textrm{e}^{-0{,}5\times 0}=6+k\) donc
+                        \(k=-6\) et \(q(t)=6-6\textrm{e}^{-0{,}5t}=6\left(1-\textrm{e}^{-0{,}5t}\right)\) est la
+                        solution correspondant à cette condition initiale.
+                        <br />Pour \(q(0)=3\) :<br />
+                        On a \(3=v(0)=6+k\textrm{e}^{-0{,}5\times 0}=6+k\) donc
+                        \(k=3-6=-3\) et \(q(t)=6-3\textrm{e}^{-0{,}5t}\) est la solution correspondant à cette
+                        condition initiale.<br />
+                        <a href="assets/fig2.html" target="_blank">Page Géogebra</a>.
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <h2>Dynamique des solutions</h2>
+        <h3>Conjecture</h3>
+        <div class="none">
+            Les courbes 1 et 2 représentant les solutions de (EB) et de (ERC) pour les conditions initiales \(v(0)=0\)
+            et
+            \(q(0)=0\) sont tracées ici, ainsi que leurs tangentes T en t=0 et leur asymptotes horizontales en l'infini
+            :
+            <figure style="--width-print:12cm;">
+                <img src="assets/fig1.svg" alt="">
+                <figcaption>Courbe 1 (<a href="assets/fig1.html" target="_blank">Page Géogebra</a>) :
+                    \(v(t)=3-3\textrm{e}^{-0{,}5t}\)</figcaption>
+            </figure>
+            <figure style="--width-print:12cm;">
+                <img src="assets/fig2.svg" alt="">
+                <figcaption>Courbe 2 (<a href="assets/fig2.html" target="_blank">Page Géogebra</a>) :
+                    \(q(t)=6-6\textrm{e}^{-0{,}5t}\)</figcaption>
+            </figure>
+            On peut remarquer que ces courbes ont une même forme, et chacune possède une asymptote horizontale
+            correspondant
+            à la solution particulière constante trouvée lors de la résolution.<br />
+            De plus la tangente en t=0 coupe cette asymptote en un point de coordonnées dont l'abscisse est
+            \(\frac{-1}{a}\).
+        </div>
+        <div class="exo">
+            Vérifier que les coordonnées du point d'intersection de la tangente T en t=0 à la courbe de \(v\) et de son
+            asymptote horizontale est bien \(\left(\frac{-1}{a};3\right)\)
+            <div class="corr">
+                Ce point étant sur l'asymptote d'équation \(y=3\), son ordonnée est bien 3.<br />
+                Déterminons l'équation de \(T : v'(0)(t-0)+v(0)\). On a \(v(0)=0\) (condition initiale) et, d'après
+                (EB),
+                \(v'(0)=1{,}5-\cancel{0{,}5v(0)}\) donc \(T : 1,5t\). En résolvant
+                \(\left\{\begin{array}{lr}
+                y=1,5t &amp; \textrm{(T)}\\
+                y=3 &amp; \textrm{(asymptote)}\\
+                \end{array}\right.\), on a \(t=2\), ce qui correspond bien à \(\frac{-1}{a}=\frac{-1}{-0{,}5}\).
+            </div>
+        </div>
+        <div class="defi">
+            Dans une équation différentielle \(y'(t)=ay(t)+h(t)\), on appelle <strong>constante de temps</strong> et on
+            note
+            \(\tau\) le nombre, homogène à un temps, égal à <span class="surl">\(\dfrac{-1}{a}\)</span>.
+        </div>
+        <div class="exo">
+            Calculer et exprimer en pourcentage (à 1% près) les valeurs \(\dfrac{v(n\tau)}{3}\) pour
+            \(n\in\left\{0;1;2;3;4;5;6\right\}\). On pourra vérfier que l'on obtient les mêmes valeurs pour la seconde
+            fonction (\(q\)).
+            <div class="corr">
+                cf la partie suivante pour retrouver ces pourcentages.
+            </div>
+        </div>
+
+        <h3>Cas général : équation \(y'=ay+c\), constante de temps \(\tau\), régimes</h3>
+        <div class="prop">
+            <ul>
+                <li>
+                    En appliquant la méthode de résolution à l'équation différentielle \(y'=ay+c\), on obtient ses
+                    solutions
+                    générales <span class="surl">\(y(t)=\dfrac{-c}{a}+k\textrm{e}^{at}\)</span>
+                </li>
+                <li>
+                    En notant <span class="surl">\(\tau=\frac{-1}{a}\)</span>, elles deviennent : <span
+                        class="surl">\(y(t)=c\tau+k\textrm{e}^{\frac{-t}{\tau}}\)</span>.
+                </li>
+            </ul>
+            <strong>On étudie dans la très grande majorité des cas des systèmes physiques qui se stabilisent dans le
+                temps,
+                ce qui correspond à \(a&lt;0\), et, de manière équivalente, à \(\tau&gt;0\).</strong> Dans ce cas :
+            <ul>
+                <li>
+                    \(\displaystyle\lim_{t\to+\infty}y(t)=c\tau\) : quelque soit la condition initiale choisie, la
+                    solution
+                    \(y(t)\) tend vers la solution particulière constante \(y_p=c\tau\).<br />
+                    <i>La solution particulière constante représente donc un état d'équilibre vers lequel le système
+                        étudié
+                        tend.</i>
+                </li>
+                <li>
+                    Le terme en \(k\textrm{e}^{\frac{-t}{\tau}}\), solution de l'équation homogène associée, tend vers 0
+                    au
+                    cours du temps, d'autant plus vite que
+                    \(\tau\) et \(k\) sont petits.<br />
+                    <i>les solutions homogènes rendent comptent du passage d'un ètat initial du système à son état
+                        d'équilibre.</i>
+                </li>
+                <li>
+                    Comme \(y(0)=c\tau+k\), le paramètre \(k\) mesure l'écart initial entre la valeur initiale \(y(0)\)
+                    et
+                    la
+                    valeur limite \(c\tau\).
+                </li>
+                <li>
+                    On peut, en calculant, pour \(t=n\tau\) avec \(n\) entier (et en l'exprimant en pourcentage) la
+                    quantité
+                    :
+                    \(\dfrac{c\tau-y(t)}{k}=\dfrac{\cancel{k}\textrm{e}^{\frac{-t}{\tau}}}{\cancel{k}}=\textrm{e}^{\frac{-n\cancel{\tau}}{\cancel{\tau}}}\)
+                    , jauger de l'écart relatif entre la solution à un instant et sa position limite :
+                    <table class="mytable">
+                        <tr>
+                            <th>\(t=n\tau\)</th>
+                            <td>0</td>
+                            <td>𝜏</td>
+                            <td>2𝜏</td>
+                            <td>3𝜏</td>
+                            <td>4𝜏</td>
+                            <td>5𝜏</td>
+                            <td>6𝜏</td>
+                            <td>15𝜏</td>
+                        </tr>
+                        <tr>
+                            <th>\(\dfrac{c\tau-y(t)}{k}=\textrm{e}^{-n}\)</th>
+                            <td>100%</td>
+                            <td>36,8%</td>
+                            <td>13,5%</td>
+                            <td>5,0%</td>
+                            <td>1,8%</td>
+                            <td>0,7%</td>
+                            <td>0,25%</td>
+                            <td>3.10<sup>-5</sup>%</td>
+                        </tr>
+                    </table>
+                    <i>Le nombre de 𝜏 écoulés est un indicateur fondamental de l'écart du système avec sa position
+                        d'équilibre au cours du temps.</i>
+                </li>
+            </ul>
+        </div>
+        <div class="prop">𝜏 peut être obtenu graphiquement comme abscisse du point d'intersection de l'asymptote avec
+            la tangente à la courbe de la solution en t=0.
+        </div>
+        <div class="exo"><strong>Démonstration</strong>
+            <ol>
+                <li>
+                    En dérivant \(y(t)=c\tau+k\textrm{e}^{\frac{-t}{\tau}}\), démontrer que \(y'(0)=\frac{-k}{\tau}\).
+                    <div class="corr">
+                        \(y'(t)=0+k\frac{-1}{\tau}\textrm{e}^{\frac{-t}{\tau}}\) donc pour \(t=0\), on a
+                        \(y'(0)=\frac{-k}{\tau}\)
+                    </div>
+                </li>
+                <li>
+                    En déduire l'équation de la tangente T en t=0 à la courbe de la solution (en fonction de t, c, k et
+                    𝜏).
+                    <div class="corr">
+                        \(y(0)=c\tau+k\) donc \(T : y=y'(0)(t-0)+y(0)=\frac{-k}{\tau}t+c\tau+k\)
+                    </div>
+                </li>
+                <li>
+                    Conclure.
+                    <div class="corr">
+                        L'ordonnée du point d'abscisse 𝜏 de cette tangente T est bien :
+                        \(\frac{-k}{\cancel{\tau}}\cancel{\tau}+c\tau+k=c\tau\) donc correspond bien à l'asymptote
+                        horizontale.
+                    </div>
+                </li>
+            </ol>
+        </div>
+        </div>
+        <h2 class="section">Problèmes</h2>
+        <div class="exo">
+            Lorsqu'une réaction chimique suit une loi de vitesse d’ordre 1, la concentration molaire \(\left[A\right]\)
+            du
+            réactif \(A\) diminue selon l’équation différentielle suivante :
+            \(\dfrac{\textrm{d}\left[A\right](t)}{\textrm{d}t}+K\left[A\right](t)=0\)<br>
+            Équation de la réaction modélisant la transformation chimique de synthèse du méthanal (formol) :
+            CH<sub>3</sub>OH → H<sub>2</sub>CO + H<sub>2</sub> ; \(K=2\) ; le temps est en minutes et
+            [CH<sub>3</sub>OH]=0,30 mol/L.<br>
+            Déterminer la concentration en fonction du temps.
+
+        </div>
+
+        <div class="exo">
+            Un parachutiste saute d'une hauteur \(x(0)=8\,500\) m sans vitesse initiale et ouvre son parachute au bout
+            de
+            120 s. Son poids \(\overrightarrow{P}=m\overrightarrow{g}\) est conditionné par l'accélération de pesanteur
+            \(\overrightarrow{g}\), vers le bas, de norme 10 m/s<sup>2</sup>. On considère que le parachutiste subit les
+            frottements linéaires de l'air de coefficients \(K_1=0{,}15\) lors de la chute libre puis \(K_2=10\) après
+            l'ouverture du parachute.<br>
+            Le principe fondamental de la dynamique Newtonienne conduit à : \((E)~:~~v'+K_{1|2}v=g\)
+            Résoudre l'équation différentielle \((E)\) et tracer les courbes de position, vitesse et accélération du
+            parachutiste.
+        </div>
+
+
+
+        <!----
+    <h2 class="section">Avec <a href="https://www.geogebra.org/classic">GéoGebra</a></h2>
+
+    <h3 class="subsection">ChampVecteurs</h3>
+    <div>
+        <code class="ggb">ChampVecteurs[ f(x,y) ]</code>
+        Représente un champ de vecteurs pour l'équation différentielle \( \mathrm{\mathsf{\frac{dy}{dx}=f(x,y)}} \).
+        <br>
+        Attention la variable utilisée par GéoGebra est \(x\) et non \(t\)...
+    </div>
+    <div class="exem">
+        <code class="ggb">ChampVecteurs[x+2y]</code> représente le champ de vecteurs pour \(y'(x)=x+y(x)\)
+    </div>
+
+    <h3 class="subsection">RésolEquaDiff</h3>
+    <div>
+        <ul>
+            <li><b>Résolution numérique :</b><br>
+                <code class="ggb">RésolEquaDiff[ f(x,y), x initial, y initial, x final, pas ] </code> résout
+                numériquement une équation différentielle d'ordre un : \(\mathrm{\mathsf{\frac{dy}{dx}=f(x,y)}}\)
+                à partir d'un point donné par ses coordonnées, avec un pas donné.
+            </li>
+            <li><b>Résolution formelle :</b><br>
+                <code class="ggb">RésolEquaDiff[ f(x, y) ] </code>
+                essaye de trouver la solution exacte de l'équation différentielle d'ordre un
+                \(\mathrm{\mathsf{\frac{dy}{dx}(x)=f(x,y(x))}}\)
+            </li>
+        </ul>
+    </div>
+<!---->
+
+
+
+    </main>
+</body>
+
+</html>
