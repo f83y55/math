@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Fonctions et Probabilités - DS8</h1>
+        <div class="quadrillage5mm" style="min-height:2cm;">&nbsp;&nbsp;<strong>Prénom NOM :</strong></div>
+        <div class="exo"><!--2022 MATJ1PO1: exB--><strong style="font-size: taller;">Probabilités (10 points)</strong>
+            <p>Selon les autorités sanitaires d'un pays, 7% des habitant sont infectés par une certaine maladie. <br />
+                Dans ce pays, un test est mis au point pour détecter cette maladie. Ce test a les
+                caractéristiques suivantes :
+            <ul>
+                <li>pour les individus malades, le test donne un résultat négatif dans 20% des cas ;</li>
+                <li>pour les individus sains, le test donne un résultat positif dans 1% des cas.</li>
+            </ul>
+            Une personne est choisie au hasard dans la population et testée.
+            On considère les événements suivants :
+            <ul>
+                <li>M : « la personne est malade » ;</li>
+                <li>T : « le test est positif ».</li>
+            </ul>
+            </p>
+            <ol>
+                <li>
+                    Calculer la probabilite de l’evenement M∩T. On pourra construire un arbre pondéré :
+                    <div class="quadrillage5mm" style="min-height:7cm;"></div>
+                    <div class="corr">
+                        \(P(M\cap T)=P(M)\times P_M(T)=0{,}07\times(1-0{,}2)=0{,}056\)
+                    </div>
+                </li>
+                <li>
+                    Démontrer que la probabilité que le test de la personne choisie au hasard soit positif, est de
+                    0,0653.
+                    <div class="corr">
+                        \(P(T)=P(M\cap T)+P\left(\overline{M}\cap T\right)=0{,}056+0{,}93\times 0{,}01=0{,}0653\)
+                    </div>
+                </li>
+                <li>
+                    Calculer la probabilité que la personne choisie au hasard soit malade sachant que son test est
+                    positif. Arrondir à 10<sup>-4</sup>.
+                    <div class="corr">
+                        \(P_T(M)=\dfrac{P(M\cap T)}{P(T)}=\dfrac{0{,}056}{0{,}0653}=0{,}8576\)
+                    </div>
+                </li>
+                <li>
+                    Calculer la probabilité que la personne choisie au hasard soit malade sachant que son test est
+                    négatif. Arrondir à 10<sup>-4</sup>.
+                    <div class="corr">
+                        \(P_{\overline{T}}(M)=\dfrac{P(M\cap
+                        \overline{T})}{P\left(\overline{T}\right)}=\dfrac{0{,}07\times 0{,}2}{1-0{,}0653}=0{,}0150\)
+                    </div>
+                </li>
+                <li>
+                    On choisit dix personnes au hasard dans la population. La taille de la population de ce pays permet
+                    d’assimiler ce prélèvement à un tirage avec remise.<br />
+                    On note \(X\) la variable aléatoire qui donne le nombre d’individus ayant un test positif parmi les
+                    dix
+                    personnes.
+                    <ol type="a">
+                        <li>
+                            Donner sans justifier la nature et les paramètres de la loi de probabilité suivie par \(X\).
+                            <br />
+                            Donner sans justifier l'expérance de \(X\).
+                            <div class="corr">
+                                \(X\) compte le nombre de tests positifs parmi n=10 ; pour chacune des 10 personnes, le
+                                test est indépendant et la probabilité de succès est p=0,0653. \(X\) suit donc une loi
+                                binomiale de paramètres n et p.<br />
+                                \(E(X)=np=0{,}653\).
+                            </div>
+                        </li>
+                        <li>
+                            Déterminer la probabilité pour qu’exactement deux personnes aient un test positif. On
+                            arrondira le résultat au centième.
+                            <div class="corr">
+                                \(P(X=2)=BinomPD/fdp(n=10, p=0.0653, x=2)\approx0{,}11\)
+                            </div>
+                        </li>
+                        <li>
+                            Déterminer la probabilité pour qu'au moins deux personnes aient un test positif. On
+                            arrondira le résultat au centième.
+                            <div class="corr">
+                                \(P(X\geqslant 2)=1-P(X\leqslant 1)=1-BinomCD/frep(n=10, p=0.0653, x=1)\approx0{,}14\)
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Déterminer le nombre minimum de personnes à tester dans ce pays pour que la probabilité qu’au moins
+                    l’une d’entre elles ait un test positif, soit supérieure à 99%.
+                    <div class="corr">
+                        Soit \(n\) le nombre minimal recherché ;<br />
+                        \(P(X\geqslant 1)=1-P(X=0)=1-(1-p)^n\)
+                        Donc \(P(X\geqslant 1)\geqslant0{,}99\) équivaut à \((1-p)^n\leqslant 0{,}01\), soit
+                        \(n\log(1-p)\leqslant -2\), donc \(n\geqslant\dfrac{-2}{\log(1-p)}\approx 68{,}2\), donc
+                        \(n=69\).
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="pagebreak hidden-web" style="text-align: right; font-style: italic;">
+            Tourner S.V.P.
+        </div>
+
+        <div class="exo"><!--13 septembre 2021 : exB--><strong style="font-size: taller;">Étude de fonction (10
+                points) </strong><br />
+            <strong> Partie A</strong><br />
+            On étudie la fonction \(h\) définie sur l'intervalle ]0;+∞[ par : \(h(x)=1+\dfrac{\ln(x)}{x}\)
+            <ol>
+                <li>
+                    Déterminer la limite de la fonction \(h\) en 0.
+                    <div class="corr">
+                        \(\displaystyle\lim_{x\to0^+} 1+\dfrac{\ln(x)}{x}=1+\dfrac{-\infty}{0^+}=1-\infty=-\infty\)
+                    </div>
+                </li>
+
+                <li>
+                    Déterminer la limite de la fonction \(h\) en +∞.
+                    <div class="corr">
+                        Par croissance comparée entre \(\ln\) et \(x\) en +∞ :
+
+                        \(\displaystyle\lim_{x\to+\infty} 1+\dfrac{\ln(x)}{x}=1+0^+=1^+\)
+                    </div>
+
+                </li>
+                <li>
+                    \(h\) étant dérivable, on note \(h'\) sa dérivée.<br />
+                    Vérifier, en calculant, que pour tout \(x\) de l'intervalle ]0;+∞[, on a
+                    \(h'(x)=\dfrac{1-\ln(x)}{x^2}\)
+                    <div class="corr">
+                        On utilise la dérivée du quotient :<br />
+                        \(h'(x)=0+\dfrac{\frac{1}{\cancel{x}}\times \cancel{x}-\ln(x)\times
+                        1}{x^2}=\dfrac{1-\ln(x)}{x^2}\)
+                    </div>
+                </li>
+                <li>
+                    Dresser le tableau de variation de \(h\) sur l'intervalle ]0;+∞[.
+                    <div class="corr">
+                        \(ln\) étant croissante et \(\ln(\textrm{e})=1\) donc \(1-\ln(x)\) est décroissante et s'annule
+                        uniquement en e.<br />
+                        <table class="vartable">
+                            <tbody>
+                                <tr style="border-bottom: 1px solid;text-align:center;">
+                                    <td style="border-right: 1px solid;" class="">\(x\)</td>
+                                    <td class="" style="">0<br></td>
+                                    <td class=""><br></td>
+                                    <td class="" style="color: rgb(165, 29, 45);">α</td>
+                                    <td><br></td>
+                                    <td class="">e<br></td>
+                                    <td><br></td>
+                                    <td class=""><br>+∞</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid rgb(0, 0, 0);">
+                                    <td style="border-right: 1px solid rgb(0, 0, 0);" class="">\(h'(x)\)</td>
+                                    <td class=""
+                                        style="background-image: linear-gradient(90deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 1px, transparent 1px, transparent 7px, rgb(0, 0, 0) 7px); background-size: 8px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td class="">+</td>
+                                    <td class=""
+                                        style="color: rgb(0, 0, 0); background-image: linear-gradient(90deg, rgb(165, 29, 45), rgb(165, 29, 45)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td class="">+</td>
+                                    <td class=""
+                                        style="background-image: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        0</td>
+                                    <td class="">-</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: 1px solid rgb(0, 0, 0);" class="" colspan="1" rowspan="5">
+                                        \(h\)</td>
+                                    <td class=""
+                                        style="background-image: linear-gradient(90deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 1px, transparent 1px, transparent 7px, rgb(0, 0, 0) 7px); background-size: 8px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td></td>
+                                    <td class=""
+                                        style="background-image: linear-gradient(90deg, rgb(165, 29, 45), rgb(165, 29, 45)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td class=""></td>
+                                    <td style="background-image: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;"
+                                        class="">1+e<sup>-1</sup></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: 1px solid rgb(0, 0, 0); display: none;" class=""
+                                        rowspan="1" colspan="1"></td>
+                                    <td
+                                        style="background-image: linear-gradient(90deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 1px, transparent 1px, transparent 7px, rgb(0, 0, 0) 7px); background-size: 8px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td class=""><br></td>
+                                    <td
+                                        style="background-image: linear-gradient(90deg, rgb(165, 29, 45), rgb(165, 29, 45)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td class="">↗</td>
+                                    <td class=""
+                                        style="background-image: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td class="">↘</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: 1px solid rgb(0, 0, 0); display: none;"></td>
+                                    <td
+                                        style="background-image: linear-gradient(90deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 1px, transparent 1px, transparent 7px, rgb(0, 0, 0) 7px); background-size: 8px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td></td>
+                                    <td style="background-image: linear-gradient(90deg, rgb(165, 29, 45), rgb(165, 29, 45)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center; color: rgb(165, 29, 45);"
+                                        class="">0<br></td>
+                                    <td class=""></td>
+                                    <td
+                                        style="background-image: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td></td>
+                                    <td class="cell_selected">1<sup>+</sup></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: 1px solid rgb(0, 0, 0); display: none;"></td>
+                                    <td
+                                        style="background-image: linear-gradient(90deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 1px, transparent 1px, transparent 7px, rgb(0, 0, 0) 7px); background-size: 8px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td class="">↗</td>
+                                    <td
+                                        style="background-image: linear-gradient(90deg, rgb(165, 29, 45), rgb(165, 29, 45)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td></td>
+                                    <td
+                                        style="background-image: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: 1px solid rgb(0, 0, 0); display: none;" rowspan="1"
+                                        colspan="1"></td>
+                                    <td style="background-image: linear-gradient(90deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 1px, transparent 1px, transparent 7px, rgb(0, 0, 0) 7px); background-size: 8px 100%; background-repeat: no-repeat; background-position: center center; text-align: right;"
+                                        class="">&nbsp;&nbsp;&nbsp;&nbsp;-∞</td>
+                                    <td class=""></td>
+                                    <td
+                                        style="background-image: linear-gradient(90deg, rgb(165, 29, 45), rgb(165, 29, 45)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td></td>
+                                    <td
+                                        style="background-image: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </li>
+                <li>
+                    Démontrer que l'équation \(h(x)=0\) admet une unique solution α dans ]0;+∞[. Justifier que
+                    0,5&lt;α&lt;0,6.
+                    <div class="corr">
+                        \(h\) est dérivable donc continue sur ]0;+∞[ ; d'après le tableau de variation, \(h\) et minorée
+                        par 1 sur ]e;+∞[, donc elle n'a pas de zéro dans cet intervalle.<br />
+                        \(h\) est strictement croissante (et continue) sur ]0;e[, de -∞&lt;0 à 1-e<sup>-1</sup>&gt;0 :
+                        elle s'annule une seule fois en un réel α. Comme \(h(0{,}5)\approx-0{,}4&lt;0\) et
+                        \(h(0{,}6)\approx 0{,}1&gt;0\), on sait, par croissance de \(h\), que 0,5&lt;α&lt;0,6
+                    </div>
+                </li>
+            </ol>
+            <strong>Partie B</strong><br />
+            <p>
+                Dans cette partie, on considère les fonctions \(f\) et \(g\) définies sur l'intervalle ]0;+∞[ par :
+                \(f(x)=x\ln(x)-x\) et \(g(x)=\ln(x)\)
+                <br />
+                On se place dans un repère orthonormé.
+            <figure>
+                <img src="assets/fig1.svg" alt="fig1">
+            </figure>
+            <div class="corr">
+                <figure>
+                    <img src="assets/fig1c.svg" alt="fig1c">
+                </figure>
+            </div>
+            </p>
+            <p>On note, pour tout nombre réel \(a&gt;0\) :
+            <ul>
+                <li>
+                    \({Tf}_a\) la tangente à la courbe de \(f\) en \(a\) ;
+                </li>
+                <li>
+                    \({Tg}_a\) la tangente à la courbe de \(g\) en \(a\) ;
+                </li>
+            </ul>
+            <ol>
+                <li>
+                    Démontrer que les coefficients directeurs de \({Tf}_a\) et \({Tg}_a\) sont respectivement
+                    \(\ln(a)\)
+                    et \(\dfrac{1}{a}\).
+                    <div class="corr">
+                        Il suffit de calculer \(f'(a)=1\ln(a)+\frac{\cancel{a}}{\cancel{a}}-1=\ln(a)\) (on utilise
+                        la
+                        dérivée du produit pour calculer la dérivée de la partie \(x\ln(x)\)).<br />
+                        De même, \(g'(a)=\dfrac{1}{a}\).
+                    </div>
+                </li>
+                <li>
+                    Démontrer que la fonction \(f\) est convexe et que la fonction \(g\) est concave.
+                    <div class="corr">
+                        On dérive les dérivées premières pour vérifier que \(f''(a)=\dfrac{1}{a}&gt;0\) (convexité
+                        de
+                        \(f\)) et que \(g''(a)=\dfrac{-1}{a^2}&lt;0\) (concavité de \(g\)).
+                    </div>
+                </li>
+                <li>
+                    On rappelle (propriété admise ici) qu'une droite de coefficient directeur \(m\) est dirigée un
+                    vecteur de coordonnées \(\left(\begin{array}{c} 1 \\ m \\ \end{array}\right)\).<br />
+                    Démontrer que deux droites de coefficients directeurs \(m\) et \(m'\) sont perpendiculaires
+                    lorsque
+                    \(m\times m'=-1\).
+                    <div class="corr">
+                        \(\left(\begin{array}{c} 1 \\ m \\ \end{array}\right)\cdot\left(\begin{array}{c} 1 \\ m' \\
+                        \end{array}\right)=1+mm'\), et ce produit scalaire est nul (donc les droites sont
+                        perpendiculaires) lorsque \(1+mm'=0\) soit \(mm'=-1\).
+                    </div>
+                </li>
+                <li>
+                    En utilisant la propriété énoncée dans la question précédente, démontrer qu'il existe une unique
+                    valeur de \(a\) telle que les tangentes \({Tf}_a\) et \({Tg}_a\) soient perpendiculaires. On en
+                    donnera un encadrement au dixième près.
+                    <div class="corr">
+                        Le produit de leurs pentes doit être égal à -1, soit \(\dfrac{\ln(a)}{a}=-1\) donc \(h(a)=0\) en
+                        reconnaissant l'expression de la fonction \(h\) de la partie précédente.<br />
+                        Donc avec \(a=\alpha\approx 0{,}57\), les tangentes \({Tf}_{\alpha}\) et \({Tg}_{\alpha}\) sont
+                        ainsi perpendiculaires.
+                    </div>
+                </li>
+            </ol>
+            <strong>Partie bonus</strong><br />
+            <p>Démontrer que les courbes des trois fonctions \(f\), \(g\) et \(h\) de l'exercice se coupent en deux
+                points uniques.</p>
+        </div>
+
+    </main>
+</body>
+
+</html>
