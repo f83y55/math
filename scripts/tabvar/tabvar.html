@@ -333,7 +333,6 @@
         <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
         </script>
         <script defer>
-
             window.MathJax = {
                 tex: {
                     macros: {
@@ -781,6 +780,13 @@
   \<link rel=\"icon\" href=\"data:image/svg+xml, \<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22\>\<text y=%22.9em%22 font-size=%2290%22\>🐉\</text\>\</svg\>"\>
   \<script id=\"mathjax_script\" type=\"text/javascript\" async src =\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js\"\>\</script\>
   \<script async\>
+    window.MathJax = {
+                tex: {
+                    macros: {
+                        e: \"{\\\\textrm{e} }\"
+                    }
+                }
+            };
     function apply_mathjax() {
       document.getElementsByTagName(\"table\")[0];
       Array.from(document.getElementsByTagName("td")).forEach(cell => {
