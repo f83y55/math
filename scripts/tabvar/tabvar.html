@@ -341,13 +341,11 @@
             const output = document.getElementById("output");
             var cell_selected = construction.getElementsByTagName("td")[1];
             cell_selected.classList.toggle("cell_selected");
-            color_picker = document.getElementById("color-picker")
+            const color_picker = document.getElementById("color-picker")
             color_picker.value = "#606060";
             color_picker.addEventListener("input", change_color, false);
             color_picker.addEventListener("change", change_color, false);
             var color_selected = color_picker.value;
-            const sel = window.getSelection();
-            const range = document.createRange();
 
             function copy_to_output() {
                 output.parentNode.style["padding"] = "4px";
@@ -364,14 +362,19 @@
 
 
             function set_caret(cell) {
-                let text = cell.text;
-                console.log(text);
-                range.setStart(cell, text ? 0 * text.length : 0);
-                range.setEnd(cell, text ? text.length - 1 : 0);
-                range.collapse(true);
-                sel.removeAllRanges();
-                sel.addRange(range);
+                let sel = window.getSelection();
+                console.log(sel);
+                sel.selectAllChildren(cell);
+                sel.collapseToEnd();
             }
+
+            function insert_text(text) {
+                let sel = window.getSelection();
+                const end = position + text.length;
+                textarea.setRangeText(text, start, end, 'select');
+                //cell_selected.append(document.createTextNode(text));
+            }
+
 
             function select_cell(cell) {
                 if (cell != cell_selected) {
@@ -452,13 +455,13 @@
             construction.querySelectorAll('td').forEach(
                 cell => {add_event_listener_to_new_cell(cell);}
             );
-
-            function magic() {
-                construction.querySelectorAll('td').forEach(cell => {
-                    cell.textContent = `${cell.parentNode.rowIndex} ${cell.cellIndex} ${cell.rowSpan} ${cell.colSpan}`
-                });
-            }
-
+            /*
+                        function magic() {
+                            construction.querySelectorAll('td').forEach(cell => {
+                                cell.textContent = `${cell.parentNode.rowIndex} ${cell.cellIndex} ${cell.rowSpan} ${cell.colSpan}`
+                            });
+                        }
+            */
             function add_col(col_index_delta) {
                 let col = cell_selected.cellIndex;
                 construction.querySelectorAll("tr").forEach(el => {
@@ -561,9 +564,6 @@
                 select_cell(cell_selected);
             }
 
-
-
-
             function change_color(event) {
                 color_selected = event.target.value;
             }
@@ -638,12 +638,6 @@
             }
 
 
-            function insert_text(text) {
-                cell_selected.append(document.createTextNode(text));
-                if ((text.slice(-1) == ")") || (text.slice(-1) == "}")) {
-                    console.log("ok");
-                }
-            }
 
             function tr_border_bottom() {
                 if (cell_selected.parentNode.style["border-bottom"]) {
