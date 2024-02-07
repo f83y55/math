@@ -14,28 +14,34 @@
 
         body {
             background: linear-gradient(to bottom, lightblue, lightgray, transparent);
+            background-repeat: no-repeat;
         }
 
         #menu {
-            width: 100%;
-            padding: 0.5em;
-            display: inline-flex;
+            margin: 0;
+            padding: 3px;
+            display: flex;
+            flex-direction: row;
             align-items: start;
-            justify-items: center;
-            justify-content: space-evenly;
+            justify-content: left;
             text-align: center;
-            overflow-x: scroll;
+            overflow-x: auto;
+        }
+
+        #menu table {
+            margin: 3px;
         }
 
         #display {
             margin: 0;
-            padding: 0;
+            padding: 3px;
             display: flex;
             flex-direction: row;
-            justify-content: left;
             align-items: center;
-            overflow-x: scroll;
+            justify-content: left;
+            overflow-x: auto;
         }
+
 
         #construction {
             font-family: 'Courier New', Courier, monospace;
@@ -65,7 +71,7 @@
         input {
             text-align: center;
             vertical-align: center;
-            width: 4em;
+            width: 3.5em;
             height: 2em;
             background-color: #3de7d1;
             border: 0 solid #e5e7eb;
@@ -182,67 +188,63 @@
                 <tr>
                     <td><button onclick="insert_text('~')">⎵</button></td>
                     <td><button onclick="insert_text('{,}')">,</button></td>
-                </tr>
-
-                <tr>
-                    <td><button onclick="insert_text('α')">α</button></td>
-                    <td><button onclick="insert_text('↗')">↗</button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="insert_text('β')">β</button></td>
-                    <td><button onclick="insert_text('→')">→</button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="insert_text('ε')">ε</button></td>
-                    <td><button onclick="insert_text('↘')">↘</button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="insert_text('\\leqslant \\geqslant')">≤≥</button></td>
                     <td><button onclick="insert_text('≈')">≈</button></td>
                 </tr>
                 <tr>
+                    <td><button onclick="insert_text('\\leqslant \\geqslant')">≤≥</button></td>
                     <td><button onclick="insert_text('π')">π</button></td>
-                    <td><button onclick="insert_text('∞')">∞</button></td>
+                    <td><button onclick="insert_text('\\%')">%</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert_text('α')">α</button></td>
+                    <td><button onclick="insert_text('β')">β</button></td>
+                    <td><button onclick="insert_text('ε')">ε</button></td>
                 </tr>
                 <tr>
                     <td><button onclick="insert_text('-')">-</button></td>
                     <td><button onclick="insert_text('+')">+</button></td>
+                    <td><button onclick="insert_text('∞')">∞</button></td>
                 </tr>
-
+                <tr>
+                    <td><button onclick="insert_text('↘')">↘</button></td>
+                    <td><button onclick="insert_text('→')">→</button></td>
+                    <td><button onclick="insert_text('↗')">↗</button></td>
+                </tr>
             </tbody>
         </table>
         <table>
             <caption>Functions</caption>
             <tbody>
                 <tr>
-                    <td><button onclick="insert_text('^{}')">x<sup>y</sup></button></td>
+                    <td><button onclick="insert_text('\\left(\\right)')">(big)</button></td>
+                    <td><button onclick="insert_text('\\left\\{\\right\\}')">{big}</button></td>
+                    <td><button onclick="insert_text('\\left|\\right|')">|big|</button></td>
+                    <td><button onclick="insert_text('\\textrm{')">text</button></td>
+                </tr>
+                <tr>
                     <td><button onclick="insert_text('\\frac{}{}')">x/y</button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="insert_text('\\sqrt{}')">√</button></td>
-                    <td><button onclick="insert_text('\\sqrt[3]{}')"><sup>3</sup>√</button></td>
-                </tr>
-
-                <tr>
-                    <td><button onclick="insert_text('\\e^{}')">e</button></td>
-                    <td><button onclick="insert_text('\\ln()')">ln</button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="insert_text('\\cos()')">cos</button></td>
-                    <td><button onclick="insert_text('\\arccos()')">acos</button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="insert_text('\\sin()')">sin</button></td>
-                    <td><button onclick="insert_text('\\arcsin()')">asin</button></td>
+                    <td><button onclick="insert_text('^{')">x<sup>y</sup></button></td>
+                    <td><button onclick="insert_text('\\sqrt{')">√</button></td>
+                    <td><button onclick="insert_text('\\sqrt[3]{')"><sup>3</sup>√</button></td>
                 </tr>
 
                 <tr>
-                    <td><button onclick="insert_text('\\tan()')">tan</button></td>
-                    <td><button onclick="insert_text('\\arctan()')">atan</button></td>
+                    <td><button onclick="insert_text('\\e^{')">e</button></td>
+                    <td><button onclick="insert_text('\\ln(')">ln</button></td>
+                    <td><button onclick="insert_text('{10}^{')">10<sup>x</sup></button></td>
+                    <td><button onclick="insert_text('\\log(')">log</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="insert_text('\\left\\{\\right\\}')">{}</button></td>
-                    <td><button onclick="insert_text('\\left(\\right)')">()</button></td>
+                    <td><button onclick="insert_text('\\cos(')">cos</button></td>
+                    <td><button onclick="insert_text('\\sin(')">sin</button></td>
+                    <td><button onclick="insert_text('\\tan(')">tan</button></td>
+                    <td><button onclick="insert_text(')')">)</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert_text('\\arccos(')">acos</button></td>
+                    <td><button onclick="insert_text('\\arcsin(')">asin</button></td>
+                    <td><button onclick="insert_text('\\arctan(')">atan</button></td>
+                    <td><button onclick="insert_text('}')">}</button></td>
                 </tr>
             </tbody>
         </table>
@@ -253,7 +255,7 @@
                     <td><button onclick="load()">load</button></td>
                 </tr>
                 <tr>
-                    <td><input id="file_load" style="display:none;" type="file" accept=".html">
+                    <td><input id="file_load" style="display:none;" type="file" accept=".html, .txt">
                     </td>
                 </tr>
                 <tr>
@@ -265,14 +267,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>Make</td>
-                </tr>
-                <tr>
                     <td>
-                        <button onclick="copy_to_output()">html</button>
+                        <button onclick="copy_to_output()"><strong>run</strong></button>
                     </td>
                 </tr>
             </tbody>
