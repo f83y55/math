@@ -17,15 +17,20 @@
             background-repeat: no-repeat;
         }
 
-        #menu {
+        #menu,
+        #display {
             margin: 0;
             padding: 3px;
             display: flex;
             flex-direction: row;
-            align-items: start;
             justify-content: left;
-            text-align: center;
             overflow-x: auto;
+        }
+
+        #menu {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            align-items: start;
+            text-align: center;
         }
 
         #menu table {
@@ -33,13 +38,7 @@
         }
 
         #display {
-            margin: 0;
-            padding: 3px;
-            display: flex;
-            flex-direction: row;
             align-items: center;
-            justify-content: left;
-            overflow-x: auto;
         }
 
 
@@ -346,6 +345,7 @@
             color_picker.addEventListener("input", change_color, false);
             color_picker.addEventListener("change", change_color, false);
             var color_selected = color_picker.value;
+            var sel = window.getSelection();
 
             function copy_to_output() {
                 output.parentNode.style["padding"] = "4px";
@@ -358,21 +358,18 @@
                 MathJax.typeset();
             }
 
-
-
-
             function set_caret(cell) {
-                let sel = window.getSelection();
-                console.log(sel);
+                sel = window.getSelection();
                 sel.selectAllChildren(cell);
                 sel.collapseToEnd();
             }
 
             function insert_text(text) {
-                let sel = window.getSelection();
-                const end = position + text.length;
-                textarea.setRangeText(text, start, end, 'select');
-                //cell_selected.append(document.createTextNode(text));
+                sel = window.getSelection();
+                let cell = sel.anchorNode;
+                let range = sel.getRangeAt(0);
+                range.insertNode(document.createTextNode(text));
+                sel.collapseToEnd();
             }
 
 
