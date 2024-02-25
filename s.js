@@ -55,7 +55,11 @@ for (var key in hashtable){
 			recipient.appendChild(element);
 
 		}
-
+	}
+	/* special cases */
+	/* prism line numbering */
+	if ((key == "prism")&&(import_module.includes(key))) {
+		document.body.classList.add("line-numbers")
 	}
 }
 };
