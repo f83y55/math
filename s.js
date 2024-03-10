@@ -143,35 +143,41 @@ header.innerHTML += `
     <div class="navbar-collapse">
         <div class="navbar-group">                    
             <div class="navbar-item">
-	        <div class="navbar-text" style="font-size:larger;font-weight:bold;">Mathέmatiques</div>
+	        <div class="navbar-text" style="font-size:larger;font-weight:bold;">Math<span style="color:limegreen;">έ</span>matiques</div>
 	        <div class="navbar-text">Cours</div>
             </div>
         </div>
 	<div class="navbar-group">
 	    <a class="navbar-item" id="navbar-index" href="${root_path}/index.html">
-	        <span class="navbar-icon">⌂</span>
+	        <span class="navbar-icon">🏠</span>
 	        <div class="navbar-text">home</div>
 	    </a>
-	    <a class="navbar-item" href="https://www.geogebra.org/classic" target="_blank">
-	        <span class="navbar-icon">𝓖</span>
-	        <div class="navbar-text">ggb</div>
-	    </a>
 	    <a class="navbar-item" href="./assets/print.pdf" download="${page_title}.pdf">
-	        <span class="navbar-icon">🖺</span>
+	        <span class="navbar-icon">📄</span>
 	        <div class="navbar-text">pdf</div>
 	    </a>
 	    <a class="navbar-item" href="#" onclick="window.print();return false;">
-	        <span class="navbar-icon">🖶</span>
+	        <span class="navbar-icon">📠</span>
 	        <div class="navbar-text">print</div>
 	    </a>
 	</div>
 	<div class="navbar-group">
+	    <a class="navbar-item" href="https://www.geogebra.org/classic" target="_blank">
+	        <span class="navbar-icon">📐</span>
+	        <div class="navbar-text">ggb</div>
+	    </a>
+	    <a class="navbar-item" href="${root_path}scripts/pyscript/pyscript.html" target="_blank">
+	        <span class="navbar-icon">🐍</span>
+	        <div class="navbar-text">py</div>
+	    </a>
+	</div>
+	<div class="navbar-group">
 	    <a class="navbar-item" href="${root_path}pages/links/links.html">
-	        <span class="navbar-icon">🕸</span>
+	        <span class="navbar-icon">🖇</span>
 	        <div class="navbar-text">links</div>
 	    </a>
 	    <a class="navbar-item" href="https://github.com/f83y55/math/archive/refs/heads/master.zip" download>
-	        <span class="navbar-icon">⤓</span>
+	        <span class="navbar-icon">💾</span>
 	        <div class="navbar-text">download</div>
 	    </a>
 	</div>

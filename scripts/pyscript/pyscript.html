@@ -31,14 +31,16 @@
 
 <body onload="body()">
     <section class="pyscript">
-        <h1><b>PyScript REPL</b></h1>
+        <h1>PyScript REPL</h1>
         <ul id="info">
-            <li>
+            <li class="hidden-print">
                 Évaluer : Shift + entrée ;
             </li>
             <li>
-                <button onclick="file_save()">sauvegarder</button> la page sous le nom <input id="file_save"
-                    value="pyscript" type="text">.py .
+                <button class="hidden-print" onclick="file_save()">sauvegarder</button>
+                <span class="hidden-print"> la page sous le nom </span>
+                <span class="hidden-web">Fichier python : </span>
+                <input id="file_save" value="pyscript" type="text">.py
             </li>
         </ul>
         <div>
@@ -48,8 +50,11 @@
     <script defer>
         function file_save() {
             let my_file = "";
-            Array.from(document.querySelectorAll(".cm-line")).forEach(el => {
-                my_file += el.textContent + "\n";
+            Array.from(document.querySelectorAll(".py-repl-editor")).forEach(el => {
+                const sel = el.firstElementChild.shadowRoot;
+                Array.from(sel.querySelectorAll(".cm-line")).forEach(line => {
+                    my_file += line.textContent + "\n";
+                });
             });
             let file_name = document.getElementById("file_save").value;
             let a = document.createElement('a');
