@@ -1,9 +1,10 @@
+dist: jammy
 language: node_js
 node_js:
-- stable
+  - stable
 sudo: false
 script:
-- npm test
+  - npm test
 branches:
   only:
   - "/^\\d+\\.\\d+/"

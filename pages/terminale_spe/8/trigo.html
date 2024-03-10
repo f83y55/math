@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../s.js"></script>
+</head>
+
+
+<body onload="body()">
+    <main>
+        <h1>Trigonométrie - Cours</h1>
+
+        <h2>Introduction historique</h2>
+        <ul>
+            <li>
+                VII AVJC : les babyloniens utilisent le <strong>degré</strong> :
+                <ul>
+                    <li>
+                        ils observent que les planètes du système solaire se déplacent dans une zone restreinte du ciel
+                        : le
+                        zodiaque : 12 constellations ;
+                    </li>
+                    <li>
+                        le soleil cache successivement chaque constellation ⭢ chaque <strong>mois</strong>
+                    </li>
+                    <li>
+                        un cercle, représentant l'année, peut donc être divisé en :
+                        12 mois × 30 jours = 360 subdivisions.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Révolution française : système métrique 90° = 100 gon (grades) ;
+            </li>
+            <li>
+                1873 J. Thomson : unité SI : le radian.
+            </li>
+        </ul>
+
+
+        <h2>Mesurer des angles</h2>
+        <h3>Le radian</h3>
+        <div class="row">
+            <div class="col">
+                <div class="defi">Étant donné un arc de cercle \(\overset{\frown}{l}\) de longueur \(l\) et de
+                    rayon
+                    \(R\),
+                    la <strong>mesure en radians</strong> de l'angle géométrique \(\widehat{\alpha}\) est :
+                    <span class="surl">\(\displaystyle\alpha=\frac{l}{R}\)</span>
+                </div>
+
+
+
+                <div class="exo">Un câble repose sur une poulie de diamètre 30cm. Une extrémité du câble est tendue
+                    horizontalement et l'autre verticalement. <br>
+                    Calculer la longueur de câble en contact avec la poulie.
+                </div>
+
+
+
+                <div class="prop">
+                    Les mesures en degré et radians sont proportionnelles :
+                    <span class="surl">180° = π rad</span>
+                </div>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/radian.png" />
+                </figure>
+            </div>
+        </div>
+
+        <div class="exo">Compléter :
+            <table class="mytable" style="width: 100%;">
+                <tr>
+                    <th>en radian</th>
+                    <td>\(\frac{\pi}{6}\)</td>
+                    <td>\(\frac{\pi}{4}\)</td>
+                    <td>\(\frac{\pi}{3}\)</td>
+                    <td>\(\frac{2\pi}{3}\)</td>
+                    <td>\(\frac{3\pi}{4}\)</td>
+                    <td>\(\frac{5\pi}{4}\)</td>
+                    <td>\(\frac{3\pi}{3}\)</td>
+                    <td>\(\frac{7\pi}{4}\)</td>
+                </tr>
+                <tr>
+                    <th>en degré</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <th>nom</th>
+                    <td>...</td>
+                    <td>droit</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+            </table>
+        </div>
+
+
+
+        <h3 class="subsection">Orientation du plan</h3>
+        \begin{tabular}{l|c|l|c|} \cline{2-2} \cline{4-4}
+        ~~~~~~~~~~&sens <b>direct</b>&~~~~~~~~~~&sens <b>indirect</b><br> \cline{2-2} \cline{4-4}
+        &trigonométrique & & <br>
+        &anti-horaire & & horaire <br>
+        & giratoire & & <br>
+        \cline{2-2} \cline{4-4}
+        \end{tabular}
+
+        <b>Convention : </b> On oriente le plan dans le sens direct.<br>
+
+        <div class="rema">
+            !!!!!!</div>
+        En général, on nomme ou on énumère les sommets d'un polygone dans le sens direct.
+
+        <h3 class="subsection">Le cercle trignométrique</h3>
+        <div class="defi">Dans un repère orthonormé, le <b>cercle trigonométrique</b> est le cercle qui a pour
+            centre le
+            centre du repère et qui est de rayon \(1\). On l'oriente dans le sens direct.</div><br>
+
+        <div class="rema">
+            !!!!!!</div>
+        Le périmètre de ce cercle est donc \(2\pi R=2\pi\times1=2\pi\).
+
+        <h3 class="subsection">Mesure des angles orientés</h3>
+
+        <div class="rema">
+            !!!!!!</div>
+        On utilise le cercle trigonométrique pour mesurer des angles, de la même façon que l'on utilise un
+        rapporteur
+        :<br>
+
+        Soit \(\left(\overrightarrow{u};\overrightarrow{v}\right)\) une paire de vecteurs non nuls. On souhaite
+        mesurer
+        en radians l'angle orienté noté \(\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\), angle
+        permettant de passer (par rotation) de la direction de \(\overrightarrow{u}\) à celle de
+        \(\overrightarrow{v}\).<br>
+
+        <div class="center"><img src="assets/mesangle1.png" /></div>
+        <div class="center"><img src="assets/mesangle2.png" /></div>
+
+        <div class="meth">\begin{itemize</div>
+        </li>
+        <li> On trace un représentant \(\overrightarrow{v'}\) de \(\overrightarrow{v}\) ayant même origine que
+            \(\overrightarrow{u}\) ; on trace un cercle trigonométrique centré sur cette origine, l'axe \((Ox)\)
+            ayant
+            même
+            direction que \(\overrightarrow{u}\) ;
+        </li>
+        <li> la longueur de l'arc permettant de passer de \(\overrightarrow{u}\) à \(\overrightarrow{v'}\)
+            correspond à
+            la
+            valeur absolue de la mesure d'angle
+            \(\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\),
+            car le
+            rayon du cercle trigonométrique est \(1\) ;
+        </li>
+        <li> le signe de \(\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\) est positif lorsque
+            l'on
+            passe
+            de
+            \(\overrightarrow{u}\) à \(\overrightarrow{v}\) en tournant dans le sens direct ; négatif (cas de la
+            figure
+            donnée) si l'on tourne dans le sens indirect.
+            \end{itemize}
+            }
+
+
+            <h3 class="subsection">Enroulement de la droite \(\R\) sur le cercle trigonométrique</h3>
+            Par la construction exposée dans ce paragraphe, on a voulu pouvoir prendre en compte dans les
+            mesures
+            d'angles
+            le fait de faire plusieurs tours :<br>
+
+
+            <div class="prop">
+                !!!!!!</div>
+            On peut «enrouler», en conservant les longueurs (cette opération s'appelle <b>revêtement</b>
+            isométrique),
+            une
+            droite graduée représentant \(\R\) sur le cercle trigonométrique, conventionnellement, de la façon
+            indiquée
+            sur
+            le schéma suivant :
+
+
+
+            <img src="assets/enroulement.png" /><br>
+
+            <div class="prop">
+                !!!!!!</div>
+
+            \begin{itemize}
+        </li>
+        <li> Chaque réel \(t\) correspond alors à un point sur le cercle trigonométrique ; ce point est repéré
+            par
+            deux
+            coordonnées dans le repère \((O;I;J)\) associé au cercle trigonométrique ;
+        </li>
+        <li> Chaque point \(M\) du cercle à une infinité d'antécédents dans \(\R\), espacés de \(2\pi\) (la
+            longueur
+            d'un
+            tour du cercle trigonométrique).
+            \end{itemize}
+
+
+
+
+            <div class="exem">
+                !!!!!!</div>
+            \(\displaystyle\begin{array}{rcl}
+            \R & \rightarrow & \textrm{CT} <br> \hline
+            \ldots~;~-2\pi~;~0~;~2\pi;~\ldots & \mapsto & I={1\choose0} <br>
+            \ldots~;~-\frac{3\pi}{2}~;~\frac{\pi}{2}~;~\frac{5\pi}{2};~\ldots & \mapsto & J={0\choose1} <br>
+            \ldots~:~-\pi~;~3\pi;~\ldots & \mapsto & {-1\choose0} <br>
+            \end{array}\)
+            <div class="exo">Donner \(4\) réels ayant la même image sur le cercle trigonométrique que le réel
+                \(\frac{\pi
+            </div>{4}\).}<br>
+
+            <div class="exo">Un snowboarder effectue \(2\) tours dans le sens indirect.<br>
+                Donner en radian la mesure d'angle correspondante, avant qu'il ne tombe.</div>
+
+            <h3 class="subsection">Congruences</h3>
+            <div class="defi">soit deux réels \(t\) et \(t'\).<br>
+                Lorsqu'il existe un entier (relatif) \(k\) tel que \(t=t'+2k\pi\), ce qui revient à dire que
+                \(t\)
+                et
+                \(t'\)
+                s'envoient sur la même point sur le cercle trigonométrique, on dit que \(t\) et \(t'\) sont
+                <b>congrus</b>
+                modulo \(2\pi\), et on écrit :
+            </div>
+            \(\displaystylet \equiv t' \pmod {2\pi}\textrm{~~~ou bien ~~~} t \equiv t'~~~(2\pi)\)
+
+
+            <div class="rema">
+                !!!!!!</div>
+            Deux mesures d'angles en radians congrues modulo \(2\pi\) correspondent au même angle
+            géométrique.<br>
+
+            <div class="exo">A-t-on \(\frac{5\pi</div>{2} \equiv \frac{-\pi}{2} \pmod {2\pi}\) ?}<br>
+
+
+            <div class="prop">
+                !!!!!!</div>
+            Si \(x \equiv x' \pmod {2\pi}\) et \(y \equiv y' \pmod {2\pi}\) et \(z\neq0\), on a :
+            \begin{itemize}
+        </li>
+        <li> \(x+y \equiv x'+y' \pmod {2\pi}\)
+        </li>
+        <li> \(zx \equiv zx' \pmod{2\pi z}\)<br>
+            \end{itemize}
+
+            <div class="exo">Résoudre et représenter les solutions sur le cercle trigonométrique :
+                \begin{itemize</div>
+        </li>
+        <li> \(2x+\frac{\pi}{2} \equiv \frac{\pi}{4} \pmod{2\pi}\)
+        </li>
+        <li> \(3x+\frac{\pi}{6} \equiv \frac{-\pi}{3} \pmod{2\pi}\)
+            \end{itemize}}
+
+            <img src="assets/ct.png" />
+            <img src="assets/ct.png" />
+
+
+
+            <div class="prop">
+                !!!!!!</div>
+
+            \begin{itemize}
+        </li>
+        <li> \(\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\equiv 0 \pmod \pi \Leftrightarrow
+            \overrightarrow{u}//\overrightarrow{v}\) ;
+        </li>
+        <li> \(\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\equiv 0 \pmod {2\pi} \Leftrightarrow
+            \overrightarrow{u}//\overrightarrow{v}\)<br> et ont même sens ;
+        </li>
+        <li> \(\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\equiv \pi \pmod {2\pi}
+            \Leftrightarrow
+            \overrightarrow{u}//\overrightarrow{v}\)<br> et sont de sens opposés.
+            \end{itemize}
+            <h3 class="subsection">Mesure principale</h3>
+            <div class="exo">Un clown fait \(10\)\,m sans déraper sur un monocycle dont la roue de centre \(O\)
+                à un
+                rayon
+                de \(20\)\,cm, puis tombe et rigole.<br>
+                Combien de tours a fait la roue avant la chute ?<br>
+                Le clown avait marqué sur sa roue le point de contact avec le sol (point \(A\)). Au moment de sa
+                chute,
+                le
+                dernier point de contact avec le sol est \(B\). <br>
+                Trouver la mesure en radians de \(\widehat{AOB</div>\).}<br>
+
+            <div class="defi">On appelle <b>mesure principale</b> d'un angle \(x\) le nombre \(mp(x)\) tel que :
+            </div>
+            \(\displaystylex \equiv mp(x) \pmod{2\pi}\textrm{~~~et~~~}mp(x)\in\left[0;2\pi\right[\)
+
+
+            <div class="rema">
+                !!!!!!</div>
+            Parmi tous les représentants de \(x\) modulo \(2\pi\), la mesure principale est le seul représentant
+            de
+            \(x\)
+            dans l'intervalle \(\left[0,2\pi\right[\).<br>
+            <img src="assets/mp.png" /><br>
+
+            <b>Calculatrice : </b> \(mp(x)=\textrm{partdéc}(x/(2\pi))*2\pi\)<br>
+            <b>À la main : </b> On calcule le quotient \(q\) de \(x\) par \(2\pi\) et on soustrait \(2\pi q\) à
+            \(x\) si
+            \(x>0\), ou on ajoute \(2\pi(q+1)\) à \(x\) si \(x<0\).<br>
+
+                <div class="exo">Calculer les mesures principales des angles suivants :
+                    <ol>
+                        <li> \(\dfrac{5\pi
+                </div>{3}\) ;
+        </li>
+        <li> \(\dfrac{3\pi}{2}\) ;
+        </li>
+        <li> \(\dfrac{-5\pi}{4}\) ;
+        </li>
+        <li> \(\dfrac{4\pi}{3}\) ;
+        </li>
+        <li> \(\dfrac{-11\pi}{6}\) ;
+        </li>
+        <li> \(\dfrac{-11\pi}{2}\) ;
+        </li>
+        <li> \(25\pi\) ;
+        </li>
+        <li> \(18\pi\) ;
+        </li>
+        <li> \(-14\pi\) ;
+        </li>
+        <li> \(\dfrac{40\pi}{3}\) ;
+        </li>
+        <li> \(\dfrac{-31\pi}{6}\) ;
+        </li>
+        <li> \(\dfrac{25\pi}{4}\) ;
+
+        </li>
+        </ol>}
+
+        <h3 class="subsection">Compléments sur les angles</h3>
+
+        <div class="prop">
+            !!!!!!</div>
+        <b>Relation de Chasles</b><br>
+        Si \(\overrightarrow{u}\), \(\overrightarrow{v}\), \(\overrightarrow{w}\) sont trois vecteurs non nuls,
+        on a
+        :
+        \(\displaystyle\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}+\widehat{\left(\overrightarrow{v};\overrightarrow{w}\right)}\equiv\widehat{\left(\overrightarrow{u};\overrightarrow{w}\right)}\pmod{2\pi}\)
+
+        <div class="exo">Étant donné un triangle \(ABC\) :
+            <div class="center">
+                <img src="assets/triangle.png" />
+            </div>
+            Démontrer que la somme des angles orientés de ce triangle est congrue à \(\pi\) modulo \(2\pi\).
+        </div><br>
+
+        <div class="prop">
+            !!!!!!</div>
+        <b>Angles associés</b>
+        <div class="center">
+            <img src="assets/veca.png" />
+        </div>
+        Si \(\overrightarrow{u}\) et \(\overrightarrow{v}\) sont deux vecteurs non nuls, et \(k,l>0\), alors :
+        \begin{itemize}
+        </li>
+        <li> \(\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\equiv\widehat{\left(k\overrightarrow{u};l\overrightarrow{v}\right)}\pmod{2\pi}\)
+        </li>
+        <li> \(\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\equiv\widehat{\left(-\overrightarrow{u};-\overrightarrow{v}\right)}\pmod{2\pi}\)
+        </li>
+        <li> \(\widehat{\left(\overrightarrow{u};-\overrightarrow{v}\right)}\equiv\widehat{\left(-\overrightarrow{u};\overrightarrow{v}\right)}\equiv
+            \pi+\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\pmod{2\pi}\)
+        </li>
+        <li> \(\widehat{\left(\overrightarrow{v};\overrightarrow{u}\right)}\equiv-\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\pmod{2\pi}\)<br>
+            \end{itemize}
+            <div class="exo">Exprimer en fonction de \(\widehat{\left(\overrightarrow{u</div>
+            ;\overrightarrow{v}\right)}\)
+            l'angle \(\widehat{\left(-2\overrightarrow{v};7\overrightarrow{u}\right)}\)}<br>
+            <div class="exo">Montrer que si \(\overrightarrow{u</div>//\overrightarrow{u'}\) et
+            \(\overrightarrow{v}//\overrightarrow{v'}\) (ces quatre vecteurs sont non nuls), alors <br>
+            \(2\widehat{\left(\overrightarrow{u'};\overrightarrow{v'}\right)}\equiv2\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\).}<br>
+            <div class="exo">Soit deux droites \(d\) et \(d'\). Une troisième droite \(\Delta\) coupe ces deux
+                droites
+                respactivement en en \(A\) et \(A'\).<br>
+                Déduire de la réponse précédente que \(d//d'\) équivaut à «l'un des angles orientés autour de
+                \(A\)
+                a le
+                même double qu'un angle orienté autour de \(A'\)».</div>
+
+            <h2 class="section">Fonctions \(\cos\) et \(\sin\)</h2>
+
+            <h3 class="subsection">\(\sin\alpha\) et \(\cos\alpha\)</h3>
+
+
+            Soit \(M\) le point du cercle correspondant à un réel \(\alpha\) (par la fonction enroulement vue
+            précédemment).<br>
+            <div class="defi">On note \(\cos\alpha\) l'abscisse de \(M\) et \(\sin\alpha\) l'ordonnée de \(M\) :
+            </div>
+            \(M\left(\cos\alpha\,;\,\sin\alpha\right)\)
+            <img src="assets/ct2.png" />
+
+            <div class="meth">\begin{itemize</div>
+        </li>
+        <li> On repère un angle orienté \(\alpha\) par rapport à l'axe \((Ox)\), en marquant un point \(M\) sur
+            le
+            cerle
+            trigonométrique ;
+        </li>
+        <li> si \(\alpha\) est \(>0\), on tourne dans le sens direct (sens inverse des aiguilles d'une montre ;
+            s'il
+            est
+            \(
+            <0\), on tourne dans le sens indirect ; </li>
+        <li> on lit alors les valeurs de \(\cos\alpha\) (sur \((Ox)\)) : c'est l'abscisse de \(M\) ;
+        </li>
+        <li> et celle de \(\sin\alpha\) (sur \((Oy)\)) : c'est l'ordonnée de \(M\).<br>
+            \end{itemize}
+            }
+
+            <div class="rema">
+                !!!!!!</div>
+            Si l'on ajoute \(2\pi\) à \(\alpha\), on fait un tour du cercle et on revient à la même position,
+            donc
+            on
+            obtient les mêmes valeurs pour \(\cos\) et \(\sin\) : on en déduit que les fonctions \(\cos\) et
+            \(\sin\)
+            sont
+            donc \(2\pi\)-périodiques ou autrement dit, que les valeurs de \(\cos\) sont les mêmes pour tous les
+            réels
+            congrus modulo \(2\pi\) à un réel \(\alpha\) donné (idem pour \(\sin\)).<br>
+
+            <div class="rema">
+                !!!!!!</div>
+            Si l'on considère que \(A=\left(\cos\alpha;0\right)\in\left[OI\right]\), on retrouve dans le
+            triangle
+            \(OAM\)
+            rectangle en \(M\) les définitions de \(\cos\) et de \(\sin\) vues en troisième, à savoir :
+            \(\cos\alpha=\frac{OA}{OM}\) et \(\sin\alpha=\frac{AM}{OM}\). La nouveauté est la prise en comptes
+            de
+            valeurs
+            négatives pour \(\cos\) et \(\sin\), apparaîssant si l'on considère des angles obtus.
+
+            <h3 class="subsection">Propriétés immédiates</h3>
+
+            <div class="prop">
+                !!!!!!</div>
+            Pour \(x\) réel :
+            \begin{itemize}
+        </li>
+        <li> \(-1\leq\cos x \leq 1\) et \(-1\leq \sin x\leq1\) ;
+        </li>
+        <li> \(\cos^2 x+\sin^2 x=1\) ;
+        </li>
+        <li> \(\cos\) et \(\sin\) sont \(2\pi\)-périodiques.<br>
+            \end{itemize}
+
+
+            <div class="rema">
+                !!!!!!</div>
+            \begin{itemize}
+        </li>
+        <li> La seconde formule se déduit du théorème de Pythagore, et du fait que \(OM^2=1\) ;
+        </li>
+        <li> on note, pour plus de lisibilité, \(\cos^2 x=\left(\cos x\right)^2\) (idem pour \(\sin\)).<br>
+            \end{itemize}
+
+            <div class="exo">Peut-on trouver un réel \(t\) tel que \(\cos t=\frac{1</div>{4}\) et \(\sin
+            t=\frac{3}{4}\)
+            ?}<br>
+            <div class="exo">Soit \(t\) un réel tel que \(\cos t =\frac{1</div>{5}\).
+            <ol>
+                <li> On suppose que \(t\in\left[0;\frac{\pi}{2}\right]\). Calculer \(\sin t\).
+                </li>
+                <li> On suppose que \(t\in\left[-\frac{\pi}{2};0\right]\). Calculer \(\sin t\).
+
+                </li>
+            </ol>
+            }
+
+
+            <h3 class="subsection">Valeurs remarquables</h3>
+            <div class="exo">Compléter le tableau de valeurs suivant :</div>
+            <div class="center">
+                \begin{tabular}{|l||c|c|c|c|c|c|}\hline
+                \(\alpha\) (rad) & \(0\) & \(\frac{\pi}{6}\) & \(\frac{\pi}{4}\) & \(\frac{\pi}{3}\) &
+                \(\frac{\pi}{2}\)
+                &
+                \(\pi\) <br> \hline
+                \(\cos\alpha\) & & & & & & <br>
+                & & & & & & <br> \hline
+                \(\sin\alpha\) & & & & & & <br>
+                & & & & & & <br> \hline
+                \end{tabular}
+            </div>
+
+            \newpage
+
+
+            <div class="prop">
+                !!!!!!</div>
+            <br>
+            <img src="assets/cercletrigo.png" />
+
+            <h3 class="subsection">Valeurs associées</h3>
+            <div class="exo">Compléter par \(\pm\cos x\) et \(\pm\sin x\) les égalités suivantes :</div>
+
+            \begin{itemize}
+        </li>
+        <li> <b>Symétrie / \((Ox)\)</b><br>
+            <img src="assets/aaox.png" /><br>
+            \(~~~~~\cos\left(-x\right)=\)<br>
+            \(~~~~~\sin\left(-x\right)=\)<br>
+
+            <div class="prop">
+                !!!!!!</div>
+            \(\cos\) est paire ; \(\sin\) est impaire.<br>
+
+        </li>
+        <li> <b>Symétrie / \((Oy)\)</b><br>
+            <img src="assets/aaoy.png" /><br>
+            \(~~~~~\cos\left(\pi-x\right)=\)<br>
+            \(~~~~~\sin\left(\pi-x\right)=\)<br>
+            \end{itemize}
+
+
+            \begin{itemize}
+        </li>
+        <li> <b>Symétrie / \(O\)</b><br>
+            <img src="assets/aao.png" /><br>
+            \(~~~~~\cos\left(\pi+x\right)=\)<br>
+            \(~~~~~\sin\left(\pi+x\right)=\)<br>
+
+
+        </li>
+        <li> <b>Symétrie / \(y=x\)</b><br>
+            <img src="assets/aayx.png" /><br>
+            \(~~~~~\cos\left(\dfrac{\pi}{2}-x\right)=\)<br>
+            \(~~~~~\sin\left(\dfrac{\pi}{2}-x\right)=\)<br>
+            \end{itemize}
+
+
+            \vspace{-5mm}
+
+            <div class="exo">Simplifier les expressions suivantes :
+                \begin{itemize</div>
+        </li>
+        <li> \(A=2\cos\left(\frac{\pi}{4}-x\right)+\sin(\pi+x)-3\sin(\pi-x)\)
+        </li>
+        <li> \(B=\cos^2\left(\frac{\pi}{4}-x\right)+\sin^2(\pi+x)-2\cos^2(\pi+x)\)<br>
+            \end{itemize}
+            }
+            \vspace{-5mm}
+
+            <h2 class="section">Fonctions sinusoïdales</h2>
+
+            \vspace{-5mm}
+
+
+            <div class="rema">
+                !!!!!!</div>
+            \(\cos\) et \(\sin\) étant \(2\pi\)-périodiques, on les étudie sur une période :
+            \(\left[0;2\pi\right[\).
+
+            <h3 class="subsection">Signe de \(\cos\) et \(\sin\)</h3>
+
+
+            <div class="prop">
+                !!!!!!</div>
+            <br>
+            \begin{variations}
+            x & 0 & ~~~~~~~~~~~~~~~~~~~~ & 2\pi <br> \filet
+            \cos x & & & <br>
+            \end{variations}
+
+            \noindent\begin{variations}
+            x & 0 & ~~~~~~~~~~~~~~~~~~~~ & 2\pi <br> \filet
+            \sin x & & & <br>
+            \end{variations}
+
+            <img src="assets/ctsigne.png" />
+
+
+
+            \vspace{-2cm}
+
+            <h3 class="subsection">Graphes</h3>
+            <img src="assets/cossin.png" /><br>
+            <div class="exo">Dresser les tableaux de variation de \(\cos\) et de \(\sin\) sur
+                \(\left[0;2\pi\right]\) :
+                <div class="center">
+                    \begin{variations</div>
+                x & 0 & ~~~~~~~ & \frac{\pi}{2} & ~~~~~~~ & \pi & ~~~~~~~ &\frac{3\pi}{2} & ~~~~~~~ & 2\pi <br>
+                \filet
+                \m{\cos x} & & &&&&&& &\h{~} <br> \filet
+                \m{\sin x} & & &&&&&& &\h{~} <br>
+                \end{variations}
+            </div>}
+
+            <div class="rema">
+                !!!!!!</div>
+            On vérifie bien que \(\sin\) et \(\cos\) sont bornées par \(-1\) et \(1\).<br>
+            <div class="exo">Quel est le nombre de points d'intersection des courbes représentant les fonctions
+                \(\cos\)
+                et
+                \(\sin\) sur l'intervalle \(\left[0;200\pi\right]\) ?</div>
+
+
+            <h3 class="subsection">Signal sinosoïdal</h3>
+            <div class="defi">Une fonction du temps de la forme \(f(t)=A\cos\left(\omega t+\phi\right)\) ou
+                \(g(t)=A\sin\left(\omega t+\phi\right)\) s'appelle signal sinusoïdal d'<b>amplitude</b> \(A\),
+                de
+                <b>pulsation</b> \(\omega\) et de <b>phase à l'origine</b> \(\phi\).
+            </div><br>
+
+            <div class="rema">
+                !!!!!!</div>
+            Le graphe du signal est le même que les fonctions \(\sin\) et \(\cos\) vues précedemment, mais il
+            oscille
+            entre
+            les valeurs \(\pm A\) au lieu de \(\pm1\) et n'est plus \(2\pi\)-périodique :<br>
+            <br> On a \(\omega=\displaystyle\frac{2\pi}{T}=2\pi F\) où \(T\) est la période du signal et
+            \(F=\frac{1}{T}\)
+            sa fréquence.<br>
+
+            <div class="exem">
+                !!!!!!</div>
+            \(f(x)=2\cos\left(2\pi x+\frac{\pi}{3}\right)\) et \(g(x)=4\sin\left(4\pi x-\frac{\pi}{6}\right)\)
+            :<br>
+            <img src="assets/sigsin.png" /><br>
+            <div class="exo">Identifier la période, la pulsation, la fréquence et la phase à l'origine des
+                signaux
+                ci-dessus.</div><br>
+            <div class="exo">Tracer sur \(\left[-2;10\right]\) le signal sinusoïdal \(h(t)=2\cos\left(\frac{\pi
+            </div>
+            {2}t\right)\).}
+
+            <div class="exo">On se place dans un repère orthonormé \((O;I;J)\) et dans le cercle trigonométrique
+                associé.<br>
+                On considère une horloge analogique tracée sur ce cercle trigonométrique, munie d'une petite
+                aiguille
+                \(\overrightarrow{OP</div>\) de norme \(\frac{3}{4}\) et d'une grande aiguille
+            \(\overrightarrow{OG}\)
+            de
+            norme \(1\). Le fonctionnement de cette horloge à la fois esthétique et précise est conventionnel ;
+            et
+            assuré
+            par des piles en bon état de marche.<br>
+
+            On note \(t\) le temps, en heures, et on considère une journée \(\mathcal{D}=\left[0;24\right[\).
+
+            <ol>
+                <li> Faire une figure ; on insistera sur l'aspect esthétique de l'horloge.
+                </li>
+                <li> Vérifier que pour tout \(t\in \mathcal{D}\), on a :
+                    \(\displaystyle\left\{\begin{array}{l}
+                    \widehat{\left(\overrightarrow{OJ};\overrightarrow{OG}\right)}\equiv-2\pi t\pmod{2\pi}<br>
+                    \widehat{\left(\overrightarrow{OJ};\overrightarrow{OP}\right)}\equiv\frac{-2\pi}{12}
+                    t\pmod{2\pi}<br>
+                    \end{array}\right.\)
+                </li>
+                <li> Il est \(11\)h\(12\). Quel est l'angle aigu formé par les deux aiguilles ?
+                </li>
+                <li> À quelle heure de la journée les deux aiguilles sont-elles symétriques par rapport à
+                    \((Ox)\) ?
+                </li>
+                <li> À quelle heure de la journée les deux aiguilles sont-elles symétriques par rapport à
+                    \((Oy)\) ?
+                </li>
+                <li> À quelle heure de la journée les deux aiguilles sont-elles colinéaires ? De même sens ? De
+                    sens
+                    opposé
+                    ?
+                </li>
+                <li> À quelle heure de la journée les deux aiguilles sont-elles orthogonales ?
+
+                </li>
+            </ol>
+            }
+
+
+            <h2 class="section">(In)Équations trigonométriques</h2>
+
+            <h3 class="subsection">Équation \(\cos x=k\) avec \(k\in\R\)</h3>
+
+            <div class="prop">
+                !!!!!!</div>
+
+            \begin{itemize}
+        </li>
+        <li> Si \(k<-1\) ou bien si \(k>1\), l'équation \(\cos x = k\) n'a pas de solution ;
+        </li>
+        <li> si \(k\in[-1;1]\), alors \(\cos x = k\) a une infinité de solutions dans \(\R\), qui correspondent
+            à
+            une ou
+            deux solutions modulo \(2\pi\).<br>
+            \end{itemize}
+            \vspace{-5mm}
+
+            <div class="meth">
+                \begin{itemize</div>
+        </li>
+        <li> On place \(k\) sur <b>l'axe \((Ox)\)</b> (correspondant à \(\cos\)) ;
+        </li>
+        <li> on recherche les deux angles \(\alpha\) et \(-\alpha\) tels que \(\cos \alpha=k\) ;<br>
+            \end{itemize}
+            }
+
+            <div class="rema">
+                !!!!!!</div>
+            on peut utiliser \(\alpha=\arccos k\) noté aussi souvent \(\cos^{-1} k\) ;
+            <img src="assets/ct.png" /><br>
+
+            \vspace{-5mm}
+
+            \begin{itemize}
+        </li>
+        <li> on a alors :
+            \(\displaystyle\cos x = k~~~~\Leftrightarrow
+            ~~~~x\equiv\alpha~~(2\pi)\textrm{~~~ou~~~}x\equiv-\alpha~~(2\pi)\)
+            \end{itemize}
+            }
+            <div class="exo">Résoudre \(\cos x=\frac{1</div>{2}\).}
+            <h3 class="subsection">Équation \(\sin x=k\) avec \(k\in\R\)</h3>
+
+            <div class="prop">
+                !!!!!!</div>
+
+            \begin{itemize}
+        </li>
+        <li> Si \(k<-1\) ou bien si \(k>1\), l'équation \(\sin x = k\) n'a pas de solution ;
+        </li>
+        <li> si \(k\in[-1;1]\), alors \(\sin x = k\) a une infinité de solutions dans \(\R\), qui correspondent
+            à
+            une ou
+            deux solutions modulo \(2\pi\).<br>
+            \end{itemize}
+            \vspace{-5mm}
+
+            <div class="meth">
+                \begin{itemize</div>
+        </li>
+        <li> On place \(k\) sur <b>l'axe \((Oy)\)</b> (correspondant à \(\sin\)) ;
+        </li>
+        <li> on recherche les deux angles \(\alpha\) et \(\pi-\alpha\) tels que \(\sin \alpha=k\) ;<br>
+            \end{itemize}
+            }
+
+            <div class="rema">
+                !!!!!!</div>
+            on peut utiliser \(\alpha=\arcsin k\) noté aussi souvent \(\sin^{-1} k\) ;
+            <img src="assets/ct.png" /><br>
+
+            \vspace{-5mm}
+
+            \begin{itemize}
+        </li>
+        <li> on a alors :
+            \(\displaystyle\sin x = k~~~~\Leftrightarrow
+            ~~~~x\equiv\alpha~~(2\pi)\textrm{~~~ou~~~}x\equiv\pi-\alpha~~(2\pi)\)
+            \end{itemize}
+            }
+            <div class="exo">Résoudre \(\sin x=\frac{1</div>{2}\).}<br>
+
+            <div class="rema">
+                !!!!!!</div>
+            Attention à ne pas se tromper d'axe en plaçant \(k\) !<br>
+
+            <div class="exo">Résoudre les équations trigonométriques suivantes :
+
+
+                <ol>
+                    <li> \(3\sin x -5=0\)
+                    </li>
+                    <li> \(\sin^2 x=2\)
+                    </li>
+                    <li> \(\sqrt{2
+            </div>+2\cos x =0\)
+        </li>
+        <li> \(\sin\left(x+\frac{\pi}{4}\right)=\frac{1}{2}\)
+        </li>
+        <li> \(2\sin 2x=1\)
+        </li>
+        <li> \(\cos\frac{x}{2}=\frac{-\sqrt{2}}{2}\)
+        </li>
+        <li> \(4\sin^2-3=0\)
+        </li>
+        <li> \(2\cos^2 x=1\)
+        </li>
+        <li> \(\sin 2x =\cos\left(x-\frac{\pi}{3}\right)\)
+        </li>
+        <li> \(\sin 3x= \cos 2x\)
+        </li>
+        <li> \(\cos^2x=\sin^2 2x\)
+        </li>
+        <li> \(\sin 2x=\cos \frac{x}{2}\)
+
+        </li>
+        </ol>
+
+        }
+
+        <div class="rema">
+            !!!!!!</div>
+        On adapte ces méthodes aux inéquations trigonométriques facilement. <br>
+        <div class="exo">Résoudre \(\cos x \leq \dfrac{1</div>{2}\) et \(\sin x > \dfrac{\sqrt{3}}{2}\).}
+
+        <h2 class="section">Coordonnées polaires</h2>
+        Dans un repère <b>orthonormé</b>, soit \(M\) un point du plan distinct de l'origine \(O\).<br>
+        <img src="assets/pol.png" /><br>
+
+        <div class="prop">
+            !!!!!!</div>
+        Tout point \(M\) distinct de l'origine \(O\) peut être repéré par un couple de réels
+        \(\left(r;\alpha\right)_{\textrm{pol}}\)
+        \begin{itemize}
+        </li>
+        <li> \(r=OM>0\) (distance à l'origine) ; unique ;
+        </li>
+        <li> \(\alpha\equiv\widehat{\left(\overrightarrow{OI};\overrightarrow{OM}\right)}\) (angle par rapport à
+            l'axe
+            des
+            abscisses) ; unique <b>modulo \(2\pi\)</b>.<br>
+            \end{itemize}
+
+            <div class="defi">\(\left(r;\alpha\right)_{\textrm{pol</div>}\) s'appelle <b>coordonnées</b>
+            <b>polaires</b>
+            de
+            \(M\) dans \((O;I;J)\).}<br>
+
+
+            <div class="prop">
+                !!!!!!</div>
+            On a alors :
+            \(\displaystyle\left\{\begin{array}{l}
+            x=r\cos\alpha<br>
+            y=r\sin\alpha<br>
+            \end{array}\right.
+            \Leftrightarrow
+            \left\{\begin{array}{l}
+            r=\sqrt{x^2+y^2}<br>
+            \cos\alpha=\dfrac{x}{r}<br>
+            \sin\alpha=\dfrac{y}{r}<br>
+            \end{array}\right.
+            \)
+            <div class="exo">
+                <ol>
+                    <li> Donner les coordonnées cartésiennes de \(A\left(3;\frac{-5\pi
+            </div>{6}\right)_{\textrm{pol}}\).
+        </li>
+        <li> Déterminer les coordonnées polaires de \(B\left(2;2\sqrt{3}\right)\).
+
+        </li>
+        </ol>
+        }
+
+        <h2 class="section">Projection orthogonale</h2>
+        <h3 class="subsection">Définition</h3>
+        Soit \(\overrightarrow{F}\) un vecteur, et \((d)\) une droite dirigée par \(\overrightarrow{u}\) : <br>
+        <img src="assets/projdef.png" /><br>
+        <div class="defi">On appelle <b>projeté othogonal</b> de \(\overrightarrow{F</div>\) sur \((d)\) (on
+        peut
+        aussi
+        dire
+        sur \(\overrightarrow{u}\), seule la direction importe) le vecteur \(\overrightarrow{F}_d\) défini par
+        :}
+        \(\displaystyle\overrightarrow{F}_d=\dfrac{||\overrightarrow{F}||\cos\alpha}{||\overrightarrow{u}||}\overrightarrow{u}\)
+
+        \indent
+        <div class="prop">
+            !!!!!!</div>
+        Tout vecteur dont l'origine et l'extrémité sont placées sur les mêmes droites perpendiculaires à \((d)\)
+        que
+        \(\overrightarrow{F}\) a même projeté orthogonal que \(\overrightarrow{F}\) sur \((d)\).<br>
+
+        <div class="exo">Dessiner un vecteur \(\overrightarrow{F</div>_1\) ayant même projeté orthogonal sur
+        \((d)\)
+        que
+        \(\overrightarrow{F}\).}<br>
+
+        <div class="exo">\(\overrightarrow{v</div>\), de norme \(3\), fait un angle de \(\frac{\pi}{6}\) avec la
+        droite
+        \(d\) dirigée par \(\overrightarrow{u}{3\choose4}\).<br>
+        Donner une valeur approchée de \(v_d\) à \(10^{-3}\) près, ainsi que les coordonnées de
+        \(\overrightarrow{v_d}\)
+        à
+        \(10^{-3}\) près.}<br>
+
+        <h3 class="subsection">Sur les axes</h3>
+
+        On se place dans un repère <b>orthonormé</b> \(\left(O;\overrightarrow{i};\overrightarrow{j}\right)\).
+        Toutes
+        les
+        lignes de rappel sont parallèles ou perpendiculaires aux axes. Le vecteur \(\overrightarrow{F}\) fait un
+        angle
+        \(\alpha\) avec l'axe \((Ox)\).<br>
+        <img src="assets/proj.png" /><br>
+        <div class="defi">On appelle <b>projeté othogonal</b> de \(\overrightarrow{F</div>\) sur \((Ox)\) (ou
+        bien
+        sur
+        tout
+        vecteur de même direction que cet axe, par exemple \(\overrightarrow{i}\)) le vecteur
+        \(\overrightarrow{F_x}=F_x\overrightarrow{i}\) défini par :}
+        \(\displaystyleF_x=||\overrightarrow{F}||\cos\alpha\)
+        \indent<div class="exo">En toute généralité, démontrer que \(F_y=||\overrightarrow{F</div>
+        ||\sin\alpha\).}
+
+        <h3 class="subsection">Problème</h3>
+        <div class="exo">Big Mike et Little Tim font du skate \(M\) sur un plan incliné de \(\alpha=30^\circ\)
+            long
+            de
+            \(OA=20\,\)m. Ils partent de \(D\)u temps \(t=0\) (en secondes), sans vitesse initiale et comptent
+            arriver
+            au
+            point \(A\). On néglige les frottements du skate, les roues ont été changées et c'est de la
+            top-qualité.<br>
+            <img src="assets/sk.png" /><br>
+            <b>Bilan des forces : </b>Le poids \(\overrightarrow{P
+        </div>=m\overrightarrow{g}\) du système skate+skateur de masse \(m\) est compensé partiellement par la
+        réaction
+        du
+        support \(\overrightarrow{R}\) : le skate ne s'enfonce pas dans le sol mais il n'y a pas équilibre des
+        forces
+        (contrairement au skateur, on y croit), et c'est le projeté orthogonal \(\overrightarrow{F}\) de
+        \(\overrightarrow{P}\) sur \(DA\) qui va induire un mouvement du point \(M\).
+        <ol>
+            <li> Calculer \(F\) (\(=||\overrightarrow{F}||\)).
+            </li>
+            <li> <b>Relation de Newton : </b>\(\overrightarrow{F}=m\overrightarrow{a}\) où \(a\) désigne
+                l'accélération
+                (en
+                m/s\(^2\)).<br>
+                Calculer l'accélération du point \(M\).
+            </li>
+            <li> La situation est-elle changée si le skateur est Big Mike ou bien Little Tim ? S'il n'y a pas de
+                skateur
+                sur
+                le skate ?
+            </li>
+            <li> On rappelle que la dérivée de la distance parcourue est la vitesse et que la dérivée de la
+                vitesse
+                est
+                l'accélération.<br>
+                Calculer la vitesse \(v(t)\) et la distance \(d(t)\).
+            </li>
+            <li> Au bout de combien de temps le point \(M\) est-il en \(A\) ?
+            </li>
+            <li> En déduire la vitesse d'arrivée en km/h.
+
+            </li>
+        </ol>
+        }
+
+        \newpage
+
+        <h2 class="section">Formules d'addition, applications</h2>
+        <h3 class="subsection">Formules d'addition</h3>
+
+        <div class="prop">
+            !!!!!!</div>
+        \begin{itemize}
+        </li>
+        <li> \(\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta\)
+        </li>
+        <li> \(\sin(\alpha-\beta)=\sin\alpha\cos\beta-\cos\alpha\sin\beta\)
+        </li>
+        <li> \(\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta\)
+        </li>
+        <li> \(\sin(\alpha-\beta)=\cos\alpha\cos\beta+\sin\alpha\sin\beta\)<br>
+            \end{itemize}
+
+
+            <div class="demo">
+                !!!!!!</div>
+            <b>C'est un peu long, mais simple :</b><br>
+
+            <div class="rema">
+                !!!!!!</div>
+            Dans cette démonstration, toutes les longueurs sont exprimées en valeur algébrique pour prendre en
+            compte le
+            fait que les angles \(\alpha\) et \(\beta\) peuvent être obtus. On pourra ne pas en tenir compte en
+            première
+            approche.
+            <img src="assets/fa.png" /><br>
+            <div class="exo">Justifier que \(\widehat{AOB</div>=\widehat{DCB}\).}<br>
+            On note que \(\overline{DE}=\overline{AB}\) :
+            \begin{eqnarray*}
+            \sin(\alpha+\beta)&=&\dfrac{\overline{ED}+\overline{DC}}{\overline{OC}}
+            =\dfrac{\overline{ED}}{\overline{OC}}+\dfrac{\overline{DC}}{\overline{OC}}<br>
+            &=&\dfrac{\overline{ED}}{\overline{OC}}\dfrac{\overline{OB}}{\overline{OB}}+\dfrac{\overline{DC}}{\overline{OC}}\dfrac{\overline{BC}}{\overline{BC}}<br>
+            &=&\dfrac{\overline{OB}}{\overline{OC}}\dfrac{\overline{ED}}{\overline{OB}}+\dfrac{\overline{BC}}{\overline{OC}}\dfrac{\overline{DC}}{\overline{BC}}<br>
+            &=&\dfrac{\overline{OB}}{\overline{OC}}\dfrac{\overline{AB}}{\overline{OB}}+\dfrac{\overline{BC}}{\overline{OC}}\dfrac{\overline{DC}}{\overline{BC}}<br>
+            &=&\cos\beta \sin\alpha+\sin\beta \cos\alpha<br>
+            &=&\sin\alpha\cos\beta+\cos\alpha\sin\beta<br>
+            \end{eqnarray*}
+
+            <div class="exo">Démontrer les autres formules par des changments de variables
+                \(\beta\rightarrow-\beta\) et
+                \(\alpha\rightarrow\frac{\pi</div>{2}-\alpha\).}<br>
+
+            <h3 class="subsection">Duplication</h3>
+            <div class="exo"><b>Formules de duplication :</b><br>
+                En déduire, en fonction de \(\cos x\) et \(\sin x\), la valeur de \(\cos(2x)\) et \(\sin(2x)\).
+            </div>
+
+            <h3 class="subsection">Dérivation</h3>
+
+            <div class="prop">
+                !!!!!!</div>
+            \(\sin'x=\cos x\) et \(\cos'x=-\sin x\).<br>
+
+            <div class="demo">
+                !!!!!!</div>
+            <div class="exo">Établir les deux formules précédentes en utilisant le taux de variation en \(x\) de
+                \(\sin\)
+                (puis de \(\cos\)), les formules d'addition, et le fait que \(\displaystyle\lim_{h\to0</div>
+            \dfrac{\sin
+            h}{h}=1\) et \(\displaystyle\lim_{h\to0}\dfrac{\cos h -1}{h}=0\).}<br>
+            <div class="exo">Que se passe-t-il si l'on dérive \(\cos\) ou \(\sin\) 4 fois ?</div><br>
+
+
+            <div class="prop">
+                !!!!!!</div>
+            <b>Dérivation de fonctions sinusoïdales :</b>
+            \begin{itemize}
+        </li>
+        <li> \(\left[\cos(\omega t +\phi)\right]'=-\omega\sin(\omega t+\phi)\)
+        </li>
+        <li> \(\left[\sin(\omega t +\phi)\right]'=\omega\cos(\omega t+\phi)\)
+            \end{itemize}
+
+            <div class="exo">Calculer la dérivée de \(\sin(3t+2)\).</div>
+
+            % TERMINALE
+
+            <div class="prop">
+                !!!!!!</div>
+            <b>Primitives de fonctions sinusoïdales :</b>
+            \begin{itemize}
+        </li>
+        <li> \(\left[\dfrac{-\cos(\omega t +\phi)}{\omega}\right]'=\sin(\omega t+\phi)\)
+        </li>
+        <li> \(\left[\dfrac{\sin(\omega t +\phi)}{\omega}\right]'=\cos(\omega t+\phi)\)
+            \end{itemize}
+
+
+            <h2 class="section">TD -- Étude de fonctions trigonométriques</h2>
+            <h3 class="subsection">Dérivées</h3>
+            <div class="exo">Calculer les dérivées des fonctions suivantes :
+                \begin{itemize</div>
+        </li>
+        <li> \(f(x)=\cos(x)\times\sin(x)\)
+        </li>
+        <li> \(g(x)=\dfrac{\cos x}{2+\cos x}\)
+        </li>
+        <li> \(h(x)=\sqrt{2+\sin(3x)}\)
+        </li>
+        <li> \(k(x)=\ln \left[3+\cos(5x-2)\right]\)
+        </li>
+        <li> \(t(x)=\dfrac{\cos x}{\sin x}\)
+            \end{itemize}
+            }<br>
+            <div class="exo">Démontrer que la fonction \(f(x)=5x+\cos(3x)\) est strictement croissante sur
+                \(\R\).
+            </div>
+
+            <h3 class="subsection">intégrales</h3>
+
+            <div class="exo">Calculer les intégrales suivantes :
+                \begin{itemize</div>
+        </li>
+        <li> \(\displaystyle\int_0^{\pi}\,\sin x\,\textrm{d}x\)
+        </li>
+        <li> \(\displaystyle\int_0^{\frac{\pi}{2}}\,(\sin x) \textrm{e}^{\cos x}\,\textrm{d}x\)
+        </li>
+        <li> \(\displaystyle\int_0^{\pi}\,\dfrac{\cos x}{2+\sin x}\,\textrm{d}x\)
+            \end{itemize}
+            }
+
+            <h3 class="subsection">Limites</h3>
+
+            <div class="exo">Déterminer les limites suivantes (on peut être amené à encadrer \(\sin\) ou
+                \(\cos\)) :
+                <ol>
+                    <li> \(\displaystyle\lim_{x\to+\infty
+            </div> (x+\sin x)\)
+        </li>
+        <li> \(\displaystyle\lim_{x\to-\infty} \dfrac{\cos (3x)}{x^2}\)
+        </li>
+        <li> \(\displaystyle\lim_{x\to+\infty} \left(3+\dfrac{2\sin x}{x}\right)\)
+        </li>
+        <li> \(\displaystyle\lim_{x\to\pi^-} \dfrac{x}{\sin x}\)
+        </li>
+        <li> \(\displaystyle\lim_{x\to\pi^+} \left(3+\dfrac{x}{2\sin x}\right)\)
+
+        </li>
+        </ol>
+        }
+
+        <h3 class="subsection">Bac métropole 2016</h3>
+        <div class="exo">~<br>
+            <img src="assets/exobac.png" /><br>
+            Lors d'un match de rugby, un joueur doit transformer un essai qui a été marqué au point \(E\) (voir
+            figure
+            ci-dessus) situé à l'extérieur du segment \([AB]\).
+            La transformation consiste à taper le ballon par un coup de pied depuis un point \(T\) que le joueur
+            a
+            le
+            droit
+            de choisir n'importe où sur le segment \([EM]\) perpendiculaire à la droite \((AB)\) sauf en \(E\).
+            La
+            transformation est réussie si le ballon passe entre les poteaux repérés par les points \(A\) et
+            \(B\)
+            sur la
+            figure.<br>
+            Pour maximiser ses chances de réussite, le joueur tente de déterminer la position du point \(T\) qui
+            rend
+            l'angle \(\widehat{ATB
+        </div>\) le plus grand possible.<br>
+        Le but de cet exercice est donc de rechercher s'il existe une position du point \(T\) sur le segment
+        \([EM]\)
+        pour
+        laquelle l'angle \(\widehat{ATB}\) est maximum et, si c'est le cas, de déterminer une valeur approchée
+        de
+        cet
+        angle.<br>
+        Dans toute la suite, on note \(x\) la longueur \(ET\), qu'on cherche à déterminer.<br>
+
+        Les dimensions du terrain sont les suivantes : \(EM = 50\)\,m, \(EA = 25\)\,m et \(AB = 5,6\)\,m . On
+        note
+        \(\alpha\) la mesure en radian de l'angle \(\widehat{ETA}\), \(\beta\) la mesure en radian de l'angle
+        \(\widehat{ETB}\) et \(\gamma\) la mesure en radian de l'angle \(\widehat{ATB}\).<br>
+
+        \medskip
+        <ol>
+            <li> En utilisant les triangles rectangles \(ETA\) et \(ETB\) ainsi que les longueurs fournies,
+                exprimer
+                \(\tan
+                \alpha\) et \(\tan \beta\) en fonction de \(x\).<br>
+                La fonction tangente est définie sur l'intervalle \(\left]0~;~\dfrac{\pi}{2}\right[\) par \(\tan
+                x =
+                \dfrac{\sin x}{\cos x}\).
+            </li>
+            <li> Montrer que la fonction tan est strictement croissante sur l'intervalle \(\left]0~;~
+                \dfrac{\pi}{2}\right[\).
+            </li>
+            <li> L'angle \(\widehat{ATB}\) admet une mesure \(\gamma\) appartenant à l'intervalle \(\left]0~;~
+                \dfrac{\pi}{2}\right[\), résultat admis ici, que l'on peut observer sur la figure.<br>
+                On admet que, pour tous réels \(a\) et \(b\) de l'intervalle \(\left]0~;~
+                \dfrac{\pi}{2}\right[\),<br>
+                \(\tan(a - b) = \dfrac{\tan a - \tan b}{1 + \tan a \times \tan b}\). Montrer que \(\tan \gamma =
+                \dfrac{5,6x}{x^2 + 765}\).
+            </li>
+            <li> L'angle \(\widehat{ATB}\) est maximum lorsque sa mesure \(\gamma\) est maximale. Montrer que
+                cela
+                correspond à un minimum sur l'intervalle \(\left]0~;~50\right]\) de la fonction \(f\) définie
+                par :
+                \(f(x)=
+                x+ \dfrac{765}{x}\). <br>
+                Montrer qu'il existe une unique valeur de \(x\) pour laquelle l'angle \(\widehat{ATB}\) est
+                maximum
+                et
+                déterminer cette valeur de \(x\) au mètre près ainsi qu'une mesure de l'angle \(\widehat{ATB}\)
+                à
+                \(0,01\)
+                radian près.
+
+            </li>
+        </ol>
+    </main>
+
+</body>
+
+</html>

@@ -2,9 +2,11 @@
 
 
 const root_path = document.head.getElementsByTagName("script")[0].getAttribute("src").replace('s.js', '');
-console.log("root_path : "+root_path);
 const import_module = document.head.getElementsByTagName("script")[0].hasAttribute("data-import") ? document.head.getElementsByTagName("script")[0].getAttribute("data-import").split(" ") : [];
-console.log("import_module : " + import_module);
+const before_title = "Mathématiques - ";
+const icon = "έ"
+//console.log("root_path : "+root_path);
+//console.log("import_module : " + import_module);
 
 // Modules
 
@@ -23,11 +25,7 @@ const modules_head = {
 				    ],
 "ul-collapsible" : [{"path":"scripts/ul-collapsible/ul-collapsible.css",
                      "default":false
-                   }],
-"quadrillage" :    [{"path":"scripts/quadrillage/quadrillage.js",
-				      "default":false, 
-		              "attr":{"defer":"true"}}],
-					  
+                   }],					  
 }
 
 
@@ -58,7 +56,7 @@ for (var key in hashtable){
 	}
 	/* special cases */
 	/* prism line numbering */
-	if ((key == "prism")&&(import_module.includes(key))) {
+	if (import_module.includes("prism")) {
 		document.body.classList.add("line-numbers")
 	}
 }
@@ -67,82 +65,122 @@ for (var key in hashtable){
 // Class rootpath href/src modification
 
 function apply_rootpaths() {
-	function apply_rootpath(item) {
-		for (attr of ["src", "href"]) {
-				if (item.hasAttribute(attr)) {
-						item.setAttribute(attr, root_path+item.getAttribute(attr));
-						};
-				};
-		};
-	Array.from(document.querySelectorAll(".rootpath")).forEach(apply_rootpath);
+    function apply_rootpath(item) {
+        for (attr of ["src", "href"]) {
+            if (item.hasAttribute(attr)) {
+	        item.setAttribute(attr, root_path+item.getAttribute(attr));
+	    };
+        };
+    };
+    Array.from(document.querySelectorAll(".rootpath")).forEach(apply_rootpath);
 };
 
 
+// Images full screen onclick
+function full_screen_imgs() {
+    const full_page = document.createElement("div");
+    full_page.id = "fullpage"
+    full_page.style.cssText = `display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: white;`;
+    full_page.addEventListener("click", function() {
+        full_page.style["display"] = "none";
+    });
+    document.body.appendChild(full_page);
+
+    Array.from(document.getElementsByTagName("img")).forEach(img => {
+       img.addEventListener("click", function() {
+       full_page.style["background-image"] = `url(${img.src})`;
+       full_page.style["display"] = "block";
+       full_page.style["top"] = `${window.scrollY}px`;
+       full_page.style["left"] = `${window.scrollX}px`;
+       });
+    });
+}
+
+
+function build_head (before=before_title) {
+    let page_title = before + document.getElementsByTagName("h1")[0].textContent.trim();
+    let title = document.head.getElementsByTagName("title")[0];
+    if (!title) {
+	    title = document.createElement("title") ; document.head.appendChild(title);}
+    title.text = page_title;
+
+    let favicon = document.createElement("link");
+    favicon.setAttribute("rel", "icon");
+    favicon.setAttribute("href", `data:image/svg+xml, <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22limegreen%22>${icon}</text></svg>`);
+    document.head.appendChild(favicon);
+    
+    Array.from(document.head.getElementsByTagName("meta")).forEach(function(el){
+	console.log(el); // afaire
+    });
+
+    return page_title;
+}
 
 
 function body () {
+    let page_title = build_head();
     inject_cssjs (modules_head, document.head, import_module);
-	apply_rootpaths();
+    apply_rootpaths();
+    full_screen_imgs();
 
-// head : title, metas
-const before_title = "Mathématiques - ";
-const page_title = before_title + document.getElementsByTagName("h1")[0].textContent.trim();
-const title = document.head.getElementsByTagName("title")[0];
-title.text = page_title;
-Array.from(document.head.getElementsByTagName("meta")).forEach(function(el){
-	return 0; // afaire
-});
-
-// body : header and footer
+// body : add header with nav
 const header = document.createElement("header");
 document.body.prepend(header);
-const footer = document.createElement("footer");
-document.body.append(footer);
-
 header.innerHTML += `
 <nav class="navbar">
 <input type="checkbox" id="navbar-menu-switch" style="display:none;"/>
 <label for="navbar-menu-switch" class="navbar-icon navbar-logo"></label>
-	<div class="navbar-collapse">
-		<div class="navbar-group">                    
-			<div class="navbar-item">
-			<div class="navbar-text" style="font-size:larger;font-weight:bold;">
-			Mathématiques
-			</div>
-			<div class="navbar-text">
-			Cours</div>
-			</div>
-			</div>
-			<div class="navbar-group">
-			<a class="navbar-item" id="navbar-index" href="${root_path}/index.html">
-			<img class="navbar-icon" src="${root_path}layouts/nav/assets/home.svg"/>
-			<div class="navbar-text">home</div>
-			</a>
-			<a class="navbar-item" href="https://www.geogebra.org/classic" target="_blank">
-			<img class="navbar-icon" src="${root_path}layouts/nav/assets/geogebra.svg"/>
-			<div class="navbar-text">GeoGebra</div>
-			</a>
-			<a class="navbar-item" href="./assets/print.pdf" download="${page_title}.pdf">
-			<img class="navbar-icon" src="${root_path}layouts/nav/assets/pdf.svg"/>
-			<div class="navbar-text">pdf</div>
-			</a>
-			<a class="navbar-item" href="#" onclick="window.print();return false;">
-			<img class="navbar-icon" src="${root_path}layouts/nav/assets/print.svg"/>
-			<div class="navbar-text">print</div>
-			</a>
-			</div>
-			<div class="navbar-group">
-			<a class="navbar-item" href="${root_path}pages/links/links.html">
-			<img class="navbar-icon" src="${root_path}layouts/nav/assets/links.svg"/>
-			<div class="navbar-text">links</div>
-			</a>
-			<a class="navbar-item" href="https://github.com/f83y55/math/archive/refs/heads/master.zip">
-			<img class="navbar-icon" src="${root_path}layouts/nav/assets/download.svg"/>
-			<div class="navbar-text">download</div>
-			</a>
-		</div>
+    <div class="navbar-collapse">
+        <div class="navbar-group">                    
+            <div class="navbar-item">
+	        <div class="navbar-text" style="font-size:larger;font-weight:bold;">Mathέmatiques</div>
+	        <div class="navbar-text">Cours</div>
+            </div>
+        </div>
+	<div class="navbar-group">
+	    <a class="navbar-item" id="navbar-index" href="${root_path}/index.html">
+	        <span class="navbar-icon">⌂</span>
+	        <div class="navbar-text">home</div>
+	    </a>
+	    <a class="navbar-item" href="https://www.geogebra.org/classic" target="_blank">
+	        <span class="navbar-icon">𝓖</span>
+	        <div class="navbar-text">ggb</div>
+	    </a>
+	    <a class="navbar-item" href="./assets/print.pdf" download="${page_title}.pdf">
+	        <span class="navbar-icon">🖺</span>
+	        <div class="navbar-text">pdf</div>
+	    </a>
+	    <a class="navbar-item" href="#" onclick="window.print();return false;">
+	        <span class="navbar-icon">🖶</span>
+	        <div class="navbar-text">print</div>
+	    </a>
 	</div>
-</nav>
-				`
+	<div class="navbar-group">
+	    <a class="navbar-item" href="${root_path}pages/links/links.html">
+	        <span class="navbar-icon">🕸</span>
+	        <div class="navbar-text">links</div>
+	    </a>
+	    <a class="navbar-item" href="https://github.com/f83y55/math/archive/refs/heads/master.zip" download>
+	        <span class="navbar-icon">⤓</span>
+	        <div class="navbar-text">download</div>
+	    </a>
+	</div>
+    </div>
+</nav>`
+
+// body : add footer
+const footer = document.createElement("footer");
+document.body.append(footer);
+
 };
 

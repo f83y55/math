@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../s.js"></script>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        .py-repl-output,
+        #info {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: smaller;
+        }
+
+        #info li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cm-line {
+            font-size: larger;
+        }
+
+        pre.py-terminal {
+            display: none;
+        }
+    </style>
+</head>
+
+<body onload="body()">
+    <section class="pyscript">
+        <h1><b>PyScript REPL</b></h1>
+        <ul id="info">
+            <li>
+                Évaluer : Shift + entrée ;
+            </li>
+            <li>
+                <button onclick="file_save()">sauvegarder</button> la page sous le nom <input id="file_save"
+                    value="pyscript" type="text">.py .
+            </li>
+        </ul>
+        <div>
+            <py-repl id="my-repl" auto-generate="true"> </py-repl>
+        </div>
+    </section>
+    <script defer>
+        function file_save() {
+            let my_file = "";
+            Array.from(document.querySelectorAll(".cm-line")).forEach(el => {
+                my_file += el.textContent + "\n";
+            });
+            let file_name = document.getElementById("file_save").value;
+            let a = document.createElement('a');
+            a.setAttribute('download', `${file_name}.py`);
+            a.setAttribute('href', "data:text/plain;charset=utf-8," + encodeURIComponent(my_file));
+            a.setAttribute('style', "display:none;");
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+
+
+</body>
+
+</html>
