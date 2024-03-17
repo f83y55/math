@@ -1,15 +1,16 @@
 // site root / import_modules / title
 
-
-const root_path = document.head.getElementsByTagName("script")[0].getAttribute("src").replace('s.js', '');
-const import_module = document.head.getElementsByTagName("script")[0].hasAttribute("data-import") ? document.head.getElementsByTagName("script")[0].getAttribute("data-import").split(" ") : [];
 const before_title = "Mathématiques - ";
-const icon = "έ"
+const icon = "έ";
+const name_script = "s.js";
+
+const root_path = document.head.getElementsByTagName("script")[0].getAttribute("src").replace(name_script, '');
+const import_module = document.head.getElementsByTagName("script")[0].hasAttribute("data-import") ? document.head.getElementsByTagName("script")[0].getAttribute("data-import").split(" ") : [];
 //console.log("root_path : "+root_path);
 //console.log("import_module : " + import_module);
 
-// Modules
 
+// Modules
 const modules_head = {
 "style" :          [{"path":"styles/style.css", "default":true}],
 "nav" :            [{"path":"styles/nav.css", "default":true},],
@@ -110,19 +111,15 @@ function full_screen_imgs() {
 function build_head (before=before_title) {
     let page_title = before + document.getElementsByTagName("h1")[0].textContent.trim();
     let title = document.head.getElementsByTagName("title")[0];
-    if (!title) {
-	    title = document.createElement("title") ; document.head.appendChild(title);}
+    if (!title) {title = document.createElement("title") ; document.head.appendChild(title);}
     title.text = page_title;
-
     let favicon = document.createElement("link");
     favicon.setAttribute("rel", "icon");
     favicon.setAttribute("href", `data:image/svg+xml, <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22limegreen%22>${icon}</text></svg>`);
     document.head.appendChild(favicon);
-    
     Array.from(document.head.getElementsByTagName("meta")).forEach(function(el){
 	console.log(el); // afaire
     });
-
     return page_title;
 }
 
@@ -149,35 +146,35 @@ header.innerHTML += `
         </div>
 	<div class="navbar-group">
 	    <a class="navbar-item" id="navbar-index" href="${root_path}/index.html">
-	        <span class="navbar-icon">🏠</span>
+	        <div class="navbar-icon">🏠</div>
 	        <div class="navbar-text">home</div>
 	    </a>
 	    <a class="navbar-item" href="./assets/print.pdf" download="${page_title}.pdf">
-	        <span class="navbar-icon">📄</span>
+	        <div class="navbar-icon">📄</div>
 	        <div class="navbar-text">pdf</div>
 	    </a>
 	    <a class="navbar-item" href="#" onclick="window.print();return false;">
-	        <span class="navbar-icon">📠</span>
+	        <div class="navbar-icon">📠</div>
 	        <div class="navbar-text">print</div>
 	    </a>
 	</div>
 	<div class="navbar-group">
 	    <a class="navbar-item" href="https://www.geogebra.org/classic" target="_blank">
-	        <span class="navbar-icon">📐</span>
+	        <div class="navbar-icon">📐</div>
 	        <div class="navbar-text">ggb</div>
 	    </a>
 	    <a class="navbar-item" href="${root_path}scripts/pyscript/pyscript.html" target="_blank">
-	        <span class="navbar-icon">🐍</span>
+	        <div class="navbar-icon">🐍</div>
 	        <div class="navbar-text">py</div>
 	    </a>
 	</div>
 	<div class="navbar-group">
 	    <a class="navbar-item" href="${root_path}pages/links/links.html">
-	        <span class="navbar-icon">🖇</span>
+	        <div class="navbar-icon">🖇</div>
 	        <div class="navbar-text">links</div>
 	    </a>
 	    <a class="navbar-item" href="https://github.com/f83y55/math/archive/refs/heads/master.zip" download>
-	        <span class="navbar-icon">💾</span>
+	        <div class="navbar-icon">💾</div>
 	        <div class="navbar-text">download</div>
 	    </a>
 	</div>
