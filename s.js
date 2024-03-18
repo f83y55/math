@@ -135,47 +135,47 @@ const header = document.createElement("header");
 document.body.prepend(header);
 header.innerHTML += `
 <nav class="navbar">
-<input type="checkbox" id="navbar-menu-switch" style="display:none;"/>
-<label for="navbar-menu-switch" class="navbar-icon navbar-logo"></label>
-    <div class="navbar-collapse">
-        <div class="navbar-group">                    
-            <div class="navbar-item">
-	        <div class="navbar-text" style="font-size:larger;font-weight:bold;">Math<span style="color:limegreen;">έ</span>matiques</div>
-	        <div class="navbar-text">Cours</div>
+<input type="checkbox" id="menu-switch" style="display:none;"/>
+<label for="menu-switch" class="icon"></label>
+    <div class="collapse">
+        <div class="group">                    
+            <div class="item">
+	        <div class="text" style="font-size:larger;font-weight:bold;">Math<span style="color:limegreen;">έ</span>matiques</div>
+	        <div class="text">Cours</div>
             </div>
         </div>
-	<div class="navbar-group">
-	    <a class="navbar-item" id="navbar-index" href="${root_path}/index.html">
-	        <div class="navbar-icon">🏠</div>
-	        <div class="navbar-text">home</div>
+	<div class="group">
+	    <a class="item" href="${root_path}/index.html">
+	        <div class="icon">🏠</div>
+	        <div class="text">home</div>
 	    </a>
-	    <a class="navbar-item" href="./assets/print.pdf" download="${page_title}.pdf">
-	        <div class="navbar-icon">📄</div>
-	        <div class="navbar-text">pdf</div>
+	    <a class="item" href="./assets/print.pdf" download="${page_title}.pdf">
+	        <div class="icon">📄</div>
+	        <div class="text">pdf</div>
 	    </a>
-	    <a class="navbar-item" href="#" onclick="window.print();return false;">
-	        <div class="navbar-icon">📠</div>
-	        <div class="navbar-text">print</div>
-	    </a>
-	</div>
-	<div class="navbar-group">
-	    <a class="navbar-item" href="https://www.geogebra.org/classic" target="_blank">
-	        <div class="navbar-icon">📐</div>
-	        <div class="navbar-text">ggb</div>
-	    </a>
-	    <a class="navbar-item" href="${root_path}scripts/pyscript/pyscript.html" target="_blank">
-	        <div class="navbar-icon">🐍</div>
-	        <div class="navbar-text">py</div>
+	    <a class="item" href="#" onclick="window.print();return false;">
+	        <div class="icon">📠</div>
+	        <div class="text">print</div>
 	    </a>
 	</div>
-	<div class="navbar-group">
-	    <a class="navbar-item" href="${root_path}pages/links/links.html">
-	        <div class="navbar-icon">🖇</div>
-	        <div class="navbar-text">links</div>
+	<div class="group">
+	    <a class="item" href="https://www.geogebra.org/classic" target="_blank">
+	        <div class="icon">📐</div>
+	        <div class="text">ggb</div>
 	    </a>
-	    <a class="navbar-item" href="https://github.com/f83y55/math/archive/refs/heads/master.zip" download>
-	        <div class="navbar-icon">💾</div>
-	        <div class="navbar-text">download</div>
+	    <a class="item" href="${root_path}scripts/pyscript/pyscript.html" target="_blank">
+	        <div class="icon">🐍</div>
+	        <div class="text">py</div>
+	    </a>
+	</div>
+	<div class="group">
+	    <a class="item" href="${root_path}pages/links/links.html">
+	        <div class="icon">🖇</div>
+	        <div class="text">links</div>
+	    </a>
+	    <a class="item" href="https://github.com/f83y55/math/archive/refs/heads/master.zip" download>
+	        <div class="icon">💾</div>
+	        <div class="text">download</div>
 	    </a>
 	</div>
     </div>
