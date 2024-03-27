@@ -1,7 +1,6 @@
 :root {
   /* Theme WEB */
-  --navbar-size : max(4em, 10vw, 10vh);
-  --font-family: Helvetica, Ubuntu, Verdana, Geneva, Tahoma, sans-serif; /*'Times New Roman', Times, serif, Verdana, Helvetica, sans-serif;*/
+  --font-family: Ubuntu, Helvetica, Verdana, Geneva, Tahoma, sans-serif; /*'Times New Roman', Times, serif, Verdana, Helvetica, sans-serif;*/
   --font-family-titles: Impact;
   --font-size: 16pt; /*10pt*/
   --line-height: 1.6;
@@ -34,11 +33,10 @@
 
 body, main, section{
   box-sizing: border-box;
-  padding: 0 0;
-  margin: 0 0;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  overflow-x: auto;
   font-family: var(--font-family);
   font-size: var(--font-size);
   line-height: var(--line-height);
@@ -47,47 +45,18 @@ body, main, section{
 }
 
 
-.none:hover, .defi:hover, .theo:hover, .prop:hover, .meth:hover, .exem:hover, .exo:hover {
-    transition: background-image var(--transition-speed);
+.defi:hover, .theo:hover, .prop:hover, .meth:hover, .exem:hover, .exo:hover {
+    transition-duration: var(--transition-speed);
     background-image: linear-gradient(-90deg, rgba(255,255,255,0.5) 90%, rgba(255,255,255,0.9) 100%);
 }
 
 h1, h2, h3, h4, h5, h6 {font-family: var(--font-family-titles); padding: 0 var(--padding)}
 
-pre {
-    margin:0;
-    padding:0;
-}
-
-ul, ol {margin: 0;}
 li {padding: calc(var(--padding)/2);}
 a {color: inherit; text-decoration: underline;}
 
-
-
-
-img, figure {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-
-figcaption {
-    font-style: italic;
-    font-size: smaller;
-}
-
-/*
-img:active {
-    max-height: 40vh;
-    max-width: 40vw;
-    background-color: var(--color-bg);
-    transform: scale(2, 2) translate(-25%, 0);
-    -ms-transform: scale(2, 2) translate(-25%, 0);
-    -webkit-transform: scale(2, 2) translate(-25%, 0);
-    transition-duration: var(--transition-speed);
-}
-*/
+img, figure {max-width: 100%; max-height: 100%;}
+figcaption {font-style: italic; font-size: smaller;}
 
 
 h1 {
@@ -99,29 +68,14 @@ h1 {
     text-align: center;
 }
 
-h1:not(.nococounter) {
-    counter-reset: h2c exo defi prop theo rema exem;
-}
-
-h2 {
-    color: var(--color-section); 
-    margin: var(--margin);
-}
-
+h1:not(.nococounter) {counter-reset: h2c exo defi prop theo rema exem;}
+h2 {color: var(--color-section); margin: var(--margin);}
 h2:not(.nocounter) {counter-reset: h3c h4c ;}
 h2:not(.nocounter)::before {counter-increment: h2c;content: counter(h2c) ". ";}
-
-h3 {
-    color: var(--color-subsection);
-    margin: var(--margin);
-}
+h3 {color: var(--color-subsection); margin: var(--margin);}
 h3:not(.nocounter) {counter-reset: h4c ;}
 h3:not(.nocounter)::before {counter-increment: h3c;content: counter(h2c) "." counter(h3c) ". ";}
-
-h4{
-    color: var(--color-subsubsection);
-    margin: var(--margin);
-}
+h4{color: var(--color-subsubsection); margin: var(--margin);}
 h4:not(.nocounter)::before {counter-increment: h4c; content: counter(h2c) "." counter(h3c) "." counter(h4c) ". ";}
 
 .exo {
@@ -176,7 +130,7 @@ code:not(pre code) {
 .meth::before   {font-weight: bold; content: "📗 Méthode " counter(meth) " : ";}
 
 
-.titre, .prop, .rema, .exem, .meth, .theo, .defi, .exo, .none {margin: var(--margin); padding: var(--padding);}
+.prop, .rema, .exem, .meth, .theo, .defi, .exo, .none {margin: var(--margin); padding: var(--padding);}
 
 .surl {background-color: var(--color-bg-surl); height: max-content; padding: var(--padding)0.1em;}
 
@@ -232,8 +186,7 @@ table.vartable tr td.bbar {background-image: linear-gradient(#444, #444) linear-
     display:inline-flex;
 }
 
-ol.row, ul.row {width: 100%;}
-ol.row li, ul.row li {margin: auto;}
+ol.row, ul.row {display: flex; flex-direction: row; }
 
 
 .col {
@@ -270,40 +223,13 @@ div, ul, ol {
     transition-duration: 0.5s;
 }
 
-.barm {
-    font-family: Monospace;
-    color: violet;
-}
+.barm {font-family: Monospace; color: violet;}
 
-.hidden-web {
-    display: none;
-}
-
-.quadrillage1 {
-  background-size: 5mm 5mm;
-  background-image:
-    linear-gradient(to right, grey 1px, transparent 1px),
-    linear-gradient(to bottom, grey 1px, transparent 1px)!important; 
-  border: 1px solid black;
-  border-radius: 5mm;
-}
-
-
-#fullpage {
-  display: none;
-  position: absolute;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-size: contain;
-  background-repeat: no-repeat no-repeat;
-  background-position: center center;
-  background-color: black;
-}
 
 .quadrillage5mm {display: none;}
+.quadrillage1mm {display: none;}
+
+.hidden-web {display: none;}
 
 
 @media (max-width: 500px) {
@@ -311,7 +237,7 @@ div, ul, ol {
         overflow-x: scroll;
         overflow-y: hidden;
     }
-    table.mytable, img, img:active {
+    table.mytable, img {
         margin: 0;
         padding: 0;
         font-size:small;
@@ -375,6 +301,10 @@ div, ul, ol {
       --height-print: auto;
     }
     
+    .hidden-web {display: inherit;}
+    .hidden-print {display: none;}
+
+    
     nav {display: none;}
 
     body, section, main {
@@ -387,7 +317,6 @@ div, ul, ol {
     section+section {page-break-before: always;}
     h1, h2, h3, h4 {page-break-after:avoid;}
     table.mytable, table, figure, img {page-break-inside: avoid;}
-    
     table.mytable td>ol, .mytable td>ul, .mytable td>img, .mytable td>figure 
                                      {text-align: left;float: none;}
 
@@ -477,13 +406,6 @@ div, ul, ol {
     }
 
  
-    .hidden-web {
-        display: inherit;
-    }
-
-    .hidden-print {
-        display: none;
-    }
 /*
     footer {
         position:fixed;

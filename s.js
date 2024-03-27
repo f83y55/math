@@ -76,7 +76,6 @@ function apply_rootpaths() {
     Array.from(document.querySelectorAll(".rootpath")).forEach(apply_rootpath);
 };
 
-
 // Images full screen onclick
 function full_screen_imgs() {
     const full_page = document.createElement("div");
