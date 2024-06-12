@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Phénomènes aléatoires - Cours</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../../../../s.js" data-import=""></script>
+</head>
+
+<body onload="body()">
+	<style>
+		.mytable {
+			--mytable-float: right;
+		}
+	</style>
+	<h1>Phénomènes aléatoires - Cours</h1>
+
+	<h2>Modéliser</h2>
+	<div class="rema">
+		Même si des calculs concernant des risques ou des jeux de hasard ont été faits depuis l'antiquité, on date le
+		début de la théorie des probabilités de la correspondance entre Blaise Pascal et Pierre de Fermat (1654) à
+		propos du «<a class="href-print" href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_des_partis">problèmes des
+			partis</a>».
+	</div>
+	<h3>Notion de modèle</h3>
+	<div class="exem">
+		On lance un dé cubique et on note le numéro de la face supérieure.
+	</div>
+	<div class="defi">
+		Cette expérience est une <b>expérience aléatoire</b> dont les <b>issues</b> (résultats possibles) sont 1, 2, 3,
+		4, 5, 6 :<br>
+		<table id="tab01" class="mytable" style="float: right;">
+			<tr class="table_row_tr_0">
+				<th class="table_row_0 table_column_1">Issue</th>
+				<td class="table_row_0 table_column_2">1</td>
+				<td class="table_row_0 table_column_3">2</td>
+				<td class="table_row_0 table_column_4">3</td>
+				<td class="table_row_0 table_column_5">4</td>
+				<td class="table_row_0 table_column_6">5</td>
+				<td class="table_row_0 table_column_7">6</td>
+			</tr>
+			<tr class="table_row_tr_1">
+				<th class="table_row_1 table_column_1">Probabilité</th>
+				<td class="table_row_1 table_column_2">\( \frac{1}{6} \)</td>
+				<td class="table_row_1 table_column_3">\( \frac{1}{6} \)</td>
+				<td class="table_row_1 table_column_4">\( \frac{1}{6} \)</td>
+				<td class="table_row_1 table_column_5">\( \frac{1}{6} \)</td>
+				<td class="table_row_1 table_column_6">\( \frac{1}{6} \)</td>
+				<td class="table_row_1 table_column_7">\( \frac{1}{6} \)</td>
+			</tr>
+		</table><br>
+		Une réalisation (que l'on appelle «<b>épreuve»</b>) de cette expérience (réalité ou simulation), doit forcément
+		aboutir à l'une de ses issues ; on ne sait pas laquelle exactement.
+	</div>
+	<div class="defi">
+		L'<b>ensemble des issues</b> est \( \Omega = \left\{1{,}\, 2{,}\, 3{,}\, 4{,}\, 5{,}\, 6 \right\} \).
+	</div>
+	<div class="defi">
+		Définir une <b>probabilité</b>, pour une expérience aléatoire, consiste à :
+		<ul>
+			<li>
+				préciser l'ensemble des issues possibles : l'«<b>univers</b>» \(\Omega=\left\{x_1{,}\, x_2{,}\,
+				\ldots{,}\, x_n \right\} \) ;
+			</li>
+			<li>
+				attribuer à chacune des issues \(x_i\) un nombre \(p_i\) positif ou nul, appelé <b>probabilité de
+					\(x_i\)</b>, de sorte que l'on ait \( p_1+\cdots+p_n=1=100\% \)
+			</li>
+		</ul>
+
+	</div>
+	<div class="exo">
+		Le dé suivant est truqué :<br>
+		<table id="tab02" class="mytable">
+			<tr class="table_row_tr_0">
+				<th class="table_row_0 table_column_1">Issue</th>
+				<td class="table_row_0 table_column_2">1</td>
+				<td class="table_row_0 table_column_3">2</td>
+				<td class="table_row_0 table_column_4">3</td>
+				<td class="table_row_0 table_column_5">4</td>
+				<td class="table_row_0 table_column_6">5</td>
+				<td class="table_row_0 table_column_7">6</td>
+			</tr>
+			<tr class="table_row_tr_1">
+				<th class="table_row_1 table_column_1">Probabilité</th>
+				<td class="table_row_1 table_column_2">\( \frac{1}{10} \)</td>
+				<td class="table_row_1 table_column_3">\( \frac{1}{10} \)</td>
+				<td class="table_row_1 table_column_4">\( \frac{1}{10} \)</td>
+				<td class="table_row_1 table_column_5">\( \frac{1}{10} \)</td>
+				<td class="table_row_1 table_column_6">\( \frac{1}{10} \)</td>
+				<td class="table_row_1 table_column_7">\( \ldots \)</td>
+			</tr>
+		</table><br>
+		Calculer \(p(6)\), la probabilité d'obtenir un six.<br>
+	</div>
+	<div class="exo">
+		Il y a 86% d'élèves droitiers dans ce lycée.
+		Quelle est la probabilité de tomber au hasard sur un élève qui ne le soit pas ?
+	</div>
+	<div class="defi">
+		<b>Notation somme :</b> Une somme telle que \(p_1+\cdots+p_n\) se note, de manière condensée, à l'aide du
+		symbole sigma (\(\Sigma\)) : \( \displaystyle\sum_{i=1}^n p_i\)
+	</div>
+	<div class="exo">
+		Calculer \( A=\displaystyle\sum_{i=1}^7 i\) et \( B=\displaystyle\sum_{i=1}^4 i^2\)
+	</div>
+	<div class="exo"> <b>(PISA) développer une intuition d'une probabilité :</b><br>
+		Un géologue a affirmé : <br>
+		«Au cours des 20 prochaines années, la probabilité que se produise un tremblement de terre à Springfield est de
+		2 sur 3»<br>
+		Parmi les propositions suivantes, laquelle <b>exprime le mieux</b> ce que veut dire le géologue ?
+		<ul>
+			<li> Puisque \(\frac{2}{3}\times20\approx13{,}3\), un tremblement de terre aura lieu à Springfield dans 13 à
+				14 ans.
+			</li>
+			<li> Puisque \(\frac{2}{3}&gt;\frac{1}{2}\), on est sûr qu'il y aura un tremblement de terre à Springfield
+				dans les 20 ans.
+			</li>
+			<li> La probabilité d'avoir un tremblement de terre dans cette ville est plus forte que celle de ne pas en
+				avoir.
+			</li>
+			<li> On ne peut rien dire, car personne n'est sûr du moment où un tremblement de terre se produit.
+		</ul>
+	</div>
+	<div class="pagebreak"></div>
+	<h3>Construire un modèle</h3>
+	<div class="prop">
+		Dans la grande majorité des cas, on utilise l'une de ces deux façons de déterminer les probabilités \(p_i\)
+		associées aux issues \(x_i\) :
+		<ul>
+			<li> <b>Étude statistique - observer les fréquences</b>
+				<div class="exem">
+					On lance un dé truqué un grand nombre de fois (10 000, par exemple) et on note le résultat dans le
+					tableau suivant :<br>
+					<table id="tab03" class="mytable">
+						<tr class="table_row_tr_0">
+							<th class="table_row_0 table_column_1">Issue</th>
+							<td class="table_row_0 table_column_2">1</td>
+							<td class="table_row_0 table_column_3">2</td>
+							<td class="table_row_0 table_column_4">3</td>
+							<td class="table_row_0 table_column_5">4</td>
+							<td class="table_row_0 table_column_6">5</td>
+							<td class="table_row_0 table_column_7">6</td>
+						</tr>
+						<tr class="table_row_tr_1">
+							<th class="table_row_1 table_column_1">Probabilité</th>
+							<td class="table_row_1 table_column_2">\( 0{,}125 \)</td>
+							<td class="table_row_1 table_column_3">\( 0{,}125 \)</td>
+							<td class="table_row_1 table_column_4">\( 0{,}125 \)</td>
+							<td class="table_row_1 table_column_5">\( 0{,}125 \)</td>
+							<td class="table_row_1 table_column_6">\( 0{,}2 \)</td>
+							<td class="table_row_1 table_column_7">\( 0{,}3 \)</td>
+						</tr>
+					</table><br>
+				</div>
+				On <b>décide</b> alors que l'on a expérimenté un nombre suffisant de lancers pour que les futurs lancers
+				de ce dé respectent les mêmes fréquences que celles de cette expérience. Cette «décision» établit un
+				<b>modèle</b> probabiliste : on peut remplacer le mot «Fréquence» (qui est du domaine de la statistique)
+				dans le tableau par le mot «probabilité».
+			</li>
+
+			<li><b>Par le choix de l'équiprobabilité.</b>
+				<div class="exem">
+					Le lancer d'une pièce de monnaie <b>bien équilibrée</b> :<br>
+					<table id="tab04" class="mytable">
+						<tr class="table_row_tr_0">
+							<th class="table_row_0 table_column_1">Issue</th>
+							<td class="table_row_0 table_column_2">pile</td>
+							<td class="table_row_0 table_column_3">face</td>
+						</tr>
+						<tr class="table_row_tr_1">
+							<th class="table_row_1 table_column_1">Probabilité</th>
+							<td class="table_row_1 table_column_2">0,5</td>
+							<td class="table_row_1 table_column_3">0,5</td>
+						</tr>
+					</table><br>
+				</div>
+				<div class="defi">Dans une situation d'<b>équiprobabilité</b>, Toutes les issues possèdent la même
+					probabilité.
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="meth"><b>Étude statistique ou équiprobabilité ?</b><br>
+		Le choix de l'équiprobabilité se fait lorsqu'il est suggéré dans l'énoncé (pièce équilibrée, tirage dans une
+		urne au hasard).<br>
+		Si on est dans une situation où les probabilités de chaque issue n'ont aucune raison d'être les mêmes, on doit
+		mener une étude statistique.
+	</div>
+	<div class="exo">
+		Étude statistique ou équiprobabilité ? Le préciser.
+		<ol>
+			<li> On lance un dé bien bien équilibré.
+			</li>
+			<li> On choisit au hasard une consonne dans l'alphabet.
+			</li>
+			<li> Probabilité qu'un foyer français ait 2 enfants.
+			</li>
+			<li> Tomber sur le zéro sur une roulette de casino (numérotée de 0 à 36).
+			</li>
+			<li> Que M. Dupont, 40 ans, que l'on ne connaît pas, attrape la grippe l'hiver prochain ?
+			</li>
+			<li> Qu'une tartine tombe du côté de la confiture ?
+			</li>
+	</div>
+
+
+	<h2>Prévoir</h2>
+	<h3>Probabilité d'un événement</h3>
+	<div class="exem">On lance un dé cubique et l'on considère l'<b>événement \(A\)</b> : «obtenir au moins 5».
+		<ul>
+			<li>
+				<b>issues favorables</b> à \(A\) (qui réalisent \(A\) ) sont 5 et 6 ; on note \(A=\left\{5;6\right\}\).
+			</li>
+			<li>
+				Pour le dé truqué (utilisé précédemment), si \(P(5)=0{,}2\) et \(P(6)=0{,}3\) alors
+				\(P(A)=0{,}2+0{,}3=0{,}5\) .
+			</li>
+			<li>
+				Pour un dé équilibré (situation d'équiprobabilité) : \(P(5)=P(6)=\frac{1}{6}\) alors
+				\(P(A)=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}\)
+			</li>
+		</ul>
+	</div>
+
+	<div class="defi">
+		Un <b>événement</b> \(A\) est un sous-ensemble (aussi appelée partie) de l'univers \(\Omega\) (on note
+		\(A\subset\Omega\), on dit «\(A\) inclus dans \(\Omega\)»).<br>
+		La <b>probabilité</b> \(P(A)\) est la somme des probabilités des issues favorables à \(A\).</div>
+
+
+	<div class="prop">
+		<ul>
+			<li>
+				Pour tout événement \(A\), on a : \(0\leqslant P(A)\leqslant 1\)
+
+			</li>
+			<li>On a \(P(\Omega)=1\).
+			</li>
+			<li>L'événement \(B\) : «obtenir un \(7\) sur un dé est <b>impossible</b> : \(P(B)=0\). On identifie à
+				l'ensemble vide noté \(\emptyset\) tout événement impossible (\(B=\emptyset\)).</li>
+		</ul>
+	</div>
+
+	<div class="prop">
+		Dans une <b>situation d'équiprobabilité</b>, la probabilité d'un événement \(A\) est : <span
+			class="surl">\(P(A)=\frac{\textrm{nombre d'issues favorales à }A}{\textrm{nombre d'issues
+			possibles}}\)</span>
+	</div>
+
+	<div class="pagebreak"></div>
+
+
+	<h3>Opérations sur les événements</h3>
+	<div class="defi">Si \(A\) et \(B\) sont deux événements,
+		<ul>
+			<li>
+				On note \(\overline{A}\) l'événement complémentaire de \(A\) (toutes les issues qui ne réalisent pas
+				\(A\).)
+			</li>
+			<li>
+				L'événement \(A\cap B\) est l'ensemble des issues qui réalisent \(A\) <b>et</b> \(B\) (simultanément).
+			</li>
+			<li>
+				L'événement \(A\cup B\) est l'ensemble des issues qui réalisent \(A\) <b>ou</b> \(B\) (au moins l'un des
+				deux).
+			</li>
+		</ul>
+	</div>
+
+
+	<div class="exem"> On lance un dé cubique et équilibré, et on note les événements suivants :
+		<ul>
+			<li>
+				\(A\) : «obtenir un nombre pair»
+			</li>
+			<li>
+				\(B\) : «obtenir un un ou un six»
+			</li>
+		</ul>
+		On a alors :
+		<table id="tab05" class="mytable">
+			<tr class="table_row_tr_0">
+				<td class="table_row_0 table_column_1">\(A=\left\{2;4;6\right\}\)</td>
+				<td class="table_row_0 table_column_2">\(P(A)=\frac{3}{6}=\frac{1}{2}\)</td>
+			</tr>
+			<tr class="table_row_tr_1">
+				<td class="table_row_1 table_column_1">\(B=\left\{1;6\right\}\)</td>
+				<td class="table_row_1 table_column_2">\(P(B)=\frac{2}{6}=\frac{1}{3}\)</td>
+			</tr>
+			<tr class="table_row_tr_2">
+				<td class="table_row_2 table_column_1">\(\overline{A}=\left\{1;3;5\right\}\)</td>
+				<td class="table_row_2 table_column_2">\(p\left(\overline{A}\right)=\frac{3}{6}=\frac{1}{2}\)</td>
+			</tr>
+			<tr class="table_row_tr_3">
+				<td class="table_row_3 table_column_1">\(A\cap B=\left\{6\right\}\)</td>
+				<td class="table_row_3 table_column_2">\(P(A\cap B)=\frac{1}{6}\)</td>
+			</tr>
+			<tr class="table_row_tr_4">
+				<td class="table_row_4 table_column_1">\(A\cup B=\left\{1,2;4;6\right\}\)</td>
+				<td class="table_row_4 table_column_2">\(P(A\cup B)=\frac{4}{6}=\frac{2}{3}\)</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="exo">
+		Reproduire le tableau dans le cas d'un dé octaèdrique (8 faces).
+	</div>
+	<div class="prop"> Soit \(A\) et \(B\) deux événements :<br>
+		<div class="row">
+			<div class="col">
+				<figure>
+					<img src="assets/fig1.svg">
+					<figcaption>Événement complémentaire : <br>
+						\(P(\overline{A})=1-P(A)\)</figcaption>
+				</figure>
+			</div>
+			<div class="col">
+				<figure>
+					<img src="assets/fig2.svg">
+					<figcaption>Union quelconque : <br>
+						\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\)</figcaption>
+				</figure>
+			</div>
+			<div class="col">
+				<figure>
+					<img src="assets/fig3.svg">
+					<figcaption>Union disjointe : <br>
+						Si \(P(A\cap B)=0\), alors \(P(A\cup B)=P(A)+P(B)\)</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+	<div class="defi">
+		Lorsqu'on sait que \(A\) et \(B\) ne peuvent être réalisés simultanément ; \(A\) et \(B\) sont dits
+		<b>incompatibles</b> ; dans ce cas on a \(P(A\cap B)=0\).
+	</div>
+
+	<div class="exo">\(A\) et \(B\) sont deux événements quelconques ; exprimer \(P(A\cap B)\) en fonction de \(P(A)\),
+		\(P(B)\) et \(P(A\cup B)\).
+	</div>
+	<div class="exo">
+		\(P(A)=0{,}7\) et \(P(B)=0{,}6\).<br>
+		Montrer que \(A\) et \(B\) ne peuvent pas être incompatibles.<br>
+		En dégager une condition sur les probabilités de \(A\) et \(B\) impliquant que ces deux événements soient
+		incompatibles.
+	</div>
+	<div class="exo">
+		Chaque ligne du tableau représente une situation différente. Compléter le tableau.
+		<table id="tab06" class="mytable">
+			<tr class="table_row_tr_0">
+				<th class="table_row_0 table_column_1">\(A\)</th>
+				<th class="table_row_0 table_column_2">\(B\)</th>
+				<th class="table_row_0 table_column_3">\(\overline{A}\)</th>
+				<th class="table_row_0 table_column_4">\(\overline{B}\)</th>
+				<th class="table_row_0 table_column_5">\(A \cap B\)</th>
+				<th class="table_row_0 table_column_6">\(A \cup B \)</th>
+			</tr>
+			<tr class="table_row_tr_1">
+				<td class="table_row_1 table_column_1">0,2</td>
+				<td class="table_row_1 table_column_2">0,5</td>
+				<td class="table_row_1 table_column_3"></td>
+				<td class="table_row_1 table_column_4"></td>
+				<td class="table_row_1 table_column_5">0,1</td>
+				<td class="table_row_1 table_column_6"></td>
+			</tr>
+			<tr class="table_row_tr_2">
+				<td class="table_row_2 table_column_1">0,6</td>
+				<td class="table_row_2 table_column_2"></td>
+				<td class="table_row_2 table_column_3"></td>
+				<td class="table_row_2 table_column_4">0,6</td>
+				<td class="table_row_2 table_column_5">0</td>
+				<td class="table_row_2 table_column_6"></td>
+			</tr>
+			<tr class="table_row_tr_3">
+				<td class="table_row_3 table_column_1"></td>
+				<td class="table_row_3 table_column_2"></td>
+				<td class="table_row_3 table_column_3">0,7</td>
+				<td class="table_row_3 table_column_4">0,7</td>
+				<td class="table_row_3 table_column_5"></td>
+				<td class="table_row_3 table_column_6">0,5</td>
+			</tr>
+			<tr class="table_row_tr_4">
+				<td class="table_row_4 table_column_1"></td>
+				<td class="table_row_4 table_column_2"></td>
+				<td class="table_row_4 table_column_3"></td>
+				<td class="table_row_4 table_column_4">0,8</td>
+				<td class="table_row_4 table_column_5">0,2</td>
+				<td class="table_row_4 table_column_6">0,4</td>
+			</tr>
+		</table>
+	</div>
+	<div class="prop">
+		Si \(A\) et \(B\) sont deux événements quelconques, on a toujours :
+		\(P(A\cap B)\leqslant \begin{array}{c}P(A)\\P(B)\\ \end{array}\leqslant P(A\cup B)\)
+	</div>
+
+
+
+	<div class="prop"><b>Lois de Morgan : </b>
+		\(\overline{A\cap B}=\overline{A}\cup\overline{B}~~\textrm{et}~~\overline{A\cup
+		B}=\overline{A}\cap\overline{B}\)
+	</div>
+	<div class="exo">
+		Utiliser les lois de Morgan pour exprimer \(\overline{(A\cap B)\cup C}\) en fonction de \(\overline{A}\),
+		\(\overline{B}\) et \(\overline{C}\).
+	</div>
+
+	<div class="pagebreak"></div>
+
+
+	<h2>Variables aléatoires (réelles)</h2>
+	<h3>Définition</h3>
+	<div class="defi">
+		Une fonction réelle définie sur un univers \(\Omega\) est appelée <b>variable aléatoire</b>.
+	</div>
+	<div class="exem"> Souvent, une variable aléatoire est utilisée pour rendre compte des gains dans un jeu de
+		hasard.<br>
+		On lance un dé (6 faces, bien équilibré), puis une pièce (bien équilibrée) ;
+		<figure style="float: right;">
+			<img src="assets/fig5.svg" style="--width-print:5cm;">
+			<figcaption>Arbre à compléter</figcaption>
+		</figure>
+		<ul>
+			<li> si le dé donne 1, on gagne 5€ ;</li>
+			<li> si le dé donne 6, on gagne 10€ ;</li>
+			<li> si le dé donne un nombre compris entre 1 et 5 inclus, on ne gagne rien (0€) ;</li>
+			<li> ensuite en lançant la pièce, aux gains obtenus avec le dé :
+				<ul>
+					<li>on ajoute 5€ si la pièce donne pile ;</li>
+					<li>on enlève 5€ si la pièce donne face ; </li>
+				</ul>
+			</li>
+			<li> on note alors \(G\) les gains ou pertes (\(G\) peut être négatif !) à la fin du jeu.</li>
+		</ul>
+	</div>
+	<div class="exo">
+		Compléter l'arbre décrivant les possibilités de ce jeu.
+	</div>
+
+	<div class="exo">
+		<ol>
+			<li> Quelles sont les valeurs possibles de \(G\) ?</li>
+			<li> Calculer \(P(G=5)\), c'est à dire la probabilité de gagner 5€ à ce jeu.</li>
+			<li> Pourquoi est-il vrai que \(P(G=-10)=0\) ?</li>
+		</ol>
+	</div>
+	<h3> Loi de probabilité</h3>
+	<div class="none">
+		Notons \(I=\left\{x_1;...;x_n\right\}\) l'ensemble des valeurs, rangées par ordre croissant, prises par une
+		variable aléatoire \(X\) sur un univers \(\Omega\).
+	</div>
+	<div class="rema">On manie ici des variables aléatoires ayant un nombre fini de valeurs (variables aléatoires
+		discrètes). En utilisant des intégrales, plus tard, on pourra manier des variables alétoires dites continues,
+		possédant un nombre infini de valeurs.
+	</div>
+
+	<div class="defi">La <b>loi de probabilité de \(X\)</b> associe chaque valeur \(x_i\) de \(X\) à sa probabilité
+		\(P(X=x_i)\). <br>
+		on écrit souvent une loi sous la forme d'un tableau, présenté de la manière suivante :<br>
+		<table id="tab07" class="mytable">
+			<tr class="table_row_tr_0">
+				<th class="table_row_0 table_column_1">\(X\)</th>
+				<td class="table_row_0 table_column_2">\(x_1\)</td>
+				<td class="table_row_0 table_column_3">\(x_2\)</td>
+				<td class="table_row_0 table_column_4">\(\cdots\)</td>
+				<td class="table_row_0 table_column_5">\(x_n\)</td>
+			</tr>
+			<tr class="table_row_tr_1">
+				<th class="table_row_1 table_column_1">prob</th>
+				<td class="table_row_1 table_column_2">\(P(X=x_1)\)</td>
+				<td class="table_row_1 table_column_3">\(P(X=x_2)\)</td>
+				<td class="table_row_1 table_column_4">\(\cdots\)</td>
+				<td class="table_row_1 table_column_5">\(P(X=x_n)\)</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="exo">
+
+		<table id="tab08" class="mytable">
+			<tr class="table_row_tr_0">
+				<th class="table_row_0 table_column_1">\(G\)</th>
+				<td class="table_row_0 table_column_2">&nbsp;&nbsp;...&nbsp;&nbsp;</td>
+				<td class="table_row_0 table_column_3">&nbsp;&nbsp;...&nbsp;&nbsp;</td>
+				<td class="table_row_0 table_column_4">&nbsp;5&nbsp;</td>
+				<td class="table_row_0 table_column_5">&nbsp;&nbsp;...&nbsp;&nbsp;</td>
+				<td class="table_row_0 table_column_6">&nbsp;&nbsp;...&nbsp;&nbsp;</td>
+			</tr>
+			<tr class="table_row_tr_1">
+				<th class="table_row_1 table_column_1">prob</th>
+				<td class="table_row_1 table_column_2"></td>
+				<td class="table_row_1 table_column_3"></td>
+				<td class="table_row_1 table_column_4">\(\frac{5}{12}\)</td>
+				<td class="table_row_1 table_column_5"></td>
+				<td class="table_row_1 table_column_6"></td>
+			</tr>
+		</table>
+
+		Compléter la loi de probabilité de \(G\), la variable aléatoire manipulée dans l'exemple précédent.
+	</div>
+
+	<h3>Espérance</h3>
+	<div class="defi">
+		Lorsque \(X\) est une variable aléatoire de valeurs \(x_1,\ldots,x_n\), on note \(E(X)\) l'<b>espérance de
+			\(X\)</b>. C'est la moyenne des valeurs de \(X\) pondérée (= «coefficientée») par les probabilités : <span
+			class="surl">\( E(X) = \displaystyle\sum_{i=1}^n\,P(X=x_i)\,x_i \)</span>
+	</div>
+	<div class="exo">
+		Calculer \(E(G)\), la moyenne des gains.
+	</div>
+
+	<div class="pagebreak"></div>
+
+
+
+	<h2>Probabilités conditionnelles</h2>
+	<div class="none">
+		On cherche souvent à analyser la dépendance d'un événement par rapport à un autre, ou bien comprendre des
+		phénomènes numériques paradoxaux... Les probabilités conditionnelles offrent un cadre simple qui peut aider.
+	</div>
+	<div class="exo"><b>exemple de paradoxe apparent : phénomène de Rogers</b><br>
+		Un prof de maths est perçu comme particulièrement sévère : sur les deux groupes d'approfondissement qu'il suit,
+		composés de quelques élèves,
+		les moyennes de ce trimestre sont 1, 2, 3, 4 pour le groupe A et 5, 6, 7, 8, 9 pour le groupe B, sur 20. Son
+		supérieur lui explique qu'il faut impérativement que les moyennes des deux groupes augmentent. Le prof refuse
+		catégoriquement de changer les moyennes de chaque élève, et dit à son supérieur qu'il n'avait qu'à faire les
+		groupes différemment pour avoir de meilleures moyennes. Pourquoi ?
+	</div>
+	<div class="rema">
+		Il est donc fondamental de savoir si l'on calcule sur la population globale (\(\Omega\) entier) ou bien si l'on
+		est restreint à une partie seulement de cette population.
+	</div>
+
+
+	<h3 class="subsection">Définition et propriétés</h3>
+	<div class="defi"> \(A\), \(B\) sont deux événements avec \(P(A)\neq0\).<br />
+		On note \(P_A(B)\) la «<b>probabilité de \(B\) sachant \(A\)</b>» le nombre \(\displaystyle\frac{P(A\cap
+		B)}{P(A)}\).
+		<figure style="float: right;">
+			<img src="assets/fig4.svg" style="--width-print: 4cm;"><br>
+			<figcaption>Représentation des probabilités<br>
+				conditionnelles sur un arbre</figcaption>
+		</figure>
+	</div>
+
+	<div class="exo"><b>Contrôle qualité :</b><br>
+		Une production en très grande série contient 90% de pièces conformes et 10% de pièces défectueuses. Un contrôle
+		de qualité accepte les pièces conformes dans 92% des cas et rejette les pièces défectueuses dans 94% des
+		cas.<br>
+		On tire une pièce au hasard dans la production, après le contrôle qualité.
+		On note :
+		<ul>
+			<li> \(C\) : «la pièce tirée est conforme» ; </li>
+			<li> \(A\) : «la pièce tirée est acceptée au contrôle». </li>
+		</ul>
+		<ol>
+			<li>Construire l'arbre des possibilités (conseil : mettre les probabilités marginales au premier niveau de
+				l'arbre).</li>
+			<li>En déduire les probabilités des 4 issues possibles.</li>
+			<li>Identifier les faux positifs (pièce refusée bien que conforme) et les faux négatifs (acceptée mais
+				défectueuse) sur l'arbre</li>
+			<li>En déduire la probabilité que la pièce prélevée ait subi une erreur de contrôle.</li>
+			<li><strong>Inverser l'arbre :</strong> Construire un arbre dans lequel les événements \(A\) et son
+				complémentaire sont au 1<sup>er</sup> niveau, indiquer les probabilités sur chaque branche.<br />
+				Ce changement de point de vue peut être utile pour mieux analyser une situation.
+			</li>
+			<li> <strong>Approfondissement :</strong> En cas de pièce contrôlée et refusée, on fait un deuxième
+				contrôle, indépendant du premier, qui sera déterminant mais coûte trois fois plus cher. <br />
+				La situation est-elle améliorée ?
+		</ol>
+	</div>
+
+	<div class="exo">
+		À la suite de la découverte dans un pays A des premiers cas d'une maladie contagieuse non mortelle M, il a été
+		procédé dans ce pays à une importante campagne de navigation : 70% des habitants ont été vaccinés.<br>
+		Une étude a révélé que 5% des vaccinés ont été touchés à des degrés divers par la maladie, pourcentage qui s'est
+		élevé à 60% chez les non-vaccinés.
+		<table id="tab10" class="mytable">
+			<tr class="table_row_tr_0">
+				<th class="table_row_0 table_column_1">\(V\) \ \(M\)</th>
+				<th class="table_row_0 table_column_2">\(M\)</th>
+				<th class="table_row_0 table_column_3">\(\overline{M}\)</th>
+				<th class="table_row_0 table_column_4">total</th>
+			</tr>
+			<tr class="table_row_tr_1">
+				<th class="table_row_1 table_column_1">\(V\)</th>
+				<td class="table_row_1 table_column_2">&nbsp;&nbsp;...&nbsp;&nbsp;</td>
+				<td class="table_row_1 table_column_3">&nbsp;&nbsp;...&nbsp;&nbsp;</td>
+				<td class="table_row_1 table_column_4">&nbsp;&nbsp;...&nbsp;&nbsp;</td>
+			</tr>
+			<tr>
+			<tr class="table_row_tr_2">
+				<th class="table_row_2 table_column_1">\(\overline{V}\)</th>
+				<td class="table_row_2 table_column_2"></td>
+				<td class="table_row_2 table_column_3"></td>
+				<td class="table_row_2 table_column_4"></td>
+			</tr>
+			<tr class="table_row_tr_3">
+				<th class="table_row_3 table_column_1">total</th>
+				<td class="table_row_3 table_column_2"></td>
+				<td class="table_row_3 table_column_3"></td>
+				<td class="table_row_3 table_column_4"></td>
+			</tr>
+
+		</table>
+
+
+		<ol>
+			<li> Calculer la probabilité qu'un individu pris au hasard dans la population ait été touché par la maladie.
+			</li>
+			<li> Calculer la probabilité pour qu'un individu ait été vacciné, sachant qu'il a été atteint par la
+				maladie. </li>
+			<li>Commenter les pourcentages manipulés : peut-on en faire de bonnes/mauvaises interprétations ?</li>
+			<li>Il est parfois plus judicieux d'essayer d'éviter de présenter des probabilités conditionnelles : on peut
+				présenter les intersections, qui ont l'avantage d'être immédiatement comparables entre elles, mais il
+				peut y avoir de gros écarts.<br>
+				Présenter les données sous la forme d'un tableau à double entrée.</li>
+		</ol>
+	</div>
+
+	<div class="pagebreak"></div>
+
+	<div class="defi">
+		\(A\) et \(B\) sont deux événements de probabilité non nulle.<br>
+		On dit que \(A\) et \(B\) sont <b>indépendants</b> s'ils vérifient une de ces trois affirmations équivalentes :
+		\(\begin{array}{cl}
+		& P_A(B)=P(B) \\
+		\Leftrightarrow & P(A\cap B)=P(A)\times P(B) \\
+		\Leftrightarrow & P_B(A)=P(A) \\
+		\end{array}\)<br>
+		<b>Explication : </b>On passe de la première ligne à la deuxième en multipliant par \(P(A)\) et de la deuxième à
+		la troisième en divisant par \(P(B)\).
+	</div>
+
+	<div class="rema">Lorsque \(A\) et \(B\) sont indépendants, \(A\) et \(\overline{B}\) le sont aussi, ainsi que
+		\(\overline{A}\) et \(B\), et aussi \(\overline{A}\) et \(\overline{B}\).
+	</div>
+	<div class="exo">On a \(P(A)=0{,}4\), \(P(B)=0{,}5\) et \(P(A\cap B)=0{,}2\).
+		\(A\) et \(B\) sont-ils indépendants ?<br>
+		En calculant, vérifier si \(\overline{A}\) et \(\overline{B}\) le sont.
+	</div>
+
+	<div class="exo">
+		Un même individu peut être atteint de surdité unilatérale ou bilatérale (mais pas plus). \\
+		On note \(G\) et \(D\) les deux événements «être atteint de surdité à l'oreille gauche/droite».<br>
+		\(G\) et \(D\) sont indépendants, et \(P(G)=P(D)=5\%\). On note :
+		\(B\) : «surdité bilatérale» ;
+		\(U\) : «surdité unilatérale» ;
+		\(S\) : «surdité» (une oreille au moins).
+		<ol>
+			<li>Calculer les probabilités de ces événements.</li>
+			<li>Sachant qu'un individu pris au hasard dans la population est atteint de surdité, quelle est la
+				probabilité pour qu'il soit atteint de surdité à droite ? Pour qu'il soit atteint de surdité bilatérale
+				?</li>
+		</ol>
+
+	</div>
+
+	<div class="prop"><b>Formule des probabilités totales :</b><br>
+		Soit \(C_1, C_2, \ldots,C_k\) des événements de probabilité non nulle formant une <b>partition</b> de \(\Omega\)
+		(tous les \(C_i\) sont disjoints et recouvrent entièrement \(\Omega\) : ils représentent des cas différents).
+		<br>
+		Alors, on a :
+		\(P(A)=P(A\cap C_1)+P(A\cap C_2)+\cdots+P(A\cap C_k)\)<br>
+		Qui peut aussi s'écrire :<br>
+		\(P(A)=P(C_1)P_{C_1}(A)+P(C_2)P_{C_2}(A)+\cdots+P(C_k)P_{C_k}(A)\)
+	</div>
+
+	<div class="rema">
+		Si \(B\neq\emptyset\), \(B\) et \(\overline{B}\) formant naturellement une partition de \(\Omega\), on a :
+		\(P(A)=P(B)P_{B}(A)+P(\overline{B})P_{\overline{B}}(A)\)
+	</div>
+	<div class="exo">
+		On lance un dé tétraédrique (4 faces) bien équilibré : on multiplie le résultat \(R\) par 2 s'il est pair. On
+		lance ensuite une pièce bien équilibrée ; dans le cas pile, on multiplie \(R\) par 2.<br>
+		Utiliser un arbre pour déterminer la loi de \(R\) (dire où apparaît une partition) et calculer son espérance et
+		son écart-type.
+	</div>
+
+	<h2>Problèmes</h2>
+
+	<div class="exo"><strong>Erreur de d'Alembert</strong>
+		<p>
+			Quelle est la probabilité d'obtenir <strong>au moins</strong> une fois pile en deux lancés successifs ?
+		</p>
+		<p>
+			<strong>Remarque :</strong> D’Alembert avait fait un raisonnement faux dans le calcul de la probabilité,
+			dans l’article « croix ou pile » de l’Encyclopédie .<br />
+			De l’existence de 3 cas (pile au premier lancer, pile au second lancer, aucun lancer ne donnant pile), il
+			avait déduit que la probabilité était 2/3.<br />
+		</p>
+	</div>
+
+	<div class="exo"><strong>Pierre feuille ciseaux</strong>
+		<p>
+			Alice et Bob jouent à pierre/feuille/ciseaux. On considère que tous les tirages sont indépendants et
+			équiprobables.
+		</p>
+		<ol type="A">
+			<li>
+				<ol>
+					<li>Représenter la situation par un arbre ou un tableau.</li>
+					<li>Déterminer les probabilités que Alice gagne, que Bob gagne, ou d'un match nul.</li>
+				</ol>
+			</li>
+			<li>
+				Alice a vu sur internet que jouer pierre donne de meilleurs résultats. Elle l'utilise donc 50% du temps
+				contre 25% du temps pour les deux autres. Bob ne change pas de stratégie.<br />
+				Mêmes questions qu'au A.
+			</li>
+		</ol>
+	</div>
+
+	<div class="pagebreak"></div>
+
+	<div class="exo"><strong>Paradoxe du Duc de Toscane</strong>
+		<p>
+			On lance trois dés à 6 faces bien équilibrés et on note la somme S des deux nombres obtenus. Le Duc de
+			Toscane, dans une lettre à Galilée, signale :
+		<ul>
+			<li><code>S = &nbsp;9 = 1+2+6 = 1+3+5 = 1+4+4 = 2+2+5 = 2+3+4 = 3+3+3</code> (6 décompositions)</li>
+			<li><code>S = 10 = 1+3+6 = 1+4+5 = 2+2+6 = 2+3+5 = 2+4+4 = 3+3+4</code> (6 décompositions)</li>
+		</ul>
+		Pourtant, en pratique, S=10 est obtenue plus souvent ! Y a-t-il une explication ?
+		</p>
+	</div>
+
+
+	<div class="exo"><strong>Paradoxe de Monty Hall</strong> (présentateur du jeu TV «let's make a deal»).
+		<p>
+			Un candidat se trouve devant 3 portes fermées. Derrière une de ces portes, il y a une superbe voiture à
+			gagner,
+			et un poireau dans les deux autres. Le candidat doit choisir une porte au
+			hasard (sans l’ouvrir). L’animateur ouvre alors une autre porte contenant un
+			poireau.<br>
+			Que devrait faire le candidat : garder la porte qu'il a choisie ou changer d’avis et choisir
+			l'autre porte restante ? Justifier.
+		</p>
+		<p>
+			<strong>Conseils :</strong> Essayer de représenter la situation par un arbre ; réfléchir à ce qu'il se
+			passerait s'il y avait 100 portes (une voiture et 99 poireaux).
+		</p>
+	</div>
+
+	<div class="exo"><strong>Problème des partis</strong><br />
+		<p>
+			On date le
+			début de la théorie des probabilités de la correspondance entre Blaise Pascal et Pierre de Fermat (1654) à
+			propos du «<a class="href-print" href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_des_partis">problèmes des
+				partis</a>» :
+		</p>
+		<p>
+			Deux joueurs jouent à un jeu de hasard en 3 parties gagnantes, chacun ayant misé la même somme d'argent
+			\(m\) ; or il se trouve que le jeu est interrompu avant que l'un des deux joueurs ait obtenu 3 victoires et
+			ainsi remporté la victoire et de ce fait la totalité des enjeux soit \(2m\). Comment, dans ces
+			circonstances, doit-on partager les enjeux ?
+		</p>
+	</div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+.navbar {
+    /*  THEME  */
+    font-family: Ubuntu, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    color: #000;
+    --navbar-icon: #555;
+    --navbar-bg-1: #eece;
+    --navbar-bg-2: #bb9e;
+    position: fixed;
+    z-index: 9998;
+    max-width: 100vw;
+    max-height: 100vh;
+    background: linear-gradient(45deg, var(--navbar-bg-1) 25%, var(--navbar-bg-2) 100%);
+}
+
+.navbar * {
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+}
+
+.navbar, .navbar .collapse, .navbar .group {display: flex;}
+.navbar .collapse {
+    transition-duration: 200ms;
+    justify-content: space-between;
+    width: 0;
+    height: 0;
+}
+.navbar #menu-switch:checked ~ .collapse {width: 100vw; height: auto;}
+.navbar #menu-switch:checked + label[for="menu-switch"]::after {content: "◁";}
+.navbar #menu-switch:not(:checked) + label[for="menu-switch"]::after {content: "☰";}
+
+
+.navbar .item, .navbar .group {padding: 0 0.25em 0;}
+.navbar a.item:hover {background-color: var(--navbar-bg-2);}
+.navbar .icon{color: var(--navbar-icon);font-size: xx-large;}
+
+@media (max-width: 600px) {
+    .navbar #menu-switch:checked ~ .collapse {width: 100vw; height:100vh;}
+    .navbar .collapse {flex-direction: column;}
+    .navbar .item {margin: auto;}
+}
+
+@media print {.navbar {display: none;}};

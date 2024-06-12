@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tables</title>
+    <!--<link href="tables.css" rel="stylesheet" type="text/css"/>-->
+    <link rel="shortcut icon" href="./icons/logo.webp">
+    <link rel="icon"
+        href="data:image/svg+xml, <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😃</text></svg>">
+
+
+
+    <!-- tables.css -->
+    <style>
+        :root {
+            --font-size-display: 30px;
+            --font-family-display: 'Monospace';
+            --font-color-display: black;
+            --bg-display-1: #80ba9d;
+            --bg-display-2: #cee7d7;
+            --font-size-keyboard: 24px;
+            --font-family-keyboard: 'Sans-Serif';
+            --font-color-keyboard: black;
+            --bg-keyboard-1: #405f63;
+            --bg-keyboard-2: #dfa900;
+            --bg-keyboard-hover: #808080;
+            --font-size-config: 15px;
+            --font-family-config: 'Sans-Serif';
+            --font-color-config: black;
+            --bg-main-container: #33a276;
+            --bg-valid: #00ff00;
+            --bg-invalid: #ff0000;
+            --transition-speed: 200ms;
+        }
+
+        *,
+        * ::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #main-container,
+        body {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: var(--bg-main-container);
+            padding: 1em;
+            max-width: 400px;
+
+        }
+
+        #display {
+            background-color: var(--bg-display-1);
+            font-family: var(--font-family-display);
+            font-size: var(--font-size-display);
+            color: var(--font-color-display);
+        }
+
+        .display-label {
+            background-color: var(--bg-display-1);
+            margin: 0.1em;
+        }
+
+        .display-var {
+            background-color: var(--bg-display-2);
+            float: right;
+        }
+
+        #keyboard {
+            margin: 1em;
+            background-color: var(--bg-main-container);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        #keyboard>div {
+            font-family: var(--font-family-keyboard);
+            font-size: var(--font-size-keyboard);
+            color: var(--font-color-keyboard);
+            text-align: center;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            margin: 0.1em;
+            border: 1px solid;
+            border-radius: 0.4em;
+            transition-duration: var(--transition-speed);
+        }
+
+        #keyboard>div:hover {
+            background-color: var(--bg-display-2);
+            transition-duration: var(--transition-speed);
+        }
+
+
+        #key7 {
+            grid-column: 1;
+            grid-row: 1;
+            background-color: var(--bg-keyboard-1);
+        }
+
+        #key8 {
+            grid-column: 2;
+            grid-row: 1;
+            background-color: var(--bg-keyboard-1);
+        }
+
+        #key9 {
+            grid-column: 3;
+            grid-row: 1;
+            background-color: var(--bg-keyboard-1);
+        }
+
+        #key4 {
+            grid-column: 1;
+            grid-row: 2;
+            background-color: var(--bg-keyboard-1);
+        }
+
+        #key5 {
+            grid-column: 2;
+            grid-row: 2;
+            background-color: var(--bg-keyboard-1);
+        }
+
+        #key6 {
+            grid-column: 3;
+            grid-row: 2;
+            background-color: var(--bg-keyboard-1);
+        }
+
+        #key1 {
+            grid-column: 1;
+            grid-row: 3;
+            background-color: var(--bg-keyboard-1);
+        }
+
+        #key2 {
+            grid-column: 2;
+            grid-row: 3;
+            background-color: var(--bg-keyboard-1);
+        }
+
+        #key3 {
+            grid-column: 3;
+            grid-row: 3;
+            background-color: var(--bg-keyboard-1);
+        }
+
+        #keyBackspace {
+            grid-column: 1;
+            grid-row: 4;
+            background-color: var(--bg-keyboard-2);
+        }
+
+        #key0 {
+            grid-column: 2;
+            grid-row: 4;
+            background-color: var(--bg-keyboard-1);
+        }
+
+        #keyReturn {
+            grid-column: 3;
+            grid-row: 4;
+            background-color: var(--bg-keyboard-1);
+        }
+
+        .noselect {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+        }
+
+        #config {
+            margin-top: 1em;
+            font-family: var(--font-family-keyboard);
+            font-size: var(--font-size-config);
+            color: var(--font-color-config);
+            background: var(--bg-config);
+            border: 1px solid var(--bg-display-1);
+            padding: 1em;
+            border-radius: 0.3em;
+            text-align: center;
+        }
+
+        #config select {
+            width: 40%;
+            margin-left: 4%;
+            margin-right: 4%;
+            background: var(--bg-display-1);
+            border: 1px solid transparent;
+            border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --font-size-display: 24px;
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="display">
+            <div id="score" class="display-label">Score :
+                <span id="disp_score" class="display-var"></span>
+            </div>
+            <div id="time" class="display-label">Time :
+                <span id="disp_time" class="display-var"></span>
+            </div>
+            <div id="question" class="display-label">Question :
+                <span id="disp_question" class="display-var"></span>
+            </div>
+            <div id="answer" class="display-label">Answer :
+                <span id="disp_answer" class="display-var"></span>
+            </div>
+        </div>
+        <div id="keyboard" class="noselect">
+            <div id="key7" class="key">7</div>
+            <div id="key8" class="key">8</div>
+            <div id="key9" class="key">9</div>
+
+            <div id="key4" class="key">4</div>
+            <div id="key5" class="key">5</div>
+            <div id="key6" class="key">6</div>
+
+            <div id="key1" class="key">1</div>
+            <div id="key2" class="key">2</div>
+            <div id="key3" class="key">3</div>
+
+            <div id="keyBackspace" class="key">C</div>
+            <div id="key0" class="key">0</div>
+            <div id="keyReturn" class="key">⏎</div>
+        </div>
+        <div id="config">
+            <select name="maximum" id="select-maximum">
+                <option value="10">maximum</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+            </select>
+            <select name="time" id="select-time">
+                <option value="10">time</option>
+                <option value="10">10s</option>
+                <option value="8">8s</option>
+                <option value="5">5s</option>
+                <option value="3">3s</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- tables.js
+<script src="tables.js" async> -->
+    <script>
+        /*
+         * Game
+         *
+         */
+
+        var isPlaying = false;
+        var vquestion = 0;
+        var maximum = 10;
+        var time = 10;
+
+        const select_maximum = document.getElementById('select-maximum');
+        select_maximum.addEventListener('change', (event) => {
+            maximum = parseInt(select_maximum.options[select_maximum.selectedIndex].value, 10);
+            select_maximum.text = "maximum : " + maximum;
+            console.log(maximum);
+        });
+        const select_time = document.getElementById('select-time');
+        select_time.addEventListener('change', (event) => {
+            time = parseInt(select_time.options[select_time.selectedIndex].value, 10);
+            select_maximum.text = "time : " + time + "s";
+        });
+
+
+        function fPlay() {
+            if (isPlaying) {
+                if (answer == vquestion) {
+                    fScoreUp();
+                }
+                else {
+                    fScoreDown();
+                }
+                vquestion = fQuestion(maximum);
+                fTimeReset(time);
+                fAnswerReset()
+            }
+            else {
+                isPlaying = true;
+                vquestion = fQuestion(maximum);
+                fTimeReset(time);
+                fAnswerReset();
+                fScoreReset();
+                timer = setInterval(fTimeDown, 1000);
+            }
+        }
+
+        /*
+         * Score
+         *
+         */
+
+        var score = 0;
+        var total = 0;
+        var vdisp_score = document.getElementById("disp_score");
+
+        function fScoreReset() {
+            score = 0;
+            total = 0;
+            vdisp_score.innerHTML = "";
+        }
+
+        function fScoreUp() {
+            score += 1;
+            total += 1;
+            vdisp_score.innerHTML = score.toString(10) + '/' + total.toString(10) + ' [' + (Math.floor(100 * score / total)).toString(10) + '%]';
+        }
+        function fScoreDown() {
+            total += 1;
+            vdisp_score.innerHTML = score.toString(10) + '/' + total.toString(10) + ' [' + (Math.floor(100 * score / total)).toString(10) + '%]';
+        }
+
+
+        /*
+         * Time
+         *
+         */
+
+        var timer;
+        var stop = document.getElementById("time");
+        stop.onclick = function () {
+            if (isPlaying) {
+                clearInterval(timer);
+                total = 0;
+                score = 0;
+                isPlaying = false;
+                vdisp_time.innerHTML = "STOP";
+            }
+        }
+
+        var vdisp_time = document.getElementById("disp_time");
+        function fTimeReset(time) {
+            vdisp_time.innerHTML = '.'.repeat(time);
+        }
+        function fTimeDown() {
+            if (vdisp_time.innerHTML.length > 0) {
+                vdisp_time.innerHTML = vdisp_time.innerHTML.slice(0, -1);
+            }
+            else {
+                fPlay();
+            }
+        }
+
+        /*
+         * Question
+         *
+         */
+
+        var vdisp_question = document.getElementById("disp_question");
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * (max - 1) + 2);
+        }
+        function fQuestion(max) {
+            let a = getRandomInt(max);
+            let b = getRandomInt(max);
+            vdisp_question.innerHTML = a.toString(10) + '×' + b.toString(10);
+            return a * b;
+        }
+
+
+        /* 
+         * Keyboard
+         *
+         */
+        var disp_answer_max = 4;
+
+        var answer = 0;
+        var vdisp_answer = document.getElementById("disp_answer");
+        function fAnswerReset() {
+            vdisp_answer.innerHTML = "";
+            answer = 0;
+        }
+
+        var vkey7 = document.getElementById("key7");
+        vkey7.onclick = function () {
+            if (vdisp_answer.innerHTML.length < disp_answer_max) {
+                vdisp_answer.innerHTML += '7';
+                answer = answer * 10 + 7;
+            }
+        }
+        var vkey8 = document.getElementById("key8");
+        vkey8.onclick = function () {
+            if (vdisp_answer.innerHTML.length < disp_answer_max) {
+                vdisp_answer.innerHTML += '8';
+                answer = answer * 10 + 8;
+            }
+        }
+        var vkey9 = document.getElementById("key9");
+        vkey9.onclick = function () {
+            if (vdisp_answer.innerHTML.length < disp_answer_max) {
+                vdisp_answer.innerHTML += '9';
+                answer = answer * 10 + 9;
+            }
+        }
+        var vkey4 = document.getElementById("key4");
+        vkey4.onclick = function () {
+            if (vdisp_answer.innerHTML.length < disp_answer_max) {
+                vdisp_answer.innerHTML += '4';
+                answer = answer * 10 + 4;
+            }
+        }
+        var vkey5 = document.getElementById("key5");
+        vkey5.onclick = function () {
+            if (vdisp_answer.innerHTML.length < disp_answer_max) {
+                vdisp_answer.innerHTML += '5';
+                answer = answer * 10 + 5;
+            }
+        }
+        var vkey6 = document.getElementById("key6");
+        vkey6.onclick = function () {
+            if (vdisp_answer.innerHTML.length < disp_answer_max) {
+                vdisp_answer.innerHTML += '6';
+                answer = answer * 10 + 6;
+            }
+        }
+        var vkey1 = document.getElementById("key1");
+        vkey1.onclick = function () {
+            if (vdisp_answer.innerHTML.length < disp_answer_max) {
+                vdisp_answer.innerHTML += '1';
+                answer = answer * 10 + 1;
+            }
+        }
+        var vkey2 = document.getElementById("key2");
+        vkey2.onclick = function () {
+            if (vdisp_answer.innerHTML.length < disp_answer_max) {
+                vdisp_answer.innerHTML += '2';
+                answer = answer * 10 + 2;
+            }
+        }
+        var vkey3 = document.getElementById("key3");
+        vkey3.onclick = function () {
+            if (vdisp_answer.innerHTML.length < disp_answer_max) {
+                vdisp_answer.innerHTML += '3';
+                answer = answer * 10 + 3;
+            }
+        }
+        var vkey0 = document.getElementById("key0");
+        vkey0.onclick = function () {
+            if (vdisp_answer.innerHTML.length < disp_answer_max) {
+                vdisp_answer.innerHTML += '0';
+                answer = answer * 10;
+            }
+        }
+        var vkeyBackspace = document.getElementById("keyBackspace");
+        vkeyBackspace.onclick = function () {
+            if (vdisp_answer.innerHTML.length > 0) {
+                vdisp_answer.innerHTML = vdisp_answer.innerHTML.slice(0, -1);
+                answer = Math.floor(answer / 10);
+            }
+        }
+        var vkeyReturn = document.getElementById("keyReturn");
+        vkeyReturn.onclick = function () {
+            fPlay();
+        }
+    </script>
+
+</body>
+
+</html>

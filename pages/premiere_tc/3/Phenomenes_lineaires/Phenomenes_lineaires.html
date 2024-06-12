@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Phénomènes linéaires</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src=../../../../s.js data-import=""></script>
+</head>
+
+<body onload="body()">
+
+    <h1>Phénomènes linéaires</h1>
+
+    <h2>Fonctions affines</h2>
+
+    <h3>Vocabulaire</h3>
+
+    <div class="defi">
+        <div class="row">
+            <div class="col">
+                <p>
+                    Une fonction \(f\) est dite <strong>affine</strong> lorsqu'elle s'écrit <span
+                        class="surl">\(f(x)=ax+b\)</span> (\(x\) est la variable et \(a\) et \(b\) deux constantes
+                    fixées).<br />
+                    En outre :
+                </p>
+                <ul>
+                    <li> \(a\) s'appelle le <strong>coefficient directeur</strong> ou la <strong>pente</strong> de
+                        \(f\).
+                    </li>
+                    <li> \(b\) s'appelle l' <strong>ordonnée à l'origine</strong> de \(f\).
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/foncaff.png" />
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <div class="prop">
+        \(b\) est la valeur de \(f\) pour \(x=0\). On lit donc \(b\) sur l'axe \((Oy)\) à l'intersection de cet axe
+        et
+        de la droite représentant \(f\).
+    </div>
+
+    <div class="defi">Lorsque \(b=0\), on dit que \(f\) est une fonction <strong>linéaire</strong> : on a alors
+        \(f(x)=ax\) ; on passe de \(x\) à \(f(x)\) en multipliant par un nombre \(a\) fixé : \(f(x)\) et \(x\) sont
+        donc <strong>proportionnelles</strong>.
+    </div>
+
+    <div class="rema">
+        Les droites verticales, d'équation \(x=\)un nombre fixé, ne sont pas des fonctions. Toutes les autres droites du
+        plan sont des fonctions affines.
+    </div>
+
+    <h3>Variations</h3>
+
+    <div class="prop">
+        Les variations d'une fonction affine sont données directement par le signe de son coefficient directeur :
+        <ul>
+            <li> \(a>0\) lorsque \(f\) est strictement croissante ;
+            </li>
+            <li> \(a=0\) lorsque \(f\) est constante (droite horizontale \(y=\,\)constante) ;
+            </li>
+            <li> \(a<0\) lorsque \(f\) est strictement décroissante. </ul>
+        </ul>
+    </div>
+    <div class="exo">
+        Donner les coefficients \(a\) et \(b\) ainsi que le le sens de variation des fonctions affines \(f(x)=2x+5=0\)
+        et \(g(x)=18-3x=0\)
+    </div>
+
+
+    <h3>Méthodes</h3>
+
+    <div class="meth"> <strong>Calcul de \(a\) : </strong><br />
+        On repère deux points \(E\) et \(F\) <strong>sur la droite</strong>, et on calcule la pente :
+        \(a=\frac{\Delta y}{\Delta x}=\frac{y_F-y_E}{x_F-x_E}\)
+    </div>
+    <div class="rema">
+        \(\Delta x\) représente l'accroissement en \(x\) et \(\Delta y\) représente l'accroissement en \(y\)
+        correspondant lorsque l'on va de \(E\) vers \(F\).
+    </div>
+
+    <div class="meth"> <strong>Calcul de \(b\) : </strong><br />
+        On repère un point \(E\) <strong>sur la droite</strong>, on remplace \(x\) et \(f(x)\) par les
+        coordonnées \(x_E\) et \(y_E\) de \(E\), et :
+        <ul>
+            <li><strong>ou bien</strong> on résout rapidement pour trouver \(b\) :
+                \(y_E=ax_E+b~~\Leftrightarrow~~y_E-ax_E=b\) ; </li>
+            <li><strong>ou bien</strong> on écrit \(y=a(x-x_E)+y_E\) et on développe et on simplifie.
+            </li>
+        </ul>
+
+        Bien sûr, on contrôle que la valeur de \(b\) obtenue par le calcul est bien celle lue graphiquement sur
+        l'axe \((Oy)\).
+    </div>
+
+    <div class="exo">On donne \(A(-2;-1)\), \(B(-2;2)\) et \(B(3;1)\).<br>
+        Calculer les équations des droites \((AB)\), \((AC)\) et \((BC)\) et dire lesquelles
+        correspondent à des fonctions affines.
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <h3>Équation \(ax+b=0\) et \(ax+b=\textrm{cte}\)</h3>
+    <div class="prop">
+        Une fonction affine s'annule en \(x=\frac{-b}{a}\).
+    </div>
+
+    <div class="exo">
+        <ol type="A">
+            <li>
+                Résoudre :
+                <ol>
+                    <li>\(2x+5=0\) ;</li>
+                    <li>\(18-3x=0\) ;</li>
+                </ol>
+            </li>
+            <li>
+                Résoudre :
+                <ol>
+                    <li>\(2x+5=29\) ;</li>
+                    <li>\(-3x+18=-9\)</li>
+
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+
+    <div class="exo"><strong>Degrés Celsius et Fahrenheit</strong>
+        Beaucoup de pays anglos-saxons utilisent le degré Fahrenheit (°F).<br />
+        Pour eux, l'eau bout à 212°F et gèle à 32°F.<br />
+        On note \(x\) une mesure de température en degrés Celsius (°C) et \(f(x)\) la mesure de température
+        correspondante en degrés Fahrenheit.<br />
+        On sait que \(f\) est une fonction affine.
+        <ol>
+            <li>Écrire les données de l'énoncé sous la forme \(f(\ldots)=\ldots\)</li>
+            <li>En déduire l'expression de la fonction \(f\).</li>
+            <li>Quelle est la température du corps humain en °F ?</li>
+            <li>Exprimer le zéro absolu (-273,15°C) en °F.</li>
+            <li>100°F est-elle une température supportable ?</li>
+            <li>Existe-t-il une température qui s'écrit avec le même nombre en °C et en °F ?</li>
+        </ol>
+    </div>
+
+    <div class="exo"><strong>Élévation du niveau de la mer</strong><br />
+        Des observations par satellite ont permis d'établir qu'entre 1993 et 2023, le niveau moyen global des mers a
+        augmenté de 0,10m.
+        <ol>
+            <li>En considérant que l'augmentation est linéaire, calculer l'élévation du niveau de la mer entre 2023 et
+                2050.</li>
+            <li>En considérant que l'augmentation est linéaire, combien de temps faudrait-il pour qu'une élévation de 1m
+                se produise ?</li>
+            <li>Des relevés historiques notent une élévation de 0,20m entre 1901 et 2018.<br />
+                Peut-on réellement faire confiance au modèle linéaire ?
+            </li>
+        </ol>
+    </div>
+
+    <div class="exo"><strong>Offre et demande</strong><br />
+        Un constructeur automobile fabrique un nouveau modèle de voitures électriques.
+        <ul>
+            <li>
+                Le prix de vente \(v(x)\), en euros, d’un véhicule dépend du nombre de véhicules susceptibles d’être
+                vendus par mois.<br />
+                Cette fonction s’appelle la fonction d’offre ; elle est définie par \(v(x) = 0.5x + 6000\).
+            </li>
+            <li>
+                Le prix d’achat d’un véhicule dépend du nombre de véhicules d’être achetés par mois.
+                Cette fonction s’appelle la fonction demande ; elle est définie par \(d(x) = −0.375x + 13000\) .
+            </li>
+        </ul>
+        En utilisant <a href="https://www.geogebra.org/classic">GeoGebra</a> :
+        <ol>
+            <li>
+                Représenter les fonctions d’offre et de demande.<br />
+                Il suffit de les saisir dans la boîte de saisie (à gauche ou en bas).<br />
+                Pour zoomer : on utiliser l'outil loupe ou bien la molette de la souris.<br />
+                Pour contracter/dilater l'échelle sur les axes : cliquer sur l'axe choisi et en maintenant enfoncé le
+                bouton, déplacer la souris dans la direction de l'axe.
+            </li>
+            <li>
+                Quel est le sens de variation de la fonction d’offre ? Quel est celui de la fonction de demande ?
+            </li>
+            <li>
+                On appelle prix d’équilibre le prix pour lequel l’offre est égale à la demande. <br />
+                Déterminer graphiquement
+                les coordonnées du point d’intersection de deux droites et en déduire le point d’équilibre.<br />
+                Sur Géogébra : cliquer sur l'intersection (ou bien dans le menu point, sélectionner «intersection» et
+                cliquer sur une droite puis sur l'autre).
+            </li>
+            <li>
+                Vérifier le prix d'équilibre conjecturé par un calcul à la main.
+            </li>
+        </ol>
+    </div>
+
+    <div class="pagebreak"></div>
+
+
+    <h2>Suites et suites arithmétiques</h2>
+    <h3>Suites : cas général</h3>
+    <div class="rema">
+        Intuitivement, une suite numérique est une liste infinie de nombres (réels), que l'on «numérote» par des
+        <strong>indices entiers</strong> (en commençant par par un indice de 0 ou de 1).
+    </div>
+
+    <div class="exem">
+        Une suite \(u\) (comment est-elle construite ?) :<br />
+        \(u_0=5\)&nbsp;;&nbsp;\(u_1=10\)&nbsp;;&nbsp;\(u_2=7{,}5\)&nbsp;;&nbsp;\(u_3=8{,}75\)&nbsp;;&nbsp;\(u_4=8{,}125\)
+    </div>
+
+    <div class="defi">
+        <ul>
+            <li>
+                Une <strong>suite est une fonction de \(\mathbb{N}\) (ensemble des entiers naturels) vers \(\mathbb{R}\)
+                    (ensemble des
+                    nombres réels)</strong> : elle fait correspondre, à des indices entiers, des nombres réels.
+            </li>
+            <li>
+                <strong>Notation : </strong>On note \((u_n)\) (avec des parenthèses) la suite \(u_1~;~u_2~;~u_3~;~...\),
+                ou plus simplement \(u\).
+            </li>
+            <li>
+                Le nombre \(u_n\) est appelé le <strong>\(n\)-ième terme</strong> de la suite \((u_n)\). On peut aussi
+                dire «<strong>terme de rang</strong> (ou indice) \(n\)».
+            </li>
+        </ul>
+    </div>
+    <div class="exo">
+        On note \((u_n)\) la suite des nombres pairs et \((v_n)\) la suite des nombres impairs.
+        <ol>
+            <li>
+                Trouver une formule donnant les termes généraux \(u_n\) et \(v_n\) en fonction de \(n\).
+            </li>
+            <li>
+                Dans les deux cas, quelle est la «règle» qui permet de passer d'un terme au suivant ?
+            </li>
+    </div>
+
+
+
+    <h3> Suites arithmétiques</h3>
+    <div class="defi">
+        Une suite \((u_n)\) est <strong>arithmétique</strong>
+        s'il existe un réel \(r\) (indépendant de \(n\)) tel que pour tout rang \(n\), on a\(u_{n+1}=u_n+r\)<br />
+        Le réel \(r\) s'appelle la <strong>raison</strong> de la suite.
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="rema">
+                On passe d'un terme de la suite au suivant en <strong>ajoutant</strong> un même nombre \(r\) appelé la
+                raison de
+                la suite ; attention : \(r\) peut être négatif.
+            </div>
+        </div>
+        <div class="row">
+            <figure>
+                <img src="assets/1_0506suitesc.png" alt="suite croissante" style="--width-print:3.5cm;">
+                <figcaption>suite croissante (\(r&gt;0\))</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/1_0506suitesd.png" alt="suite croissante" style="--width-print:3.5cm;">
+                <figcaption>suite décroissante (\(r&lt;0\))</figcaption>
+            </figure>
+
+        </div>
+    </div>
+    <div class="prop">
+        <ul>
+            <li>
+                Si \(r&gt;0\), la suite est strictement croissante et croît vers \(+\infty\) ;
+            </li>
+            <li>
+                Si \(r=0\), la suite est constante (toujours égale à \(u_0\)) ;
+            </li>
+            <li>
+                Si \(r&lt;0\), la suite est strictement décroissante et décroît vers \(-\infty\). </li>
+        </ul>
+    </div>
+    <div class="prop">
+        Une suite arithmétique \((u_n)\) correspond aux valeurs prises par une fonction affine \(f(x)=ax+b\) pour
+        \(x=n\), c'est à dire pour des valeurs entières de \(x\) ; en outre, on a \(a=r\) et \(b=u_0\) (cf les
+        graphiques précédents).<br />
+        On en déduit que pour tout entier \(n\), on a <span class="surl">\(u_n = u_0 + rn\)</span>, ou (en partant de
+        \(n=1\)), \(u_n = u_1 + r(n-1)\).
+    </div>
+    <div class="exo">
+        <ol>
+            <li>
+                \(u\) est la suite arithmétique : 2;7;12;17;... Écrire \(u_n\) en fonction de \(n\).
+            </li>
+            <li>
+                Calculer \(u_{100}\).
+            </li>
+            <li>
+                \(v\) est une suite arithmétique dont la raison est 8 et \(v_{50}=100\). Que vaut \(v_0\) ?
+            </li>
+    </div>
+
+    <h3>Modéliser avec des suites arithmétiques</h3>
+    <div class="exo"><strong>Intérêts simples</strong><br />
+        En partant de 100€ d'économies et en ajoutant 15€ par mois, quelle somme est mise de côté en deux ans ?<br />
+        Identifier le terme initial et la raison de cette suite. En combien de temps atteint-on 300€ ?
+    </div>
+
+    <div class="pagebreak"></div>
+    <div class="exo">
+        <div class="row">
+            <div class="col">
+                Un fermier plante des pommiers en carré. Afin de protéger ces arbres contre les vents dominants, il
+                plante des conifères sur deux côtés du verger.<br />
+                Ci-contre, figurent les dispositions des pommiers et des conifères pour \(n\) de 1 à 3.
+                <ol>
+                    <li>Combien de conifères seront utiles pour protéger 25 pommiers</li>
+                    <li>Combien de conifères seront utiles pour protéger 25 rangées de pommiers</li>
+                    <li>Combien de rangées de pommiers peut-on protéger avec 500 conifères ?</li>
+                </ol>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/patterns1.png" alt="pattern 1" />
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="exo"><strong>Patterns</strong><br />
+        Chaque encadré présente un motif évolutif pour les cas \(n=0\), \(n=1\) et \(n=2\). Pour chacun :
+        <ol>
+            <li>Dessiner le cas \(n=3\).</li>
+            <li>Trouver une expression permettant de calculer le nombre de points en fonction de \(n\) quelconque (ou
+                bien à minima pour \(n=10\)).</li>
+        </ol>
+        <figure>
+            <img src="assets/patterns2.png" alt="pattern 2" style="--width-print:15cm;" />
+        </figure>
+
+    </div>
+</body>
+
+</html>

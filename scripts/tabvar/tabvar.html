@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>TabVar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon"
+        href="data:image/svg+xml, <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐉</text></svg>">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to bottom, lightblue, lightgray, transparent);
+            background-repeat: no-repeat;
+        }
+
+        #menu,
+        #display {
+            margin: 0;
+            padding: 3px;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            overflow-x: auto;
+        }
+
+        #menu {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            align-items: start;
+            text-align: center;
+        }
+
+        #menu table {
+            margin: 3px;
+        }
+
+        #display {
+            align-items: center;
+        }
+
+
+        #construction {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 1em;
+            padding: 0;
+        }
+
+        #construction table.vartable tr td.cell_selected {
+            border: solid 1px limegreen;
+            background-color: #3de7d1;
+        }
+
+        #construction table.vartable tr td {
+            width: 6em;
+            height: 2em;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            border: dotted 1px grey;
+        }
+
+        #output table {
+            background-color: white;
+        }
+
+        button,
+        label,
+        input {
+            text-align: center;
+            vertical-align: center;
+            width: 3.5em;
+            height: 2em;
+            background-color: #3de7d1;
+            border: 0 solid #e5e7eb;
+            color: #000000;
+            transform: rotate(-2deg);
+            user-select: none;
+        }
+
+        button:after,
+        label:after {
+            content: '';
+            position: absolute;
+            border: 1px solid #000;
+            bottom: 4px;
+            left: 4px;
+            width: calc(100% - 1px);
+            height: calc(100% - 1px);
+        }
+
+        button:hover:after,
+        label:hover:after {
+            bottom: 2px;
+            left: 2px;
+        }
+    </style>
+</head>
+
+<body class="tex2jax_ignore" style="margin:0;">
+    <div id="menu">
+        <table>
+            <caption>Add</caption>
+            <tbody>
+                <tr>
+                    <td colspan="2"><button onclick="add_row(0)">up</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button onclick="add_col(0)">left</button></td>
+                    <td><button onclick="add_col(1)">right</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button onclick="add_row(1)">down</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>Del</caption>
+            <tbody>
+                <tr>
+                    <td><button onclick="del_row()">row</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="del_col()">col</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>Merge</caption>
+            <tbody>
+                <tr>
+                    <td colspan="3"><button onclick="merge_row_up()">up</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button onclick="merge_col_left()">left</button></td>
+                    <td><button onclick="unmerge()">split</button></td>
+                    <td><button onclick="merge_col_right()">right</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><button onclick="merge_row_down()">down</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <caption>Sep</caption>
+            <tbody>
+                <tr>
+                    <td><button onclick="tr_border_bottom()">row</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="apply_style_to_cells(object_style('border-right'))">col</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <caption>Back</caption>
+            <tbody>
+                <tr>
+                    <td><button onclick="apply_style_to_cells(object_style('bar'))">|</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="apply_style_to_cells(object_style('bbar'))">||</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <caption>Color</caption>
+            <tbody>
+                <tr>
+                    <td><input type="color" id="color-picker" /></td>
+                </tr>
+                <tr>
+                    <td><button onclick="apply_color()">apply</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <caption>Symbols</caption>
+            <tbody>
+                <tr>
+                    <td><button onclick="insert_text('~')">⎵</button></td>
+                    <td><button onclick="insert_text('{,}')">,</button></td>
+                    <td><button onclick="insert_text('≈')">≈</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert_text('\\leqslant \\geqslant')">≤≥</button></td>
+                    <td><button onclick="insert_text('π')">π</button></td>
+                    <td><button onclick="insert_text('\\%')">%</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert_text('α')">α</button></td>
+                    <td><button onclick="insert_text('β')">β</button></td>
+                    <td><button onclick="insert_text('ε')">ε</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert_text('-')">-</button></td>
+                    <td><button onclick="insert_text('+')">+</button></td>
+                    <td><button onclick="insert_text('∞')">∞</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert_text('↘')">↘</button></td>
+                    <td><button onclick="insert_text('→')">→</button></td>
+                    <td><button onclick="insert_text('↗')">↗</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>Functions</caption>
+            <tbody>
+                <tr>
+                    <td><button onclick="insert_text('\\left(\\right)')">(big)</button></td>
+                    <td><button onclick="insert_text('\\left\\{\\right\\}')">{big}</button></td>
+                    <td><button onclick="insert_text('\\left|\\right|')">|big|</button></td>
+                    <td><button onclick="insert_text('\\textrm{')">text</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert_text('\\frac{}{}')">x/y</button></td>
+                    <td><button onclick="insert_text('^{')">x<sup>y</sup></button></td>
+                    <td><button onclick="insert_text('\\sqrt{')">√</button></td>
+                    <td><button onclick="insert_text('\\sqrt[3]{')"><sup>3</sup>√</button></td>
+                </tr>
+
+                <tr>
+                    <td><button onclick="insert_text('\\e^{')">e</button></td>
+                    <td><button onclick="insert_text('\\ln(')">ln</button></td>
+                    <td><button onclick="insert_text('{10}^{')">10<sup>x</sup></button></td>
+                    <td><button onclick="insert_text('\\log(')">log</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert_text('\\cos(')">cos</button></td>
+                    <td><button onclick="insert_text('\\sin(')">sin</button></td>
+                    <td><button onclick="insert_text('\\tan(')">tan</button></td>
+                    <td><button onclick="insert_text(')')">)</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert_text('\\arccos(')">acos</button></td>
+                    <td><button onclick="insert_text('\\arcsin(')">asin</button></td>
+                    <td><button onclick="insert_text('\\arctan(')">atan</button></td>
+                    <td><button onclick="insert_text('}')">}</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>Files</caption>
+            <tbody>
+                <tr>
+                    <td><button onclick="load()">load</button></td>
+                </tr>
+                <tr>
+                    <td><input id="file_load" style="display:none;" type="file" accept=".html, .txt">
+                    </td>
+                </tr>
+                <tr>
+                    <td><button onclick="file_save()">save</button></td>
+                <tr>
+                    <td>
+                        <input id="file_save" value="tab" type="text">
+                        <span style="font-size:smaller;">.html</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="copy_to_output()"><strong>run</strong></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--<button onclick="magic()">magic</button>-->
+    </div>
+    <div id="display">
+        <span id="construction" contenteditable="true">
+            <table class="vartable"
+                style="text-align:center;padding:0;margin:0;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;">
+                <tr style="border-bottom: 1px solid;">
+                    <td style="border-right: 1px solid;">x</td>
+                    <td>-∞</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>+∞</td>
+                </tr>
+                <tr style="border-bottom: 1px solid;">
+                    <td style="border-right: 1px solid;">f'(x)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="border-right: 1px solid;"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="border-right: 1px solid;">f</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="border-right: 1px solid;"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </span>
+        <div>
+            <span id="output" class="tex2jax_process"></span>
+        </div>
+    </div>
+    <div id="scripts">
+        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+        <script defer>
+            window.MathJax = {
+                tex: {
+                    macros: {
+                        e: "{\\textrm{e} }"
+                    }
+                }
+            };
+
+            const construction = document.getElementById("construction");
+            const output = document.getElementById("output");
+            var cell_selected = construction.getElementsByTagName("td")[1];
+            cell_selected.classList.toggle("cell_selected");
+            const color_picker = document.getElementById("color-picker")
+            color_picker.value = "#606060";
+            color_picker.addEventListener("input", change_color, false);
+            color_picker.addEventListener("change", change_color, false);
+            var color_selected = color_picker.value;
+            var sel = window.getSelection();
+
+            function copy_to_output() {
+                output.parentNode.style["padding"] = "4px";
+                output.parentNode.style["background-color"] = "white";
+                output.innerHTML = construction.innerHTML;
+                output.getElementsByTagName("table")[0];
+                Array.from(output.getElementsByTagName("td")).forEach(cell => {
+                    cell.innerHTML = "\\(" + cell.innerHTML + "\\)";
+                });
+                MathJax.typeset();
+            }
+
+            function set_caret(cell) {
+                sel = window.getSelection();
+                sel.selectAllChildren(cell);
+                sel.collapseToEnd();
+            }
+
+            function insert_text(text) {
+                sel = window.getSelection();
+                let cell = sel.anchorNode;
+                let range = sel.getRangeAt(0);
+                range.insertNode(document.createTextNode(text));
+                sel.collapseToEnd();
+            }
+
+
+            function select_cell(cell) {
+                if (cell != cell_selected) {
+                    cell_selected.classList.toggle("cell_selected");
+                    cell.classList.toggle("cell_selected");
+                    cell_selected = cell;
+                    set_caret(cell_selected);
+                    cell.focus();
+                }
+            }
+
+            function select_cell_right(cell) {
+                while ((cell.nextElementSibling) && (cell.nextElementSibling.style["display"] == "none")) {
+                    cell = cell.nextElementSibling;
+                }
+                if (cell.nextElementSibling) {
+                    cell = cell.nextElementSibling;
+                    select_cell(cell);
+                }
+            }
+
+            function select_cell_left(cell) {
+                while ((cell.previousElementSibling) && (cell.previousElementSibling.style["display"] == "none")) {
+                    cell = cell.previousElementSibling;
+                }
+                if (cell.previousElementSibling) {
+                    cell = cell.previousElementSibling;
+                    select_cell(cell);
+                }
+            }
+
+            function select_cell_down(cell) {
+                let col_index = cell.cellIndex;
+                let row = cell.parentNode;
+                while ((row.nextElementSibling) && (row.nextElementSibling.cells[col_index].style["display"] == "none")) {
+                    row = row.nextElementSibling;
+                }
+                if (row.nextElementSibling) {
+                    cell = row.nextElementSibling.cells[col_index];
+                    select_cell(cell);
+                }
+            }
+
+            function select_cell_up(cell) {
+                let col_index = cell.cellIndex;
+                let row = cell.parentNode;
+                while ((row.previousElementSibling) && (row.previousElementSibling.cells[col_index].style["display"] == "none")) {
+                    row = row.previousElementSibling;
+                }
+                if (row.previousElementSibling) {
+                    cell = row.previousElementSibling.cells[col_index];
+                    select_cell(cell);
+                }
+            }
+
+
+            document.addEventListener('keyup', function (event) {
+                if ((event.ctrlKey) && (event.keyCode == 39)) {
+                    select_cell_right(cell_selected);
+                }
+                if ((event.ctrlKey) && (event.keyCode == 37)) {
+                    select_cell_left(cell_selected);
+                    console.log("ok");
+                }
+                if ((event.ctrlKey) && (event.keyCode == 38)) {
+                    select_cell_up(cell_selected);
+                }
+                if ((event.ctrlKey) && (event.keyCode == 40)) {
+                    select_cell_down(cell_selected);
+                }
+            });
+
+
+
+            function add_event_listener_to_new_cell(cell) {
+                cell.addEventListener('click', () => select_cell(cell))
+            }
+            construction.querySelectorAll('td').forEach(
+                cell => {add_event_listener_to_new_cell(cell);}
+            );
+            /*
+                        function magic() {
+                            construction.querySelectorAll('td').forEach(cell => {
+                                cell.textContent = `${cell.parentNode.rowIndex} ${cell.cellIndex} ${cell.rowSpan} ${cell.colSpan}`
+                            });
+                        }
+            */
+            function add_col(col_index_delta) {
+                let col = cell_selected.cellIndex;
+                construction.querySelectorAll("tr").forEach(el => {
+                    let new_cell = el.insertCell(col_index_delta + col);
+                    add_event_listener_to_new_cell(new_cell);
+                });
+                select_cell(cell_selected);
+            }
+
+            function del_col() {
+                unmerge();
+                let col_index = cell_selected.cellIndex;
+                if (cell_selected.nextElementSibling) {
+                    select_cell(cell_selected.nextElementSibling);
+                    construction.querySelectorAll("tr").forEach(el => {
+                        el.deleteCell(col_index);
+                    });
+                }
+                else if (cell_selected.previousElementSibling) {
+                    select_cell(cell_selected.previousElementSibling);
+                    construction.querySelectorAll("tr").forEach(el => {
+                        el.deleteCell(col_index);
+                    });
+                }
+            }
+
+            function del_row() {
+                unmerge();
+                let col_index = cell_selected.cellIndex;
+                let row = cell_selected.parentNode;
+                let row_index = row.rowIndex;
+                if (row.nextElementSibling) {
+                    select_cell(row.nextElementSibling.cells[col_index]);
+                    row.parentNode.deleteRow(row_index);
+                }
+                else if (row.previousElementSibling) {
+                    select_cell(row.previousElementSibling.cells[col_index]);
+                    row.parentNode.deleteRow(row_index);
+                }
+            }
+
+
+            function merge_col_right() {
+                let cell = cell_selected;
+                while (cell.nextElementSibling && (cell.nextElementSibling.style["display"] == "none")) {
+                    cell = cell.nextElementSibling;
+                }
+                if (cell.nextElementSibling) {
+                    cell = cell.nextElementSibling;
+                    cell.style["display"] = "none";
+                    cell_selected.colSpan += cell.colSpan;
+                }
+            }
+
+            function merge_col_left() {
+                let cell = cell_selected;
+                while (cell.previousElementSibling && (cell.previousElementSibling.style["display"] == "none")) {
+                    cell = cell.previousElementSibling;
+                }
+                if (cell.previousElementSibling) {
+                    cell = cell.previousElementSibling;
+                    cell.style["display"] = "none";
+                    cell_selected.colSpan += cell.colSpan;
+                }
+            }
+
+            function unmerge_col(cell_ref = cell_selected) {
+                let cell = cell_ref;
+                while (cell.nextElementSibling && (cell.nextElementSibling.style["display"] == "none")) {
+                    cell = cell.nextElementSibling;
+                    cell.style["display"] = "";
+                    cell.colSpan = 1;
+                }
+                cell = cell_ref;
+                while (cell.previousElementSibling && (cell.previousElementSibling.style["display"] == "none")) {
+                    cell = cell.previousElementSibling;
+                    cell.style["display"] = "";
+                    cell.colSpan = 1;
+                }
+                cell_ref.style["display"] = "";
+                cell_ref.colSpan = 1;
+            }
+
+            function add_row(row_index_delta) {
+                let row_ref = cell_selected.parentNode;
+                let row_index = row_ref.rowIndex + row_index_delta;
+                let row = cell_selected.parentNode.parentNode.insertRow(row_index);
+                console.log(row_ref.cells);
+                row_ref.querySelectorAll("td").forEach(cell_ref => {
+                    let new_cell = row.insertCell();
+                    add_event_listener_to_new_cell(new_cell);
+                    if (cell_ref.style["border-right"]) {
+                        new_cell.style["border-right"] = cell_ref.style["border-right"];
+                    };
+                });
+                if ((row_index_delta == 1) && (row_ref.style["border-bottom"])) {
+                    row.style["border-bottom"] = row_ref.style["border-bottom"];
+                    row_ref.style["border-bottom"] = "";
+                }
+                select_cell(cell_selected);
+            }
+
+            function change_color(event) {
+                color_selected = event.target.value;
+            }
+
+            function apply_color(cell_ref = cell_selected) {
+                cell_ref.style["color"] = color_selected;
+            }
+
+            function unmerge_row(cell_ref = cell_selected) {
+                let cell = cell_ref;
+                unmerge_col(cell);
+                let col_index = cell_ref.cellIndex;
+                let row = cell_ref.parentNode;
+                while (row.nextElementSibling && (row.nextElementSibling.cells[col_index].style["display"] == "none")) {
+                    row = row.nextElementSibling;
+                    cell = row.cells[col_index];
+                    cell.style["display"] = "";
+                    cell.rowSpan = 1;
+                    unmerge_col(cell);
+                }
+                cell = cell_ref;
+                while (row.previousElementSibling && (row.previousElementSibling.cells[col_index].style["display"] == "none")) {
+                    row = row.previousElementSibling;
+                    cell = row.cells[col_index];
+                    cell.style["display"] = "";
+                    cell.rowSpan = 1;
+                    unmerge_col(cell);
+                }
+                cell_ref.style["display"] = "";
+                cell_ref.rowSpan = 1;
+            }
+
+            function unmerge() {
+                unmerge_col();
+                unmerge_row();
+            }
+
+
+            function merge_row_down() {
+                let col_index = cell_selected.cellIndex;
+                let row = cell_selected.parentNode;
+                let cell = row.cells[col_index];
+                unmerge_col(cell);
+                while (row.nextElementSibling && (row.nextElementSibling.cells[col_index].style["display"] == "none")) {
+                    row = row.nextElementSibling;
+                    cell = row.cells[col_index];
+                }
+                if (row.nextElementSibling) {
+                    row = row.nextElementSibling;
+                    cell = row.cells[col_index];
+                    cell_selected.rowSpan += cell.rowSpan;
+                    cell.style["display"] = "none";
+                }
+            }
+
+            function merge_row_up() {
+                let col_index = cell_selected.cellIndex;
+                let row = cell_selected.parentNode;
+                let cell = row.cells[col_index];
+                unmerge_col(cell);
+                while (row.previousElementSibling && (row.previousElementSibling.cells[col_index].style["display"] == "none")) {
+                    row = row.previousElementSibling;
+                    cell = row.cells[col_index];
+                }
+                if (row.previousElementSibling) {
+                    row = row.previousElementSibling;
+                    cell = row.cells[col_index];
+                    cell_selected.style["display"] = "none";
+                    cell.rowSpan += cell_selected.rowSpan;
+                    select_cell(cell);
+                }
+            }
+
+
+
+            function tr_border_bottom() {
+                if (cell_selected.parentNode.style["border-bottom"]) {
+                    cell_selected.parentNode.style["border-bottom"] = "";
+                }
+                else {
+                    cell_selected.parentNode.style["border-bottom"] = `1px solid ${color_selected}`;
+                }
+            }
+
+            function object_style(str) {
+                if (str == "border-right") {
+                    return {"border-right": `1px solid ${color_selected}`};
+                }
+                if (str == "border-right") {
+                    return {"border-right": `1px solid ${color_selected}`};
+                }
+                if (str == "bar") {
+                    return {
+                        "background-image": `linear-gradient(90deg, ${color_selected}, ${color_selected}`,
+                        "background-size": "1px 100%",
+                        "background-repeat": "no-repeat",
+                        "background-position": "center center"
+                    };
+                }
+                if (str == "bbar") {
+                    return {
+                        "background-image": `linear-gradient(90deg, ${color_selected} 0px 1px, transparent 1px 7px, ${color_selected} 7px`,
+                        "background-size": "8px 100%",
+                        "background-repeat": "no-repeat",
+                        "background-position": "center center"
+                    };
+                }
+            }
+
+            function apply_style_to_cells(object_style) {
+                let row = cell_selected.parentNode;
+                let col_index = cell_selected.cellIndex;
+                let unapply = cell_selected.style[Object.keys(object_style)[0]];
+                let cell = cell_selected;
+                let stop = false;
+                while (!stop) {
+                    if (row.previousElementSibling) {
+                        if (row.previousElementSibling.style["border-bottom"]) {
+                            stop = true;
+                        }
+                        else {
+                            row = row.previousElementSibling;
+                        }
+                    }
+                    else {
+                        stop = true;
+                    }
+                }
+                stop = false;
+                while (!stop) {
+                    cell = row.cells[col_index];
+                    for (let k in object_style) {
+                        cell.style[k] = unapply ? "" : object_style[k];
+                    }
+                    if (row.style["border-bottom"]) {
+                        stop = true;
+                    }
+                    if (row.nextElementSibling) {
+                        row = row.nextElementSibling;
+                    }
+                    else {
+                        stop = true;
+                    }
+                }
+            }
+
+            function load() {
+                document.getElementById("file_load").click();
+            }
+
+            function copy_to_input(el) {
+                construction.innerHTML = el.getElementsByTagName("table")[0];
+                Array.from(construction.getElementsByTagName("td")).forEach(cell => {
+                    let cell_html = cell.innerHTML;
+                    cell_html = cell_html.replace(/\\\)([^\\\)]*)$/, '$1');
+                    cell_html = cell_html.replace(/\\\(/, '');
+                    add_event_listener_to_new_cell(cell);
+                });
+            }
+
+
+            document.getElementById("file_load")
+                .addEventListener("change", function () {
+                    var fr = new FileReader();
+                    fr.readAsText(this.files[0]);
+                    document.getElementById("file_save").value = this.files[0].name.replace(".html", "");
+                    fr.onload = function () {
+                        let buffer = document.createElement("div");
+                        buffer.style["display"] = "none";
+                        document.body.appendChild(buffer);
+                        buffer.innerHTML = fr.result;
+                        let table = buffer.getElementsByTagName("table")[0];
+                        console.log(table);
+                        construction.removeChild(construction.getElementsByTagName("table")[0]);
+                        construction.appendChild(table);
+                        document.body.removeChild(buffer);
+                        Array.from(construction.getElementsByTagName("td")).forEach(cell => {
+                            let cell_html = cell.innerHTML;
+                            cell_html = cell_html.replace(/\\\)([^\\\)]*)$/, '$1');
+                            cell_html = cell_html.replace(/\\\(/, '');
+                            add_event_listener_to_new_cell(cell);
+                        });
+                        cell = construction.getElementsByClassName("cell_selected")[0];
+                        if (cell) {
+                            cell_selected = cell;
+                            set_caret(cell_selected);
+                            cell.focus();
+                        }
+                        else {
+                            select_cell(construction.getElementsByTagName("td")[0]);
+                        }
+                    };
+                });
+
+            function file_save() {
+                copy_to_output();
+                let file_name = document.getElementById("file_save").value;
+                var my_file = `\<!DOCTYPE html\>
+\<html lang=\"fr\"\>
+\<head\>
+  \<meta charset=\"UTF-8\"\>
+  \<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+  \<title\>TabVar file\</title\>
+  \<link rel=\"icon\" href=\"data:image/svg+xml, \<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22\>\<text y=%22.9em%22 font-size=%2290%22\>🐉\</text\>\</svg\>"\>
+  \<script id=\"mathjax_script\" type=\"text/javascript\" async src =\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js\"\>\</script\>
+  \<script async\>
+    window.MathJax = {
+                tex: {
+                    macros: {
+                        e: \"{\\\\textrm{e} }\"
+                    }
+                }
+            };
+    function apply_mathjax() {
+      document.getElementsByTagName(\"table\")[0];
+      Array.from(document.getElementsByTagName("td")).forEach(cell => {
+        cell.innerHTML = \"\\\\(\" + cell.innerHTML + \"\\\\)\";
+      });
+      MathJax.typeset();
+      }
+  \</script\>
+\</head\>
+\<body onload=\"apply_mathjax()\"\>
+  \<span\>  
+    ${construction.innerHTML}
+  \</span\>
+\</body\>
+\</html\>`;
+            let a = document.createElement('a');
+            a.setAttribute('download', `${file_name}.html`);
+            a.setAttribute('href', "data:text/plain;charset=utf-8," + encodeURIComponent(my_file));
+            a.setAttribute('style', "display:none;");
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+         }
+</script>
+    </div>
+</body>
+
+</html>

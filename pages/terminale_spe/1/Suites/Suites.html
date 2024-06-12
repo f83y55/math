@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Suites - Cours</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<link href="../../../../style.css" rel="stylesheet">-->
+	<script src="../../../../s.js" data-import=""></script>
+</head>
+
+<body onload="body()">
+	<main>
+		<h1>Suites - Cours</h1>
+
+
+		<h2>Généralités : rappels 1<sup>ère</sup></h2>
+		<h3>Exemples</h3>
+		<div class="none">
+
+			<strong>Rappel :</strong> \(\mathbb{N}=\left\{0; 1; 2; 3; 4; \ldots\right\}\) est l’ensemble des nombres
+			entiers
+			naturels.
+		</div>
+
+		<div class="exem">
+			<ul>
+				</li>
+				<li> Nombres pairs : 0 ; 2 ; 4 ; 6 ; 8 ; ...
+				</li>
+				<li> Alternée 1 ; -1 ; 1 ; -1 ; 1 ; -1 ; ...
+				</li>
+				<li> QI : 3 ; 5 ; 7 ; ? ; ...
+				</li>
+				<li> de Conway (audiodescriptive) : 1 ; 11 ; 21 ; 1211 ; 111221 ; 312211 ; ...
+				</li>
+			</ul>
+		</div>
+
+		<div class="rema">
+			Intuitivement, une suite numérique est une liste infinie et ordonnée de nSi la suite est notée \((u)\), son
+			terme de rang \(n\) est noté \(u_n\) (\(n\) est placé en indice).
+		</div>
+
+		<div class="rema">
+			Il est parfois commode de commencer la numérotation de la suite par \(0\) : \(u_0\) est alors le terme
+			initial
+			(terme de rang 0) de
+			la
+			suite \((u_n)\).<br />
+			<strong>Éviter de parler du premier/deuxième et préférer «terme de rang ...»</strong> si le contexte n'est
+			pas parfaitement
+			clair.
+		</div>
+
+		<h3>Définition, notations</h3>
+
+		<div class="defi">
+			<ul>
+				<li>
+					Une <strong>suite</strong> est une fonction de \(\mathbb{N}\) vers \(\mathbb{R}\). En effet, à
+					chaque rang
+					(nombre entier), elle associe un nombre (réel).<br />
+					<strong>Notation : </strong>On note \((u_n)\) (avec des parenthèses) la suite
+					\(u_0~;~u_1~;~u_2~;~u_3~;~...\)
+				</li>
+				<li>
+					Le nombre \(u_n\) est appelé <strong>terme de rang \(n\)</strong>.
+				</li>
+				<li>
+					Dans certains cas, il peut être préférable de commencer la suite à partir d'un rang \(n_0&gt;0\)
+				</li>
+		</div>
+		<div class="exem">
+			<div class="row">
+				<div class="col">
+					<p>
+						On pose \(u_n=3^n\). On définit ainsi une suite \((u_n)\) dont les premiers termes sont :<br />
+						\(u_0=3^0=1\) ; \(u_1=3^1=3\) ; \(u_2=3^2=9\) ; \(u_3=3^3=27\) ; \(u_4=3^4=81\) ; ... <br />
+						Cette suite peut être représentée comme-ci :
+					</p>
+
+					<div class="none">
+						<p> \(\left(3^n\right)_{n\in\mathbb{N}}\) sur un axe :
+						<figure>
+							<img src="assets/1_0506suitesb.png" style="--width-print:4cm;" />
+						</figure>
+						</p>
+					</div>
+
+				</div>
+				<div class="col" style="margin-left: 2em;">
+
+
+					<p> \(\left(3^n\right)_{n\in\mathbb{N}}\) dans le plan :
+					<figure>
+						<img src="assets/1_0506suitesa.png" style="width:15vw;--width-print:1.8cm;" />
+					</figure>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="exem">
+			La suite \((v_n)\) définie pour tout entier \(n&gt;0\) par \(v_n=\dfrac{1}{n}\), c'est à dire :
+			\(v_1=\frac{1}{1}=1\) ; \(v_2=\frac{1}{2}\) ; \(v_3=\frac{1}{3}\) ; \(v_4=\frac{1}{4}\) débute
+			au rang
+			\(n=1\). On pourra la noter \(\left(\frac{1}{n}\right)_{n\in\mathbb{N^*}}\), \(\mathbb{N^*}\)
+			désignant
+			l'ensemble des entiers naturels privé de 0.
+		</div>
+
+
+
+		<h3>Sens de variation</h3>
+
+		<div class="defi">
+			<ul>
+				<li> La suite \((u_n)\) est dite <strong>strictement croissante</strong> lorsque pour tout entier
+					naturel \(n\),
+					on a
+					\(u_n &lt; u_{n+1}\). </li>
+				<li> La suite \((u_n)\) est dite <strong>croissante</strong> lorsque pour tout entier naturel \(n\), on
+					a
+					\(u_n\leqslant
+					u_{n+1}\).
+				</li>
+				<li> La suite \((u_n)\) est dite <strong>strictement décroissante</strong> lorsque pour tout entier
+					naturel
+					\(n\), on a
+					\(u_n &gt; u_{n+1}\).
+				</li>
+				<li> La suite \((u_n)\) est dite <strong>décroissante</strong> lorsque pour tout entier naturel \(n\),
+					on a :
+					\(u_n\geqslant
+					u_{n+1}\).
+				</li>
+				<li> Une suite croissante ou décroissante est appelée suite <strong>monotone</strong>.
+				</li>
+			</ul>
+		</div>
+
+		<div class="exem">
+			Pour un réel \(x\), on note \(E(x)\) la partie entière de \(x\), c'est à dire le plus grand entier naturel
+			inférieur ou égal à \(x\) (ainsi \(E(3{,}7)=3\), par exemple).<br>
+			La suite \((u_n)\) définie pour tout entier naturel \(n\) par \(u_n=E\left(\dfrac{x}{2}\right)\) (premiers
+			termes : \(u_0=0\) ; \(u_1=0\) ; \(u_2=1\) ; \(u_3=1\) ; \(u_4=2\) ; ...) est
+			croissante mais
+			pas
+			strictement croissante.
+		</div>
+		<div class="exem">
+			La suite \(\left(\frac{1}{n}\right)_{n\in\mathbb{N^*}}\) est
+			strictement
+			décroissante (donc a fortiori décroissante).
+		</div>
+		<div class="meth">
+			Pour déterminer le sens de variation d'une suite \((u_n)\), <strong>on peut</strong>
+			examiner le
+			signe de
+			la
+			différence \(u_{n+1}-u_n\).
+		</div>
+
+		<div class="row">
+			<div class="col">
+
+				<div class="exem">
+					On considère la suite \((u_n)\) définie par \(u_n=1-5n\) :
+					On a \(u_0=1\) ; \(u_1=-4\) ; \(u_2=-9\) ; ...<br />
+					Montrons que cette suite est strictement décroissante :<br />
+					<table>
+						<tr>
+							<td>
+								\(u_{n+1}-u_{n}\)
+
+							</td>
+							<td>\(=\)</td>
+							<td>
+								\(1-5(n+1)-(1-5n)\)
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>\(=\)</td>
+							<td>
+								\(-5\)
+							</td>
+						</tr>
+					</table>
+					\(-5 &lt; 0\), donc \((u_n)\) décroît strictement.
+				</div>
+
+			</div>
+			<div class="col">
+				<table class="mytable" style="margin-left:1cm;font-size: smaller;">
+					<tr>
+						<th>
+							\(u_{n+1}-u_n\)
+						</th>
+						<th>
+							variation de \((u_n)\)
+						</th>
+					</tr>
+					<tr>
+						<td>
+							st. positif
+						</td>
+						<td>
+							st. croissante
+						</td>
+					</tr>
+					<tr>
+						<td>
+							positif
+						</td>
+						<td>
+							croissante
+						</td>
+					</tr>
+					<tr>
+						<td>
+							négatif
+						</td>
+						<td>
+							décroissante
+						</td>
+					</tr>
+					<tr>
+						<td>
+							st. négatif
+						</td>
+						<td>
+							st. décroissante
+						</td>
+					</tr>
+				</table>
+				</p>
+
+			</div>
+		</div>
+
+
+
+		<div class="meth">Si la suite est <strong>directement</strong> donnée en fonction de \(n\), c'est à dire
+			du type
+			\(u_n=f(n)\) où \(f\) est une fonction, on peut étudier les variations de \(f\) pour en
+			déduire
+			celles
+			de \((u_n)\).
+		</div>
+
+		<div class="exo">Démontrer que la suite \((u_n)_{n\in\mathbb{N}}\) définie par :
+			\(u_n=2n^2-n\) est strictement croissante en utilisant deux méthodes :
+			<ol>
+				<li> En étudiant le signe de \(u_{n+1}-u_n\).
+				</li>
+				<li> En étudiant les variations de la fonction \(f(x)=2x^2-x\).
+				</li>
+				<li>En général, si \(u_n=f(n)\), a-t-on :<br>
+					\(f\) croissante \(\Rightarrow\) \((u_n)\) croissante ?
+					La réciproque est-elle vraie ?
+				</li>
+			</ol>
+		</div>
+
+		<h3>Suites bornées</h3>
+		<div class="none">
+			\(m\) et \(M\) sont deux réels fixés.
+		</div>
+
+		<div class="defi">
+			<ul>
+				</li>
+				<li> On dit que \((u_n)\) est <strong>minorée</strong> (par \(m\), dit «<strong>minorant</strong>»)
+					si
+					pour tout
+					entier \(n\) on a :
+					\(m\leqslant u_n\).
+				</li>
+				<li> On dit que \((u_n)\) est <strong>majorée</strong> (par \(M\), dit «<strong>majorant</strong>»)
+					si
+					pour tout
+					entier \(n\) on a :
+					\(u_n\leqslant M\).
+				</li>
+				<li> Une suite majorée et minorée est dite <strong>bornée</strong>.
+				</li>
+			</ul>
+		</div>
+
+		<div class="exem">
+			\(\left(\sin n\right)_{n\in\mathbb{N}}\) est bornée ; \(\left(n^2\right)_{n\in\mathbb{N}}\) est minorée
+			(par
+			\(0\)).
+		</div>
+		<div class="exo">
+			<ol>
+				<li>Démontrer que la suite \((u_n)\) définie par \(u_n=100+20n-n^2\) est majorée.</li>
+
+				<li>Démontrer que la suite \((v_n)\) définie par \(v_n=\frac{1}{n+20}\) est bornée.</li>
+			</ol>
+		</div>
+
+		<h3>Générer une suite</h3>
+		<div class="none">
+			<div class="row">
+				<div class="col">
+					<p>
+						<strong>Si \(u_n\) est donné directement en fonction de \(n\) :</strong>
+					</p>
+					<p>
+						On peut alors calculer tous les termes de la suite directement : c’est l’idéal. <br />
+						Mais ce n'est pas toujours le cas.
+					</p>
+				</div>
+				<div class="col">
+					<div class="exem"><strong>Formule explicite : </strong>
+						\(u_n=\cos(\pi n)-2n\)
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="none">
+			<div class="row">
+				<div class="col">
+					<p>
+						<strong>Si \((u_n)\) est définie par récurrence :</strong>
+						On dispose d’un moyen (formule, algorithme) permettant de passer d’un terme au suivant :
+						\(u_{n+1}\)
+						est donné
+						en
+						fonction de \(u_n\) (ou bien \(u_n\) est donné en fonction de \(u_{n-1}\)) ;<br />
+						on dispose donc d'<strong>une relation de récurrence</strong> ; certains termes doivent être
+						connus
+						car des suites distinctes peuvent admettre la même relation de récurrence !
+					</p>
+				</div>
+				<div class="col">
+					<div class="exem"><strong>Formule de récurrence : </strong>
+						\(\left\{\begin{array}{l} u_{n+1} = u_n + \frac{1}{n} \\ u_1 =1 \\ \end{array} \right.\)
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="defi">Lorsque \(u_{n+1}\) est défini à partir de \(u_n\) à l’aide d’une relation de récurrence
+			ne
+			faisant intervenir que des constantes, on définit une <strong>fonction associée à la suite :</strong>
+			c'est la fonction telle que \(u_{n+1}=f(u_n)\), ou \(u_{n}=f(u_{n-1})\).
+		</div>
+
+		<div class="exem">
+			<p>
+			<ul>
+				<li>Pour \(u_{n+1} = 2u_n\), la fonction associée est \(f(x)=2x\)</li>
+				<li> Pour \(v_n = v_{n-1}^2 + 1\), c'est \(g(x) = x^2 + 1\).</li>
+			</ul>
+			Ainsi, on a :
+			\(u_{n+1} = f \left(u_n \right)\) et \(v_n = g \left(v_{n-1} \right)\).
+			</p>
+			<p>
+				<strong>Attention : </strong>ne pas confondre cette fonction avec la fonction qui donne directement
+				\(u_n\) en fonction de \(n\), si celle-ci existe (ou que l'on cherche à la découvrir).
+			</p>
+		</div>
+		</div>
+
+
+
+
+		<h2>Suites arithmétiques et géométriques : rappels 1<sup>ère</sup></h2>
+		<div class="none">
+			<table class="mytable" style="width: 100%;font-size: small;">
+				<tr>
+					<th></th>
+					<th>
+						Suites arithmétiques
+					</th>
+					<th>
+						Suites géométriques
+					</th>
+				</tr>
+				<tr>
+					<th>
+						Relation de récurrence
+					</th>
+					<td>
+						Une suite \((u_n)\) est <strong>arithmétique</strong> s'il existe un réel \(r\) (indépendant de
+						\(n\)) tel
+						que pour
+						tout
+						\(n\),
+						\(u_{n+1}=u_n+r\).<br />
+						Le réel \(r\) s'appelle la <strong>raison</strong> de la suite.
+					</td>
+					<td>
+						Une suite \((u_n)\) est <strong>géométrique</strong> s'il existe un réel \(q\) (indépendant de
+						\(n\))
+						tel que
+						pour tout
+						\(n\),
+						\(u_{n+1}=q\times u_n\).<br />
+						Le réel \(q\) s'appelle la <strong>raison</strong> de la suite.
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Interprétation
+					</th>
+					<td>
+						On passe d'un terme de la suite au suivant en <strong>ajoutant</strong> un même nombre \(r\).
+					</td>
+					<td>
+						On passe d'un terme de la suite au suivant en <strong>multipliant</strong> par un même nombre
+						\(q\).
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Caractérisation
+					</th>
+					<td>
+						\(u_{n+1}-u_n\) est constante, égale à \(r\).
+					</td>
+					<td>
+
+						\(\frac{u_{n+1}}{u_n}\) est constante, égale à \(q\).
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Fonction associée (récurrence)
+					</th>
+					<td>
+
+						\(u_{n+1}=f\left(u_n\right)\) avec \(f(x)=x+r\)
+					</td>
+					<td>
+						\(u_{n+1}=f\left(u_n\right)\) avec \(f(x)=qx\)
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Exemples
+					</th>
+					<td>
+						<img style="width:15vw;--width-print:2.2cm;" src="assets/1_0506suitesc.png" />
+						<img style="width:15vw;--width-print:2.2cm;" src="assets/1_0506suitesd.png" />
+					</td>
+					<td>
+						<img style="width:15vw;--width-print:2.2cm;" src="assets/1_0506suitesg.png" />
+						<img style="width:15vw;--width-print:2.2cm;" src="assets/1_0506suitesh.png" />
+						<img style="width:15vw;--width-print:2.2cm;" src="assets/1_0506suitese.png" />
+						<img style="width:15vw;--width-print:2.2cm;" src="assets/1_0506suitesf.png" />
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Formules
+					</th>
+					<td>
+						<ul>
+							<li>terme général (rang 0) :
+								\(u_n=u_0+n r\)</li>
+							<li>terme général (rang 1) :
+								\(u_n=u_1+(n-1)r\)</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li>terme général (rang 0) :
+								\(u_n=u_0 q^n\)</li>
+							<li>terme général (rang 0) :
+								\(u_n=u_1 q^{n-1}\)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Limites
+					</th>
+					<td>
+						<ul>
+							<li>\(r&gt;0\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=+\infty\)</li>
+							<li>\(r=0\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=u_0\) (suite constante)</li>
+							<li>\(r&lt;0\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=-\infty\)</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li>\(q&gt;1\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=\pm\infty\)</li>
+							<li>\(-1&lt;q&lt;1\Rightarrow\displaystyle\lim_{n\to+\infty}u_n=0\)</li>
+							<li>\(r\leqslant-1\Rightarrow\) pas de limite.</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+
+		<h2>Principe de récurrence</h2>
+		<h3>Énoncé dépendant d'un entier \(n\)</h3>
+
+		<div class="defi">Un énoncé mathématique dépendant d'un entier \(n\in\mathbb{N}\) peut, selon la
+			valeur de \(n\),
+			être
+			<code>vrai</code> ou bien <code>faux</code> (on parle de <strong>valeur de vérité</strong> ou bien de
+			<strong>valeur
+				booléenne</strong> de l'énoncé).
+		</div>
+
+		<div class="exem">
+			\(n^2\geq 4\) est faux pour \(n=0\) et pour \(n=1\), et est vrai pour tous les entiers
+			suivants.
+		</div>
+		<div class="exo">Déterminer pour quelles valeurs de \(n\) la propriété \(K_n\) suivante est
+			vraie :
+			\( K_n&nbsp;:&nbsp;n^2+n-6 \geqslant 0 \)
+		</div>
+
+		<h3>But du principe de récurrence</h3>
+		<div class="none">
+			Parmi les énoncés mathématiques dépendant d'un entier naturel \(n\), certains sont vrais
+			pour n'importe
+			quelle
+			valeur de \(n\).
+		</div>
+
+		<div class="exem">
+			Pour toute valeur de \(n\in\mathbb{N}\), (on peut écrire « \(\forall n\in\mathbb{N}\) » ; \(\forall\)
+			signifiant « pour
+			tout
+			»
+			), on a :
+			\(H_n &nbsp;:&nbsp;\displaystyle\sum_{k=0}^{n}{k^2}=\dfrac{n(n+1)(2n+1)}{6}\)
+		</div>
+
+		<div class="rema">
+			<ul>
+				<li> On rappelle que par définition du symbole \(\sum\), on a
+					\(\displaystyle\sum_{k=0}^n {k^2}=1+2^2+3^2+\cdots+n^2\).
+				</li>
+				<li> L'égalité présentée dans cet exemple résume le calcul d'une somme longue à un calcul simple.
+				</li>
+				<li> Il n'est pas évident, a priori, que cette égalité soit vérifiée pour tout entier \(n\).
+				</li>
+				<li> Le <strong>but</strong> du principe de récurrence est démontrer des relations pour une infinité de
+					«rangs».
+				</li>
+			</ul>
+		</div>
+		<h3 class="subsection">Méthode du principe de récurrence</h3>
+		<div class="meth">Démontrer une propriété \(H_n\) par récurrence suit toujours le même schéma :<br>
+
+			<ol>
+				<li> <strong>Initialisation :</strong> On vérifie que \(H_0\) est vraie.
+				</li>
+				<li> <strong>Hérédité :</strong> On considère la propriété \(H_n\) vraie (pour un
+					rang
+					\(n\) fixé) et
+					on
+					démontre
+					que
+					dans ce cas, \(H_{n+1}\) l'est aussi.
+				</li>
+				<li> <strong>Conclusion : </strong> S'il y a initialisation et hérédité, alors \(\forall
+					n\in\mathbb{N}\),
+					\(H_n\)
+					est
+					vraie.
+				</li>
+			</ol>
+		</div>
+		<div class="rema">
+			On compare souvent le principe de récurrence à une chute de dominos placés en ligne : si le premier
+			domino
+			tombe
+			(initialisation) et si chaque domino entraîne le suivant dans sa chute (hérédité), alors toute la file
+			va
+			tomber.
+		</div>
+
+		<div class="exem">
+			\(H_n &nbsp;:&nbsp; \displaystyle\sum_{k=0}^n{k^2}=\dfrac{n(n+1)(2n+1)}{6}\)
+			<ol>
+				<li> <strong>Initialisation :</strong> On vérifie que \(H_0\) est vraie (on remplace \(n\)
+					par
+					\(0\) et on
+					vérifie
+					l'égalité) :<br>
+					\(\displaystyle\sum_{k=0}^0 {k^2}=0\) et \(\dfrac{0(0+1)(0n+1)}{6}=0\),
+					donc \(\displaystyle\sum_{k=0}^n{k^2}=\dfrac{0(0+1)(0n+1)}{6}\), donc <strong>\(H_0\) est
+						<code>vraie</code></strong>.
+				</li>
+				<li> <strong>Hérédité :</strong> Considérons \(H_n\) vraie pour un rang \(n\) fixé et
+					démontrons
+					\(H_{n+1}\)
+					:
+					<ul style="font-size: smaller;">
+						<li>
+							d'une part :<br />
+							\(
+							\displaystyle\sum_{k=0}^{n+1}{k^2}
+							= \) <span class="surl">\(\displaystyle\sum_{k=0}^{n}k^2\)</span>\(+(n+1)^2\)
+							← on utilise l'<span class="surl">hypothèse de récurrence</span>, et on développe
+							:<br />
+							\(
+							= \) <span class="surl">\(\dfrac{n(n+1)(2n+1)}{6}\)</span>\(+(n+1)^2
+							= \dfrac{2n^3+3n^2+n}{6}+n^2+2n+1 =\dfrac{1}{3}n^3+\dfrac{3}{2}n^2+\dfrac{13}{6}n+1
+							\)
+						</li>
+						<li>
+							d'autre part :<br />
+							\(
+							\dfrac{(n+1)[(n+1)+1][2(n+1)+1]}{6}
+							= \dfrac{(n+1)(n+2)(2n+3)}{6}
+							\), et on développe :<br />
+
+							\(
+							= \dfrac{(n^2+3n+2)(2n+3)}{6}
+							= \dfrac{2n^3+9n^2+13n+6}{6}
+							= \dfrac{1}{3}n^3+\dfrac{3}{2}n^2+\dfrac{13}{2}n+1
+							\)
+						</li>
+					</ul>
+					<br />
+					alors \(\displaystyle\sum_{k=0}^{n+1}{k^2}=\dfrac{(n+1)[(n+1)+1][2(n+1)+1]}{6}\),
+					et ainsi \(H_{n+1}\) est vraie.
+				</li>
+				<li> <strong>Conclusion : </strong> Il y a initialisation et hérédité, alors \(\forall
+					n\in\mathbb{N}\),
+					\(H_n\) est
+					vraie.
+
+				</li>
+		</div>
+
+
+		<div class="rema">
+			<ul>
+				<li> Il est possible qu'un énoncé soit faux pour quelques termes initiaux puis vrai à partir d'un
+					rang
+					donné
+					(faux
+					pour \(n=0\) et vrai à partir de \(n=1\), ou bien \(n=10\)...) ; il est alors tout à fait
+					possible
+					d'initialiser
+					la
+					récurrence à partir de ce rang-là (on vérifie \(H_1\) ou bien \(H_{10}\) dans la partie
+					initialisation) pour
+					démontrer que l'énoncé est vrai à partir de ce rang.
+				</li>
+				<li> L'initialisation est importante et l'hérédité seule ne suffit pas !</li>
+			</ul>
+		</div>
+
+		<div class="exem">
+			On définit la suite \((u_n)\) par la relation \(u_{n+1}=2+u_n\), valable pour tout
+			\(n\in\mathbb{N}\).
+			On note \(H_n\) l'énoncé «\(u_n\) est pair».
+			On peut alors voir que \(H_n\) est héréditaire, mais si \(H_0\) est fausse (quand \(u_0\) est
+			impair), \(H_n\)
+			sera
+			toujours fausse.
+		</div>
+		<div class="exo"><br />
+			On définit la suite \((q_n)\) par la relation \(\left\{\begin{array}{l}q_{n+1}=2+2n+q_n\\ q_0=-1 \\
+			\end{array} \right.\).
+			Démontrer que pour tout entier \(n\), on a \(q_n=n^2+n-1\).
+		</div>
+
+		<div class="exo">
+			<div class="row">
+				<div class="col">
+					<ol>
+						<li>
+							Calculer \(d_2\), \(d_3\) et \(d_4\).
+						</li>
+						<li>
+							Démontrer par récurrence que \(d_n=\sqrt{4n-3}\).
+						</li>
+					</ol>
+				</div>
+				<div class="col">
+					<figure>
+						<img src="assets/d_n.png" alt="suite d_n" style="width:20vw;--width-print:4cm;" />
+					</figure>
+				</div>
+			</div>
+		</div>
+
+
+
+		<h3>Sommes des termes d'une suite</h3>
+		<div class="none">
+			<table class="mytable" style="width: 100%;">
+				</style>>
+				<tr>
+					<th>
+					</th>
+					<th>
+						Sommes arithmétiques
+					</th>
+					<th>
+						sommes géométriques
+					</th>
+				</tr>
+				<tr>
+					<th>
+						Formules de base
+					</th>
+					<td>
+						\(\displaystyle\sum_{k=0}^{k=n}k=0+1+2+...+n=\frac{n(n+1)}{2}\)
+					</td>
+					<td>
+						\(\displaystyle\sum_{k=0}^{k=n}q^k=1+q+q^2+...+q^n=\frac{q^{n+1}-1}{q-1}\)
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Applications
+					</th>
+					<td>
+						\begin{eqnarray*}
+						&&\displaystyle\sum_{k=0}^{k=n}u_k=(n+1)u_0+\frac{n(n+1)}{2}r \\
+						&&\displaystyle\sum_{k=1}^{k=n}u_k=nu_1+\frac{(n-1)n}{2}r \\
+						\end{eqnarray*}
+					</td>
+					<td>
+						\begin{eqnarray*}
+						&&\displaystyle\sum_{k=0}^{k=n}u_k=u_0\frac{q^{n+1}-1}{q-1} \\
+						&&\displaystyle\sum_{k=1}^{k=n}u_k=u_1\frac{q^{n}-1}{q-1} \\
+						\end{eqnarray*}
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="exo">
+			Démontrer, par récurrence, les deux formules de base du tableau précédent.<br />
+			Y a-t-il d'autres démonstrations ?
+		</div>
+		<div class="exo">
+			Un collègue affirme qu'en prenant \(n\in\mathbb{n}\) assez grand, il peut rendre la suite définie par
+			\(u_n=\frac{1}{n^2}+\frac{2}{n^2}+\cdots+\frac{n}{n^2}\) aussi proche de 1 qu'il veut. A-t-il raison ?
+		</div>
+
+		<h2>Limite d'une suite</h2>
+		<h3>Définitions</h3>
+		<div class="defi">
+			\(l\) est un réel donné et \(\left(u_n\right)_{n\in\mathbb{N}}\) une suite.<br />
+			On dit que <strong>\(\left(u_n\right)_{n\in\mathbb{N}}\) tend vers \(l\)</strong>
+			et
+			on note
+			\(\displaystyle\lim_{n\to+\infty}u_n=l\) lorsque tout intervalle ouvert contenant \(l\) contient
+			toutes les
+			valeurs
+			\(u_n\) à partir d'un certain rang.
+		</div>
+
+		<div class="rema">
+			Dans ce cas, pour chaque intervalle ouvert \(I\) contenant \(l\), il existe un rang \(n_0\) (dépendant
+			donc
+			de \(I\))
+			tel
+			que pour tout \(n\geq n_0\), on ait \(u_n\in I\).
+		</div>
+		<div class="none">
+			<strong>Rappel : </strong> Intervalle ouvert : \(\left]\ldots;\ldots\right[\).
+		</div>
+		<div class="defi">Une suite qui admet une limite finie \(l\in\mathbb{R}\) est appelée <strong>suite
+				convergente</strong>.
+		</div>
+
+		<div class="defi">
+			<ul>
+				<li>
+					On dit que \(\left(u_n\right)_{n\in\mathbb{N}}\) tend vers \(+\infty\)
+					et on
+					note
+					\(\displaystyle\lim_{n\to+\infty}u_n=+\infty\) lorsque tout intervalle de la forme
+					\(\left]A;+\infty\right[\)
+					contient toutes les valeurs \(u_n\) à partir d'un certain rang.
+				</li>
+				<li>On dit que \(\left(u_n\right)_{n\in\mathbb{N}}\) tend vers \(-\infty\)
+					et on
+					note
+					\(\displaystyle\lim_{n\to+\infty}u_n=-\infty\) lorsque tout intervalle de la forme
+					\(\left]-\infty;A\right[\)
+					contient toutes les valeurs \(u_n\) à partir d'un certain rang.
+				</li>
+			</ul>
+		</div>
+
+		<div class="rema">
+			<strong>Attention : </strong> Certaines suites n'ont pas de limite, par exemple \(\left((-1)^n\right)\) ou
+			tout autre suite périodique (non constante) à partir d'un certain rang ; on a aussi
+			\(\left((-2)^n\right)\), non bornée.
+		</div>
+		<div class="defi">Une suite tendant vers \(\pm\infty\) ou qui n'a pas de limite est dite
+			<strong>divergente</strong>.
+		</div>
+		<div class="exo">
+			En utilisant la définition, démontrer que \((\sqrt{n})\) tend vers \(+\infty\).
+		</div>
+		<div class="exo">
+			On définit la suite \((u_n)\) par \(\left\{\begin{array}{l}u_{n+1}=\frac{\sqrt{3}u_n-1}{u_n+\sqrt{3}} \\ u_0
+			= 2 \\ \end{array}\right.\). En utilisant le tableur ou la calculatrice, calculer les 6 premiers termes de
+			cette suite. Une suite bornée peut-elle être divergente ?
+		</div>
+
+		<div class="exo"><strong>Unicité de la limite</strong><br>
+
+			Démontrer que si une suite \((u_n)\) converge vers \(l\), alors cette limite \(l\) est
+			unique.<br>
+			On raisonnera par l'absurde en supposant qu'\((u_n)\) converge aussi vers \(l'\neq l\) ; on
+			pourra comparer
+			les
+			valeurs de la suite, à partir d'un certain rang, au nombre \(\dfrac{l+l'}{2}\) pour
+			dégager
+			une
+			contradiction.
+		</div>
+
+		<div class="exo"><strong>La suite \(\left(q^n\right)_{n\in\mathbb{N}}\)</strong><br />
+
+			<ol>
+				<li> Démontrer, par récurrence sur \(n\), que pour tout \(a&gt;0\) et pour tout entier naturel \(n\)
+					on
+					a :<span class="surl">\(\displaystyle(1+a)^n\geq 1+na\)</span> (<strong>inégalité de
+						Bernoulli</strong>).
+				</li>
+				<li> En déduire la limite de la suite \((q^n)\) lorsque \(q&gt;1\).
+				</li>
+				<li> Discuter de la convergence de la suite \((q^n)\) selon les autres valeurs possibles de
+					\(q\).
+				</li>
+			</ol>
+		</div>
+		<div class="prop">
+			Toute suite croissante non majorée tend vers \(+\infty\).
+		</div>
+		<div class="exo">Le démontrer (utiliser les définitions).
+		</div>
+
+		<div class="prop">
+			<ul>
+				<li>
+					Toute suite croissante majorée converge vers un certain \(l\in\mathbb{R}\).
+				</li>
+				<li>
+					Toute suite décroissante minorée converge vers un certain \(l\in\mathbb{R}\).
+				</li>
+			</ul>
+			<strong>Démonstration :</strong> admise (relative à la construction de l'ensemble \(\mathbb{R}\)).
+		</div>
+
+		<div class="exo">\((u_n)\) est une suite croissante majorée par \(M\in\mathbb{R}\).
+			<ol>
+				<li> Justifier que \((u_n)\) tend vers un certain \(l\in\mathbb{R}\).
+				</li>
+				<li> Démontrer que tous les termes de \((u_n)\) sont inférieurs à \(l\).
+				</li>
+			</ol>
+		</div>
+
+		<div class="exo">
+			En entrant n'importe quel nombre strictement positif dans une calculatrice et en appuyant rapidement,
+			comme un malade, sur la touche «racine carrée» on finit par tomber sur 1. Le diagramme ci-contre,
+			partant du nombre 3,2, semble en accord avec cette observation.<br />
+			On étudie donc la suite définie par \(u_{n+1}=\sqrt{u_n}\).<br />
+			On se rappelle que pour \(0\leqslant x\leqslant 1\), on a \(\sqrt{x}\geqslant x\) et que pour
+			\(x\geqslant 1\), on a \(\sqrt{x}\leqslant x\).<br />
+
+
+			<div class="row">
+				<div class="col">
+					<ol>
+						<li>
+							Dans cette partie, on considère que \(u_0\in\left]0;1\right]\)
+							<ol type="a">
+								<li>Démontrer que pour tout entier \(n\), on a \(0\leqslant u_n\leqslant
+									u_{n+1}\leqslant 1\)
+								</li>
+								<li>En déduire que \((u_n)\) converge.</li>
+							</ol>
+						</li>
+						<li>
+							Dans cette partie, on considère que \(u_0\in\left[1;+\infty\right[\). En utilisant un
+							raisonnement analogue, démontrer que \((u_n)\) converge.
+						</li>
+						<li> Est-ce suffisant pour dire que \((u_n)\) converge vers 1 ?</li>
+						<li>Écrire un algorithme ou un programme Python permettant de déterminer la plus petite valeur
+							de \(n\) telle que \(u_n\) est proche de 1 à 0,001 près.</li>
+					</ol>
+				</div>
+				<div class="col">
+					<figure>
+						<img src="assets/sqrt_rec.png" alt="suite rec">
+						<figcaption class="hidden-print">
+							<a href="assets/suite_rec.py" download>Fichier
+								python</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+
+		<div class="exo">
+			La suite \((q_n)\) est définie par \(\left\{\begin{array}{l} q_{n+1}=\sqrt{q_n+5} \\ q_0=10 \end{array}
+			\right.\). <br />
+			Démontrer que pour tout entier \(n\), on a \(2{,}5\leqslant q_{n+1}\leqslant q_n\leqslant 10\). <span
+				class="hidden-print"><a href="assets/suite_rec3.py" download>fichier python</a>, <a
+					href="assets/sqrt5_rec.pdf" download>figure</a>)</span>
+		</div>
+		<div class="exo">
+			<ul>
+				<li>
+					Trouver deux suites divergentes dont le produit converge.
+				</li>
+				<li>
+					Trouver deux suites divergentes dont le quotient converge.
+				</li>
+			</ul>
+		</div>
+
+		<h3>Limites et opérations</h3>
+		<div class="none">
+			Dans cette partie, \(l\) et \(l'\) sont deux réels et désignent des limites finies.
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="prop"><strong>Limites d'une somme</strong><br />
+					<table class="mytable">
+						<tr>
+							<th>
+								\(\lim u_n\)
+							</th>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(+\infty\)
+							</td>
+							<td>
+								\(-\infty\)
+							</td>
+							<td>
+								\(-\infty\)
+							</td>
+						</tr>
+						<tr>
+							<th>
+								\(\lim v_n\)
+							</th>
+							<td>
+								\(l'\)
+							</td>
+							<td>
+								\(+\infty\)
+							</td>
+							<td>
+								\(-\infty\)
+							</td>
+							<td>
+								\(+\infty\)
+							</td>
+							<td>
+								\(-\infty\)
+							</td>
+							<td>
+								\(+\infty\)
+							</td>
+						</tr>
+						<tr>
+							<th>
+								\(\lim u_n+v_n\)
+							</th>
+							<td>
+								&nbsp;+&nbsp;
+							</td>
+							<td>
+
+							</td>
+							<td>
+
+							</td>
+							<td>
+
+							</td>
+							<td>
+
+							</td>
+							<td>
+								FI
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="col">
+				<div class="defi">FI signifie «forme indéterminée» : on ne peut pas conclure directement.</div>
+
+				<div class="exo">Compléter le tableau.</div>
+				<div class="exo">Donner des exemples pour lesquels FI vaut \(+\infty\), \(-\infty\) ou une
+					limite
+					finie.</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="prop"><strong>Limites d'un produit</strong><br />
+					<table class="mytable">
+						<tr>
+							<th>
+								\(\lim u_n\)
+							</th>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(l\neq0\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+							<td>
+								\(0\)
+							</td>
+						</tr>
+						<tr>
+							<th>
+								\(\lim v_n\)
+							</th>
+							<td>
+								\(l'\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+						</tr>
+						<tr>
+							<th>
+								\(\lim u_n\times v_n\)
+							</th>
+							<td>
+								\(l\times l'\)
+							</td>
+							<td>
+								\(*\infty\)
+							</td>
+							<td>
+								\(*\infty\)
+							</td>
+							<td>
+								FI
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="rema">
+					\(*\infty\) : pour trouver si \(*\) est \(+\) ou \(-\), on applique la règle des signes.
+				</div>
+
+			</div>
+			<div class="col">
+				<div class="prop"><strong>Limites d'un quotient</strong><br />
+					<table class="mytable">
+						<tr>
+							<th>
+								\(\lim u_n\)
+							</th>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(l\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+
+							<td>
+								\(0\)
+							</td>
+						</tr>
+						<tr>
+							<th>
+								\(\lim v_n\)
+							</th>
+							<td>
+								\(l'\neq0\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+							<td>
+								\(0\)
+							</td>
+							<td>
+								\(l'\)
+							</td>
+							<td>
+								\(\pm\infty\)
+							</td>
+							<td>
+								0
+							</td>
+						</tr>
+						<tr>
+							<th>
+								\(\lim \frac{u_n}{v_n}\)
+							</th>
+							<td>
+								\(\frac{l}{l'}\)
+							</td>
+							<td>
+								\(0\)
+							</td>
+							<td>
+								\(*\infty\)
+							</td>
+							<td>
+								\(*\infty\)
+							</td>
+							<td>
+								FI
+							</td>
+							<td>
+								FI
+							</td>
+
+						</tr>
+					</table>
+				</div>
+
+				<div class="exo">Donner des exemples pour lesquels FI vaut \(+\infty\), \(-\infty\) ou une
+					limite
+					finie.
+				</div>
+			</div>
+		</div>
+
+		<div class="exo">Calculer les limites en \(+\infty\) des suites définies par les expressions suivantes :<br />
+			\(u_n=n^2+8n-\frac{1}{n}\) &nbsp;;&nbsp;
+			\(v_n=\frac{8}{5-3n}\) &nbsp;;&nbsp;
+			\(a_n=\frac{2}{-3\sqrt{n}}\) &nbsp;;&nbsp;
+			\(b_n=1-0{,}95^n\) &nbsp;;&nbsp;
+			\(c_n=4\times\left(\frac{2}{3}\right)^n\) &nbsp;;&nbsp;
+			\(d_n=\frac{3+3^n}{0{,}2^n-10}\) &nbsp;;&nbsp;
+		</div>
+
+		<div class="exo">
+			On considère la suite \((u_n)\) définie pour \(n\geqslant 2\) par
+			\(\left\{\begin{array}{l} u_{n+1}=\left(1-\dfrac{1}{n^2}\right)u_n \\ u_2=1 \\ \end{array}\right.\)
+			<ol>
+				<li>Montrer que pour tout \(n\geqslant2\), on a \(0\leqslant u_n\leqslant 1\).</li>
+				<li>Étudier le sens de variation de la suite \((u_n)\).</li>
+				<li>En déduire que \((u_n)\) converge vers un réel \(l\).</li>
+				<li>Montrer que pour tout \(n\geqslant2\), on a \(u_n=\dfrac{n}{2(n-1)}\).</li>
+				<li>En déduire la limite \(l\) de \((u_n)\).</li>
+			</ol>
+		</div>
+		<div class="exo">
+			Le 1er janvier 2020, il y a 200 poissons dans un aquarium. Chaque année, 15% des poissons meurent et on
+			ajoute 45 nouveaux poissons en fin d’année. On note \(u_n\) le nombre de poissons dans l’aquarium au 1er
+			janvier 2020 + n.
+			<ol>
+				<li>Déterminer le nombre de poissons dans l’aquarium le 1<sup>er</sup> janvier 2021.</li>
+				<li>Justifier que, pour tout entier \(n\in\mathbb{N}\), on a \(u_{n+1} = 0{,}85 u_n + 45\). </li>
+				<li>Montrer par récurrence que, pour tout entier \(n\in\mathbb{N}\), on a \(u_n \leqslant u_{n+1}
+					\leqslant 300\). Que peut-on en déduire sur la suite \((u_n)\) ? </li>
+				<li>Soit \((v_n)\) la suite définie pour tout entier \(n\in\mathbb{N}\), par : \(v_n = u_n - 300\)
+					<ol type="a">
+						<li>Montrer que la suite \((v_n)\) est géométrique, on précisera sa raison et son premier terme.
+						</li>
+						<li>En déduire l’expression de \(v_n\) en fonction de \(n\), puis celle de \(u_n\) en fonction
+							de \(n\).</li>
+						<li>Déterminer la limite de la suite \((u_n)\).</li>
+					</ol>
+				</li>
+				<li>Interpréter les résultats des questions 3 et 4 dans le contexte du phénomène observé.</li>
+			</ol>
+		</div>
+
+		<div class="defi">Une suite \((u_n)_{n\in\mathbb{N}}\) est dite
+			<strong>arithmético-géométrique</strong> s'il
+			existe deux
+			réels
+			\(a\neq1\) et \(b\) tels que la suite vérifie la relation de récurrence suivante pour tout
+			\(n\in\mathbb{N}\) : \(u_{n+1}=au_n + b\)
+		</div>
+		<div class="exo"><strong>Suite arithmético-géométrique</strong><br>
+			<ol>
+				<li> Pourquoi dit-on \(a\neq1\) ?
+				</li>
+				<li> On note \(r\) la solution de l'équation \(ax+b=x\).
+					Démontrer par récurrence sur \(n\) que pour tout entier naturel \(n\in\mathbb{N}\), on a :
+					\(u_n-r=a^n(u_0-r)\)<br />
+				</li>
+				<li> Discuter, selon les valeurs des paramètres \(a\) et \(b\) et de \(u_0\), de la
+					convergence
+					de la suite
+					\((u_n)\).
+				</li>
+			</ol>
+		</div>
+		<div class="meth">
+
+			Si \((u_n)\) est arithmético-géométrique (\(u_{n+1}=au_n + b\)) alors \((u_n-r)\) est
+			géométrique de
+			raison
+			\(a\) (avec \(r\) solution de \(ax+b=x\)).
+		</div>
+
+		<div class="exo"><strong>Crédit (avec LibreOffice Calc)</strong><br />
+			Les crédits à la consommation ou immobiliers indiquent un taux effectif global (ou TAEG) : lors d'un tel
+			crédit, chaque année, la banque applique ce taux à la somme totale restante dûe par l'emprunteur pour
+			calculer ses intérêts qui s'ajoutent à la somme dûe.
+			<ol>
+				<li>En utilisant et en complétant ce <a href="assets/credit.ods" download>tableau</a>, déterminer en
+					combien d'années sera remboursé un crédit de 10 000€ dont le TAEG est de 3%.</li>
+				<li>Modéliser cette situation par une suite arithmético-géométrique. Interpréter la situation lorsque sa
+					limite est \(\pm\infty\). On pourra utiliser ce <a href="assets/suite_rec.py">script python</a>.
+				</li>
+			</ol>
+		</div>
+
+		<div class="exo">
+			Une infinité (dénombrable, c'est à dire autant que d'entiers naturels) de mathématiciens
+			entrent
+			dans un
+			bar.
+			Le
+			premier commande une pinte. Le deuxième un demi ; le troisième un quart, le quatrième un
+			huitième ...etc...
+			Le barman dit « je connais vos limites » et pose deux pintes sur le comptoir.Le barman a-t-il raison ?
+			Expliquer. Combien de pintes ont bu les mathématiciens de rang pair ?
+		</div>
+
+
+		<h3>Limites et comparaisons</h3>
+		<div class="prop">
+			<strong>Comparaison en \(\pm\infty\)</strong><br />
+			\((u_n)\) et \((v_n)\) sont deux suites telles qu'à partir d’un certain rang \(n_0\), on a, pour
+			tout entier
+			\(n\geq
+			n_0\) : \(u_n \leq v_n\) ;
+
+			<ul>
+				<li> Si \((u_n)\) tend vers \(+\infty\), alors \((v_n)\) tend vers \(+\infty\)
+				</li>
+				<li> Si \((v_n)\) tend vers \(-\infty\), alors \((u_n)\) tend vers \(-\infty\)
+				</li>
+			</ul>
+		</div>
+		<div class="exo">
+			Démontrer le premier item.
+		</div>
+
+		<div class="prop">
+			<strong>Théorème de comparaison (dit « des gendarmes »)</strong><br />
+			Si \(l\) est un réel et \((u_n)\), \((v_n)\) et \((w_n)\) sont trois suites telles que :
+
+			<ul>
+				<li> à partir d’un certain rang \(n_0\), on a, pour tout entier \(n\geqslant n_0\) : \(u_n \leqslant v_n
+					\leqslant
+					w_n\) ;
+				</li>
+				<li> \((u_n)\) et \((w_n)\) tendent vers \(l\) ;
+				</li>
+			</ul>
+			Alors \((v_n)\) tend vers \(l\) (démonstration admise).
+		</div>
+
+		<div class="exo">Déterminer les limites suivantes (encadrer !) :
+			<table style="width: 100%;">
+				<tr>
+					<td>
+						\(u_n=\dfrac{\sin(n)}{n}\)
+					</td>
+					<td>
+						\(v_n=\frac{n+(-1)^n}{n+1}\)
+					</td>
+					<td>
+						\(w_n=\sin(n)-2n\)
+					</td>
+					<td>
+						\(z_n=n\times \sin(n)-2n^2\)
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="meth"> Pour «lever» une forme indéterminée (FI), on essaie de factoriser puis simplifier par le
+			terme qui représente la plus grosse quantité, soit ici la plus grosse puissance de \(n\).
+		</div>
+		<div class="exo">Déterminer les limites suivantes (encadrer, minorer, majorer, factoriser par les termes
+			dominants...) :
+			<table style="width: 100%;">
+				<tr>
+					<td>
+						\(u_n=n^2-200n\)
+					</td>
+					<td>
+						\(v_n=\frac{2n^2+3n}{10n^2-4}\)
+					</td>
+					<td>
+						\(w_n=\frac{2n^4+3n}{10n^7-4}\)
+					</td>
+					<td>
+						\(z_n=n^2-200n+\frac{1-n}{1-\frac{1}{n+2}}\)
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="defi"><strong>Approfondissement :</strong><br />
+			Deux suites : \((a_n)\) croissante et \((b_n)\) décroissante vérifiant
+			\(\displaystyle\lim_{n\to+\infty}\left(b_n-a_n\right)=0\) sont dites <strong>adjacentes</strong>.
+		</div>
+		<div class="prop">
+			On a alors \(a_n\leqslant b_n\), et ces deux suites convergent vers une même limite.
+		</div>
+		<div class="exo"><strong>Dur : </strong> Démontrer la propriété précédente.<br /> Montrer que toute suite bornée
+			possède une sous-suite convergente (on
+			pourra
+			utiliser la dichotomie pour construire des suites adjacentes).
+		</div>
+
+	</main>
+</body>
+
+</html>

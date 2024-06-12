@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+    <style>
+        /*
+        div.corr {
+            display: block;
+            width: initial;
+            height: initial;
+        }
+        */
+        table.loto {
+            border: solid red 3px;
+            border-radius: 1em;
+            padding: 0.3em;
+        }
+
+        table.loto td {
+            margin: 0.2em;
+            padding: 0;
+            width: 1em;
+            height: 1em;
+            border: solid red 1px;
+            text-align: center;
+            vertical-align: middle;
+            color: red;
+            font-size: x-small;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table.gol td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        table.loto .lotoco td {
+            border-radius: 1em;
+        }
+
+        table.mytable td {
+            padding: 0.1em;
+        }
+
+        @media print {
+            div.corr {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Dénombrement et probabilités - TD</h1>
+        <div class="row">
+            <div class="col" style="min-width: 62%;">
+                <div class="exo"><strong>Les coefficients binomiaux et leur somme : démonstration</strong>
+                    <ol>
+                        <li>
+                            Le nombre de parties d'un ensemble de \(n\) éléments est
+                            &nbsp;&nbsp;<span style="color:grey">...</span>&nbsp;&nbsp;.
+                            <div class="corr">
+                                Le nombre de parties d'un ensemble de n éléments est
+                                2<sup>n</sup>
+                            </div>
+                        </li>
+                        <li>
+                            Le nombre de <strong>parties possédant \(k\) éléments</strong>
+                            d'un ensemble de \(n\) éléments ( =
+                            <strong>combinaisons de \(k\) éléments</strong> pris parmi \(n\)) est le coefficient
+                            binomial :
+                            \(
+                            \displaystyle{{n}\choose{k}} =
+                            \dfrac{{\color{grey}\ldots}!}{({\color{grey}\ldots}-{\color{grey}\ldots})!{\color{grey}\ldots}!}
+                            \)
+                            <div class="corr">
+                                \(
+                                \displaystyle{{n}\choose{k}} =
+                                \dfrac{n!}{(n-k)!k!}
+                                \)
+                                C'est aussi le nombre d'arrangements (= de k-listes) de \(k\) éléments pris parmi n
+                                éléments <strong>divisé par</strong> k!, car on ne tient pas compte de l'ordre pour une
+                                combinaison.
+                            </div>
+                        </li>
+                        <li>
+                            En particulier, pour \(k\in\left\{0;1;2;n\right\}\), on a les valeurs remarquables suivantes
+                            :
+                            <table class="mytable">
+                                <tr>
+                                    <td>
+                                        \(\displaystyle{{n}\choose{0}} = {\color{grey} \dots} \)
+                                    </td>
+                                    <td>
+                                        \(\displaystyle{{n}\choose{1}} = {\color{grey} \dots} \)
+                                    </td>
+                                    <td>
+                                        \(\displaystyle{{n}\choose{2}} = \dfrac{{\color{grey} \dots}({\color{grey}
+                                        \dots}-1)}{2} \)
+                                    </td>
+                                    <td>
+                                        \(\displaystyle{{n}\choose{n}} = {\color{grey} \dots} \)
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="corr">
+                                <table class="mytable">
+                                    <tr>
+                                        <td>
+                                            \(\displaystyle{{n}\choose{0}} = 1 \)
+                                        </td>
+                                        <td>
+                                            \(\displaystyle{{n}\choose{1}} = n \)
+                                        </td>
+                                        <td>
+                                            \(\displaystyle{{n}\choose{2}} = \dfrac{n(n-1)}{2} \)
+                                        </td>
+                                        <td>
+                                            \(\displaystyle{{n}\choose{n}} = 1 \)
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </li>
+                        <li>
+                            Compléter le tableau des possibilités ci-contre. On en déduit que :
+                            \(
+                            \displaystyle\sum_{k=0}^n {{n}\choose{k}}
+                            =
+                            {{n}\choose{0}} + {{n}\choose{1}} + \cdots + {{n}\choose{n-1}} + {{n}\choose{n}}
+                            =
+                            {\color{grey}\ldots}
+                            \)
+                            <div class="corr">
+                                2<sup>n</sup>
+                            </div>
+                        </li>
+                        <li>
+                            Ainsi, la somme des coefficients binomiaux<br>sur la ligne \(n=7\) sur le triangle de
+                            Pascal
+                            vaut \(2^{\color{grey}\cdots}
+                            = {\color{grey}\ldots}\)&nbsp;.<br>
+                            Compléter la ligne \(n=7\) sur le triangle de Pascal ci-contre (on pourra se servir de la
+                            formule de symétrie
+                            \(
+                            {{n}\choose{k}} = {{n}\choose{n-k}}
+                            \)
+                            )
+                            <div class="corr">
+                                On utilise les formules (re)vues dans la question 3 et la formule de symétrie.
+                                <ul>
+                                    <li>
+                                        \({{7}\choose{0}}={{7}\choose{0}}=1\)
+                                    </li>
+                                    <li>
+                                        \({{7}\choose{1}}={{7}\choose{7-1}}=7\)
+                                    </li>
+                                    <li>
+                                        \({{7}\choose{2}}={{7}\choose{7-2}}=\frac{7\times 6}{2}=21\)
+                                    </li>
+                                    <li>
+                                        Il reste \({{7}\choose{3}}\) et \({{7}\choose{4}}\), égaux par symétrie, dont la
+                                        somme
+                                        vaut \(2^7-2\times 1 - 2\times 7 - 2\times 21 = 128 - 2 - 14 - 42 = 70\), donc
+                                        chacun vaut 35.
+                                    </li>
+                                    <li>
+                                        On complète la ligne suivante à l'aide de la relation de Pascal :
+                                        \(
+                                        {{n+1}\choose{k+1}}
+                                        =
+                                        {{n}\choose{k+1}}
+                                        +
+                                        {{n}\choose{k}}
+                                        \)
+                                        .
+                                        On obtient :
+
+                                        <table class="mytable" style="border: none;">
+                                            <caption>Triangle de Pascal (partiel)</caption>
+                                            <tr>
+                                                <th>↓\(n\) \ \(k\)→</th>
+                                                <th>&nbsp;0&nbsp;</th>
+                                                <th>&nbsp;1&nbsp;</th>
+                                                <th>&nbsp;2&nbsp;</th>
+                                                <th>&nbsp;3&nbsp;</th>
+                                                <th>&nbsp;4&nbsp;</th>
+                                                <th>&nbsp;5&nbsp;</th>
+                                                <th>&nbsp;6&nbsp;</th>
+                                                <th>&nbsp;7&nbsp;</th>
+                                                <th>&nbsp;8&nbsp;</th>
+                                            </tr>
+                                            <tr>
+                                                <th>1</th>
+                                                <td>1</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>2</th>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1"
+                                                    style="border-left: 1px dotted gray; border-right: 1px dotted gray;">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>7</th>
+                                                <td>1</td>
+                                                <td>7</td>
+                                                <td>21</td>
+                                                <td>35</td>
+                                                <td>35</td>
+                                                <td>21</td>
+                                                <td>7</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>8</th>
+                                                <td>1</td>
+                                                <td>8</td>
+                                                <td>28</td>
+                                                <td>56</td>
+                                                <td>70</td>
+                                                <td>56</td>
+                                                <td>28</td>
+                                                <td>8</td>
+                                                <td>1</td>
+                                            </tr>
+                                        </table>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col">
+                <table class="mytable" style="border: none;">
+                    <thead>
+                        <tr>
+                            <th>
+                                une partie d'un ensemble de cardinal \(n\) a :
+                            </th>
+                            <th>
+                                possibilités :
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                soit 0 éléments (\(\emptyset\))
+                            </td>
+                            <td>
+                                \({{n}\choose{0}} \)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                soit 1 éléments (singleton)
+                            </td>
+                            <td>
+                                \({{n}\choose{\color{grey} \dots}} \)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                soit 2 éléments (paire)
+                            </td>
+                            <td>
+                                \({{\color{grey} \dots}\choose{\color{grey} \dots}} \)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border-left: 1px dotted gray; border-right: 1px dotted gray;"></td>
+                        </tr>
+                        <tr>
+                            <td style="border-top: 1px double gray; border-bottom: 1px double gay;">
+                                soit \(k\) éléments
+                            </td>
+                            <td style="border-top: 1px double gray; border-bottom: 1px double gray;">
+                                \({{n}\choose{k}} \)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border-left: 1px dotted gray; border-right: 1px dotted gray;"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                soit \(n\) éléments
+                            </td>
+                            <td>
+                                \({{n}\choose{n}} \)
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <strong>Total :</strong>
+                            </td>
+                            <td>
+                                \(
+                                2^{\color{grey} \cdots}
+                                \)
+                            </td>
+                        </tr>
+                    </tfoot>
+                    </tbody>
+                </table>
+
+                <br>
+
+                <table class="mytable" style="border: none;">
+                    <caption>Triangle de Pascal (partiel)</caption>
+                    <tr>
+                        <th>
+                            <div style="font-size: 0.5em;"><span>\(k\)→</span><br><span>\(n\)↓</span></div>
+                        </th>
+                        <th>&nbsp;0&nbsp;</th>
+                        <th>&nbsp;1&nbsp;</th>
+                        <th>&nbsp;2&nbsp;</th>
+                        <th>&nbsp;3&nbsp;</th>
+                        <th>&nbsp;4&nbsp;</th>
+                        <th>&nbsp;5&nbsp;</th>
+                        <th>&nbsp;6&nbsp;</th>
+                        <th>&nbsp;7&nbsp;</th>
+                        <th>&nbsp;8&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="border-left: 1px dotted gray; border-right: 1px dotted gray;">⋮</td>
+                    </tr>
+                    <tr>
+                        <th>7</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>8</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="exo"><strong>Le loto de la française des jeux : utiliser les combinaisons pour calculer des
+                probabilités</strong><br>
+            <table class="loto" style="margin-top: 1em; float:right;">
+                <caption style="font-family:Arial, Helvetica, sans-serif; border: solid red 4px; border-radius: 1em;">
+                    <a href="assets/loto.py" target="_blank" style="text-decoration: none;">
+                        <span style="color:grey; text-shadow: 0 0 15px blue;">
+                            L
+                        </span>
+                        <span style="color:grey; text-shadow: 0 0 15px red;">
+                            O
+                        </span>
+                        <span style="color:grey; text-shadow: 0 0 15px blue;">
+                            T
+                        </span>
+                        <span style="color:grey; text-shadow: 0 0 15px red;">
+                            O
+                        </span>
+                    </a>
+                </caption>
+                <tr>
+                    <td colspan="5" style="border: none; text-shadow: 0 0 6px #500;">
+                        Vos 5 n°
+                    </td>
+                </tr>
+                <tr>
+                    <td> 1</td>
+                    <td> 2</td>
+                    <td> 3</td>
+                    <td> 4</td>
+                    <td> 5</td>
+                </tr>
+                <tr>
+                    <td> 6</td>
+                    <td> 7</td>
+                    <td> 8</td>
+                    <td> 9</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>32</td>
+                    <td>33</td>
+                    <td>34</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>37</td>
+                    <td>38</td>
+                    <td>39</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>42</td>
+                    <td>43</td>
+                    <td>44</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>47</td>
+                    <td>48</td>
+                    <td>49</td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="border: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="border: none; text-shadow: 0 0 6px #500;">
+                        Votre n° chance
+                    </td>
+                </tr>
+                <tr class="lotoco">
+                    <td> 1</td>
+                    <td> 2</td>
+                    <td> 3</td>
+                    <td> 4</td>
+                    <td> 5</td>
+                </tr>
+                <tr class="lotoco">
+                    <td> 6</td>
+                    <td> 7</td>
+                    <td> 8</td>
+                    <td> 9</td>
+                    <td>10</td>
+                </tr>
+            </table>
+
+
+
+            <p>
+                Quitte à remplir une grille, autant <i>espérer</i> gagner quelque chose. Le loto de la
+                française des jeux consiste à cocher sur une grille 5 nombres entiers entre 1 et 49 (compris)
+                ainsi qu'un «numéro chance» qui est un entier entre 1 et 10 compris, comme dans la grille
+                ci-contre. Les joueurs remplissent une grille (exemple ci-contre) ;
+                Lors du tirage, 5 boules numérotées de 1 à 49 (compris) sont prélevées, au hasard, sans remise,
+                dans une urne, suivies d'un tirage au hasard du numéro chance.
+                Les gains tiennent compte du prix de la grille <span style="font-size: xx-small;">(moyenne
+                    [2008;2016])</span>.
+            </p>
+            <ol>
+                <li>
+                    L'ordre des boules au tirage a-t-il une importance ?
+                    <div class="corr">
+                        <strong>Non</strong> : sur la grille du joueur, aucun ordre n'est indiqué pour le choix
+                        des 5 numéros. Le
+                        numéro chance est, lui, traité à part.
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col">
+                            Comptons le nombre de grilles réalisables :<br>
+                            on doit choisir :
+                            <ul>
+                                <li>une combinaison de &nbsp;...&nbsp; numéros parmi &nbsp;...&nbsp; ;</li>
+                                <li>un numéro chance parmi &nbsp;...&nbsp; .</li>
+                            </ul>
+                            <div class="corr">
+                                on doit choisir :
+                                <ul>
+                                    <li>une combinaison de 5 numéros parmi 49 ;</li>
+                                    <li>un numéro chance parmi 10.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col"
+                            style="text-align: center; margin-left: 1em;padding-left: 1em;border-left: 1px solid gray;">
+                            Ainsi, le nombre de grilles possibles est :<br>
+                            \(
+                            \displaystyle{{\color{gray}\ldots}\choose{\color{gray}\ldots}}{{\color{gray}\ldots}\choose{1}}
+                            =
+                            {\color{gray}{\ldots\ldots\ldots}}
+                            \)
+                            <div class="corr">
+                                \(
+                                \displaystyle{{49}\choose{5}}{{10}\choose{1}}
+                                =
+                                19\,068\,840
+                                \)
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <table class="mytable" style="--cell-width-print:1.65cm;white-space: nowrap;">
+                        <tr>
+                            <th>n° gagnants</th>
+                            <td>5 + c</td>
+                            <td>&nbsp;&nbsp;5&nbsp;&nbsp;</td>
+                            <td>4+c</td>
+                            <td>&nbsp;&nbsp;4&nbsp;&nbsp;</td>
+                            <td>3+c</td>
+                            <td>&nbsp;&nbsp;3&nbsp;&nbsp;</td>
+                            <td>2+c</td>
+                            <td>&nbsp;&nbsp;2&nbsp;&nbsp;</td>
+                            <td>1+c ou 0+c</td>
+                            <td>&nbsp;&nbsp;1 ou 0&nbsp;&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>Gain \(G\) (€)</th>
+                            <td>5 701 258</td>
+                            <td>102 632</td>
+                            <td>1 086</td>
+                            <td>1 084</td>
+                            <td>10</td>
+                            <td>8</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>-2</td>
+                        </tr>
+                        <tr>
+                            <th>Probabilité</th>
+                            <td>
+                                <div>
+                                    <div style="border-bottom: 1px solid;">
+                                        1
+                                    </div>
+                                    <div>
+                                        19 068 840
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div style="border-bottom: 1px solid;">
+                                        1
+                                    </div>
+                                    <div>
+                                        2 118 760
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div style="border-bottom: 1px solid;">
+                                        11
+                                    </div>
+                                    <div>
+                                        953 442
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div style="border-bottom: 1px solid;">
+                                        11
+                                    </div>
+                                    <div>
+                                        105 938
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="corr">
+                                    <div style="border-bottom: 1px solid;">
+                                        473
+                                    </div>
+                                    <div>
+                                        953 442
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="corr">
+                                    <div style="border-bottom: 1px solid;">
+                                        473
+                                    </div>
+                                    <div>
+                                        105 938
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="corr">
+                                    <div style="border-bottom: 1px solid;">
+                                        473
+                                    </div>
+                                    <div>
+                                        68 103
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div style="border-bottom: 1px solid;">
+                                        473
+                                    </div>
+                                    <div>
+                                        7 567
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div style="border-bottom: 1px solid;">
+                                        252 109
+                                    </div>
+                                    <div>
+                                        2 724 120
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="corr">
+                                    <div style="border-bottom: 1px solid;">
+                                        252 109
+                                    </div>
+                                    <div>
+                                        302 680
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    Le tableau ci-dessus donne la loi de la variable aléatoire gain \(G\) ; dans la première
+                    ligne, «+c» indique l'obtention du numéro chance au tirage en plus du nombre de numéros gagnants.
+                    <div class="row">
+                        <div class="col" style="min-width: 52%;">
+                            Calculer et compléter \(\textrm{P}(G=10)\) ; pour cela, on doit cocher :
+                            <ul>
+                                <li>
+                                    3 numéros parmi les 5 numéros gagnants ;
+                                </li>
+                                <li>
+                                    2 numéros parmi les &nbsp;...&nbsp; numéros perdants ;
+                                    <div class="corr">
+                                        49-5 = 44 numéros perdants.
+                                    </div>
+                                </li>
+                                <li>
+                                    1 nombre chance parmi un (gagnant).
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col"
+                            style="text-align: center; margin-left: 1em;padding-left: 1em;border-left: 1px solid gray;">
+                            Ainsi (en divisant par le nombre de grilles possibles),<br>
+                            \(
+                            \textrm{P}(G=10)
+                            =
+                            \dfrac{
+                            {{\color{gray}\ldots}\choose{\color{gray}\ldots}}
+                            {{\color{gray}\ldots}\choose{\color{gray}\ldots}}
+                            {{\color{gray}\ldots}\choose{\color{gray}\ldots}}
+                            }
+                            {19\,068\,840}
+                            =\dfrac{{\color{gray}\ldots}}{{\color{gray}\ldots}}
+                            \)
+
+                            <div class="corr">
+                                \(
+                                \textrm{P}(G=10)
+                                =
+                                \dfrac{
+                                \displaystyle
+                                {{5}\choose{3}}
+                                {{44}\choose{2}}
+                                {{1}\choose{1}}
+                                }
+                                {19\,068\,840}
+                                =\dfrac{
+                                473
+                                }
+                                {
+                                953\,442
+                                }
+                                \)
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    Calculer la probabilité \(\textrm{P}(G=8)\) (le seul changement par rapport à la question précédente
+                    est de choisir le numéro chance parmi les 9 perdants).
+                    <div class="corr">
+                        \(
+                        \textrm{P}(G=8)
+                        =
+                        \dfrac{
+                        \displaystyle
+                        {{5}\choose{3}}
+                        {{44}\choose{2}}
+                        {{9}\choose{1}}
+                        }
+                        {19\,068\,840}
+                        =\dfrac{
+                        473
+                        }
+                        {
+                        105\,938
+                        }
+                        \)
+                    </div>
+                </li>
+                <li>
+                    Calculer les probabilités \(\textrm{P}(G=5)\), \(\textrm{P}(G=-2)\) et montrer que
+                    \(\textrm{P}(G&gt;0)\approx 7{,}5\%
+                    \).
+                    <div class="corr">
+                        \(
+                        \textrm{P}(G=5)
+                        =
+                        \dfrac{
+                        \displaystyle
+                        {{5}\choose{2}}
+                        {{44}\choose{3}}
+                        {{1}\choose{1}}
+                        }
+                        {19\,068\,840}
+                        =\dfrac{
+                        473
+                        }
+                        {
+                        68\,103
+                        }
+                        \)
+                        <br>
+                        \(
+                        \textrm{P}(G=-2)
+                        =
+                        \dfrac{
+                        \displaystyle
+                        {{5}\choose{1}}
+                        {{44}\choose{4}}
+                        {{9}\choose{1}}
+                        +
+                        {{5}\choose{0}}
+                        {{44}\choose{5}}
+                        {{9}\choose{1}}
+                        }
+                        {19\,068\,840}
+                        =\dfrac{
+                        252\,109
+                        }
+                        {
+                        302\,680
+                        }
+                        \)
+                        <br>
+                        \(
+                        \textrm{P}(G&gt;0)
+                        = 1-\textrm{P}(G=0)-\textrm{P}(G=-2)
+                        = 1-\dfrac{252\,109}{2\,724\,120}-\dfrac{252\,109}{306\,680}
+                        = \dfrac{20\,303}{272\,412}
+                        \approx 7{,}5\%
+                        \)
+                    </div>
+                </li>
+                <li>
+                    M. Tolo joue 10 fois dans l'année (les tirages du loto sont <i>évidemment</i> indépendants). Il
+                    certifie qu'il obtient au moins un gain strictement positif un an sur deux. Est-ce crédible ? On
+                    notera
+                    \(Y_{10}\) la variable aléatoire comptant le nombre de gains strictement positifs durant 10 tirages.
+                    <div class="corr">
+                        \(Y_{10}\) suit une loi binomiale de paramètres \(n=10\) et
+                        \(p=\textrm{P}(G&gt;0)\approx 7{,}5\%\) ;
+                        On a \(\textrm{P}(Y_{10}\geqslant 1) = 1-\textrm{P}(Y_{10}=0)=1-(1-p)^{10}\approx 54\%\). M.
+                        Tolo est donc crédible.
+                    </div>
+                </li>
+                <li>On donne \(\mathbb{E}(G)\approx -0{,}9304\)€.
+                    Combien de fois, en moyenne, sur 10 tirages, M. Tolo obtient-il un gain positif ? Quel gain moyen
+                    peut-il espérer sur 10 tirages ?
+                    <div class="corr">
+                        En moyenne, sur 10 tirages, M. Tolo obtient un gain positif
+                        \(\mathbb{E}(Y_{10})=np\approx 0{,}75\) fois.
+                        <br>
+                        En notant \(G_1 ; \ldots ; G_{10}\) les variables aléatoires donnant les 10 gains successifs, on
+                        a
+                        \(\mathbb{E}(G_1+\cdots+G_{10})=10\mathbb{E}(G)=-9{,}304\)€. Il perd donc environ 9,30€, en
+                        moyenne, sur 10 tirages.
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="exo"><strong>Jeu de la vie de Conway : probabilités conditionnelles, variables aléatoires,
+                inégalités</strong>
+            <img class="hidden-print" src="assets/jdlv1.gif" style="float: right; width: 10em;">
+            <div>
+                Le «jeu de la vie» se joue sur une grille plane carrée (quadrillage) : chaque case à 8 cases voisines.
+                Chaque case du quadrillage est assimilé à une cellule qui a deux états : vivante (case □) ou morte (case
+                vide). On note \(X\) une variable aléatoire, indiquant pour une cellule fixée son évolution selon les
+                règles du jeu qui suivent :
+            </div>
+            <ul style="margin:0;">
+                <li>
+                    Une cellule morte possédant exactement trois cellules voisines vivantes devient vivante (elle naît :
+                    \(X=1\))
+                    ;
+                </li>
+                <li>
+                    Une cellule vivante possédant deux ou trois cellules voisines vivantes le reste (\(X=0\)), sinon
+                    elle
+                    meurt (\(X=-1\)).
+                </li>
+            </ul>
+            <ol style="margin:0;">
+                <li>Donner la valeur de \(X\) pour la cellule occupant la case centrale, obtenue en suivant les règles
+                    données, pour les configurations suivantes :
+                    <div style="display: flex; flex-direction: row;">
+                        <table class="gol" style="border-collapse: collapse;">
+                            <tr>
+                                <td style="border:solid 1px;width:1em;height:1em;"></td>
+                                <td style="border:solid 1px;width:1em;height:1em;">□</td>
+                                <td style="border:solid 1px;width:1em;height:1em;"></td>
+                            </tr>
+                            <tr>
+                                <td style="border:solid 1px;width:1em;height:1em;"></td>
+                                <td style="border:solid 1px;width:1em;height:1em;"></td>
+                                <td style="border:solid 1px;width:1em;height:1em;">□</td>
+                            </tr>
+                            <tr>
+                                <td style="border:solid 1px;width:1em;height:1em;">□</td>
+                                <td style="border:solid 1px;width:1em;height:1em;"></td>
+                                <td style="border:solid 1px;width:1em;height:1em;"></td>
+                            </tr>
+                        </table>
+                        <div style="margin-left: 1em;margin-right: 8em;">
+                            La cellule centrale va ...<br>
+                            \(X={\color{gray}\ldots}\)
+                        </div>
+                        <table class="gol" style="border-collapse: collapse;">
+                            <tr>
+                                <td style="border:solid 1px;width:1em;height:1em;">□</td>
+                                <td style="border:solid 1px;width:1em;height:1em;"></td>
+                                <td style="border:solid 1px;width:1em;height:1em;">□</td>
+                            </tr>
+                            <tr>
+                                <td style="border:solid 1px;width:1em;height:1em;">□</td>
+                                <td style="border:solid 1px;width:1em;height:1em;">□</td>
+                                <td style="border:solid 1px;width:1em;height:1em;"></td>
+                            </tr>
+                            <tr>
+                                <td style="border:solid 1px;width:1em;height:1em;"></td>
+                                <td style="border:solid 1px;width:1em;height:1em;"></td>
+                                <td style="border:solid 1px;width:1em;height:1em;">□</td>
+                            </tr>
+                        </table>
+                        <div style="margin-left: 1em;margin-right: 8em;">
+                            La cellule centrale va ...<br>
+                            \(X={\color{gray}\ldots}\)
+                        </div>
+                    </div>
+                    <div class="corr">
+                        naître (\(X=1\)) ;<br>
+                        mourir (\(X=-1\)).
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col" style="min-width: 80%;">
+                            <a href="assets/jdlv.py" target="_blank" style="text-decoration: none;">
+                                Au début du jeu,
+                            </a>
+                            chaque cellule a une probabilité de 0,5 d'être vivante ou non,
+                            indépendemment des
+                            autres. Montrer que la loi de \(X\) est :
+                            <br>
+                            En déduire que \(\mu=\mathbb{E}(X)=\frac{-29}{128}\) et
+                            \(v=\textrm{Var}(X)=\frac{6\,455}{16\,384}\approx 0{,}394\).
+                            <div class="corr">
+                                On utilise une variable aléatoire \(Y\) loi binomiale de paramètre \(n=8\) voisins et de
+                                probabilité de succès \(p=0{,}5\) (voisin vivant).
+                                <ul>
+                                    <li>
+                                        Sachant que la cellule centrale est vivante (probabilité 0,5) :
+                                        <ul>
+                                            <li>
+                                                Elle se maintient en vie : \(X=0\), avec une probabilité
+                                                \(\textrm{P}(Y=2)+\textrm{P}(Y=3) = \dfrac{21}{64}\)
+                                            </li>
+                                            <li>
+                                                Elle meurt, \(X=-1\), le reste du temps, probabilité \(\dfrac{43}{64}\)
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Sachant que la cellule centrale n'est pas vivante (probabilité 0,5) :
+                                        <ul>
+                                            <li>
+                                                Elle naît : \(X=1\), avec une probabilité
+                                                \(\textrm{P}(Y=3) = \dfrac{14}{64}\)
+                                            </li>
+                                            <li>
+                                                Elle ne naît pas, \(X=0\), le reste du temps, probabilité
+                                                \(\dfrac{50}{64}\)
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                En utilisant les probabilités conditionnelles :<br>
+                                \(\textrm{P}(X=1)=\dfrac{1}{2}\times\dfrac{14}{64}=\dfrac{14}{128}\) ;<br>
+                                \(\textrm{P}(X=0)=\dfrac{1}{2}\times\dfrac{21}{64}+\dfrac{1}{2}\times\dfrac{50}{64}=\dfrac{71}{128}\)
+                                ;<br>
+                                \(\textrm{P}(X=-1)=\dfrac{1}{2}\times\dfrac{43}{64}=\dfrac{43}{128}\).<br>
+                                De fait :<br />
+                                \(
+                                \mathbb{E}(X) = \dfrac{43}{64}\times (-1) + \dfrac{71}{64}\times 0 +
+                                \dfrac{14}{64}\times 1 = \dfrac{-29}{128}
+                                \)
+                                et \(
+                                \textrm{Var}(X) = \dfrac{43}{64}\times (-1)^2 + \dfrac{71}{64}\times 0^2 +
+                                \dfrac{14}{64}\times 1^2 - \left(\dfrac{-29}{128}\right)^2 = \dfrac{57}{128} -
+                                \dfrac{841}{16\,384} =
+                                \dfrac{6\,455}{16\,384} \approx 0{,}394
+                                \)
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <table class="mytable">
+                                <tr>
+                                    <th>\(X\)</th>
+                                    <td>-1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th>prob.</th>
+                                    <td>\(\frac{43}{128}\)</td>
+                                    <td>\(\frac{71}{128}\)</td>
+                                    <td>\(\frac{14}{128}\)</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    On fixe un échantillon \(X_1;\ldots;X_n\) de cellules, suffisamment éloignées pour les considérer
+                    comme indépendantes. On note \(M_n\) la moyenne de cet
+                    échantillon. Quelle doit être la taille de cet échantillon pour que la probabilité que \(M_n\)
+                    s'écarte de \(\mu\) d'au moins 1 soit inférieure à 10% ?
+                    <div class="corr">
+                        On applique l'inégalité de concentration avec un écart à la moyenne de \(\delta=1\) :
+                        \(
+                        \textrm{P}\left(\left|M_n-\mu\right|\geqslant \delta\right)\leqslant \dfrac{v}{n\delta^2}
+                        \) ;
+                        On doit avoir \( \dfrac{v}{n\delta^2} \leqslant 10\%=0{,}1 \)
+                        donc \(n\geqslant \dfrac{v}{0{,}1\delta^2} = 10v \approx 3{,}93\) d'où \(n=4\).
+                    </div>
+                </li>
+                <li>
+                    En se basant uniquement sur l'espérance, que penser de l'évolution de la population de cellules ?
+                    Pourquoi n'observe-t-on pas cela en général ?
+                    <div class="corr">
+                        On pourrait penser que la population va disparaître, mais ce n'est pas le cas : la dépendance
+                        entre les cellules est forte. L'hypothèse d'indépendance des variables de l'échantillon, est
+                        <strong>valable uniqument pour la 1re génération</strong>, pas pour la suite de l'évolution.
+                    </div>
+                </li>
+            </ol>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="exo"><strong>Poker : Combinaisons, probabilités conditionnelles</strong>
+            <div>
+                Le
+                <a href="assets/poker.py" target="_blank" style="text-decoration: none;">
+                    poker
+                </a>
+                est un jeu dans lequel chaque joueur reçoit une «main», c'est à dire une combinaison de 5
+                cartes. Dans cette
+                exercice, on utilisera un jeu de 32 cartes représenté par le produit cartésien \(H\times C\), avec
+                \(H=\left\{7 ; 8 ; 9 ; 10 ; V_{\textrm{valet}} ; D_{\textrm{dame}} ; R_{\textrm{roi}} ;
+                1_{\textrm{as}}\right\}\) (de la plus faible à la plus forte) et
+                \(C=\left\{♠;♣;{\color{red}♥};{\color{red}♦}\right\}\) (pas d'ordre sur les couleurs). Pour gagner la
+                mise, il faut posséder la figure (combinaison particulière) la plus forte ; ces figures sont indiquées,
+                de la plus forte à la plus faible,
+                dans le tableau suivant :
+            </div>
+            <table class="mytable" style="width: 100%; border:none;">
+                <thead>
+                    <tr>
+                        <th>figures</th>
+                        <th>possibilités</th>
+                        <th>probabilité (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: left;"><strong>quinte flush : </strong>5 cartes de hauteurs consécutives
+                            de même couleur </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>carré : </strong>4 cartes de même hauteur </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>full : </strong>3 cartes de même hauteur et 2 cartes d'une
+                            (autre) même hauteur
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>couleur : </strong>5 cartes de même couleur mais de
+                            hauteurs non consécutives
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>quinte : </strong>5 cartes de hauteurs consécutives (2
+                            couleurs au moins présentes)
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>brelan : </strong>3 cartes de même hauteur </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>double paire : </strong>2 cartes de même hauteur et 2
+                            cartes d'une (autre) même
+                            hauteur
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>paire : </strong>2 cartes de même hauteur </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>aucune figure : </strong>5 cartes de hauteurs distinctes
+                            non consécutives </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+            <ol style="margin: 0;">
+                <li>
+                    Combien y a-t-il de «mains» possibles ?
+                    <div class="corr">
+                        On recherche le nombre de combinaisons de 5 cartes parmi 32 :
+                        \({{32}\choose{5}}=201\,376\) possibilités.
+                    </div>
+                </li>
+                <li>
+                    Compléter le tableau (au moins pour la quinte flush, le carré, le full et le brelan). On considère
+                    que chaque main est équiprobable ; on arrondira les probabilités,
+                    exprimées en pourcentage, au centième de %.
+                    <div class="corr">
+                        <ul>
+                            <li>
+                                <strong>quinte flush : </strong>
+                                On choisit la hauteur de départ (du 7 au 10 compris sont possibles : 4 choix) et on
+                                choisit la couleur des 5 cartes :
+                                \(
+                                {{4}\choose{1}}\times
+                                {{4}\choose{1}}\times
+                                = 4^2 = 16
+                                \)
+                                ;
+                                probabilité :
+                                \(
+                                \dfrac{16}{201\,376} =
+                                \dfrac{1}{12\,586} \approx
+                                0{,}01\%
+                                \)
+                            </li>
+                            <li>
+                                <strong>carré : </strong>
+                                On choisit la hauteur du carré (8 choix) et <strong>on
+                                    complète la main</strong> avec une autre carte parmi les 28 cartes restantes :
+                                \(
+                                {{8}\choose{1}}\times
+                                {{28}\choose{1}}
+                                = 8\times 28 = 224
+                                \)
+                                ;
+                                probabilité :
+                                \(
+                                \dfrac{224}{201\,376} =
+                                \dfrac{1}{899} \approx
+                                0{,}11\%
+                                \)
+                            </li>
+                            <li>
+                                <strong>full : </strong>
+                                On choisit la hauteur du brelan (8 choix), le brelan parmi 4, la hauteur de la paire (7
+                                choix), la paire parmi 4 :
+                                \(
+                                {{8}\choose{1}}\times
+                                {{4}\choose{3}}\times
+                                {{7}\choose{1}}\times
+                                {{4}\choose{2}}
+                                = 8\times 4\times 7\times 6 = 1\,344
+                                \)
+                                ;
+                                probabilité :
+                                \(
+                                \dfrac{1\,344}{201\,376} =
+                                \dfrac{6}{899} \approx
+                                0{,}67\%
+                                \)
+                            </li>
+                            <li>
+                                <strong>couleur : </strong>
+                                On choisit la couleur (4 choix) et on
+                                choisit 5 cartes parmi les 8 cartes de cette couleur <strong>
+                                    et</strong> on retire les quintes flush !
+                                \(
+                                {{4}\choose{1}}\times
+                                {{8}\choose{5}} - 16
+                                = 4\times 56 -16 = 208
+                                \)
+                                ;
+                                probabilité :
+                                \(
+                                \dfrac{208}{201\,376} =
+                                \dfrac{13}{12\,586} \approx
+                                0{,}10\%
+                                \)
+                            </li>
+                            <li>
+                                <strong>quinte : </strong>
+                                On choisit la hauteur de départ (du 7 au 10 compris sont possibles : 4 choix) et on
+                                choisit les couleurs de chacune des 5 cartes <strong>
+                                    et</strong> on retire les quintes flush !
+                                \(
+                                {{4}\choose{1}}\times
+                                {{4}\choose{1}}\times
+                                {{4}\choose{1}}\times
+                                {{4}\choose{1}}\times
+                                {{4}\choose{1}}\times
+                                {{4}\choose{1}} - 16
+                                = 4^6 -16 = 4\,080
+                                \)
+                                ;
+                                probabilité :
+                                \(
+                                \dfrac{4\,080}{201\,376} =
+                                \dfrac{255}{12\,586} \approx
+                                2{,}03\%
+                                \)
+                            </li>
+                            <li>
+                                <strong>brelan : </strong>
+                                On choisit la hauteur du brelan (8 choix), le brelan parmi 4, on complète avec 2 cartes
+                                parmi 28 et on retire les fulls :
+                                \(
+                                {{8}\choose{1}}\times
+                                {{4}\choose{3}}\times
+                                {{28}\choose{2}} - 1\,344
+                                = 8\times 4\times 378 - 1\,344
+                                = 10\,752
+                                \)
+                                ;
+                                probabilité :
+                                \(
+                                \dfrac{10\,752}{201\,376} =
+                                \dfrac{48}{899} \approx
+                                5{,}34\%
+                                \)
+                            </li>
+                            <li>
+                                <strong>double paire : </strong>
+                                On choisit les 2 hauteurs des deux paires parmi 8, on choisit deux fois 2 cartes parmi
+                                4, et on complète avec une carte parmi les 32-(4+4) = 24 restantes :
+                                \(
+                                {{8}\choose{2}}\times
+                                {{4}\choose{2}}\times
+                                {{4}\choose{2}}\times
+                                {{24}\choose{1}}
+                                = 28\times 6^2\times 24
+                                = 24\,192
+                                \)
+                                ;
+                                probabilité :
+                                \(
+                                \dfrac{24\,192}{201\,376} =
+                                \dfrac{108}{899} \approx
+                                12{,}01\%
+                                \)
+                            </li>
+                            <li>
+                                <strong>paire : </strong>
+                                On choisit la hauteur de la paire parmi 8, on choisit2 cartes parmi 4 pour la paire, et
+                                on complète en choisissant 3 hauteurs différentes et les 3 couleurs des 3 cartes (parmi
+                                4) :
+                                \(
+                                {{8}\choose{1}}\times
+                                {{4}\choose{2}}\times
+                                {{8}\choose{3}}\times
+                                {{4}\choose{1}}\times
+                                {{4}\choose{1}}\times
+                                {{4}\choose{1}}
+                                = 8\times 6\times 35\times 4^3
+                                = 107\,520
+                                \)
+                                ;
+                                probabilité :
+                                \(
+                                \dfrac{107\,520}{201\,376} =
+                                \dfrac{480}{899} \approx
+                                53{,}39\%
+                                \)
+                            </li>
+                            <li>
+                                <strong>aucune figure : </strong>
+                                On choisit 5 hauteurs différentes parmi 8, on choisit, pour chaque carte, 1 couleur
+                                parmi 4 et on retire les couleurs, quintes et quintes flush :
+                                \(
+                                {{8}\choose{5}}\times
+                                {{4}\choose{1}}^5 - 208 - 4\,080 - 16
+                                = 8\times 1024 \times - 4\,304
+                                = 53\,040
+                                \)
+                                ;
+                                probabilité :
+                                \(
+                                \dfrac{53\,040}{201\,376} =
+                                \dfrac{3\,315}{12\,586} \approx
+                                26{,}34\%
+                                \)
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    En regardant ses cartes pendant la distribution, Mme Asinoc observe que les 3 cartes qu'elle a
+                    reçues
+                    sont de
+                    même hauteur. Sachant qu'elle a ainsi au moins un brelan, quelle est la probabilité qu'elle ait, en
+                    fin de
+                    distribution, ou full ? Un carré ? Un brelan seulement ?<br>
+                    Attention : les événements «obtenir un full» et «obtenir un brelan», par exemple, sont ... .
+                    <div class="corr">
+                        Attention : les événements «obtenir un full» et «obtenir un brelan», par exemple, sont
+                        <strong>incompatibles</strong>.<br>
+                        On appelle «pré-brelan» l'événement «obtenir trois cartes de même hauteur».
+                        <br><!--
+                        On compte (choix de la hauteur parmi 8, choix des 3 cartes parmi 4 de la même hauteur, choix des 2 cartes complémentaires parmi les 29 restantes) :
+                        \(
+                        {{8}\choose{1}}
+                        {{4}\choose{3}}
+                        {{29}\choose{2}}
+                        = 8 \times 4 \times 29 \times 14 = 12\,992
+                        \) posibilités.
+                        <br>-->
+                        Une partition de ce
+                        dernier événement (= une réunion d'événements incompatibles 2 à 2 qui est égale à cet événement)
+                        est {brelan ; full ; carré}.
+                        On utilise les probabilités conditionnelles :
+                        \(
+                        \textrm{P}_{\textrm{pré-brelan}}(\textrm{carré})
+                        = \dfrac{\textrm{P}(\textrm{carré})}{\textrm{P}(\textrm{pré-brelan})}
+                        = \dfrac{\textrm{P}(\textrm{carré})}{\textrm{P}(\textrm{brelan}) + \textrm{P}(\textrm{full}) +
+                        \textrm{P}(\textrm{carré})}
+                        = \dfrac{224}{10\,752+1\,344+224}
+                        = \dfrac{224}{12\,320}
+                        \approx 1{,}82\%
+                        \)
+                        Le même raisonnement et calcul (seul le numérateur change) donne
+                        \(
+                        \textrm{P}_{\textrm{pré-brelan}}(\textrm{full})
+                        \approx 10{,}91%
+                        \)
+                        et
+                        \(
+                        \textrm{P}_{\textrm{pré-brelan}}(\textrm{brelan})
+                        \approx 87{,}27%
+                        \).
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="exo"><strong>⭐ Utilisations du binôme de Newton</strong>
+            <div class="row">
+                <div class="col" style="max-width: 62%;">
+                    Pour \(n\geqslant 2\) (même si la formule obtenue est vraie pour tout entier naturel), on pose
+                    \(B_n=(x+y)^n =
+                    (x+y)(x+y)\cdots (x+y)\) (\(n\) facteurs). Développer cette expression revient à choisir, pour tout
+                    entier
+                    \(k\) compris entre 0 et \(n\), \(k\) fois le nombre \(x\) et de fait \(n-k\) fois le nombre \(y\)
+                    parmi les
+                    \(n\) facteurs \((x+y)\). On obtiendra donc une somme de monômes \(x^k y^{n-k}\), chacun de ses
+                    monômes au
+                    nombre de \({{n}\choose{k}}\)
+                </div>
+                <div class="col" style="padding: 2em;">
+                    <span class="surl">\(B_n=(x+y)^n = \displaystyle\sum_{k=0}^n {{n}\choose{k}}x^k y^{n-k}\)</span>
+                </div>
+            </div>
+            <ol style="margin: 0;">
+                <li>
+                    En déduire le développement de \(B_3=(x+y)^3\) et \(B_4=(x+y)^4\).
+                </li>
+                <li>
+                    En posant \(x=y=1\), que retrouve-t-on ?
+                </li>
+                <li>
+                    En posant \(x=p\in [0;1]\) et \(y=1-p\), quel résultat concernant la loi binomiale retrouve-t-on ?
+                </li>
+                <li>
+                    En posant \(x=-y=1\), que peut-on apprendre sur le nombre de parties de cardinal pair et le nombre
+                    de parties de cardinal impair d'un ensemble de cardinal \(n\) ?
+                </li>
+                <li>
+                    Soient \(u\) et \(v\) deux fonctions dérivables successivement un nombre infini de fois (on dit de
+                    classe \(C^{\infty}\)). On note \(u^{(n)} = u''\cdots'\) la dérivée \(n\)-ième de \(u\) (par
+                    convention \(u^{(0)}=u\), on dérive 0 fois).<br>
+                    Calculer \((uv)''\), puis \((uv)^{(3)}\). Que peut-on conjecturer? Essayer de trouver une
+                    démonstration par récurrence.
+                </li>
+            </ol>
+        </div>
+    </main>
+</body>
+
+</html>

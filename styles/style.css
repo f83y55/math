@@ -1,0 +1,463 @@
+:root {
+  /* Theme WEB */
+  --font-family: Ubuntu, Helvetica, Verdana, Geneva, Tahoma, sans-serif; /*'Times New Roman', Times, serif, Verdana, Helvetica, sans-serif;*/
+  --font-family-titles: Impact;
+  --font-size: 16pt; /*10pt*/
+  --line-height: 1.6;
+  --color-bg: #ccc;
+  --color-bg-hover: #eee;
+  --color-bg-title: #503010;
+  --color-section: #d70;
+  --color-subsection: #309030;
+  --color-subsubsection: #3333ff;
+  --color-exo: #103050;
+  --color-defi: #503010;
+  --color-theo: #503010;
+  --color-meth: darkgreen;
+  --color-bg-title: #fbb332;
+  --color-bg-defi: #fbb332;
+  --color-bg-theo: #fbb332;
+  --color-bg-exo: #3ae;
+  --color-bg-surl: #00ff0055;
+  --color-bg-table-1: #bbb8;
+  --color-bg-table-2: #ccc8;
+  --color-bg-table-3: #ddd8;
+  --border: 1px solid;
+  --border-opacity: 0.1;
+  --border-radius: 0.2em;
+  --shadow: 0.2em;
+  --margin: 0.2em;
+  --padding: 0.5em;
+  --transition-speed: 700ms;
+}
+
+body, main, section{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  background-color: var(--color-bg);
+  counter-reset: h2c exo defi prop theo rema exem meth pg;
+}
+
+ul, ol {
+    margin: 0.1em;
+}
+
+
+.defi:hover, .theo:hover, .prop:hover, .meth:hover, .exem:hover, .exo:hover {
+    transition-duration: var(--transition-speed);
+    background-image: linear-gradient(-90deg, rgba(255,255,255,0.5) 90%, rgba(255,255,255,0.9) 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {font-family: var(--font-family-titles); padding: 0 var(--padding); margin: var(--margin);}
+
+li {padding: calc(var(--padding)/4);}
+a {color: inherit; text-decoration: underline;}
+
+img, figure {max-width: 100%; max-height: 100%;}
+figcaption {font-style: italic; font-size: smaller;}
+
+
+h1 {
+    background-image: linear-gradient(46deg, var(--color-bg-title) 25%, var(--color-bg-surl) 100%);
+    box-shadow: var(--shadow) var(--shadow) var(--shadow) grey;
+    border-color: rgba(0,0,0,var(--border-opacity));
+    border: var(--border);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+h1:not(.nococounter) {counter-reset: h2c exo defi prop theo rema exem;}
+h2 {color: var(--color-section); margin: var(--margin);}
+h2:not(.nocounter) {counter-reset: h3c h4c ;}
+h2:not(.nocounter)::before {counter-increment: h2c;content: counter(h2c) ". ";}
+h3 {color: var(--color-subsection); margin: var(--margin);}
+h3:not(.nocounter) {counter-reset: h4c ;}
+h3:not(.nocounter)::before {counter-increment: h3c;content: counter(h2c) "." counter(h3c) ". ";}
+h4{color: var(--color-subsubsection); margin: var(--margin);}
+h4:not(.nocounter)::before {counter-increment: h4c; content: counter(h2c) "." counter(h3c) "." counter(h4c) ". ";}
+
+.exo {
+    color: var(--color-exo);
+    background-color: var(--color-bg-exo);
+    border: var(--border);
+    border-color: rgba(0, 0, 0, var(--border-opacity));
+    border-radius: var(--border-radius);
+}
+.exo:not(.nocounter)         {counter-increment: exo;}
+.exo:not(.nocounter)::before {font-weight: bold; content: "✏️ Exercice " counter(exo) " : "; }
+
+code:not(pre code) {
+    font-family: monospace;
+    font-size: var(--font-size);
+    background-color: lightgrey;
+    border-radius: 0.3em;
+}
+
+.defi {
+    color: var(--color-defi);
+    font-style: italic;
+    background-color: var(--color-bg-defi);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    border-color: rgba(0, 0, 0, var(--border-opacity));
+    counter-increment: defi;
+}
+.defi::before   {font-weight: bold; content: "📕 Définition " counter(defi) " : ";}
+
+.prop           {counter-increment: prop; margin: var(--margin); padding: var(--padding);}
+.prop::before   {font-weight: bold; content: "📙 Propriété " counter(prop) " : ";}
+
+.theo {
+    color: var(--color-theo);
+    background-color: var(--color-bg-theo);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow) var(--shadow) var(--shadow) gray;
+    border-color: rgba(0, 0, 0, var(--border-opacity));
+    counter-increment: theo;
+}
+.theo::before   {font-weight: bold; content: "📔 Théorème " counter(theo) " : ";}
+
+.rema           {counter-increment: rema; margin: var(--margin); padding: var(--padding);}
+.rema::before   {font-weight: bold; content: "📋 Remarque " counter(rema) " : ";}
+
+.exem           {counter-increment: exem; margin: var(--margin); padding: var(--padding);}
+.exem::before   {font-weight: bold; content: "🌄 Exemple " counter(exem) " : ";}
+
+.meth           {color : var(--color-meth); counter-increment: meth; margin: var(--margin); padding: var(--padding);}
+.meth::before   {font-weight: bold; content: "📗 Méthode " counter(meth) " : ";}
+
+
+.prop, .rema, .exem, .meth, .theo, .defi, .exo, .none {margin: var(--margin); padding: var(--padding);}
+
+.surl {background-color: var(--color-bg-surl); height: max-content; padding: var(--padding)0.1em;}
+
+table.mytable{
+    --mytable-float: none;
+    --mytable-border-radius: 1em;
+    --mytable-padding: 0.5em;
+    --cell-height: auto;
+    --cell-width: auto;
+    border-spacing: 0;
+    border: var(--border);
+    border-color: rgba(0, 0, 0, min(calc(5*var(--border-opacity)),1));
+    border-radius: var(--mytable-border-radius);
+    float: var(--mytable-float);
+}
+
+table.mytable th, .mytable td {
+    height: var(--cell-height);
+    width: var(--cell-width);
+    text-align: center;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, min(calc(3*var(--border-opacity)),1));
+    padding: var(--mytable-padding);
+    overflow-x: hidden;
+}
+
+table.mytable tr:first-child>th:first-child, .mytable tr:first-child>td:first-child 
+                                {border-top-left-radius: var(--mytable-border-radius);}
+table.mytable tr:first-child>th:last-child, .mytable tr:first-child>td:last-child  
+                                {border-top-right-radius: var(--mytable-border-radius);}
+table.mytable tr:last-child>th:first-child, .mytable tr:last-child>td:first-child 
+                                {border-bottom-left-radius: var(--mytable-border-radius);}
+table.mytable tr:last-child>th:last-child, .mytable tr:last-child>td:last-child 
+                                {border-bottom-right-radius: var(--mytable-border-radius);}
+table.mytable th                     {background-color: var(--color-bg-table-1);}
+table.mytable tr:nth-child(even)>td  {background: var(--color-bg-table-2);}
+table.mytable tr:nth-child(odd)>td   {background: var(--color-bg-table-3);}
+table.mytable td>ol, .mytable td>ul  {text-align: left;}
+
+table.vartable {padding:0; margin:0; border: 1px solid; border-collapse: collapse;}
+table.vartable tr:first-child {border-bottom: 1px solid;}
+table.vartable tr.bb {border-bottom: 1px solid;}
+table.vartable tr th {border-right: 1px solid;}
+table.vartable tr td {text-align: center; padding-left: 0.5em; padding-right: 0.5em;}
+table.vartable tr th {text-align: center;}
+table.vartable tr td.bar {background-image: linear-gradient(#444, #444); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;}
+table.vartable tr td.bbar {background-image: linear-gradient(#444, #444) linear-gradient(#444, #444); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;}
+
+.row {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display: inline-flex;
+}
+
+ol.row, ul.row {display:flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap;}
+ol.row>li, ul.row>li {margin-left: 4em; margin-right: 1em;}
+
+
+.col {
+    max-width:50%;
+    margin: 0;
+    padding: 0;
+}
+
+div, ul, ol {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.corr {
+    padding: 0;
+    color: #040;
+    border : solid 1px #040;
+    border-radius: 0.1em;
+    width: 1.2em;
+    height: 1.2em;
+}
+.corr:before {
+    content: "🖊Corrigé : ";
+    font-weight: bold;
+}
+.corr.open {
+    padding: 0.2em;
+    width: initial;
+    height: initial;
+    border-radius: 0.5em;
+}
+
+.barm {font-family: Monospace; color: violet;}
+
+
+.quadrillage5mm {display: none;}
+.quadrillage1mm {display: none;}
+
+.hidden-web {display: none;}
+
+
+@media (max-width: 500px) {
+    div, table {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    table.mytable, img {
+        margin: 0;
+        padding: 0;
+        font-size:small;
+        float:none;
+        max-width: 100%;
+        max-height: 100%;
+        overflow-x: scroll;
+        font-size: smaller;
+    }
+
+    figure, img {
+        width: 85%;
+        max-width: 100%;
+    }
+
+    .row {
+        display:block;
+    }
+
+    .col {
+        min-width: 100%;
+    }
+}
+
+@page {
+    size: A4;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+@media print {
+    :root {
+      /* Theme PRINT */
+      --font-family: 'Times New Roman', Times, serif, Verdana, Helvetica, sans-serif;
+      --font-family-titles:  'Times New Roman', Times, serif, Verdana, Helvetica, sans-serif;
+      --font-size: 10pt;
+      --line-height: auto;
+      --color-section : darkred;
+      --color-subsection : darkgreen;
+      --color-subsubsection : darkblue;
+      --color-title: #503010;
+      --color-exo: #103050;
+      --color-defi: #503010;
+      --color-theo: #503010;
+      --color-meth: darkgreen;
+      --color-bg-title: #fbb332;
+      --color-bg-defi : #fbb332;
+      --color-bg-theo : #fbb332;
+      --color-bg-exo : #3ae;
+      --color-bg-surl : #00ff0055;
+      --color-bg-table-1 : #bbb8;
+      --color-bg-table-2 : #ccc8;
+      --color-bg-table-3 : #ddd8;
+      --border: 0.1em solid;
+      --border-opacity: 0.1;
+      --border-radius: 0.2em;
+      --shadow: 0.2em;
+      --margin : 0.1em;
+      --padding : 0.5em;
+      --width-print: auto;
+      --height-print: auto;
+    }
+    
+    .hidden-web {display: inherit;}
+    .hidden-print {display: none;}
+
+    
+    nav {display: none;}
+
+    body, section, main {
+        display: block;
+        font-family : var(--font-family); 
+        font-size: var(--font-size);
+    }
+
+    .pagebreak {page-break-after: always;}
+    section+section {page-break-before: always;}
+    h1, h2, h3, h4 {page-break-after:avoid;}
+    .defi, .theo, .prop, .meth, .exem, .exo, .rema, table.mytable, table, figure, img {page-break-inside: avoid;}
+    table.mytable td>ol, .mytable td>ul, .mytable td>img, .mytable td>figure 
+                                     {text-align: left;float: none;}
+
+    table.mytable, figure, canvas, img, img:active {
+        --width-print: auto;
+        --height-print: auto;
+        --cell-width-print: auto;
+        --cell-height-print: auto;
+        width: var(--width-print);
+        height: var(--height-print);
+        font-size: smaller;
+    }
+
+    .mytable th, .mytable td {
+        height: var(--cell-height-print);
+        width: var(--cell-width-print);
+        }
+
+    .surl {
+        background-color: transparent;
+        border: solid 0.2em;
+        border-color: var(--color-bg-surl);
+        border-radius: rgba(var(--border-radius),0.2);
+        padding: var(--padding) 0.1em;
+    }
+
+    .corr:not(.open) {
+        display: none;
+    }
+
+    .corr.open {
+        display: block;
+    }
+
+    .corr:before {
+        content: "🖊Corrigé : ";
+        font-weight: bold;
+        width: initial;
+        height: initial;
+    }
+
+    code:not(pre code) {
+        font-family: monospace;
+        font-size: smaller;
+        border: 1px solid lightgrey;
+        border-radius: 0.3em;
+    }
+
+
+    h2 {color: var(--color-section); margin: var(--margin);}
+
+    h3 {color: var(--color-subsection); margin: var(--margin);}
+
+    h4 {color: var(--color-subsubsection); margin: var(--margin);}
+    
+    .exo, .defi, .theo {border: var(--border); border-radius: var(--border-radius);}
+
+    .exo {
+        color: var(--color-exo);
+        border-color: var(--color-bg-exo);
+    }
+
+    .defi {
+        color: var(--color-defi);
+        font-style: italic;
+        border-color: var(--color-bg-defi);
+    }
+
+    .theo {
+        color: var(--color-theo);
+        box-shadow: var(--shadow) var(--shadow) var(--shadow) gray;
+        border-color: var(--color-bg-theo);
+    }
+
+    .meth {
+        color: var(--color-meth);
+    }
+    
+    h1 {
+        margin-top: 0;
+        margin-bottom: 1em; 
+        color: var(--color-bg-title); 
+        border-color: var(--color-bg-title);
+    }
+
+    h1, .prop, .rema, .exem, .meth, .theo, .defi, .exo {margin: var(--margin); padding: var(--padding);
+    }
+
+    .row {
+        max-width: 100%;
+    }
+
+ 
+/*
+    footer {
+        position:fixed;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        color: rgba(0,0,0,0.5);
+        border: 1px solid rgba(80,80,80,0.5);
+        border-radius: var(--border-radius);
+    }
+
+    footer::after {
+        content: "page " counter(pg);
+    }
+*/
+    .href-print::after{
+        content: " (url : " attr(href) ")";
+        text-decoration: none;
+    }
+
+    .quadrillage5mm {
+        display: flex;
+        background-size: 5mm 5mm;
+        background-image:
+            linear-gradient(to right, lightgrey 1px, transparent 1px),
+            linear-gradient(to bottom, lightgrey 1px, transparent 1px)!important; 
+        border: 1px solid black;
+        border-radius: 5mm;
+        -webkit-print-color-adjust: exact!important; 
+        print-color-adjust: exact!important; 
+}
+
+     .quadrillage1mm {
+        display: flex;
+        background-size: 10mm 10mm;
+        background-image:
+            linear-gradient(to right, grey 0.2mm, transparent 0.2mm 10mm),
+            linear-gradient(to bottom, grey 0.2mm, transparent 0.2mm 10mm),
+            linear-gradient(to right, transparent 1.1mm, lightgrey 1.1mm 1.2mm, transparent 1.2mm 2.1mm, lightgrey 2.1mm 2.2mm, transparent 2.2mm 3.1mm, lightgrey 3.1mm 3.2mm, transparent 3.2mm 4.1mm, lightgrey 4.1mm 4.2mm, transparent 4.2mm 5.1mm, lightgrey 5.1mm 5.2mm, transparent 5.2mm 6.1mm, lightgrey 6.1mm 6.2mm, transparent 6.2mm 7.1mm, lightgrey 7.1mm 7.2mm, transparent 6.2mm 7.1mm, lightgrey 7.1mm 7.2mm, transparent 7.2mm 8.1mm, lightgrey 8.1mm 8.2mm, transparent 8.2mm 9.1mm, lightgrey 9.1mm 9.2mm, transparent 9.2mm),
+            linear-gradient(to bottom, transparent 1.1mm, lightgrey 1.1mm 1.2mm, transparent 1.2mm 2.1mm, lightgrey 2.1mm 2.2mm, transparent 2.2mm 3.1mm, lightgrey 3.1mm 3.2mm, transparent 3.2mm 4.1mm, lightgrey 4.1mm 4.2mm, transparent 4.2mm 5.1mm, lightgrey 5.1mm 5.2mm, transparent 5.2mm 6.1mm, lightgrey 6.1mm 6.2mm, transparent 6.2mm 7.1mm, lightgrey 7.1mm 7.2mm, transparent 6.2mm 7.1mm, lightgrey 7.1mm 7.2mm, transparent 7.2mm 8.1mm, lightgrey 8.1mm 8.2mm, transparent 8.2mm 9.1mm, lightgrey 9.1mm 9.2mm, transparent 9.2mm)!important; 
+        border: 1px solid black;
+        border-radius: 5mm;
+        -webkit-print-color-adjust: exact!important; 
+        print-color-adjust: exact!important; 
+}
+
+
+
+ }
+    /* ... the rest of the rules ... */

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="74.0mm"
+   height="52.0mm"
+   viewBox="0 0 74.0 52.0"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="Veyn.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview137"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.3968575"
+     inkscape:cx="148.54773"
+     inkscape:cy="109.53158"
+     inkscape:window-width="1024"
+     inkscape:window-height="540"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs132" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect187"
+       width="0.44731599"
+       height="0.79745138"
+       x="1.8048769"
+       y="4.4659433" />
+    <rect
+       style="fill:#ac9393;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect189"
+       width="62.097019"
+       height="41.71172"
+       x="2.252193"
+       y="5.2633948" />
+    <ellipse
+       style="mix-blend-mode:screen;fill:#00ff00;fill-opacity:0.5;stroke:#00ff00;stroke-width:0.53232"
+       id="path257"
+       cx="43.289932"
+       cy="25.395981"
+       rx="13.513803"
+       ry="8.556922" />
+    <ellipse
+       style="mix-blend-mode:screen;fill:#ff0000;fill-opacity:0.5;stroke:#ff0000;stroke-width:0.393958"
+       id="path369"
+       cx="23.506618"
+       cy="25.046974"
+       rx="13.519989"
+       ry="8.8231783" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="11.448538"
+       y="20.284037"
+       id="text4964"><tspan
+         sodipodi:role="line"
+         id="tspan4962"
+         style="fill:#ff0000;stroke-width:0.264583"
+         x="11.448538"
+         y="20.284037">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="52.257847"
+       y="22.403509"
+       id="text11704"><tspan
+         sodipodi:role="line"
+         id="tspan11702"
+         style="fill:#00ff00;stroke-width:0.264583"
+         x="52.257847"
+         y="22.403509">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#808000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="29.071165"
+       y="26.380569"
+       id="text13416"><tspan
+         sodipodi:role="line"
+         id="tspan13414"
+         style="font-size:4.23333px;stroke-width:0.264583;fill:#808000"
+         x="29.071165"
+         y="26.380569">A∩B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#6c5353;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="56.765614"
+       y="45.395596"
+       id="text19808"><tspan
+         sodipodi:role="line"
+         id="tspan19806"
+         style="fill:#6c5353;stroke-width:0.264583"
+         x="56.765614"
+         y="45.395596">E</tspan></text>
+  </g>
+</svg>

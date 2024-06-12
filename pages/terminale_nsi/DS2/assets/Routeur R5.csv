@@ -1,0 +1,5 @@
+Destination,Direction,Saut,Débit (Mbits/s)
+R1,R1,1,10
+R2,R1,2,
+R3,R1,2,
+R4,R1,3,

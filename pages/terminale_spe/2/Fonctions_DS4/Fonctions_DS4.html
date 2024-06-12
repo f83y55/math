@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Fonctions - DS4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Fonctions et suites - DS3</h1>
+
+        <table class="mytable hidden-web" style="width: 100%;">
+            <tr>
+                <th style="width: 20%;">Nom</th>
+                <td style="width: 80%;"></td>
+            </tr>
+            <tr>
+                <th>Prénom</th>
+                <td></td>
+            </tr>
+        </table>
+
+        <div class="exo"><strong>Lecture graphique (6 points)</strong><br />
+
+            Soit une fonction \(f\) représentée ci-dessous sur l'intervalle \(\left[-4 ; 5 \right]\). On a tracé
+            plusieurs de ses tangentes et une asymptote verticale. Toutes les
+            réponses seront données à partir de lectures graphiques.
+            <figure>
+                <img src="assets/Fig3.png" alt="fig">
+            </figure>
+            <ol>
+                <li>
+                    Donner le tableau de variation de \(f\) sur \(\left[-4 ; 5 \right]\).
+                    <div class="corr">
+                        <table class="vartable">
+                            <tr>
+                                <th>\(x\)</th>
+                                <td>-4</td>
+                                <td></td>
+                                <td>-2</td>
+                                <td></td>
+                                <td>-1</td>
+                                <td></td>
+                                <td>1</td>
+                                <td></td>
+                                <td>2</td>
+                                <td></td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="5">\(f\)</th>
+                                <td>5<sup>-</sup></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="bbar">\(+\infty\)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td rowspan="5" class="bar">1<sup>-</sup>&nbsp;2&nbsp;3<sup>+</sup></td>
+                                <td></td>
+                                <td>4<sup>-</sup></td>
+                            </tr>
+                            <tr>
+
+                                <td> </td>
+                                <td rowspan="3">&#8600;</td>
+                                <td></td>
+                                <td rowspan="3">&#8599;</td>
+                                <td></td>
+                                <td rowspan="3">&#8600;</td>
+                                <td></td>
+                                <td></td>
+
+                                <td>&#8599;</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td> </td>
+
+                                <td></td>
+
+                                <td></td>
+
+                                <td></td>
+                                <td></td>
+
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td> </td>
+
+                                <td></td>
+
+                                <td></td>
+
+                                <td></td>
+                                <td>&#8599;</td>
+
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+
+                                <td></td>
+                                <td></td>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0,5</td>
+                                <td></td>
+
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    Pour quelle(s) valeur(s) de \(x\) , \(f\) n'est-elle pas continue ? Expliquer.
+                    <div class="corr">
+                        \(f\) n'est pas continue en \(x=-1\) (présence d'une asymptote verticale) et en \(x=2\), où l'on
+                        a \(\displaystyle\lim_{2^-}f=1\) ; \(f(2)=1\) et \(\displaystyle\lim_{2^+}f=3\).
+                    </div>
+                </li>
+                <li>
+                    À l'aide des trois tangentes tracées, donner les valeurs des nombres dérivés :
+                    \(f'(0)\) , \(f'(1)\) et \(f'(-3)\) ; Expliquer ou illustrer sur la figure.
+                    <div class="corr">
+                        <ul>
+                            <li>
+                                Tangente en \(x=-3\) :
+                                De \(x=-4\) à \(x=-2\), soit \(\Delta x=2\), on voit que \(y\) va de \(4{,}5\) à
+                                \(0{,}5\), soit \(\Delta y=-4\) ; on a donc \(f'(-3)=\dfrac{\Delta y}{\Delta x}=-2\).
+                            </li>
+                            <li>
+                                Tangente en \(x=0\) :
+                                De \(x=-1\) à \(x=1\), soit \(\Delta x=2\), on voit que \(y\) va de \(2\) à \(0\), soit
+                                \(\Delta y=-2\) ; on a donc \(f'(-3)=\dfrac{\Delta y}{\Delta x}=-1\).
+                            </li>
+                            <li>
+                                Tangente en \(x=1\) :
+                                Cette tangente est clairement horizontale, donc \(f'(1)=0\).
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    Donner les équations de ces tangentes.
+                    <div class="corr">
+                        <ul>
+                            <li> Tangente en \(x=-3\) : \(y=-2x-3{,}5\)</li>
+                            <li> Tangente en \(x=0\) : \(y=-x+1\)</li>
+                            <li> Tangente en \(x=1\) : \(y=0{,}5\)</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="exo"><strong>Dérivées (3 points)</strong>
+            Calculer les dérivées des fonctions suivantes (factoriser au maximum) :
+            <ol>
+                <li>
+                    \(f(x)=(x-2)^3\textrm{e}^{-4x}\)
+                    <div class="corr">
+                        \(\begin{array}{ccl}
+                        f'(x) &=& 3(x-2)^2\textrm{e}^{-4x}+(x-2)^3\textrm{e}^{-4x}(-4) \\
+                        &=& (x-2)^2\textrm{e}^{-4x}\left(3-4(x-2)\right) \\
+                        &=& (x-2)^2\textrm{e}^{-4x}\left(11-4x\right)
+                        \end{array}\)
+                    </div>
+                </li>
+                <li>
+                    \(g(x)=\frac{1}{(2x-5)^3}\)
+                    <div class="corr">
+                        \(\begin{array}{ccl}
+                        g'(x) &=& \dfrac{-3\times 2}{(2x-5)^4} \\
+                        &=& \dfrac{-6}{(2x-5)^4} \\
+                        \end{array}\)
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="pagebreak"></div>
+
+        <div class="exo"><strong>Étude de fonction (8 points)</strong><br />
+            <ol type="A">
+                <li>
+                    <ol>
+                        <li>
+                            Étudier les variations de la fonction définie sur \(\mathbb{R}\) par \(g(x)=2x^3-3x^2-1\).
+                            On
+                            précisera les valeurs maximales et/ou minimales dans le tableau ainsi que les limites.
+                            <div class="corr">
+                                \(g'(x)=2\times 3x^2-3\times 2x^1-0=6x^2-6x=6x(x-1)\)
+                                <table class="vartable">
+                                    <tr>
+                                        <th>\(x\)</th>
+                                        <td>\(-\infty\)</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>\(\alpha\)</td>
+                                        <td></td>
+                                        <td>\(+\infty\)</td>
+                                    </tr>
+                                    <tr class="bb">
+                                        <th>\(g'(x)\)</th>
+                                        <td colspan="2">+</td>
+                                        <td class="bar">0</td>
+                                        <td>-</td>
+                                        <td class="bar">0</td>
+                                        <td>+</td>
+                                        <td class="bar"></td>
+                                        <td colspan="2">+</td>
+                                    <tr>
+                                        <th rowspan="5">\(g\)</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>\(+\infty\)</td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>&#8599;</td>
+                                        <td></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>-1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>&#8599;</td>
+                                        <td></td>
+                                        <td>&#8600;</td>
+                                        <td></td>
+                                        <td>&#8599;</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="bb">
+                                        <td>\(-\infty\)</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>-2</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>\(g(x)\)</th>
+                                        <td colspan="6">-</td>
+                                        <td class="bar">0</td>
+                                        <td colspan="2">+</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </li>
+                        <li>
+                            Montrer que l'équation \(g(x)=0\) admet une unique solution \(\alpha\in\mathbb{R}\)
+                            <div class="corr">
+                                La fonction \(g\) étant continue sur \(\mathbb{R}\) (car c'est un polynôme), et est
+                                strictement croissante sur \(\left[1;+\infty\right[\) tout en vérifiant \(g(1)=-2&lt;0\)
+                                et
+                                \(\displaystyle \lim_{+\infty}g=+\infty&gt;0\) , elle atteint une image 0 en un unique
+                                \(\alpha\in\left[1;+\infty\right[\). <br />
+                                De plus, comme \(g\) est majorée par \(-1&lt;0\) sur
+                                \(\left]-\infty;1\right]\), \(\alpha\) est l'unique solution de \(g(x)=0\) sur
+                                \(\mathbb{R}\).
+                            </div>
+                        </li>
+                        <li>
+                            En déduire le tableau de signe de \(g(x)\) sur \(\mathbb{R}\).
+                            <div class="corr">
+                                cf la dernière ligne sur le tableau de variation précédent.
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>On étudie la fonction \(f\) définie sur \(\mathbb{R}^+=\left[0;+\infty\right[\). par
+                    \(f(x)=\dfrac{1-x}{x^3+1}\).
+                    <ol>
+                        <li>
+                            Déterminer la limite de \(f\) en \(+\infty\).
+                            <div class="corr">
+                                \(
+                                \displaystyle\lim_{x\to+\infty}\dfrac{1-x}{x^3+1}
+                                =\displaystyle\lim_{x\to+\infty}\dfrac{\cancel{x}(\frac{1}{x}-1)}{x^{\cancel{3}2}(1+\frac{1}{x^3})}
+                                =\dfrac{0^+-1}{+\infty (1+0^+)}
+                                = 0^-
+                                \)
+                            </div>
+                        </li>
+                        <li>
+
+                            Calculer la dérivée \(f'\) de la fonction \(f\) pour vérifier que
+                            \(f'(x)=\dfrac{g(x)}{(x^3+1)^2}\).
+                            <div class="corr">
+                                \(
+                                \begin{array}{ccl}
+                                f'(x) &=& \dfrac{-(x^3+1)-(1-x)(3x^2)}{(x^3+1)^2} \\
+                                &=& \dfrac{-x^3-1-3x^2+3x^3}{(x^3+1)^2} \\
+                                &=& \dfrac{2x^3-1-3x^2}{(x^3+1)^2} \\
+                                &=& \dfrac{g(x)}{(x^3+1)^2}
+                                \end{array}\)
+                            </div>
+                        </li>
+                        <li>
+                            En déduire les variations de \(f\) sur \(\mathbb{R}^+\).
+                            <div class="corr">
+                                \(f'(x)\) est du signe de \(g(x)\) car son dénominateur est un carré (donc est
+                                positif).<br />
+                                \(f(0)=\frac{1-0}{1+0^3}=1\)
+                                <table class="vartable">
+                                    <tr>
+                                        <th>\(x\)</th>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td>\(\alpha\)</td>
+                                        <td></td>
+                                        <td>\(+\infty\)</td>
+                                    </tr>
+                                    <tr class="bb">
+                                        <th>\(f'(x)\)</th>
+                                        <td colspan="2">-</td>
+                                        <td class="bar">0</td>
+                                        <td colspan="2">+</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="3">\(f\)</th>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>\(0^-\)</td>
+                                    </tr>
+                                    <tr>
+
+                                        <td></td>
+                                        <td>&#8600;</td>
+                                        <td></td>
+                                        <td>&#8599;</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td>\(f(\alpha)\)</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+        <div class="exo"><strong>Récurrence (5 points)</strong>
+            On note \(H_n\) la propriété définie sur \(n\in\mathbb{N}\) par :<br />
+            \(H_n : \displaystyle\sum_{k=0}^n k(k+1) = \dfrac{n(n+1)(n+2)}{3}\)<br />
+            Démontrer par récurrence sur \(n\) que \(H_n\) est toujours vraie.
+            <div class="corr">
+                <ol>
+                    <li>
+                        <strong>initialisation</strong>(pour n=0) :<br />
+                        à gauche : \(\displaystyle\sum_{k=0}^0 k(k+1) = 0\) et à droite : \(\dfrac{0(0+1)(0+2)}{3}=0\)
+                        donc l'égalité \(H_0\) est vérifiée pour n=0.
+                    </li>
+                    <li>
+                        <strong>Hérédité</strong> : <br />
+                        Considérons \(H_n\) vraie pour un rang \(n\) et démontrons \(H_{n+1} :
+                        \displaystyle\sum_{k=0}^{n+1} k(k+1) = \dfrac{(n+1)(n+2)(n+3)}{3}\) :<br />
+                        On a \(H_n\) vraie donc :
+                        \(\begin{array}{rcl}
+                        \displaystyle\sum_{k=0}^{n+1} k(k+1) &=& \displaystyle\sum_{k=0}^{n} k(k+1) + (n+1)(n+2) \\
+                        &=& \dfrac{n(n+1)(n+2)}{3} + (n+1)(n+2)\times\dfrac{3}{3} \\
+                        &=& \dfrac{n(n+1)(n+2)+3(n+1)(n+2)}{3} \\
+                        &=& \dfrac{(n+1)(n+2)(n+3)}{3} \\
+                        \end{array}\)<br />
+                        Donc \(H_{n+1}\) est vraie.
+                    </li>
+                    <li><strong>Conclusion </strong> : \(H_n\) est toujours vraie.
+                    </li>
+
+                </ol>
+                cf <a href="https://github.com/f83y55/sum_poly">script python</a> pour calculer n'importe quelle somme
+                polynomiale.
+
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

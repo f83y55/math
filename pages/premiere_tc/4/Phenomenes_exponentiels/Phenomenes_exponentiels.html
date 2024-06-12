@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Phénomènes exponentiels</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src=../../../../s.js data-import=""></script>
+</head>
+
+<body onload="body()">
+
+    <h1>Phénomènes exponentiels</h1>
+    <h2>Rappels sur les puissances</h2>
+    <div class="defi"><br />
+        \(n\) est un entier positif et \(a&gt;0\) :
+        <ul>
+            <li>
+                <strong>Puissances entières : </strong>\(a^n=a\times \cdots\times a\) (\(n\) fois le facteur \(a\)).
+            </li>
+            <li>
+                <strong>Puissances entières négatives : </strong>\(a^{-n}=\frac{1}{a\times \cdots\times a}\) (\(n\) fois
+                le facteur \(a\)).
+            </li>
+            <li><strong>Puissance zéro : </strong>\(a^0=1\) (toujours).</li>
+        </ul>
+    </div>
+    <div class="prop">
+        \(a>0\) et \(x\) et \(y\) sont réels :
+        <ul>
+            <li>\(a^x\times a^y=a^{x+y}\)</li>
+            <li>\(\frac{a^x}{a^y}=a^{x-y}\)</li>
+            <li>\({(a^{x})}^{y}=a^{x\times y}\)</li>
+        </ul>
+        Attention, il faut avoir la même base \(a\) !
+    </div>
+    <div class="exo"> Calculer :
+        \(A=(10^2)^2+\frac{10^6}{10^4}\) &nbsp;;&nbsp; \(B=\frac{2^{3}\times 2^{7}}{2^{10}}\) &nbsp;;&nbsp;
+        \(C=\left(0{,}5^{0{,}2}\right)^{10}\)
+    </div>
+    <h2>Racine \(n\)-ième et taux d'évolution moyen</h2>
+    <div class="prop">
+        L'équation \(x^n=c\) admet une seule solution <strong>positive</strong> : <span
+            class="surl">\(x=c^\frac{1}{n}\)</span>.
+    </div>
+    <div class="exem">
+        <ul>
+            <li>\(x^3=64\) admet pour solution \(x=64^\frac{1}{3}=4\).</li>
+            <li>\(x^2=81\) admet pour solution (positive) \(x=81^\frac{1}{2}=9\).<br />
+                Cette équation admet une autre solution, négative, qui est -9.<br />
+            </li>
+        </ul>
+    </div>
+    <div class="rema">
+        Puissance «un demi» est en fait la fonction racine carrée ; puissance «un tiers» est en fait la racine cubique,
+        etc...
+    </div>
+    <div class="prop">
+        Si au cours de \(n\) périodes, le taux d'évolution d'une quantité est \(t_{\textrm{global}}\), alors le
+        <strong>taux moyen</strong> est <span
+            class="surl">\(t_{\textrm{moyen}}\%=\left(1+t_{\textrm{global}}\%\right)^{\frac{1}{n}}-1\)</span>.
+    </div>
+    <div class="none">
+        <strong>Démonstration :</strong> Le coefficient multiplicateur associé à une évolution de taux moyen \(t\)
+        pendant \(n\) périodes est
+        \((1+t\%)^n\), et est égal à \(1+t_{\textrm{global}}\%\) (cefficient multiplicateur associé au taux
+        global).<br />
+        On a donc \(1+t\% = \left(1+t_{\textrm{global}}\%\right)^{\frac{1}{n}}\). En soustrayant 1 aux deux membres de
+        l'égalité, on obtient la formule.
+    </div>
+    <div class="exo">
+        Un prix augmente de 20% sur un an. Quelle est son augmentation moyenne par mois ?
+    </div>
+    <div class="exo">
+        Un prix baisse de 20% en un mois, puis augmente de 20% le mois suivant. La même chose se reproduit les deux mois
+        suivants. Quel est le taux d'évolution moyen (par mois) durant ces 4 mois ?<br />
+        <strong>Conseil :</strong> passer par les coefficients multiplicateurs.
+    </div>
+
+    <div class="exo">
+        <div class="row">
+            <div class="col">
+
+                La courbe de Von Koch est une fractale qui rappelle les contours d'un flocon de neige.<br />
+
+                Quel est le taux d'évolution de la longueur de la courbe entre les étapes ? Que peut-on en dire ? En
+                déduire le taux d'évolution moyen de la longueur entre les étapes 1 à 1000.
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/Droite_Koch.png" alt="VKoch1" />
+                </figure>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/Koch_anime.gif" alt="VKoch2" />
+                </figure>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <h2>Fonctions exponentielles</h2>
+    <div class="defi">
+        <div class="row">
+            <div class="col">
+                <p>La <strong>base</strong> \(a\) est un nombre réel positif.<br />
+                    En général, on prend \(a&gt;1\) (car \(\left(\frac{1}{a}\right)^x=a^{-x}\)).
+                </p>
+                <p>La constante \(k\) est un nombre réel fixé ; on pourra l'appeler «valeur en 0».
+                </p>
+                <ul>
+                    <li>La fonction \(x\mapsto k a^x\) avec \(a&gt;1\) croit vers \(+\infty\) quand \(x\)
+                        augmente ;
+                    </li>
+                    <li>La fonction \(x\mapsto k a^{-x}\) avec \(a&gt;1\) décroit vers \(0\) quand \(x\)
+                        augmente ;</li>
+                    <li>Elles sont symétriques par rapport à l'axe vertical.</li>
+                </ul>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/fig1.svg" alt="fonction exp 1">
+                    <figcaption>fonction \(x\mapsto k a^x\) avec \(a&gt;1\)</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/fig2.svg" alt="fonction exp 2">
+                    <figcaption>fonction \(x\mapsto k a^{-x}\) avec \(a&gt;1\)</figcaption>
+                </figure>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="exo"><strong>Date de péremption - population de bactéries</strong><br />
+        Une population de bactéries, notée \(f(t)\), donnée en millions en fonction du temps \(t\) donné en
+        jours
+        vérifie \(f(t)=0{,}3\times1.05^t\).
+        <ol>
+            <li>Tracer cette fonction en utilisant GeoGebra ou une calculatrice.</li>
+            <li>Quelle est la population initiale ?</li>
+            <li>Quand dépassera-t-elle le million d'individus ?<br />
+                Sur Geogebra : tracer une droite horizontale <code>y=1</code> et rechercher l'intersection avec
+                la
+                courbe. Sur une calculatrice, on pourra utiliser la fonction trace ou un tableau de valeurs.
+            </li>
+            <li>Calculer le nombre de bactéries au bout de 15 jours, puis de 16 jours.</li>
+            <li>Calculer le taux d'évolution de la population du 15<sup>ème</sup> au 16<sup>ème</sup> jour.</li>
+            <li>Calculer le taux d'évolution de la population du 30<sup>ème</sup> au 31<sup>ème</sup> jour. Que
+                remarque-t-on ?</li>
+            <li>Expliquer le résultat précédent en simplifiant l'expression
+                \(\frac{f(t+1)}{f(t)}=\frac{0{,}3\times1.05^{t+1}}{0{,}3\times1.05^t}\).</li>
+        </ol>
+    </div>
+    <div class="exo"><strong>Radioactivité et datation</strong><br />
+        <p>
+            Une faible proportion de noyaux atomiques constituant la matière terrestre sont instables et se désintègrent
+            (radioactivité).
+            L’instant de désintégration d’un noyau radioactif
+            individuel est aléatoire. <br />
+            La demi-vie, notée λ (half-life en anglais) d’un noyau radioactif est la durée nécessaire pour que la moitié
+            des noyaux
+            initialement présents dans un échantillon
+            macroscopique se soient désintégrés.<br />
+            La part de noyaux radioactifs restante dans l'échantillon est donnée par la fonction
+            \(f(t)=2^{\frac{-t}{\lambda}}\), où \(t\) désigne un temps (généralement en années), qui doit être donné
+            dans la même unité que λ.
+        </p>
+        <p>
+            Lors des premières visites des grottes de Lascaux dans les années 1940,
+            André Glory et son équipe de scientifiques entreprennent quelques relevés.
+            Il y trouve notamment des pointes de sagaies décorées en bois de renne ainsi
+            que du charbon de bois provenant de lampes.<br />
+            Ces échantillons de charbons ont été analysés expérimentalement. Pour cela,
+            un procédé technique a permis de déterminer que dans un échantillon de
+            charbon (constitué uniquement de carbone), 6,05×10<sup>−12</sup>g était du carbone 14 (pour lequel λ=5734
+            ans) ; la masse de carbone 14 dans un échantillon de même taille produit actuellement serait de
+            8,14×10<sup>−11</sup>g.
+        </p>
+        <ol>
+            <li>Calculer la proportion de noyaux de carbone 14 qui ne sont pas encore désintégrés dans l'échantillon
+                prélevé.</li>
+            <li>En utilisant la fonction \(f\), en déduire une datation de cet échantillon.</li>
+        </ol>
+    </div>
+    <div class="pagebreak"></div>
+
+
+    <h2> Suites géométriques</h2>
+    <h3>Définitions et propriétés</h3>
+    <div class="defi">
+        Une suite \((u_n)\) est <strong>géométrique</strong>
+        s'il existe un réel \(q\) (indépendant de \(n\)) tel que pour tout rang \(n\), on a : <span
+            class="surl">\(u_{n+1}=q\times u_n\)</span><br />
+        Le réel \(q\) s'appelle la <strong>raison</strong> de la suite.
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="rema">
+                On passe d'un terme de la suite au suivant en <strong>multipliant</strong> un même nombre \(q\) appelé
+                la
+                raison de
+                la suite ; attention : \(q\) peut être négatif.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <figure>
+                    <img src="assets/1_0506suitese.png" alt="suite croissante" style="--width-print:3.5cm;">
+                </figure>
+                <figure>
+                    <img src="assets/1_0506suitesf.png" alt="suite croissante" style="--width-print:3.5cm;">
+                </figure>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/1_0506suitesg.png" alt="suite croissante" style="--width-print:3.5cm;">
+                </figure>
+                <figure>
+                    <img src="assets/1_0506suitesh.png" alt="suite croissante" style="--width-print:3.5cm;">
+                </figure>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="prop">
+        Une suite géométrique \((u_n)\) correspond aux valeurs prises par une fonction exponentielle \(f(x)=ka^x\) pour
+        \(x=n\), c'est à dire pour des valeurs entières de \(x\) ; en outre, on a \(a=q\) et \(k=u_0\).<br />
+        On en déduit que pour tout entier \(n\), on a <span class="surl">\(u_n = u_0q^n\)</span>, ou (en partant de
+        \(n=1\)), \(u_n = u_1q^{n-1}\).
+    </div>
+    <h3>Patterns</h3>
+    <div class="exo">
+        <div class="row">
+            <div class="col">
+                <ol>
+                    <li>Observer et dire si le nombre de pastilles contenues dans ce motif évolutif suit une suite
+                        arithmétique ou géométrique.</li>
+                    <li>Trouver une formule permettant de donner le nombre de pastilles contenu dans le motif à l'étape
+                        \(n\).</li>
+                    <li><strong>Difficile : </strong>On admet que le rayon des pastilles est divisé par 3 en passant
+                        d'une étape à l'autre.<br />
+                        On admet que l'aire d'une pastille à l'étape initiale est 1.<br />
+                        Trouver une formule permettant de donner l'aire du motif l'étape \(n\).<br />
+                        Que peut-on en déduire pour de très grandes valeurs de \(n\) ?
+                    </li>
+                </ol>
+
+            </div>
+            <div class="col">
+                <figure style="--width-print:7cm;">
+                    <img src="assets/fract1.png" alt="Fractale" />
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="exo"><strong>Triangle de Sierpiński</strong>
+        <div class="row">
+            <div class="col">
+                Le triangle initial mesure 10cm². Le but de l'exercice est de trouver une formule donnant l'aire du
+                tapis à l'étape \(n\). À partir de
+                quelle étape l'aire est-elle réduite de moitié ?
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/fract2.png" alt="Fractale" style="--width-print:6.5cm;">
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="exo"><strong>Tapis de Sierpiński</strong>
+        <div class="row">
+            <div class="col">
+                Le carré initial mesure 9cm de côté. Le carré/tapis de Sierpiński permet de construire des antennes
+                multi-fréquences de taille réduite, très utilisées par la technologie mobile.<br />
+                Le but de l'exercice est de trouver une formule donnant l'aire du tapis à l'étape \(n\). À partir de
+                quelle étape l'aire est-elle réduite de moitié ?
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/fract3.png" alt="Fractale" style="--width-print:6.5cm;">
+                    <img src="assets/antenne.jpg" alt="Fractale" style="--width-print:3.5cm;">
+
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <h3>Applications au tableur</h3>
+    <div class="exo">
+        <ol>
+            <li>Télécharger le fichier <a href="assets/livret.ods" download><code>livret.ods</code></a> et l'ouvrir avec
+                LibreOffice Calc.</li>
+            <li>On place 400€ (cellule <code>C2</code>) sur un compte dont les intérêts rapportent 3% (cellule
+                <code>A2</code>) par an. <br />
+                Le but de l'exercice est de calculer la somme disponible (colonne <code>C</code>) sur le compte en
+                fonction des années.<br />
+                Trouver la formule à recopier dans la colonne pour effectuer cette opération.
+            </li>
+            <li>Déterminer au bout de combien de temps on réalise un bénéfice de 200€.</li>
+            <li>Déterminer au bout de combien de temps la somme de départ a doublé. Cela dépend-il de la somme initiale
+                ?</li>
+            <li><strong>Plus dur :</strong> On dépose, chaque année, 100€ sur le compte. L'écrire dans la cellule
+                <code>A4</code> et adapter la formule dans la colonne <code>C</code>. En combien de temps la somme
+                initialement déposé double-t-elle ?
+            </li>
+        </ol>
+    </div>
+    <div class="exo">
+        <strong>Virus</strong><br />
+        On appelle, et on note \(R_0\) le taux d'évolution de la contamination par un virus.
+        <ol>
+            <li>
+                Si 400 individus sont
+                infectés initialement, pour \(R_0=3\%\), au bout de combien de temps le nombre d'infection sera double ?
+            </li>
+            <li>
+                Insérer un diagramme en barres montrant la progression.
+            </li>
+        </ol>
+    </div>
+
+    <div class="exo"><strong>Crédit</strong><br />
+        <p>
+            Les crédits à la consommation ou immobiliers indiquent un taux effectif global (ou TAEG) : lors d'un tel
+            crédit, chaque année, la banque applique ce taux à la somme totale restante dûe par l'emprunteur pour
+            calculer ses intérêts qui s'ajoutent à la somme dûe.
+        </p>
+        <p>
+            En utilisant et en complétant ce <a href="assets/credit.ods" download>tableau</a>, déterminer en
+            combien d'années sera remboursé un crédit de 10 000€ dont le TAEG est de 3%.
+        </p>
+        <p><strong>Approfondissement : </strong> Se renseigner sur ce qu'est le taux d'usure, et donner des exemples
+            chiffrés illustrant des situations de crédit délicates.
+        </p>
+    </div>
+
+</body>
+
+</html>

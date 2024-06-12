@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>TD impôt sur le revenu</h1>
+        <div class="none">
+            On pourra consulter : <a href="https://www.service-public.fr/particuliers/vosdroits/F1419" target="_blank"
+                class="href-print">service-public.fr</a>.
+        </div>
+        <h2>Calculer son impôt</h2>
+        <div class="row">
+            <div class="col">
+                <div class="none">
+                    <figure>
+                        <img src="assets/capture.png" alt="" style="--width-print:8cm;">
+                    </figure>
+                </div>
+            </div>
+            <div class="col" style="max-width: 50%;">
+
+                <h3>Exemple pour la tranche 2</h3>
+                <div class="exo">
+                    Dans le cas d’un revenu net imposable de 20 225 €, le montant de
+                    l’impôt sur le revenu dont la personne devra s’acquitter s’élève à 982 €.
+                    <ol>
+                        <li>À quelle tranche correspond ce revenu net imposable ?</li>
+                        <li>Le montant de ses impôts correspond-il à 11 % de ses revenus ?</li>
+                        <li>Sur quelle base sont donc calculés ces 11 % ?</li>
+                        <li>Plus généralement, émettre une hypothèse sur la manière dont le taux de
+                            11 % est appliqué pour un revenu imposable dans la tranche 2</li>
+                    </ol>
+                </div>
+                <h3>Calcul de l’impôt dans la tranche 2</h3>
+                <div class="exo">
+                    On a vu que pour un revenu imposable net de 20 225 € dans la tranche 2, soit
+                    8 931 € de plus que 11 294 €, le montant de l’impôt sur le revenu correspond à
+                    11 % de 8 931 € soit 982 €.
+                    Si on note \(x\) le revenu imposable net en euros, compris dans la tranche 2 le montant de l’impôt
+                    sur le revenu est noté \(f(x)\).
+                    <ol>
+                        <li> Déterminer l’expression de \(f(x)\).</li>
+                        <li> De quel type de fonction s’agit-il ? </li>
+                        <li>Quelle allure aura sa représentation graphique ?</li>
+                        <li>Tracer la courbe représentative de la fonction \(f\) sur le graphique fourni.</li>
+                    </ol>
+
+                </div>
+                <h3>Taux moyen d’imposition</h3>
+                <div class="exo">
+                    On reprend le cas d’une personne célibataire sans enfant ayant un revenu
+                    imposable de 20 225 € et dont l’impôt sur le revenu est donc de 982 €. On
+                    appelle M, le point correspondant à cette situation sur le graphique précédent.
+                    <ol>
+                        <li> Quelle est la part en pourcentage d’impôts payés par rapport à son
+                            revenu net imposable ?</li>
+                        <li>Ce taux est appelé taux moyen d’imposition. À quoi correspond-il
+                            graphiquement ?</li>
+                </div>
+            </div>
+        </div>
+
+        <h2>Tracer une fonction définie par morceaux</h2>
+        <div class="row">
+            <div class="col">
+                <div class="none">
+                    Sur <a href="www.geogebra.org/classic" target="_blank" class="href-print">GeoGebra</a>:
+                    <ul>
+                        <li>
+                            On peut utiliser la commande :<br>
+                            <code>f(x) = Si(-1&lt;x&lt;1, x^2, 0)</code> <br>
+                            pour tracer une fonction qui vaut
+                            \(x^2\) entre -1 et 1 et 0 ailleurs.
+                        </li>
+                        <li>
+                            On peut ajouter plusieurs blocs «Si» (valant chacun 0 ailleurs) pour chaque morceau de la
+                            courbe de
+                            la
+                            fonction à tracer :<br>
+                            <code>f(x) = Si(-1&lt;x&lt;1, x^2, 0) + Si(-3&lt;x&lt;-1, -x, 0)</code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="exo">
+                    Tracer la fonction \(f\) «impôt sur le revenu» en fonction du revenu \(x\)
+                    sur GeoGebra.
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

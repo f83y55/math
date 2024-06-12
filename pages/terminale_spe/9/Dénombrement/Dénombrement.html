@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Dénombrement</h1>
+        <h2>Ensembles, cardinaux, principes additif et multiplicatif</h2>
+        <h3>Parties et opérations sur les ensembles</h3>
+        <div class="defi">
+            Intuitivement, un ensemble est une <strong>collection d'objets</strong>.
+            Chacun de ces objets est désigné par un nom ou un symbole qui lui est propre.<br>
+            Ces objets peuvent être énumérés, séparés par des virgules ou points virgules, tout cela entre deux
+            accolades ; l'ordre n'a pas d'importance.
+            Dans ce cas, on dit que l'on définit un ensemble <strong>par extension</strong>.<br>
+            On appelle <strong>cardinal</strong> d'un ensemble le nombre de ses éléments.
+        </div>
+        <div class="exem">
+            \(A = \left\{2 ; -1,5 ; x ; y\right\}\) est un ensemble de cardinal 4. <br />
+            On note \(\textrm{Card}(A)=4\).
+        </div>
+        <div class="rema">
+            On note \(\emptyset\) l'ensemble vide. On a \(\textrm{Card}(\emptyset)=0\).
+        </div>
+        <div class="rema">
+            Il existe des ensembles infinis : par exemple, les ensembles de nombres usuels (\(\mathbb{N},
+            \mathbb{Z},
+            \mathbb{Q}, \mathbb{R}\)) sont infinis. Leurs cardinaux peuvent être construits, mais ce ne sont pas
+            des
+            entiers naturels (hors programme).
+        </div>
+        <div class="prop">
+            Un ensemble est infini lorsqu'il contient une suite d'éléments tous distincts.
+        </div>
+        <div class="exem">
+            L'ensemble des multiples de 10 : \(\left\{0;10;20;30;\ldots\right\}\)est infini puisqu'il contient la suite
+            \((10n)_{n\in\mathbb{N}}\) (tous ses éléments sont distincts car cette suite est strictement croissante).
+        </div>
+        <div class="defi"><strong>Parties et opérations</strong>
+            <ul>
+                <li>On dit que A est une <strong>partie</strong> (ou sous-ensemble) d'un ensemble E lorsque tous les
+                    éléments de A sont des éléments de E, et on note A⊂B. On note \(\mathcal{P}(E)\)
+                    l'<strong>ensemble
+                        des parties</strong> de E.
+                </li>
+                <li>On peut créer une partie en utilisant une propriété : par exemple
+                    \(A=\left\{x\in\mathbb{R}, x^2=1\right\}\) est une partie de \(\mathbb{R}\) (de deux éléments : -1
+                    et 1) ;
+                    on dit que A est définie en <strong>compréhension</strong>.
+                </li>
+                <li>
+                    \(\complement_E A=\overline{A}=\left\{x\in E, x\notin A\right\}\) est le
+                    <strong>complémentaire</strong> de A dans E (les éléments de E qui ne sont pas dans A).
+                </li>
+                <li>
+                    l'<strong>intersection</strong> A∩B contient les éléments à la fois dans A <strong>et</strong> dans
+                    B.
+                </li>
+                <li>
+                    la <strong>réunion</strong> A∪B contient les éléments à la fois dans A <strong>ou</strong> dans B.
+                    Le «ou» est inclusif : on prend aussi les éléments à la fois dans A et dans B.
+                </li>
+            </ul>
+        </div>
+
+        <div class="exo">
+            <ol>
+                <li>
+                    \(E=\left[0;10\right]\) ; \(A=\left[2;5\right[\) ; \(B=\left]4;10\right[\).
+                    Écrire \(\complement_E A\), \(\complement_E B\), \(A\cup B\), \(A\cap B\),
+                    \(\left(\complement_E A\right) \cap B\), \(\complement_E \left(A\cap B\right)\).
+                    <div class="corr">
+                        <ul>
+                            <li>
+                                \(\complement_E A = \left[0;2\right[\cup\left[5;10\right]\)
+                            </li>
+                            <li>
+                                \(\complement_E B = \left[0;4\right]\cup\left\{10\right\}\)
+                            </li>
+                            <li>
+                                \(A\cup B = \left[2;10\right[\)
+                            </li>
+                            <li>
+                                \(A\cap B = \left]4;5\right[\)
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    \(A\) désigne les entiers naturels multiples de 2 inférieurs ou égaux à 12, et \(B\) désigne les
+                    entiers
+                    naturels multiples de 3 inférieurs ou égaux à 12 ;
+                    Déterminer les parties suivantes et calculer leurs cardinaux :
+                    \(A\), \(B\), \(A∪B\), \(A∩B\), leurs complémentaires.
+                    <div class="corr">
+                        <ul>
+                            <li>\(A = \left\{ 0 ; 2 ; 4 ; 6 ; 8 ; 10 ; 12 \right\}\) </li>
+                            <li>\(B = \left\{ 0 ; 3 ; 6 ; 9 ; 12 \right\}\) </li>
+                            <li>\(A\cup B = \left\{ 0 ; 2 ; 3 ; 4 ; 6 ; 8 ; 9 ; 10 ; 12 \right\}\) </li>
+                            <li>\(A\cap B = \left\{ 0 ; 6 ; 12 \right\}\) </li>
+                            <li>\(\overline{A} = \left\{ 1 ; 3 ; 5 ; 7 ; 9 ; 11 \right\}\) </li>
+                            <li>\(\overline{B} = \left\{ 1 ; 2 ; 4 ; 5 ; 7 ; 8 ; 10 ; 11 \right\}\) </li>
+                            <li>\(\overline{A\cup B} = \left\{ 1 ; 5 ; 7 ; 11 \right\}\) </li>
+                            <li>\(\overline{A\cap B} = \left\{ 1 ; 2 ; 3 ; 4 ; 5 ; 7 ; 8 ; 9 ; 10 ; 11 \right\}\) </li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <h3>Principe additif</h3>
+        <div class="row">
+            <div class="col" style="width:69vw;">
+                <div class="prop">
+                    Lorsque \(A\) et \(B\) sont des parties d'un ensemble \(E\) fini :
+                    <div class="surl">
+                        <ul>
+                            <li>
+                                \(\textrm{Card}(A\cup
+                                B)=\textrm{Card}(A)+\textrm{Card}(B)-\textrm{Card}(A\cap
+                                B)\)
+                            <li>
+                                \(\textrm{Card}\left(\overline{A}\right)=\textrm{Card}(E)-\textrm{Card}(A)\)
+                            </li>
+                            <li>
+                                \(
+                                \textrm{Card}(A\cap B)
+                                \leqslant
+                                \begin{array}{l}
+                                \textrm{Card}(A)\\
+                                \textrm{Card}(B)\\
+                                \end{array}
+                                \leqslant
+                                \textrm{Card}(A\cup B) \)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="meth">
+                    Pour dénombrer, on utilise souvent le diagramme de Venn ci-contre.
+                </div>
+            </div>
+            <div class="col" style="width: 30vw;">
+                <figure>
+                    <img src="assets/Venn.svg" alt="">
+                    <figcaption>Diagramme de Venn</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="pagebreak"></div>
+
+        <div class="exo">
+            Dans une classe de 35 élèves, 15 élèves s’inscrivent uniquement à l’atelier théatre (T), 8 élèves
+            s’inscrivent uniquement à l’atelier musique (M) et 4 élèves s’inscrivent à ces deux ateliers à la fois.
+            <ol>
+                <li>Combien d’élèves s’inscrivent dans au moins un atelier ?
+                    <div class="corr">
+                        \(\textrm{Card}(T\cup M) = 15 + 8 + 4 = 27\)
+                        <figure>
+                            <img src="assets/Venn_1.svg" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li> Combien d’élèves ne s’inscrivent dans aucun atelier ?
+                    <div class="corr">
+                        \(\textrm{Card}(\overline{T\cup M}) = 35 − 27 = 8\)
+                        <figure>
+                            <img src="assets/Venn_1.svg" alt="">
+                        </figure>
+                    </div>
+                </li>
+        </div>
+        <div class="exo">
+            On s’intéresse aux défauts de freinage et d’éclarage de 500 véhicules d’un réseau d’entreprises. Parmi
+            eux,
+            65 ont au moins un défaut de freinage (F), 150 ont au moins un défaut d’éclairage
+            (E) et 50 présentent les deux défauts. Combien de véhicules de ce réseau ne présente aucun des deux
+            défauts
+            ?
+            <div class="corr">
+                \(\textrm{Card}(\overline{F\cup E}) = 500 - \textrm{Card}(F\cup E) = 500 - \left( 65 + 150 -
+                50\right) =
+                335
+                \)
+                <figure>
+                    <img src="assets/Venn_2.svg" alt="">
+                </figure>
+            </div>
+        </div>
+        <div class="meth">
+            Penser à utiliser un tableau à double entrée dans les cas où le diagramme de Venn serait moins
+            approprié.
+        </div>
+        <div class="exo">
+            <div class="row">
+                <div class="col">
+                    À leur entrée en L1, les étudiants choisissent une langue (anglais ou allemand) et une option
+                    (informatique, chimie ou astronomie). Dans un groupe d'étudiants, 12 étudiants sont inscrits en
+                    astronomie, 15 en chimie, 16 étudient l'allemand. Par ailleurs, 8 inscrits en astronomie et 3
+                    inscrits
+                    en informatique étudient l'anglais, 6 inscrits en chimie étudient l'allemand.<br>
+                    Indiquer la répartition des étudiants par discipline, ainsi que le nombre total d'étudiants dans
+                    le
+                    groupe.
+                </div>
+                <div class="col">
+                    <table class="mytable">
+                        <tr>
+                            <td></td>
+                            <th>Astro</th>
+                            <th>Ch</th>
+                            <th>Inf</th>
+                            <th><strong>total</strong></th>
+                        </tr>
+                        <tr>
+                            <th>Ang</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>All</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th><strong>total</strong></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="corr">
+                <table class="mytable">
+                    <tr>
+                        <td></td>
+                        <th>Astronomie</th>
+                        <th>Chimie</th>
+                        <th>Informatique</th>
+                        <th><strong>total</strong></th>
+                    </tr>
+                    <tr>
+                        <th>Anglais</th>
+                        <td>8</td>
+                        <td>3</td>
+                        <td>9</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <th>Allemand</th>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th><strong>total</strong></th>
+                        <td>12</td>
+                        <td>9</td>
+                        <td>15</td>
+                        <td>36</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="exo"><strong>(long)</strong><br>
+            Dans une entreprise, il y a 800 employés. 300 sont des hommes, 352 sont membres d'un syndicat, 424 sont
+            mariés, 188 sont des hommes syndiqués, 166 sont des hommes mariés, 208 sont syndiqués et mariés, 144
+            sont
+            des hommes mariés syndiqués. Combien y a-t-il de femmes célibataires non syndiquées ?
+            <div class="corr">
+                142
+            </div>
+
+        </div>
+        <h3>k-uplets et produit cartésien</h3>
+        <div class="row">
+            <div class="col" style="width: 55vw;">
+                <div class="defi">\(E\), \(F\), \(G\) sont trois ensembles (non vides).<br>
+                    <ul>
+                        <li>
+                            On appelle <strong>produit cartésien</strong> de \(E\) et de \(F\), noté \(E\times F\),
+                            l'ensemble
+                            des
+                            <strong>couples</strong> \(\left(x;y\right)\) avec \(x\in E\) et \(y\in F\).
+                        </li>
+                        <li>
+                            On appelle <strong>produit cartésien</strong> de \(E\), \(F\) et \(G\), noté \(E\times
+                            F\times
+                            G\),
+                            l'ensemble
+                            des
+                            <strong>triplets</strong> \(\left(x;y;z\right)\) avec \(x\in E\), \(y\in F\) et \(z\in
+                            G\).
+                        </li>
+                        <li>
+                            On appelle <strong>produit cartésien</strong> de \(k\) ensembles \(E_1;\ldots;E_k\) noté
+                            \(E_1\times \ldots \times E_k\), l'ensemble des
+                            <strong>\(k\)-uplets</strong> \(\left(x_1; \cdots; x_k\right)\) avec pour tout
+                            \(i\in\left\{1;\ldots;k\right\}\), \(x_i\in E\).<br>
+                            Lorsque tous les \(E_i\) sont un même ensemble \(E\), on note \(E^k\) le produit
+                            cartésien
+                            \(E\times \ldots \times E\).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col" style="width: 44vw;">
+                <div class="rema">
+                    Un produit cartésien de deux facteurs peut se présenter sous la forme d'un tableau. Pour un
+                    produit
+                    de trois facteur ce n'est pas possible (il faudrait un «tableau» à 3 dimensions).
+                </div>
+
+                <div class="exem">
+                    \(E = \left\{0;1;2\right\}\) et
+                    \(F = \left\{10;20;30;40\right\}\) ; on a : <br>
+                    <table class="mytable">
+                        <tr>
+                            <th><strong>\(E\times F\)</strong></th>
+                            <th>10</th>
+                            <th>20</th>
+                            <th>30</th>
+                            <th>40</th>
+                        </tr>
+                        <tr>
+                            <th>0</th>
+                            <td>(0;10)</td>
+                            <td>(0;20)</td>
+                            <td>(0;30)</td>
+                            <td>(0;40)</td>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>(1;10)</td>
+                            <td>(1;20)</td>
+                            <td>(1;30)</td>
+                            <td>(1;40)</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>(2;10)</td>
+                            <td>(2;20)</td>
+                            <td>(2;30)</td>
+                            <td>(2;40)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="exem">un repère du plan ou de l'espace étant fixé :
+            <ul>
+                <li>\(\mathbb{R}^2=\mathbb{R}\times \mathbb{R}\) est l'ensemble des couples de réels : il
+                    désigne
+                    l'ensemble des points du plan .</li>
+                <li>\(\mathbb{R}^3=\mathbb{R}\times \mathbb{R}\times \mathbb{R}\) est l'ensemble des triplets de
+                    réels :
+                    il désigne l'ensemble des points de l'espace.</li>
+            </ul>
+        </div>
+
+        <div class="exo">
+            Dans un jeu de cartes traditionnel, chaque carte est repérée par sa hauteur, dont l'ensemble des valeurs
+            possibles est \(H=\left\{1_{\textrm{as}} ; 2; 3 ; 4 ; 5 ; 6 ; 7 ; 8 ; 9 ; 10 ; V ; D ; R \right\}\)
+            et par sa couleur (notion différente de la couleur rouge/noire de la carte) dont l'ensemble des valeurs
+            possibles est \(C=\left\{♠;♣;{\color{red}♥};{\color{red}♦}\right\}\)
+            .<br>
+            Écrire sous forme de produit cartésien et donner le cardinal de :
+            <ol class="row">
+                <li>l'ensemble de toutes les cartes ; </li>
+                <li>l'ensemble de toutes les as ; </li>
+                <li>l'ensemble de toutes les cœurs ; </li>
+                <li>l'ensemble de toutes les figures dont la couleur est rouge ; </li>
+            </ol>
+            <div class="corr">
+                <ol style="margin: 0; padding: 0;">
+                    <li>\(H\times C\) ; cardinal : 52</li>
+                    <li>\(\left\{1\right\}\times C\) ; cardinal : 4 </li>
+                    <li>\(H \times \left\{{\color{red}♥}\right\}\) ; cardinal : 13 </li>
+                    <li>\(\left\{V; D ; R\right\} \times \left\{{\color{red}♥};{\color{red}♦}\right\}\) ; cardinal :
+                        6</li>
+                </ol>
+                <strong>Remarque : </strong> On pourrait intervertir \(H\) et \(C\) mais attention : une fois
+                choisi, l'ordre à une importance.
+            </div>
+        </div>
+        </div>
+        <div class="defi">
+            On appelle <strong>liste ordonnée d'un ensemble E,
+                avec répétition, de longueur \(k\) </strong> un
+            \(k\)-uplet d'éléments chacun pris dans \(E\) ; ce \(k\)-uplet est donc lui-même un élément de \(E^k\). <br>
+            Par abus de langage, on dit parfois «\(k\)-uplet <strong>d'</strong>élément<strong>s</strong> de \(E\)».
+        </div>
+        <div class="exem">
+            <ul>
+                <li>Un mot de 6 lettres est un 6-uplet de l'alphabet : «lettre» est différent de «letter» (l'ordre a une
+                    importance et on peut répéter des lettres : ici e et t).</li>
+                <li>
+                    Un code secret de carte bancaire est un 4-uplet de \(\left\{0 ; 1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 7 ; 8 ;
+                    9\right\}\)
+                </li>
+            </ul>
+        </div>
+        <h3>Principe multiplicatif</h3>
+        <div class="row">
+            <div class="col">
+                <div class="prop"> \(E, F, E_1, \ldots, E_k\) sont des ensembles finis.
+                    <div class="surl">
+                        <ul>
+                            <li>
+                                \(\textrm{Card}(E\times F) =
+                                \textrm{Card}(E)\times \textrm{Card}(F)\)
+                            </li>
+                            <li>
+                                \(\textrm{Card}(E_1\times\cdots\times E_k) \)\( =
+                                \textrm{Card}(E_1)\times \ldots \times \textrm{Card}(E_k))\) </li>
+                            <li>
+                                \(\textrm{Card}(E^k) =
+                                \textrm{Card}(E)^k\) </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="exo">Calculer :
+                    <ol>
+                        <li>
+                            le nombre de codes secrets possibles pour une carte de paiement ;
+                            <div class="corr">
+                                10<sup>4</sup> = 10 000
+                            </div>
+                        </li>
+                        <li>
+                            le nombre de mots (avec ou sans sens dans une langue) possibles avec 5 lettres ;
+                            <div class="corr">
+                                26<sup>5</sup> = 11 881 376
+                            </div>
+                        </li>
+                        <li>
+                            le nombre de mots de passe possibles au lycée (6 chiffres et lettres majuscules) ;
+                            <div class="corr">
+                                36<sup>6</sup> = 2 176 782 336
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="meth">
+            Lorsque les répétitions <strong>sont possibles</strong> et que l'<strong>ordre a une importance</strong>, on
+            doit souvent utiliser une des 3 formules précédentes.
+        </div>
+        <div class="exo">
+            Une plaque d'immatriculation est constituée de deux lettres puis trois chiffres, puis 2 lettres à nouveau.
+            On exclue les lettres I, O, U pour ne pas les confondre avec 0, 1 et V. Combien y a-t-il de plaques
+            possibles ?
+            <div class="corr"> \(L\) est l'ensemble des lettres utilisées et \(C\) est l'ensemble des chiffres. Leur
+                cardinal est respectivement 23 et 10.<br>
+                Une plaque correspond à un élément de \(L^2\times C^3\times L^2\), qui est de cardinal
+                23<sup>2</sup>×10<sup>3</sup>×23<sup>2</sup> = 279 841 000 possibilités.
+            </div>
+        </div>
+        <div class="exo">
+            Sur mon digicode (4 chiffres), je me souviens que le 2e chiffre est un 1 ou un 7, et le dernier un zéro.
+            Combien de codes faut-il tester ?
+            <div class="corr"> \(C = \left\{0 ; 1 ; 2 ; \ldots ; 9\right}\) sont les 10 chiffres. Un code possible est
+                un élément de \(C\times \left\{1;7\right\}\times C\times \left\{0\right\}\), ce qui laisse
+                10×2×10×1 = 200 possbilités.
+            </div>
+        </div>
+        <div class="exo">
+            À la cantine, on propose 3 entrées, 4 plats et 2 desserts. Combien de menus sont possibles si l'on prend
+            chaque élément ? Si l'on a le droit de ne pas prendre d'entrée et/ou de dessert ?
+            <div class="corr">
+                En prenant chacun des éléments : 3×4×2 = 24 possibilités<br>
+                Si l'on a le droit de ne pas prendre d'entrée et/ou dessert il suffit de rajouter une possibilité pour
+                ces deux éléments (par exemple pour les desserts : dessert1, dessert2, rien : 3 choix possibles au lieu
+                de 2). On a donc 4×4×3 = 48 possibilités.
+            </div>
+
+        </div>
+
+        <h3>Application : cardinal de \(\mathcal{P}(E)\)</h3>
+        <div class="rema" style="font-size: small;">
+            On rappelle que lorsqu'on énumère les éléments d'un ensemble (entre accolades, par extension),
+            l'ordre n'a
+            pas d'importance (autre que la lisibilité pour le lecteur).
+        </div>
+
+        <div class="row">
+            <div class="col" style="width:50vw;">
+                <div class="exem">
+                    L'ensemble des parties de l'ensemble \(E=\left\{a ; b ; c\right\}\) contient toutes les parties (ou
+                    sous-ensembles) possibles de cet ensemble \(E\), c'est à dire :
+                    <ol start="0">
+                        <li>la partie vide \(\emptyset\), qui compte 0 éléments ;</li>
+                        <li>les singletons (un singleton possède un unique élément) :
+                            \(\left\{a\right\}\) ; \(\left\{b\right\}\) ; \(\left\{c\right\}\)</li>
+                        <li>les paires : \(\left\{a ; b\right\}\) ; \(\left\{a ; c\right\}\) ; \(\left\{b ; c\right\}\)
+                        </li>
+                        <li>l'ensemble \(E\) lui-même, qui est bien une partie de lui-même car \(E\subset E\). Ainsi :
+                        </li>
+                    </ol>
+                    <div style="font-size: smaller;"> \(\mathcal{P}(E)=\Big\{\emptyset ; \left\{a\right\} ;
+                        \left\{b\right\} ; \left\{c\right\} ; \left\{a ; b\right\} ; \left\{a ; c\right\} ; \left\{b ;
+                        c\right\} ; E \Big\} \) </div>
+                </div>
+            </div>
+            <div class="col" style="width:49vw;">
+                <div class="exo">
+                    Mathéo a des devoirs à remettre en maths, physique, et LLCE aujourd'hui. Mais il ne souvient pas
+                    s'il les a
+                    mis dans son sac ou non, ni, s'il en a mis, lesquels. Par combien de situations différentes cela
+                    peut-il se
+                    traduire ?
+                    <div class="corr">
+                        Si \(E\) est l'ensemble des 3 devoirs, le sac représente une partie de \(E\) : les devoirs
+                        pris,
+                        qu'il
+                        va pouvoir remettre.
+                        <ul>
+                            <li>
+                                maths : pris ou pas : 2 possibilités
+                            </li>
+                            <li>
+                                physique : pris ou pas : 2 possibilités
+                            </li>
+                            <li>
+                                LLCE : pris ou pas : 2 possibilités
+                            </li>
+                        </ul>
+                        ce qui au total fait 2×2×2 = 8 possibilités.<br>
+                        <strong>remarque : </strong> on pourrait représenter la situation sous la forme d'un arbre
+                        binaire ayant
+                        une profondeur de 3 : 2<sup>3</sup> = 8 branches au total.<br>
+                    </div>
+                </div>
+                <div class="prop">
+                    Un ensemble \(E\) de cardinal \(n\) a \(2^n\) parties :<br />
+                    on a <span class="surl">\(\textrm{Card}(\mathcal{P}(E))=2^n\)</span>.
+                </div>
+                <div class="none" style="font-size: smaller;"><strong>Démonstration :</strong> Pour \(A\subset E\)
+                    fixée, on définit sur \(E\) la fonction \(\chi_A(x)=1\) lorsque \(x\in A\) et \(\chi_A(x)=0\)
+                    lorsque \(x\notin A\). Chaque fonction \(\chi_A\) caractérise une seule partie \(A\). Si \(E\) a
+                    \(n\) éléments, une telle fonction correspond à une \(n\)-liste d'éléments
+                    de \(\left\{0;1\right\}\), soit \(2^n\) possibilités.
+                </div>
+            </div>
+        </div>
+
+        <h2>Techniques de dénombrement</h2>
+        <h3>Factorielle : rappels</h3>
+        <div class="row">
+            <div class="col">
+                <div class="defi">
+                    Pour \(n\in\mathbb{N}\), on appelle <strong>factorielle de \(n\)</strong> et on note \(n!\)
+                    l'entier
+                    \(n\times(n-1)\times\cdots\times 2\times 1\) ; par convention \(0!=1\).
+                </div>
+                <div class="prop"> On a \((n+1)!=(n+1)\times n!\)
+                </div>
+            </div>
+            <div class="col">
+                <div class="exo">Calculer :
+                    \(A=\frac{5!}{4!}\) ;
+                    \(B=\frac{8!}{10!}\) ;
+                    \(C=\frac{101!}{99!}\) ;
+                    \(D=\frac{10!}{6!4!}\)
+                    <br>
+                    Simplifier :
+                    \(U=(n+2)(n+1)n!\) ;
+                    \(V=\frac{(n+2)!}{n!}\) ;
+                    \(W=\frac{(n+7)!}{(n+5)!}\) ;
+                    \(X=\frac{(n+1)!}{(n-1)!}\)
+                </div>
+            </div>
+        </div>
+        <div class="none">
+            \(
+            0!=1
+            \stackrel{\times 1}{\longrightarrow} 1!=1
+            \stackrel{\times 2}{\longrightarrow} 2!=2
+            \stackrel{\times 3}{\longrightarrow} 3!=6
+            \stackrel{\times 4}{\longrightarrow} 4!=24
+            \stackrel{\times 5}{\longrightarrow} 5!=120
+            \stackrel{\times 6}{\longrightarrow} 6!=720
+            \stackrel{\times 7}{\longrightarrow} 7!=5\,040
+            \ldots
+            \)
+        </div>
+
+        <div class="pagebreak"></div>
+
+        <h3>Listes d'éléments d'un ensemble fini</h3>
+        <div class="row">
+            <div class="col">
+                <div class="prop" style="width: 68vw;">\(E\) est un ensemble fini, non vide, de cardinal \(n\).<br>
+                    <ul>
+                        <li>Pour tout entier \(k\geqslant 1\), le nombre de listes de \(k\) éléments de \(E\) est
+                            <span class="surl">\(n^k\)</span>.
+                        </li>
+                        <li>Pour tout entier \(1\leqslant k \leqslant n\), le nombre de listes de \(k\)
+                            <strong>éléments
+                                distincts</strong> est <br>
+                            <span class="surl">\(n(n-1)\cdots(n-k+1)\)</span> (\(k\) facteurs)
+                            qui s'écrit aussi <span class="surl">\(\dfrac{n!}{(n-k)!}\)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="none" style="font-size: smaller;"><strong>Démonstration : </strong>
+                    On utilise le principe multiplicatif : dans le premier cas (avec remise), il y a \(n\) possibilités
+                    pour
+                    chaque élément de la \(k\)-liste (élément de \(E^k\)), d'où \(n^k\) possibilités.<br>
+                    Dans le second cas (sans remise, éléments de la \(k\)-liste 2 à 2 distincts), il y a \(n\)
+                    possibilités
+                    pour
+                    le premier élément de la liste, \(n-1\) pour le deuxième, \(n-2\) pour le troisième... jusqu'à
+                    \(n-(k-1)=n-k+1\) pour le k<sup>ième</sup> (dernier) élément de la \(k\)-liste.
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="exo" style="width: 29vw;">Une urne contient 10 boules (numérotés de 0 à 9). Combien y
+                    a-t-il
+                    de tirages possibles
+                    de 3 boules :
+                    <ol>
+                        <li>
+                            avec remise (on remet la boule tirée dans l'urne après chaque tirage) ?
+                            <div class="corr">
+                                Un tirage est une liste de 3 éléments parmi 10 : 10×10×10 = 1 000 possibilités.
+                            </div>
+                        </li>
+                        <li>
+                            sans remise (la boule tirée sort définitivement de l'urne) ?
+                            <div class="corr">
+                                Sans remise, un tirage est une liste de 3 éléments <strong>2 à 2 distincts</strong>
+                                parmi 10, donc 10 possibilités pour le premier, 9 pour le deuxième, 8 pour le
+                                troisième,
+                                soit : 10×9×8 = 720 possibilités.
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="defi">
+            On nomme <strong>arrangement de \(k\) éléments de \(E\)</strong> une \(k\)-liste <strong>ordonnée</strong>
+            (classée)
+            d'éléments distincts de
+            \(E\) (tirage sans remise).
+        </div>
+        <div class="exo">
+            Calculer le nombre de podiums (3 places) possibles pour le classement de la ligue 1 de football (20
+            équipes). Calculer le nombre de podiums possibles contenant le TFC.
+            <div class="corr">
+                <ul>
+                    <li>
+                        On recherche le nombre de triplets (ordonnés) d'éléments distincts pris parmi les 20 équipes :
+                        c'est le nombre d'arrangements possibles de 3 équipes parmi 20, soit
+                        \(\dfrac{20!}{(20-3)!}=20\times 19\times 18 = 6840\) dodiums possibles.
+                    </li>
+                    <li>
+                        Si Toulouse fait partie du podium, on fait plusieurs cas (disjoints) :
+                        <ol>
+                            <li>Toulouse en premier : on complète avec un couple (ordonné) parmi les 20 équipes :
+                                \(1\times 19 \times 18\) possibilités.</li>
+                            <li>Toulouse en deuxième : on complète avec un couple (ordonné : pour la 1re et 3e place)
+                                parmi les 20 équipes : \(19\times 1 \times 18\) possibilités.</li>
+                            <li>Toulouse en troisième : on complète avec un couple (ordonné : pour la 1ere et 2e place)
+                                parmi les 20 équipes : \(19\times 1 \times 18\) possibilités encore.</li>
+                        </ol>
+                        Au total on a \(3\times 1\times 19 \times 18 = 1026\) possibilités.
+                    </li>
+            </div>
+        </div>
+        <h3>Permutations</h3>
+        <div class="row">
+            <div class="col">
+                <div class="defi">
+                    On appelle <strong>permutation</strong> d'un ensemble \(E\) de \(n\) elements toute liste de \(n\)
+                    éléments distincts de \(E\) (c'est à dire un arrangement de \(n\) éléments de \(E\)).<br>
+                    Une permutation de \(E\) peut être vue comme une façon d'énumérer (en classant) les éléments d'un
+                    ensemble.
+                </div>
+                <div class="exem"> Voici les 6 permutations de \(E=\left\{1 ; 2 ; 3\right\}\) :
+                    \((1 ; 2 ; 3)\) ;
+                    \((1 ; 3 ; 2)\) ;
+                    \((2 ; 1 ; 3)\) ;
+                    \((2 ; 3 ; 1)\) ;
+                    \((3 ; 1 ; 2)\) ;
+                    \((3 ; 2 ; 1)\)
+                </div>
+            </div>
+            <div class="col">
+                <div class="prop"><br>
+                    Le nombre de permutations d'un ensemble de \(n\) éléments est <span class="surl">\(n!\)</span>.
+                </div>
+
+                <div class="exo">
+                    Un anagramme est un mot obtenu par permutation des lettres d'un autre mot ; par exemple «orange» est
+                    un
+                    anagramme de «organe». On ne se préoccupe pas de la signification du mot obtenu. Dénombrer les
+                    anagrammes
+                    des mots suivants :
+                    «pi» ;
+                    «rien» ;
+                    «maths» ;
+                    «facteur» ;
+                    «fini» ;
+                    «abba» ;
+                    «tralala».
+                    <br>
+                    Attention aux trois derniers (cf méthode ci-dessous).
+                    <div class="corr">
+                        «pi» : 2! = 2 ; <br>
+                        «rien» : 4! = 24 ; <br>
+                        «maths» : 5! = 120 ; <br>
+                        «facteur» : 7! = 5 040 ; <br>
+                        «fini» : \(\frac{4!}{2!} = 12\); <br>
+                        «abba» : \(\frac{4!}{2!2!} = 6\) ; <br>
+                        «tralala» : \(\frac{7!}{3!2!} = 560\).
+                    </div>
+                </div>
+                <div class="meth">
+                    Si des lettres sont répétées, on divise, pour chacune, par la factorielle du nombre de répétitions
+                    (faire permuter les lettres indiscernables donne la même liste).
+                </div>
+            </div>
+        </div>
+
+        <h3>Combinaisons : rappels</h3>
+        <div class="row">
+            <div class="col">
+                <div class="defi">
+                    <ul>
+                        <li>On nomme <strong>combinaison de \(k\) éléments de \(E\)</strong> une \(k\)-liste
+                            d'éléments
+                            distincts de
+                            \(E\) <strong>non ordonnée</strong> (l'ordre n'a pas d'importance, pas de classement).
+                        </li>
+                        <li>Une combinaison \(k\)
+                            éléments de \(E\) est donc une <strong>partie de \(E\) possédant \(k\)
+                                éléments</strong>.
+                        </li>
+                        <li>On note \({n\choose k}\) <strong>«\(k\) parmi \(n\)»</strong> le <strong>nombre</strong>
+                            de
+                            combinaisons de \(k\) éléments d'un ensemble de cardinal \(n\).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="prop">
+                    <span class="surl">\({n\choose k} = \dfrac{n!}{(n-k)!k!}\)</span>
+                </div>
+                <div class="none" style="font-size:smaller;"><strong>Démonstration : </strong>
+                    Exactement \(k!\) arrangements de \(k\) éléments parmi \(n\) correspondent à une seule
+                    combinaison
+                    de \(k\)
+                    éléments parmi \(n\) : l'ordre des \(k\) éléments de la liste n'a pas d'importance, on peut les
+                    faire
+                    permuter sur les \(k\) places : on divise donc e nombre d'arrangments possibles
+                    \(\frac{n!}{(n-k)!}\) par
+                    \(k!\) pour obtenir le nombre de combinaisons possibles.
+                </div>
+                <div class="prop">
+                    On a :
+                    \({n \choose n} = {n \choose 0} =1\) et
+                    \({n \choose k} = {n \choose {n-k}}\)
+                    <br>
+                    ainsi que la relation de Pascal (pour \(1\leqslant k \leqslant n-1\)) :
+                    \({n \choose k} = {{n-1} \choose {k}} + {{n-1} \choose {k-1}} \)
+                </div>
+                <div class="exo">
+                    Démontrer ces propriétés et construire le triangle de Pascal jusqu'à n=6.
+                    <div class="corr">
+                        <ul>
+                            <li>
+                                \({n\choose 0} = \dfrac{n!}{(n-0)!0!} = \dfrac{n!}{n!\times 1} = 1\) ou bien : il y
+                                a
+                                une seule partie à 0 éléments : la partie vide \(\emptyset\)
+                            </li>
+                            <li>
+                                \({n\choose n} = \dfrac{n!}{(n-n)!n!} = \dfrac{n!}{1\times n!} = 1\) ou bien : il y
+                                a
+                                une seule partie à n éléments dans un ensemble de n éléments : l'ensemble \(E\)
+                                lui-même.
+                            </li>
+                            <li>
+                                \({n\choose {n-k}} = \dfrac{n!}{(n-(n-k))!(n-k)!} = \dfrac{n!}{k!(n-k)!} = {n\choose
+                                k}\) ou bien : choisir
+                                une partie à k éléments dans un ensemble de n éléments revient à choisir sa partie
+                                complémentaire à n-k éléments.
+                            </li>
+                            <li>
+                                \(
+                                {{n-1}\choose {k}} + {{n-1}\choose {k-1}}
+                                \) \(
+                                = \dfrac{(n-1)!}{(n-1-k)k!} + \dfrac{(n-1)!}{((n-1)-(k-1))!(k-1)!}
+                                \) \(
+                                = \dfrac{(n-1)!}{(n-1-k)k!} + \dfrac{(n-1)!}{(n-k)!(k-1)!}
+                                \) \(
+                                = \dfrac{(n-k)(n-1)!}{(n-k)k!} + \dfrac{k(n-1)!}{(n-k)!k!}
+                                \) \(
+                                = \dfrac{\left[(n-k)+k\right](n-1)!}{(n-k)k!}
+                                \) \(
+                                = \dfrac{n!}{(n-k)k!}
+                                \) \(
+                                = {n \choose k}
+                                \)
+                                <br>
+                                ou bien : Fixons un élément \(x\) ; choisir
+                                une partie à k éléments dans un ensemble de n éléments revient à choisir une partie
+                                à k
+                                éléments contenant \(x\), complétée par une combinaison de k-1 éléments parmi n-1
+                                (sans
+                                le \(x\)) ou bien à choisir une partie à k éléments ne contenant contenant pas
+                                \(x\), c'
+                                est à dire parmi n-1 éléments.
+                            </li>
+                            <li>
+                                <table class="mytable">
+                                    <tbody>
+                                        <tr class="table_row_tr_0">
+                                            <th class="table_row_0 table_column_1">n\k</th>
+                                            <th class="table_row_0 table_column_2">0</th>
+                                            <th class="table_row_0 table_column_3">1</th>
+                                            <th class="table_row_0 table_column_4">2</th>
+                                            <th class="table_row_0 table_column_5">3</th>
+                                            <th class="table_row_0 table_column_6">4</th>
+                                            <th class="table_row_0 table_column_7">5</th>
+                                            <th class="table_row_0 table_column_8">6</th>
+                                        </tr>
+                                        <tr class="table_row_tr_1">
+                                            <th class="table_row_1 table_column_1">0</th>
+                                            <td class="table_row_1 table_column_2">1</td>
+                                            <td class="table_row_1 table_column_3"></td>
+                                            <td class="table_row_1 table_column_4"></td>
+                                            <td class="table_row_1 table_column_5"></td>
+                                            <td class="table_row_1 table_column_6"></td>
+                                            <td class="table_row_1 table_column_7"></td>
+                                            <td class="table_row_1 table_column_8"></td>
+                                        </tr>
+                                        <tr class="table_row_tr_2">
+                                            <th class="table_row_2 table_column_1">1</th>
+                                            <td class="table_row_2 table_column_2">1</td>
+                                            <td class="table_row_2 table_column_3">1</td>
+                                            <td class="table_row_2 table_column_4"></td>
+                                            <td class="table_row_2 table_column_5"></td>
+                                            <td class="table_row_2 table_column_6"></td>
+                                            <td class="table_row_2 table_column_7"></td>
+                                            <td class="table_row_2 table_column_8"></td>
+                                        </tr>
+                                        <tr class="table_row_tr_3">
+                                            <th class="table_row_3 table_column_1">2</th>
+                                            <td class="table_row_3 table_column_2">1</td>
+                                            <td class="table_row_3 table_column_3">2</td>
+                                            <td class="table_row_3 table_column_4">1</td>
+                                            <td class="table_row_3 table_column_5"></td>
+                                            <td class="table_row_3 table_column_6"></td>
+                                            <td class="table_row_3 table_column_7"></td>
+                                            <td class="table_row_3 table_column_8"></td>
+                                        </tr>
+                                        <tr class="table_row_tr_4">
+                                            <th class="table_row_4 table_column_1">3</th>
+                                            <td class="table_row_4 table_column_2">1</td>
+                                            <td class="table_row_4 table_column_3">3</td>
+                                            <td class="table_row_4 table_column_4">3</td>
+                                            <td class="table_row_4 table_column_5">1</td>
+                                            <td class="table_row_4 table_column_6"></td>
+                                            <td class="table_row_4 table_column_7"></td>
+                                            <td class="table_row_4 table_column_8"></td>
+                                        </tr>
+                                        <tr class="table_row_tr_5">
+                                            <th class="table_row_5 table_column_1">4</th>
+                                            <td class="table_row_5 table_column_2">1</td>
+                                            <td class="table_row_5 table_column_3">4</td>
+                                            <td class="table_row_5 table_column_4">6</td>
+                                            <td class="table_row_5 table_column_5">4</td>
+                                            <td class="table_row_5 table_column_6">1</td>
+                                            <td class="table_row_5 table_column_7"></td>
+                                            <td class="table_row_5 table_column_8"></td>
+                                        </tr>
+                                        <tr class="table_row_tr_6">
+                                            <th class="table_row_6 table_column_1">5</th>
+                                            <td class="table_row_6 table_column_2">1</td>
+                                            <td class="table_row_6 table_column_3">5</td>
+                                            <td class="table_row_6 table_column_4">10</td>
+                                            <td class="table_row_6 table_column_5">10</td>
+                                            <td class="table_row_6 table_column_6">5</td>
+                                            <td class="table_row_6 table_column_7">1</td>
+                                            <td class="table_row_6 table_column_8"></td>
+                                        </tr>
+                                        <tr class="table_row_tr_7">
+                                            <th class="table_row_7 table_column_1">6</th>
+                                            <td class="table_row_7 table_column_2">1</td>
+                                            <td class="table_row_7 table_column_3">6</td>
+                                            <td class="table_row_7 table_column_4">15</td>
+                                            <td class="table_row_7 table_column_5">20</td>
+                                            <td class="table_row_7 table_column_6">15</td>
+                                            <td class="table_row_7 table_column_7">6</td>
+                                            <td class="table_row_7 table_column_8">1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exo">
+            Le 1<sup>er</sup> mai 2028, la séquence basket commence en EPS, et chacun des 49 élèves de la classe
+            négocie avec le prof de sport pour être sélectionné dans la dream team (5 joueurs). Combien y a-t-il de
+            dream team possibles ?
+            <div class="corr">
+                On choisit une combinaison (partie) de 5 élèves parmi 49, soit
+                \({49}\choose{5}}=\dfrac{49!}{(49-5)!5!}=\dfrac{49!}{(44)!5!}=\dfrac{49\times\ldots 45}{5\times 4
+                \times
+                3 \times 2}=1\,906\,884\)
+            </div>
+        </div>
+        <div class="exo">
+            On trace dans un plan 5 droites en position générale (c'est-à-dire que deux droites ne sont jamais
+            parallèles, et 3 droites ne sont jamais concourantes). Combien de triangles a-t-on ainsi tracé ?
+            <div class="corr">
+                Un triangle est déterminé par 3 droites (ses côtés). Il y a autant de triangles que de possibilités de
+                choisir 3 droites parmi 5, c'est-à-dire \({5\choose 3} = \frac{5\times 4}{2} = 10\).
+            </div>
+        </div>
+        <div class="exo"><strong>(dur)</strong>.
+            <img src="assets/trajet.png" alt="" style="float: right; --width-print:3cm;">Vrai ou faux ? Le nombre de
+            trajets les plus
+            courts pour aller du départ à l’arrivée sur le quadrillage ci-contre est égal à 120.
+            <div class="corr">
+                indication : Coder les déplacements vers la droite par la lettre D et vers le haut par la lettre H.
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>collapsible</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <style scoped>
+            .ul_collapsible input[type="checkbox"] {
+                display: none;
+            }
+
+            .ul_collapsible input[type="checkbox"]+ul {
+                height: 0;
+                transform: scaleY(0);
+                transition: transform .5s ease-out;
+            }
+
+            .ul_collapsible input[type="checkbox"]:checked+ul {
+                height: 100%;
+                transform: scaleY(1);
+                transform-origin: top;
+                transition: transform .5s ease-out;
+            }
+        </style>
+        <ul>
+            <li>
+                <label class="ul_collapsible">
+                    rep1
+                    <input type="checkbox">
+                    <ul>
+                        <li>fich1</li>
+                        <li>fich2</li>
+                        <li>fich3</li>
+                    </ul>
+                </label>
+            </li>
+            <li>
+                <label class="ul_collapsible">
+                    rep2
+                    <input type="checkbox">
+                    <ul>
+                        <li>fich1</li>
+                        <li>fich2</li>
+                    </ul>
+                </label>
+            </li>
+            <li>
+                <label class="ul_collapsible">
+                    rep3
+                    <input type="checkbox">
+                    <ul>
+                        <li>fich1</li>
+                        <li>fich2</li>
+                        <li>fich3</li>
+                        <li>fich4</li>
+                        <li>fich5</li>
+                        <li>
+                            <label class="ul_collapsible">
+                                rep4
+                                <input type="checkbox">
+                                <ul>
+                                    <li>fich1</li>
+                                    <li>fich2</li>
+                                    <li><a href="https://www.google.com" target="_blank">Google</a></li>
+                                </ul>
+                            </label>
+                        </li>
+                    </ul>
+                </label>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

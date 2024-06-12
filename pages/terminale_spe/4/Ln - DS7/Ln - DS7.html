@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Fonction ln - DS7</h1>
+        <!--12 septembre 2023 MATJ2ME3 : ex2 et ex4-->
+        <div class="quadrillage5mm" style="min-height:2cm;">&nbsp;&nbsp;<strong>Prénom NOM :
+            </strong></div>
+
+        <div class="exo"> <strong style="font-size: taller;">Étude de fonction (10 points) </strong><br />
+            <ul>
+                <li>
+                    On considère la fonction \(f\) définie sur l’intervalle ]0; +∞[ par \(f(x) = \left(2 -
+                    \ln(x)\right)
+                    \times \ln(x)\), où \(\ln\) désigne la fonction logarithme naturel ou népérien.<br />
+                    On admet que la fonction \(f\) est deux fois dérivable sur ]0; +∞[.
+                </li>
+                <li>
+                    On note \(\mathcal{C}\) la courbe représentative de la fonction \(f\) dans un repère
+                    orthogonal.
+                </li>
+                <li> On note <strong>\(\mathcal{C}'\) la courbe de la fonction \(f'\)</strong>, dérivée de
+                    \(f\).
+                    \(\mathcal{C}'\) est tracée sur
+                    la figure ainsi que son unique tangente horizontale (T).
+                </li>
+            </ul>
+            <figure>
+                <img src="assets/fig1.svg" alt="fig1">
+            </figure>
+            <ol>
+                <li>Par lecture graphique, avec la précision que permet le tracé ci-dessus, donner :
+                    <ol type="a">
+                        <li>le coefficient directeur de la tangente à \(\mathcal{C}'\) au point d’abscisse 1.</li>
+                        <li>La fonction \(f\) est elle convexe sur [1;2] ? Justifier.</li>
+                    </ol>
+                    <div class="corr">
+                        <ol type="a">
+                            <li>
+                                <figure>
+                                    <img src="assets/fig1c.svg" alt="fig1c">
+                                </figure>
+                            </li>
+                            <li>
+                                \(f\) n'est pas convexe car sa dérivée est décroissante sur [1;2].
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Calculer la limite de la fonction \(f\) en +∞.</li>
+                        <li>Calculer \(\displaystyle\lim_{x\to0^+}f(x)\) et interpréter graphiquement le résultat
+                            (remarque : parler d'«interprétation graphique» d'une limite revient à parler d'asymptote).
+                        </li>
+                    </ol>
+                    <div class="corr">
+                        <ol type="a">
+                            <li>\(
+                                \displaystyle\lim_{x\to+\infty}
+                                \left(2 - \ln(x)\right) \times \ln(x)
+                                =
+                                \left(2-+\infty\right)\times+\infty
+                                =
+                                -\infty\times+\infty
+                                =
+                                -\infty
+                                \)</li>
+                            <li>\(
+                                \displaystyle\lim_{x\to0^+}
+                                \left(2 - \ln(x)\right) \times \ln(x)
+                                =
+                                \left(2--\infty\right)\times-\infty
+                                =
+                                +\infty\times-\infty
+                                =
+                                -\infty
+                                \)
+                                ;<br />
+                                On en déduit que l'axe vertical est asymptote à la courbe \(\mathcal{C}\) en
+                                0<sup>+</sup>.
+                            </li>
+                        </ol>
+
+                    </div>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Montrer que pour tout réel \(x\) appartenant à ]0; +∞[, \(f'(x)=\dfrac{2(1-\ln(x))}{x}\).
+                        </li>
+                        <li>En déduire, en justifiant, le tableau de variations de la fonction \(f\) sur ]0; +∞[.
+                        </li>
+                    </ol>
+                    <div class="corr">
+                        <ol type="a">
+                            <li>On utilise la dérivée d'un produit, puis on met sur le même dénominateur (qui est \(x\))
+                                :<br />
+                                \(
+                                f'(x)
+                                =
+                                \left(0-\dfrac{1}{x}\right)\ln(x)+\left(2-\ln(x)\right)\dfrac{1}{x}
+                                =
+                                \dfrac{-\ln(x)+2-\ln(x)}{x}
+                                =
+                                \dfrac{2-2\ln(x)}{x}
+                                =
+                                \dfrac{2\left(1-\ln(x)\right)}{x}
+                                \)
+                            </li>
+                            <li>En déduire, en justifiant, le tableau de variations de la fonction \(f\) sur ]0; +∞[.
+                                Comme \(x&gt;0\) et 2&gt;0, \(f'(x)\) est du signe de \(1-\ln(x)\). Or cette dernière
+                                quantité s'annule lorsque \(\ln(x)=1\), soit \(x=\textrm{e}\). On obtient le tableau
+                                suivant :
+                                <table class="vartable">
+                                    <tr>
+                                        <th>\(x\)</th>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td>e</td>
+                                        <td></td>
+                                        <td>+∞</td>
+                                    </tr>
+                                    <tr class="bb">
+                                        <th>\(f'(x)\)</th>
+                                        <td colspan="2">+</td>
+                                        <td style="display: none;"></td>
+                                        <td class="bar">0</td>
+                                        <td colspan="2">-</td>
+                                        <td style="display: none;"></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="3">\(f\)</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td>2</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th style="display: none;"></th>
+                                        <td></td>
+                                        <td>↗</td>
+                                        <td></td>
+                                        <td>↘</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th style="display: none;"></th>
+                                        <td>-∞</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>-∞</td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    Montrer que la courbe \(\mathcal{C}\) coupe l’axe des abscisses en deux points exactement,
+                    dont on précisera les coordonnées (justifier par des propriétés de \(f\)).
+                    <div class="corr">
+                        Les ordonnées \(y\) de ces points sont évidemment nulles (sur l'axe \(y=0\)). Il reste à trouver
+                        leurs abscisses.
+                        On résout :<br />
+                        \(\begin{array}{cl}
+                        &amp; f(x)=0 \\
+                        \Leftrightarrow
+                        &amp; 2-\ln(x)=0 \textrm{ ou } \ln(x)=0 \\
+                        \Leftrightarrow
+                        &amp; \ln(x)=2 \textrm{ ou } x=\textrm{e} \\
+                        \Leftrightarrow
+                        &amp; x=\textrm{e}^2 \textrm{ ou } x=\textrm{e} \\
+                        \end{array}\)
+                    </div>
+                </li>
+                <li>
+                    On note \(f''\) la dérivée seconde de \(f\) et <strong>on admet</strong> que pour tout réel \(x\)
+                    appartenant à ]0;+∞[,
+                    \(f''(x)=\dfrac{2(\ln(x)-2)}{x^2}\).<br />
+                    Déterminer par le calcul le plus grand intervalle sur lequel la fonction \(f\) est convexe
+                    et préciser
+                    les coordonnées du point d’inflexion de la courbe \(\mathcal{C}\).
+                    <div class="corr">
+                        On résout \(f''(x)\geqslant 0\), ce qui revient, comme \(x^2\)et 2 sont positifs, à
+                        \(\ln(x)\geqslant 2\), soit \(x\geqslant \textrm{e}^2\) en appliquant l'exponentielle,
+                        croissante. La fonction \(f\) est donc convexe sur [e<sup>2</sup>;+∞[.
+                    </div>
+                </li>
+            </ol>
+        </div>
+        </li>
+        </div>
+        <div class="pagebreak hidden-web" style="text-align: right;">Tourner S.V.P.</div>
+        <div class="exo"> <strong style="font-size: taller;">Géométrie (10 points) </strong>
+            <p>
+                Cet exercice est un questionnaire à choix multiples.<br />
+                Pour chacune des questions suivantes, <strong>une seule</strong> des quatre réponses proposées est
+                exacte.
+                Une réponse exacte rapporte un point. Une réponse fausse, une réponse multiple ou l’absence de réponse à
+                une
+                question ne rapporte ni n’enlève de point. Pour répondre, indiquer sur la copie le numéro de la question
+                et
+                la lettre de la réponse choisie. <br />
+                <strong>Justifier le choix rapidement</strong>.
+            </p>
+            <p>
+
+                L’espace est rapporté à un repère orthonormé \(\left(O; \overrightarrow{i} , \overrightarrow{j},
+                \overrightarrow{k}\right)\).
+            </p>
+            <p>
+                On considère :
+            </p>
+            <ul>
+                <li>
+                    les points \(A(−1; −2; 3)\) , \(B(1; −2; 7)\) et \(C(1; 0; 2)\) ;
+                </li>
+                <li>
+                    la droite Δ de représentation paramétrique :
+                    \(\left\{\begin{array}{l}
+                    x = 1 − t \\
+                    y = 2 \\
+                    z = −4 + 3t \\
+                    \end{array}\right.\)
+                    , où \(t\in ℝ\) ;
+                </li>
+                <li>
+                    le plan P d’équation cartésienne : \(3x + 2y + z - 4 = 0\) ;
+                </li>
+                <li>
+                    le plan Q d’équation cartésienne : \(-6x - 4y - 2z + 7 = 0\).
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <strong>Question 1 : </strong> Lequel des points suivants appartient au plan P ?
+                    <ol type="a">
+                        <li> R(1; −3; 1) ;</li>
+                        <li> S(1; 2; −1) ;</li>
+                        <li> T(1; 0; 1) ;<div class="corr">Il vérifie l'équation de P.</div>
+                        </li>
+                        <li> U(2; −1; 1).</li>
+                    </ol>
+                </li>
+                <li>
+                    <strong>Question 2 : </strong> Le triangle \(ABC\) est :
+                    <ol type="a">
+                        <li>équilatéral</li>
+                        <li>rectangle isocèle</li>
+                        <li>isocèle non rectangle</li>
+                        <li>rectangle non isocèle <div class="corr">en A :
+                                \(\overrightarrow{AB}\cdot\overrightarrow{AC}=0\) ; toutes les longueurs des côtés sont
+                                différentes.</div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <strong>Question 3 : </strong>La droite ∆ est :
+                    <ol type="a">
+                        <li>orthogonale au plan P;</li>
+                        <li>sécante au plan P ;</li>
+                        <li>incluse dans le plan P ;</li>
+                        <li>strictement parallèle au plan P ;
+                            <div class="corr">pour \(t=0\), le point n'est pas dans P ; le
+                                vecteur directeur de la droite et le vecteur normal du plan P sont orthogonaux, donc la
+                                droite est strictement parallèle au plan.</div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <strong>Question 4 : </strong> On donne le produit scalaire
+                    \(\overrightarrow{BA}\cdot\overrightarrow{BC} = 20\).
+                    Une mesure au degré près de l’angle ABC est :
+                    <ol type="a">
+                        <li>34°</li>
+                        <div class="corr">\(\arccos\left(\dfrac{20}{\sqrt{20}\sqrt{29}}\right)\)</div>
+                        <li>120°</li>
+                        <li>90°</li>
+                        <li>0°</li>
+                    </ol>
+                </li>
+                <li>
+                    <strong>Question 5 : </strong>L’intersection des plans P et Q est :
+                    <ol type="a">
+                        <li>un plan ;</li>
+                        <li>l'ensemble vide ;</li>
+                        <div class="corr">leurs vecteurs normaux sont colinéaires, mais leurs équations ne sont pas
+                            équivalentes à cause du terme constant.</div>
+                        <li>une droite ; </li>
+                        <li>réduite à un point.</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="exo"> <strong style="font-size: taller;">Bonus (2 points) </strong>
+            <ul>
+                <li>
+                    Calculer la dérivée de \(f(x)=x^\left(\textrm{e}^x\right)\) pour \(x&gt;0\).
+                </li>
+                <li>
+                    Démontrer que \(\log_{10}\left(10\textrm{e}^x\right)\) est une fonction affine. (\(\log_{10}\)
+                    désigne le logarithme décimal.)
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>

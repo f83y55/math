@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="../../s.js" data-import="prism"></script>
+    <style>
+        pre {}
+    </style>
+</head>
+
+<body onload="body()" class="line-numbers">
+    <main>
+        <h1>Test page</h1>
+        <div class="none">
+            <pre class="precontenteditable" contenteditable="true">
+                <code class="language-python">
+                    <script type="text/python">
+def f(x):
+    if 0==2 :
+        print("machin")
+    return x**2</script>
+                </code>
+            </pre>
+        </div>
+    </main>
+    <script>
+        Array.from(document.getElementsByClassName("precontenteditable")).forEach((el) => {
+            el.addEventListener("input", function () {
+                const selObj = window.getSelection();
+                const range = selObj.getRangeAt(0);
+                console.log(range)
+                Prism.highlightElement(el.getElementsByTagName("code")[0]);
+                //Prism.highlightAll();
+                el.setSelectionRange(range);
+            });
+        });
+    </script>
+</body>
+
+</html>

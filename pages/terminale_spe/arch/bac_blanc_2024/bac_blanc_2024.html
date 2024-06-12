@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+    <style>
+        div.corr {
+            width: initial;
+            height: initial;
+        }
+    </style>
+
+</head>
+
+<body onload="body()">
+    <style>
+        @media print {
+            .barm {
+                display: none;
+            }
+
+            .enon {
+                display: inline-block;
+            }
+
+            .corr {
+                display: none;
+            }
+        }
+    </style>
+    <main>
+        <h1>
+            Épreuve de Mathématiques<br />
+            <div style="font-size: smaller;">
+                Terminales Générales<br />
+                11 mars 2024 - 4 heures<br />
+            </div>
+        </h1>
+        <div class="enon" style="margin: 1cm;">
+            <ul>
+                <li>
+                    L’usage de la calculatrice, en mode examen, est autorisé.
+                </li>
+                <li>
+                    Le sujet comporte 4 pages. II est composé de quatre exercices indépendants. Le candidat doit traiter
+                    tous les exercices.
+                </li>
+                <li>
+                    La clarté des raisonnements et la qualité de la rédaction interviendront pour une part importante
+                    dans l’appréciation des copies.
+                </li>
+            </ul>
+        </div>
+        <h2 class="nocounter">
+            <strong>Exercice 1</strong> (5 points)
+        </h2>
+        <div class="row">
+            <div class="col">
+                <div class="none">
+                    On considère le prisme droit \(ABFEDCGH\), de base \(ABFE\),
+                    trapèze rectangle en A.
+                    <br />
+                    On associe à ce prisme le repère orthonormé \(\left(A ; {\overrightarrow{i}}, {\overrightarrow{j}},
+                    {\overrightarrow{k}}\right)\)
+                    <br />
+                    tel que
+                    <br />
+                    \( \overrightarrow{i} = \dfrac{1}{4} \overrightarrow{AB} \),
+                    &nbsp;&nbsp;
+                    \( \overrightarrow{j} = \dfrac{1}{4} \overrightarrow{AD} \),
+                    &nbsp;&nbsp;
+                    \( \overrightarrow{k} = \dfrac{1}{8} \overrightarrow{AE} \),
+                    <br />
+                    De plus , on a
+                    \( \overrightarrow{BF} = \dfrac{1}{2} \overrightarrow{AE} \),
+                    <br />
+                    On note \(I\) le milieu du segment \([EF]\).
+                    <br />
+                    On note \(J\) le milieu du segment \([AE]\).
+                    <br />
+                </div>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/j1_fig_ex1.png" alt="ex1">
+                </figure>
+            </div>
+        </div>
+
+        <ol>
+            <li>
+                <span class="barm">( pt)</span>
+                <div class="enon">
+                    Donner les coordonnées des points \(I\) et \(J\).
+                </div>
+                <div class="corr">
+                    \(\overrightarrow{AE} = 8\overrightarrow{k} \) donc \(E(0;0;8)\). \(A\) étant l'origine du repère,
+                    \(A(0;0;0)\).<br />
+                    \(J\) étant le milieu de \([AE]\), on a
+                    \(J\left(\frac{0+0}{2};\frac{0+0}{2};\frac{8+0}{2};\right)=(0;0;4)\).<br />
+                    \(\overrightarrow{AF} = \overrightarrow{AB} + \overrightarrow{BF} = 4\overrightarrow{i} +
+                    \frac{1}{2}\overrightarrow{AE} \) donc \(F\left(4;0;\frac{1}{2}8\right)=(4;0;4)\).<br />
+                    \(I\) étant le milieu de \([EF]\),
+                    \(I\left(\frac{0+4}{2};\frac{0+0}{2};\frac{4+8}{2}\right)=(2;0;6)\).
+                </div>
+            </li>
+            <li>
+                <div class="enon">
+                    Soit \(\overrightarrow{n}\) le vecteur de coordonnées
+                    \(\left(
+                    \begin{array}{c}
+                    -1 \\ 1 \\ 1 \\
+                    \end{array}
+                    \right)\)
+                </div>
+                <ol type="a">
+                    <li>
+                        <span class="barm">( pt)</span>
+                        <div class="enon">
+                            Montrer que le vecteur \(\overrightarrow{n}\) est normal au plan \((IGJ)\).
+                        </div>
+                        <div class="corr">
+                            Calculons les coordonnées de \(G\) :
+                            \(\overrightarrow{AG} = \overrightarrow{AB} + \overrightarrow{BC} + \overrightarrow{CG} =
+                            4\overrightarrow{i} + 4\overrightarrow{j} + 4\overrightarrow{k}\) donc \(G =
+                            (4;4;4)\).<br />
+                            Ainsi, \(\overrightarrow{IG} =
+                            \left(\begin{array}{c}
+                            x_G-x_I \\
+                            y_G-y_I \\
+                            z_G-z_I \\
+                            \end{array}\right)
+                            =
+                            \left(\begin{array}{c}
+                            4-2 \\
+                            4-0 \\
+                            4-6 \\
+                            \end{array}\right)
+                            =
+                            \left(\begin{array}{c}
+                            2 \\
+                            4 \\
+                            -2 \\
+                            \end{array}\right)
+                            \)
+                            et \(\overrightarrow{IJ} =
+                            \left(\begin{array}{c}
+                            x_J-x_I \\
+                            y_J-y_I \\
+                            z_J-z_I \\
+                            \end{array}\right)
+                            =
+                            \left(\begin{array}{c}
+                            0-2 \\
+                            0-0 \\
+                            4-6 \\
+                            \end{array}\right)
+                            =
+                            \left(\begin{array}{c}
+                            -2 \\
+                            0 \\
+                            -2 \\
+                            \end{array}\right)
+                            \)
+                            <br />
+                            (ces deux vecteurs étant non colinéaires, les points \(I\), \(J\) et \(G\) définissent bien
+                            un plan.)
+                            <br />
+                            De plus :
+                            \(\overrightarrow{n}\cdot\overrightarrow{IG}
+                            =
+                            \left(\begin{array}{c}
+                            -1 \\
+                            1 \\
+                            1 \\
+                            \end{array}\right)
+                            \cdot
+                            \left(\begin{array}{c}
+                            2 \\
+                            4 \\
+                            -2 \\
+                            \end{array}\right)
+                            = -1 \times 2 + 1 \times 4 + 1 \times (-2)
+                            = -2 + 4 -2
+                            = 0
+                            \) donc \(\overrightarrow{n}\perp\overrightarrow{IG}\)
+                            et :
+                            \(\overrightarrow{n}\cdot\overrightarrow{IJ}
+                            =
+                            \left(\begin{array}{c}
+                            -1 \\
+                            1 \\
+                            1 \\
+                            \end{array}\right)
+                            \cdot
+                            \left(\begin{array}{c}
+                            -2 \\
+                            0 \\
+                            -2 \\
+                            \end{array}\right)
+                            = -1 \times (-2) + 1 \times 0 + 1 \times (-2)
+                            = 2 + 0 -2
+                            = 0
+                            \) donc \(\overrightarrow{n}\perp\overrightarrow{IJ}\)
+                            et on a bien \(\overrightarrow{n}\perp (IGJ)\).
+                        </div>
+                    </li>
+                    <li>
+                        <span class="barm">( pt)</span>
+                        <div class="enon">
+                            Déterminer une équation cartésienne du plan \((IGJ)\).
+                        </div>
+                        <div class="corr">
+                            Le vecteur normal \(\overrightarrow{n}\) conduit à une équation du plan \((IGJ) : -x + y + z
+                            + d = 0\). Comme \(J\in (IGJ)\), on a \(-0+0+4+d=0\), soit \(d=-4\).<br />
+                            Ainsi, \((IGJ) : -x + y + z -4 = 0\).
+                        </div>
+                    </li>
+                </ol>
+            <li>
+                <span class="barm">( pt)</span>
+                <div class="enon">
+                    Déterminer une représentation paramétrique de la droite \(d\), perpendiculaire au plan
+                    \((IGJ)\) et passant par \(H\).
+                </div>
+                <div class="corr">
+                    \((d) :
+                    \left\{\begin{array}{l}
+                    x = x_H + x_{\overrightarrow{n}} k \\
+                    y = y_H + y_{\overrightarrow{n}} k \\
+                    z = z_H + z_{\overrightarrow{n}} k \\
+                    \end{array}\right.
+                    =
+                    \left\{\begin{array}{l}
+                    x = - k \\
+                    y = 4 +k \\
+                    z = 8 +k \\
+                    \end{array}\right.
+                    \)
+                    &nbsp;&nbsp;
+                    pour \(k\in\mathbb{R}\).
+                </div>
+
+            </li>
+            <li> <span class="barm">( pt)</span>
+                <div class="enon">
+                    On note \(L\) le projeté orthogonal du point \(H\) sur le plan \((IGJ)\).<br />
+                    Montrer que les coordonnées de \(L\) sont \(\left(\dfrac{8}{3};\dfrac{4}{3};\dfrac{16}{3}\right)\).
+                </div>
+                <div class="corr">
+                    On vérifie que \(L\in (IGJ)\) :
+                    \(-x_L+y_L+z_L-4=\dfrac{-8}{3}+\dfrac{4}{3}+\dfrac{16}{3}-\dfrac{12}{3}=\dfrac{-8+4+16-12}{3}=0\).
+                    <br />
+                    \(L\) vérifie l'équation du plan \((IGJ)\), donc en est bien un point.<br />
+                    On doit aussi vérifier que \((HL)\perp (IGJ)\) : <br />
+                    On a \(H(0;4;8)\) donc \(\overrightarrow{HL}=
+                    \left(
+                    \begin{array}{l}
+                    \dfrac{8}{3}-0 \\
+                    \dfrac{4}{3}-4 \\
+                    \dfrac{16}{3}-8 \\
+                    \end{array}
+                    \right)
+                    =
+                    \left(
+                    \begin{array}{l}
+                    \dfrac{8}{3} \\
+                    \dfrac{-8}{3} \\
+                    \dfrac{-8}{3} \\
+                    \end{array}
+                    \right)
+                    =\dfrac{-8}{3}\overrightarrow{n}
+                    \)
+                    De fait \(\overrightarrow{HL}\) et \(\overrightarrow{n}\) sont colinéaires donc \((HL)\) et
+                    \((IGJ)\) sont bien perpendiculaires.
+                </div>
+            </li>
+            <li> <span class="barm">( pt)</span>
+                <div class="enon">
+                    Calculer la distance du point \(H\) au plan \((IGJ)\)
+                </div>
+                <div class="corr">
+                    Cette distance est \(HL =
+                    \left\|\overrightarrow{HL}\right\|=\left\|\dfrac{-8}{3}\overrightarrow{n}\right\| =
+                    \left|\dfrac{-8}{3}\right|\left\|\overrightarrow{n}\right\| =
+                    \dfrac{8}{3}\sqrt{(-1)^2+1^2+1^2}=\dfrac{8\sqrt{3}}{3}\)
+                </div>
+            </li>
+            <li><span class="barm">( pt)</span>
+
+                <div class="enon">
+                    Montrer que le triangle \(IGJ\) est rectangle en \(I\).
+                </div>
+                <div class="corr">
+                    On vérifie que le produit scalaire \(\overrightarrow{IG}\cdot\overrightarrow{IJ}\) est nul :
+                    \(\overrightarrow{IG}\cdot\overrightarrow{IJ}
+                    =
+                    \left(\begin{array}{c}
+                    2 \\
+                    4 \\
+                    -2 \\
+                    \end{array}\right)
+                    \cdot
+                    \left(\begin{array}{c}
+                    -2 \\
+                    0 \\
+                    -2 \\
+                    \end{array}\right)
+                    = 2 \times (-2) + 4\times 0 + -2\times (-2)
+                    = -4 + 0 +4
+                    = 0
+                    \)
+                </div>
+            </li>
+            <li><span class="barm">( pt)</span>
+
+                <div class="enon">
+                    En déduire le volume du tétraèdre \(IGJH\).<br />
+                    On rappelle que le volume \(V\) d’un tétraédre est donné par la formule :
+                    \(V = \dfrac{1}{3} \textrm{aire de la base} \times \textrm{hauteur} \)
+                </div>
+                <div class="corr">
+                    Le tétraèdre \(IGJH\) ayant pour hauteur \([LH]\) et pour base le triangle \(IGJ\) rectangle en
+                    \(I\) : <br />
+                    \( V = \dfrac{1}{3}\dfrac{IG\times IJ}{2}\times LH\) ; calcul effectif :
+
+                    \(&nbsp;&nbsp;\dfrac{1}{3}\dfrac{\sqrt{2^2+4^2+(-2)^2}\sqrt{(-2)^2+0^2+(-2)^2}}{2} \times \dfrac{8\sqrt{3}}{3}\) <br/>
+                    \(= \dfrac{1}{3}\dfrac{\sqrt{3\times 8}\times\sqrt{8}}{2}\times\dfrac{8\sqrt{3}}{3}
+                    = \dfrac{\cancel{3}\times 8\times 8}{3\times 2\times \cancel{3}}
+                    = \dfrac{32}{3}
+                    \)
+                </div>
+            </li>
+        </ol>
+        </div>
+
+        <div class="pagebreak"></div>
+
+        <h2 class="nocounter">
+            <strong>Exercice 2</strong> (5 points)
+        </h2>
+        <div class="enon">
+            Cet exercice est un questionnaire 4 choix multiples. Pour chaque question, une seule des quatre propositions
+            est exacte. Indiquer sur la copie le numéro de la question et la lettre de la proposition choisie. Aucune
+            justification n’est demandée.
+            <br />
+            Pour chaque question, une réponse exacte rapporte un point. Une réponse fausse, une réponse multiple ou
+            I’absence de réponse ne rapporte ni n’enlève de point.
+        </div>
+        <ul>
+            <li><span class="barm">( pt)</span>
+                <div class="enon">
+                    <strong>Question 1 : </strong><br />
+                    Soit \(f\) la fonction définie sur \(\left]0;+\infty\right[\) par \(f(x) = x^2\ln x\).<br />
+                    L'expression de la fonction dérivée de \(f\) est :
+                    <ol type="a">
+                        <li>\(f'(x)= 2x\ln x\)</li>
+                        <li>\(f'(x)= x\left(2\ln x+1\right)\)</li>
+                        <li>\(f'(x)= 2\)</li>
+                        <li>\(f'(x)= x\)</li>
+                    </ol>
+                </div>
+                <div class="corr">
+                    Réponse <code>b</code> (utiliser la dérivée d'un produit) :<br />
+                    \(f'(x)=2x\ln x + x^{\cancel{2}}\frac{1}{\cancel{x}}\)
+                </div>
+            </li>
+
+            <li><span class="barm">( pt)</span>
+                <div class="enon">
+                    <div class="row">
+                        <div class="col">
+                            <strong>Question 2 : </strong><br />
+                            La courbe ci-contre représente une fonction \(f\) définie et deux fois dérivable sur
+                            \(\left]0;+\infty\right[\).<br />
+                            On sait que :
+                            <ul>
+                                <li>le maximum de la fonction \(f\) est atteint au point d’abscisse 3;</li>
+                                <li>le point \(P\) d’abscisse 5 est l’unique point
+                                    d'inflexion de la courbe \(\mathcal{C}\).</li>
+                            </ul>
+                            On a :
+							<ol type="a">
+							<li>pour tout \(x\in\left]0;5\right[\), \(f(x)\) et \(f'(x)\) sont de même signe ;</li>
+							<li>pour tout \(x\in\left]5;+\infty\right[\), \(f(x)\) et \(f'(x)\) sont de même signe ;</li>
+							<li>pour tout \(x\in\left]0;5\right[\), \(f'(x)\) et \(f''(x)\) sont de même signe ;</li>
+							<li>pour tout \(x\in\left]5;+\infty\right[\), \(f(x)\) et \(f''(x)\) sont de même signe ;</li>
+							</ol>
+                        </div>
+                        <div class="col">
+                            <figure style="--width-print:9cm;">
+                                <img src="assets/j1_fig_ex2.svg" alt="fig ex2">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="corr">
+                    Réponse <code>d</code> : \(P\) étant le seul point d'inflexion, \(f\) est convexe sur
+                    \(\left]5;+\infty\right[\), car au dessus de sa tangente en \(x=5\), d'où \(f''&gt;0\) sur cet
+                    intervalle. Elle est aussi positive sur ce même intervalle.
+                </div>
+            </li>
+            <li><span class="barm">( pt)</span>
+                <div class="enon">
+                    <div>
+                        Une urne contient 10 boules indiscernables au toucher dont 7 sont bleues et les autres vertes.
+                        On
+                        effectue trois tirages successifs avec remise.
+                    </div>
+                    <strong>Question 3 : </strong><br />
+                    La probabilité d’obtenir exactement deux boules vertes est :
+                    <ol type="a">
+                        <li>
+                            \(\left(\dfrac{7}{10}\right)^2 \times \dfrac{3}{10} \)
+                        </li>
+                        <li>
+                            \(\left(\dfrac{3}{10}\right)^2 \)
+                        </li>
+                        <li>
+                            \(\displaystyle{10\choose 2}\left(\dfrac{7}{10}\right) \times \left(\dfrac{3}{10}\right)^2
+                            \)
+                        </li>
+                        <li>
+                            \(\displaystyle{3\choose 2}\left(\dfrac{7}{10}\right) \times \left(\dfrac{3}{10}\right)^2 \)
+                        </li>
+                    </ol>
+                </div>
+                <div class="corr">
+                    Réponse <code>d</code> : le nombre de boules vertes tirées suit une loi binomiale de paramètres
+                    \(p=\dfrac{3}{10}\) et \(n=3\).
+                </div>
+            </li>
+            <li><span class="barm">( pt)</span>
+                <div class="enon">
+                    <div>
+                        Une urne contient 10 boules indiscernables au toucher dont 7 sont bleues et les autres vertes.
+                        On
+                        effectue trois tirages successifs avec remise.
+                    </div>
+                    <strong>Question 4 : </strong><br />
+                    La probabilité d’obtenir au moins une boule verte est :
+                    <ol type="a">
+                        <li>\(\left(\dfrac{3}{10}\right)^3 \)</li>
+                        <li>\(1-\left(\dfrac{3}{10}\right)^3 \)</li>
+                        <li>\(\left(\dfrac{7}{10}\right)^3 \)</li>
+                        <li>\(1-\left(\dfrac{7}{10}\right)^3 \)</li>
+                    </ol>
+                </div>
+                <div class="corr">
+                    Réponse <code>d</code> : L'événement complémentaire est de tirer trois boules bleues, sa probabilité
+                    étant \(\left(\dfrac{7}{10}\right)^3 \).
+                </div>
+
+                <div class="pagebreak"></div>
+
+                <h2 class="nocounter">
+                    <strong>Exercice 3</strong> (6 points)
+                </h2>
+                <div class="enon">
+                    Des biologistes étudient l’évolution d’une population d’insectes dans un jardin botanique.
+                    <br />
+                    Au début de l’étude la population est de 100 000 insectes. Pour préserver |’équilibre du milieu
+                    naturel, le nombre d‘insectes ne doit pas dépasser 400 000.
+                </div>
+                <h3 class="nocounter">Partie A : Étude d’un premier modèle en laboratoire</h3>
+                <div class="enon">
+                    <p>
+                        L'observation de l’évolution de ces populations d’insectes en laboratoire, en l’absence de tout
+                        prédateur, montre que le nombre d‘insectes augmente de 60% chaque mois.
+                    </p>
+                    <p>
+                        En tenant compte de cette observation, les biologistes modélisent l’évolution de la population
+                        d‘insectes a l'aide d’une suite \((u_n)\) où, pour tout entier naturel \(n\), \(u_n\) modélise
+                        le nombre d’insectes, exprimé en millions, au bout de \(n\) mois.
+                    </p>
+                    <p>
+                        On a donc \(u_0 = 0{,}1\).
+                    </p>
+                </div>
+                <ol>
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            Justifier que pour tout entier naturel \(n\) : \(u_n = 0{,}1\times 1{,}6^n\).
+                        </div>
+                        <div class="corr">
+                            En augmentant de 60%, la population est multipliée par 1,6 chaque année, donc \(u_n\) est
+                            une suite géométrique de raison 1,6.
+                        </div>
+                    </li>
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            Déterminer la limite de la suite \((u_n)\).
+                        </div>
+                        <div class="corr">
+                            \(u_0&gt;0\) et la raison 1,6&gt;1, donc la suite \(u_n\) tend vers \(+\infty\).
+                        </div>
+                    </li>
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            En justifiant votre réponse, déterminer le plus petit entier naturel n a partir duquel
+                            \(u_n&gt;0{,}4\).
+                        </div>
+                        <div class="corr">
+                            Dans ce contexte, 0,4 étant assez faible, on peut calculerles premiers termes de la suite :
+                            \(u_1=0{,}16\) ;
+                            \(u_2=0{,}256\) ;
+                            \(u_3=0{,}4096\). La suite étant sctrictement croissante, \(n=3\) répond à la
+                            question.<br />
+                            Méthode «générale» :<br />
+                            En appliquant le logarithme décimal (strictement croissant) à l'inégalité (qui ne contient
+                            que des termes positifs), on obtient : \(\log u_0 + n\log 1{,}6 &gt; \log 0{,}4 \). En
+                            isolant \(n\) :
+                            \(n &gt; \dfrac{\cancel{\log 0{,}1} + \log 4 - \cancel{\log 0{,}1}}{\log 1{,}6}=\dfrac{2\log
+                            2}{4\log 2 -1}\approx 2{,}94\), que l'on arrondit à \(n=3\).
+                        </div>
+                    </li>
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            Selon ce modéle, l’équilibre du milieu naturel serait-il préservé ? Justifier la réponse.
+                        </div>
+                        <div class="corr">
+                            L'énoncé précise clairement que la population d'insectes ne doit pas dépasser 400 000 pour
+                            que l'équilibre naturel soit prśervé, soit \(u_n \leqslant 0{,}4\) ; ce n'est donc pas le
+                            cas.
+                        </div>
+                    </li>
+        </ul>
+
+        <h3 class="nocounter">Partie B : Étude d’un second modèle</h3>
+        <div class="enon">
+            En tenant compte des contraintes du milieu naturel dans lequel évoluent les insectes, les biologistes
+            choisissent une nouvelle modélisation.<br />
+            Ils modélisent le nombre d’insectes à l’aide de la suite \((v_n)\), définie par :
+            <div style="text-align: center;">
+                \(v_0 = 0{,}1\) et, pour tout entier naturel \(n\), \(v_{n+1} = 1{,}6v_n - 1{,}6v_n^2\)
+            </div>
+
+            où, pour tout entier naturel \(n\), \(v_n\) est le nombre d’insectes, exprimé en millions, au bout de \(n\)
+            mois.
+        </div>
+        <ol>
+            <li><span class="barm">( pt)</span>
+                <div class="enon">
+                    Déterminer le nombre d’insectes au bout d’un mois.
+                </div>
+                <div class="corr">
+                    On calcule \(v_1 = 1{,}6v_0 - 1{,}6v_0^2 = 1{,}6\times0{,}1 - 1{,}6\times 0{,}1^2=0{,}144 \)
+                    <br />
+                    On a donc 144 000 insectes au bout d'un mois.
+                </div>
+            </li>
+            <li>
+                <div class="enon">
+                    On considere la fonction \(f\) définie sur l’intervalle \(\left[0;\dfrac{1}{2}\right]\) par
+                    <div style="text-align: center;">
+                        \(f(x)=1{,}6x-1{,}6x^2\)
+                    </div>
+                </div>
+                <ol type="a">
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            Résoudre l’équation \(f(x)=x\).
+                        </div>
+                        <div class="corr">
+                            On met \(x\) en facteur et on utilise une équation produit nul : <br />
+                            \(0=f(x)-x=1{,}6x-1{,}6x^2-x=0{,}6x-1{,}6x^2=x\left(0{,}6-1{,}6x\right)\)
+                            ce qui équivaut à \(x=0\) ou bien \(0{,}6-1{,}6x=0\), soit
+                            \(x=\dfrac{0{,}6}{1{,}6}=0{,}375\).
+                        </div>
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            Montrer que la fonction \(f\) est croissante sur l’intervalle
+                            \(\left[0;\dfrac{1}{2}\right]\)
+                        </div>
+                        <div class="corr">
+                            l'expression \(f(x)\) est une fonction polynôme du second degré dont les coefficients de
+                            \(x^2\) et \(x\) sont respectivement \(a=-1{,}6&lt;0\) et \(b=1{,6}\). Comme
+                            \(x_M=\dfrac{-b}{2a}=-\dfrac{\cancel{1{,}6}}{2\times(-\cancel{1{,}6})}=\dfrac{1}{2}\), \(f\)
+                            est croissante jusqu'à son maximum \(x_M=\dfrac{1}{2}\).
+                        </div>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <ol type="a">
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            Montrer par récurrence que, pour tout entier naturel \(n\), on a \(0 \leqslant v_n \leqslant
+                            v_{n+1} \leqslant \dfrac{1}{2}\)
+                        </div>
+                        <div class="corr">
+                            Par récurrence sur \(n\).<br />
+                            On note \(H\) la partie de \(\mathbb{N}\) pour laquelle l'inégalité \(0 \leqslant v_n
+                            \leqslant
+                            v_{n+1} \leqslant \dfrac{1}{2}\) est vraie.
+                            <ul>
+                                <li>Initialisation : \(0\in H\) car \(0 \leqslant v_0=0{,}1 \leqslant
+                                    v_1=0{,}144 \leqslant \dfrac{1}{2}=0{,}5\) est vraie.
+                                </li>
+                                <li>
+                                    Hérédité : soit \(n\in H\). <br />
+                                    Alors on a \(0 \leqslant v_n \leqslant
+                                    v_{n+1} \leqslant \dfrac{1}{2}\) ; en appliquant la fonction \(f\) croissante sur
+                                    \(\left[0;\dfrac{1}{2}\right]\), on a :
+                                    \(f(0) \leqslant f(v_n) \leqslant
+                                    f(v_{n+1}) \leqslant f\left(\dfrac{1}{2}\right)\)
+                                    soit, en utilisant la définition de \((v_n)\), et avec \(f(0)=0\) et
+                                    \(f\left(\dfrac{1}{2}=0{,}4\right)\), on a \(0 \leqslant v_{n+1} \leqslant
+                                    v_{n+2} \leqslant 0{,}4 \leqslant \dfrac{1}{2}\), donc \(n+1\in H\).
+                                </li>
+                                <li>
+                                    Conclusion : \(0\in H\) et \(n\in H \Rightarrow {n+1}\in H\), donc \(H=\mathbb{N}\).
+                                </li>
+                                L'inégalité est donc vraie pour chaque rang \(n\).
+                            </ul>
+                        </div>
+                    </li>
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            Montrer que la suite \((v_n\) est convergente. <br />
+                            On note \(\mathcal{l}\) la valeur de sa limite. On admet que \(\mathcal{l}\) est solution de
+                            l’équation
+                            \(f(x)=x\).
+                        </div>
+                        <div class="corr">
+                            D'après l'inégalité précédente, \(v_n\) est croissante et majorée par 0,5 donc elle converge
+                            (vers \(\mathcal{l}\)).<br />
+                            D'après les solutions de \(f(x)=x\), \(\mathcal{l}=0\) (impossible car \(u_0&gt;0\)) ou
+                            \(\mathcal{l}=0{,}375\) qui est donc la valeur de la limite de \((v_n)\).
+                            <br />
+                            Comme \(\mathcal{l}=0{,}375&lt;0{,}4\), le milieu naturel est préservé.
+                        </div>
+                    </li>
+                    </ul>
+            </li>
+            <li>
+                <div class="row">
+                    <div class="col">
+                        On donne ci-contre la fonction <code>seuil</code>, écrite en langage Python.
+                        <ol type="a">
+                            <li><span class="barm">( pt)</span>
+                                <div class="enon">
+                                    Qu’observe-t-on si on saisit <code>seuil(0.4)</code> ?
+                                </div>
+                                <div class="corr">
+                                    Le programme va boucler à l'infini, car la suite converge en croissant vers
+                                    0,375&lt;0,4.
+                                </div>
+                            </li>
+                            <li><span class="barm">( pt)</span>
+                                <div class="enon">
+                                    Déterminer la valeur renvoyée par la saisie de
+                                    <code>seuil(0.35)</code>.
+                                    <br />
+                                    Interpréter cette valeur dans le contexte de l'exercice.
+                                </div>
+                                <div class="corr">
+                                    On obtient \(n=\), qui indique au bout de combien de mois la populations d'insectes
+                                    dépasse 350 000 individus.
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col">
+                       
+<pre><code>
+def seuil(a) :
+    v = 0.1
+    n = 0
+    while v&lt;a :
+        v = 1.6*v - 1.6*v*v
+        n = n+1
+    return n
+</code></pre>
+
+
+                    </div>
+                </div>
+            </li>
+        </ol>
+
+        <div class="pagebreak"></div>
+
+        <h2 class="nocounter">
+            <strong>Exercice 4</strong> (5 points)
+        </h2>
+        <div class="enon">
+            On considère la fonction \(f\) définie sur \(\mathbb{R}\) par :
+            <div style="text-align: center;">
+                \(f(x) = \textrm{e}^{3x} -(2x+1)\textrm{e}^x \)
+            </div>
+
+            Le but de cet exercice est d’étudier la fonction sur \(\mathbb{R}\).
+        </div>
+        <h3 class="nocounter">Partie A - Étude d’une fonction auxiliaire</h3>
+        <div class="enon">
+            On définit la fonction \(g\) sur \(\mathbb{R}\) par:
+            <div style="text-align: center;">
+                \(g(x) = 3\textrm{e}^{2x} -2x-3 \)
+            </div>
+        </div>
+        <ol>
+            <li>
+                <ol type="a">
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            Déterminer la limite de la fonction \(g\) en \(-\infty\).
+                        </div>
+                        <div class="corr">
+                            \(\displaystyle\lim_{x\to -\infty}\textrm{e}^{2x}=0^+\)
+                            et
+                            \(\displaystyle\lim_{x\to -\infty} -2x-3=+\infty\)
+                            donc par somme :
+                            \(\displaystyle\lim_{-\infty} f= +\infty\)
+                            <br />
+                            (Asymptote oblique \(y=-2x-3\))
+                        </div>
+                    </li>
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            Déterminer la limite de la fonction \(g\) en \(+\infty\).
+                        </div>
+                        <div class="corr">
+                            \(\displaystyle\lim_{x\to +\infty}\textrm{e}^{2x}=+\infty\)
+                            et
+                            \(\displaystyle\lim_{x\to +\infty} -2x-3=-\infty\)
+                            La somme présente donc une forme indéterminée, mais les théorèmes de croissance comparée
+                            affirment que l'exponentielle domine les polynômes lorsqu'elle tend vers l'infini. Donc :
+                            \(\displaystyle\lim_{+\infty} f= +\infty\)
+                            <br />
+                            (Pas d'asymptote oblique)
+                        </div>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <ol type="a">
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            On admet que la fonction \(g\) est dérivable sur \(\mathbb{R}\), et on note \(g'\) sa
+                            fonction dérivée. Démontrer que pour tout nombre réel \(x\), on a \(g'(x)
+                            =6\textrm{e}^{2x}-2\).
+                        </div>
+                        <div class="corr">
+                            \(g'(x)= 3\times
+                            2\textrm{e}^{2x} -2 -0= 6\textrm{e}^{2x}-2\)
+                        </div>
+                    </li>
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            Étudier le signe de la fonction dérivée \(g'\) sur \(\mathbb{R}\).
+                        </div>
+                        <div class="corr">
+                            \(
+                            \begin{eqnarray}
+                            &amp; g'(x) = 0 \\
+                            \Leftrightarrow &amp; 6\textrm{e}^{2x} = 2 \\
+                            \Leftrightarrow &amp; \textrm{e}^{2x} = \dfrac{2}{6} = \dfrac{1}{3} \\
+                            \Leftrightarrow &amp; 2x = \ln\left(\dfrac{1}{3}\right) = -\ln 3 \\
+                            \Leftrightarrow &amp; x = \dfrac{-\ln 3}{2} \approx 0{,}55 \\
+                            \end{eqnarray}
+                            \)
+                            <br />
+
+                            <table class="vartable"
+                                style="text-align:center;padding:0;margin:0;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;">
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid;">
+                                        <td style="border-right: 1px solid;">x</td>
+                                        <td class="">-∞</td>
+                                        <td></td>
+                                        <td class="">\(\frac{-\ln 3}{2}\)<br></td>
+                                        <td></td>
+                                        <td>+∞</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid;">
+                                        <td style="border-right: 1px solid;" class="">\(g'(x)\)</td>
+                                        <td class=""></td>
+                                        <td class="">-</td>
+                                        <td class=""
+                                            style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                            0</td>
+                                        <td class="">+</td>
+                                        <td class=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;"></td>
+                                        <td class="">+∞</td>
+                                        <td></td>
+                                        <td class=""
+                                            style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td></td>
+                                        <td class="">+∞</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;" class="">\(g\)<br></td>
+                                        <td></td>
+                                        <td class="">↘</td>
+                                        <td
+                                            style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td class="">↗</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;"></td>
+                                        <td class=""></td>
+                                        <td></td>
+                                        <td style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;"
+                                            class="cell_selected">\(\ln(3)-2\)<br></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            En déduire le tableau de variations de la fonction \(g\) sur \(\mathbb{R}\). Vérifier que la
+                            fonction \(g\) admet un minimum égal a \(\ln(3)-2\).
+                        </div>
+                        <div class="corr">
+                            cf le tableau de variation précédent.
+                        </div>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <ol type="a">
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            Montrer que \(x = 0\) est solution de l’équation \(g(x) = 0\)
+                        </div>
+                        <div class="corr">
+                            \(g(0)= 3\times 1 - 2\times 0 -1 = 0\)
+                        </div>
+                    </li>
+                    <li><span class="barm">( pt)</span>
+                        <div class="enon">
+                            Montrer que |’équation \(g(x) = 0\) admet une deuxième solution, non nulle,
+                            notée \(\alpha\), dont on donnera un encadrement d’amplitude 10<sup>-1</sup>.
+                        </div>
+                        <div class="corr">
+                            La fonction \(g\) est continue et strictement décroissante de \(+\infty&gt;0\) à \(\ln 3
+                            -3&lt;0\) sur \(\left]-\infty;\frac{-\ln 3}{2}\right]\) donc elle admet un zéro \(\alpha\)
+                            sur cet intervalle.
+                            <br />
+
+                            <table class="vartable"
+                                style="text-align:center;padding:0;margin:0;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;">
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid;">
+                                        <td style="border-right: 1px solid;">\(x\)</td>
+                                        <td class="">-∞</td>
+                                        <td></td>
+                                        <td class="" style="color: rgb(192, 28, 40);">α</td>
+                                        <td></td>
+                                        <td class="">\(\frac{-\ln 3}{2}\)</td>
+                                        <td class=""></td>
+                                        <td class="" style="color: rgb(192, 28, 40);">0</td>
+                                        <td class=""></td>
+                                        <td>+∞</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid;">
+                                        <td style="border-right: 1px solid;" class="">\(g'(x)\)</td>
+                                        <td class=""></td>
+                                        <td class="">-</td>
+                                        <td class=""
+                                            style="background-image: linear-gradient(90deg, rgb(192, 28, 40), rgb(192, 28, 40)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                            <br>
+                                        </td>
+                                        <td class="">-</td>
+                                        <td class=""
+                                            style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                            0</td>
+                                        <td class="">+</td>
+                                        <td class=""
+                                            style="background-image: linear-gradient(90deg, rgb(192, 28, 40), rgb(192, 28, 40)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                            <br>
+                                        </td>
+                                        <td class="">+</td>
+                                        <td class=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;"></td>
+                                        <td class="">+∞</td>
+                                        <td></td>
+                                        <td
+                                            style="background-image: linear-gradient(90deg, rgb(192, 28, 40), rgb(192, 28, 40)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td></td>
+                                        <td class=""
+                                            style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td></td>
+                                        <td class=""
+                                            style="background-image: linear-gradient(90deg, rgb(192, 28, 40), rgb(192, 28, 40)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td></td>
+                                        <td class="">+∞</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;"></td>
+                                        <td></td>
+                                        <td class="cell_selected">↘</td>
+                                        <td
+                                            style="background-image: linear-gradient(90deg, rgb(192, 28, 40), rgb(192, 28, 40)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td></td>
+                                        <td class=""
+                                            style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td></td>
+                                        <td
+                                            style="background-image: linear-gradient(90deg, rgb(192, 28, 40), rgb(192, 28, 40)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td class="">↗</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;" class="">\(g\)<br></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class=""
+                                            style="color: rgb(192, 28, 40); background-image: linear-gradient(90deg, rgb(192, 28, 40), rgb(192, 28, 40)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                            0<br></td>
+                                        <td></td>
+                                        <td
+                                            style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td></td>
+                                        <td class=""
+                                            style="background-image: linear-gradient(90deg, rgb(192, 28, 40), rgb(192, 28, 40)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center; color: rgb(192, 28, 40);">
+                                            0<br></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td
+                                            style="background-image: linear-gradient(90deg, rgb(192, 28, 40), rgb(192, 28, 40)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td class="">↘</td>
+                                        <td
+                                            style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td class="">↗</td>
+                                        <td
+                                            style="background-image: linear-gradient(90deg, rgb(192, 28, 40), rgb(192, 28, 40)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;"></td>
+                                        <td class=""></td>
+                                        <td></td>
+                                        <td
+                                            style="background-image: linear-gradient(90deg, rgb(192, 28, 40), rgb(192, 28, 40)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td></td>
+                                        <td style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;"
+                                            class="">\(\ln(3)-2\)</td>
+                                        <td></td>
+                                        <td
+                                            style="background-image: linear-gradient(90deg, rgb(192, 28, 40), rgb(192, 28, 40)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br />
+                            On a \(\alpha\approx -1{,}4\).
+                        </div>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <h3 class="nocounter">Partie B - Etude de la fonction \(f\)</h3>
+        <ol>
+            <li><span class="barm">( pt)</span>
+                <div class="enon">
+                    La fonction \(f\) est dérivable sur \(\mathbb{R}\), et on note \(f'\) sa fonction dérivée.<br />
+                    Démontrer que pour tout nombre réel \(x\), on a \(f'(x) = \textrm{e}^x g(x)\), où \(g\) est la
+                    fonction
+                    définie dans la partie A.
+                </div>
+                <div class="corr">Attention à utiliser la dérivée du produit. On factorise ensuite par
+                    \(\textrm{e}^x\)<br />
+                    \(
+                    f'(x)
+                    = 3\textrm{e}^{3x} -\left(2\textrm{e}^x+(2x+1)\textrm{e}^x \right)
+                    = 3\textrm{e}^{3x} -3\textrm{e}^x -2x\textrm{e}^x
+                    = \textrm{e}^{x}\left(3\textrm{e}^{2x} -3 -2x\right)
+                    = \textrm{e}^{x}g(x)
+                    \)
+
+                </div>
+            </li>
+            <li><span class="barm">( pt)</span>
+                <div class="enon">
+                    En déduire alors le signe de la fonction dérivée \(f'\) puis les variations de la fonction \(f\) sur
+                    \(\mathbb{R}\).
+                </div>
+                <div class="corr">
+                    Comme l'exponentielle est positive, \(f'\) et \(g\) ont même signe.<br />
+
+                    <table class="vartable"
+                        style="text-align:center;padding:0;margin:0;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;">
+                        <tbody>
+                            <tr style="border-bottom: 1px solid;">
+                                <td style="border-right: 1px solid;">x</td>
+                                <td class="">-∞</td>
+                                <td class=""></td>
+                                <td class="">α</td>
+                                <td></td>
+                                <td class="">0</td>
+                                <td></td>
+                                <td>+∞</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid;">
+                                <td style="border-right: 1px solid;" class="">\(f'(x)\)</td>
+                                <td></td>
+                                <td class="">+</td>
+                                <td class=""
+                                    style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    0</td>
+                                <td class="">-</td>
+                                <td class=""
+                                    style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    0</td>
+                                <td class="">+</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;"></td>
+                                <td class=""><br></td>
+                                <td></td>
+                                <td class="cell_selected"
+                                    style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    \(\frac{-8}{3}α\textrm{e}^{α}\)</td>
+                                <td></td>
+                                <td class=""
+                                    style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                </td>
+                                <td></td>
+                                <td class="">+∞</td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;">\(f\)</td>
+                                <td></td>
+                                <td class="">↗</td>
+                                <td
+                                    style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                </td>
+                                <td class="">↘</td>
+                                <td
+                                    style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                </td>
+                                <td class="">↗</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;"></td>
+                                <td class="">0</td>
+                                <td></td>
+                                <td
+                                    style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                </td>
+                                <td></td>
+                                <td class=""
+                                    style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    0</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+            <li><span class="barm">( pt)</span>
+                <div class="enon">
+                    Pourquoi la fonction \(f\) n’est-elle pas convexe sur \(\mathbb{R}\) ? Expliquer.
+                </div>
+                <div class="corr">
+                    Sa dérivée s'annule deux fois, donc sa dérivée n'est pas croissante sur \(\mathbb{R}\).
+                </div>
+            </li>
+        </ol>
+
+    </main>
+</body>
+
+</html>

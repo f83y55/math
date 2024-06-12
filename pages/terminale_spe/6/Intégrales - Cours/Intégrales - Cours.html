@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Intégrales - Cours</h1>
+
+        <h2>Introduction</h2>
+        <div class="none">
+            L'intégrale est un outil fondamental pour les mathématiques et sciences physiques : elle permet, par exemple
+            les calculs d'aires délimitées par des courbes, le calcul de valeurs moyennes, les calculs de volumes,
+            d'énergie, etc...<br>
+            Le calcul d'intégrales utilise les primitives.
+        </div>
+
+        <h2 class="section">Primitives</h2>
+        <div class="none">
+            Dans toute cette partie, on se place sur un intervalle \(I\).
+        </div>
+
+        <div class="defi">On dit qu'une fonction \(f\) définie sur \(I\) admet une <strong>primitive</strong> \(F\)
+            lorsque l'on a :
+            \(F'=f\)
+        </div>
+
+        <div class="exem">
+            Sur \(\mathbb{R}\), \(F(x)=\frac{1}{2}x^2\) est une primitive de \(f(x)=x\) car :
+            \(F'(x)=\left(\frac{1}{2}x^2\right)'=\frac{1}{2}\times 2x=x=f(x)\)
+        </div>
+
+        <div class="rema">
+            On peut observer que \(G(x)=\frac{1}{2}x^2+10\) est aussi une primitive de \(x\) puisque \(10'=0\), ce qui
+            nous conduit à énoncer la propriété qui suit :
+        </div>
+
+        <div class="prop">
+            Sur un même intervalle, toutes les primitives diffèrent d'une constante, c'est à dire :
+            <ul>
+                <li> si \(k\) est une constante réelle et si \(F\) est une primitive de \(f\) sur \(I\), alors \(G=F+k\)
+                    est
+                    aussi une primitive de \(f\) sur \(I\) ;
+                </li>
+                <li> toutes les autres primitives de \(f\) sur \(I\) sont de la forme \(F+k\) pour une certaine contante
+                    \(k\).
+                </li>
+            </ul>
+            <strong>Démonstration : </strong>
+            Soit \(F\) une primitive de \(f\) sur \(I\) et \(k\) une constante réelle.
+            <ul>
+                <li> On pose \(G(x)=F(x)+k\) ; On a pour tout \(x\) dans \(I\) :<br>
+                    \(G'(x)=\left(F(x)+k\right)'=F'(x)+k'=f(x)+0=f(x)\), donc \(G=F+k\) est aussi une primitive de \(f\)
+                    sur
+                    \(I\).
+                </li>
+                <li> Soit \(H\) une autre primitive de \(f\) sur \(I\). On a alors pour tout \(x\) dans \(I\),<br>
+                    \((H-F)'(x)=H'(x)-F'(x)=f(x)-f(x)=0\).<br>
+                    \(H-F\) est donc une fonction constante de valeur un réel \(k\) fixé. On a alors pour tout \(x\in
+                    I\),<br>
+                    \(H(x)-F(x)=k\) donc \(H(x)=F(x)+k\).
+                    Toutes les primitives de \(f\) diffèrent donc d'une constante.
+        </div>
+
+        <div class="exo">
+            Déterminer la primitive \(F\) (sur \(\mathbb{R}\)) de \(f(x)=x^2\) telle que \(F(2)=3\).
+            <div class="corr">
+                On sait qu'une primitive de \(f\) est \(H(x)=\dfrac{x^3}{3}\) ; la primitive de \(f\) qui s'annule en
+                \(x=2\) est donc
+                \(F(x)=H(x)-H(2)=\dfrac{x^3}{3}-\frac{8}{3}=\dfrac{x^3-8}{3}=\dfrac{(x-2)(x^2+2x+4)}{3}\)
+            </div>
+        </div>
+
+        <h3>Propriétés des primitives</h3>
+
+        <div class="prop">
+            Soit \(f\) et \(g\) deux fonctions admettant deux primitives \(F\) et \(G\) sur un intervalle \(I\), et
+            \(k\) une constante réelle. Alors :
+            <ul>
+                <li> <strong>Multiplication par une constante : </strong>
+                    \(kF\) est une primitive de \(kf\).<br>
+                    <div class="exem"> \(x^3\) est une primitive de \(3x^2\),
+                        donc \(\frac{1}{3}x^3\) est une primitive de \(\frac{1}{3}3x^2=x^2\).
+                    </div>
+                </li>
+                <li> <strong>Somme : </strong>
+                    \(F+G\) est une primitive de \(f+g\).
+                    <div class="exem">
+                        \(x^3+x\) est une primitive de \(3x^2+1\)
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="rema">
+            <strong> Attention : </strong>\(FG\) n'est pas une primitive de \(fg\) et \(\dfrac{F}{G}\) n'est pas une
+            primitive de \(\dfrac{f}{g}\);
+            en effet \((FG)'=F'G+FG'=fG+Fg\neq fg\) et \(\left(\dfrac{F}{G}\right)'=
+            \dfrac{fG-gF}{G^2}\neq\dfrac{f}{g}\).<br>
+            Contre-exemple :
+            \(1=1\times1\) <strong>n'</strong>admet <strong>pas</strong> pour primitive \(x\times x=x^2\), car la
+            dérivée de \(x^2\)
+            est
+            \(2x\) et pas 1 !
+        </div>
+
+        <div class="meth">
+            Pour calculer une primitive, il faut souvent développer.
+        </div>
+
+        <div class="exo">Déterminer une primitive sur \(\left]0;+\infty\right[\) de :
+            \(f(x)=(1+2x^2)^2\) et de \(g(x)=\dfrac{x^3-1}{x^2}\)
+        </div>
+
+
+        <h3>Primitives usuelles</h3>
+        <div class="row">
+            <div class="column">
+                <div class="prop">
+                    <strong>Primitives usuelles :</strong>
+                    <table class="mytable" style="font-size: smaller;">
+                        <tr>
+                            <th>Fonction</th>
+                            <th>Primitive</th>
+                        </tr>
+                        <tr>
+                            <td>\(k~~\textrm{(cte)}\)</td>
+                            <td>\(kx\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(x\)</td>
+                            <td>\(\frac{x^2}{2}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(x^2\)</td>
+                            <td>\(\frac{x^3}{3}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(x^{\alpha} ~~(\alpha\neq -1)\)</td>
+                            <td>\(\frac{x^{\alpha+1}}{\alpha+1}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\sqrt{x}\)</td>
+                            <td>\(\frac{2}{3}x\sqrt{x}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos(\omega x)\)</td>
+                            <td>\(\frac{1}{\omega}\sin(\omega x)\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\sin(\omega x)\)</td>
+                            <td>\(\frac{-1}{\omega}\cos(\omega x)\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\dfrac{1}{1+x^2}\)</td>
+                            <td>\(\arctan(x)\)</td>
+                        </tr>
+
+
+                    </table>
+                </div>
+
+
+
+            </div>
+            <div class="col">
+                <div class="prop"><strong>Primitives composées : </strong>
+                    Si \(u\) et \(v\) sont des fonctions dérivables :
+                    <table class="mytable">
+                        <tr>
+                            <th>Fonction</th>
+                            <th>Primitive</th>
+                        </tr>
+                        <tr>
+                            <td>\(u'u^n ~(n\in\mathbb{N}^*;u\neq0)\)</td>
+                            <td>\(\frac{u^{n+1}}{n+1}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(u'\textrm{e}^u\)</td>
+                            <td>\(\textrm{e}^u\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\dfrac{u'}{u}\) (\(u\neq 0\))</td>
+                            <td>\(\ln(|u|)\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(u'v'\circ u\)</td>
+                            <td>\(v\circ u\)</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="exo">Déterminer une primitive sur \(\mathbb{R}\) de chacune des fonctions suivantes :
+            <div class="row">
+                <div class="col">
+                    <ol>
+                        <li> \(f(x)=3\)
+                        </li>
+                        <li> \(g(x)=3x\)
+                        </li>
+                        <li> \(h(x)=3x^2-7x+2\)
+                        </li>
+                        <li> \(i(x)=\left(3x-\dfrac{1}{x}\right)^2\)
+                        </li>
+                        <li>\(j(x)=\dfrac{2}{2x+3}+\dfrac{1}{x^2}\)</li>
+                    </ol>
+                </div>
+                <div class="col">
+                    <ol start="6">
+                        <li> \(k(x)=30x(1+x^2)^{14}\)</li>
+                        <li> \(l(x)=x\textrm{e}^{-x^2}\)</li>
+                        <li> \(m(x)=(x+3)\textrm{e}^{-2x}\)</li>
+                        <li>\(\dfrac{1}{x^2-5x+6}\) <br /> (décomposer en \(\dfrac{a}{x-3}+\dfrac{b}{x-2}\))</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <h3>Notation crochet</h3>
+        <div class="row">
+            <div class="col">
+                <div class="defi">Soit \(F\) une primitive de \(f\) définie sur un intervalle \(I\) et \(a\) et
+                    \(b\) dans
+                    \(I\).<br>
+                    Pour noter une différence entre deux valeurs d'une même primitive, on utilise cette notation,
+                    appelée
+                    <strong>«notation crochet»</strong>
+                    :
+                    \(\displaystyle\left[F(x)\right]_a^b=F(b)-F(a)\)
+                </div>
+            </div>
+            <div class="col">
+                <div class="exo">Calculer :
+                    <ol>
+                        <li> \(A=\left[x^3-x\right]_1^2\)
+                        </li>
+                        <li> \(B=\left[x-\dfrac{1}{x}\right]_{10}^{20} \)
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="rema">
+            Attention au signe moins qui se répercute sur tout le «bloc» \(F(a)\), il faut mettre des
+            parenthèses en remplaçant \(F(a)\) par son expression lorsque \(F\) est une somme !
+        </div>
+
+
+        <h2>Intégrale d'une fonction</h2>
+        <h3>Définition</h3>
+        <div class="defi">\(f\) est une fonction admettant une primitive \(F\) sur un intervalle \(I\) et \(a,b\in I\)
+            sont
+            deux réels fixés.
+            On appelle intégrale de \(a\) à \(b\) de \(f\) le nombre noté :
+            <span class="surl">
+                \(\displaystyle\int_a^b\,f(x)\,\textrm{d}x~=~\left[F(x)\right]_a^b~=~F(b)-F(a)\)
+            </span>
+        </div>
+        <div class="rema">
+            Cette définition est bien indépendante de la primitive choisie : comme les primitives de \(f\) diffèrent
+            d'une constante, l'écart entre deux valeurs d'une primitive de \(f\) ne dépend pas du choix de cette
+            primitive.
+        </div>
+
+        <h3>Interprétation graphique : </h3>
+        <div class="row">
+            <div class="col">
+                <figure style="--width-print:4cm;">
+                    <img src="assets/T_0217inta.png" /><br>
+                </figure>
+            </div>
+            <div class="col">
+                <div class="prop">
+                    Si \(f\) est une fonction <strong>positive</strong> sur [a;b], alors
+                    \(\displaystyle\int_a^b\,f(x)\,\textrm{d}x\)
+                    donne l'aire \(\mathcal{A}(E)\), en unités d'aires (notées u.a.) du domaine \(E\) délimité par la
+                    courbe de
+                    \(f\),
+                    l'axe \((Ox)\) et les deux droites verticales passant par les abscisses \(a\) et \(b\).
+                </div>
+            </div>
+        </div>
+        <div class="rema">
+            \(E\) est l'ensemble des points \(M(x;y)\) du plan tels que
+            \(\left\{
+            \begin{array}{l}
+            a \leqslant x \leqslant b \\
+            0 \leqslant y \leqslant f(x) \\
+            \end{array}
+            \right.\).
+        </div>
+
+
+        <div class="exo">Écrire, sous la forme d'une intégrale, l'aire \(\mathcal{A}(E)\) du domaine \(E\) indiqué sur
+            le graphique.
+        </div>
+
+        <div class="exo">Déterminer l'aire délimitée par la parabole d'équation \(y=x^2\), l'axe
+            \((Ox)\) et
+            les
+            droites d'équations \(x=1\) et \(x=2\).
+        </div>
+
+        <div class="exo">
+            <p>D'après <a href="pseau.org" target="_blank">pseau.org</a> :
+                « L’eau solaire » consiste à capter l’énergie
+                solaire via des panneaux photovoltaïques
+                pour produire de l’électricité qui alimente
+                une pompe électrique permettant d’assurer
+                l’exhaure de l’eau.
+                <br>
+                Le plus souvent utilisée dans les zones rurales
+                non desservies par le réseau électrique,
+                l’énergie solaire est depuis plusieurs
+                années déjà une alternative à l’énergie
+                « thermique » (produite au moyen d’un
+                groupe électrogène) pour faire fonctionner
+                les systèmes de pompage.
+                <br>
+                L’énergie solaire n’est disponible que
+                6 heures par jour environ, elle atteint son
+                intensité maximale au zénith.
+            </p>
+            <strong>Mesures : </strong>
+            On mesure, en mètre cube par heure, le débit \(y\)
+            d'une pompe alimentée par un panneau solaire, en
+            fonction de l'heure solaire \(x\) (en heure).
+
+            <table class="mytable">
+                <tr>
+                    <th>
+                        \(x\)
+                    </th>
+                    <td>7</td>
+                    <td>7,5</td>
+                    <td>8</td>
+                    <td>8,5</td>
+                    <td>9</td>
+                    <td>9,5</td>
+                    <td>10</td>
+                    <td>10,5</td>
+                    <td>11</td>
+                    <td>11,5</td>
+                    <td>12</td>
+                    <td>12,5</td>
+                    <td>13</td>
+                    <td>13,5</td>
+                    <td>14</td>
+                    <td>14,5</td>
+                    <td>15</td>
+                    <td>15,5</td>
+                    <td>16</td>
+                    <td>16,5</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <th>\(y\)</th>
+
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0,5</td>
+                    <td>3,7</td>
+                    <td>5,3</td>
+                    <td>6,4</td>
+                    <td>7,1</td>
+                    <td>7,7</td>
+                    <td>8,1</td>
+                    <td>8,2</td>
+                    <td>8,3</td>
+                    <td>8,2</td>
+                    <td>8,1</td>
+                    <td>7,7</td>
+                    <td>7,1</td>
+                    <td>6,4</td>
+                    <td>5,3</td>
+                    <td>3,7</td>
+                    <td>0,5</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </table>
+
+            <div class="row">
+                <div class="col">
+
+                    <p> Observer et commenter les valeurs de \(y\) en fonction de \(x\).
+                    <div class="corr">Les valeurs les plus importantes de \(y\) correspondent à l'activité solaire la
+                        plus grande, autour de midi. Inversement, la pompe ne tourne pas, ou bien très peu, aux horaires
+                        pour lesquels le soleil est bas. On remarque aussi une symétrie des valeurs par rapport à midi :
+                        la course du soleil dans le ciel présente la même symétrie.
+                    </div>
+
+                    </p>
+                    <p>
+                        Dans <a href="www.geogebra.org/classic" target="_blank">Geogebra</a>, on a sélectionné
+                        <code>afficher / tableur</code> puis on a entré les valeurs comme ci-dessous. En sélectionnant
+                        l'ensemble des valeurs sur les deux colonnes puis en faisant <code>clic droit / créer une liste
+                            de points</code>, on a obtenu la figure ci-contre ; on a tracé un ajustement quadratique
+                        \(f\) (polynôme de degré 2) passant près de ces points.
+                    </p>
+
+                    <strong>Détermination du volume d'eau : </strong>
+                    <ol>
+                        <li> Sur le graphique, quel sens physique donner à l'aire d'un rectangle de côtés parallèles aux
+                            axes ?
+                            <div class="corr">
+                                Il s'agit d'un volume d'eau pompée en m<sup>3</sup> :
+                                \(\left(\textrm{m}^3/\cancel{\textrm{h}}\right)\times\cancel{\textrm{h}}\)
+                            </div>
+                        </li>
+                        <li> Déterminer et expliquer une méthode permettant de calculer, avec une assez bonne
+                            approximation, le
+                            volume \(V\) d'eau pompée dans la journée.
+                            <div class="corr">
+                                On calcule la somme des débits×0,5h=51,15 m<sup>3</sup>.
+                            </div>
+                        </li>
+                        <li> Calculer les débits moyens sur une base des 10 heures de fonctionnement, ainsi que sur une
+                            base de
+                            24 heures.
+                            <div class="corr">
+                                On divise par le temps de base considéré : pour 10h, on obtient 5,12 m<sup>3</sup>/h et
+                                pour
+                                24h, on obtient 2,13 m<sup>3</sup>/h.
+                            </div>
+                        </li>
+                        <li> Pourrait-on représenter simplement ce volume calculé par une aire sur le graphique ?
+                            <div class="corr">
+                                Oui ; par des rectangles de dimensions : horizontalement : 0,5 h et verticalement : les
+                                débits ; c'est à dire une série de rectangles adjacents de même dimension horizontale
+                                allant
+                                verticalement de l'axe horizontal aux points.
+                            </div>
+                        </li>
+                    </ol>
+
+                </div>
+
+                <div class="col">
+                    <figure>
+                        <img src="assets/fig_pompe.png" />
+                    </figure>
+                </div>
+            </div>
+
+
+            <strong>Modélisation par une fonction : </strong>
+            On utilise un logiciel pour effectuer un ajustement quadratique (de degré 2): \(f(x) = -0,4x^2+9,6x-49,3\)
+            des mesures du débit en fonction du temps.
+            <ol>
+                <li>Donner,
+                    approximativement, l'intervalle sur lequel l'ajustement a un sens.
+                    <div class="corr">
+                        On voit que l'ajustement à un sens sur [7,5;16,5]. <br />
+                        Plus précisément : en déterminant les intersections de la courbe de \(f\) avec l'axe horizontal
+                        : les valeurs approchées au centième des abscisses des points d'intersection sont 7,44 et 16,56.
+                    </div>
+                </li>
+                <li> Sur la figure, on a aussi tracé la dérivée \(f'(x)\).Comment lui donner
+                    un sens physique ? Interpréter.
+                    <div class="corr">
+                        \(f'(x)= -0,8x+9,6\) est une fonction affine. Elle représente la variation du débit : il
+                        augmente jusqu'à 12h (dérivée positive), puis diminue (dérivée négative).
+                    </div>
+                </li>
+            </ol>
+
+            <strong>Calcul précis du volume d'eau pompée : </strong>
+
+            <ol>
+                <li> Graphiquement : repérer le volume d'eau d'eau pompée sur le graphique, délimité par la courbe de
+                    \(f\).
+                    <div class="corr">
+                        Il s'agit de l'aire délimitée par la courbe de \(f\) et l'axe des abscisses.
+                    </div>
+                </li>
+                <li> Écrire ce volume en se servant d'une intégrale dont on précisera les bornes.
+                    <div class="corr">
+                        \(V=\displaystyle\int_{7{,}44}^{16{,}56}\,f(x)\,\textrm{d}x\)
+                    </div>
+                </li>
+                <li> Déterminer une primitive de \(f\) : et calculer ce volume ; comparer avec la mesure précédemment
+                    obtenue.
+                    <div class="corr">
+                        \(F(x)=\dfrac{-0,4}{3}x^3+4,8x^2-49,3x\)
+                        \(\displaystyle\int_{7{,}44}^{16{,}56}\,f(x)\,\textrm{d}x\, = F(16,56)-F(7,44)=50,41\)
+                        m<sup>3</sup>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <h2>Propriétés de l'intégrale</h2>
+
+        <div class="none">
+            Dans cette partie, \(f,g\) sont deux fonctions admettant des primitives sur \([a;b]\) et \(k\) une
+            constante.
+        </div>
+
+        <div class="prop"><strong>Permutation des bornes</strong><br />
+            \(\displaystyle\int_b^a\,f(x)\,\textrm{d}x~=~-\int_a^b\,f(x)\,\textrm{d}x\)
+            <br />
+            <strong>Démonstration : </strong> En effet, on a :
+            \(\int_b^af(x)\textrm{d}x=F(a)-F(b)=-(F(b)-F(a))=-\int_a^bf(x)\textrm{d}x\)
+        </div>
+
+        <div class="prop">
+            <strong>Linéarité : </strong><br />
+            \(f,g\) sont deux fonctions admettant des primitives sur \([a;b]\) et \(k\) une constante. Alors :
+            \(\displaystyle\int_a^b\,f(x)+g(x)\,\textrm{d}x=\displaystyle\int_a^b\,f(x)\,\textrm{d}x+\displaystyle\int_a^b\,g(x)\,\textrm{d}x\)
+            et \(\displaystyle\int_a^b\,kf(x)\,\textrm{d}x=k\displaystyle\int_a^b\,f(x)\,\textrm{d}x\)
+            <br />
+            <strong>Démonstration : </strong>hérité des propriétés sur les primitives.<br>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="prop"><strong>Relation de Chasles : </strong><br />
+                    Pour tous réels
+                    \(a,\,b,\,c\) dans \(I\) :
+                    \(\displaystyle\int_a^b\,f(x)\,\textrm{d}x=\int_a^c\,f(x)\,\textrm{d}x+\int_c^b\,f(x)\,\textrm{d}x\)
+                </div>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/T_0217inte.png" />
+                </figure>
+            </div>
+        </div>
+
+        <div class="none"><strong>Démonstration : </strong>
+            \(\int_a^b\,f(x)\,\textrm{d}x=F(b)-F(a)\) et
+            \(\int_a^c\,f(x)\,\textrm{d}x+\int_c^b\,f(x)\,\textrm{d}x=F(b)-\cancel{F(c)}+\cancel{F(c)}-F(a)\)
+        </div>
+
+        <div class="prop"><strong>Ordre : </strong><br />
+            \(f,g\) sont deux fonctions admettant des primitives sur \([a;b]\).
+            Si \(f\leqslant g\) sur \([a;b]\), alors :
+            \(\displaystyle\int_a^b\,f(x)\,\textrm{d}x\leq\int_a^b\,g(x)\,\textrm{d}x\)
+        </div>
+        <div class="rema">
+            Attention : il faut bien vérifier que \(a\leqslant b\) pour avoir ce résultat (c'est ici garanti par la
+            notation [a;b] ; en effet, in intervalle [a;b] avec a&gt;b est par convention vide).
+        </div>
+
+        <div class="none"><strong>Démonstration : </strong>
+            \(f\leqslant g\) donc \(g-f \geqslant 0\), or \(g-f\) est la dérivée de \(G-F\) qui est croissante donc
+            \(G(a)-F(a)\leqslant
+            G(b)-F(b)\), donc \(F(b)-F(a)\leqslant G(b)-G(a)\), donc
+            \(\int_a^b\,f(x)\,\textrm{d}x\leqslant\int_a^b\,g(x)\,\textrm{d}x\).
+        </div>
+
+        <div class="prop"><strong>Conséquence : </strong><br />
+            Si \(f\geqslant 0\) sur \([a;b]\) alors \(\int_a^b\,f(x)\,\textrm{d}x\geqslant 0\)
+            et si \(f\leqslant 0\) sur \([a;b]\) alors \(\int_a^b\,f(x)\,\textrm{d}x\leqslant 0\).
+        </div>
+
+        <h2 class="section">Construction de primitives</h2>
+
+        <div class="prop">
+            Si \(f\) est une fonction admettant une primitive \(F\) sur un intervalle \(I\) si \(a\) est un
+            nombre dans
+            \(I\), et si \(b\) est une valeur donnée, alors
+            \(\displaystyle F_a(x)=y_0+\int_a^x\,f(t)\,\textrm{d}t\)
+            est l'unique primitive de \(f\) qui vaut \(y_0\) en \(a\).
+        </div>
+
+        <div class="none"><strong>Démonstration : </strong>
+            Soit \(F\) une primitive de \(f\) ;
+            \(\left[F_a(x)\right]'=\left(y_0+\left[F(x)-F(a)\right]\right)'=0+F'(x)+0=f(x)\) donc \(F_a\) est
+            bien
+            une
+            primitive de \(f\) ; de plus on a bien : \(F_a(b)=y_0+F(a)-F(a)=Y_0\).<br />
+            Si \(G\) est une autre primitive de \(f\) sur \(I\) vérifiant \(G(a)=b\), alors on a pour tout
+            \(x\)
+            dans
+            \(I\) : \(F_a(x)-G(x)=k\), où \(k\) est une constante. Comme \(F_a(a)=G(a)=b\), on a \(k=0\),
+            donc
+            \(G=F_a\). \(F_a\) est donc bien l'unique primitive de \(f\) qui vaut \(y_0\) en \(a\).
+        </div>
+
+        <div class="exo">Déterminer ainsi, sur le plus grand intervalle possible :
+            <ol>
+                <li> la primitive \(F\) de \(f(x)=3x^3+1\) qui s'annule en \(x=4\).
+                </li>
+                <li> la primitive \(G\) de \(g(x)=\sqrt{x}\) qui vérifie \(G(3)=6\).
+                </li>
+            </ol>
+        </div>
+
+
+        <h2>Intégrale d'une fonction définie par morceaux</h2>
+
+        <div class="prop">
+            Soit \(f\) une fonction définie par morceau, c'est à dire donnée par des expressions distinctes
+            sur
+            plusieurs intervalles ; supposons qu'elle admette des primitives sur chacun de ces intervalles.
+            Il
+            est
+            possible de calculer l'intégrale d'une telle fonction en étendant la définition de l'intégrale à
+            l'aide de
+            la relation de Chasles.
+        </div>
+        <div class="meth">
+            On découpe, selon le principe de la relation de Chasles, l'intégrale sur chacun des morceaux donnés dans
+            la définition de la fonction.
+        </div>
+        <div class="row">
+            <div class="col exem"><br />
+                Soit \(f(x)=
+                \begin{array}{|l}
+                0 \textrm{ si } x\leqslant 0 \\
+                x^2 \textrm{ si } 0&lt;x\leqslant 1 \\
+                1 \textrm{ si } x&gt; 1 \\
+                \end{array}\)
+                <br />
+                <figure>
+                    <img src="assets/T_0217intm.png" />
+                </figure>
+
+            </div>
+            <div class="col">
+                <div>
+                    On a :<br>
+                    \(\begin{eqnarray*}
+                    \int_{-1}^3\,f(x)\,\textrm{d}x
+                    &=& \int_{-1}^0\,0\,\textrm{d}x+\int_0^1\,x^2\,\textrm{d}x+\int_1^3\,1\,\textrm{d}x \\
+                    &=&0+\left[\frac{1}{3}x^3\right]_0^1+\left[x\right]_{1}^3 \\
+                    &=&\frac{1}{3}-0+3-1 \\
+                    &=&2+\frac{1}{3}=\frac{7}{3}\\
+                    \end{eqnarray*}\)
+                </div>
+                <div class="rema">
+                    La relation de Chasles, ainsi étendue, reste évidemment valide dans le cas des fonctions définies
+                    par morceaux.
+                </div>
+
+            </div>
+        </div>
+        <div class="exo">
+            Calculer les intégrales suivantes :
+            <div class="row">
+                <div class="col">
+                    <ol>
+                        <li> \(\int_{1}^{\textrm{e}} \dfrac{1}{x} \, \mathrm{d}x\)
+                        </li>
+                        <li> \(\int_1^2 \dfrac{3x^2-4x+2}{x} \, \mathrm{d}x\) (développer !)
+                        </li>
+                        <li> \(\int_0^1 8(2x-1)^3 \, \mathrm{d}x\)
+                        </li>
+                        <li> \(\int_{-1}^1 2x\textrm{e}^{x^2} \, \mathrm{d}x\)
+                        </li>
+                        <li> \(\int_1^2 \dfrac{\ln x}{x} \, \mathrm{d}x\)
+                        </li>
+                    </ol>
+                </div>
+                <div class="col">
+                    <ol start="6">
+                        <li> \(\int_0^1 (e^x-1)(e^x-x) \, \mathrm{d}x\)
+                        </li>
+                        <li> \(\int_1^2 2x\sqrt{x^2-1} \, \mathrm{d}x\)
+                        </li>
+
+                        <li> \(\int_0^1 \dfrac{\textrm{e}^x}{\textrm{e}^x+1} \, \mathrm{d}x\)
+                        </li>
+                        <li> \(\int_1^2 \dfrac{\textrm{e}^x-\textrm{e}^{-x}}{\textrm{e}^x+\textrm{e}^{-x}} \,
+                            \mathrm{d}x\)
+                        </li>
+                    </ol>
+                </div>
+                <div class="col">
+                    <ol start="10">
+                        <li> \(\int_0^{0{,}1} \left(1+\cos (20\pi x)\right) \, \mathrm{d}x\)
+                        </li>
+                        <li> \(\int_1^2 (1-5x)^3 \, \mathrm{d}x\)
+                        </li>
+                        <li> \(\int_1^e \dfrac{1}{x\ln x} \, \mathrm{d}x\)
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+
+
+        <h2>Calcul d'aires</h2>
+        <h3>Avec une fonction de signe variable</h3>
+        <div class="rema">
+            Si \(f\) est une fonction de signe non constant sur \([a;b]\), alors l'intégrale de \(a\) à \(b\) de la
+            fonction \(f\) est la somme des «aires algébriques» des domaines situés entre la courbe \(\mathcal{C}_f\),
+            l'axe des abscisses et les droites d'équations \(x=a\) et \(x=b\) (c'est à dire, sur les intervalles où
+            \(f\geq0\), l'aire entre la courbe et l'axe est comptée posivement, et si
+            \(f\leq0\), négativement).
+        </div>
+        <div class="exo">
+            <div class="row">
+                <div class="col">
+                    \(\displaystyle\int_{-2}^{5}\,f(x)\,\textrm{d}x=\mathcal{A}(E_1)-\mathcal{A}(E_2)+\mathcal{A}(E_3)\)
+                    Alors que si l'on veut obtenir l'aire du domaine \(E_1\cup E_2\cup E_3\), il faudra utiliser
+                    la
+                    relation
+                    de Chasles et prendre l'opposé sur la partie comptée négativement par l'intégrale (sur
+                    \([-1;1]\) dans
+                    l'exemple donné). </div>
+                <div class="col">
+                    <figure>
+                        <img src="assets/T_0217intc.png" />
+                    </figure>
+                </div>
+            </div>
+            <div>
+                Ainsi :
+                \(\displaystyle\mathcal{A}(E_1\cup E_2\cup
+                E_3)=\stackrel{f\geq0}{\int_{-2}^{-1}\,f(x)\,\textrm{d}x}-\stackrel{f\leq0}{\int_{-1}^{1}\,f(x)\,\textrm{d}x}+\stackrel{f\geq0}{\int_{1}^{5}\,f(x)\,\textrm{d}x}\)
+            </div>
+        </div>
+        <div class="exo">
+            <div class="row">
+                <div class="col">Calculer l'aire du domaine \(E\) délimité par la courbe d'équation
+                    \(y=x^2-1\),
+                    l'axe
+                    \((Ox)\) et les droites verticales d'équation \(x=0\) et \(x=2\).
+                </div>
+                <div class="col">
+                    <figure style="--width-print: 4cm;">
+                        <img src="assets/T_0217intn.png" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="prop">
+            L'aire du domaine \(E\) délimité par la courbe d'équation
+            \(y=f(x)\),
+            l'axe
+            \((Ox)\) et les droites verticales d'équation \(x=a\) et \(x=b\) est :
+            \(\displaystyle\int_{a}^b\,\left|f(x)\right|\,\textrm{d}x\)<br />
+            On rappelle que \(\left|f\right|=\left|\begin{array}{l} f \textrm{ si }f\geqslant 0 \\ -f \textrm{ si
+            }f\leqslant 0\\ \end{array}\right.\)
+        </div>
+        <div class="exo">
+            Sur la figure, dans l'exercice précédent, tracer la fonction \(\left|f\right|\) et observer.
+        </div>
+
+
+
+        <h3>Parité : Fonctions paires</h3>
+        <div class="row">
+            <div class="col">
+                <div class="defi">
+                    Une fonction \(f\) est <strong>paire</strong> lorsqu'elle est définie sur un ensemble de définition
+                    \(\mathcal{D}_f\) symétrique par rapport à 0 (par exemple \([-1,5;1,5]\)) et vérifie les conditions
+                    (équivalentes) suivantes :
+                    <ul>
+                        <li>pour tout \(x\in\mathcal{D}_f\), \(f(x)=f(-x)\).
+                        </li>
+                        <li>la courbe de \(f\) est symétrique par rapport à l'axe vertical \((Oy)\).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="exem">
+                    <figure style="--width-print: 4cm;">
+                        <img src="assets/T_0217intfp.png" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="exem">
+            les fonctions définies par :
+            \(x^n\) avec \(n\in\mathbb{Z}\) pair, \(\cos(x)\),
+            \(\cosh(x)=\dfrac{\textrm{e}^x+\textrm{e}^{-x}}{2}\)
+            sont des fonctions paires.
+
+        </div>
+        <div class="prop">
+            Si \(f\) est paire, alors :
+            a\(\displaystyle\int_{-a}^a\,f(x)\,\textrm{d}x=2\int_{0}^a\,f(x)\,\textrm{d}x\).
+        </div>
+
+
+        <h3 class="subsection">Parité : Fonctions impaires</h3>
+        <div class="row">
+            <div class="col">
+
+                <div class="defi">
+                    Une fonction \(f\) est <strong>impaire</strong> lorsqu'elle est définie sur un ensemble de
+                    définition
+                    \(\mathcal{D}_f\) symétrique par rapport à 0 (par exemple \([-1,5;1,5]\)) et vérifie les
+                    conditions
+                    (équivalentes) suivantes :
+                    <ul>
+                        <li>pour tout \(x\in\mathcal{D}_f\), \(f(x)=-f(-x)\).
+                        </li>
+                        <li>la courbe de \(f\) est symétrique par rapport au centre du repère.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="exem">
+                    <figure style="--width-print: 4cm;">
+                        <img src="assets/T_0217intfi.png" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="exem">
+            les fonctions définies par :
+            \(x^n\) avec \(n\in\mathbb{Z}\) impair, \(\sin(x)\), \(\tan(x)\)
+            \(\sinh(x)=\dfrac{\textrm{e}^x-\textrm{e}^{-x}}{2}\) sont des fonctions impaires.
+
+        </div>
+
+        <div class="prop">
+            Pour une fonction \(g\) impaire :
+            \(\displaystyle\int_{-a}^a\,g(x)\,\textrm{d}x=0\)
+        </div>
+
+        <div class="exo">calculer en utilisant la parité :
+            \(A=\displaystyle\int_{-10}^{10}\,x^2\,\textrm{d}x\) ;
+            \(B=\displaystyle\int_{-10}^{10}\,x^3\,\textrm{d}x\) et
+            \(C=\displaystyle\int_{-1}^{1}\,x^5-x^3-2x^2+50x+10\,\textrm{d}x\)
+        </div>
+
+        <div class="exo"><strong>Compléments sur les fonctions paires/impaires :</strong><br />
+            <ol>
+                <li>Donner un exemple de fonction ni paire ni impaire</li>
+                <li>Une somme de fonctions paires est ?</li>
+                <li>Une somme de fonctions impaires est ?</li>
+                <li>Un produit de fonctions paires est ?</li>
+                <li>Un produit de fonctions impaires est ?</li>
+                <li>Le produit d'une fonction paire par une fonction impaire est ?</li>
+                <li>Si \(f\) est une fonction définie sur une partie \(\mathcal{D}_f\) de \(\mathbb{R}\) symétrique par
+                    rapport à 0, montrer que \(p(x)=\dfrac{1}{2}\left(f(x)+f(-x)\right)\) est paire et que
+                    \(i(x)=\dfrac{1}{2}\left(f(x)-f(-x)\right)\) est impaire.</li>
+                <li>Calculer \(p+i\) et en déduire que \(f\) se décompose comme somme d'une fonction paire et d'une
+                    fonction impaire (de manière unique).</li>
+            </ol>
+
+        </div>
+
+        <h3 class="subsection">Aire délimitée par deux courbes</h3>
+        <div class="none">
+            Soit \(f\leq g\) deux fonctions admettant des primitives sur un intervalle \(I\) et \(a\),
+            \(b\)
+            deux
+            nombres dans \(I\). On note \(E\) le domaine du plan délimité par les courbes représentant
+            \(f\)
+            et
+            \(g\) et les droites verticales d'équations \(x=a\) et \(x=b\).<br>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="meth">
+                    <ol>
+                        <li> On repère quelle est la fonction (ici \(g\)) dont la courbe est au-dessus de
+                            l'autre (ici
+                            \(f\)) ;
+                        </li>
+                        <li> on calcule l'intégrale de \(g-f\) entre \(a\) et \(b\) pour obtenir l'aire du
+                            domaine ;<br>
+                        </li>
+                    </ol>
+                </div>
+
+
+                <div class="rema">
+                    Si les courbes changent de position relative, on découpe l'intervalle d'intégration.
+                </div>
+
+                <div class="exo">On a \(u(x)=2-x^2\) et \(v(x)=x^3\). Calculer l'aire (en u.a.) du domaine
+                    \(E\).</div>
+
+            </div>
+            <div class="col">
+
+                <br>
+                <figure>
+                    <img src="assets/T_0217intaire.png" />
+                </figure>
+            </div>
+        </div>
+        <div class="prop">
+            L'aire d'un domaine \(E\) délimité par des courbes d'équations
+            \(y=f(x)\), \(y=g(x)\) et des droites verticales d'équation \(x=a\) et \(x=b\) est :
+            \(\displaystyle\int_{a}^b\,\left|f(x)-g(x)\right|\,\textrm{d}x\)<br />
+        </div>
+        <div class="exo">
+            Utiliser Geogebra ou la calculatrice (la fonction valeur absolue s'écrit <code>abs()</code>) pour tracer la
+            fonction \(\left|f(x)-g(x)\right|\) liée à l'exercice précédent.
+        </div>
+
+        <div class="exo">
+            Calculer l'aire du domaine compris entre les deux courbes représentant les fonctions définies par
+            \(f(x)=x^2\) et \(g(x)=\frac{1}{x}\) pour \(x\in\left[\frac{1}{2};2\right]\). Attention : les courbes se
+            croisent.
+        </div>
+
+
+        <div class="exo"><strong>Aire finie ?</strong><br />
+            On définit sur \(\left[4;+\infty\right[\) la fonction :
+            \(f(x)=\dfrac{-6x+6}{x^2-2x-3}\)
+            <ol>
+                <li> Déterminer \(\displaystyle\lim_{x\to+\infty} f(x)\). Que peut-on en déduire pour l'axe (Ox) et
+                    la
+                    courbe représentant \(f\) ?
+                </li>
+                <li> Soit k&gt;4 un nombre fixé.
+                    Calculer l'aire comprise entre la courbe représentant \(f\), l'axe (Ox) et les droites
+                    d'équations
+                    x=4 et x=k.
+                </li>
+                <li> l'aire comprise entre la courbe représentant \(f\), l'axe (Ox) et la droite d'équation x=4
+                    est-elle finie ? (indication : faire tendre k\(\rightarrow+\infty\).)
+                </li>
+            </ol>
+        </div>
+
+        <h3>Les fonctions continues admettent des primitives</h3>
+
+        <div class="none">
+            Ce paragraphe permet de démontrer (démonstration partielle au programme) que toute fonction continue \(f\)
+            sur \(\left[a;b\right]\)
+            admet des
+            primitives, et donc est intégrable.
+        </div>
+
+        <div class="prop">
+            On suppose ici \(f\) croissante et positive. Pour tout \(x\in\left[a;b\right]\), on note
+            \(F(x)\) l'aire
+            du domaine situé entre la courbe de \(f\), l'axe \((Ox)\), et les droites verticales passant
+            par
+            les
+            abscisses \(a\) et \(x\). Alors \(F\) est une primitive de \(f\).
+        </div>
+
+        <div class="exo"><strong>Démonstration partielle : </strong>
+            Soit \(x_0\in[a;b]\) et \(h&gt;0\).
+            <ol>
+                <li> Faire un schéma et repérer l'aire correspondant à la valeur
+                    \(F(x_0+h)-F(x_0)\).
+                </li>
+                <li> Tracer les deux rectangles de base \([x_0;x_0+h]\) et de hauteur \(f(x_0)\) et
+                    \(f(x_0+h)\).
+                </li>
+                <li> En déduire que \(hf(x_0)\leq F(x_0+h)-F(x_0) \leq hf(x_0+h)\).
+                </li>
+                <li> En déduire que \(F\) est dérivable en \(x_0\) (à droite) et que
+                    \(F'(x_0^+)=f(x_0)\).
+                </li>
+                <li> Recommencer avec \(h&lt;0\) et en déduire que \(F'(x_0^-)=f(x_0)\). Conclure </li>
+            </ol>
+        </div>
+
+
+        <div class="prop"><strong>(admise)</strong>
+            Toute fonction continue sur un intervalle \(I\) y admet des primitives.
+        </div>
+
+
+
+
+
+
+
+        <h2>Applications de l'intégrale</h2>
+        <h3>Valeur moyenne</h3>
+        <div class="row">
+            <div class="col">
+                <div class="defi">Si \(f\) est une fonction qui admet des primitives (éventuellement par
+                    morceaux) sur
+                    \([a;b]\), on appelle <strong>valeur moyenne</strong> de \(f\) sur \([a;b]\) le réel : <br />
+                    <span class="surl">
+                        \(\displaystyle\mu=\frac{1}{b-a}\int_a^b\,f(x)\,\textrm{d}x\)
+                    </span>
+                </div>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/T_0217inth.png" />
+                </figure>
+
+            </div>
+        </div>
+        <div class="rema">
+            Lorsque \(f\) est continue et positive sur \([a;b]\), le domaine situé sous la courbe de
+            \(f\)
+            et le
+            rectangle de dimensions \(b-a\) et \(\mu\) ont même aire : on trouve une fonction constante, égale à
+            \(\mu\), qui a la même intégrale que \(f\) sur \([a;b]\).
+        </div>
+
+        <div class="exo">
+            Tracer et calculer les valeurs moyennes des fonctions suivantes, définies sur I=[0;4]: \(f(x)=4-x\) ;
+            \(g(x)=1+\textrm{e}^{0{,}3x}\) ;
+            \(h(x)=\left\{\begin{array}{l} x^2 \textrm{ si }1\leqslant x\leqslant 3 \\ 1
+            \textrm{ sinon} \\ \end{array}\right.\) et \(k(x)=\left\{\begin{array}{l} 5 \textrm{ si }0\leqslant
+            x\leqslant a \\ 0
+            \textrm{ sinon} \\ \end{array}\right.\) (
+            où \(a\) est un paramètre (= une constante) dans [0;4])
+        </div>
+        <div class="exo"> On définit sur [0;1], pour tout n entier, les fonctions
+            \(f_n(x)=\left\{\begin{array}{l} n \textrm{ si }0\leqslant x\leqslant \frac{1}{n} \\ 0
+            \textrm{ sinon} \\ \end{array}\right.\).
+            <ol>
+                <li>Pour tout entier n, calculer la valeur moyenne \(f_{\textrm{moy},n}\) de \(f_n\) sur [0;1].</li>
+                <li>Soit un \(x_0\) fixé dans [0;1] ; que dire de
+                    \(\displaystyle\lim_{n\to+\infty}f_n(x_0)\) ? De quelle fonction «se rapproche» cette suite de
+                    fonction ?</li>
+                <li>A-t-on \(\displaystyle\lim_{n\to +\infty}\int_0^1\,f_n(x)\,\textrm{d}x=
+                    \int_0^1\,\displaystyle\lim_{n\to +\infty}f_n(x)\,\textrm{d}x\) ?</li>
+        </div>
+        <h3>D'autres applications</h3>
+        <div class="exo"><strong>Calculs de volumes : </strong><br />
+            <ol>
+                <li><strong>Volume d'un cône</strong><br />
+                    Dans un repère de l'espace, un cône a sa base incluse dans le plan d'équation z=0. On rappelle que
+                    l'aire de sa base est \(\pi R^2\), avec \(R\) le rayon du disque de base ; son sommet a pour
+                    coordonnées z=H (H est la hauteur du cône). On prend h compris entre 0 et H. <br />
+                    Quelle est, en fonction de R et h, l'aire \(A(h)\) de la coupe du cône par le plan z=h ?<br />
+                    Calculer \(V = \displaystyle\int_0^H\,A(h)\,\textrm{d}h\).<br />
+                    Adapter le raisonnement au calcul du volume d'un tétraèdre, d'une pyramide, ... .
+                </li>
+                <li><strong>Volume d'une boule : </strong>
+                    En utilisant la même méthode, retrouver la formule du volume d'une boule de rayon R.
+                </li>
+            </ol>
+            Attention : cette méthode (intégration d'une coupe) fonctionne bien pour le calcul de volumes, mais est à
+            adapter avec précaution pour les calculs des aires de surfaces des solides. On pourra s'inspirer de
+            l'exercice suivant.
+        </div>
+        <div class="exo"><strong>Longueur d'une courbe :</strong><br />
+            Lorsque l'on parcourt, au cours du temps \(t\), la courbe d'une fonction \(f\) avec un déplacement
+            horizontal de 1 unité de longueur par seconde, le vecteur vitesse de notre déplacement est
+            \(\left(\begin{array}{c} 1\\f'(t)\\ \end{array}\right)\).<br />
+            On retrouve la formule de la longueur d'une courbe en intégrant la norme de ce vecteur vitesse selon le
+            temps :
+            \(L = \displaystyle\int_{a}^{b}\,\sqrt{1+f'(t)^2}\,\textrm{d}t\).<br />
+            Calculer la longueur de la courbe de \(f(x)=\cosh(x)=\dfrac{\textrm{e}^x+\textrm{e}^{-x}}{2}\) sur [-3;3].
+        </div>
+
+
+
+        <h2>Intégration par parties</h2>
+        <div class="prop">
+            Soit \(u\) et \(v\) deux fonctions dérivables sur un intervalle \(I\) telles que \(u'v\) et \(uv'\)
+            admettent
+            des primitives sur \(I\) (éventuellement par morceaux), alors pour tout \(a\) et \(b\) de \(I\) :
+            <span class="surl">
+                \(\displaystyle\int_a^bu(x)v'(x)\,\textrm{d}x=\left[u(x)v(x)\right]_a^b-\int_a^bu'(x)v(x)\,\textrm{d}x\)
+            </span>
+        </div>
+
+
+
+        <div class="exo"><strong>Démonstration : </strong><br />
+            <ol>
+                <li>Écrire la formule de la dérivée du produit.</li>
+                <li>Isoler le terme \(uv'\) à gauche de l'égalité, puis intégrer</li>
+            </ol>
+            <div class="corr">
+                \(u\) et \(v\) sont deux fonctions dérivables sur \(I\), on a alors pour tout \(x\in I\),
+                \((uv)'(x)=u'(x)v(x)+u(x)v'(x)\). On a alors :<br />
+                \(\int_a^b(uv)'(x)\,\textrm{d}x=\int_a^bu'(x)v(x)\,\textrm{d}x+\int_a^bu(x)v'(x)\,\textrm{d}x\)
+                ; mais
+                comme
+                \(\int_a^b(uv)'(x)\,\textrm{d}x=\left[(uv)(x)\right]_a^b\), on a :<br />
+                \(\left[(uv)(x)\right]_a^b=\int_a^bu'(x)v(x)\,\textrm{d}x+\int_a^bu(x)v'(x)\,\textrm{d}x\) donc
+                \(\left[(uv)(x)\right]_a^b-\int_a^bu'(x)v(x)\,\textrm{d}x=\int_a^bu(x)v'(x)\,\textrm{d}x\).
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="meth">
+                    Il faut, la plupart du temps, dériver la partie polynomiale pour la faire «disparaître».
+                </div>
+
+                <div class="exem">
+                    Calculons \(\int_0^1 x\textrm{e}^{2x}\,\textrm{d}x\).<br>
+                    On pose \(\left\{\begin{array}{l} u(x)=x \\ v'(x)=\textrm{e}^{2x} \\ \end{array}\right.\). On a
+                    \(v(x)=\frac{1}{2}\textrm{e}^{2x}\) et \(u'(x)=1\). On a alors :<br>
+                    \(\begin{eqnarray*}
+                    \int_0^1 \stackrel{u}{x}\stackrel{v'}{\textrm{e}^{2x}} \,\textrm{d}x &=&
+                    \left[\stackrel{u}{x}\stackrel{v}{\frac{1}{2}\textrm{e}^{2x}}\right]_0^1-\int_0^1
+                    \stackrel{u'}{1}\stackrel{v}{\frac{1}{2}\textrm{e}^{2x}}\,\textrm{d}x\\
+                    &=&\left[\frac{1}{2}\textrm{e}^2-0\right]-\frac{1}{2}\int_0^1\textrm{e}^{2x}\,\textrm{d}x \\
+                    &=&\frac{1}{2}\textrm{e}^2-\frac{1}{2}\left[\frac{1}{2}\textrm{e}^{2x}\right]_0^1\\
+                    &=&\frac{1}{2}\textrm{e}^2-\frac{1}{2}\left[\frac{1}{2}\textrm{e}^{2}-\frac{1}{2}\right]\\
+                    &=&\frac{1}{4}\textrm{e}^2+\frac{1}{4} \\
+                    &=&\frac{\textrm{e}^2+1}{4}\\
+                    \end{eqnarray*}\)
+                </div>
+            </div>
+            <div class="col">
+                <div class="exo">
+
+                    Calculer les intégrales suivantes en utilisant la formule d'intégration par parties (une ou
+                    plusieurs fois
+                    successivement) :
+                    <ol>
+                        <li> \(\int_{1}^{\textrm{e}} (x+1)\ln x \, \mathrm{d}x\)
+                        </li>
+                        <li> \(\int_{0}^{\pi} t\cos t \, \mathrm{d}t\)
+                        </li>
+                        <li> \(\int_{0}^1 t \textrm{e}^{pt} \, \mathrm{d}t\) avec (\(p\) constante réelle)
+                        </li>
+                        <li> \(\int_{-1}^1 (t+1)\cos\pi t \, \mathrm{d}t\)
+                        </li>
+                        <li> \(\int_{-\pi}^{\pi} x^2\cos x \, \mathrm{d}x\) (2 fois !)
+                        </li>
+                        <li> \(\int_{-1}^1 (x^2-1)e^{-3x} \, \mathrm {d}x\)
+                        </li>
+                        <li> \(\int_0^x \ln t \, \mathrm{d}t=\int_0^x 1\ln t \, \mathrm{d}t\) (avec \(x&gt;0\), cela
+                            donne une primitive de \(\ln\)).
+                        </li>
+                        <li> \(\int_0^1 \ln(x+1) \, \mathrm{d}x\)
+                        </li>
+                        <li> \(\int_1^{\textrm{e}} x\ln x \, \mathrm{d}x\)
+                        </li>
+                        <li> \(\int_0^{\frac{\pi}{2}} (2x-1)\sin x \, \mathrm{d}x\)
+                        </li>
+                        <li> \(\int_0^\pi \cos x \textrm{e}^{-2x} \, \mathrm{d}x\)
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

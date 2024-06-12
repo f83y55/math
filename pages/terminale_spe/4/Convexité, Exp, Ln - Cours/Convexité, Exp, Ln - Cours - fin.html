@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>
+            Convexité, Exp, Ln - Cours
+        </h1>
+        <div class="pagebreak">
+        </div>
+
+        <h2>Notation puissance réelle</h2>
+
+        <h3>Définition</h3>
+        <div class="defi">On étend la notation puissance (jusqu'alors utilisée pour des exposants entiers
+            relatifs)
+            en posant, pour \(a&gt;0\) et \(b\) réel :
+            \(a^b = \textrm{e}^{b\ln a}\).
+        </div>
+        <div class="prop">
+            Ainsi, les mêmes règles algébriques que pour les entiers sont valables pour des exposants réels.
+        </div>
+
+        <div class="exo">Étudier \(f(x)=x^x\) et
+            \(g(x)={\left(1+\frac{1}{x}\right)}^{x}\).
+        </div>
+
+        <h3>Fonctions exponentielles de base \(a\)</h3>
+        <div class="row">
+            <div class="col">
+                <div class="defi">
+                    Soit \(a&gt;1\) fixé et \(x\) réel (variable). En posant \(a^x=\textrm{e}^{x\ln a}\) on définit les
+                    fonctions
+                    exponentielles de base \(a\) pour un exposant réel quelconque.
+                </div>
+
+                <div class="prop">
+                    Elles sont les réciproques des fonctions logarithmes de base
+                    \(a\). En particulier, \(x\mapsto {10}^x \)
+                    est la
+                    réciproque de \(\log\).
+                </div>
+            </div>
+            <div class="col">
+                <div class="exem">
+                    <figure><img src="assets/expa.png" /></figure>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="exo"><strong>En accoustique : le décibel</strong><br />
+            Le niveau sonore N (en décibels : dB) est :
+            N\(=20\log\left(\dfrac{p}{p_0}\right)\)
+            où \(p\) est la pression (en Pa) correspondant au son mesuré
+            et \(p_0\) une valeur de référence (on prend dans la plupart des
+            cas le seuil d’audibilité d’un son par une oreille humaine qui
+            correspond à 20 µPa).
+            <ol>
+                <li> Dans la rue, je passe à 5m d’un marteau-piqueur (100 dB)
+                    et à 2 m d’un joueur de vuvuzela (110 dB). Ai-je mal (seuil
+                    de la douleur : 120 dB) ?
+                </li>
+                <li> Deux élèves qui chuchotent émettent 32 dB. Calculer combien de dB émettent 34 élèves qui
+                    chuchotent
+                    ; comparer à
+                    la voix du professeur (58 dB).
+                </li>
+            </ol>
+        </div>
+
+        <h3>Fonctions puissances (réelles)</h3>
+        <div class="row">
+            <div class="col">
+                <div class="defi">
+                    Soit \(p\) réel fixé et \(x&gt;0\) (variable). En posant \(x^p=\textrm{e}^{p\ln x}\) on définit les
+                    fonctions
+                    puissance \(p\) (\(p\) réel quelconque).
+                </div>
+                <div class="prop">
+                    La fonction réciproque de la fonction \(x\mapsto x^p\) est \(x\mapsto x^{\frac{1}{p}}\).
+                </div>
+                <div class="exem">
+                    la fonction racine cubique, réciproque de la fonction cube, est en fait le fonction puissance un
+                    tiers.
+                </div>
+            </div>
+            <div class="col">
+                <div class="exem">
+                    <figure><img src="assets/puissreelle.png" /></figure>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
