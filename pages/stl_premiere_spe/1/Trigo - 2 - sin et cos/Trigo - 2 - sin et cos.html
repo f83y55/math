@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+</head>
+
+
+<body onload="body()">
+    <main>
+        <h1>Trigonométrie - 2 -Sinus et cosinus</h1>
+
+        <h2>Sinus et cosinus sur le cercle trigonométrique</h2>
+        <h3>\(\sin\alpha\) et \(\cos\alpha\)</h3>
+
+        <div class="row">
+            <div class="col">
+                <div class="defi">
+                    \(M\) est un point du cercle trigonométrique correspondant à un réel \(\alpha\) (par la fonction
+                    enroulement vue précédemment).<br>
+                    On note \(\cos\alpha\) l'abscisse de \(M\) et \(\sin\alpha\) l'ordonnée de \(M\) :
+                    <div style="text-align: center;">
+                        <span class="surl">\(M\left(\cos\alpha\,;\,\sin\alpha\right)\)</span>
+                    </div>
+                </div>
+                <div class="meth">
+                    <ul>
+                        <li> On repère un angle orienté \(\alpha\) par rapport à l'axe \((Ox)\), en marquant un
+                            point \(M\)
+                            sur
+                            le
+                            cerle
+                            trigonométrique ;
+                        </li>
+                        <li> si \(\alpha\) est \(&gt;0\), on tourne dans le sens direct (sens inverse des aiguilles
+                            d'une
+                            montre ;
+                            s'il
+                            est
+                            \(
+                            &lt;0\), on tourne dans le sens indirect ;
+                        </li>
+                        <li> on lit alors les valeurs de \(\cos\alpha\) (sur \((Ox)\)) : c'est l'abscisse de \(M\) ;
+                        </li>
+                        <li> et celle de \(\sin\alpha\) (sur \((Oy)\)) : c'est l'ordonnée de \(M\).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/ct2.svg" style="--width-print: 4.5cm;" />
+                </figure>
+            </div>
+        </div>
+
+
+        <div class="rema">
+            Si l'on considère que \(A=\left(\cos\alpha;0\right)\in\left[OI\right]\), on retrouve dans le
+            triangle
+            \(OAM\)
+            rectangle en \(M\) les définitions de \(\cos\) et de \(\sin\) vues en troisième, à savoir :
+            \(\cos\alpha=\frac{OA}{OM}\) et \(\sin\alpha=\frac{AM}{OM}\). La nouveauté est la prise en
+            compte
+            de
+            valeurs
+            négatives pour \(\cos\) et \(\sin\), qui apparaîssent si l'on considère des angles obtus.
+        </div>
+
+        <div class="rem">
+            Si l'on ajoute \(2\pi\) à \(\alpha\), on fait un tour du cercle et on revient à la même
+            position,
+            donc
+            on
+            obtient les mêmes valeurs pour \(\cos\) et \(\sin\).
+        </div>
+        <div class="defi"> Une fonction \(f\) étant donnée et un réel \(T\) étant fixé, lorsque pour tout \(x\) réel, on
+            a \(f(x+T)=f(x)\), on dit que \(f\) est <strong>\(T\)-périodique</strong> (ou périodique de période \(T\)).
+        </div>
+        <div class="prop">
+            Les fonctions \(\cos\) et
+            \(\sin\)
+            sont
+            \(2\pi\)-périodiques ou autrement dit : pour tout \(x\) réel, on a
+            \(\sin(x+2\pi) = \sin x \) et \(\cos(x+2\pi) = \cos x\).
+        </div>
+
+        <h3>Propriétés immédiates</h3>
+        <div class="row">
+            <div class="col">
+
+                <div class="prop">
+                    Pour \(x\) réel :
+                    <ul>
+                        <li> \(-1\leq\cos x \leq 1\) et \(-1\leq \sin x\leq1\) ;
+                        </li>
+                        <li> \(\cos^2 x+\sin^2 x=1\) ;
+                        </li>
+                        <li> \(\cos\) et \(\sin\) sont \(2\pi\)-périodiques.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="rema">
+                    <ul>
+                        <li> La seconde formule se déduit du théorème de Pythagore, et du fait que \(OM^2=1\) ;
+                        </li>
+                        <li> on note, pour plus de lisibilité, \(\cos^2 x=\left(\cos x\right)^2\) (idem pour \(\sin\)).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+
+                <div class="exo">
+                    <ol type="a">
+                        <li>Calculer \(\sin^2 t\) sachant que \(\cos t = \frac{1}{4}\).
+                            <div class="corr">
+                                \(\sin^2 t = 1-\cos^2 t = 1 - \left(\frac{1}{4}\right)^2 =
+                                1-\frac{1}{16}=\frac{15}{16}\)
+                            </div>
+                        </li>
+                        <li>Peut-on trouver un réel \(t\) tel que \(\cos t=\frac{1}{4}\) et \(\sin
+                            t=\frac{3}{4}\)
+                            <div class="corr">
+                                C'est impossible car on aurait :<br>
+                                \(\cos^2 t + \sin^2 t =
+                                \left(\frac{1}{4}\right)^2+\left(\frac{3}{4}\right)^2=\frac{1}{16}+\frac{9}{16}=\frac{5}{8}&lt;1\)
+                            </div>
+                            ?
+                        </li>
+                </div>
+            </div>
+            <div class="col">
+                <div class="exo">Soit \(t\) un réel tel que \(\cos t =\frac{3}{5}\).
+                    <ol type="a">
+                        <li> On suppose que \(t\in\left[0;\frac{\pi}{2}\right]\). Calculer \(\sin t\).
+                            <div class="corr">
+                                On a \(\sin^2 t = 1-\cos^2 t =
+                                1-\left(\frac{3}{5}\right)^2=1-\frac{9}{25}=\frac{16}{25}\). <br>
+                                Comme \(t\in\left[0;\frac{\pi}{2}\right]\), \(\sin t &gt; 0\), donc :
+                                \(\sin t = \sqrt{\frac{16}{25}} = \frac{4}{5}\).
+                            </div>
+                        </li>
+                        <li> On suppose que \(t\in\left[-\frac{\pi}{2};0\right]\). Calculer \(\sin t\).
+                            <div class="corr">
+                                On procède de même, mais comme \(t\in\left[-\frac{\pi}{2};0\right]\), alors
+                                \(\sin t &lt; 0\), donc \(\sin t = -\sqrt{\frac{16}{25}} = -\frac{4}{5}\).
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Valeurs remarquables</h3>
+                <div class="exo">Compléter le tableau de valeurs suivant :<br>
+                    <table class="mytable" style="width:100%;--cell-height:1cm;">
+                        <thead>
+                            <tr>
+                                <th>\(\alpha\) (rad) </th>
+                                <th> \(0\) </th>
+                                <th>\(\frac{\pi}{6}\) </th>
+                                <th>\(\frac{\pi}{4}\) </th>
+                                <th>\(\frac{\pi}{3}\) </th>
+                                <th>\(\frac{\pi}{2}\) </th>
+                                <th> \(\pi\) </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>\(\cos\alpha\)</th>
+                                <td>
+                                    <div class="corr">1</div>
+                                </td>
+                                <td>
+                                    <div class="corr">\(\frac{\sqrt{3}}{2}\)</div>
+                                </td>
+                                <td>
+                                    <div class="corr">\(\frac{\sqrt{2}}{2}\)</div>
+                                </td>
+                                <td>
+                                    <div class="corr">\(\frac{1}{2}\)</div>
+                                </td>
+                                <td>
+                                    <div class="corr">0</div>
+                                </td>
+                                <td>
+                                    <div class="corr">-1</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>\(\sin\alpha\)</th>
+                                <td>
+                                    <div class="corr">0</div>
+                                </td>
+                                <td>
+                                    <div class="corr">\(\frac{1}{2}\)</div>
+                                </td>
+                                <td>
+                                    <div class="corr">\(\frac{\sqrt{2}}{2}\)</div>
+                                </td>
+                                <td>
+                                    <div class="corr">\(\frac{\sqrt{3}}{2}\)</div>
+                                </td>
+                                <td>
+                                    <div class="corr">1</div>
+                                </td>
+                                <td>
+                                    <div class="corr">0</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col">
+                <div class="none">
+                    <figure>
+                        <img src="assets/cercletrigo.svg" style="--width-print:7.1cm; text-align: center;" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+
+        <h3>Valeurs associées</h3>
+        <div class="exo">Compléter par \(\pm\cos x\) et \(\pm\sin x\) les égalités suivantes :</div>
+
+        <div class="prop">
+            <table class="mytable" style="--cell-width:19%;">
+                <tbody>
+                    <tr>
+                        <th>
+                            Symétrie / \((Ox)\)
+                        </th>
+                        <th>
+                            Symétrie / \((Oy)\)
+                        </th>
+                        <th>
+                            Symétrie / \(O\)
+                        </th>
+                        <th>
+                            Symétrie / \(y=x\)
+                        </th>
+                        <th>
+                            Rotation<sub>90°</sub> / \(O\)
+                        </th>
+                    </tr>
+                    <tr>
+
+                        <td>
+                            <img src="assets/aaox.svg" style="width: 100%;" />
+                        </td>
+                        <td>
+                            <img src="assets/aaoy.svg" style="width: 100%;" />
+                        </td>
+                        <td>
+                            <img src="assets/aao.svg" style="width: 100%;" />
+                        </td>
+                        <td>
+                            <img src="assets/aayx.svg" style="width: 100%;" />
+                        </td>
+                        <td>
+                            <img src="assets/aarot.svg" style="width: 100%;" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="height:3em;">\(\cos\left(-x\right)=\)<div class="corr">\(\cos(x)\)</div>
+                        </td>
+                        <td>\(\cos\left(\pi-x\right)=\)<div class="corr">\(-\cos(x)\)</div>
+                        </td>
+                        <td>\(\cos\left(\pi+x\right)=\)<div class="corr">\(-\cos(x)\)</div>
+                        </td>
+                        <td>\(\cos\left(\frac{\pi}{2}-x\right)=\)<div class="corr">\(\sin(x)\)</div>
+                        </td>
+                        <td>\(\cos\left(\frac{\pi}{2}+x\right)=\)<div class="corr">\(-\sin(x)\)</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height:3em;">\(\sin\left(-x\right)=\)<div class="corr">\(-\sin(x)\)</div>
+                        </td>
+                        <td>\(\sin\left(\pi-x\right)=\)<div class="corr">\(\sin(x)\)</div>
+                        </td>
+                        <td>\(\sin\left(\pi+x\right)=\)<div class="corr">\(-\sin(x)\)</div>
+                        </td>
+                        <td>\(\sin\left(\frac{\pi}{2}-x\right)=\)<div class="corr">\(\cos(x)\)</div>
+                        </td>
+                        <td>\(\sin\left(\frac{\pi}{2}+x\right)=\)<div class="corr">\(\cos(x)\)</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="exo">Compléter le tableau de valeurs suivant :<br>
+                    <table class="mytable" style="width:100%;--cell-height:1cm;">
+                        <thead>
+                            <tr>
+                                <th>\(\alpha\) (rad) </th>
+                                <th>\(a=\frac{-\pi}{6}\) </th>
+                                <th>\(b=\frac{3\pi}{4}\) </th>
+                                <th>\(c=\frac{-2\pi}{3}\) </th>
+                                <th>\(d=\frac{3\pi}{2}\) </th>
+                                <th> \(e=-\pi\) </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>\(\cos\alpha\)</th>
+                                <td>
+                                    <div class="corr">\(\frac{\sqrt{3}}{2}\)</div>
+                                </td>
+                                <td>
+                                    <div class="corr">\(\frac{-\sqrt{2}}{2}\)</div>
+                                </td>
+                                <td>
+                                    <div class="corr">\(\frac{-1}{2}\)</div>
+                                </td>
+                                <td>
+                                    <div class="corr">0</div>
+                                </td>
+                                <td>
+                                    <div class="corr">-1</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>\(\sin\alpha\)</th>
+                                <td>
+                                    <div class="corr">\(\frac{-1}{2}\)</div>
+                                </td>
+                                <td>
+                                    <div class="corr">\(\frac{\sqrt{2}}{2}\)</div>
+                                </td>
+                                <td>
+                                    <div class="corr">\(\frac{-\sqrt{3}}{2}\)</div>
+                                </td>
+                                <td>
+                                    <div class="corr">-1</div>
+                                </td>
+                                <td>
+                                    <div class="corr">0</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="col">
+
+                <div class="exo">Simplifier les expressions suivantes :
+                    <ul>
+                        <li> \(A=2\cos\left(\frac{\pi}{2}-x\right)+\sin(\pi+x)-3\sin(\pi-x)\)
+                            <div class="corr">
+                                \(A=\sin(x)-\sin(x)-3\sin(x)=-3\sin(x)\)
+                            </div>
+                        </li>
+                        <li> \(B=\cos^2\left(\frac{\pi}{2}-x\right)+\sin^2(\pi+x)+2\cos^2(\pi+x)\)
+                            <div class="corr">
+                                \(
+                                \begin{eqnarray}
+                                B&=&\sin^2(x)+\left(-\sin(x)\right)^2+2\left(-\cos(x)\right)^2\\
+                                &=&\sin^2(x)+\sin^2(x)+2\cos^2(x)\\
+                                &=& 2\left(\cos^2(x)+\sin^2(x)\right)=2\\
+                                \end{eqnarray}
+                                \)
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div style="text-align: center;">
+                    <img src="assets/ct.svg" style="--width-print:2cm; width: 15vw;">
+                </div>
+            </div>
+        </div>
+
+        <h2>Coordonnées polaires</h2>
+        <div class="row">
+            <div class="col">
+                <div class="prop">
+
+                    Dans un repère <strong>orthonormé</strong>, on note \(M\) un point du plan distinct de l'origine
+                    \(O\).<br>
+                    Tout point \(M\) distinct de l'origine \(O\) peut être repéré par un couple de réels <span
+                        class="surl">\(\left(r;\alpha\right)_{\textrm{pol}}\)</span>, avec :
+                    <ul>
+                        <li> \(r=OM>0\) (distance à l'origine) ; unique ;
+                        </li>
+                        <li> \(\alpha\equiv\widehat{\left(\overrightarrow{OI};\overrightarrow{OM}\right)}\) (angle
+                            par
+                            rapport à
+                            l'axe
+                            des
+                            abscisses) ; unique <strong>modulo \(2\pi\)</strong>.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/pol.svg" style="--width-print: 5cm;">
+                </figure>
+            </div>
+        </div>
+        <div class="defi">Le couple noté \(\left(r;\alpha\right)_{\textrm{pol}}\) est appelé
+            <strong>coordonnées polaires</strong> et le couple \((x;y)\) est appelé
+            <strong>coordonnées cartésiennes</strong>
+            du point \(M\) dans le repère orthonormé \((O;I;J)\).
+        </div>
+
+        <div class="prop">
+            On a alors :
+            \(\displaystyle\left\{\begin{array}{l}
+            x=r\cos\alpha\\
+            y=r\sin\alpha\\
+            \end{array}\right.
+            \Leftrightarrow
+            \left\{\begin{array}{l}
+            r=\sqrt{x^2+y^2}\\
+            \cos\alpha=\dfrac{x}{r}\\
+            \sin\alpha=\dfrac{y}{r}\\
+            \end{array}\right.
+            \)
+        </div>
+
+        <div class="exo">
+            <ol>
+                <li> Donner les coordonnées cartésiennes de \(A\left(3;\frac{-5\pi}{6}\right)_{\textrm{pol}}\).
+                    <div class="corr">
+                        \(\displaystyle\left\{\begin{array}{l}
+                        x=r\cos\alpha=3\cos\left(\frac{-5\pi}{6}\right)=\frac{-3\sqrt{3}}{2}\\
+                        y=r\sin\alpha=3\sin\left(\frac{-5\pi}{6}\right)=\frac{-3}{2}\\
+                        \end{array}\right.\)
+                        donc \(A\left(\frac{-3\sqrt{3}}{2};\frac{-3}{2}\right)\)
+                    </div>
+                </li>
+                <li> Déterminer les coordonnées polaires de \(B\left(2;-2\sqrt{3}\right)\).
+                    <div class="corr">
+                        On calcule \(r=\sqrt{x^2+y^2}=\sqrt{2^2+\left(-2\sqrt{3}\right)^2}=\sqrt{4+12}=\sqrt{16}=4\)
+                        .<br>
+                        Puis
+                        \(
+                        \left\{\begin{array}{l}
+                        \cos\alpha=\dfrac{x}{r}=\frac{2}{4}=\frac{1}{2}\\
+                        \sin\alpha=\dfrac{y}{r}=\dfrac{-2\sqrt{3}}{4}=\frac{-\sqrt{3}}{2}\\
+                        \end{array}\right.
+                        \)
+                        D'où (faire un croquis avec le cercle trigo) \(\alpha=\frac{-\pi}{3}\).
+                        Donc \(B\left(4;\frac{-\pi}{3}\right)_{\textrm{pol}}\)
+                    </div>
+                </li>
+                Est-il possible qu'un point ait les mêmes coordonnées cartésiennes et polaires ?
+                <div class="corr">
+                    On aurait \((x;y)=\left(r;\alpha\right)_{\textrm{pol}}\), donc comme \(r&gt;0\), \(x&gt;0\), donc
+                    l'égalité \(x=r\cos\alpha\) entraine \(x=x\cos\alpha\) et en simplifiant par \(x\neq 0\),
+                    \(\cos\alpha
+                    = 1\), donc \(\alpha\equiv 0 \pmod{2\pi}\) et donc \(y=\sin\alpha=0\). Donc les points ayant les
+                    mêmes coordonnées polaires et cartésiennes sont les \((x;y)\) avec \(x&gt;0\) et \(y=0\), soit la
+                    partie positive (privée de l'origine) de l'axe \((Ox)\).
+                </div>
+            </ol>
+        </div>
+
+        <h2>Projections orthogonales</h2>
+        <h3>Vecteur unitaires et rappels</h3>
+        <div class="row">
+            <div class="col">
+                <div class="defi">
+                    <ul>
+                        <li>
+                            Un <strong>vecteur</strong> \(\overrightarrow{u}\) représente un déplacement (en ligne
+                            droite) d'un
+                            point \(A\) vers un point \(B\). On note \(\overrightarrow{u}=\overrightarrow{AB}\) le
+                            vecteur donnant le déplacement de \(A\) vers \(B\).
+                        </li>
+                        <li>
+                            Ses coordonnées \({x_\vec{u}}\choose{y_\vec{u}}\) représentent le déplacement
+                            horizontal
+                            \(x_\vec{u}=x_B-x_A\) et le déplacement vertical \(y_\vec{u}=y_B-y_A\) lors de ce trajet de
+                            \(A\)
+                            vers \(B\).
+                        </li>
+                        <li class="surl">Dans un repère orthonormé, sa <strong>norme</strong>, notée
+                            \(||\overrightarrow{u}||\) est
+                            la distance \(AB\).
+                            La
+                            formule de Pythagore permet de la calculer \(||\overrightarrow{u}|| = AB =
+                            \sqrt{\left(x_B-x_A\right)^2+\left(y_B-y_A\right)^2}\)
+                        </li>
+                        <li>
+                            Un vecteur <strong>normé</strong> est un vecteur de norme 1.
+                        </li>
+                    </ul>
+                </div>
+                <div class="meth">
+                    Pour normer un vecteur, il suffit de le diviser par sa norme.
+                </div>
+
+                <div class="exo">
+                    Déterminer les coordonnées et calculer les normes des vecteurs \(\overrightarrow{u}\) et
+                    \(\overrightarrow{v}\). Normer ces deux vecteurs.
+                    <div class="corr">
+                        \(\overrightarrow{u}{{6-2}\choose{4-1}} = {{4}\choose{3}}\) et
+                        \(\overrightarrow{v}{{6-(-2)}\choose{-2-1}} = {{8}\choose{-3}}\).<br>
+                        Ainsi \(||\overrightarrow{u}||=\sqrt{4^2+3^2}=\sqrt{25}=5\) et
+                        \(||\overrightarrow{v}||=\sqrt{8^2+(-3)^2}=\sqrt{73}\)<br>
+                        d'où
+                        \(\dfrac{\overrightarrow{u}}{||\overrightarrow{u}||}={{\frac{4}{5}}\choose{\frac{3}{5}}}={{0{,}8}\choose{0{,}6}}\)
+                        et
+                        \(\dfrac{\overrightarrow{v}}{||\overrightarrow{v}||}={{\frac{8}{\sqrt{73}}}\choose{\frac{-3}{\sqrt{73}}}}\approx{{0{,}94}\choose{-0{,}35}}\)
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/vecu.svg" alt="" style="--width-print:6cm;">
+                </figure>
+                <br>
+                <figure>
+                    <img src="assets/vecex.svg" alt="" style="--width-print:6cm;">
+                </figure>
+
+            </div>
+        </div>
+
+        <h3>Définition</h3>
+        <div class="row">
+            <div class="col">
+                <div class="defi">
+                    \(\overrightarrow{F}\) est un vecteur, et \((d)\) une droite dirigée par un vecteur
+                    \(\overrightarrow{u}\) normé.<br>
+                    On appelle <strong>projeté othogonal</strong> de \(\overrightarrow{F}\) sur
+                    \((d)\) (on peut aussi dire sur \(\overrightarrow{u}\), seule la direction importe) le vecteur
+                    \(\overrightarrow{F}_d\) défini par :
+                    \(\overrightarrow{F}_d=||\overrightarrow{F}||\cos(\alpha)\,\overrightarrow{u}\)
+                </div>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/projdef.svg" style="--width-print:5cm;" />
+                </figure>
+            </div>
+        </div>
+
+        <div class="prop">
+            Tout vecteur dont l'origine et l'extrémité sont placées sur les mêmes droites
+            perpendiculaires à \((d)\) que \(\overrightarrow{F}\) a même projeté orthogonal que
+            \(\overrightarrow{F}\)
+            sur \((d)\).
+        </div>
+
+        <div class="exo">Dessiner un vecteur \(\overrightarrow{F}_1\) ayant même projeté orthogonal sur \((d)\) que
+            \(\overrightarrow{F}\).
+            <div class="corr">
+                Tout vecteur dont le départ est sur la ligne pointillée perpendiculaire à \((d)\) la plus à gauche et
+                dont l'arrivée est sur la ligne pointillée perpendiculaire à \((d)\) la plus à droite convient.
+            </div>
+        </div>
+
+        <div class="exo">\(\overrightarrow{w}\), de norme 3, fait un angle de
+            \(\frac{-\pi}{3}\) avec la droite
+            \(d\) dirigée par \(\overrightarrow{v}{3\choose4}\).<br>
+            Calculer les coordonnées de
+            \(\overrightarrow{w_d}\)
+            . Attention : \(\overrightarrow{v}\) n'est pas normé.
+            <div class="corr">
+                <ul>
+                    <li>
+                        Normons \(\overrightarrow{v}\) : \(||\overrightarrow{v}||=\sqrt{3^2+4^2}=5\) donc
+                        \(\dfrac{\overrightarrow{v}}{||\overrightarrow{v}||}={{\frac{3}{5}}\choose{\frac{4}{5}}}={{0{,}6}\choose{0{,}8}}\).
+                    </li>
+                    <li>
+                        Calculons \(||\overrightarrow{w}||\cos\frac{-\pi}{3}= 3 \times \frac{1}{2} = \frac{3}{2}\)
+                    </li>
+                    <li>
+                        On a ainsi \(\overrightarrow{w_d} = ||\overrightarrow{w}||\cos\alpha
+                        \dfrac{\overrightarrow{v}}{||\overrightarrow{v}||} = \frac{3}{2} {{0{,}6}\choose{0{,}8}} =
+                        {{0{,}9}\choose{1{,}2}}\)
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <h3>Sur les axes</h3>
+        <div class="row">
+            <div class="col">
+                <div class="prop">
+                    On se place dans un repère <strong>orthonormé</strong>
+                    \(\left(O;\overrightarrow{i};\overrightarrow{j}\right)\).
+                    Toutes les lignes de rappel sont parallèles ou perpendiculaires aux axes. Le vecteur
+                    \(\overrightarrow{F}\)
+                    fait un angle
+                    \(\alpha\) avec l'axe \((Ox)\). On obtient :
+                    <ul>
+                        <li>
+                            Le <strong>projeté othogonal de \(\overrightarrow{F}\) sur \((Ox)\)</strong> le
+                            vecteur
+                            \(\overrightarrow{F_x}=F_x\overrightarrow{i}\) avec :
+                            \(F_x=||\overrightarrow{F}||\cos\alpha\).
+                        </li>
+                        <li>
+                            Le <strong>projeté othogonal de \(\overrightarrow{F}\) sur \((Oy)\)</strong> le
+                            vecteur
+                            \(\overrightarrow{F_y}=F_y\overrightarrow{j}\) avec :
+                            \(F_y=||\overrightarrow{F}||\sin\alpha\).
+                        </li>
+                        <li class="surl">
+                            Les coordonnées de \(\overrightarrow{F}\) :
+                            \(
+                            {{F_x}\choose{F_y}}
+                            =\left(\begin{array}{c}
+                            ||\overrightarrow{F}||\cos\alpha \\
+                            ||\overrightarrow{F}||\sin\alpha
+                            \end{array}\right)
+                            =||\overrightarrow{F}||
+                            \left(\begin{array}{c} \cos\alpha \\
+                            \sin\alpha
+                            \end{array}\right)
+                            \)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/proj.svg" style="--width-print:6cm;" />
+                </figure>
+            </div>
+        </div>
+
+        <div class="exo"> Un vecteur \(\overrightarrow{F}\), de norme 10, représentant une force, fait un angle de -60°
+            avec l'horizontale.<br>
+            Déterminer les valeurs arrondies au dixième des coordonnées \({{F_x}\choose{F_y}}\).
+            <div class="corr">
+                <ul>
+                    <li>\(F_x=||\overrightarrow{F}||\cos\alpha=10\cos(-60^\circ)=10\times\frac{1}{2}=5\)</li>
+                    <li>\(F_y=||\overrightarrow{F}||\sin\alpha=10\sin(-60^\circ)=10\times\frac{-\sqrt{3}}{2}=-5\sqrt{3}\approx
+                        8{,}7\)
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <h2>(In)Équations trigonométriques</h2>
+        <h3>Équation \(\cos x=k\) avec \(k\in\mathbb{R}\)</h3>
+        <div class="row">
+            <div class="col">
+                <div class="prop">
+                    <ul>
+                        <li> Si \(k&lt;-1\) ou bien si \(k&gt;1\), l'équation \(\cos x = k\) n'a pas de solution ;
+                        </li>
+                        <li> si \(k\in[-1;1]\), alors \(\cos x = k\) a une infinité de solutions dans
+                            \(\mathbb{R}\),
+                            qui
+                            correspondent
+                            à
+                            une ou
+                            deux solutions modulo \(2\pi\).
+                        </li>
+                    </ul>
+                </div>
+                <div class="meth">
+                    <ol>
+                        <li> On place \(k\) sur <strong>l'axe (Ox)</strong> (correspondant à \(\cos\)) ;
+                        </li>
+                        <li> on recherche les deux angles \(\alpha\) et \(-\alpha\) tels que \(\cos \alpha=k\) ;<br>
+
+                            <div class="rema">
+                                on peut utiliser \(\alpha=\arccos k\) noté aussi \(\cos^{-1} k\) ;
+                            </div>
+                        </li>
+                        <li> on a alors :
+                            <span class="surl">\(\cos x = k ~~~\Leftrightarrow~~~ x\equiv\alpha~~(2\pi)\textrm{ ou
+                                }x\equiv-\alpha~~(2\pi)\)</span>
+                        </li>
+                    </ol>
+                </div>
+
+
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/eqcos.svg" style="--width-print: 5cm;" /><br>
+                </figure>
+            </div>
+        </div>
+
+        <div class="exo">Résoudre \(\cos x=\frac{1}{2}\).
+            <div class="corr">
+                \(\cos x=\frac{1}{2} \Leftrightarrow x\equiv\frac{\pi}{3}\pmod{2\pi}\textrm{ ou
+                }x\equiv\frac{-\pi}{3}\pmod{2\pi}\)
+            </div>
+        </div>
+
+        <h3 class="subsection">Équation \(\sin x=k\) avec \(k\in\mathbb{R}\)</h3>
+        <div class="row">
+            <div class="col">
+                <div class="prop">
+                    <ul>
+                        <li> Si \(k&lt;-1\) ou bien si \(k&gt;1\), l'équation \(\sin x = k\) n'a pas de solution ;
+                        </li>
+                        <li> si \(k\in[-1;1]\), alors \(\sin x = k\) a une infinité de solutions dans
+                            \(\mathbb{R}\),
+                            qui
+                            correspondent
+                            à
+                            une ou
+                            deux solutions modulo \(2\pi\).
+                        </li>
+                    </ul>
+                </div>
+                <div class="meth">
+                    <ol>
+                        <li> On place \(k\) sur <strong>l'axe (Oy)</strong> (correspondant à \(\sin\)) ;
+                        </li>
+                        <li> on recherche les deux angles \(\alpha\) et \(\pi-\alpha\) tels que \(\sin
+                            \alpha=k\) ;
+
+                            <div class="rema">
+                                on peut utiliser \(\alpha=\arcsin k\) noté aussi \(\sin^{-1} k\) ;
+                            </div>
+                        </li>
+                        <li> on a alors :
+                            <span class="surl">\(\sin x = k ~~~\Leftrightarrow
+                                ~~~ x\equiv\alpha~~(2\pi)\textrm{ ou }x\equiv\pi-\alpha~~(2\pi)\)</span>
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/eqsin.svg" style="--width-print: 5cm;" />
+                </figure>
+            </div>
+        </div>
+
+        <div class="exo">Résoudre \(\sin x=\frac{1}{2}\).</div>
+        <div class="corr">
+            \(\cos x=\frac{1}{2} \Leftrightarrow x\equiv\frac{\pi}{6}\pmod{2\pi}\textrm{ ou
+            }x\equiv\pi-\frac{\pi}{6}\equiv\frac{5\pi}{6}\pmod{2\pi}\)
+        </div>
+        <div class="rema">
+            Attention à ne pas se tromper d'axe en plaçant \(k\) !
+        </div>
+
+        <div class="exo">Résoudre les équations trigonométriques suivantes
+            <ol class="row">
+                <li> \(3\sin x -5=0\)
+                </li>
+                <li> \(\sin^2 x=2\)
+                </li>
+                <li> \(\sqrt{2}+2\cos x =0\)
+                </li>
+                <li> \(\sin\left(x+\frac{\pi}{4}\right)=\frac{1}{2}\)
+                </li>
+                <li> \(2\sin 2x=1\)
+                </li>
+                <li> \(\cos\frac{x}{2}=\frac{-\sqrt{2}}{2}\)
+                </li>
+                <li> \(4\sin^2 x-3=0\)
+                </li>
+                <li> \(2\cos^2 x=1\)
+                </li>
+                <li> \(\sin 3x= \cos 2x\)
+                </li>
+                <li> \(\cos^2x=\sin^2 2x\)
+                </li>
+            </ol>
+            <div class="corr">
+                Isoler les sinus ou les cosinus pour résoudre. Faire le schéma ! On rappelle que l'équation
+                \(X^2=k&gt;0\) a deux solutions : \(-\sqrt{k}\) ou \(\sqrt{k}\). <br> Solutions :
+                <ol>
+                    <li> \(3\sin x -5=0 \Leftrightarrow \sin=\frac{5}{3}&gt;1\) donc pas de solution.
+                    </li>
+                    <li> \(\sin^2 x=2 \Leftrightarrow \sin x = \sqrt{2}&gt;1\textrm{ ou }\sin x = -\sqrt{2}&lt;-1\) donc
+                        pas de
+                        solutions.
+                    </li>
+                    <li> \(\sqrt{2}+2\cos x =0 \Leftrightarrow \cos x = \frac{\sqrt{2}}{2}\)
+                        \(\Leftrightarrow
+                        x \equiv \frac{\pi}{4} \textrm{ ou } x\equiv \frac{-\pi}{4} \pmod{2\pi}\)
+                    </li>
+                    <li> \(\sin\left(x+\frac{\pi}{4}\right)=\frac{1}{2}\)
+                    </li>
+                    <li> \(2\sin 2x=1
+                        \Leftrightarrow \sin 2x = \frac{1}{2}\)
+                        \(\Leftrightarrow 2x \equiv \frac{\pi}{6} \pmod{2\pi} \textrm{ ou } 2x \equiv \frac{5\pi}{6}
+                        \pmod{2\pi}\)
+                        \(\Leftrightarrow x \equiv \frac{\pi}{12} \pmod{\pi} \textrm{ ou } x \equiv \frac{5\pi}{12}
+                        \pmod{\pi}\)
+                    </li>
+                    <li> \(\cos\frac{x}{2}=\frac{-\sqrt{2}}{2} \Leftrightarrow
+                        \frac{x}{2} \equiv \frac{3\pi}{4} \pmod{2\pi} \textrm{ ou } \frac{x}{2} \equiv \frac{-3\pi}{4}
+                        \pmod{2\pi}\)
+                        \(\Leftrightarrow
+                        x \equiv \frac{3\pi}{2} \pmod{4\pi} \textrm{ ou } x \equiv \frac{-3\pi}{2} \pmod{4\pi}
+                        \)
+                    </li>
+                    <li> \(4\sin^2 x-3=0 \Leftrightarrow
+                        \sin x =\frac{\sqrt{3}}{2} \textrm{ ou }\sin x =\frac{-\sqrt{3}}{2}\)
+                        \(\Leftrightarrow
+                        x \equiv \frac{\pi}{3} \pmod{2\pi} \textrm{ ou } x \equiv \frac{2\pi}{3} \pmod{2\pi} \textrm{ ou
+                        }
+                        x \equiv \frac{-\pi}{3} \pmod{2\pi} \textrm{ ou } x \equiv \frac{-2\pi}{3} \pmod{2\pi}
+                        \)
+                    </li>
+                    <li> \(2\cos^2 x=1 \Leftrightarrow
+                        \cos x =\frac{\sqrt{2}}{2} \textrm{ ou }\cos x =\frac{-\sqrt{2}}{2}\)
+                        \(\Leftrightarrow
+                        x \equiv \frac{\pi}{4} \pmod{2\pi} \textrm{ ou } x \equiv \frac{-\pi}{4} \pmod{2\pi} \textrm{ ou
+                        }
+                        x \equiv \frac{3\pi}{4} \pmod{2\pi} \textrm{ ou } x \equiv \frac{-3\pi}{4} \pmod{2\pi}
+                        \)
+                    </li>
+                    <li> \(\sin 3x= \cos 2x \Leftrightarrow \sin 3x = \sin\left(\frac{\pi}{2}-2x\right)\)
+                        \(\Leftrightarrow
+                        3x \equiv \frac{\pi}{2}-2x \pmod{2\pi} \textrm{ ou } 3x \equiv \pi-\left(\frac{\pi}{2}-2x\right)
+                        \pmod{2\pi}
+                        \)
+                        \(\Leftrightarrow
+                        5x \equiv \frac{\pi}{2} \pmod{2\pi} \textrm{ ou } x \equiv \frac{\pi}{2} \pmod{2\pi}
+                        \)
+                        \(\Leftrightarrow
+                        x \equiv \frac{\pi}{10} \pmod{\frac{2\pi}{5}} \textrm{ ou } x \equiv \frac{\pi}{2} \pmod{2\pi}
+                        \)
+                    </li>
+                    <li> \(\cos^2x=-\sin^2 2x \Leftrightarrow 1=\cos^2x+\sin^2 2x =0 \) : pas de solutions.
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+
+        <div class="exo">
+            Déterminer l'angle que fait le vecteur \(\sqrt{2}{{2}\choose{-2}}\) avec l'axe horizontal.
+            <div class="corr">
+                Réponse : \(\frac{-\pi}{4}\).
+            </div>
+        </div>
+        <h3>Inéquations</h3>
+        <div class="rema">
+            On adapte ces méthodes aux inéquations trigonométriques facilement.
+        </div>
+        <div class="exo">Résoudre \(\cos x \leq \dfrac{1}{2}\) et \(\sin x &gt;
+            \dfrac{\sqrt{3}}{2}\).
+            <div class="corr">
+                <ul>
+                    <li>
+                        \(\cos x \leq \dfrac{1}{2} \Leftrightarrow \frac{\pi}{3}\leqslant x \leqslant \frac{5\pi}{3}
+                        \pmod{2\pi}\)
+                    </li>
+                    <li>
+                        \(\sin x &gt; \dfrac{\sqrt{3}}{2} \Leftrightarrow \frac{\pi}{3}&lt; x &lt; \frac{2\pi}{3}
+                        \pmod{2\pi}
+                        \)
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </main>
+</body>
+
+</html>
