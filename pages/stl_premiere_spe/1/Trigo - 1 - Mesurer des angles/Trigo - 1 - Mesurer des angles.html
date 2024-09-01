@@ -43,7 +43,7 @@
         <h2>Mesure des angles avec le cercle trigonométrique</h2>
         <h3>Le radian</h3>
         <div class="row">
-            <div class="col" style="max-width: 75%;">
+            <div class="col">
                 <div class="defi">Étant donné un arc de cercle \(\overset{\frown}{l}\) de longueur
                     \(l\) et de
                     rayon
@@ -88,7 +88,7 @@
         </div>
 
         <div class="exo">Compléter le tableau par des mesures en degrés/radians associées. Compléter la troisième ligne
-            par
+            par plat/droit/obtus/aigu.
             <table class="mytable" style="width: 100%;">
                 <tr>
                     <th>en radian</th>
@@ -651,54 +651,157 @@
             </div>
 
         </div>
-        <div class="exo">⭐ Montrer que si \(\overrightarrow{u}//\overrightarrow{u'}\) et
-            \(\overrightarrow{v}//\overrightarrow{v'}\) (ces quatre vecteurs sont non nuls), alors <br>
-            \(2\widehat{\left(\overrightarrow{u'};\overrightarrow{v'}\right)}\equiv2\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\).
-            <div class="corr">
-                On sait que \(\overrightarrow{u}//\overrightarrow{u'}\)
-                donc \(\widehat{\left(\overrightarrow{u};\overrightarrow{u'}\right)}\equiv 0 \pmod{\pi}\), et en
-                multipliant par 2 : \(2\widehat{\left(\overrightarrow{u};\overrightarrow{u'}\right)}\equiv 0
-                \pmod{2\pi}\). On a aussi, en suivant le même raisonnement :
-                \(2\widehat{\left(\overrightarrow{v};\overrightarrow{v'}\right)}\equiv 0 \pmod{2\pi}\).<br>
-                On utilise la relation de Chasles :
-                \(2\widehat{\left(\overrightarrow{u'};\overrightarrow{v'}\right)}
-                \equiv
-                2\left(
-                \widehat{\left(\overrightarrow{u'};\overrightarrow{u}\right)}
-                +\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}
-                +\widehat{\left(\overrightarrow{v};\overrightarrow{v'}\right)}
-                \right)
-                \equiv
-                2\widehat{\left(\overrightarrow{u'};\overrightarrow{u}\right)}
-                +2\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}
-                +2\widehat{\left(\overrightarrow{v};\overrightarrow{v'}\right)}\)
+
+
+
+        <div class="exo">⭐<strong>Configurations sur une horloge</strong><br>
+            <p>
+                On se place dans un repère orthonormé \((O;I;J)\) et dans le cercle
+                trigonométrique
+                associé.<br>
+                On considère une horloge analogique (à aiguilles) tracée sur ce cercle trigonométrique, munie
+                d'une petite
+                aiguille
+                \(\overrightarrow{OP}\) de norme \(\frac{3}{4}\) et d'une grande aiguille
+                \(\overrightarrow{OG}\)
+                de
+                norme \(1\). Le fonctionnement de cette horloge à la fois esthétique et précise est
+                conventionnel ;
+                et
+                assuré
+                par des piles en bon état de marche.<br>
+                On note \(t\) le temps, en heures, et on considère une journée
+                \(\mathcal{D}=\left[0;24\right[\).<br>
+                Pour tout \(t\in \mathcal{D}\), on a :
                 \(
-                \equiv
-                -0+2\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}+0
-                \equiv
-                2\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}
-                \pmod{2\pi}
-                \)<br>
-                Remarque : grâce à ce calcul, on voit que la réciproque de ce résultat est aussi vraie.
-            </div>
+                \alpha=\widehat{\left(\overrightarrow{OJ};\overrightarrow{OP}\right)}\equiv\frac{-2\pi}{12}
+                t\pmod{2\pi}
+                \)
+                et
+                \(\beta=\widehat{\left(\overrightarrow{OJ};\overrightarrow{OG}\right)}\equiv-2\pi
+                t\pmod{2\pi}
+                \) et
+            </p>
+            <ol>
+                <li> Calculer
+                    \(\alpha\) et \(\beta\) pour \(t\in \left\{12\,;\,6{,}75\,;\right\}\) et faire des figures ; on
+                    insistera sur l'aspect esthétique de l'horloge.
+                    <div class="corr">
+                        Pour \(t=12\) : \(\alpha\equiv 0 \pmod{2\pi}\) et \(\beta\equiv 0 \pmod{2\pi}\)<br>
+                        Pour \(t=6{,}75\) : \(\alpha\equiv \frac{9\pi}{8} \pmod{2\pi}\) et \(\beta\equiv
+                        \frac{27\pi}{2}\equiv\frac{3\pi}{4} \pmod{2\pi}\)<br>
+                    </div>
+                </li>
+                <li> À quelle(s) heure(s) de la journée(s) les directions des deux aiguilles sont-elles symétriques par
+                    rapport à (Oy) ?
+                    <div class="corr">
+                        On résout \(\alpha\equiv-\beta\pmod{2\pi}\). On obtient \(t\equiv 0\pmod{\frac{12}{13}}\), ce
+                        qui donne :<br>
+                        0h0m0s ; 0h55m23s ; 1h50m46s ; 2h46m9s ; 3h41m32s ; 4h36m55s ; 5h32m18s ; 6h27m41s ; 7h23m4s ;
+                        8h18m27s ; 9h13m50s ; 10h9m13s ; 11h4m36s, pareil pour l'après-midi.
+                    </div>
+                </li>
+                <li> À quelle(s) heure(s) de la journée les directions des deux aiguilles sont-elles symétriques par
+                    rapport à
+                    \((Ox)\) ? (On résoudre \(\alpha\equiv\pi-\beta\pmod{2\pi}\).)
+                    <div class="corr">
+                        On résout \(\alpha\equiv\pi-\beta\pmod{2\pi}\).<br>
+                        On obtient \(t\equiv \frac{6}{13}\pmod{\frac{12}{13}}\), ce
+                        qui donne :<br>
+                        0h27m41s ; 1h23m4s ; 2h18m27s ; 3h13m50s; 4h9m13s ; 5h4m36s; 6h0m0s; 6h55m23s ; 7h50m46s ;
+                        8h46m9s ; 9h41m32s ; 10h36m55s ; 11h32m18s et pareil pour l'après-midi.
+                    </div>
+                </li>
+                <li> À quelle(s) heure(s) de la journée les deux aiguilles sont-elles alignées ? De
+                    même sens ?
+                    De
+                    sens
+                    opposé
+                    ?
+                    <div class="corr">
+                        On résout \(\alpha\equiv\beta\pmod{\pi}\).<br>
+                        On obtient \(t\equiv 0\pmod{\frac{6}{11}}\), ce
+                        qui donne, en alternant même sens et sens opposé :<br>
+                        0h0m0s ; 0h32m43s ; 1h5m27s ; 1h38m10s ; 2h10m54s ; 2h43m38s ; 3h16m21s ; 3h49m5s ; 4h21m49s ;
+                        4h54m32 ; 5h27m16s ; 6h ; 6h32m43s ; 7h5m27s ; 7h38m10s ; 8h10m54s ; 8h43m38s ; 9h16m21s ;
+                        9h49m5s ; 10h21m49s ; 10h54m32s ; 11h27m16s et pareil pour l'après-midi.
+                    </div>
+
+                </li>
+                <li> À quelle(s) heure(s) de la journée les deux aiguilles sont-elles perpendiculaires ?
+                    <div class="corr">
+                        On résout \(\alpha\equiv\frac{\pi}{2}+\beta\pmod{\pi}\).<br>
+                        On obtient \(t\equiv \frac{3}{11}\pmod{\frac{6}{11}}\), ce
+                        qui donne :<br>
+                        0h16m21s ; 0h49m5s ; 1h21m49s ; 1h54m32s ; 2h27m16s ; 3h0m0s ; 3h32m43s ; 4h5m27s ; 4h38m10s ;
+                        5h10m54s ; 5h43m38s ; 6h16m21s ; 6h49m5s ; 7h21m49s ; 7h54m32s ; 8h27m16s ; 9h0m0s ; 9h32m43s ;
+                        10h5m27s ; 10h38m10s ; 11h10m54s ; 11h43m38s et pareil pour l'après-midi.
+                    </div>
+                </li>
+            </ol>
         </div>
-        <div class="exo">⭐ On trace deux droites \(d\) et \(d'\). Une troisième droite \(\Delta\) coupe ces deux
-            droites
-            respectivement en en \(A\) et \(A'\).<br>
-            Déduire de la réponse précédente que \(d//d'\) équivaut à «l'un des angles orientés autour de
-            \(A\)
-            a le
-            même double qu'un angle orienté autour de \(A'\)».
-            <div class="corr">
-                Si \(d // d'\), alors les angles correspondants sont égaux donc leurs doubles aussi.<br>
-                Si «l'un des angles orientés autour de
-                \(A\)
-                a le
-                même double qu'un angle orienté autour de \(A'\)» est vrai, il suffit de reprendre les conclusions de
-                l'exercice précédent avec \(\overrightarrow{u}\) et \(\overrightarrow{u'}\) des vecteurs directeurs de
-                \(d\) et \(d'\), et \(\overrightarrow{v}=\overrightarrow{v'}\) un vecteur directeur de \(\Delta\).
-            </div>
+
+
+
+        <div class="exo">⭐ <ol type="a">
+                <li>
+                    Montrer que si \(\overrightarrow{u}//\overrightarrow{u'}\) et
+                    \(\overrightarrow{v}//\overrightarrow{v'}\) (ces quatre vecteurs sont non nuls), alors <br>
+                    \(2\widehat{\left(\overrightarrow{u'};\overrightarrow{v'}\right)}\equiv2\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\).
+                    <div class="corr">
+                        On sait que \(\overrightarrow{u}//\overrightarrow{u'}\)
+                        donc \(\widehat{\left(\overrightarrow{u};\overrightarrow{u'}\right)}\equiv 0 \pmod{\pi}\), et en
+                        multipliant par 2 : \(2\widehat{\left(\overrightarrow{u};\overrightarrow{u'}\right)}\equiv 0
+                        \pmod{2\pi}\). On a aussi, en suivant le même raisonnement :
+                        \(2\widehat{\left(\overrightarrow{v};\overrightarrow{v'}\right)}\equiv 0 \pmod{2\pi}\).<br>
+                        On utilise la relation de Chasles :
+                        \(2\widehat{\left(\overrightarrow{u'};\overrightarrow{v'}\right)}
+                        \equiv
+                        2\left(
+                        \widehat{\left(\overrightarrow{u'};\overrightarrow{u}\right)}
+                        +\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}
+                        +\widehat{\left(\overrightarrow{v};\overrightarrow{v'}\right)}
+                        \right)
+                        \equiv
+                        2\widehat{\left(\overrightarrow{u'};\overrightarrow{u}\right)}
+                        +2\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}
+                        +2\widehat{\left(\overrightarrow{v};\overrightarrow{v'}\right)}\)
+                        \(
+                        \equiv
+                        -0+2\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}+0
+                        \equiv
+                        2\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}
+                        \pmod{2\pi}
+                        \)<br>
+                        Remarque : grâce à ce calcul, on voit que la réciproque de ce résultat est aussi vraie.
+                    </div>
+                </li>
+                <li>
+                    On trace deux droites \(d\) et \(d'\). Une troisième droite \(\Delta\) coupe ces deux
+                    droites
+                    respectivement en en \(A\) et \(A'\).<br>
+                    Déduire de la réponse précédente que \(d//d'\) équivaut à «l'un des angles orientés autour de
+                    \(A\)
+                    a le
+                    même double qu'un angle orienté autour de \(A'\)».
+                    <div class="corr">
+                        Si \(d // d'\), alors les angles correspondants sont égaux donc leurs doubles aussi.<br>
+                        Si «l'un des angles orientés autour de
+                        \(A\)
+                        a le
+                        même double qu'un angle orienté autour de \(A'\)» est vrai, il suffit de reprendre les
+                        conclusions de
+                        l'exercice précédent avec \(\overrightarrow{u}\) et \(\overrightarrow{u'}\) des vecteurs
+                        directeurs de
+                        \(d\) et \(d'\), et \(\overrightarrow{v}=\overrightarrow{v'}\) un vecteur directeur de
+                        \(\Delta\).
+                    </div>
+
+                </li>
+            </ol>
         </div>
+
+
     </main>
 </body>
 

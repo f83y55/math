@@ -10,9 +10,8 @@
 <body onload="body()">
     <main>
         <h1>Trigonométrie - 3 - Fonctions sinusoïdales</h1>
-        
+
         <h2>Fonctions sinusoïdales</h2>
-            <h3>Signe</h3>
 
         <div class="rema">
             \(\cos\) et \(\sin\) étant \(2\pi\)-périodiques, on les étudie sur une période :
@@ -23,250 +22,313 @@
 
         <div class="row">
             <div class="col">
-<div class="exo">
+                <div class="exo">
                     Compléter les tableaux de signe de cosinus et sinus :
 
-<table style="text-align:center;padding:0;margin:2mm;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;--cell-width:8mm;--cell-height:6mm;">
-                <tbody><tr style="border-bottom: 1px solid;">
-                    <td style="border-right: 1px solid;">\(x\)</td>
-                    <td>\(-π\)</td>
-                    <td></td>
-                    <td>\(\frac{-π}{2}\)</td>
-                    <td></td>
-                    <td>\(0\)</td>
-                    <td></td>
-                    <td>\(\frac{π}{2}\)</td>
-                    <td></td>
-                    <td>\(π\)</td>
-                </tr>
-                <tr>
-                    <td style="border-right: 1px solid;">\(\cos(x)\)</td>
-                    <td></td>
-                                    <td><div class="corr">\(-\)</div></td>
-                    <td style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">\(0\)</td>
-                    <td></td>
-                                    <td style="background-image: linear-gradient(90deg, rgb(192, 191, 188), rgb(192, 191, 188)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;"><div class="corr">\(+\)</div></td>
-                    <td></td>
-                    <td style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">\(0\)</td>
-                                    <td><div class="corr">\(-\)</div></td>
-                    <td></td>
-                </tr>
-                                </tbody>
-                        </table>
+                    <table
+                        style="text-align:center;padding:0;margin:2mm;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;--cell-width:8mm;--cell-height:8mm;">
+                        <tbody>
+                            <tr style="border-bottom: 1px solid;">
+                                <td style="border-right: 1px solid;">\(x\)</td>
+                                <td>\(-π\)</td>
+                                <td></td>
+                                <td>\(\frac{-π}{2}\)</td>
+                                <td></td>
+                                <td>\(0\)</td>
+                                <td></td>
+                                <td>\(\frac{π}{2}\)</td>
+                                <td></td>
+                                <td>\(π\)</td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;">\(\cos(x)\)</td>
+                                <td></td>
+                                <td>
+                                    <div class="corr">\(-\)</div>
+                                </td>
+                                <td
+                                    style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    \(0\)</td>
+                                <td></td>
+                                <td
+                                    style="background-image: linear-gradient(90deg, rgb(192, 191, 188), rgb(192, 191, 188)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    <div class="corr">\(+\)</div>
+                                </td>
+                                <td></td>
+                                <td
+                                    style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    \(0\)</td>
+                                <td>
+                                    <div class="corr">\(-\)</div>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-<table style="text-align:center;padding:0;margin:2mm;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;--cell-width:8mm;--cell-height:6mm;">
-                <tbody><tr style="border-bottom: 1px solid;">
-                    <td style="border-right: 1px solid;">\(x\)</td>
-                    <td>\(-π\)</td>
-                    <td></td>
-                    <td>\(\frac{-π}{2}\)</td>
-                    <td></td>
-                    <td>\(0\)</td>
-                    <td></td>
-                    <td>\(\frac{π}{2}\)</td>
-                    <td></td>
-                    <td>\(π\)</td>
-                </tr>
+                    <table
+                        style="text-align:center;padding:0;margin:2mm;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;--cell-width:8mm;--cell-height:8mm;">
+                        <tbody>
+                            <tr style="border-bottom: 1px solid;">
+                                <td style="border-right: 1px solid;">\(x\)</td>
+                                <td>\(-π\)</td>
+                                <td></td>
+                                <td>\(\frac{-π}{2}\)</td>
+                                <td></td>
+                                <td>\(0\)</td>
+                                <td></td>
+                                <td>\(\frac{π}{2}\)</td>
+                                <td></td>
+                                <td>\(π\)</td>
+                            </tr>
 
-                <tr>
-                    <td style="border-right: 1px solid;" class="">\(\sin(x)\)</td>
-                    <td class="">\(0\)</td>
-                    <td></td>
-                                    <td class="" style="color: rgb(0, 0, 0); background-image: linear-gradient(90deg, rgb(192, 191, 188), rgb(192, 191, 188)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;"><div class="corr">\(-\)</div></td>
-                                    <td></td>
-                                    <td style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">\(0\)</td>
-                    <td></td>
-                                    <td style="background-image: linear-gradient(90deg, rgb(192, 191, 188), rgb(192, 191, 188)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;"><div class="corr">\(+\)</div></td>
-                                    <td></td>
-                                    <td>\(0\)</td>
-                </tr>
-                            </tbody>
-                        </table>
-                
-                
-                           </div>
-</div>
+                            <tr>
+                                <td style="border-right: 1px solid;" class="">\(\sin(x)\)</td>
+                                <td class="">\(0\)</td>
+                                <td></td>
+                                <td class=""
+                                    style="color: rgb(0, 0, 0); background-image: linear-gradient(90deg, rgb(192, 191, 188), rgb(192, 191, 188)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    <div class="corr">\(-\)</div>
+                                </td>
+                                <td></td>
+                                <td
+                                    style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    \(0\)</td>
+                                <td></td>
+                                <td
+                                    style="background-image: linear-gradient(90deg, rgb(192, 191, 188), rgb(192, 191, 188)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                    <div class="corr">\(+\)</div>
+                                </td>
+                                <td></td>
+                                <td>\(0\)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
             <div class="col" style="align-items:center;">
                 <figure>
-                    <img src="assets/ctsigne.svg" style="--width-print:5cm;" />
+                    <img src="assets/ctsigne.svg" style="--width-print:5.5cm;" />
                 </figure>
-                            </div>
+            </div>
         </div>
 
-<h3>Variations</h3>
-            <div class="none" style="text-align:center;">
-                    <img src="assets/cossin.svg" style="--width-print: 17cm;" />
-                </div>
+        <h3>Variations</h3>
+        <div class="none" style="text-align:center;">
+            <img src="assets/cossin.svg" style="--width-print: 17.8cm;" />
+        </div>
 
 
-                
-                <div class="exo">
-                    Compléter les tableaux de variations de cosinus et sinus :
+
+        <div class="exo">
+            Compléter les tableaux de variations de cosinus et sinus :
             <div class="row">
-                    <div class="col">
-                    <table style="text-align:center;padding:0;margin:0 1em 0;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;--cell-width:8mm;--cell-height:6mm;">
-                <tbody>
-                                <tr style="border-bottom: 1px solid;">
-                    <td style="border-right: 1px solid;">\(x\)</td>
-                    <td class="">\(-π\)</td>
-                    <td></td><td class="">\(\frac{-π}{2}\)</td><td></td>
-                    <td class="">\(0\)</td>
-                    <td></td><td>\(\frac{π}{2}\)</td><td></td>
-                    <td class="">\(π\)<br></td>
-                </tr>
-                
-                <tr>
-                    <td style="border-right: 1px solid;"></td>
-                    <td></td>
-                    <td></td><td></td><td></td>
-                                    <td><div class="corr">\(1\)</div></td>
-                    <td></td><td class=""><br></td><td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td style="border-right: 1px solid;"><br></td>
-                    <td></td>
-                    <td></td><td class=""></td><td class="">↗</td>
-                    <td></td>
-                                    <td><div class="corr">↘</div></td>
-                                    <td></td>
-                                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td style="border-right: 1px solid;">\(\cos(x)\)<br></td>
-                    <td class=""><br></td>
-                    <td></td><td>\(0\)</td><td><br></td>
-                    <td class=""><br></td>
-                                    <td></td><td><div class="corr">\(0\)</div></td><td></td>
-                    <td><br></td>
-                </tr>
-            <tr><td style="border-right: 1px solid;"></td>
-                                    <td></td>
-                                    <td>↗</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><div class="corr">↘</div></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td style="border-right: 1px solid;"></td>
-                                    <td>\(-1\)</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>\(-1\)</td>
-                                </tr>
+                <div class="col">
+                    <table
+                        style="text-align:center;padding:0;margin:0 1em 0;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;--cell-width:8mm;--cell-height:6mm;">
+                        <tbody>
+                            <tr style="border-bottom: 1px solid;">
+                                <td style="border-right: 1px solid;">\(x\)</td>
+                                <td class="">\(-π\)</td>
+                                <td></td>
+                                <td class="">\(\frac{-π}{2}\)</td>
+                                <td></td>
+                                <td class="">\(0\)</td>
+                                <td></td>
+                                <td>\(\frac{π}{2}\)</td>
+                                <td></td>
+                                <td class="">\(π\)<br></td>
+                            </tr>
 
-                    </tbody>
-                        </table>
-                        </div>
-                    <div class="col">
+                            <tr>
+                                <td style="border-right: 1px solid;"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <div class="corr">\(1\)</div>
+                                </td>
+                                <td></td>
+                                <td class=""><br></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;"><br></td>
+                                <td></td>
+                                <td></td>
+                                <td class=""></td>
+                                <td class="">↗</td>
+                                <td></td>
+                                <td>
+                                    <div class="corr">↘</div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;">\(\cos(x)\)<br></td>
+                                <td class=""><br></td>
+                                <td></td>
+                                <td>\(0\)</td>
+                                <td><br></td>
+                                <td class=""><br></td>
+                                <td></td>
+                                <td>
+                                    <div class="corr">\(0\)</div>
+                                </td>
+                                <td></td>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;"></td>
+                                <td></td>
+                                <td>↗</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <div class="corr">↘</div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;"></td>
+                                <td>\(-1\)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>\(-1\)</td>
+                            </tr>
 
-<table style="text-align:center;padding:0;margin:0 1em 0;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;--cell-width:8mm;--cell-height:6mm;">
-                <tbody>
-                                <tr style="border-bottom: 1px solid;">
-                    <td style="border-right: 1px solid;">\(x\)</td>
-                    <td class="">\(-π\)</td>
-                    <td></td><td class="">\(\frac{-π}{2}\)</td><td></td>
-                    <td class="">\(0\)</td>
-                    <td></td><td>\(\frac{π}{2}\)</td><td></td>
-                    <td class="">\(π\)<br></td>
-                </tr>
-
-                                <tr>
-                                    <td style="border-right: 1px solid;"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><div class="corr">\(1\)</div></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td style="border-right: 1px solid;"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><div class="corr">↗</div></td>
-                                    <td></td>
-                                    <td><div class="corr">↘</div></td>
-                                    <td></td>
-                                </tr>
-                                <tr><td style="border-right: 1px solid;">\(\sin(x)\)</td>
-                                    <td>\(0\)</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><div class="corr">\(0\)</div></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>\(0\)</td>
-                                </tr>
-                                <tr>
-                                    <td style="border-right: 1px solid;"></td>
-                                    <td></td>
-                                    <td>↘</td>
-                                    <td></td>
-                                    <td><div class="corr">↗</div></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>  
-                                </tr>
-                                <tr>
-                                    <td style="border-right: 1px solid;"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>\(-1\)</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </div>
+                        </tbody>
+                    </table>
                 </div>
-                    </div>
-            
+                <div class="col">
+
+                    <table
+                        style="text-align:center;padding:0;margin:0 1em 0;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;--cell-width:8mm;--cell-height:6mm;">
+                        <tbody>
+                            <tr style="border-bottom: 1px solid;">
+                                <td style="border-right: 1px solid;">\(x\)</td>
+                                <td class="">\(-π\)</td>
+                                <td></td>
+                                <td class="">\(\frac{-π}{2}\)</td>
+                                <td></td>
+                                <td class="">\(0\)</td>
+                                <td></td>
+                                <td>\(\frac{π}{2}\)</td>
+                                <td></td>
+                                <td class="">\(π\)<br></td>
+                            </tr>
+
+                            <tr>
+                                <td style="border-right: 1px solid;"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <div class="corr">\(1\)</div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <div class="corr">↗</div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="corr">↘</div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;">\(\sin(x)\)</td>
+                                <td>\(0\)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <div class="corr">\(0\)</div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>\(0\)</td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;"></td>
+                                <td></td>
+                                <td>↘</td>
+                                <td></td>
+                                <td>
+                                    <div class="corr">↗</div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;"></td>
+                                <td></td>
+                                <td></td>
+                                <td>\(-1\)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
 
 
 
         <div class="exo">Quel est le nombre de points d'intersection des courbes représentant les fonctions \(\cos\) et
             \(\sin\) sur l'intervalle \(\left[0;200\pi\right]\) ?
-                <div class="corr">
-                    <ul>
-                       <li>
-                            Pour \(\cos\) : 200 points ;
-                        </li> 
-                        <li>
-                            Pour \(\sin\) : 201 points ;
-                        </li>
-                    </ul>
-                </div>
+            <div class="corr">
+                <ul>
+                    <li>
+                        Pour \(\cos\) : 200 points ;
+                    </li>
+                    <li>
+                        Pour \(\sin\) : 201 points ;
+                    </li>
+                </ul>
+            </div>
         </div>
 
 
 
-            <h2>Parité</h2>
-<h3>Fonctions paires</h3>
+        <h2>Parité</h2>
+        <h3>Fonctions paires</h3>
         <div class="row">
             <div class="col">
                 <div class="defi">
@@ -284,7 +346,7 @@
             <div class="col">
                 <div class="exem">
                     <figure>
-                        <img src="assets/fp.svg" style="--width-print: 4cm;"/>
+                        <img src="assets/fp.svg" style="--width-print: 4cm;" />
                     </figure>
                 </div>
             </div>
@@ -292,10 +354,10 @@
         <div class="exem">
             les fonctions définies par :
             \(x^n\) avec \(n\) entier pair et \(\cos(x)\)
-                        sont des fonctions paires.
+            sont des fonctions paires.
 
         </div>
-        
+
         <h3 class="subsection">Fonctions impaires</h3>
         <div class="row">
             <div class="col">
@@ -324,252 +386,247 @@
         </div>
         <div class="exem">
             les fonctions définies par :
-        \(x^n\) avec \(n\) entier impair, \(\sin(x)\), la fonction inverse, et \(\tan(x)\)
-             sont des fonctions impaires.
+            \(x^n\) avec \(n\) entier impair, \(\sin(x)\), la fonction inverse, et \(\tan(x)\)
+            sont des fonctions impaires.
 
         </div>
 
         <div class="exo">
-                <ol>
-                    <li> 
-                        Donner un exemple de fonction ni paire ni impaire
-<div class="corr">
-    \(f(x)=x+1\), par exemple.
-</div>
-                    </li>
-                    <li>
-                On note \(f\) une fonction définie sur \(\mathbb{R}\). On pose \(p(x)=\dfrac{f(x)+f(-x)}{2}\). Montrer que \(p\) est une fonction paire.
+            <ol>
+                <li>
+                    Donner un exemple de fonction ni paire ni impaire
+                    <div class="corr">
+                        \(f(x)=x+1\), par exemple.
+                    </div>
+                </li>
+                <li>
+                    On note \(f\) une fonction définie sur \(\mathbb{R}\). On pose \(p(x)=\dfrac{f(x)+f(-x)}{2}\).
+                    Montrer que \(p\) est une fonction paire.
                     <div class="corr">
                         On a \(p(-x)=p(x)\).
                     </div>
-                    </li>
-                     <li>
-                On pose \(i(x)=\dfrac{f(x)-f(-x)}{2}\). Montrer que \(i\) est une fonction impaire.
+                </li>
+                <li>
+                    On pose \(i(x)=\dfrac{f(x)-f(-x)}{2}\). Montrer que \(i\) est une fonction impaire.
                     <div class="corr">
                         On a \(i(-x)=-i(x)\).
                     </div>
-                    </li>
-                    <li>
-                        En déduire que \(f\) est la somme d'une fonction paire et d'une fonction impaire.
-                        <div class="corr">
-                            On a en effet, après calcul \(f(x)=p(x)+i(x)\).
-                        </div>
-                    </li>
-                </ol>
-                Moralité : une fonction qui n'est ni paire ni impaire est quand même la somme d'une fonction paire et d'une fonction impaire.
+                </li>
+                <li>
+                    En déduire que \(f\) est la somme d'une fonction paire et d'une fonction impaire.
+                    <div class="corr">
+                        On a en effet, après calcul \(f(x)=p(x)+i(x)\).
+                    </div>
+                </li>
+            </ol>
+            Moralité : une fonction qui n'est ni paire ni impaire est quand même la somme d'une fonction paire et d'une
+            fonction impaire.
         </div>
 
         <h2>Signal sinosoïdal</h2>
         <h3>Paramètres : période, pulsation, fréquence et phase à l'origine</h2>
-        <div class="defi">Une fonction du temps de la forme \(f(t)=A\cos\left(\omega
-            t+\varphi\right)\) ou
-            \(g(t)=A\sin\left(\omega t+\varphi\right)\) s'appelle signal sinusoïdal
-            d'<strong>amplitude</strong> ou bien <strong>valeur max</strong>
-            \(A\),
-            de
-            <strong>pulsation</strong> \(\omega\) et de <strong>phase à l'origine</strong> \(\varphi\).
-        </div>
+            <div class="defi">Une fonction du temps de la forme \(f(t)=A\cos\left(\omega
+                t+\varphi\right)\) ou
+                \(g(t)=A\sin\left(\omega t+\varphi\right)\) s'appelle signal sinusoïdal
+                d'<strong>amplitude</strong> ou bien <strong>valeur max</strong>
+                \(A\),
+                de
+                <strong>pulsation</strong> \(\omega\) et de <strong>phase à l'origine</strong> \(\varphi\).
+            </div>
 
-        <div class="prop">
-            Le graphe du signal est le même que les fonctions \(\sin\) et \(\cos\) vues
-            précedemment, mais
-            il
-            oscille
-            entre
-            les valeurs \(\pm A\) au lieu de \(\pm1\) et sa période n'est plus forcément \(2\pi\) :
-                    <br> On a <span class="surl">\(\omega=\dfrac{2\pi}{T}=2\pi F\)</span> où :
-        </div>
+            <div class="prop">
+                Le graphe du signal est le même que les fonctions \(\sin\) et \(\cos\) vues
+                précedemment, mais
+                il
+                oscille
+                entre
+                les valeurs \(\pm A\) au lieu de \(\pm1\) et sa période n'est plus forcément \(2\pi\) :
+                <br> On a <span class="surl">\(\omega=\dfrac{2\pi}{T}=2\pi F\)</span> où :
+            </div>
 
-        <div class="defi">
+            <div class="defi">
+                <ul>
+                    <li>
+                        \(T\) est la <strong>période</strong> (un temps, généralement en seconde dans le système
+                        international) ;
+                    </li>
+                    <li>
+                        \(F=\dfrac{1}{T}\) est la <strong>fréquence</strong> (généralement en hertz : Hz) ;
+                    </li>
+                    \(\omega = \dfrac{2\pi}{T} = 2\pi F\) est la <strong>pulsation</strong> (généralement en radians par
+                    seconde : rad/s).
+                    </li>
+                </ul>
+            </div>
+
+            <div class="exem">
+                \(f(x)=2\cos\left(2\pi x+\frac{\pi}{3}\right)\) et \(g(x)=4\sin\left(4\pi
+                x-\frac{\pi}{6}\right)\)
+                :<br>
+                <figure style="text-align: center;">
+                    <img src="assets/sigsin.svg" style="width: 12cm;" />
+                </figure>
+            </div>
+            <div class="exo">Identifier sur l'écriture du signal l'amplitude, la pulsation et la phase à
+                l'origine des deux
+                signaux
+                ci-dessus. En déduire leur périodes et leurs fréquences
+                <div class="corr">
                     <ul>
-                        <li>
-                            \(T\) est la <strong>période</strong> (un temps, généralement en seconde dans le système international) ;
-                         </li>
-                        <li>
-                            \(F=\dfrac{1}{T}\) est la <strong>fréquence</strong> (généralement en hertz : Hz) ;
+                        <li>Pour le signal en rouge : <br>
+                            Le signal oscille entre -2 et 2 donc son amplitude est de 2.<br>
+                            On lit \(\varphi=\frac{\pi}{3}\) et \(\omega = 2\pi\) ; on calcule
+                            \(T=\frac{2\pi}{\omega}=\frac{2\pi}{2\pi}=1\). On a aussi \(F=\frac{1}{T}=\frac{1}{1}=1\)
                         </li>
-                        \(\omega = \dfrac{2\pi}{T} = 2\pi F\) est la <strong>pulsation</strong> (généralement en radians par seconde : rad/s).
-                        </li>
-                    </ul>
-        </div>
-
-<div class="exem">
-            \(f(x)=2\cos\left(2\pi x+\frac{\pi}{3}\right)\) et \(g(x)=4\sin\left(4\pi
-            x-\frac{\pi}{6}\right)\)
-            :<br>
-            <figure style="text-align: center;">
-                <img src="assets/sigsin.svg" style="width: 12cm;" />
-            </figure>
-        </div>
-        <div class="exo">Identifier sur l'écriture du signal l'amplitude, la pulsation et la phase à
-            l'origine des deux
-            signaux
-            ci-dessus. En déduire leur périodes et leurs fréquences
-                    <div class="corr">
-                        <ul>
-                            <li>Pour le signal en rouge : <br>
-                                Le signal oscille entre -2 et 2 donc son amplitude est de 2.<br>
-                                On lit \(\varphi=\frac{\pi}{3}\) et \(\omega = 2\pi\) ; on calcule \(T=\frac{2\pi}{\omega}=\frac{2\pi}{2\pi}=1\). On a aussi \(F=\frac{1}{T}=\frac{1}{1}=1\)
-                            </li>
-                            <li>Pour le signal en vert : <br>
-                                Le signal oscille entre -4 et 4 donc son amplitude est de 4.<br>
-                                On lit \(\varphi=\frac{-\pi}{6}\) et \(\omega = 4\pi\) ; on calcule \(T=\frac{2\pi}{\omega}=\frac{2\pi}{4\pi}=\frac{1}{2}=0{,}5\). On a aussi \(F=\frac{1}{T}=\frac{1}{0{,}5}=2\)
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-<div class="exo">Tracer sur \(\left[-2;10\right]\) le signal sinusoïdal
-            \(h(t)=2\cos\left(\frac{\pi}{2}t\right)\). Commencer par calculer la période.
-                    <div style="text-align:center">
-                        <img src="assets/tracer.svg" style="--width-print:8cm;">
-                    </div> 
-<div class="corr" style="text-align:center">
-                        <img src="assets/tracerc.svg" style="--width-print:8cm;">
-                    </div> 
-
-        </div>
-
-                <h3>Utiliser : pulsation, période, fréquence</h3>
-
-        <div class="meth"> Pour déterminer la pulsation et la fréquence à partir d'un graphique :
-                    <ul>
-                        <li> 
-                            on détermine la longueur minimale du motif qui se répète sur la courbe du signal ;
-                        </li>
-                        <li>
-                            on en déduit \(\omega\) et \(F\) par le calcul : \(\omega = \dfrac{2\pi}{T}\) et \(F=\dfrac{1}{T}\).
+                        <li>Pour le signal en vert : <br>
+                            Le signal oscille entre -4 et 4 donc son amplitude est de 4.<br>
+                            On lit \(\varphi=\frac{-\pi}{6}\) et \(\omega = 4\pi\) ; on calcule
+                            \(T=\frac{2\pi}{\omega}=\frac{2\pi}{4\pi}=\frac{1}{2}=0{,}5\). On a aussi
+                            \(F=\frac{1}{T}=\frac{1}{0{,}5}=2\)
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="exo">Tracer sur \(\left[-2;10\right]\) le signal sinusoïdal
+                \(h(t)=2\cos\left(\frac{\pi}{2}t\right)\). Commencer par calculer la période.
+                <div style="text-align:center">
+                    <img src="assets/tracer.svg" style="--width-print:8cm;">
+                </div>
+                <div class="corr" style="text-align:center">
+                    <img src="assets/tracerc.svg" style="--width-print:8cm;">
+                </div>
+
+            </div>
+
+            <h3>Utiliser : pulsation, période, fréquence</h3>
+
+            <div class="meth"> Pour déterminer la pulsation et la fréquence à partir d'un graphique :
+                <ul>
+                    <li>
+                        on détermine la longueur minimale du motif qui se répète sur la courbe du signal ;
+                    </li>
+                    <li>
+                        on en déduit \(\omega\) et \(F\) par le calcul : \(\omega = \dfrac{2\pi}{T}\) et
+                        \(F=\dfrac{1}{T}\).
+                    </li>
+                </ul>
+            </div>
             <div class="rema">
-                    En général, on laisse \(\omega\) en valeur exacte (avec des \(\pi\)) lorsque c'est possible.
+                En général, on laisse \(\omega\) en valeur exacte (avec des \(\pi\)) lorsque c'est possible.
             </div>
 
             <div class="exo">
-                    Déterminer à partir du graphique la période, la pulsation et la fréquence de ce signal, ainsi que son amplitude \(A\).
+                Déterminer à partir du graphique la période, la pulsation et la fréquence de ce signal, ainsi que son
+                amplitude \(A\).
                 <div style="text-align:center">
-                        <img src="assets/pulse.svg" style="--width-print:12cm;">
-                    </div> 
+                    <img src="assets/pulse.svg" style="--width-print:12cm;">
+                </div>
 
-                    <div class="corr">
-                        Le signal oscille entre -3 et 3 donc \(A=3\). <br>
-                        On lit \(T=2\) sur la courbe donc \(\omega = \frac{2\pi}{T}=\pi\) ; on calcule \(F=\frac{1}{T}=\frac{1}{2}=0{,}5\).
-                    </div>
+                <div class="corr">
+                    Le signal oscille entre -3 et 3 donc \(A=3\). <br>
+                    On lit \(T=2\) sur la courbe donc \(\omega = \frac{2\pi}{T}=\pi\) ; on calcule
+                    \(F=\frac{1}{T}=\frac{1}{2}=0{,}5\).
+                </div>
             </div>
 
 
-                <h3>Utiliser : phase à l'origine</h3>
-                <div class="rema">
-                    La phase à l'origine introduit un décalage horizontal (dans le temps) du signal. C'est un angle, exprimé en degrés ou radians.
+            <h3>Utiliser : phase à l'origine</h3>
+            <div class="rema">
+                La phase à l'origine introduit un décalage horizontal (dans le temps) du signal. C'est un angle, exprimé
+                en degrés ou radians.
+            </div>
+            <div class="exem">
+                Le signal rouge est de la même forme qu'un sinus (il s'annule en 0). En mesurant sa période et son
+                amplitude, on sait qu'il s'écrit \(g(t)=3\sin(\pi t)\).<br>
+                <div style="text-align:center">
+                    <img src="assets/pulsephase.svg" style="--width-print:12cm;">
+
                 </div>
-                <div class="exem">
-                    Le signal rouge est de la même forme qu'un sinus (il s'annule en 0). En mesurant sa période et son amplitude, on sait qu'il s'écrit \(g(t)=3\sin(\pi t)\).<br>
-                                        <div style="text-align:center">
-                        <img src="assets/pulsephase.svg" style="--width-print:12cm;">
+                Le signal vert \(f\) est la même signal que \(g\) mais décalé dans le temps (déphasé).
+                Il s'écrit donc \(f(t)=3\sin(\pi t+\varphi)\). Comment trouver \(\varphi\) ?
+            </div>
+            <div class="meth">
+                <ul>
+                    <li>
+                        On mesure le décalage horizontal \(\Delta t\) (ici 0,25) qui correspond à l'abscisse du point A
+                        sur le schéma.
+                    </li>
+                    <li>Pour obtenir le <strong>signe</strong> de \(\varphi\) :
+                        <ol>
+                            <li> On se décale vers la droite (comme sur le schéma) : signe moins - ;
+                            </li>
+                            <li>On se décale vers la gauche : signe plus - ;
+                            </li>
+                        </ol>
 
-                    </div>
-Le signal vert \(f\) est la même signal que \(g\) mais décalé dans le temps (déphasé).
-                    Il s'écrit donc \(f(t)=3\sin(\pi t+\varphi)\). Comment trouver \(\varphi\) ?
+                    </li>
+                    <li>
+                        On effectue une règle de proportionalité pour obtenir une valeur angulaire : en effet, un tour
+                        complet (\(2\pi\)) correspond à une période \(T\) :
+                        <table class="mytable">
+                            <tr>
+                                <th>temps</th>
+                                <th>angle</th>
+                            </tr>
+                            <tr>
+                                <td>\(T=2\)</td>
+                                <td>\(2\pi=360^\circ\)</td>
+                            </tr>
+                            <tr>
+                                <td>\(\Delta t=0{,}25\)</td>
+                                <td>\(\varphi = ???\)</td>
+                            </tr>
+                        </table>
+                        Donc \(\varphi = \textrm{[Signe]} \Delta t \times \dfrac{2\pi}{T}=- \omega\Delta t = -\pi\times
+                        0{,}25 = \dfrac{-\pi}{4} \)
+                    </li>
+                    <li>On écrit le signal : \(f(t)=3\sin\left(\pi t-\frac{\pi}{4}\right)\)
+                </ul>
+            </div>
+            <div class="exo">
+                Écrire ce signal \(f\) sous la forme \(A\cos\left(\omega t + \varphi\right)\). On mesure le décalage
+                horizontal jusqu'au premier maximum de \(f\), un cosinus (non déphasé) présentant un max en zéro.
+                <div class="corr">
+                    On trouve alors \(\Delta t = 0{,}75\), ce qui en suivant les mêmes calculs donne \(\varphi = -\pi
+                    \times 0{,}75=\dfrac{-3\pi}{4}\), donc \(f(t)=3\cos\left(\pi t - \frac{3\pi}{4}\right)\)
                 </div>
-                <div class="meth">
-                    <ul>
-                        <li>
-                            On mesure le décalage horizontal \(\Delta t\) (ici 0,25) qui correspond à l'abscisse du point A sur le schéma.
-                        </li>
-                        <li>Pour obtenir le <strong>signe</strong> de \(\varphi\) :
-                            <ol>
-                                <li> On se décale vers la droite (comme sur le schéma) : signe moins - ;
-                                </li>
-                                <li>On se décale vers la gauche : signe plus - ;
-                                </li>
-                            </ol>
-
-                        </li>
-                        <li>
-                            On effectue une règle de proportionalité pour obtenir une valeur angulaire : en effet, un tour complet (\(2\pi\)) correspond à une période \(T\) :
-                            <table class="mytable">
-                                <tr>
-                                    <th>temps</th>
-                                    <th>angle</th>
-                                </tr>
-                                <tr>
-                                    <td>\(T=2\)</td>
-                                    <td>\(2\pi=360^\circ\)</td>
-                                </tr>
-                                <tr>
-                                    <td>\(\Delta t=0{,}25\)</td>
-                                    <td>\(\varphi = ???\)</td>
-                                </tr>
-                            </table>
-                            Donc \(\varphi = \textrm{[Signe]} \Delta t \times \dfrac{2\pi}{T}=- \omega\Delta t = -\pi\times 0{,}25 = \dfrac{-\pi}{4} \)
-                        </li>
-                        <li>On écrit le signal : \(f(t)=3\sin\left(\pi t-\frac{\pi}{4}\right)\)
-                    </ul>
-                </div>
-                <div class="exo">
-                    Écrire ce signal \(f\) sous la forme \(A\cos\left(\omega t + \varphi\right)\). On mesure le décalage horizontal jusqu'au premier maximum de \(f\), un cosinus (non déphasé) présentant un max en zéro.
-                    <div class="corr">
-                        On trouve alors \(\Delta t = 0{,}75\), ce qui en suivant les mêmes calculs donne \(\varphi = -\pi \times 0{,}75=\dfrac{-3\pi}{4}\), donc \(f(t)=3\cos\left(\pi t - \frac{3\pi}{4}\right)\)
-                    </div>
-                </div>
-
-                
-        <div class="exo"><strong>Activité de découverte</strong><br>
-            <p>
-                On se place dans un repère orthonormé \((O;I;J)\) et dans le cercle
-                trigonométrique
-                associé.<br>
-                On considère une horloge analogique tracée sur ce cercle trigonométrique, munie
-                d'une petite
-                aiguille
-                \(\overrightarrow{OP}\) de norme \(\frac{3}{4}\) et d'une grande aiguille
-                \(\overrightarrow{OG}\)
-                de
-                norme \(1\). Le fonctionnement de cette horloge à la fois esthétique et précise est
-                conventionnel ;
-                et
-                assuré
-                par des piles en bon état de marche.
-            </p>
-            <p>
-                On note \(t\) le temps, en heures, et on considère une journée
-                \(\mathcal{D}=\left[0;24\right[\).
-            </p>
-            <ol>
-                <li> Faire une figure ; on insistera sur l'aspect esthétique de l'horloge.
-                </li>
-                <li> Vérifier que pour tout \(t\in \mathcal{D}\), on a :
-                    \(
-                    \widehat{\left(\overrightarrow{OJ};\overrightarrow{OG}\right)}\equiv-2\pi
-                    t\pmod{2\pi}
-                    \) et \(
-                    \widehat{\left(\overrightarrow{OJ};\overrightarrow{OP}\right)}\equiv\frac{-2\pi}{12}
-                    t\pmod{2\pi}
-                    \)
-                </li>
-                <li> Il est 11h12. Quel est l'angle aigu formé par les deux aiguilles ?
-                </li>
-                <li> À quelle heure de la journée les deux aiguilles sont-elles symétriques par
-                    rapport à (Ox) ?
-                </li>
-                <li> À quelle heure de la journée les deux aiguilles sont-elles symétriques par
-                    rapport à
-                    \((Oy)\) ?
-                </li>
-                <li> À quelle heure de la journée les deux aiguilles sont-elles colinéaires ? De
-                    même sens ?
-                    De
-                    sens
-                    opposé
-                    ?
-                </li>
-                <li> À quelle heure de la journée les deux aiguilles sont-elles orthogonales ?
-                </li>
-            </ol>
-        </div>
+            </div>
+            <div class="exo">
+                Écrire les signaux suivants sous la forme \(A\sin\left(\omega t + \varphi\right)\).
+                <ol type="a" class="row" style="--columns:2;">
+                    <li>
+                        <img src="assets/sig1.svg" style="--width-print:7.5cm;">
+                        <div class="corr">
+                            \(4\sin\left(4\pi t - \frac{\pi}{4}\right)=\cos\left(4\pi t - \frac{3\pi}{4}\right)\)
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/sig2.svg" style="--width-print:7.5cm;">
+                        <div class="corr">
+                            \(2{,}5\sin\left(3\pi t - \frac{2\pi}{3}\right)=2{,}5\cos\left(3\pi t +
+                            \frac{5\pi}{6}\right)\)
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/sig3.svg" style="--width-print:7.5cm;">
+                        <div class="corr">
+                            \(3\sin\left(2\pi t - \frac{3\pi}{4}\right)=3\cos\left(2\pi t + \frac{3\pi}{4}\right)\)
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/sig4.svg" style="--width-print:7.5cm;">
+                        <div class="corr">
+                            \(4{,}5\sin\left(\pi t - \frac{\pi}{10}\right)=4{,}5\cos\left(\pi t -
+                            \frac{3\pi}{5}\right)\)
+                        </div>
+                    </li>
+                </ol>
+            </div>
 
 
-        
+
+
+
     </main>
 </body>
 

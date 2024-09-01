@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../s.js"></script>
+    <style>
+        #ici .bkgg {
+            background: linear-gradient(45deg, #0000 0%, #0000 75%, #000 75%, #000 76%, #0000 76%, #0000 100%);
+        }
+
+        #ici .bkgd {
+            background: linear-gradient(-45deg, #0000 0%, #0000 75%, #000 75%, #000 76%, #0000 76%, #0000 100%);
+        }
+
+        #ici .bkgc {
+            background: linear-gradient(#0000, #0000 49%, #000, #000 10%, #0000 59%, #0000);
+        }
+
+        #ici .corr,
+        #ici .corr::before {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        #ici .showprint {
+            display: none;
+        }
+
+        #ici .corr.open {
+            display: inline-block;
+        }
+
+        #ici li {
+            margin: 4em auto 4em;
+        }
+
+        @media print {
+            #ici {
+                -webkit-print-color-adjust: exact !important;
+                /* Chrome, Safari 6 – 15.3, Edge */
+                color-adjust: exact !important;
+                /* Firefox 48 – 96 */
+                print-color-adjust: exact !important;
+                /* Firefox 97+, Safari 15.4+ */
+            }
+
+            #ici .bkgg {
+                background: linear-gradient(45deg, #0000 0%, #0000 75%, #000 75%, #000 76%, #0000 76%, #0000 100%) !important;
+            }
+
+            #ici .bkgd {
+                background: linear-gradient(-45deg, #0000 0%, #0000 75%, #000 75%, #000 76%, #0000 76%, #0000 100%) !important;
+            }
+
+            #ici .bkgc {
+                background: linear-gradient(#0000, #0000 49%, #000, #000 10%, #0000 59%, #0000) !important;
+            }
+
+
+            #ici .showprint {
+                display: inline-block;
+            }
+
+            #ici .corr.open~.showprint {
+                display: none;
+            }
+
+            #ici .corr:not(.open) {
+                display: none;
+            }
+
+            #ici .corr.open {
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Pourcentages</h1>
+        <div class="exo"> Compléter comme dans l'exemple (arrondir les valeurs au centième et au % près.)<br>
+
+            <script>
+                function return_corr(st) {
+                    if (st.charAt(0) === "ø") {
+                        return `<div class="corr"">${st.slice(1)}</div><div class="showprint">${"..".repeat(st.length)}</div>`;
+                    } else {
+                        return st;
+                    }
+                }
+                function return_table(elem_id, v1, v2, v3, t1, t2, t3, c1, c2, c3) {
+                    let elem = document.getElementById(elem_id)
+                    let table = `
+       <li>
+            <table style="text-align: center;">
+                <tr>
+                    <td rowspan="3" style="border: 3px solid black; width:10em; height:3em">${return_corr(v1)}</td>
+                    <td>
+                        <div style="margin:0 auto 0; border: 1px solid black; height:2em; width:6em;">
+                            ${return_corr(t1)} %
+                        </div>
+                    </td>
+                    <td rowspan="3" style="border: 3px solid black; width:10em; height:3em">${return_corr(v2)}</td>
+                    <td>
+                        <div style="margin:0 auto 0; border: 1px solid black; height:2em; width:6em;">
+                            ${return_corr(t2)} %
+                        </div>
+                    </td>
+                    <td rowspan="3" style="border: 3px solid black; width:10em; height:3em">${return_corr(v3)}</td>
+                </tr>
+                <tr>
+                    <td class="bkgc"
+                        style="min-width:12em; text-align: right; height:0.5em; ">
+                        &gt;
+                    </td>
+                    <td class="bkgc"
+                        style="min-width:12em; text-align: right; height:0.5em; ">
+                        &gt;
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div
+                            style="margin:0 auto 0; border: 1px solid black; height:2em; width:6em;; border-radius: 3em;">
+                            × ${return_corr(c1)}
+                        </div>
+                    </td>
+                    <td>
+                        <div
+                            style="margin:0 auto 0; border: 1px solid black; height:2em; width:6em; border-radius: 3em;">
+                        × ${return_corr(c2)}
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="height: 0.5em;"></td>
+                </tr>
+                <tr>
+                    <td rowspan="3" class="bkgg">
+                    </td>
+                    <td colspan="3">
+                        <div style="margin:0 auto 0; border: 1px solid black; height:2em; width:6em;">
+                            ${return_corr(t3)} %
+                        </div>
+                    </td>
+                    <td rowspan="3" class="bkgd">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="bkgc"
+                        style="min-width:12em; text-align: center; height:0.5em; ">
+                        &gt;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div style="margin:0 auto 0; border: 1px solid black;width:6em; border-radius: 3em;">
+                            × ${return_corr(c3)}
+                        </div>
+                    </td>
+                </tr>
+            </table>
+           </li>`;
+                    elem.innerHTML += table;
+                }
+            </script>
+            <ol id="ici">
+
+            </ol>
+            <script>
+                return_table("ici",
+                    "10 €", "12 €", "18 €",
+                    "+20", "+50", "+80",
+                    "1,2", "1,5", "1,8"
+                );
+                return_table("ici",
+                    "10 €", "ø11 €", "ø9,9 €",
+                    "ø+10", "-10", "ø-1",
+                    "1,1", "ø0,9", "ø0,99"
+                );
+                return_table("ici",
+                    "ø9,35 €", "14 €", "ø13,3 €",
+                    "ø+7", "-5", "ø+2",
+                    "1,07", "ø0,95", "ø1,02"
+                );
+                return_table("ici",
+                    "ø3,5 €", "ø2,98 €", "7 €",
+                    "ø-15", "ø+135", "ø+100",
+                    "0,85", "ø2,35", "2"
+                );
+
+            </script>
+        </div>
+    </main>
+</body>
+
+</html>

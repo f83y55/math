@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../s.js"></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Fractions</h1>
+        <div class="prop"><strong>Règles :</strong>
+            <ul class="row surl" style="--columns:2;">
+                <li>Simplifier :<br>
+                    \(\dfrac{ac}{bc}=\dfrac{a}{b}\)
+                </li>
+                <li> Changer le dénominateur :<br>
+                    \(\dfrac{a}{b}=\dfrac{ac}{bc}\)
+                </li>
+                <li>Place du signe moins : <br>
+                    \(-\dfrac{a}{b}=\dfrac{a}{-b}=\dfrac{-a}{b}\)<br>
+                    (c'est plus lisible au mumérateur)
+                </li>
+                <li>Produit :<br>
+                    \(\dfrac{a}{b}\times\dfrac{c}{d}=\dfrac{ac}{bd}\)
+                </li>
+                <li>Multiplication par un entier : <br>
+                    \(k\times\dfrac{a}{b}=\dfrac{k}{1}\times\dfrac{a}{b}=\dfrac{ka}{b}\)
+                </li>
+                <li>Division :<br>
+                    \(\dfrac{a}{b}:\dfrac{c}{d}=\dfrac{a}{b}\times\dfrac{d}{c}=\dfrac{ad}{bc}\)
+                </li>
+            </ul>
+        </div>
+        <div class="exo"><strong>Comprendre les règles :</strong><br>
+            Cocher le bon résultat.
+            <table style="width: 100%;" class="mytable">
+                <tr>
+                    <td>\(\dfrac{-3}{8}\times(-2) = \)
+                        <div class="corr">\(\dfrac{3}{4}\)</div>
+                    </td>
+                    <td>□ \(\dfrac{-5}{8}\)</td>
+                    <td>□ \(\dfrac{6}{16}\)</td>
+                    <td>□ \(\dfrac{3}{4}\)</td>
+                </tr>
+                <tr>
+                    <td>\(\dfrac{2}{3}-\dfrac{5}{6} = \)
+                        <div class="corr">\(\dfrac{-1}{6}\)</div>
+                    </td>
+                    <td>□ \(\dfrac{3}{18}\)</td>
+                    <td>□ \(\dfrac{-1}{6}\)</td>
+                    <td>□ \(\dfrac{-5}{9}\)</td>
+                </tr>
+                <tr>
+                    <td>\(\dfrac{4}{7}\times\dfrac{4}{3} = \)
+                        <div class="corr">\(\dfrac{16}{21}\)</div>
+                    </td>
+                    <td>□ \(\dfrac{8}{21}\)</td>
+                    <td>□ \(\dfrac{3}{7}\)</td>
+                    <td>□ \(\dfrac{16}{21}\)</td>
+                </tr>
+                <tr>
+                    <td>\(\dfrac{5}{8}+\dfrac{3}{4} = \)
+                        <div class="corr">\(\dfrac{11}{8}\)</div>
+                    </td>
+                    <td>□ \(\dfrac{5}{96}\)</td>
+                    <td>□ \(\dfrac{5}{6}\)</td>
+                    <td>□ \(\dfrac{15}{32}\)</td>
+                </tr>
+                <tr>
+                    <td>L'inverse de \(\dfrac{5}{12}\) est
+                        <div class="corr">\(\dfrac{-12}{5}\)</div>
+                    </td>
+                    <td>□ \(\dfrac{-5}{12}\)</td>
+                    <td>□ \(\dfrac{-12}{5}\)</td>
+                    <td>□ \(\dfrac{12}{5}\)</td>
+                </tr>
+                <tr>
+                    <td>Le carré de \(\dfrac{-9}{4}\) est
+                        <div class="corr">\(\dfrac{81}{16}\)</div>
+                    </td>
+                    <td>□ \(\dfrac{3}{2}\)</td>
+                    <td>□ \(\dfrac{81}{4}\)</td>
+                    <td>□ \(\dfrac{81}{16}\)</td>
+                </tr>
+                <tr>
+                    <td>\(\dfrac{7}{6}\pi\times(-3\pi) = \)
+                        <div class="corr">\(\dfrac{-7}{2}\pi^2\)</div>
+                    </td>
+                    <td>□ \(\dfrac{-7}{2}\pi^2\)</td>
+                    <td>□ \(\dfrac{-7}{3}\pi^2\)</td>
+                    <td>□ \(\dfrac{-7}{3}\pi\)</td>
+                </tr>
+                <tr>
+                    <td>\(\dfrac{30\,000+100}{100} = \)
+                        <div class="corr">\(\dfrac{3}{4}\)</div>
+                    </td>
+                    <td>□ \(30\,000\)</td>
+                    <td>□ \(30\,001\)</td>
+                    <td>□ \(301\)</td>
+                </tr>
+                <tr>
+                    <td>\(\dfrac{\dfrac{2}{3}}{5} = \)
+                        <div class="corr">\(\dfrac{2}{15}\)</div>
+                    </td>
+                    <td>□ \(\dfrac{2}{15}\)</td>
+                    <td>□ \(\dfrac{10}{3}\)</td>
+                    <td>□ \(\dfrac{15}{2}\)</td>
+                </tr>
+                <tr>
+                    <td>\(\dfrac{2}{\dfrac{3}{5}} = \)
+                        <div class="corr">\(\dfrac{10}{3}\)</div>
+                    </td>
+                    <td>□ \(\dfrac{2}{15}\)</td>
+                    <td>□ \(\dfrac{10}{3}\)</td>
+                    <td>□ \(\dfrac{15}{2}\)</td>
+                </tr>
+                <tr>
+                    <td>\(\dfrac{3+6\pi}{3} = \)
+                        <div class="corr">\(1+2\pi\)</div>
+                    </td>
+                    <td>□ \(6\pi\)</td>
+                    <td>□ \(1+6\pi\)</td>
+                    <td>□ \(1+2\pi\)</td>
+
+                </tr>
+                <tr>
+                    <td>\(\dfrac{\pi+\pi^2}{\pi+1} = \)
+                        <div class="corr">\(\pi\)</div>
+                    </td>
+                    <td>□ \(\pi\)</td>
+                    <td>□ \(\pi^2\)</td>
+                    <td>□ \(\pi^2+1\)</td>
+
+                </tr>
+
+
+            </table>
+        </div>
+        <div class="exo"><strong>Appliquer</strong><br>
+            Donner le résultat sous la forme d'une fraction irréductible (que l'on ne peut pas simplifier).
+            <ol type="a" class="row" style="--columns:2;">
+                <li>
+                    \(\dfrac{1}{3}-\dfrac{5}{6}+\dfrac{3}{4} = \)
+                    <div class="corr">
+                        \(\dfrac{1}{4}\)
+                    </div>
+                </li>
+                <li>\(\dfrac{2}{5} + \dfrac{3}{25} - \dfrac{7}{10} =\)
+                    <div class="corr">
+                        \(\dfrac{-9}{50}\)
+                    </div>
+                </li>
+                <li>\(1-\dfrac{3}{14} + \dfrac{20}{21} =\)
+                    <div class="corr">
+                        \(\dfrac{73}{42}\)
+                    </div>
+                </li>
+                <li>\(-2+\dfrac{3}{4} - \dfrac{7}{8} + \dfrac{1}{2} =\)
+                    <div class="corr">
+                        \(\dfrac{-13}{8}\)
+                    </div>
+                </li>
+                <li>\(\dfrac{12-3\times 5}{5-2\times 3} + \dfrac{4-3}{6-2} - \dfrac{1}{8} =\)
+                    <div class="corr">
+                        \(\dfrac{25}{8}\)
+                    </div>
+                </li>
+                <li>\(\dfrac{2}{b} - \dfrac{a}{b^2} + \dfrac{-1}{a}=\)
+                    <div class="corr">
+                        \(\dfrac{-(a-b)^2}{ab^2}\)
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+
+
+        <div class="exo"><strong>Appliquer</strong><br>
+            Donner le résultat sous la forme d'une fraction irréductible (que l'on ne peut pas simplifier).
+            <ol type="a" class="row" style="--columns:2;">
+                <li>
+                    \(3 - \dfrac{4}{3} + \dfrac{5}{6}=\ldots\)
+                    <div class="corr">
+                        \(\dfrac{5}{2}\)
+                    </div>
+                </li>
+                <li>
+                    \(\dfrac{-2}{3}-5\times \dfrac{4}{7}=\ldots\)
+                    <div class="corr">
+                        \(\dfrac{-74}{21}\)
+                    </div>
+                </li>
+                <li>
+                    \(4\left(\dfrac{1}{5}+\dfrac{3}{10}\right)=\ldots\)
+                    <div class="corr">
+                        2
+                    </div>
+                </li>
+                <li>
+                    \(1-\left(\dfrac{-3}{4}\right)^2=\ldots\)
+                    <div class="corr">
+                        \(\dfrac{7}{16}\)
+                    </div>
+                </li>
+                <li>
+                    \(-5\times\left(\dfrac{-2}{3}\right)^2+4\times\left(\dfrac{-2}{3}\right)+1=\ldots\)
+                    <div class="corr">
+                        \(\dfrac{5}{3}\)
+                    </div>
+                </li>
+                <li>
+                    \(\left(\dfrac{2}{3}-1\right)^2- \dfrac{5}{3}=\ldots\)
+                    <div class="corr">
+                        \(\dfrac{-14}{9}\)
+                    </div>
+                </li>
+                <li>
+                    \(\left(\frac{5}{4}-\dfrac{1}{6}\right)\left(3-\dfrac{3}{5}\right)=\ldots\)
+                    <div class="corr">
+                        \(\dfrac{13}{5}\)
+                    </div>
+                </li>
+
+                <li>
+                    \(\dfrac{3-\dfrac{5}{6}}{2+\dfrac{7}{10}}=\ldots\)
+                    <div class="corr">
+                        \(\dfrac{25}{27}\)
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+
+        </div>
+    </main>
+</body>
+
+</html>

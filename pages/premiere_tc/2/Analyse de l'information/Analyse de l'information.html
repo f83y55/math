@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Analyse de l'information</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js" data-import=""></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Analyse de l'information</h1>
+        <h2>Pourcentages</h2>
+        <h3>Symbole <span class="surl">%</span></h3>
+        <div class="defi">
+            Le symbole % signifie <span class="surl">\(\times\frac{1}{100}\)</span>.
+        </div>
+        <div class="exem">
+            <ul>
+                <li>25% correspond au nombre \(\frac{25}{100}=0{,}25\).</li>
+                <li>30% correspond au nombre \(\frac{30}{100}=0{,}3\).</li>
+                <li>-50% correspond au nombre \(\frac{-50}{100}=-0{,}5\)</li>
+                <li>250% correspond au nombre \(\frac{250}{100}=2{,}5\)</li>
+            </ul>
+        </div>
+        <h3>Proportion ou fréquence</h3>
+        <div class="defi">
+            Lorsqu'on a deux quantités A et B (dans la même unité), avec A une partie de B :<br />
+            La <strong>proportion</strong> ou <strong>fréquence</strong> \(p\) est le rapport \(p=\frac{A}{B}\).<br />
+            On peut l'exprimer en
+            pourcentage.
+        </div>
+        <div class="exem">
+            <ul>
+                <li>Un gâteau de B=40 grammes dont la part de sucre est A=4 grammes contient une proportion de sucre (en
+                    masse) de \(\frac{A}{B}=\frac{4}{40}=0{,}1=10\%\).</li>
+                <li>Une boisson dont le degré d'alcool (éthanol) est 8 degrés contient 8% d'éthanol en volume. <br />
+                    Cela signifie que B=20cL de cette boisson contient un volume d'éthanol de A = pB = 8% de 20cl =
+                    0,08×20 = 1,6 cL.
+                </li>
+            </ul>
+        </div>
+        <div class="exo">
+            <ul>
+                <li>
+                    <strong>Calculer :</strong> 3% de 200€ ; 200% de 1,5m ; 15% de 3min.
+                </li>
+                <li><strong>Donner la fréquence correspondant à :</strong> 3€ par rapport à 10€ ; 5cm par rapport à
+                    20cm.
+                </li>
+            </ul>
+        </div>
+        <h3>Pourcentages d'augmentation et de diminution</h3>
+        <div class="defi">
+            A est une quantité et t est un nombre.
+            <ul>
+                <li> Pour appliquer une <strong>augmentation</strong> de t% à A, <br />
+                    on multiplie A par (1+t%).</li>
+                <li> Pour appliquer une <strong>diminution</strong> de t% à A, <br />
+                    on multiplie A par (1-t%).</li>
+            </ul>
+            On appelle <strong>coefficient multiplicateur</strong> le nombre <span class="surl">(1±t%)</span>.
+        </div>
+        <div class="exo">
+            <ul>
+                <li> Calculer les coefficients multiplicateurs associés à : une hausse de 20% ; une baisse de 5% ; +50%
+                    ; -7%.</li>
+                <li> Appliquer ces évolutions à une somme de 20€.</li>
+            </ul>
+        </div>
+        <div class="prop">Lorsqu'une donnée passe d'une valeur initiale \(V_i\) à une valeur finale \(V_f\), son
+            coefficient multiplicateur est donné par \(\frac{V_f}{V_i}\).
+        </div>
+        <div class="exo">
+            <ul>
+                <li>
+                    Calculer les coefficients multiplicateurs et en déduire les pourcentages d'évolution associés :
+                    de 40€ à 50€ ; de 40€ à 30€ ; de 37°C à 41°C.
+                </li>
+                <li> Compléter : Si une quantité est divisée par 2, elles est réduite de ...% . Si une quantité est
+                    divisée par 4, elles est réduite de ...% . Si une quantité est multipliée par 3, elle augmente
+                    de ...%</li>
+                <li> Un jeu coûte 50€ TTC (TTC : après application d'une hausse de 20% liée à la TVA). Quel est son prix
+                    sans TVA ?
+                </li>
+            </ul>
+        </div>
+        <div class="pagebreak">
+        </div>
+        <h2>Applications et utilisation du tableur</h2>
+        <div class="none">
+            Nous allons étudier des données provenant de l'insee concernant l'<strong>indice de référence des
+                loyers</strong>.
+        </div>
+        <div class="exo">
+            À l'aide d'une recherche, expliquer ce que mesure cet indice.
+        </div>
+        <h3>Manipulations et formules</h3>
+        <div class="none">
+            Nous allons utiliser le tableur LibreOffice Calc.
+        </div>
+        <div class="exo">
+            <div class="row">
+                <div class="col">
+
+                    <ol>
+                        <li> Télécharger le fichier <a href="assets/insee_irl.ods"
+                                download><code>insee_irl.ods</code></a>,
+                            l'ouvrir avec LibreOffice Calc et vérifier (en bas) que l'on est bien sur le 1<sup>er</sup>
+                            onglet
+                            <code>onglet_irl_1</code>.<br />
+                            <strong>Enregistrez régulièrement votre travail.</strong>
+                        </li>
+                        <li>
+                            Dans un tableur, une formule mathématique à appliquer doit être précédée du symbole
+                            <code>=</code>.<br />
+                            Entrer la formule figurant sur la 1<sup>ère</sup> capture ci-contre dans la cellule
+                            <code>D3</code>. <br />
+                            Que permet d'obtenir cette formule ?
+                        </li>
+                        <li>
+                            En utilisant la poignée de recopie (sélectionner la cellule <code>D3</code>, tirer jusqu'au
+                            bas du tableau le petit carré apparaîssant dans la cellule sélectionnée, en bas à droite),
+                            ou bien en faisant un copier-coller de la formule, remplir la plage
+                            <code>D4:D6</code>.<br />
+                            La formule s'adapte automatiquement ; on peut le vérifier en sélectionnant une cellule de la
+                            colonne et en regardant la ligne «=» au dessus du tableau.
+                        </li>
+                        <li>
+                            Comme sur la capture 2, sélectionner l'ensemble des nombres de la colonne <code>D</code> et
+                            faire un clic droit /
+                            <code>formater les cellules</code>.<br />
+                            Sélectionner <code>nombre / pourcentage</code> (avec deux décimales).
+                        </li>
+                    </ol>
+                </div>
+                <div class="col">
+                    <figure>
+                        <img src="assets/insee_irl_1_c1.png" alt="capture 1" />
+                        <figcaption>capture 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/insee_irl_1_c2.png" alt="capture 2" />
+                        <figcaption>capture 2</figcaption>
+                    </figure>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="exo">
+            Passer sur le 2<sup>e</sup> onglet (en bas) <code>onglet_irl_2</code>.
+            <ol>
+                <li>
+                    Quelle sont les différences avec le tableau précédent ?
+                </li>
+                <li>
+                    Compléter la colonne <code>E</code> en représentant les nombres par des pourcentages.
+                </li>
+                <li>
+                    À partir de quelle date l'IRL dépasse-t-il 130 ?<br />
+                    À partir de quelle date son augmentation dépasse-t-elle 2% ?
+                </li>
+            </ol>
+        </div>
+
+        <h3>Filtrage et tri des données</h3>
+        <div class="exo">
+            Toujours le 2<sup>e</sup> onglet (en bas) <code>onglet_irl_2</code>.
+            <div class="row">
+                <div class="col">
+                    <ol>
+                        <li>Sélectionner la première ligne (les étiquettes/descripteurs) et sélectionner dans le menu
+                            <code>Données / Autofiltre</code>.
+                        </li>
+                        <li>Pour chaque colonne, on peut sélectionner l'icône ⍔ pour trier/filtrer.<br />
+                            Filtrer le tableau en utilisant l'icône ⍔ de la colonne <code>trimestre</code>, pour ne
+                            faire
+                            apparaître que les trimestres 1 (T1).
+                        </li>
+                    </ol>
+                </div>
+                <div class="col">
+                    <figure>
+                        <img src="assets/insee_irl_1_c3.png" alt="capture 3" />
+                        <figcaption>capture 3</figcaption>
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+        <div class="pagebreak">
+        </div>
+        <h3>Représentations sous la forme d'un nuage de points et courbe de tendance</h3>
+        <div class="exo">
+            Toujours le 2<sup>e</sup> onglet (en bas) <code>onglet_irl_2</code>.<br />
+            On va tracer le <strong>nuage de point</strong> figurant en X : le pourcentage d'évolutionet en Y :
+            l'année
+            (son trimestre 1
+            car le tableau a été filtré dans l'exercice précédent). On
+            obtiendra donc un diagramme donnant l'augmentation des prix en fonction du temps.
+            </ul>
+            <ol>
+                <li> Sélectionner une cellule en dehors de tableau pour donner un ancrage au diagramme.
+                    <br />Dans le
+                    menu, choisir <code>insertion/diagramme</code>.
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col">
+                            Puis dans la boîte :
+                            <ul>
+                                <li><code><strong>type de diagramme</strong> / XY (dispertion) / points seuls</code>
+                                    (image de
+                                    gauche).</li>
+                                <li><code><strong>plage de données</strong></code> : vérifier que la plage
+                                    <code>A1:E43</code> a
+                                    été retenue
+                                    : il
+                                    s'agit de l'ensemble du tableau.<br />
+                                    <strong>Remarque : </strong> les signes <code>$</code> sont utilisés par le tableur
+                                    pour
+                                    fixer les lettres (lignes) ou chiffres (colonnes). Les caractères bloqués ne seront
+                                    pas
+                                    modifiés en cas de copie.
+                                </li>
+                                <li><code><strong>Série de données</strong></code> : (axes X et Y) : supprimer
+                                    <code>Trimestre</code>, <code>Valeur</code> et <code>parution</code>
+                                    (inutiles)<br />
+                                    Sélectionner <code>Valeurs X</code> et entrer au clavier la plage
+                                    <code>Année</code> <strong>ou bien</strong>
+                                    cliquer sur l'icône de sélection ⍐ et sélectionner directement la plage sur le
+                                    tableau.<br />
+                                    Faire de même pour les <code>Valeurs Y</code> en sélectionnant
+                                    l'<code>évolution</code>.
+                                <li><code><strong>Éléments du diagramme</strong></code> : vous pouvez compléter ici le
+                                    titre et
+                                    les étiquettes sur les axes.
+                                </li>
+                                <li> Cliquer sur <code>terminer</code>. Que peut-t-on observer sur ce
+                                    diagramme ?
+                                </li>
+                            </ul>
+
+
+                        </div>
+                        <div class="col">
+                            <figure>
+                                <img src="assets/insee_irl_1_c4.png" alt="capture 4" />
+                                <figcaption>capture 4</figcaption>
+                            </figure>
+                        </div>
+
+
+                    </div>
+                </li>
+
+            </ol>
+        </div>
+        <div class="exo">
+            <div class="row">
+                <div class="col">
+                    <ol>
+                        <li>
+                            Insérer un autre diagramme, donnant la valeur de l'indice en fonction de l'année
+                            (T1).<br />
+                            Commenter et
+                            comparer les informations apportées par chacun des deux diagrammes.
+                        </li>
+                        <li>
+                            Sélectionner un point de ce diagramme et faire clic droit / <code>Insérer une courbe de
+                                tendance</code>.
+                        </li>
+                        <li>
+                            Sélectionner <code>linéaire</code> (droite) dans l'onglet <code>type</code>.
+                        </li>
+                        <li>
+                            Cliquer sur la droite tracée pour la sélectionner, puis faire un clic droit et sélectionner
+                            <code>
+                                Insérer R² et l'équation de la courbe de tendance</code>.
+                        </li>
+                        <li>
+                            Quel sens donner au coefficient directeur (nombre qui multiplie la variable x) dans
+                            l'équation affichée ?
+                        </li>
+                        <li> Le R² est un indicateur qui permet de «mesurer» l'alignement des points sur la
+                            droite.<br />
+                            On considère qu'un R² supérieur à 0,85 est associé à un «bon» alignement
+                            (significatif).<br />
+                            Est-ce le cas ici ?
+                        </li>
+                        <li>
+                            Obtenir le R² pour une droite de tendance tracée sur le diagramme précédent. Est-il bon ?
+                        </li>
+                    </ol>
+                </div>
+                <div class="col">
+                    <figure>
+                        <img src="assets/insee_irl_1_c5.png" alt="capture 5" style="--width-print:3.5cm" />
+                        <figcaption>capture 5</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/insee_irl_1_c6.png" alt="capture 6" style="--width-print:3.5cm" />
+                        <figcaption>capture 6</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/insee_irl_1_c7.png" alt="capture 7" style="--width-print:3.5cm" />
+                        <figcaption>capture 7</figcaption>
+                    </figure>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="exo">
+            Le tableau ci-contre donne le prix moyen en euros, en France, du paquet de 20 cigarettes, et le nombre de
+            paquets
+            vendus par an en milliards.
+            <table class="mytable" style="float: right;font-size: smaller;">
+                <tr>
+                    <th>Année</th>
+                    <td>2004</td>
+                    <td>2007</td>
+                    <td>2010</td>
+                    <td>2013</td>
+                    <td>2016</td>
+                </tr>
+                <tr>
+                    <th>prix</th>
+                    <td>5</td>
+                    <td>5,13</td>
+                    <td>5,65</td>
+                    <td>6,7</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <th>ventes</th>
+                    <td>2,75</td>
+                    <td>2,75</td>
+                    <td>2,74</td>
+                    <td>2,38</td>
+                    <td>2,25</td>
+                </tr>
+            </table>
+            La hausse du prix fait-elle significativement diminuer le tabagisme ? Pour argumenter, construire le nuage
+            de points associé à ce tableau.
+        </div>
+        <div class="pagebreak"></div>
+        <h2>Analyse croisée d'un couple de caractères</h2>
+
+        <div class="defi">
+            Une fréquence portant sur l'ensemble de la population s'appelle une <strong>fréquence marginale</strong>.
+        </div>
+        <div class="exo"><strong>deux caractères : 3 manières de calculer des fréquences</strong><br />
+            On coupe un paquet de 52 cartes en deux parts égales P1 et P2. On s'intéresse à deux caractères :
+            <ul>
+                <li>Caractère X : être dans le demi-paquet P1 ou P2 ;</li>
+                <li>Caractère Y : être de couleur noire (pique ou trèfle) ou rouge (cœur ou carreau).</li>
+            </ul>
+            <table class="mytable" style="float:right;">
+                <tr>
+                    <th>↓X \ Y→</th>
+                    <th>rouges</th>
+                    <th>noires</th>
+                    <th>total</th>
+                </tr>
+                <tr>
+                    <th>P1</th>
+                    <td>10</td>
+                    <td>...</td>
+                    <th>26</th>
+                </tr>
+                <tr>
+                    <th>P2</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <th>26</th>
+                </tr>
+                <tr>
+                    <th>total</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <th>52</th>
+                </tr>
+            </table>
+            <ol>
+                <li>Compléter le tableau par les effectifs (nombres de cartes).</li>
+                <li>Construire un autre tableau contenant les fréquences marginales.</li>
+                <li>Construire un autre tableau contenant les fréquences par rapport aux valeurs de X : la somme sur
+                    chaque ligne doit faire 100%.</li>
+                <li>Construire un autre tableau contenant les fréquences par rapport aux valeurs de Y : la somme sur
+                    chaque colonne doit faire 100%.</li>
+                <li><strong>Bonus :</strong> remplacer 10 dans le tableau original par un nombre quelconque, et montrer
+                    qu'il y a autant de cartes rouges dans P1 que de cartes noires dans P2.</li>
+            </ol>
+        </div>
+        <div class="exo">
+            On analyse les données des attaquants du club de football «Brutal Sporting Club». Voici les <strong>données
+                brutes</strong> des derniers matchs ; F désigne le nombre de fautes et G le nombre de buts.
+            <div>
+                <code>Mathieu F=2 G=3</code>&nbsp;;&nbsp;
+                <code>Issa F=0 G=3</code>&nbsp;;&nbsp;
+                <code>Malone F=2 G=0</code>&nbsp;;&nbsp;
+                <code>Ilyès F=2 G=1</code>&nbsp;;&nbsp;
+                <code>Tom F=2 G=1</code>&nbsp;;&nbsp;
+                <code>Milo F=2 G=1</code>&nbsp;;&nbsp;
+                <code>Haroun F=1 G=2</code>&nbsp;;&nbsp;
+                <code>Jibril F=1 G=3</code>&nbsp;;&nbsp;
+                <code>Sam F=2 G=3</code>&nbsp;;&nbsp;
+                <code>Damien F=1 G=1</code>&nbsp;;&nbsp;
+            </div>
+            <ol>
+                <li>Télécharger le fichier <a href="assets/exercice_2caract_BSC.ods"
+                        download><code>exercice_2caract_BSC.ods</code></a>.
+                </li>
+                <li>Compléter le tableau des effectifs à partir des données brutes.</li>
+                <li>Compléter le tableau des fréquences marginales.<br />
+                    On pourra écrire dans la cellule <code>I10</code> la formule : <code>=B3/$F$6</code> (on rappelle
+                    que <code>$</code> fixe la lettre/chiffre qui suit), l'étendre à tous les nombres du tableau, et
+                    formater en les nombres en pourcentage.</li>
+                <li>Adapter cette méthodes pour remplir de même les deux tableaux de fréquences lignes/colonnes.</li>
+            </ol>
+        </div>
+        <div class="exo"><strong>Automatiser la création du tableau</strong><br />
+            <div class="row">
+                <div class="col" style="width: 50%;">
+                    <ol>
+                        <li>Sélectionner l'ensemble des données brutes.</li>
+                        <li>Dans le menu <code>Données</code>, séctionner <code>table
+                                dynamique</code>/<code>insérer</code>
+                            ou <code>pilote de données</code> (selon les versions de LibreOffice).</li>
+                        <li>Choisir dans la boîte <code>Sélection active</code>, valider «ok».</li>
+                        <li>Glisser-déposer les champs disponibles (à droite), vers les champs de ligne, colonne et
+                            données
+                            (en double-cliquant sur les champs, on peut les configurer plus en profondeur, mais ce n'est
+                            pas
+                            nécessaire ici), de manière à créer la structure du tableau.</li>
+                        <li>Après validation, un nouvel onglet contenant la table dynamique sera créé.</li>
+                    </ol>
+
+                </div>
+                <div class="col">
+                    <figure>
+                        <img src="assets/teb_dyn_1_c1.png" alt="tab dyn" style="--width-print:8cm;">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="exo"><strong>Rugby</strong>
+            <p>
+                Les stades toulousains qui hébergent le plus d'équipes accueillent-ils plus les scolaires ? Est-ce plus
+                ou
+                moins le cas pour Toulouse Ouest ?<br />
+                En utilisant le fichier <a href="assets/stades.ods" download><code>stades.ods</code></a>, donner des
+                éléments de réponses.
+            </p>
+            <p>On pourra réaliser un tableau croisé dynamique, filtrer les données, ... et aussi utiliser si besoin la
+                fonction <code>=SI(<i>condition</i>, <i>alors</i>, <i>sinon</i>)</code>. Par exemple, en écrivant dans
+                la
+                cellule <code>B2</code> la formule <code>=SI(A1<10, 50, 9) </code>, celle-ci affichera 50 si la valeur
+                        de
+                        <code>A1</code> est inférieure à 10 et 9 sinon.<br />
+                        (données extraites de <a
+                            href="https://data.toulouse-metropole.fr/explore/dataset/stades/export/"
+                            target="_blank">data.toulouse.metropole.fr</a>).</p>
+        </div>
+    </main>
+
+</body>
+
+</html>
