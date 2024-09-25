@@ -50,7 +50,7 @@
             }
 
             #images {
-                display: inline-block;
+                display: block;
                 overflow-x: hidden;
                 overflow-y: hidden;
                 margin: 0;
@@ -60,8 +60,7 @@
             #images img {
                 overflow-x: hidden;
                 overflow-y: hidden;
-                page-break-inside: avoid;
-
+                page-break-inside: avoid !important;
             }
         }
     </style>
@@ -255,7 +254,6 @@
         }
 
         function preset_f(w, h, remarge_x = false, remarge_y = false) {
-            let m = document.getElementById("m").value;
             document.getElementById("w").value = remarge_x ? w - 2 * mx : w;
             document.getElementById("h").value = remarge_y ? h - 2 * my : h;
             make_svg();
