@@ -389,7 +389,7 @@ img {
 
 figcaption {
     font-style: italic;
-    font-size: smaller;
+    font-size: small;
 }
 
 
@@ -406,7 +406,11 @@ figcaption {
 }
 
 .col {
+    margin: 0 auto 0;
+    --width: initial;
+    width: var(--width);
     max-width: 75%;
+
 }
 
 
@@ -503,7 +507,8 @@ ol {
     }
 
     .col {
-        max-width: initial;
+        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -616,8 +621,12 @@ ol {
         height: var(--height-print);
         max-width: initial;
         max-height: initial;
-        font-size: smaller;
     }
+
+    figcaption {
+        font-size: small;
+    }
+
 
     .mytable th,
     .mytable td {

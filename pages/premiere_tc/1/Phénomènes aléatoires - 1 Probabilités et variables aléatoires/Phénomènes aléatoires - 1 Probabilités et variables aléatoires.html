@@ -75,7 +75,7 @@
 
 		</div>
 		<div class="row">
-			<div class="exo col" style="width: 50%;">
+			<div class="exo col" style="--width: 50%;">
 				Il y a 86% d'élèves droitiers dans ce lycée.
 				Quelle est la probabilité de tomber au hasard sur un élève qui ne le soit pas ?
 				<div class="corr">
@@ -85,7 +85,7 @@
 				</div>
 			</div>
 
-			<div class="exo col" style="width: 50%;">
+			<div class="exo col" style="--width: 50%;">
 				Le dé suivant est truqué :<br>
 				<table id="tab02" class="mytable">
 					<tr class="table_row_tr_0">
@@ -113,12 +113,12 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="defi col" style="width: 50%;">
+			<div class="defi col" style="--width: 50%;">
 				<b>Notation somme :</b> Une somme telle que \(p_1+\cdots+p_n\) se note, de manière condensée, à l'aide
 				du
 				symbole sigma (\(\Sigma\)) : \( \displaystyle\sum_{i=1}^n p_i\)
 			</div>
-			<div class="exo col" style="width: 50%;">
+			<div class="exo col" style="--width: 50%;">
 				Calculer \( A=\displaystyle\sum_{i=1}^7 i\) et \( B=\displaystyle\sum_{i=1}^4 i^2\)
 				<div class="corr">
 					\( A=\displaystyle\sum_{i=1}^7 i = 1+2+3+4+5+6+7 = 28\) et \( B=\displaystyle\sum_{i=1}^4 i^2 =
@@ -177,7 +177,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col" style="width: 50%;">
+			<div class="col" style="--width: 50%;">
 				<div class="defi">Dans une situation d'<b>équiprobabilité</b>, Toutes les issues
 					possèdent la même
 					probabilité.</div>
@@ -186,7 +186,7 @@
 
 
 		<div class="none row">
-			<div class="col" style="width: 60%;"><strong>Étude statistique - observer les fréquences</strong>
+			<div class="col" style="--width: 60%;"><strong>Étude statistique - observer les fréquences</strong>
 				<div class="exem">
 					On lance un dé truqué un grand nombre de fois (10 000, par exemple) et on note le résultat dans
 					le
@@ -213,7 +213,7 @@
 					</table><br>
 				</div>
 			</div>
-			<div class="col" style="width: 40%;">
+			<div class="col" style="--width: 40%;">
 				On <b>décide</b> alors que l'on a expérimenté un nombre suffisant de lancers pour que les futurs
 				lancers
 				de ce dé respectent les mêmes fréquences que celles de cette expérience. Cette «décision» établit un
@@ -307,7 +307,7 @@
 
 		<h3>Opérations sur les événements</h3>
 		<div class="row">
-			<div class="col" style="width: 50%;">
+			<div class="col" style="--width: 50%;">
 				<div class="defi">Si \(A\) et \(B\) sont deux événements,
 					<ul>
 						<li>
@@ -403,31 +403,32 @@
 
 		<div class="prop"> Soit \(A\) et \(B\) deux événements :
 			<div class="row" style="--columns:3;">
-				<div class="col">
-					<figure>
-						<img src="assets/fig1.svg">
+				<div class="col" style="--width:30%;">
+					<figure">
+						<img src="assets/fig1.svg" style="--width-print:100%;">
 						<figcaption>Événement complémentaire : <br>
 							\(P(\overline{A})=1-P(A)\)</figcaption>
-					</figure>
+						</figure>
 				</div>
-				<div class="col">
+				<div class=" col" style="--width:30%; margin: 0 auto 0;">
 					<figure>
-						<img src="assets/fig2.svg">
+						<img src="assets/fig2.svg" style="--width-print:100%;">
 						<figcaption>Union quelconque : <br>
-							\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\)</figcaption>
+							\(P(A\cup B) = \) \(P(A)+P(B)-P(A\cap B)\)</figcaption>
 					</figure>
 				</div>
-				<div class="col">
+				<div class="col" style="--width:30%; margin: 0 auto 0;">
 					<figure>
-						<img src="assets/fig3.svg">
+						<img src="assets/fig3.svg" style="--width-print:100%;">
 						<figcaption>Union disjointe : <br>
 							Si \(P(A\cap B)=0\), alors \(P(A\cup B)=P(A)+P(B)\)</figcaption>
 					</figure>
 				</div>
 			</div>
 		</div>
-		<div class="defi">
-			Lorsqu'on sait que \(A\) et \(B\) ne peuvent être réalisés simultanément ; \(A\) et \(B\) sont dits
+		<div class=" defi">
+			Lorsqu'on sait que \(A\) et \(B\) ne peuvent être réalisés simultanément ; \(A\) et \(B\) sont
+			dits
 			<b>incompatibles</b> ; dans ce cas on a \(P(A\cap B)=0\).
 		</div>
 
@@ -531,7 +532,8 @@
 			B}=\overline{A}\cap\overline{B}\)
 		</div>
 		<div class="exo">
-			Utiliser les lois de Morgan pour exprimer \(\overline{(A\cap B)\cup \overline{B}}\) en fonction de \(A\),
+			Utiliser les lois de Morgan pour exprimer \(\overline{(A\cap B)\cup \overline{B}}\) en fonction de
+			\(A\),
 			\(B\),
 			\(\overline{A}\) et
 			\(\overline{B}\).
@@ -550,12 +552,15 @@
 
 		<div class="exo"><strong>Erreur de d'Alembert</strong>
 			<p>
-				Quelle est la probabilité d'obtenir <strong>au moins</strong> une fois pile en deux lancés successifs ?
+				Quelle est la probabilité d'obtenir <strong>au moins</strong> une fois pile en deux lancés
+				successifs ?
 			</p>
 			<p>
-				<strong>Remarque :</strong> D’Alembert avait fait un raisonnement faux dans le calcul de la probabilité,
+				<strong>Remarque :</strong> D’Alembert avait fait un raisonnement faux dans le calcul de la
+				probabilité,
 				dans l’article « croix ou pile » de l’Encyclopédie .<br />
-				De l’existence de 3 cas (pile au premier lancer, pile au second lancer, aucun lancer ne donnant pile),
+				De l’existence de 3 cas (pile au premier lancer, pile au second lancer, aucun lancer ne donnant
+				pile),
 				il
 				avait déduit que la probabilité était 2/3.<br />
 			</p>
@@ -572,7 +577,8 @@
 		</div>
 		<div class="row">
 			<div class="col">
-				<div class="exem"> Souvent, une variable aléatoire est utilisée pour rendre compte des gains dans un jeu
+				<div class="exem"> Souvent, une variable aléatoire est utilisée pour rendre compte des gains
+					dans un jeu
 					de
 					hasard.<br>
 					On lance un dé (6 faces, bien équilibré), puis une pièce (bien équilibrée) ;
@@ -586,7 +592,8 @@
 								<li>on enlève 5€ si la pièce donne face ; </li>
 							</ul>
 						</li>
-						<li> on note alors \(G\) les gains ou pertes (\(G\) peut être négatif !) à la fin du jeu.</li>
+						<li> on note alors \(G\) les gains ou pertes (\(G\) peut être négatif !) à la fin du
+							jeu.</li>
 					</ul>
 				</div>
 				<div class="exo">

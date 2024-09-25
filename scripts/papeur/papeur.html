@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon"
+        href="data:image/svg+xml, <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧻</text></svg>">
+    <title>Papeur</title>
+    <style>
+        #menu_bar {
+            margin: 1em auto 1em;
+        }
+
+        #menu_bar td {
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        #menu_bar input {
+            float: right;
+        }
+
+        #menu_bar label {
+            margin-left: 0.5em;
+            margin-right: 1em;
+        }
+
+        #images {
+            margin: 0 auto 0;
+            padding: 0;
+        }
+
+        #images img {
+            margin: 3mm;
+        }
+
+
+        @page {
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+
+        @media print {
+            #menu_bar {
+                display: none;
+            }
+
+            #images {
+                height: 100%;
+                width: 100%;
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+            }
+
+            #images img {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body onload="make_svg()">
+    <main>
+        <table id="menu_bar">
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>Papeur</strong>
+                    </td>
+                    <td>
+                        <button type="button" onpointerdown="preset_f(297, 420)">📄 A3</button>
+                        <button type="button" onpointerdown="preset_f(210, 297)">📄 A4</button>
+                        <button type="button" onpointerdown="preset_f(100, 100)">📄 100x100</button>
+                        <button type="button" onpointerdown="preset_f(200, 10)">📄 200x10</button>
+                    </td>
+                    <td>
+                        <button type="button" onpointerdown="preset(10, 10, 5, 5)">5mm</button>
+                        <button type="button" onpointerdown="preset(10, 10, 1, 1)">1mm</button>
+                        <button type="button" onpointerdown="preset(8, 8, 8, 2)">seyes</button>
+                        <button type="button" onpointerdown="preset(50, 10, 50, 2.5)">music</button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onpointerdown="landscape()">▭/▯</button>
+                    </td>
+                    <td>
+                        <label for="w" id="w_label">width<sub>(mm)</sub> :</label>
+                        <input type="number" id="w" name="w" min="0" max="999" value="100" onchange="make_svg()" />
+                    </td>
+                    <td>
+                        <label for="h" id="h_label">height<sub>(mm)</sub> :</label>
+                        <input type="number" id="h" name="h" min="0" max="999" value="50" onchange="make_svg()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="color" id="color1" name="color1" value="blue" onchange="make_svg()"
+                            style="display:none;" />
+                        <label for="color1" id="color1_label">Color1</label>
+                    </td>
+                    <td>
+                        <label for="x" id="x_label">x<sub>(mm)</sub> :</label>
+                        <input type="number" id="x" name="x" min="0" max="999" value="10" onchange="make_svg()" />
+                    </td>
+                    <td>
+                        <label for="y" id="y_label">y<sub>(mm)</sub> :</label>
+                        <input type="number" id="y" name="y" min="0" max="999" value="10" onchange="make_svg()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="color" id="color2" name="color2" value="green" onchange="make_svg()"
+                            style="display:none;" />
+                        <label for="color2" id="color2_label">Color2</label>
+                    </td>
+
+                    <td>
+                        <label for="sx" id="sx_label">sx<sub>(mm)</sub> :</label>
+                        <input type="number" id="sx" name="sx" min="0" max="999" value="5" onchange="make_svg()" />
+                    </td>
+                    <td>
+                        <label for="sy" id="sy_label">sy<sub>(mm)</sub> :</label>
+                        <input type="number" id="sy" name="sy" min="0" max="999" value="5" onchange="make_svg()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onpointerdown="clone()">clone</button>
+                    </td>
+                    <td>
+                        <button type="button" onpointerdown="del()">del all</button>
+                        <button type="button" onpointerdown="del_last()">del last</button>
+                    </td>
+                    <td>
+                        <button type="button" onpointerdown="window.print()">print</button>
+                        <button type="button" onpointerdown="download_svg()">download last</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="images">
+            <img id="image_svg">
+        </div>
+    </main>
+    <script>
+        var images_element = document.getElementById("images");
+        var image_svg_element = document.getElementById("image_svg");
+        var w = document.getElementById("w").value;
+        var h = document.getElementById("h").value;
+        var color1 = document.getElementById("color1").value;
+        var color2 = document.getElementById("color2").value;
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;
+        var sx = document.getElementById("sx").value;
+        var sy = document.getElementById("sy").value;
+        var svg_url = "";
+        Array.from(document.getElementsByTagName("input"),
+            el => {
+                el.addEventListener("input", make_svg)
+            }
+        )
+
+        function make_svg() {
+            w = document.getElementById("w").value;
+            h = document.getElementById("h").value;
+            color1 = document.getElementById("color1").value;
+            color2 = document.getElementById("color2").value;
+            document.getElementById("color1_label").style["color"] = color1;
+            document.getElementById("color2_label").style["color"] = color2;
+            x = document.getElementById("x").value;
+            y = document.getElementById("y").value;
+            document.getElementById("x_label").style["color"] = color1;
+            document.getElementById("y_label").style["color"] = color1;
+            sx = document.getElementById("sx").value;
+            sy = document.getElementById("sy").value;
+            document.getElementById("sx_label").style["color"] = color2;
+            document.getElementById("sy_label").style["color"] = color2;
+
+
+
+            let image_svg = `<svg width="${w}mm" height="${h}mm" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<defs>
+<pattern id="subgrid" width="${sx}" height="${sy}" patternUnits="userSpaceOnUse">
+<path d="M 0 ${sy} L 0 0 ${sx} 0" fill="none" stroke="${color2}" stroke-width="0.3"/>
+  </pattern>
+<pattern id="grid" width="${x}" height="${y}" patternUnits="userSpaceOnUse">
+<rect width="${x}" height="${y}" fill="url(#subgrid)"/>
+<path d="M 0 ${y} L 0 0 ${x} 0" fill="none" stroke="${color1}" stroke-width="0.5"/>
+  </pattern>
+</defs>
+<rect width="${w}" height="${h}" fill="url(#grid)" stroke="black" stroke-width="0.5"/>
+</svg>`;
+            let svg_blob = new Blob([image_svg], {type: "image/svg+xml;charset=utf-8"});
+            svg_url = URL.createObjectURL(svg_blob);
+            ;
+            image_svg_element.src = svg_url;
+        }
+
+        function clone_svg() {
+            make_svg();
+            let cloned_svg_element = document.createElement("img");
+            cloned_svg_element.classList.add("cloned");
+            cloned_svg_element.src = svg_url;
+            images_element.insertBefore(cloned_svg_element, image_svg_element);
+        }
+
+        function del_last() {
+            let clones = document.getElementsByClassName("cloned");
+            let last_clone = clones[clones.length - 1];
+            images_element.removeChild(last_clone);
+        }
+
+
+        function del() {
+            let clones = Array.from(document.getElementsByClassName("cloned"));
+            for (let cloned of clones) {
+                images_element.removeChild(cloned);
+                console.log(clones)
+            }
+        }
+
+        function preset_f(w, h) {
+            document.getElementById("w").value = w;
+            document.getElementById("h").value = h;
+            make_svg();
+        }
+
+
+        function preset(x, y, sx, sy) {
+            document.getElementById("x").value = x;
+            document.getElementById("y").value = y;
+            document.getElementById("sx").value = sx;
+            document.getElementById("sy").value = sy;
+            make_svg();
+        }
+
+
+
+        function landscape() {
+            let r = document.getElementById("w").value;
+            document.getElementById("w").value = document.getElementById("h").value;
+            document.getElementById("h").value = r;
+            make_svg();
+        }
+
+
+        function clone() {
+            make_svg();
+            clone_svg();
+        }
+
+
+
+        function download_svg() {
+            let download_link_element = document.createElement("a");
+            download_link_element.href = svg_url;
+            download_link_element.download = "paper.svg";
+            document.body.appendChild(download_link_element);
+            download_link_element.click();
+            document.body.removeChild(download_link_element);
+        }
+    </script>
+</body>
+
+</html>
