@@ -9,21 +9,35 @@
     <title>Papeur</title>
     <style>
         #menu_bar {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             margin: 1em auto 1em;
+            border-collapse: collapse;
         }
 
         #menu_bar td {
             text-align: center;
-            border: 1px solid black;
+            border: 1px solid lightgrey;
+            padding: 2px;
         }
 
         #menu_bar input {
             float: right;
         }
 
+        #menu_bar button,
         #menu_bar label {
-            margin-left: 0.5em;
-            margin-right: 1em;
+            background-color: lightgrey;
+            border: none;
+            margin: 2px;
+            padding: 2px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+
+        #menu_bar label:hover,
+        #menu_bar button:hover {
+            background-color: #0004;
         }
 
         #images {
@@ -72,7 +86,8 @@
             <tbody>
                 <tr>
                     <td>
-                        <strong>Papeur</strong>
+                        <strong style="margin:0.2em;"><span style="color:lightgrey">🧻</span> Pa<span
+                                style="color:lightgrey">ï</span>peur</strong>
                     </td>
                     <td>
                         <button type="button" onpointerdown="preset_f(297, 420, true, true)">📄A3</button>
