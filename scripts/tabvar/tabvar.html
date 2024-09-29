@@ -757,6 +757,14 @@
 
             function file_save() {
                 copy_to_output();
+                let construction_trimed = document.createElement("span");
+                construction_trimed.innerHTML = construction.innerHTML.replace(/ class=""/g, "");
+                construction_trimed.style["display"] = "none";
+                document.body.appendChild(construction_trimed);
+                Array.from(construction_trimed.getElementsByTagName("td")).forEach(cell => {
+                    cell.innerHTML = cell.innerHTML.trim();
+                    cell.innerHTML = cell.innerHTML.replace(/^(<br>)+|(<br>)+$/g, "");
+                });
                 let file_name = document.getElementById("file_save").value;
                 var my_file = `\<!DOCTYPE html\>
 \<html lang=\"fr\"\>
@@ -775,17 +783,24 @@
                 }
             };
     function apply_mathjax() {
-      document.getElementsByTagName(\"table\")[0];
-      Array.from(document.getElementsByTagName("td")).forEach(cell => {
-        cell.innerHTML = \"\\\\(\" + cell.innerHTML + \"\\\\)\";
+      let table_element = document.getElementsByTagName(\"table\")[0];
+      Array.from(table_element.getElementsByTagName("td")).forEach(cell => {
+        if (cell.innerHTML.length > 0) {
+          cell.innerHTML = \"\\\\(\" + cell.innerHTML + \"\\\\)\";
+        }
       });
+
+      let code_element = document.createElement(\"pre\");
+      code_element.style[\"background-color\"] = \"lightgrey\";
+      code_element.innerHTML = \"&lt;table&gt;\" + table_element.innerHTML.replace(/</g, \"&lt;\").replace(/>/g, \"&gt;\") + \"&lt;/table&gt;\";
+      document.body.appendChild(code_element);
       MathJax.typeset();
       }
   \</script\>
 \</head\>
 \<body onload=\"apply_mathjax()\"\>
   \<span\>  
-    ${construction.innerHTML}
+    ${construction_trimed.innerHTML}
   \</span\>
 \</body\>
 \</html\>`;
@@ -796,6 +811,7 @@
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
+            document.body.removeChild(construction_trimed);
          }
 </script>
     </div>
