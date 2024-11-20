@@ -15,9 +15,9 @@
       <h2>Introduction</h2>
       <strong>Histoire :</strong>
       <ul>
-        <li> Descartes (XVII) : transformer les problèmes géométriques en problèmes de calcul ;
+        <li> Descartes (XVII) :<br /> transformer les problèmes géométriques en problèmes de calcul ;
         </li>
-        <li> Grassmann (XIX) : «produit linéaire» (produit scalaire) issu d'un travail sur les marées.
+        <li> Grassmann (XIX) :<br /> «produit linéaire» (produit scalaire) issu d'un travail sur les marées.
         </li>
       </ul>
     </div>
@@ -166,8 +166,7 @@
       </div>
     </div>
   </div>
-
-  <div class="pagebreak"></div>
+  </div>
 
   <h3>Colinéarité</h3>
   <div class="defi"> \(\overrightarrow{u}={{x}\choose{y}}\) et \(\overrightarrow{v}={{x'}\choose{y'}}\) sont deux
@@ -183,33 +182,24 @@
           ||\overrightarrow{v}|| \sin\alpha\)</span> ;</li>
     </ul>
   </div>
-  <div class="row">
-    <div class="col">
-      <div class="prop">\(\overrightarrow{u}={{x}\choose{y}}\) et \(\overrightarrow{v}={{x'}\choose{y'}}\) sont
-        <strong>colinéaires</strong> (noté \(\overrightarrow{u}//\overrightarrow{v}\), c'est à dire qu'ils ont
-        <strong>même
-          direction</strong> (mais pas forcément de même sens)) lorsque (les conditions suivantes sont équivalentes):
-        <ul>
-          <li> Il existe un réel \(k\) (appelé <strong>coefficient de colinéarité</strong>) tel que <br />
-            \(\overrightarrow{u}=k\overrightarrow{v}\) ou \(\overrightarrow{v}=k\overrightarrow{u}\).
-          </li>
-          <li> les produits en croix sont égaux dans le tableau \(\begin{array}{|c|c|}\hline x & x' \\ \hline y & y' \\
-            \hline \end{array}\), c'est à dire que les coordonnées des deux vecteurs sont proportionnelles
-          </li>
-          <li> \(\det\left(\overrightarrow{u};\overrightarrow{v}\right)=0\)
-          </li>
-          <li>L'angle entre \(\overrightarrow{u}\) et \(\overrightarrow{v}\) est de 0° ou 180°.</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="col">
-      <figure>
-        <img style="--width-print:4cm;" src="assets/vec3.png" alt="colinéarité">
-        <figcaption>deux vecteurs colinéaires</figcaption>
-      </figure>
-    </div>
+  <div class="prop">\(\overrightarrow{u}={{x}\choose{y}}\) et \(\overrightarrow{v}={{x'}\choose{y'}}\) sont
+    <strong>colinéaires</strong> (noté \(\overrightarrow{u}//\overrightarrow{v}\), c'est à dire qu'ils ont <strong>même
+      direction</strong> (mais pas forcément de même sens)) lorsque (les conditions suivantes sont équivalentes):
+    <ul class="row" style="--columns:2;">
+      <li> Il existe un réel \(k\) (appelé <strong>coefficient de colinéarité</strong>) tel que <br />
+        \(\overrightarrow{u}=k\overrightarrow{v}\) ou \(\overrightarrow{v}=k\overrightarrow{u}\).
+      </li>
+      <li> les produits en croix sont égaux dans le tableau \(\begin{array}{|c|c|}\hline x & x' \\ \hline y & y' \\
+        \hline \end{array}\), c'est à dire que les coordonnées des deux vecteurs sont proportionnelles
+      </li>
+      <li> \(\det\left(\overrightarrow{u};\overrightarrow{v}\right)=0\)
+      </li>
+      <li>L'angle entre \(\overrightarrow{u}\) et \(\overrightarrow{v}\) est de 0° ou 180°.</li>
+    </ul>
   </div>
+
+
   <div class="exo">On donne \(\overrightarrow{u}={{-2}\choose{3}}\) et \(\overrightarrow{v}={{4}\choose{-6}}\).<br />
     Démontrer que ces vecteurs sont colinéaires et donner leur coefficient de colinéarité.
     <div class="corr">
@@ -226,10 +216,8 @@
 
   <div class="rema">
     Le déterminant de deux vecteurs \(\overrightarrow{u}\) et \(\overrightarrow{v}\) correspond à l'aire du
-    parallélogramme dont deux côtés sont \(\overrightarrow{u}\) et \(\overrightarrow{v}\) (tracés avec la même
-    origine)
-    ; l'aire est comptée négativement si l'on passe de \(\overrightarrow{u}\) à \(\overrightarrow{v}\) en tournant
-    dans
+    parallélogramme dont deux côtés sont \(\overrightarrow{u}\) et \(\overrightarrow{v}\) (tracés avec la même origine)
+    ; l'aire est comptée négativement si l'on passe de \(\overrightarrow{u}\) à \(\overrightarrow{v}\) en tournant dans
     le sens indirect.
   </div>
 
@@ -237,14 +225,12 @@
     <div class="row">
       <div class="col">
         Dans un repère orthonormé, on a \(\overrightarrow{u}=\left(\begin{array}{c} 3 \\ -2 \\ \end{array}\right)\) et
-        \(\overrightarrow{v}=\left(\begin{array}{c} 0{,}7 \\ 2{,}4 \\ \end{array}\right)\) ; tracer les deux vecteurs
-        à
+        \(\overrightarrow{v}=\left(\begin{array}{c} 0{,}7 \\ 2{,}4 \\ \end{array}\right)\) ; tracer les deux vecteurs à
         partir de l'origine d'un repère orthonormé ; calculer leur déterminant et en déduire l'angle entre ces deux
         vecteurs.
         <div class="corr">
           On a \(||\overrightarrow{u}||=\sqrt{13}\) et \(||\overrightarrow{v}||=2{,}5\) ;
-          de plus \(\det\left(\overrightarrow{u}, \overrightarrow{v}\right) = 8{,}6\). Ainsi on sait que \(\sin\alpha
-          =
+          de plus \(\det\left(\overrightarrow{u}, \overrightarrow{v}\right) = 8{,}6\). Ainsi on sait que \(\sin\alpha =
           \dfrac{8{,}6}{2{,}5\sqrt{13}}\) et on en déduit que l'angle qui permet de passer de \(\overrightarrow{u}\) à
           \(\overrightarrow{v}\) est de 72,6° environ.
         </div>
@@ -264,8 +250,7 @@
   <div class="row">
     <div class="col">
       <div class="defi"> \(\overrightarrow{u}={{x}\choose{y}}\) et \(\overrightarrow{v}={{x'}\choose{y'}}\) sont deux
-        vecteurs non nuls. On passe du vecteur \(\overrightarrow{u}\) au vecteur \(\overrightarrow{v}\) en tournant
-        d'un
+        vecteurs non nuls. On passe du vecteur \(\overrightarrow{u}\) au vecteur \(\overrightarrow{v}\) en tournant d'un
         angle \(\alpha=\widehat{\left(\overrightarrow{u};\overrightarrow{v}\right)}\).
         Le <strong>produit scalaire</strong> de ces deux vecteurs est un nombre noté
         \(\displaystyle\overrightarrow{u}\cdot\overrightarrow{v}\) et pouvant se calculer de deux manères :
@@ -303,8 +288,7 @@
     </div>
   </div>
   <div class="exo">Déterminer les couples de vecteurs orthogonaux :
-    \(\overrightarrow{u}={{-3}\choose{-9}} ; \overrightarrow{v}={{3}\choose{-1}} ;
-    \overrightarrow{w}={{9}\choose{3}}\)
+    \(\overrightarrow{u}={{-3}\choose{-9}} ; \overrightarrow{v}={{3}\choose{-1}} ; \overrightarrow{w}={{9}\choose{3}}\)
     <div class="corr">
       \(\overrightarrow{u}\perp\overrightarrow{v}\)
     </div>
@@ -353,7 +337,7 @@
         \(\overrightarrow{u}\neq\overrightarrow{0}\) (exprimée en Newtons) à ce déplacement est donnée par
         \(\overrightarrow{u}\cdot\overrightarrow{v}\). On appelle cette énergie le <strong>travail</strong> de
         \(\overrightarrow{u}\) selon \(\overrightarrow{v}\).<br />
-        <figure><img src="assets/CPS2.svg" style="--width-web:100%;--width-print:7cm" /></figure>
+        <figure><img src="assets/CPS2.png" style="--width-web:100%;--width-print:6cm" /></figure>
       </div>
     </div>
     <div class="col">
@@ -430,143 +414,30 @@
 
   <div class="rema">
     Le produit scalaire est donc distributif sur l'addition de vecteurs. Il est donc possible de calculer avec les
-    vecteurs de la même manière qu'avec des nombres, à l'exception du fait qu'un produit scalaire n'a que deux
-    facteurs.
-    On peut donc utiliser des identités remarquables.
-  </div>
+    vecteurs de la même manière qu'avec des nombres, à l'exception du fait qu'un produit scalaire n'a que deux facteurs.
+    On peut donc utiliser des identités remarquables.</div>
 
-  <div class="pagebreak"></div>
-
-  <h3>Application : Égalité du #parallélogramme#</h3>
-
-  <div class="exo">
-    <p>Le bateau \(M\) est soumis :
-    <ul>
-      <li>à un courant marin \(\overrightarrow{u}\) qui le déplacerait, sous sa seule influence, au point \(C\) en
-        une heure ;</li>
-      <li>à un vent \(\overrightarrow{v}\) qui le déplacerait, sous sa seule influence, au point \(V\) en une heure
-        ;</li>
-    </ul>
-    Le bateau va subir les influences combinées du vent et du courant : pour connaître sa position réelle, notée
-    \(F\), dans une heure, on va calculer la somme des deux vecteurs \(\overrightarrow{u}\) et
-    \(\overrightarrow{v}\).
-    </p>
-    <img style="--width-print:10cm; float: right; --width-web:40vw;" src="assets/paral.svg" alt="figure">
-    <ol>
-      <li>
-        Lire et noter les coordonnées de \(\overrightarrow{u}\) et de \(\overrightarrow{v}\) et calculer les normes
-        de ces
-        vecteurs.
-        <div class="corr">
-          \(\overrightarrow{u}={{12}\choose{5}}\) est de norme 13 ;
-          \(\overrightarrow{v}={{8}\choose{15}}\) est de norme 17.
-        </div>
-      </li>
-      <li>
-        Calculer les coordonnées de \(\overrightarrow{w}=\overrightarrow{u}+\overrightarrow{v}\), le tracer sur la
-        figure avec pour origine \(M\) et calculer aussi sa norme.<br> Placer la position \(F\) du bateau dans une
-        heure.
-        <div class="corr">
-          \(\overrightarrow{w}={{20}\choose{20}}\) ; sa norme est de \(\sqrt{800}=20\sqrt{2}\approx 28{,}3\).
-        </div>
-
-      </li>
-      <li>
-        Calculer les coordonnées de \(\overrightarrow{d}=\overrightarrow{u}-\overrightarrow{v}\), ainsi que sa
-        norme.<br>
-        Tracer un représentant de ce vecteur à partir du point \(V\). S'agit-il du vecteur \(\overrightarrow{VC}\) ?
-        <div class="corr">
-          \(\overrightarrow{d}={{4}\choose{-10}}\) ; sa norme est de \(\sqrt{116}=2\sqrt{29}\approx 10{,}8\).
-        </div>
-      </li>
-      <li>
-        Quelle est la nature du quadrilatère \(MCFV\) ? Que représentent les vecteurs \(\overrightarrow{w}\) et
-        \(\overrightarrow{d}\) pour ce quadrilatère ?
-        <div class="corr">
-          C'est un parallélogramme, et ces deux vecteurs représentent ses diagonales.
-        </div>
-      </li>
-      <li>
-        Calculer la somme des carrés des longueurs des 4 côtés du parallélogramme ; calculer la somme des carrés des
-        longueurs des diagonales. Qu'observe-t-on ?
-        <div class="corr">
-          Ces deux sommes sont égales à 916.
-        </div>
-      </li>
-      <li>
-        Développer \(\left(\overrightarrow{u}-\overrightarrow{v}\right)^2 +
-        \left(\overrightarrow{u}+\overrightarrow{v}\right)^2\) ; conclure.
-      </li>
-    </ol>
-    <div class="corr">
-      <img style="--width-print:10cm; --width-web:40vw;" src="assets/paralc.svg" alt="figure">
-    </div>
-  </div>
-
-  </div>
-
-  <div class="theo"><strong>Égalité du parallélogramme : </strong><br>
-    Dans un parallélogramme, la somme des carrés des longueurs des deux diagonales est égale à la somme des carrés des
-    quatre côtés.
-  </div>
-  <div class="exo"> ⭐ La réciproque est-elle vraie ? Un quadrilatère dont la somme des carrés des longueurs des deux
-    diagonales est égale à la somme des carrés des
-    quatre côtés est-il toujours un parallélogramme ?
-  </div>
-
-  <h3>Application : Théorème d'Al-Kashi</h3>
   <div class="theo">
-    <strong>Théorème d'Al-Kashi</strong>
-    <img style="--width-print:4.5cm; --width-web:40vw; float: right;" src="assets/alk.svg" alt="figure">
-    <div>
-      Ce théorème, d'un grand mathématicien perse, lie les longueurs des côtés d'un triangle à ses angles.<br />
-      Soit \(MAB\) un triangle quelconque. Alors :
-      <div style="text-align: center; padding:1em;">
-        <span class="surl">\(BC^2 = AB^2 + AC^2 - 2AB\times AC\times\cos\alpha\)</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="exo"><strong>Écriture de la formule et démonstration :</strong><br>
-    <ol>
-      <li>
-        Écrire l'égalité analogue pour l'angle \(\beta\).
-        <div class="corr">
-          \(AC^2 = AB^2 + BC^2 - 2AB\times BC\times\cos\beta\)
-        </div>
-      </li>
-      <li> Démontrer ce théorème en développant (compléter) : \(
-        BC^2 = \overrightarrow{BC}^2 =
-        \left(\overrightarrow{AC}-\overrightarrow{\ldots B}\right)^2
-        \)
-        <div class="corr">
-          \(
-          BC^2 = \overrightarrow{BC}^2 =
-          \left(\overrightarrow{AC}-\overrightarrow{AB}\right)^2 =
-          AC^2 + AB^2 - 2\overrightarrow{AC}\cdot\overrightarrow{AB} =
-          AC^2 + AB^2 - 2AB\times AC\times\cos\alpha
-          \)
-        </div>
-      </li>
-    </ol>
+    <strong>Théorème d'Al-Kashi</strong><br />
+    Ce théorème, d'un grand mathématicien perse, lie les longueurs des côtés d'un triangle à ses angles.<br />
+    Soit \(MAB\) un triangle quelconque. Alors :
+    <span class="surl">\(AB^2 = AM^2 + MB^2 - 2AM\times MB\times\cos\widehat{M}\)</span>
   </div>
 
   <div class="exo">
-    <ul>
+    <ol>
+      <li> Démontrer ce théorème en développant \(AB^2 = \overrightarrow{AB}^2 =
+        \left(\overrightarrow{AM}+\overrightarrow{MB}\right)^2\) (attention :
+        \(\overrightarrow{AM}\cdot\overrightarrow{MB}=\ldots?\ldots\overrightarrow{MA}\cdot\overrightarrow{MB}\) )
+      </li>
       <li> Un triangle a des côtés de 3 et 4 cm qui forment un angle de \(\frac{\pi}{3}\).
         Calculer la longueur de son troisième côté.
-        <div class="corr">
-          troisième côté au carré = \(3^2 + 4^2 - 2\times 3\times 4\times \cos\frac{\pi}{3} = 9 + 16 - 12 = 13\).
-          Ce troisième côté vaut donc \(\sqrt{13}\).
-        </div>
       </li>
       <li> Un triangle a des côtés de 10, 8 et 5 cm.
         Donner les angles de ce triangle au degré près.
-        <div class="corr">
-          Les angles opposés au côtés donnés sont 30, 52 et 98 degrés environ.
-        </div>
+
       </li>
-      </ol>
+    </ol>
   </div>
 
 

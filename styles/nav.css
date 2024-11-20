@@ -51,6 +51,7 @@
 .navbar .item,
 .navbar .group {
     padding: 0 0.25em 0;
+    overflow: visible;
 }
 
 .navbar a.item:hover {
@@ -60,6 +61,7 @@
 .navbar .icon {
     color: var(--navbar-icon);
     font-size: xx-large;
+    overflow: hidden;
 }
 
 @media (max-width: 600px) {

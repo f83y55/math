@@ -37,11 +37,6 @@ main,
 section {
     padding: 0;
     margin: 0;
-    /*
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    */
     font-family: var(--font-family);
     font-size: var(--font-size);
     line-height: var(--line-height);
@@ -377,17 +372,20 @@ table.vartable tr td.bbar {
     background-position: center center;
 }
 
-figure,
 img {
+    --width-web: 100%;
+    --height-web: initial;
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: var(--width-web);
+    height: var(--height-web);
     max-width: 100%;
     max-height: 100vh;
 }
 
 
-figcaption {
+figure {
+    text-align: center;
     font-style: italic;
     font-size: small;
 }
@@ -402,13 +400,12 @@ figcaption {
 
 .row {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
 }
 
 .col {
-    margin: 0 auto 0;
-    --width: initial;
-    width: var(--width);
+    --width-web: auto;
+    width: var(--width-web);
     max-width: 75%;
 
 }
@@ -493,7 +490,6 @@ ol {
         font-size: smaller;
     }
 
-    figure,
     img {
         margin: 0 auto 0;
         padding: 0;
@@ -547,8 +543,6 @@ ol {
         --shadow: 0.2em;
         --margin: 0.1em;
         --padding: 0.5em;
-        --width-print: auto;
-        --height-print: auto;
     }
 
     .hidden-web {
@@ -611,7 +605,6 @@ ol {
 
     table.mytable,
     canvas,
-    figure,
     img {
         --width-print: auto;
         --height-print: auto;
