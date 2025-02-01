@@ -12,53 +12,57 @@ const import_module = document.head.getElementsByTagName("script")[0].hasAttribu
 
 // Modules
 const modules_head = {
-"style" :          [{"path":"styles/style.css", "default":true}],
-"nav" :            [{"path":"styles/nav.css", "default":true},],
-		        // {"path":"scripts/nav/nav.js", "default":true}],
-"mathjax" :        [{"path":"scripts/MathJax-master/es5/tex-mml-chtml.js", 
-		            "default":true,
-			        "attr":{"async":"true"}
-                   }],
-"prism" :          [{"path":"scripts/prism/prism.css", 
-                     "default":false},
-		            {"path":"scripts/prism/prism.js", 
-					 "default":false, "attr":{"async":"true"}}
-				    ],
-				  
+    "style": [{ "path": "styles/style.css", "default": true }],
+    "nav": [{ "path": "styles/nav.css", "default": true },],
+    "mathjax": [{
+        "path": "scripts/MathJax-master/es5/tex-mml-chtml.js",
+        "default": true,
+        "attr": { "async": "true" }
+    }],
+    "prism": [{
+        "path": "scripts/prism/prism.css",
+        "default": false
+    },
+    {
+        "path": "scripts/prism/prism.js",
+        "default": false, "attr": { "async": "true" }
+    }
+    ],
+
 }
 
 
-function inject_cssjs (hashtable, recipient, import_module) {
-for (var key in hashtable){
-	for (var item of hashtable[key]){
-		console.log("path : " + item["path"] + "| default : " + item["default"]);
-		if ((item["path"].endsWith(".css"))&&(item["default"]||(import_module.includes(key)))) {
-			const element = document.createElement("link");
-			element.setAttribute("href", root_path + item["path"]);
-			element.setAttribute("rel", "stylesheet");
-			element.setAttribute("type", "text/css");
-			for (attr in item["attr"]) { 
-				element.setAttribute(attr, item["attr"][attr])
-			};
-			recipient.appendChild(element);
-		}
-		if ((item["path"].endsWith("js"))&&((item["default"])||(import_module.includes(key)))) {
-			const element = document.createElement("script");
-			for (attr in item["attr"]) { 
-				element.setAttribute(attr, item["attr"][attr])
-			};
-			element.setAttribute("src", root_path + item["path"]);
-			element.setAttribute("type", "text/javascript");
-			recipient.appendChild(element);
+function inject_cssjs(hashtable, recipient, import_module) {
+    for (var key in hashtable) {
+        for (var item of hashtable[key]) {
+            console.log("path : " + item["path"] + "| default : " + item["default"]);
+            if ((item["path"].endsWith(".css")) && (item["default"] || (import_module.includes(key)))) {
+                const element = document.createElement("link");
+                element.setAttribute("href", root_path + item["path"]);
+                element.setAttribute("rel", "stylesheet");
+                element.setAttribute("type", "text/css");
+                for (attr in item["attr"]) {
+                    element.setAttribute(attr, item["attr"][attr])
+                };
+                recipient.appendChild(element);
+            }
+            if ((item["path"].endsWith("js")) && ((item["default"]) || (import_module.includes(key)))) {
+                const element = document.createElement("script");
+                for (attr in item["attr"]) {
+                    element.setAttribute(attr, item["attr"][attr])
+                };
+                element.setAttribute("src", root_path + item["path"]);
+                element.setAttribute("type", "text/javascript");
+                recipient.appendChild(element);
 
-		}
-	}
-	/* special cases */
-	/* prism line numbering */
-	if (import_module.includes("prism")) {
-		document.body.classList.add("line-numbers")
-	}
-}
+            }
+        }
+        /* special cases */
+        /* prism line numbering */
+        if (import_module.includes("prism")) {
+            document.body.classList.add("line-numbers")
+        }
+    }
 };
 
 // Class rootpath href/src modification
@@ -67,8 +71,8 @@ function apply_rootpaths() {
     function apply_rootpath(item) {
         for (attr of ["src", "href"]) {
             if (item.hasAttribute(attr)) {
-	        item.setAttribute(attr, root_path+item.getAttribute(attr));
-	    };
+                item.setAttribute(attr, root_path + item.getAttribute(attr));
+            };
         };
     };
     Array.from(document.querySelectorAll(".rootpath")).forEach(apply_rootpath);
@@ -95,12 +99,12 @@ function full_screen_imgs() {
     document.body.appendChild(full_page);
 
     Array.from(document.getElementsByTagName("img")).forEach(img => {
-       img.addEventListener("click", function() {
-       full_page.style["background-image"] = `url(${img.src})`;
-       full_page.style["display"] = "block";
-       full_page.style["top"] = `${window.scrollY}px`;
-       full_page.style["left"] = `${window.scrollX}px`;
-       });
+        img.addEventListener("click", function() {
+            full_page.style["background-image"] = `url(${img.src})`;
+            full_page.style["display"] = "block";
+            full_page.style["top"] = `${window.scrollY}px`;
+            full_page.style["left"] = `${window.scrollX}px`;
+        });
     });
 }
 
@@ -114,7 +118,7 @@ function ul_collapsible() {
             el.style["list-style"] = "none";
         }
         Array.from(el.querySelectorAll("li")).forEach(li => {
-	    let uls = li.children;
+            let uls = li.children;
             if (uls) {
                 uls = Array.from(uls).filter((elem) => ["UL", "OL"].includes(elem.tagName));
             }
@@ -139,7 +143,7 @@ function ul_collapsible() {
                         icon_content.nodeValue = icon_closed;
                         ul_child.style["display"] = "none";
                     }
-                    icon.addEventListener("click", function () {
+                    icon.addEventListener("click", function() {
                         if (ul_child.style["display"] === "none") {
                             ul_child.style["display"] = "";
                             icon_content.nodeValue = icon_open;
@@ -151,7 +155,7 @@ function ul_collapsible() {
                     ul_child_last = ul_child;
                 });
             } else {
-		let icon = document.createElement("span");
+                let icon = document.createElement("span");
                 let icon_content = document.createTextNode(icon_file);
                 icon.appendChild(icon_content);
                 li.prepend(icon);
@@ -168,62 +172,62 @@ function corrections() {
     button_correction.classList.add("hidden-print");
     let first_h1 = document.getElementsByTagName("h1")[0];
     if (first_h1) {
-	first_h1.parentNode.insertBefore(button_correction, first_h1.nextSibling);
+        first_h1.parentNode.insertBefore(button_correction, first_h1.nextSibling);
     } else {
-	document.body.appendChild(button_correction);
+        document.body.appendChild(button_correction);
     }
     button_correction.addEventListener("click", function() {
-	if (!button_correction.classList.contains("open")) {
-	    Array.from(document.getElementsByClassName("corr")).forEach(corr => {
-		corr.classList.add("open");
-	    });
-	    button_correction.classList.add("open");
-	    button_correction.style["background-color"] = "#040";
-	    button_correction.style["color"] = "#0F0";
-	}
-	else {
-	    Array.from(document.getElementsByClassName("corr")).forEach(corr => {
-		corr.classList.remove("open");
-	    });
-	    button_correction.classList.remove("open");
-	    button_correction.style["background-color"] = "gray";
-	    button_correction.style["color"] = "black";
-	}
+        if (!button_correction.classList.contains("open")) {
+            Array.from(document.getElementsByClassName("corr")).forEach(corr => {
+                corr.classList.add("open");
+            });
+            button_correction.classList.add("open");
+            button_correction.style["background-color"] = "#040";
+            button_correction.style["color"] = "#0F0";
+        }
+        else {
+            Array.from(document.getElementsByClassName("corr")).forEach(corr => {
+                corr.classList.remove("open");
+            });
+            button_correction.classList.remove("open");
+            button_correction.style["background-color"] = "gray";
+            button_correction.style["color"] = "black";
+        }
     });
     Array.from(document.getElementsByClassName("corr")).forEach(corr => {
-       corr.addEventListener("click", function() {
-	   corr.classList.toggle("open");
-	   });
+        corr.addEventListener("click", function() {
+            corr.classList.toggle("open");
+        });
     });
 }
 
-function build_head (before=before_title) {
+function build_head(before = before_title) {
     let page_title = before + document.getElementsByTagName("h1")[0].textContent.trim();
     let title = document.head.getElementsByTagName("title")[0];
-    if (!title) {title = document.createElement("title") ; document.head.appendChild(title);}
+    if (!title) { title = document.createElement("title"); document.head.appendChild(title); }
     title.text = page_title;
     let favicon = document.createElement("link");
     favicon.setAttribute("rel", "icon");
     favicon.setAttribute("href", `data:image/svg+xml, <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22limegreen%22>${icon}</text></svg>`);
     document.head.appendChild(favicon);
-    Array.from(document.head.getElementsByTagName("meta")).forEach(function(el){
-	console.log(el); // afaire
+    Array.from(document.head.getElementsByTagName("meta")).forEach(function(el) {
+        console.log(el); // afaire
     });
     return page_title;
 }
 
-function body () {
+function body() {
     let page_title = build_head();
-    inject_cssjs (modules_head, document.head, import_module);
+    inject_cssjs(modules_head, document.head, import_module);
     apply_rootpaths();
     full_screen_imgs();
-    if (document.getElementsByClassName("corr")[0]) {corrections();} 
-    if (document.querySelector("ul.collapsible, ol.collapsible")) {ul_collapsible();}
+    if (document.getElementsByClassName("corr")[0]) { corrections(); }
+    if (document.querySelector("ul.collapsible, ol.collapsible")) { ul_collapsible(); }
 
-// body : add header with nav
-const header = document.createElement("header");
-document.body.prepend(header);
-header.innerHTML += `
+    // body : add header with nav
+    const header = document.createElement("header");
+    document.body.prepend(header);
+    header.innerHTML += `
 <nav class="navbar">
 <input type="checkbox" id="menu-switch" style="display:none;"/>
 <label for="menu-switch" class="icon"></label>
@@ -271,9 +275,19 @@ header.innerHTML += `
     </div>
 </nav>`
 
-// body : add footer
-const footer = document.createElement("footer");
-document.body.append(footer);
+    // body : add footer
+    const footer = document.createElement("footer");
+    document.body.append(footer);
 
 };
 
+// add code (prism)
+function add_code(el_id, text = "Text", lang = "python") {
+    let el = document.getElementById(el_id);
+    let code_node = document.createElement("code");
+    code_node.classList.add(`language-${lang}`);
+    let text_node = document.createTextNode(text);
+    code_node.appendChild(text_node);
+    el.appendChild(code_node);
+    console.log("SDFVGSEDFRV")
+}
