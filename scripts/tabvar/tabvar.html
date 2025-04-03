@@ -792,7 +792,7 @@
 
       let code_element = document.createElement(\"pre\");
       code_element.style[\"background-color\"] = \"lightgrey\";
-      code_element.innerHTML = \"&lt;table&gt;\" + table_element.innerHTML.replace(/</g, \"&lt;\").replace(/>/g, \"&gt;\") + \"&lt;/table&gt;\";
+      code_element.innerHTML = table_element.outerHTML.replace(/</g, \"&lt;\").replace(/>/g, \"&gt;\");
       document.body.appendChild(code_element);
       MathJax.typeset();
       }
