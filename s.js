@@ -289,5 +289,4 @@ function add_code(el_id, text = "Text", lang = "python") {
     let text_node = document.createTextNode(text);
     code_node.appendChild(text_node);
     el.appendChild(code_node);
-    console.log("SDFVGSEDFRV")
 }
