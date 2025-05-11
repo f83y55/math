@@ -6,35 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="../../s.js"></script>
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-    <style>
-        .py-repl-output,
-        #info {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: smaller;
-        }
-
-        #info li {
-            margin: 0;
-            padding: 0;
-        }
-
-        .cm-line {
-            font-size: larger;
-        }
-
-        pre.py-terminal {
-            display: none;
-        }
-    </style>
-</head>
+    <!--
+    <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
+    -->
+    <script defer src="pyscript.js"></script>
+  </head>
 
 <body onload="body()">
     <section class="pyscript">
         <h1>PyScript REPL</h1>
-        <ul id="info">
+        <details style="background: #0005; margin: 2px;"><summary class="hidden-print">Aide et sauvegarde</summary>
+        <ul>
             <li class="hidden-print">
-                Évaluer : Shift + entrée ;
+                        Exécuter : Shift + entrée ou <button><span style="color:green">▶</span></button> ;
             </li>
             <li>
                 <button class="hidden-print" onclick="file_save()">sauvegarder</button>
@@ -42,22 +26,24 @@
                 <span class="hidden-web">Fichier python : </span>
                 <input id="file_save" value="pyscript" type="text">.py
             </li>
-            <li>
-                Glisser-déposer un fichier python (.py) sur une boîte de saisie pour le charger.
+            <li class="hidden-print">
+                glisser-déposer un fichier python (.py) sur une boîte de saisie pour le charger.
             </li>
+            <li class="hidden-print">
+                Lors d'une utilisation de <code>print()</code>, l'affichage s'effectue dans la console javascript.
+            </li>
+
         </ul>
-        <div>
+        </details>
+        <div style="margin: 2px; font-family: 'Courier New', Courier, monospace; font-size: larger;">
             <py-repl id="my-repl" auto-generate="true"> </py-repl>
         </div>
     </section>
     <script defer>
         function file_save() {
             let my_file = "";
-            Array.from(document.querySelectorAll(".py-repl-editor")).forEach(el => {
-                const sel = el.firstElementChild.shadowRoot;
-                Array.from(sel.querySelectorAll(".cm-line")).forEach(line => {
+            Array.from(document.querySelectorAll(".cm-line")).forEach(line => {
                     my_file += line.textContent + "\n";
-                });
             });
             let file_name = document.getElementById("file_save").value;
             let a = document.createElement('a');
