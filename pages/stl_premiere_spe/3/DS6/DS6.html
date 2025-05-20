@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../../s.js"></script>
+</head>
+
+<body onload="body()">
+    <main>
+        <article>
+            <h1>DS : dérivées et primitives -- A</h1>
+            <div class="quadrillage5mm none" style="width:18cm; height: 2cm;">
+                <br> <strong>Prénom NOM : </strong>
+            </div>
+
+            <div class="exo"> <strong>Dérivées (6 points) : </strong> Calculer les dérivées des fonctions suivantes :
+                <ol>
+                    <li>
+                        <div>\(f(x) = \dfrac{4}{3}x^3 - 2x^2 - x + 1 \)
+                        </div>
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 2cm;">&nbsp;<br>&nbsp;<br>
+                            \(f'(x) = \)
+                        </div>
+                        <div class="corr">
+                            \(f'(x) = 4x^2-4x-1\)
+                        </div>
+                    </li>
+                    <li>
+                        <div>\(g(x) = \dfrac{5}{x}-x^2 \)
+                        </div>
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 2cm;">&nbsp;<br>&nbsp;<br>
+                            \(g'(x) = \)
+                        </div>
+                        <div class="corr">
+                            \(g'(x) = \dfrac{-5}{x^2}-2x\)
+                        </div>
+                    </li>
+                    <li>
+                        <div>\(h(x) = 3x^3\times\sin(x)\)
+                        </div>
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 2cm;">&nbsp;<br>&nbsp;<br>
+                            \(h'(x) = \)
+                        </div>
+                        <div class="corr">
+                            \(h'(x) = 9x^2\sin(x)+3x^3\cos(x) = 3x^2(3\sin(x)+x\cos(x))\)
+                        </div>
+                    </li>
+                    <li>
+                        <div>\(k(x) = \sin(2x)+5\cos(3x)\)
+                        </div>
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 2cm;">&nbsp;<br>&nbsp;<br>
+                            \(k'(x) = \)
+                        </div>
+                        <div class="corr">
+                            \(k'(x) = 2\cos(2x)-15\sin(3x)\)
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="exo"> <strong>Primitives (4 points) : </strong> Déterminer une primitive pour chacune des
+                fonctions suivantes
+                :
+                <ol>
+                    <li>
+                        <div>\(f(x) = 3x^2+2x+10\)
+                        </div>
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 2cm;">&nbsp;<br>&nbsp;<br>
+                            \(F(x) = \)
+                        </div>
+                        <div class="corr">
+                            \(F(x) = x^3+x^2+10x\)
+                        </div>
+                    </li>
+                    <li>
+                        <div>\(g(x) = \cos(x) - \dfrac{4}{x^2} \)
+                        </div>
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 2cm;">&nbsp;<br>&nbsp;<br>
+                            \(G(x) = \)
+                        </div>
+                        <div class="corr">
+                            \(G(x) = \sin(x) + \dfrac{4}{x}\)
+                        </div>
+                    </li>
+                    <li>
+                        <div>\(h(x) = 3\sin(4x)\)
+                        </div>
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 2cm;">&nbsp;<br>&nbsp;<br>
+                            \(H(x) = \)
+                        </div>
+                        <div class="corr">
+                            \(H(x) = \dfrac{-3}{4}\cos(4x)\)
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="pagebreak">
+                <div class="hidden-web" style="text-align: right;">Tourner SVP</div>
+            </div>
+            <div class="exo"> <strong>Problème 1 (3 points) : </strong> On étudie la fonction définie sur ]-∞;+∞[ par
+                \(f(x) = x^3+3x-5\)
+                <ol>
+                    <li>
+                        <div>Calculer \(f'(x)\) pour tout \(x\) réel :
+                        </div>
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 2cm;">&nbsp;<br>&nbsp;<br>
+                            \(f'(x) = \)
+                        </div>
+                        <div class="corr">
+                            \(f'(x) = 9x^2+3\)
+                        </div>
+                    </li>
+                    <li>
+                        <div>Expliquer pourquoi on a toujours \(f'(x)&gt;0\) :
+                        </div>
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 4cm;">&nbsp;<br>&nbsp;<br>
+
+                        </div>
+                        <div class="corr">
+                            \(f'(x) = 9x^2+3\) : un carré est toujours positif (ou nul) ; en ajoutant 3 l'expression \(
+                            9x^2+3\) est donc toujours strictement positive.
+                        </div>
+                    </li>
+                    <li>
+                        <div>Que peut-on en déduire sur les variations de \(f\) ?
+                        </div>
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 4cm;">&nbsp;<br>&nbsp;<br>
+
+                        </div>
+                        <div class="corr">
+                            \(f'(x) = 9x^2+3\) est toujours strictement positive, donc \(f\) est strictement croissante
+                            (principe de Lagrange).
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="exo"> <strong>Problème 2 (4 points) : </strong> On étudie la fonction définie sur ]-∞;+∞[ par
+                \(g(x) = x^3-3x-2\)
+                <ol>
+                    <li>
+                        <div>Calculer \(g'(x)\) pour tout \(x\) réel :
+                        </div>
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 2cm;">&nbsp;<br>&nbsp;<br>
+                            \(g'(x) = \)
+                        </div>
+                        <div class="corr">
+                            \(g'(x) = 3x^2-3\)
+                        </div>
+                    </li>
+                    <li>
+                        <div>Calculer \(g'(-1)\) puis \(g(1)\) et enfin \(g(0)\) :
+                        </div>
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 4cm;">&nbsp;<br>&nbsp;<br>
+
+                        </div>
+                        <div class="corr">
+                            \(g'(-1)=0\) ; \(g(1)-0\) ; \(g(0)=-3&lt;0\)
+                        </div>
+                    </li>
+                    <li>
+                        <div>Compléter le tableau de signe de \(g'(x)\) et variation de \(g\) suivant avec +, -, 0 puis
+                            ↘ et ↗ (inutile de calculer les max / min sauf pour vérifier) :
+                        </div>
+                        <div>
+                            <table class="vartable"
+                                style="text-align:center;padding:0;margin:0;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;">
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid;">
+                                        <td style="border-right: 1px solid;">\(x\)</td>
+                                        <td>\(-∞\)</td>
+                                        <td>\(~~~~~~~~\)</td>
+                                        <td>\(-1\)</td>
+                                        <td>\(~~~~~~~~\)</td>
+                                        <td>\(1\)</td>
+                                        <td>\(~~~~~~~~\)</td>
+                                        <td>\(+∞\)</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid;">
+                                        <td style="border-right: 1px solid;">\(g'(x)\)</td>
+                                        <td style="display: none;"></td>
+                                        <td colspan="2"></td>
+                                        <td
+                                            style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                        </td>
+                                        <td></td>
+                                        <td style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;"
+                                            colspan="1"></td>
+                                        <td colspan="2" rowspan="1"></td>
+                                        <td style="display: none;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>\(+∞\)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;">\(g\)</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;"></td>
+                                        <td>\(-∞\)</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="cell_selected"></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="corr">
+                            <table class="vartable"
+                                style="text-align:center;padding:0;margin:0;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;">
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid;">
+                                        <td style="border-right: 1px solid;">\(x\)</td>
+                                        <td>\(-∞\)</td>
+                                        <td>\(~~~~~~~~\)</td>
+                                        <td>\(-1\)</td>
+                                        <td>\(~~~~~~~~\)</td>
+                                        <td>\(1\)</td>
+                                        <td>\(~~~~~~~~\)</td>
+                                        <td>\(+∞\)</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid;">
+                                        <td style="border-right: 1px solid;">\(g'(x)\)</td>
+                                        <td style="display: none;"></td>
+                                        <td colspan="2">\(+\)</td>
+                                        <td
+                                            style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                            \(0\)</td>
+                                        <td class="cell_selected">\(-\)</td>
+                                        <td style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;"
+                                            colspan="1">\(0\)</td>
+                                        <td colspan="2" rowspan="1">\(+\)</td>
+                                        <td style="display: none;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>\(0\)</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>\(+∞\)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;">\(g\)</td>
+                                        <td></td>
+                                        <td>\(↗\)</td>
+                                        <td></td>
+                                        <td>\(↘\)</td>
+                                        <td></td>
+                                        <td>\(↗\)</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 1px solid;"></td>
+                                        <td>\(-∞\)</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>\(-4\)</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="exo"> <strong>Problème 3 (2 points) : </strong> Retrouver les courbes des fonctions utilisées
+                dans l'exercice précédent et indiquer leur nom distinctement sur la figure : \(f\) ; \(f'\) ; \(g\) et
+                \(g'\).
+                <div style="text-align: center;">
+                    <img src="assets/5.svg" alt="figure" style="--width-print: 14cm;">
+                </div>
+            </div>
+            <div class="exo"> <strong>Problème 4 (3 points) : chute des corps :</strong>
+                <img src="assets/6.svg" alt="schéma" style="width:25%; float: right; margin-left: 3em;">
+                <p>Un objet lâché (sans vitesse initiale, en négligeant la résistance de l'air) sur Terre au bord d'un
+                    précipice subit l'accélération \(a\) (en m/s²) de la pesanteur : sa vitesse \(v\) (en m/s, dirigée
+                    vers le bas)
+                    augmente
+                    pendant que sa hauteur de chute \(h\) (en m) augmente conjointement en fonction du temps \(t\) (en
+                    secondes).</p>
+                <div style="clear:both;">
+                </div>
+                <ol>
+                    <li>
+                        On sait que : \(h'=v\) et que \(v'=a\), ce que l'on peut noter :
+                        \(
+                        h(t)
+                        \stackrel{\frac{\textrm{d}}{\textrm{d}t}}{\longrightarrow}
+                        v(t)
+                        \stackrel{\frac{\textrm{d}}{\textrm{d}t}}{\longrightarrow}
+                        a(t)
+                        \)
+                        .<br>
+                        Sachant que sur Terre : \(a(t) = 10\), compléter les expressions de h(t) et de v(t) en
+                        utilisant vos connaissances sur les dérivées :
+                        <div style="text-align: center; font-size: 1.4em;">
+                            \(
+                            h(t) = 5\ldots ~~
+                            \stackrel{\frac{\textrm{d}}{\textrm{d}t}}{\longrightarrow}
+                            ~~
+
+                            v(t) = \ldots ~~
+                            \stackrel{\frac{\textrm{d}}{\textrm{d}t}}{\longrightarrow}
+                            ~~
+
+                            a(t) = 10
+                            \)
+                        </div>
+                        <div class="corr">
+                            \(
+                            h(t) = 5t^2
+                            \stackrel{\frac{\textrm{d}}{\textrm{d}t}}{\longrightarrow}
+                            ~~
+
+                            v(t) = 10t ~~
+                            \stackrel{\frac{\textrm{d}}{\textrm{d}t}}{\longrightarrow}
+                            ~~
+
+                            a(t) = 10
+                            \)
+
+                        </div>
+                    </li>
+                    <li>
+                        Déterminer la vitesse et la distance de chute de l'objet au bout de 2 secondes de chute.
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 4cm;">&nbsp;<br>&nbsp;<br>
+
+                        </div>
+
+                        <div class="corr">
+                            \(v(2) = 20\)m/s
+                            et
+                            \(h(2) = 20\)m
+                            .
+                        </div>
+                    </li>
+                    <li>En combien de temps l'objet parcourt-il 300m de chute (arrondir au centième) ?
+                        <div class="quadrillage5mm" style="width:16.5cm; height: 4cm;">&nbsp;<br>&nbsp;<br>
+
+                        </div>
+
+                        <div class="corr">
+                            On résout \(h(t) = 300\), d'où \(t = \sqrt{60} = 7{,}75\).
+                        </div>
+                    </li>
+                </ol>
+
+            </div>
+            </div>
+
+        </article>
+    </main>
+</body>
+
+</html>
