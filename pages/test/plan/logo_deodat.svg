@@ -1,0 +1,16 @@
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <g>
+    <path style="fill:#00ff00;stroke:#008000;stroke-width:0.3;"
+         d="m 40,36 -10,-19 10,5 0,6 5,3 3,-2 -2,-21 4,11 0,-18 8,26 4,1 11,-13 2,0 -7,12 2,1 9,-5 -8,11 0,3 8,2 0,2 10,1 -9,5 5,5 -8,1 1,5 -8,3 3,11 -2,4 -5,-2 h -4 l -3,27 -6,-29 -10,9 2,-8 -3,-3 -36,14 26,-22 -9,-13 2,-4 8,-2 -30,-13 15,0 18,5 3,1 z"/>
+    <circle style="fill:#f1c965;stroke:#008000;stroke-width:0.3;" cx="55" cy="48" r="18" />
+    <circle style="fill:#ffff00;stroke:#bbbb00;stroke-width:0.6;" cx="57" cy="48" r="13"/>
+    <path
+         style="fill:#666666;stroke:#1a1a1a;stroke-width:0.3;"
+         d="m 43,47 14,-7 5,-4 5,1 2,2 -4,0 11,2 -1,3 -11,-2 11,3 -1,4 -9,-3 8,5 -1,4 -6,-4 -3,-2 2,2 c 2,1 3,1 6,5 l -2,0 -10,-3 -9,2 -7,1 z"/>
+    </g>
+</svg>
