@@ -14,6 +14,8 @@
          grid-template-rows: min-content min-content auto;
          width: 425px;
          height: 320px;
+         max-width: 67vh;
+         max-height: 50vh;
          border-radius: .5em;
          pointer-events: none;
          font-size: 1em;
@@ -154,12 +156,13 @@
       }
 
       svg#plan {
+         height: 80%;
          grid-row:2;
          grid-column:1/3;
       }
 
       div#renseignements div#editable {
-         height:20em;
+         height:10em;
       }
 
 
@@ -185,7 +188,11 @@
          }
 
          main {
-            height: 13cm;
+            height: 13.3cm;
+         }
+
+         svg#plan {
+            height: 100%;
          }
 
          div#tooltipprint {
@@ -500,9 +507,9 @@
          "E": {"titre" : "CDI", "description" : "Centre de documentation et d'information"},
          "F": {"titre" : "Salle de conférence", "description" : ""},
          "G": {"titre" : "Bâtiment G : Gauss", "description" : "Espaces technologiques et progessionnels <br> BTS photonique"},
-         "H": {"titre" : "Bâtiment H", "description" : "Enseignements généraux<br>CPGE : PCSI, PTSI, PC, PSI*, PT*, ATS"},
+         "H": {"titre" : "Bâtiment H", "description" : "Enseignements généraux, Vie scolaire<br>CPGE : PCSI, PTSI, PC, PSI*, PT*, ATS<br>MLDS, 3<sup>e</sup>PM"},
          "I": {"titre" : "Bâtiment I", "description" : "Internat, Foyer «Aquarium», Étude 1, <span style='color:green;'>🞧</span> Infirmerie"},
-         "J": {"titre" : "Bâtiment J", "description" : "Espaces technologiques et professionnels<br>BTS : ATI, CIEL, ET, MS, TCI<br>🔧Magasin"},
+         "J": {"titre" : "Bâtiment J", "description" : "Espaces technologiques et professionnels<br>BTS : ATI, CIEL, ET, MS, TCI<br>DDFPT, 🔧Magasin"},
          "K" : {"titre" : "Ateliers", "description" : "Ateliers de maintenance du lycée"},
          "L": {"titre" : "Greta" , "description" : "Formation continue"},
          "M": {"titre" : "Gymnase 🏆", "description" : "Education Physique et Sportive<br>Installations sportives"},
