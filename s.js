@@ -240,15 +240,15 @@ function body() {
         </div>
 	<div class="group">
 	    <a class="item" href="${root_path}/index.html">
-	        <div class="icon">🏠</div>
+	        <div class="icon">⌂</div>
 	        <div class="text">home</div>
 	    </a>
 	    <a class="item" href="./assets/print.pdf" download="${page_title}.pdf">
-	        <div class="icon">📄</div>
+	        <div class="icon">🗎 </div>
 	        <div class="text">pdf</div>
 	    </a>
 	    <a class="item" href="#" onclick="window.print();return false;">
-	        <div class="icon">📠</div>
+	        <div class="icon">⎙</div>
 	        <div class="text">print</div>
 	    </a>
 	</div>
@@ -261,6 +261,10 @@ function body() {
 	        <div class="icon">🐍</div>
 	        <div class="text">py</div>
 	    </a>
+	    <a class="item" href="https://ethercalc.net/" target="_blank">
+	        <div class="icon">📑</div>
+	        <div class="text">odt</div>
+	    </a>
 	</div>
 	<div class="group">
 	    <a class="item" href="${root_path}pages/links/links.html">
@@ -268,7 +272,7 @@ function body() {
 	        <div class="text">links</div>
 	    </a>
 	    <a class="item" href="https://github.com/f83y55/math/archive/refs/heads/master.zip" download>
-	        <div class="icon">💾</div>
+	        <div class="icon">⤓</div>
 	        <div class="text">download</div>
 	    </a>
 	</div>
@@ -276,8 +280,8 @@ function body() {
 </nav>`
 
     // body : add footer
-    const footer = document.createElement("footer");
-    document.body.append(footer);
+    //const footer = document.createElement("footer");
+    //document.body.append(footer);
 
 };
 

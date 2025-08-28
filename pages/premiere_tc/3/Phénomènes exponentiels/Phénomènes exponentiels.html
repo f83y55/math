@@ -87,12 +87,10 @@
                 déduire le taux d'évolution moyen de la longueur entre les étapes 1 à 1000.
             </div>
             <div class="col">
-                <figure>
+                <figure class="hidden-web">
                     <img src="assets/Droite_Koch.png" alt="VKoch1" />
                 </figure>
-            </div>
-            <div class="col">
-                <figure>
+                <figure class="hidden-print">
                     <img src="assets/Koch_anime.gif" alt="VKoch2" />
                 </figure>
             </div>
@@ -120,7 +118,7 @@
                     <li>Elles sont symétriques par rapport à l'axe vertical.</li>
                 </ul>
             </div>
-            <div class="col">
+            <div class="col" style="width:50%;">
                 <figure>
                     <img src="assets/fig1.svg" alt="fonction exp 1">
                     <figcaption>fonction \(x\mapsto k a^x\) avec \(a&gt;1\)</figcaption>
@@ -196,35 +194,28 @@
             class="surl">\(u_{n+1}=q\times u_n\)</span><br />
         Le réel \(q\) s'appelle la <strong>raison</strong> de la suite.
     </div>
-    <div class="row">
-        <div class="col">
-            <div class="rema">
+    <div class="rema" style="--width-print:6cm;">
                 On passe d'un terme de la suite au suivant en <strong>multipliant</strong> un même nombre \(q\) appelé
                 la
                 raison de
                 la suite ; attention : \(q\) peut être négatif.
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
+    </div>
+
+        <div class="none" style="display: flex; flex-direction: row;">
                 <figure>
-                    <img src="assets/1_0506suitese.png" alt="suite croissante" style="--width-print:3.5cm;">
+                    <img src="assets/1_0506suitese.png" alt="suite croissante" style="width: 100%;">
                 </figure>
                 <figure>
-                    <img src="assets/1_0506suitesf.png" alt="suite croissante" style="--width-print:3.5cm;">
-                </figure>
-            </div>
-            <div class="col">
-                <figure>
-                    <img src="assets/1_0506suitesg.png" alt="suite croissante" style="--width-print:3.5cm;">
+                    <img src="assets/1_0506suitesf.png" alt="suite croissante" style="width: 100%;">
                 </figure>
                 <figure>
-                    <img src="assets/1_0506suitesh.png" alt="suite croissante" style="--width-print:3.5cm;">
+                    <img src="assets/1_0506suitesg.png" alt="suite croissante" style="width: 100%;">
+                </figure>
+                <figure>
+                    <img src="assets/1_0506suitesh.png" alt="suite croissante" style="width: 100%;">
                 </figure>
             </div>
 
-        </div>
-    </div>
 
     <div class="prop">
         Une suite géométrique \((u_n)\) correspond aux valeurs prises par une fonction exponentielle \(f(x)=ka^x\) pour
@@ -289,6 +280,9 @@
         </div>
     </div>
 
+<div class="pagebreak"></div>
+
+
     <h3>Applications au tableur</h3>
     <div class="exo">
         <ol>
@@ -338,6 +332,10 @@
         </p>
     </div>
 
+<h2>Compléments et entraînement	</h2>
+<div class="exo">
+			<b>Manuel Sésamath</b> pages <a href="https://manuel.sesamath.net/numerique/index.php?ouvrage=ms1tces_2023&page_gauche=91" target="_blank">90 à 97</a>.
+</div>
 </body>
 
 </html>
