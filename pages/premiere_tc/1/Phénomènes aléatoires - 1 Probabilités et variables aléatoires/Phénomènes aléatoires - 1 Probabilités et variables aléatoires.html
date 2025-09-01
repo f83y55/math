@@ -72,7 +72,7 @@
 
 		</div>
 		<div class="row">
-			<div class="exo col" style="width: 50%;">
+			<div class="exo col" style="--width-web: 50%;">
 				Il y a 86% d'élèves droitiers dans ce lycée.
 				Quelle est la probabilité de tomber au hasard sur un élève qui ne le soit pas ?
 				<div class="corr">
@@ -82,7 +82,7 @@
 				</div>
 			</div>
 
-			<div class="exo col" style="width: 50%;">
+			<div class="exo col" style="--width-web: 50%;">
 				Le dé suivant est truqué :<br>
 				<table id="tab02" class="mytable">
 					<tr class="table_row_tr_0">
@@ -110,12 +110,12 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="defi col" style="--width: 50%;">
+			<div class="defi col" style="--width-web: 50%;">
 				<b>Notation somme :</b> Une somme telle que \(p_1+\cdots+p_n\) se note, de manière condensée, à l'aide
 				du
 				symbole sigma (\(\Sigma\)) : \( \displaystyle\sum_{i=1}^n p_i\)
 			</div>
-			<div class="exo col" style="--width: 50%;">
+			<div class="exo col" style="--width-web: 50%;">
 				Calculer \( A=\displaystyle\sum_{i=1}^7 i\) et \( B=\displaystyle\sum_{i=1}^4 i^2\)
 				<div class="corr">
 					\( A=\displaystyle\sum_{i=1}^7 i = 1+2+3+4+5+6+7 = 28\) et \( B=\displaystyle\sum_{i=1}^4 i^2 =
@@ -155,11 +155,15 @@
 			Dans la grande majorité des cas, on utilise l'une de ces deux façons de déterminer les probabilités \(p_i\)
 			associées aux issues \(x_i\) :
 		</div>
-		<div class="none row">
-			<div class="col"><strong>Par le choix de l'équiprobabilité.</strong>
+		<div class="row">
+			<div class="col" style="--width-web:30%;"><strong>Par le choix de l'équiprobabilité.</strong>
+
 				<div class="exem">
 					Le lancer d'une pièce de monnaie <b>bien équilibrée</b> :
-					<div style="text-align: center;" <table id="tab04" class="mytable">
+				</div>
+			</div>
+			<div class="col"  style="--width-web:30%;">
+							<table id="tab04" class="mytable">
 						<tr class="table_row_tr_0">
 							<th class="table_row_0 table_column_1">Issue</th>
 							<td class="table_row_0 table_column_2">pile</td>
@@ -171,10 +175,9 @@
 							<td class="table_row_1 table_column_3">0,5</td>
 						</tr>
 						</table>
-					</div>
 				</div>
-			</div>
-			<div class="col" style="width: 50%;">
+
+			<div class="col" style="--width-web: 30%;">
 				<div class="defi">Dans une situation d'<b>équiprobabilité</b>, Toutes les issues
 					possèdent la même
 					probabilité.</div>
@@ -183,7 +186,7 @@
 
 
 		<div class="none row">
-			<div class="col" style="width: 60%;"><strong>Étude statistique - observer les fréquences</strong>
+			<div class="col" style="--width-web: 60%;"><strong>Étude statistique - observer les fréquences</strong>
 				<div class="exem">
 					On lance un dé truqué un grand nombre de fois (10 000, par exemple) et on note le résultat dans
 					le
@@ -210,7 +213,7 @@
 					</table><br>
 				</div>
 			</div>
-			<div class="col" style="width: 40%;">
+			<div class="col" style="--width-web: 40%;">
 				On <b>décide</b> alors que l'on a expérimenté un nombre suffisant de lancers pour que les futurs
 				lancers
 				de ce dé respectent les mêmes fréquences que celles de cette expérience. Cette «décision» établit un
@@ -304,7 +307,7 @@
 
 		<h3>Opérations sur les événements</h3>
 		<div class="row">
-			<div class="col" style="width: 50%;">
+			<div class="col" style="--width-web: 50%;">
 				<div class="defi">Si \(A\) et \(B\) sont deux événements,
 					<ul>
 						<li>
@@ -400,21 +403,21 @@
 
 		<div class="prop"> Soit \(A\) et \(B\) deux événements :
 			<div class="row" style="columns:3;">
-				<div class="col" style="width:30%;">
+				<div class="col" style="--width-web:30%;">
 					<figure>
 						<img src="assets/fig1.svg" style="width:100%;">
 						<figcaption>Événement complémentaire : <br>
 							\(P(\overline{A})=1-P(A)\)</figcaption>
 						</figure>
 				</div>
-				<div class="col" style="width:30%; margin: 0 auto 0;">
+				<div class="col" style="--width-web:30%; margin: 0 auto 0;">
 					<figure>
 						<img src="assets/fig2.svg" style="width:100%;">
 						<figcaption>Union quelconque : <br>
 							\(P(A\cup B) = \) \(P(A)+P(B)-P(A\cap B)\)</figcaption>
 					</figure>
 				</div>
-				<div class="col" style="width:30%; margin: 0 auto 0;">
+				<div class="col" style="--width-web:30%; margin: 0 auto 0;">
 					<figure>
 						<img src="assets/fig3.svg" style="width:100%;">
 						<figcaption>Union disjointe : <br>

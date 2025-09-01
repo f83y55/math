@@ -82,17 +82,7 @@ function apply_rootpaths() {
 function full_screen_imgs() {
     const full_page = document.createElement("div");
     full_page.id = "fullpage";
-    full_page.style.cssText = `display: none;
-  position: absolute;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-size: contain;
-  background-repeat: no-repeat no-repeat;
-  background-position: center center;
-  background-color: white;`;
+    full_page.style.cssText = "display: none; position: absolute; z-index: 9999; top: 0;left: 0;width: 100vw;height: 100vh;background-size: contain;background-repeat: no-repeat no-repeat;background-position: center center;background-color: white;";
     full_page.addEventListener("click", function() {
         full_page.style["display"] = "none";
     });
