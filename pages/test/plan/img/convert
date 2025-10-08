@@ -1,1 +1,0 @@
-for f in *.jpg ; do convert $f -resize 10% $f; done

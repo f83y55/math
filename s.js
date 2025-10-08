@@ -209,7 +209,7 @@ function build_head(before = before_title) {
 function body() {
     let page_title = build_head();
     inject_cssjs(modules_head, document.head, import_module);
-    apply_rootpaths();
+    if (document.querySelector(".rootpath")) {apply_rootpaths()};
     full_screen_imgs();
     if (document.getElementsByClassName("corr")[0]) { corrections(); }
     if (document.querySelector("ul.collapsible, ol.collapsible")) { ul_collapsible(); }
