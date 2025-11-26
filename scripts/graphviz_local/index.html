@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>DOT → SVG local</title>
+  <script src="vizsvg.js"></script>
+</head>
+
+<body>
+
+  <textarea id="dot" rows="12" cols="50">
+digraph {
+layout = dot
+rankdir = LR
+node [fontcolor=blue fontsize=16 width=0.5 shape=circle color="#FF0099"]
+      C [label=<<O>C</O>>]
+      A -> B [label=<
+      <table cellborder="0" cellpadding="0" border="0"><tr>
+          <td border="1" sides="b">2</td>
+        </tr><tr>
+          <td>9</td>
+        </tr></table>>]
+B -> A [color=grey]
+B -> C [color=red, label=6 fontcolor=green]
+D -> {A, B, C, D, E} [color=orange]
+}
+  
+  </textarea>
+
+  <div id="out"></div>
+  <button id="copy">copy</button>
+  <pre id="outsource" style="background: grey;"></pre>
+
+    <script>
+const dot = document.getElementById("dot");
+const out = document.getElementById("out");
+const copy = document.getElementById("copy");
+const outsource = document.getElementById("outsource");
+
+async function maj() {
+  const svgText = await dot_to_svg(dot.value);
+  out.innerHTML = svgText;
+  outsource.textContent = `<!--\n${dot.value}\n-->\n${svgText}`;
+}
+
+function copy_to_clipboard() {
+    var range = document.createRange();
+    range.selectNode(outsource);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+}
+
+
+window.onload = function() {
+  dot.addEventListener("input", maj);
+  copy.addEventListener("click", copy_to_clipboard);
+  maj();
+};
+  </script>
+</body>
+
+</html>
