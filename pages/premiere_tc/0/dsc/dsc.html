@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DSC</title>
+    <script src="../../../../s.js"></script>
+    <style>
+        @page {
+            size: A4;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+
+        @media print {
+            main {
+                --font-family: sans-serif;
+                --font-size: 12pt;
+            }
+
+            ol>li {
+                margin: 5mm auto;
+            }
+
+        }
+    </style>
+</head>
+
+<body onload="body()">
+    <main>
+        <h1>Mathématiques - 1<sup>re</sup> G<sup>le</sup> - Devoir Commun</h1>
+        <div class="none">
+            <h2 class="nocounter">Partie Automatismes - QCM (6 pts)</h2>
+            <p><i>
+                    Pour cette première partie, aucune justification n’est demandée et une seule réponse
+                    est possible par question. Pour chaque question, reportez son numéro sur votre copie
+                    et indiquez votre réponse.
+                </i></p>
+            <ol>
+                <li>
+                    On considère la fonction affine \(f(x) = 2x - 3\). Quelle est l'image de 4 ?
+                    <ol type="A" class="row">
+                        <li>\(5\)</li>
+                        <li>\(11\)</li>
+                        <li>\(2\)</li>
+                        <li>\(8\)</li>
+                    </ol>
+                    <div class="corr">
+                        <div class="barm">(0,5pt)</div>A
+                    </div>
+                </li>
+
+                <li>
+                    On considère la fonction affine \(f(x) = 3-3x\). Cette fonction est :
+                    <ol type="A" class="row">
+                        <li>négative</li>
+                        <li>décroissante</li>
+                        <li>positive</li>
+                        <li>croissante</li>
+                    </ol>
+                    <div class="corr">
+                        <div class="barm">(0,5pt)</div>B
+                    </div>
+                </li>
+
+                <li>
+
+                    Quelle est l'expression de la fonction affine dont le coefficient directeur est \(-3\) et qui
+                    vérifie \(f(1)=2\) ?
+                    <ol type="A" class="row">
+                        <li>\(f(x) = -3x + 5\)</li>
+                        <li>\(f(x) = -3x - 1\)</li>
+                        <li>\(f(x) = 3x - 1\)</li>
+                        <li>\(f(x) = x -3\)</li>
+                    </ol>
+                    <div class="corr">
+                        <div class="barm">(0,5pt)</div> A
+                    </div>
+                </li>
+                <li>
+                    Résoudre l'équation : &nbsp;&nbsp;&nbsp;&nbsp; \(3x - 7 = 2x + 5\).
+                    <ol type="A" class="row">
+                        <li>\(x = -12\)</li>
+                        <li>\(x = -2\)</li>
+                        <li>\(x = 12\)</li>
+                        <li>\(x = 2\)</li>
+                    </ol>
+                    <div class="corr">
+                        <div class="barm">(0,5pt)</div> C
+                    </div>
+                </li>
+                <li>
+                    La solution de l'équation &nbsp;&nbsp;&nbsp;&nbsp; \(\dfrac{2x-1}{3} = 5\) &nbsp;&nbsp;&nbsp;&nbsp;
+                    est :
+                    <ol type="A" class="row">
+                        <li>\(x = 7\)</li>
+                        <li>\(x = 8\)</li>
+                        <li>\(x = 16\)</li>
+                        <li>\(x =\dfrac{5}{3}\)</li>
+                    </ol>
+                    <div class="corr">
+                        <div class="barm">(0,5pt)</div> B
+                    </div>
+                </li>
+                <li>
+                    Quelle est la forme simplifiée de \(\dfrac{6}{8}\) ?
+                    <ol type="A" class="row">
+                        <li>\(\dfrac{3}{4}\)</li>
+                        <li>\(\dfrac{2}{3}\)</li>
+                        <li>\(\dfrac{4}{3}\)</li>
+                        <li>\(\dfrac{1}{2}\)</li>
+                    </ol>
+                    <div class="corr">
+                        <div class="barm">(0,5pt)</div> A
+                    </div>
+                </li>
+                <li>Calculer : \(\dfrac{3}{5} + \dfrac{1}{10}\)
+                    <ol type="A" class="row">
+                        <li>\(\dfrac{4}{15}\)</li>
+                        <li>\(\dfrac{7}{10}\)</li>
+                        <li>\(\dfrac{1}{2}\)</li>
+                        <li>\(\dfrac{2}{5}\)</li>
+                    </ol>
+                    <div class="corr">
+                        <div class="barm">(0,5pt)</div> B
+                    </div>
+                </li>
+                <li>Simplifier l'expression : \(\dfrac{2^3\times 5}{2^5}\)
+                    <ol type="A" class="row">
+                        <li>\(\dfrac{5}{4}\)</li>
+                        <li>\(\dfrac{1}{4}\)</li>
+                        <li>\(5\)</li>
+                        <li>\(\dfrac{5}{8}\)</li>
+                    </ol>
+                    <div class="corr">
+                        <div class="barm">(0,5pt)</div> A
+                    </div>
+                </li>
+                <li>Calculer et donner le résultat sous forme d'une fraction ou d'un entier : \( \dfrac{3^2}{2^{-1}} \)
+                    <ol type="A" class="row">
+                        <li>\(\dfrac{9}{2}\)</li>
+                        <li>\(18\)</li>
+                        <li>\(-\dfrac{9}{2}\)</li>
+                        <li>\(\dfrac{1}{18}\)</li>
+                    </ol>
+                    <div class="corr">
+                        <div class="barm">(0,5pt)</div> B
+                    </div>
+                </li>
+                <li>
+                    Un prix augmente de 30 %, puis baisse de 30 %. Par rapport au prix initial, le prix final est :
+                    <ol type="A" class="row">
+                        <li>inchangé</li>
+                        <li>en augmentation</li>
+                        <li>en diminution</li>
+                        <li>multiplié par 0,5</li>
+                    </ol>
+                    <div class="corr">
+                        <div class="barm">(0,5pt)</div> C
+                    </div>
+                </li>
+                <li>Après une diminution de 10 %, un prix est égal à 180 €. Quel était le prix initial ?
+                    <ol type="A" class="row">
+                        <li>200 €</li>
+                        <li>162 €</li>
+                        <li>198 €</li>
+                        <li>190 €</li>
+                    </ol>
+                    <div class="corr">
+                        <div class="barm">(0,5pt)</div> A
+                    </div>
+                </li>
+                <li>
+                    Deux baisses successives de 20% équivalent à :
+                    <ol type="A" class="row">
+                        <li>une baisse de 40%</li>
+                        <li>une hausse de 40%</li>
+                        <li>une baisse de 36%</li>
+                        <li>une baisse de 15%</li>
+                    </ol>
+                    <div class="corr">
+                        <div class="barm">(0,5pt)</div> C
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <!--
+        <h2>Exercice : Bavardage et sanction en classe (7 points)</h2>
+        <div class="none">
+            Dans une classe de première en 2035 :
+            <ul>
+                <li>
+                    40% des élèves bavardent pendant le cours.
+                </li>
+                <li>
+                    Parmi les élèves qui bavardent, 80% sont sanctionnés.
+                </li>
+                <li>
+                    Parmi les élèves qui ne bavardent pas, 30% sont sanctionnés (ils n'ont pourtant
+                    réellement «rien fait»).
+                </li>
+            </ul>
+            On note :
+            <ul>
+                <li>
+                    \(B\) : « l’élève bavarde pendant le cours »
+                </li>
+                <li>
+                    \(C\) : « l’élève est sanctionné »
+                </li>
+            </ul>
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>
+                            Représenter la situation à l'aide d'un arbre de probablités.
+                            <div class="corr">
+                                <div class="barm">(1pt)</div>
+                                <div>
+                                    <!--
+digraph {
+layout = dot
+rankdir = LR
+node [fontcolor=black fontsize=16 width=0.5 shape=circle color="#444444"]
+      o [color="transparent", label=""]
+      B
+      Bb [label=<<O>B</O>>]
+      BC [label="C"]
+      BCb [label=<<O>C</O>>]
+      BbC [label="C"]
+      BbCb [label=<<O>C</O>>]
+      o -> B [label="0,4"]
+      o -> Bb [label="0,6"]
+      B -> BC [label="0,8"]
+      B -> BCb [label="0,2"]
+      Bb -> BbC [label="0,3"]
+      Bb -> BbCb [label="0,7"]
+
+}
+
+        <svg width="228pt" height="214pt" viewBox="0.00 0.00 227.93 214.47" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 210.4666)">
+                <title>%0</title>
+                <polygon fill="none" stroke="transparent"
+                    points="-4,4 -4,-210.4666 223.9332,-210.4666 223.9332,4 -4,4" />
+        <g id="node1" class="node">
+            <title>o</title>
+            <ellipse fill="none" stroke="transparent" cx="18" cy="-103.2333" rx="18" ry="18" />
+        </g>
+        <g id="node2" class="node">
+            <title>B</title>
+            <ellipse fill="none" stroke="#444444" cx="108.7333" cy="-131.2333" rx="19.4695" ry="19.4695" />
+            <text text-anchor="middle" x="108.7333" y="-126.4333" font-family="Times,serif" font-size="16.00"
+                fill="#000000">B</text>
+        </g>
+        <g id="edge1" class="edge">
+            <title>o-&gt;B</title>
+            <path fill="none" stroke="#000000"
+                d="M35.4943,-108.632C48.2139,-112.5572 65.706,-117.9552 80.4057,-122.4915" />
+            <polygon fill="#000000" stroke="#000000"
+                points="79.4559,-125.8612 90.0433,-125.4656 81.52,-119.1724 79.4559,-125.8612" />
+            <text text-anchor="middle" x="62.75" y="-123.4333" font-family="Times,serif" font-size="14.00"
+                fill="#000000">0,4</text>
+        </g>
+        <g id="node3" class="node">
+            <title>Bb</title>
+            <ellipse fill="none" stroke="#444444" cx="108.7333" cy="-75.2333" rx="19.4695" ry="19.4695" />
+            <text text-anchor="start" x="103.3981" y="-71.4333" font-family="Times,serif" text-decoration="overline"
+                font-size="16.00" fill="#000000">B</text>
+        </g>
+        <g id="edge2" class="edge">
+            <title>o-&gt;Bb</title>
+            <path fill="none" stroke="#000000"
+                d="M35.4943,-97.8346C48.2139,-93.9094 65.706,-88.5114 80.4057,-83.9751" />
+            <polygon fill="#000000" stroke="#000000"
+                points="81.52,-87.2942 90.0433,-81.001 79.4559,-80.6054 81.52,-87.2942" />
+            <text text-anchor="middle" x="62.75" y="-95.4333" font-family="Times,serif" font-size="14.00"
+                fill="#000000">0,6</text>
+        </g>
+        <g id="node4" class="node">
+            <title>BC</title>
+            <ellipse fill="none" stroke="#444444" cx="200.6999" cy="-187.2333" rx="19.4695" ry="19.4695" />
+            <text text-anchor="middle" x="200.6999" y="-182.4333" font-family="Times,serif" font-size="16.00"
+                fill="#000000">C</text>
+        </g>
+        <g id="edge3" class="edge">
+            <title>B-&gt;BC</title>
+            <path fill="none" stroke="#000000"
+                d="M125.1751,-141.245C139.0821,-149.7132 159.2407,-161.9881 175.2339,-171.7266" />
+            <polygon fill="#000000" stroke="#000000"
+                points="173.7289,-174.908 184.0904,-177.1195 177.3695,-168.9292 173.7289,-174.908" />
+            <text text-anchor="middle" x="154.7166" y="-168.4333" font-family="Times,serif" font-size="14.00"
+                fill="#000000">0,8</text>
+        </g>
+        <g id="node5" class="node">
+            <title>BCb</title>
+            <ellipse fill="none" stroke="#444444" cx="200.6999" cy="-131.2333" rx="19.4695" ry="19.4695" />
+            <text text-anchor="start" x="195.3647" y="-127.4333" font-family="Times,serif" text-decoration="overline"
+                font-size="16.00" fill="#000000">C</text>
+        </g>
+        <g id="edge4" class="edge">
+            <title>B-&gt;BCb</title>
+            <path fill="none" stroke="#000000"
+                d="M128.2371,-131.2333C140.6739,-131.2333 157.031,-131.2333 171.0567,-131.2333" />
+            <polygon fill="#000000" stroke="#000000"
+                points="171.2243,-134.7334 181.2243,-131.2333 171.2242,-127.7334 171.2243,-134.7334" />
+            <text text-anchor="middle" x="154.7166" y="-135.4333" font-family="Times,serif" font-size="14.00"
+                fill="#000000">0,2</text>
+        </g>
+        <g id="node6" class="node">
+            <title>BbC</title>
+            <ellipse fill="none" stroke="#444444" cx="200.6999" cy="-75.2333" rx="19.4695" ry="19.4695" />
+            <text text-anchor="middle" x="200.6999" y="-70.4333" font-family="Times,serif" font-size="16.00"
+                fill="#000000">C</text>
+        </g>
+        <g id="edge5" class="edge">
+            <title>Bb-&gt;BbC</title>
+            <path fill="none" stroke="#000000"
+                d="M128.2371,-75.2333C140.6739,-75.2333 157.031,-75.2333 171.0567,-75.2333" />
+            <polygon fill="#000000" stroke="#000000"
+                points="171.2243,-78.7334 181.2243,-75.2333 171.2242,-71.7334 171.2243,-78.7334" />
+            <text text-anchor="middle" x="154.7166" y="-79.4333" font-family="Times,serif" font-size="14.00"
+                fill="#000000">0,3</text>
+        </g>
+        <g id="node7" class="node">
+            <title>BbCb</title>
+            <ellipse fill="none" stroke="#444444" cx="200.6999" cy="-19.2333" rx="19.4695" ry="19.4695" />
+            <text text-anchor="start" x="195.3647" y="-15.4333" font-family="Times,serif" text-decoration="overline"
+                font-size="16.00" fill="#000000">C</text>
+        </g>
+        <g id="edge6" class="edge">
+            <title>Bb-&gt;BbCb</title>
+            <path fill="none" stroke="#000000"
+                d="M125.1751,-65.2216C139.0821,-56.7534 159.2407,-44.4785 175.2339,-34.74" />
+            <polygon fill="#000000" stroke="#000000"
+                points="177.3695,-37.5374 184.0904,-29.3471 173.7289,-31.5586 177.3695,-37.5374" />
+            <text text-anchor="middle" x="154.7166" y="-57.4333" font-family="Times,serif" font-size="14.00"
+                fill="#000000">0,7</text>
+        </g>
+        </g>
+        </svg>
+        </div>
+
+        </div>
+        </li>
+        <li>
+            En déduire que la probabilité qu’un élève soit sanctionné est de 50%. Justifier par un
+            calcul.
+            <div class="corr">
+                <div class="barm">(1pt)</div>
+                \(P(C) = 0{,}4\times 0{,}8 + 0{,}6\times 0{,}3 = 0{,}32 + 0{,}18 = 0{,}5 = 50\%\)
+            </div>
+        </li>
+        <li>
+            Est-il vrai que parmi les élèves sanctionnés, la probabilité de ne pas avoir bavardé est de
+            36% ?
+            Justifier par un calcul.
+            <div class="corr">
+                <div class="barm">(1pt)</div>
+                C'est vrai :
+                \(P_C(\overline{B}) = \dfrac{P(C \cap \overline{B})}{P(C)} = \dfrac{0{,}6\times
+                0{,}3}{0{,}5} =
+                0{,}36 = 36\%\)
+            </div>
+        </li>
+        <li>
+            Quelle est la probabilité qu'un élève, parmi les élèves non sanctionnés, ait bavardé ?
+            Justifier par un calcul.
+            <div class="corr">
+                <div class="barm">(1pt)</div>
+                C'est vrai :
+                \(P_{\overline{C}}(B) = \dfrac{P(B \cap \overline{C})}{P(C)} = \dfrac{0{,}4\times
+                0{,}2}{0{,}5}=0{,}16 = 16\%\)
+            </div>
+        </li>
+        </ol>
+        </li>
+        <li>
+            <ol type="a">
+                <li> On note \(f\) la fonction affine définie par \(f(x) = 0{,}6x+0{,}32\).<br>
+                    Identifier le coefficient directeur et l'ordonnée à l'origine de \(f\). <br>
+                    Cette fonction est-elle
+                    croissante ou décoissante (justifier) ?
+                    <div class="corr">
+                        <div class="barm">(1 pt)</div>
+                        Coefficient directeur \(a = 0{,}6\) ; ordonnée à l'origine \(b = 0{,}32\).<br>
+                        \(a&gt;0\) donc \(f\) est strictement croissante.
+                    </div>
+                </li>
+                <li> Résoudre l'équation \(f(x) = 0{,}38\)
+                    <div class="corr">
+                        <div class="barm">(1 pt)</div>
+                        \(\begin{eqnarray} \\
+                        0{,}6x+0{,}32 &=& 0{,}38 \\
+                        0{,}6x &=& 0{,}38 - 0{,}32 = 0{,}06 \\
+                        x &=& \dfrac{0{,}06}{0{,}6}=0{,}1 \\
+                        \end{eqnarray}\)
+                </li>
+
+                <li>
+                    Le professeur souhaite réduire le nombre total de sanctions en réduisant le nombre le nombre
+                    d'élèves sanctionnés parmi ceux qui ne bavardent pas. Les autres probabilités données dans
+                    l'introduction sont inchangées.<br>
+                    Il fixe un objectif de 38% d'élèves sanctionnés.<br>
+                    On écrit \(x\) la probabilité qu'un élève soit sanctionné sachant qu'il n'a pas bavardé.<br>
+                    Quelle doit être la valeur de \(x\) pour réaliser l'objectif fixé ?
+                    <div class="corr">
+                        <div class="barm">(1 pt)</div>
+                        On a dans ce cas, en utilisant l'arbre : \(P(C) = f(x) = 0{,}38\) donc \(x = 0{,}1\)
+                        d'après la question précédente.
+                    </div>
+
+                </li>
+            </ol>
+        </li>
+        </ol>
+        </div>
+        -->
+        <h2>Exercice : Jardinage (5 points)</h2>
+        <div class="none">
+            <p>Dans son jardin, Marie a 40% de fraisiers et le reste de salades.<br>
+                Les deux cinquièmes des salades et la moitié des fraisiers sont mangés par les limaces.<br>
+                On choisit une plante au hasard. On considère les événements suivants :
+            <ul>
+                <li>
+                    \(F\) : « la plante choisie est un fraisier »</li>
+                <li>
+                    \(L\) : « la plante choisie est mangée par les limaces ».</li>
+            </ul>
+            </p>
+            <ol>
+                <li><b>Recopier</b> et compléter l'arbre de probabilités suivant :
+                    <div>
+                        <!--
+digraph {
+layout = dot
+rankdir = LR
+node [fontcolor=black fontsize=16 width=0.5 shape=circle color="#444444"]
+      o [color="transparent", label=""]
+      F
+      Fb [label=<<O>F</O>>]
+      FL [label="L"]
+      FLb [label=<<O>L</O>>]
+      FbL [label="L"]
+      FbLb [label=<<O>L</O>>]
+      o -> F [label="..."]
+      o -> Fb [label="..."]
+      F -> FL [label=<<TABLE BORDER="0"><TR><TD BORDER="1" SIDES="b">1</TD></TR><TR><TD>2</TD></TR></TABLE>>]
+      F -> FLb [label="..."]
+      Fb -> FbL  [label="..."]
+      Fb -> FbLb  [label="..."]
+
+}
+
+-->
+                        <svg width="220pt" height="220pt" viewBox="0.00 0.00 220.43 220.23"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 216.2333)">
+                                <title>%0</title>
+                                <polygon fill="transparent" stroke="transparent"
+                                    points="-4,4 -4,-216.2333 216.4332,-216.2333 216.4332,4 -4,4" />
+                                <!-- o -->
+                                <g id="node1" class="node">
+                                    <title>o</title>
+                                    <ellipse fill="none" stroke="transparent" cx="18" cy="-103.2333" rx="18" ry="18" />
+                                </g>
+                                <!-- F -->
+                                <g id="node2" class="node">
+                                    <title>F</title>
+                                    <ellipse fill="none" stroke="#444444" cx="101.7333" cy="-131.2333" rx="19.4695"
+                                        ry="19.4695" />
+                                    <text text-anchor="middle" x="101.7333" y="-126.4333" font-family="Times,serif"
+                                        font-size="16.00" fill="#000000">F</text>
+                                </g>
+                                <!-- o&#45;&gt;F -->
+                                <g id="edge1" class="edge">
+                                    <title>o-&gt;F</title>
+                                    <path fill="none" stroke="#000000"
+                                        d="M35.3496,-109.0349C46.3866,-112.7256 60.9335,-117.59 73.5961,-121.8244" />
+                                    <polygon fill="#000000" stroke="#000000"
+                                        points="72.6505,-125.1986 83.2443,-125.0507 74.8705,-118.5599 72.6505,-125.1986" />
+                                    <text text-anchor="middle" x="59.25" y="-121.4333" font-family="Times,serif"
+                                        font-size="14.00" fill="#000000">...</text>
+                                </g>
+                                <!-- Fb -->
+                                <g id="node3" class="node">
+                                    <title>Fb</title>
+                                    <ellipse fill="none" stroke="#444444" cx="101.7333" cy="-75.2333" rx="19.4695"
+                                        ry="19.4695" />
+                                    <text text-anchor="start" x="97.2861" y="-71.4333" font-family="Times,serif"
+                                        text-decoration="overline" font-size="16.00" fill="#000000">F</text>
+                                </g>
+                                <!-- o&#45;&gt;Fb -->
+                                <g id="edge2" class="edge">
+                                    <title>o-&gt;Fb</title>
+                                    <path fill="none" stroke="#000000"
+                                        d="M35.3496,-97.4317C46.3866,-93.741 60.9335,-88.8766 73.5961,-84.6422" />
+                                    <polygon fill="#000000" stroke="#000000"
+                                        points="74.8705,-87.9067 83.2443,-81.4159 72.6505,-81.268 74.8705,-87.9067" />
+                                    <text text-anchor="middle" x="59.25" y="-94.4333" font-family="Times,serif"
+                                        font-size="14.00" fill="#000000">...</text>
+                                </g>
+                                <!-- FL -->
+                                <g id="node4" class="node">
+                                    <title>FL</title>
+                                    <ellipse fill="none" stroke="#444444" cx="193.1999" cy="-187.2333" rx="19.4695"
+                                        ry="19.4695" />
+                                    <text text-anchor="middle" x="193.1999" y="-182.4333" font-family="Times,serif"
+                                        font-size="16.00" fill="#000000">L</text>
+                                </g>
+                                <!-- F&#45;&gt;FL -->
+                                <g id="edge3" class="edge">
+                                    <title>F-&gt;FL</title>
+                                    <path fill="none" stroke="#000000"
+                                        d="M118.5097,-141.5046C132.3056,-149.951 152.0737,-162.054 167.8077,-171.6871" />
+                                    <polygon fill="#000000" stroke="#000000"
+                                        points="166.1738,-174.7906 176.5299,-177.0272 169.8289,-168.8206 166.1738,-174.7906" />
+                                    <polyline fill="none" stroke="#000000"
+                                        points="141.4666,-188.2333 154.4666,-188.2333 " />
+                                    <text text-anchor="start" x="144.4666" y="-194.6333" font-family="Times,serif"
+                                        font-size="14.00" fill="#000000">1</text>
+                                    <text text-anchor="start" x="144.4666" y="-171.6333" font-family="Times,serif"
+                                        font-size="14.00" fill="#000000">2</text>
+                                </g>
+                                <!-- FLb -->
+                                <g id="node5" class="node">
+                                    <title>FLb</title>
+                                    <ellipse fill="none" stroke="#444444" cx="193.1999" cy="-131.2333" rx="19.4695"
+                                        ry="19.4695" />
+                                    <text text-anchor="start" x="188.3127" y="-127.4333" font-family="Times,serif"
+                                        text-decoration="overline" font-size="16.00" fill="#000000">L</text>
+                                </g>
+                                <!-- F&#45;&gt;FLb -->
+                                <g id="edge4" class="edge">
+                                    <title>F-&gt;FLb</title>
+                                    <path fill="none" stroke="#000000"
+                                        d="M121.131,-131.2333C133.5003,-131.2333 149.7684,-131.2333 163.7179,-131.2333" />
+                                    <polygon fill="#000000" stroke="#000000"
+                                        points="163.8302,-134.7334 173.8302,-131.2333 163.8301,-127.7334 163.8302,-134.7334" />
+                                    <text text-anchor="middle" x="147.4666" y="-135.4333" font-family="Times,serif"
+                                        font-size="14.00" fill="#000000">...</text>
+                                </g>
+                                <!-- FbL -->
+                                <g id="node6" class="node">
+                                    <title>FbL</title>
+                                    <ellipse fill="none" stroke="#444444" cx="193.1999" cy="-75.2333" rx="19.4695"
+                                        ry="19.4695" />
+                                    <text text-anchor="middle" x="193.1999" y="-70.4333" font-family="Times,serif"
+                                        font-size="16.00" fill="#000000">L</text>
+                                </g>
+                                <!-- Fb&#45;&gt;FbL -->
+                                <g id="edge5" class="edge">
+                                    <title>Fb-&gt;FbL</title>
+                                    <path fill="none" stroke="#000000"
+                                        d="M121.131,-75.2333C133.5003,-75.2333 149.7684,-75.2333 163.7179,-75.2333" />
+                                    <polygon fill="#000000" stroke="#000000"
+                                        points="163.8302,-78.7334 173.8302,-75.2333 163.8301,-71.7334 163.8302,-78.7334" />
+                                    <text text-anchor="middle" x="147.4666" y="-79.4333" font-family="Times,serif"
+                                        font-size="14.00" fill="#000000">...</text>
+                                </g>
+                                <!-- FbLb -->
+                                <g id="node7" class="node">
+                                    <title>FbLb</title>
+                                    <ellipse fill="none" stroke="#444444" cx="193.1999" cy="-19.2333" rx="19.4695"
+                                        ry="19.4695" />
+                                    <text text-anchor="start" x="188.3127" y="-15.4333" font-family="Times,serif"
+                                        text-decoration="overline" font-size="16.00" fill="#000000">L</text>
+                                </g>
+                                <!-- Fb&#45;&gt;FbLb -->
+                                <g id="edge6" class="edge">
+                                    <title>Fb-&gt;FbLb</title>
+                                    <path fill="none" stroke="#000000"
+                                        d="M118.5097,-64.962C132.3056,-56.5156 152.0737,-44.4126 167.8077,-34.7795" />
+                                    <polygon fill="#000000" stroke="#000000"
+                                        points="169.8289,-37.646 176.5299,-29.4395 166.1738,-31.6761 169.8289,-37.646" />
+                                    <text text-anchor="middle" x="147.4666" y="-57.4333" font-family="Times,serif"
+                                        font-size="14.00" fill="#000000">...</text>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="corr">
+                        <div class="barm">(1,5pt)</div>
+                        <div>
+                            <!--
+digraph {
+layout = dot
+rankdir = LR
+node [fontcolor=black fontsize=16 width=0.5 shape=circle color="#444444"]
+      o [color="transparent", label=""]
+      F
+      Fb [label=<<O>F</O>>]
+      FL [label="L"]
+      FLb [label=<<O>L</O>>]
+      FbL [label="L"]
+      FbLb [label=<<O>L</O>>]
+      o -> F [label="0,4"]
+      o -> Fb [label="0,6"]
+      F -> FL [label=<<TABLE BORDER="0"><TR><TD BORDER="1" SIDES="b">1</TD></TR><TR><TD>2</TD></TR></TABLE>>]
+      F -> FLb [label=<<TABLE BORDER="0"><TR><TD BORDER="1" SIDES="b">1</TD></TR><TR><TD>2</TD></TR></TABLE>>]
+      Fb -> FbL [label=<<TABLE BORDER="0"><TR><TD BORDER="1" SIDES="b">2</TD></TR><TR><TD>5</TD></TR></TABLE>>]
+      Fb -> FbLb [label=<<TABLE BORDER="0"><TR><TD BORDER="1" SIDES="b">3</TD></TR><TR><TD>5</TD></TR></TABLE>>]
+
+}
+
+-->
+                            <svg width="227pt" height="275pt" viewBox="0.00 0.00 227.43 275.23"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 271.2333)">
+                                    <title>%0</title>
+                                    <polygon fill="transparent" stroke="transparent"
+                                        points="-4,4 -4,-271.2333 223.4332,-271.2333 223.4332,4 -4,4" />
+                                    <!-- o -->
+                                    <g id="node1" class="node">
+                                        <title>o</title>
+                                        <ellipse fill="none" stroke="transparent" cx="18" cy="-125.2333" rx="18"
+                                            ry="18" />
+                                    </g>
+                                    <!-- F -->
+                                    <g id="node2" class="node">
+                                        <title>F</title>
+                                        <ellipse fill="none" stroke="#444444" cx="108.7333" cy="-161.2333" rx="19.4695"
+                                            ry="19.4695" />
+                                        <text text-anchor="middle" x="108.7333" y="-156.4333" font-family="Times,serif"
+                                            font-size="16.00" fill="#000000">F</text>
+                                    </g>
+                                    <!-- o&#45;&gt;F -->
+                                    <g id="edge1" class="edge">
+                                        <title>o-&gt;F</title>
+                                        <path fill="none" stroke="#000000"
+                                            d="M35.0662,-132.0046C48.1204,-137.1841 66.3798,-144.4288 81.4535,-150.4096" />
+                                        <polygon fill="#000000" stroke="#000000"
+                                            points="80.2265,-153.6881 90.8124,-154.1229 82.8081,-147.1815 80.2265,-153.6881" />
+                                        <text text-anchor="middle" x="62.75" y="-150.4333" font-family="Times,serif"
+                                            font-size="14.00" fill="#000000">0,4</text>
+                                    </g>
+                                    <!-- Fb -->
+                                    <g id="node3" class="node">
+                                        <title>Fb</title>
+                                        <ellipse fill="none" stroke="#444444" cx="108.7333" cy="-90.2333" rx="19.4695"
+                                            ry="19.4695" />
+                                        <text text-anchor="start" x="104.2861" y="-86.4333" font-family="Times,serif"
+                                            text-decoration="overline" font-size="16.00" fill="#000000">F</text>
+                                    </g>
+                                    <!-- o&#45;&gt;Fb -->
+                                    <g id="edge2" class="edge">
+                                        <title>o-&gt;Fb</title>
+                                        <path fill="none" stroke="#000000"
+                                            d="M35.0662,-118.6501C48.0362,-113.647 66.1444,-106.6618 81.1614,-100.8691" />
+                                        <polygon fill="#000000" stroke="#000000"
+                                            points="82.428,-104.1319 90.4982,-97.2674 79.9087,-97.601 82.428,-104.1319" />
+                                        <text text-anchor="middle" x="62.75" y="-114.4333" font-family="Times,serif"
+                                            font-size="14.00" fill="#000000">0,6</text>
+                                    </g>
+                                    <!-- FL -->
+                                    <g id="node4" class="node">
+                                        <title>FL</title>
+                                        <ellipse fill="none" stroke="#444444" cx="200.1999" cy="-232.2333" rx="19.4695"
+                                            ry="19.4695" />
+                                        <text text-anchor="middle" x="200.1999" y="-227.4333" font-family="Times,serif"
+                                            font-size="16.00" fill="#000000">L</text>
+                                    </g>
+                                    <!-- F&#45;&gt;FL -->
+                                    <g id="edge3" class="edge">
+                                        <title>F-&gt;FL</title>
+                                        <path fill="none" stroke="#000000"
+                                            d="M118.2953,-178.0838C124.9284,-188.5151 134.5969,-201.5326 145.9666,-210.2333 153.5881,-216.0657 162.9684,-220.5891 171.772,-223.9755" />
+                                        <polygon fill="#000000" stroke="#000000"
+                                            points="170.7474,-227.325 181.3422,-227.325 173.0598,-220.718 170.7474,-227.325" />
+                                        <polyline fill="none" stroke="#000000"
+                                            points="148.4666,-243.2333 161.4666,-243.2333 " />
+                                        <text text-anchor="start" x="151.4666" y="-249.6333" font-family="Times,serif"
+                                            font-size="14.00" fill="#000000">1</text>
+                                        <text text-anchor="start" x="151.4666" y="-226.6333" font-family="Times,serif"
+                                            font-size="14.00" fill="#000000">2</text>
+                                    </g>
+                                    <!-- FLb -->
+                                    <g id="node5" class="node">
+                                        <title>FLb</title>
+                                        <ellipse fill="none" stroke="#444444" cx="200.1999" cy="-161.2333" rx="19.4695"
+                                            ry="19.4695" />
+                                        <text text-anchor="start" x="195.3127" y="-157.4333" font-family="Times,serif"
+                                            text-decoration="overline" font-size="16.00" fill="#000000">L</text>
+                                    </g>
+                                    <!-- F&#45;&gt;FLb -->
+                                    <g id="edge4" class="edge">
+                                        <title>F-&gt;FLb</title>
+                                        <path fill="none" stroke="#000000"
+                                            d="M128.131,-161.2333C140.5003,-161.2333 156.7684,-161.2333 170.7179,-161.2333" />
+                                        <polygon fill="#000000" stroke="#000000"
+                                            points="170.8302,-164.7334 180.8302,-161.2333 170.8301,-157.7334 170.8302,-164.7334" />
+                                        <polyline fill="none" stroke="#000000"
+                                            points="148.4666,-185.2333 161.4666,-185.2333 " />
+                                        <text text-anchor="start" x="151.4666" y="-191.6333" font-family="Times,serif"
+                                            font-size="14.00" fill="#000000">1</text>
+                                        <text text-anchor="start" x="151.4666" y="-168.6333" font-family="Times,serif"
+                                            font-size="14.00" fill="#000000">2</text>
+                                    </g>
+                                    <!-- FbL -->
+                                    <g id="node6" class="node">
+                                        <title>FbL</title>
+                                        <ellipse fill="none" stroke="#444444" cx="200.1999" cy="-90.2333" rx="19.4695"
+                                            ry="19.4695" />
+                                        <text text-anchor="middle" x="200.1999" y="-85.4333" font-family="Times,serif"
+                                            font-size="16.00" fill="#000000">L</text>
+                                    </g>
+                                    <!-- Fb&#45;&gt;FbL -->
+                                    <g id="edge5" class="edge">
+                                        <title>Fb-&gt;FbL</title>
+                                        <path fill="none" stroke="#000000"
+                                            d="M128.131,-90.2333C140.5003,-90.2333 156.7684,-90.2333 170.7179,-90.2333" />
+                                        <polygon fill="#000000" stroke="#000000"
+                                            points="170.8302,-93.7334 180.8302,-90.2333 170.8301,-86.7334 170.8302,-93.7334" />
+                                        <polyline fill="none" stroke="#000000"
+                                            points="148.4666,-114.2333 161.4666,-114.2333 " />
+                                        <text text-anchor="start" x="151.4666" y="-120.6333" font-family="Times,serif"
+                                            font-size="14.00" fill="#000000">2</text>
+                                        <text text-anchor="start" x="151.4666" y="-97.6333" font-family="Times,serif"
+                                            font-size="14.00" fill="#000000">5</text>
+                                    </g>
+                                    <!-- FbLb -->
+                                    <g id="node7" class="node">
+                                        <title>FbLb</title>
+                                        <ellipse fill="none" stroke="#444444" cx="200.1999" cy="-19.2333" rx="19.4695"
+                                            ry="19.4695" />
+                                        <text text-anchor="start" x="195.3127" y="-15.4333" font-family="Times,serif"
+                                            text-decoration="overline" font-size="16.00" fill="#000000">L</text>
+                                    </g>
+                                    <!-- Fb&#45;&gt;FbLb -->
+                                    <g id="edge6" class="edge">
+                                        <title>Fb-&gt;FbLb</title>
+                                        <path fill="none" stroke="#000000"
+                                            d="M117.6418,-72.6375C124.1302,-61.3996 133.8833,-47.2899 145.9666,-38.2333 153.4259,-32.6425 162.6649,-28.6018 171.3907,-25.7243" />
+                                        <polygon fill="#000000" stroke="#000000"
+                                            points="172.634,-29.0079 181.261,-22.8577 170.6816,-22.2857 172.634,-29.0079" />
+                                        <polyline fill="none" stroke="#000000"
+                                            points="148.4666,-62.2333 161.4666,-62.2333 " />
+                                        <text text-anchor="start" x="151.4666" y="-68.6333" font-family="Times,serif"
+                                            font-size="14.00" fill="#000000">3</text>
+                                        <text text-anchor="start" x="151.4666" y="-45.6333" font-family="Times,serif"
+                                            font-size="14.00" fill="#000000">5</text>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </li>
+                <li>Interpréter la valeur \(\dfrac{1}{2}\) en tant que probabilité (dans le contexte de l'exercice).
+                    <div class="corr">
+                        <div class="barm">(1pt)</div>
+                        Comme écrit dans le sujet : <br>
+                        «la moitié des fraisiers sont mangés par les limaces».
+                    </div>
+                </li>
+                <li>
+                    Quelle est la probabilité que la plante choisie soit une salade mangée par les limaces ?
+                    <div class="corr">
+                        <div class="barm">(1pt)</div>
+                        Cette probabilité est de :<br>
+                        \(P(\overline{F}\cap L) = 0{,}6\times \dfrac{2}{5} = 0{,}6 \times 0{,}4 = 0{,}24\)<br>
+                        soit 24%.
+                    </div>
+                </li>
+                <li>
+                    Quelle est la probabilité que la plante choisie soit mangée par les limaces ?
+                    <div class="corr">
+                        <div class="barm">(1,5pt)</div>
+                        On calcule :<br>
+                        \(P(L) = P(F\cap L) + P(\overline{F}\cap L) = 0{,}4 \times \frac{1}{2} + 0{,}24 = 0{,}2 + 0{,}24
+                        = 0{,}44\) soit 44%.
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <h2>Exercice : Tableau de signe (2 points)</h2>
+        <div class="none">
+            En justifiant, dresser le tableau de signe de la fonction \(f(x)=-5x+3\).
+            <div class="corr">
+                <div class="barm">(2pts)</div>On résout :<br>
+                \(
+                \begin{eqnarray}
+                -5x+3 &\geqslant& 0 \\
+                -5x &\geqslant& -3 \\
+                x &\leqslant& \dfrac{-3}{-5}=0{,}6 \\
+                \end{eqnarray}
+                \) (diviser par -5, négatif, change l'ordre)
+                <p>Tableau de signe de \(f\) :</p>
+                <table class="vartable"
+                    style="text-align:center;padding:0;margin:0;border:1px solid;border-right:2px solid;border-bottom:2px solid;border-collapse: collapse;">
+                    <tbody>
+                        <tr style="border-bottom: 1px solid;">
+                            <td style="border-right: 1px solid;">\(x\)</td>
+                            <td>\(-∞\)</td>
+                            <td></td>
+                            <td>\(0{,}6\)</td>
+                            <td></td>
+                            <td>\(+∞\)</td>
+                        </tr>
+
+
+                        <tr>
+                            <td style="border-right: 1px solid;" class="cell_selected">\(-5x+3\)</td>
+                            <td style="display: none;"></td>
+                            <td colspan="2">\(+\)</td>
+                            <td
+                                style="background-image: linear-gradient(90deg, rgb(96, 96, 96), rgb(96, 96, 96)); background-size: 1px 100%; background-repeat: no-repeat; background-position: center center;">
+                                \(0\)</td>
+                            <td colspan="2">\(-\)</td>
+                            <td style="display: none;"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h2>Exercice : Service de streaming (7 points)</h2>
+        <div class="none">
+            <p>
+                Une plateforme de streaming compte 200 abonnés.
+                Chaque abonné peut regarder des contenus sur deux types de supports :
+            <ul>
+                <li>le smartphone,</li>
+                <li>la télévision.</li>
+            </ul>
+            Au cours d’une semaine donnée, chaque abonné a utilisé ou non chacun de ces supports.
+            </p>
+            <p>
+                Le tableau ci-dessous récapitule les usages des abonnés durant cette semaine.
+            <table class="mytable">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th>Utilisation du <b>smartphone</b></th>
+                        <th><b>Pas</b> d'utilisation du <b>smartphone</b></th>
+                        <th>total</th>
+                    </tr>
+                    <tr>
+                        <th>Utilisation de la <b>télévision</b></th>
+                        <td>\(x\)</td>
+                        <td>\(y\)</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <th><b>Pas</b> d'utilisation de la <b>télévision</b></th>
+                        <td>40</td>
+                        <td>10</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <th>total</th>
+                        <td>130</td>
+                        <td>\(z\)</td>
+                        <td>200</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <i>Exemple : le tableau indique que 40 abonnés ont utilisé la plateforme sur
+                le smartphone seulement (sans utiliser la télévision).</i>
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>
+                            Décrire par une phrase ce que représente le nombre 10 dans le tableau.
+                            <div class="corr">
+                                <div class="barm">(0,5pt)</div>
+                                10 abonnés n'ont utilisé ni leur télévision, ni leur smartphone pour se connecter cette
+                                semaine.
+                            </div>
+                        </li>
+                        <li>
+                            Determiner les valeurs de \(x\), \(y\) et \(z\)
+                            <div class="corr">
+                                <div class="barm">(1pt)</div>
+                                \(x = 130 - 40 = 90\) <br>
+                                \(y = 150 - 90 = 60\) <br>
+                                \(z = 200 - 130 = 70\)
+                            </div>
+                    </ol>
+                </li>
+                <li>
+                    On choisit un abonné au hasard.
+                    <ol type="a">
+                        <li>Quelle est la probabilité qu’il s’agisse d’un abonné qui n’a utilisé ni la télévision ni le
+                            smartphone ?
+                            <div class="corr">
+                                <div class="barm">(0,5pt)</div>
+                                \(\dfrac{10}{200} = \dfrac{5}{100} = \dfrac{1}{20} = 0{,}05 = 5\% \) <br>
+                                Cette probabilité est de 5%.
+                            </div>
+                        <li>Quelle est la probabilité qu’il s’agisse d’un abonné qui n’a utilisé qu’un seul type de
+                            support ?
+                            <div class="corr">
+                                <div class="barm">(0,5pt)</div>
+                                \(\dfrac{40 + 60}{200} = \dfrac{100}{200} = \dfrac{1}{2} = 0{,}5 = 50\% \) <br>
+                                La probabilité qu’il s’agisse d’un abonné qui n’utilisé qu’un seul type de support est
+                                de 50%.
+                            </div>
+                        </li>
+                        <li>
+                            On sait, à présent, que l’abonné choisi n'a pas utilisé la télévision.<br>
+                            Sachant cela, quelle est la probabilité qu’il ait utilisé le smartphone ?
+                            <div class="corr">
+                                <div class="barm">(1pt)</div>
+                                \(\dfrac{40}{50} = \dfrac{4}{5} = 0{,}8 = 80\% \) <br>
+                                Sachant que l'abonné n'a pas utilisé la télévision, la probabilité qu'il ait utilisé le
+                                smartphone est de 80%.
+                            </div>
+                        </li>
+                    </ol>
+
+                </li>
+                <li>
+                    Chaque abonné paie un abonnement annuel de 100 euros.
+                    <ol type="a">
+                        <li>En 2026, la plateforme compte 200 abonnés.
+                            Quel est le montant total des abonnements encaissés en 2026 ?
+                            <div class="corr">
+                                <div class="barm">(0,5pt)</div> Les abonnements rapportent :
+                                \(200 \times 100 = 20\,000\) €
+                            </div>
+
+                        </li>
+                        <li>On suppose qu'à partir de 2026 (inclus), le prix de l’abonnement reste stable, mais que le
+                            nombre d’abonnés augmente régulièrement de 10 abonnés par an. Ainsi :
+                            <ul>
+                                <li>
+                                    en 2026 : 200 abonnés,
+                                </li>
+                                <li>
+                                    en 2027 : 210 abonnés,
+                                </li>
+                                <li>
+                                    en 2028 : 220 abonnés,
+                                </li>
+                                <li>
+                                    en 2029 : 230 abonnés, etc.
+                                </li>
+                            </ul>
+                            On note \(u_n\) le <b>nombre</b> d’abonnés à la plateforme en 2026 + \(n\).<br>
+                            Justifier que la suite
+                            \((u_n)\) est une suite arithmétique et préciser sa raison et son terme initial.
+                            <div class="corr">
+                                <div class="barm"> (1pt)</div>
+                                Le nombre d'abonnés augmente de 10 par an ; la suite \((u_n)\) est donc arithmétique de
+                                raison 10 et de terme initial \(u_0 = 200\).
+
+                            </div>
+                        </li>
+                        <li>Exprimer \(u_n\) en fonction de \(n\).
+                            <div class="corr">
+                                <div class="barm">(0,5pt)</div>
+                                \(u_n = 200 + 10n\)
+                            </div>
+
+                            <!--
+                            Le nombre d'abonnés va-t-il dépasser 1000 ? Si oui, en quelle année ? Justifier.
+                            <div class="corr">
+                                <div class="barm">(1pt)</div>
+                                On résout \(u_n &gt; 1000\) :<br>
+                                \(
+                                \begin{eqnarray}
+                                200 + 10n & &gt; & 1000\\
+                                10n & &gt; & 1000 - 200 = 800\\
+                                n & &gt; & \dfrac{800}{10} = 80\\
+                                \end{eqnarray}
+                                \)
+                                <br>
+                                On prendra donc \(n=81\), soit l'année \(2026 + 81 = 2107\).
+</div>-->
+
+                        </li>
+                        <li>
+                            Au bout de combien d'années le nombre d'abonnés aura-t-il augmenté de 50 % ? <i>Toute trace
+                                de
+                                recherche sera valorisée.</i>
+                            <div class="corr">
+                                <div class="barm">(1,5pt)</div>
+                                Le nombre d'abonnés augmenté de 50% vaut :<br>
+                                \(200\times (1+50\%) = 200\times 1{,}5 = 300\)<br>
+                                Le nombre d'abonnés est supérieur ou égal à 300 lorsque :<br>
+                                \(
+                                \begin{eqnarray}
+                                u_n & \geqslant & 300 \\
+                                200+10n &\geqslant& 300 \\
+                                10n &\geqslant& 100 \\
+                                n &\geqslant& 10 \\
+                                \end{eqnarray}
+                                \)<br>
+                                Il faudra attendre 10 ans.
+
+                            </div><!--
+                            Un commercial affirme :
+                            <q> Le nombre d'abonnés augmente chaque année de 5% </q>.
+                            A-t-il raison ? Justifier.
+                            <div class="corr">
+                                <div class="barm">(1pt)</div>
+                                Il a tort car une seule augmentation est de 5% : de 2026 à 2027, les autres seront
+                                toutes inférieures ; par exemple, de 2027 à 2028 :
+                                \(\dfrac{220}{210}=1+\dfrac{10}{210}=\dfrac{5}{105}\), or \(\dfrac{5}{105}&lt;
+                                \dfrac{5}{100}=5\%\).
+                            </div>
+-->
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+    </main>
+</body>
+
+</html>
