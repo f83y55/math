@@ -154,6 +154,9 @@
                 <tr>
                     <td><button onclick="apply_style_to_cells(object_style('border-right'))">col</button></td>
                 </tr>
+                <tr>
+                    <td><button id="change_mathjax_delimiter" onclick="change_mathjax_delimiter()">\\(...\\)</button></td>
+                </tr>
             </tbody>
         </table>
 
@@ -330,14 +333,38 @@
         <script defer>
             window.MathJax = {
                 tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     macros: {
                         e: "{\\textrm{e} }"
                     }
                 }
             };
+            var mathjax_bool = true;
+            var mathjax_left = "\\(";
+            var mathjax_right = "\\)";
+            //const mathjax_left = "$";
+            //const mathjax_right = "$";
+            var regex_mathjax_left = new RegExp(mathjax_left, 'g');
+            var regex_mathjax_right = new RegExp(mathjax_right, 'g');
+            
+            const change_mathjax_delimiter_button = document.getElementById("change_mathjax_delimiter");
+            function change_mathjax_delimiter() {
+              mathjax_bool = !mathjax_bool;
+              mathjax_left = mathjax_bool ? "\\(" : "$";
+              mathjax_right = mathjax_bool ? "\\)" : "$";
+              regex_mathjax_left = new RegExp(mathjax_left, 'g');
+              regex_mathjax_right = new RegExp(mathjax_right, 'g');
+              change_mathjax_delimiter_button.innerText = "\\"+mathjax_left+"...\\"+mathjax_right;
+              //change_mathjax_delimiter_button.innerText = mathjax_bool ? "\\\\(...\\\\)" : "\\$...\\$";
+              MathJax.typeset();
+            }
 
             const construction = document.getElementById("construction");
             const output = document.getElementById("output");
+
+            var clipboard_run_bool = true;
+
             var cell_selected = construction.getElementsByTagName("td")[1];
             cell_selected.classList.toggle("cell_selected");
             const color_picker = document.getElementById("color-picker")
@@ -347,14 +374,19 @@
             var color_selected = color_picker.value;
             var sel = window.getSelection();
 
-            function copy_to_output() {
+            function copy_to_output(clipboard=clipboard_run_bool) {
                 output.parentNode.style["padding"] = "4px";
                 output.parentNode.style["background-color"] = "white";
                 output.innerHTML = construction.innerHTML;
                 output.getElementsByTagName("table")[0];
                 Array.from(output.getElementsByTagName("td")).forEach(cell => {
-                    cell.innerHTML = "\\(" + cell.innerHTML + "\\)";
+                    if (cell.innerHTML) {
+                        cell.innerHTML = mathjax_left + cell.innerHTML + mathjax_right;
+                    }
                 });
+                if (clipboard) {
+                   navigator.clipboard.writeText(output.innerHTML)
+                }
                 MathJax.typeset();
             }
 
@@ -652,18 +684,29 @@
                 if (str == "border-right") {
                     return {"border-right": `1px solid ${color_selected}`};
                 }
+                const bar_width_em = 0.1;
+                const bar_width_px = 1.2;
                 if (str == "bar") {
                     return {
                         "background-image": `linear-gradient(90deg, ${color_selected}, ${color_selected}`,
-                        "background-size": "1px 100%",
+                        "-webkit-print-color-adjust" : "exact",
+                        "print-color-adjust" : "exact",
+                        "background-size": `max(${bar_width_em}em, ${bar_width_px}px),  100%`,
                         "background-repeat": "no-repeat",
                         "background-position": "center center"
                     };
                 }
                 if (str == "bbar") {
                     return {
-                        "background-image": `linear-gradient(90deg, ${color_selected} 0px 1px, transparent 1px 7px, ${color_selected} 7px`,
-                        "background-size": "8px 100%",
+                        "background-image": `linear-gradient(90deg,
+        ${color_selected} 0px max(${bar_width_em}em, ${bar_width_px}px),
+        transparent max(${bar_width_em}em, ${bar_width_px}px) calc(.5em - max(${bar_width_em}em, ${bar_width_px}px)),
+        ${color_selected} calc(.5em - max(${bar_width_em}em, ${bar_width_px}px)) .5em
+    )`,
+
+                        "-webkit-print-color-adjust" : "exact",
+                        "print-color-adjust" : "exact",
+                        "background-size": ".5em 100%",
                         "background-repeat": "no-repeat",
                         "background-position": "center center"
                     };
@@ -715,8 +758,10 @@
                 construction.innerHTML = el.getElementsByTagName("table")[0];
                 Array.from(construction.getElementsByTagName("td")).forEach(cell => {
                     let cell_html = cell.innerHTML;
-                    cell_html = cell_html.replace(/\\\)([^\\\)]*)$/, '$1');
-                    cell_html = cell_html.replace(/\\\(/, '');
+                    cell_html = cell_html.replace(regex_mathjax_right, '');
+                    cell_html = cell_html.replace(regex_mathjax_left, '');
+                    //cell_html = cell_html.replace(/\\\)([^\\\)]*)$/, '$1');
+                    //cell_html = cell_html.replace(/\\\(/, '');
                     add_event_listener_to_new_cell(cell);
                 });
             }
@@ -739,8 +784,8 @@
                         document.body.removeChild(buffer);
                         Array.from(construction.getElementsByTagName("td")).forEach(cell => {
                             let cell_html = cell.innerHTML;
-                            cell_html = cell_html.replace(/\\\)([^\\\)]*)$/, '$1');
-                            cell_html = cell_html.replace(/\\\(/, '');
+                            cell_html = cell_html.replace(regex_mathjax_right, '');
+                            cell_html = cell_html.replace(regex_mathjax_left, '');
                             add_event_listener_to_new_cell(cell);
                         });
                         cell = construction.getElementsByClassName("cell_selected")[0];
@@ -777,16 +822,21 @@
   \<script async\>
     window.MathJax = {
                 tex: {
+                    inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
+                    displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
                     macros: {
                         e: \"{\\\\textrm{e} }\"
                     }
                 }
             };
+    var mathjax_bool = ${mathjax_bool}
+    var mathjax_left = mathjax_bool ? \"\\\\(\" : \"$\";
+    var mathjax_right = mathjax_bool ? \"\\\\)\" : \"$\";
     function apply_mathjax() {
       let table_element = document.getElementsByTagName(\"table\")[0];
       Array.from(table_element.getElementsByTagName("td")).forEach(cell => {
         if (cell.innerHTML.length > 0) {
-          cell.innerHTML = \"\\\\(\" + cell.innerHTML + \"\\\\)\";
+                cell.innerHTML = mathjax_left + cell.innerHTML + mathjax_right;
         }
       });
 
